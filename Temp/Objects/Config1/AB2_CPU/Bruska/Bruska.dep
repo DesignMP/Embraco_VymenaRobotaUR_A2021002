@@ -1,0 +1,13 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/SC/SC.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/standard/standard.fun
+$(AS_PROJECT_PATH)/Logical/Program/Bruska/Variables.var
+$(AS_PROJECT_PATH)/Logical/Global.var
+$(AS_PROJECT_PATH)/Logical/Libraries/SC/Types.typ
+$(AS_PROJECT_PATH)/Logical/Global.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/AxisLib/Types.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/McBase/McBase.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/McAxis/McAxis.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/McAxis/McAxis.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/McAcpAx/McAcpAx.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/McAcpAx/McAcpAx.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/AxisLib/AxisLib.fun

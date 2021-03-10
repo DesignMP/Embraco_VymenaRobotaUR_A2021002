@@ -1,0 +1,36 @@
+.e-treegrid .e-cmtreegridexpand {
+    background-image: url(../images/tree/groupOpened.svg);
+    background-repeat: no-repeat;
+    background-position-y: 4px;
+    width: 24px;
+    height: 16px;
+}
+
+.e-treegrid .e-cmtreegridcollapse {
+    background-image: url(../images/tree/groupClosed.svg);
+    background-repeat: no-repeat;
+    background-position-y: 4px;
+    width: 24px;
+    height: 16px;
+}
+
+.e-treegrid .e-cmdoc {
+    background-image: url(../images/tree/parameter.svg);
+    background-repeat: no-repeat;
+    background-position-y: 4px;
+    width: 24px;
+    height: 16px;			
+}
+
+.e-treegrid .e-cmtreegridexpand:before {
+    content: none;
+}
+
+.e-treegrid .e-cmtreegridcollapse:before {
+    content: none;
+}
+
+.e-treegrid .e-cmtreegridcollapse:after,
+.e-treegrid .e-cmtreegridexpand:after {
+    opacity: 0;
+}

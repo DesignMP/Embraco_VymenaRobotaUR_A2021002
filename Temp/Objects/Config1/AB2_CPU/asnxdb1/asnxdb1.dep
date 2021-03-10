@@ -1,0 +1,8 @@
+$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster.dtm
+$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster_IF1\AB1_ProfinetMaster_IF1.dtmdra
+$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster_IF1\AB1_ProfinetMaster_IF1.dtmdre
+$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster_IF1\AB1_ProfinetMaster_IF1.dtmdri
+$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster_IF1\AB1_ProfinetMaster_IF1.dtmtre
+$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\Robot_ABB\Robot_ABB.dtmdre
+$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\Robot_ABB\Robot_ABB.dtmdri
+$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\Robot_ABB\Robot_ABB.dtmtre

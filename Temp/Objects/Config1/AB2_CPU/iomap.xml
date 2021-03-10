@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationRuntimeIOSystem Version="1.0"?>
+<IO xmlns="http://www.br-automation.com/AR/IO">
+<Links>
+<LN ID="%ID.SerialNumber_CPU" Type="UDINT">
+<Prod Device="$root" DPName="SerialNumber_CPU" Kind="io"/>
+</LN>
+<LN ID="%IW.ModuleID_CPU" Type="UINT">
+<Prod Device="$root" DPName="ModuleID_CPU" Kind="io"/>
+</LN>
+<LN ID="%IW.HardwareVariant" Type="UINT">
+<Prod Device="$root" DPName="HardwareVariant" Kind="io"/>
+</LN>
+<LN ID="%IW.FirmwareVersion" Type="UINT">
+<Prod Device="$root" DPName="FirmwareVersion" Kind="io"/>
+</LN>
+<LN ID="%IW.TemperatureCPU" Type="INT">
+<Prod Device="$root" DPName="TemperatureCPU" Kind="io"/>
+</LN>
+<LN ID="%IW.TemperatureENV" Type="INT">
+<Prod Device="$root" DPName="TemperatureENV" Kind="io"/>
+</LN>
+<LN ID="%ID.SystemTime" Type="DINT">
+<Prod Device="$root" DPName="SystemTime" Kind="io"/>
+</LN>
+<LN ID="%IX.IF3.LinkOk" Type="BOOL">
+<Prod Device="$root" DPName="IF3.LinkOk" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.OutputDMAMargin" Type="DINT">
+<Prod Device="$root" DPName="IF3.OutputDMAMargin" Kind="io"/>
+</LN>
+<LN ID="%IB.IF3.NodeNumber" Type="USINT">
+<Prod Device="$root" DPName="IF3.NodeNumber" Kind="io"/>
+</LN>
+<LN ID="%IX.IF3.CycleOk" Type="BOOL">
+<Prod Device="$root" DPName="IF3.CycleOk" Kind="io"/>
+</LN>
+<LN ID="%IX.IF3.SyncOk" Type="BOOL">
+<Prod Device="$root" DPName="IF3.SyncOk" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.TimeSeconds" Type="UDINT">
+<Prod Device="$root" DPName="IF3.TimeSeconds" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.TimeNanoseconds" Type="UDINT">
+<Prod Device="$root" DPName="IF3.TimeNanoseconds" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.NettimeSoC" Type="DINT">
+<Prod Device="$root" DPName="IF3.NettimeSoC" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.NettimeOffset" Type="DINT">
+<Prod Device="$root" DPName="IF3.NettimeOffset" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.CycleCount" Type="UDINT">
+<Prod Device="$root" DPName="IF3.CycleCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.FailedCycleCount" Type="UDINT">
+<Prod Device="$root" DPName="IF3.FailedCycleCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.CycleTimeViolationCount" Type="UDINT">
+<Prod Device="$root" DPName="IF3.CycleTimeViolationCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.CycleIdleTime" Type="UDINT">
+<Prod Device="$root" DPName="IF3.CycleIdleTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF3.CycleCongestionCount" Type="UDINT">
+<Prod Device="$root" DPName="IF3.CycleCongestionCount" Kind="io"/>
+</LN>
+<LN ID="%IX.IF2.ST1.OPCUAconnectionOK" Type="BOOL">
+<Prod Device="IF2.ST1" DPName="OPCUAconnectionOK" Kind="io"/>
+</LN>
+<LN ID="%QO.IF3.ST1.CyclicParameterRequest_AX_1/12" Type="OCTET" NrElements="12">
+<Cons Device="IF3.ST1" DPName="CyclicParameterRequest_AX_1" Kind="io"/>
+</LN>
+<LN ID="%QO.IF3.ST1.CyclicDataToDrive_AX_1/20" Type="OCTET" NrElements="20">
+<Cons Device="IF3.ST1" DPName="CyclicDataToDrive_AX_1" Kind="io"/>
+</LN>
+<LN ID="%IO.IF3.ST1.CyclicParameterResponse_AX_1/12" Type="OCTET" NrElements="12">
+<Prod Device="IF3.ST1" DPName="CyclicParameterResponse_AX_1" Kind="io"/>
+</LN>
+<LN ID="%IO.IF3.ST1.CyclicStatusBitsResponse_AX_1/4" Type="OCTET" NrElements="4">
+<Prod Device="IF3.ST1" DPName="CyclicStatusBitsResponse_AX_1" Kind="io"/>
+</LN>
+<LN ID="%IO.IF3.ST1.CyclicMonitorData_AX_1/16" Type="OCTET" NrElements="16">
+<Prod Device="IF3.ST1" DPName="CyclicMonitorData_AX_1" Kind="io"/>
+</LN>
+<LN ID="%IO.IF3.ST1.CycUserFromDrive_AX_1/20" Type="OCTET" NrElements="20">
+<Prod Device="IF3.ST1" DPName="CycUserFromDrive_AX_1" Kind="io"/>
+</LN>
+<LN ID="%IO.IF3.ST1.MA1CYCSEND_AX_1/8" Type="OCTET" NrElements="8">
+<Prod Device="IF3.ST1" DPName="MA1CYCSEND_AX_1" Kind="io"/>
+</LN>
+<LN ID="%IO.IF3.ST1.MA2CYCSEND_AX_1/8" Type="OCTET" NrElements="8">
+<Prod Device="IF3.ST1" DPName="MA2CYCSEND_AX_1" Kind="io"/>
+</LN>
+<LN ID="%IO.IF3.ST1.MA3CYCSEND_AX_1/8" Type="OCTET" NrElements="8">
+<Prod Device="IF3.ST1" DPName="MA3CYCSEND_AX_1" Kind="io"/>
+</LN>
+<LN ID="%IW.ModuleID_BB" Type="UINT">
+<Prod Device="$root" DPName="ModuleID_BB" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.CycleCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.CycleCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.BreakCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.BreakCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.Nettime" Type="DINT">
+<Prod Device="$root" DPName="IF6.Nettime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.SyncErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.SyncErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.SyncSramErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.SyncSramErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.SyncBusyErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.SyncBusyErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.SyncNoRxErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.SyncNoRxErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.SyncFormatErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.SyncFormatErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.SyncPendingErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.SyncPendingErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.AsyncErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.AsyncErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.AsyncSramErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.AsyncSramErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.AsyncBusyErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.AsyncBusyErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.AsyncNoRxErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.AsyncNoRxErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.AsyncFormatErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.AsyncFormatErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.AsyncPendingErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.AsyncPendingErrorCount" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.DMALateOutputErrorCount" Type="DINT">
+<Prod Device="$root" DPName="IF6.DMALateOutputErrorCount" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.NrOfStationsMax" Type="USINT">
+<Prod Device="$root" DPName="IF6.NrOfStationsMax" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.NrOfStationsConfigured" Type="USINT">
+<Prod Device="$root" DPName="IF6.NrOfStationsConfigured" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.StationAtBusEnd" Type="USINT">
+<Prod Device="$root" DPName="IF6.StationAtBusEnd" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.StationAtBusEndChangeTime" Type="DATE_AND_TIME">
+<Prod Device="$root" DPName="IF6.StationAtBusEndChangeTime" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.StationPastOutFrameError" Type="USINT">
+<Prod Device="$root" DPName="IF6.StationPastOutFrameError" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.StationPastOutFrameErrorChangeTime" Type="DATE_AND_TIME">
+<Prod Device="$root" DPName="IF6.StationPastOutFrameErrorChangeTime" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.StationPastInFrameError" Type="USINT">
+<Prod Device="$root" DPName="IF6.StationPastInFrameError" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.StationPastInFrameErrorChangeTime" Type="DATE_AND_TIME">
+<Prod Device="$root" DPName="IF6.StationPastInFrameErrorChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.SyncInFrameSize" Type="DINT">
+<Prod Device="$root" DPName="IF6.SyncInFrameSize" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.SyncOutFrameSize" Type="DINT">
+<Prod Device="$root" DPName="IF6.SyncOutFrameSize" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.AsyncFrameSize" Type="DINT">
+<Prod Device="$root" DPName="IF6.AsyncFrameSize" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.AsyncFrameSpareSize" Type="DINT">
+<Prod Device="$root" DPName="IF6.AsyncFrameSpareSize" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.BusLengthConfigured" Type="DINT">
+<Prod Device="$root" DPName="IF6.BusLengthConfigured" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.ModuleOk" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="ModuleOk" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="StavHardware.KartaAB4_SafetyMaster_OK" Kind="pv"/>
+</LN>
+<LN ID="%ID.IF6.ST1.SerialNumber" Type="UDINT">
+<Prod Device="IF6.ST1" DPName="SerialNumber" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST1.ModuleID" Type="UINT">
+<Prod Device="IF6.ST1" DPName="ModuleID" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST1.HardwareVariant" Type="UINT">
+<Prod Device="IF6.ST1" DPName="HardwareVariant" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST1.FirmwareVersion" Type="UINT">
+<Prod Device="IF6.ST1" DPName="FirmwareVersion" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST1.SLXioCycle" Type="UDINT">
+<Prod Device="IF6.ST1" DPName="SLXioCycle" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeDigitalInput01" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeDigitalInput01" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.Robot_CS_CH1" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeDigitalInput02" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeDigitalInput02" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.Robot_CS_CH2" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeDigitalInput03" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeDigitalInput03" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.VyblokovanieSafety_CH1" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeDigitalInput04" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeDigitalInput04" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.VyblokovanieSafety_CH2" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeDigitalInput05" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeDigitalInput05" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.Pracovisko_CS_CH1" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeDigitalInput06" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeDigitalInput06" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.Pracovisko_CS_CH2" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeDigitalInput07" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeDigitalInput07" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.SpatnaVazbaPracovisko_CH1" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeDigitalInput08" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeDigitalInput08" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.SpatnaVazbaPracovisko_CH2" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeTwoChannelInput0102" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeTwoChannelInput0102" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeTwoChannelInput0304" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeTwoChannelInput0304" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeTwoChannelInput0506" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeTwoChannelInput0506" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeTwoChannelInput0708" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeTwoChannelInput0708" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeTwoChannelOk0102" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeTwoChannelOk0102" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeTwoChannelOk0304" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeTwoChannelOk0304" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeTwoChannelOk0506" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeTwoChannelOk0506" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeTwoChannelOk0708" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeTwoChannelOk0708" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeInputOK01" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeInputOK01" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeInputOK02" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeInputOK02" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeInputOK03" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeInputOK03" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeInputOK04" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeInputOK04" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeInputOK05" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeInputOK05" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeInputOK06" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeInputOK06" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeInputOK07" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeInputOK07" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeInputOK08" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeInputOK08" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeOutputOK01" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeOutputOK01" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeOutputOK02" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeOutputOK02" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeOutputOK03" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeOutputOK03" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeOutputOK04" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeOutputOK04" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeOutputOK05" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeOutputOK05" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.SafeOutputOK06" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="SafeOutputOK06" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.PhysicalStateChannel01" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="PhysicalStateChannel01" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.OUT.Zona_CS" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.PhysicalStateChannel02" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="PhysicalStateChannel02" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.OUT.Zona_Robot" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.PhysicalStateChannel03" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="PhysicalStateChannel03" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.OUT.Zona_Pracovisko_CH1" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.PhysicalStateChannel04" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="PhysicalStateChannel04" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.OUT.Zona_Pracovisko_CH2" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.PhysicalStateChannel05" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="PhysicalStateChannel05" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.PhysicalStateChannel06" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="PhysicalStateChannel06" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL101" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Safety.RESET_ZonyCS" Kind="pv"/>
+<Cons Device="IF6.ST1" DPName="BOOL101" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL102" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Safety.RESET_ZonyRobot" Kind="pv"/>
+<Cons Device="IF6.ST1" DPName="BOOL102" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL103" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Safety.SpatnaVazba_ZonaCS" Kind="pv"/>
+<Cons Device="IF6.ST1" DPName="BOOL103" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL104" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Safety.SpatnaVazba_ZonaRobot" Kind="pv"/>
+<Cons Device="IF6.ST1" DPName="BOOL104" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL105" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL105" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL106" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL106" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL107" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL107" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL108" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL108" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL109" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL109" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL110" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL110" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL111" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL111" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL112" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL112" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL113" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL113" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL114" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL114" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL115" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL115" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST1.BOOL116" Type="BOOL">
+<Cons Device="IF6.ST1" DPName="BOOL116" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL001" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL001" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.STAV.SafetyPLC_Nabehlo" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL002" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL002" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.STAV.ZonaCS_AKTIVNA" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL003" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL003" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.STAV.ZonaRobot_AKTIVNA" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL004" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL004" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.STAV.CS_Pracovisko_Odblokovany" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL005" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL005" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.STAV.CS_Robot_Odblokovany" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL006" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL006" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL007" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL007" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL008" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL008" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL009" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL009" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL010" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL010" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL011" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL011" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL012" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL012" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL013" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL013" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL014" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL014" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL015" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL015" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST1.BOOL016" Type="BOOL">
+<Prod Device="IF6.ST1" DPName="BOOL016" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST2.ModuleOk" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="ModuleOk" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="StavHardware.KartaAB5_16DI_OK" Kind="pv"/>
+</LN>
+<LN ID="%ID.IF6.ST2.SerialNumber" Type="UDINT">
+<Prod Device="IF6.ST2" DPName="SerialNumber" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST2.ModuleID" Type="UINT">
+<Prod Device="IF6.ST2" DPName="ModuleID" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST2.HardwareVariant" Type="UINT">
+<Prod Device="IF6.ST2" DPName="HardwareVariant" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST2.FirmwareVersion" Type="UINT">
+<Prod Device="IF6.ST2" DPName="FirmwareVersion" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput01" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput01" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Pracovisko.IN.PrepatovaOchrana_OK" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput02" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput02" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.CisloZadanejPozicie_Bit0" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput03" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput03" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.CisloZadanejPozicie_Bit1" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput04" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput04" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.CisloZadanejPozicie_Bit2" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput05" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput05" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.CisloZadanejPozicie_Bit3" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput06" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput06" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.SpatnaVazba_ZonaCS" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput07" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput07" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.SpatnaVazba_ZonaRobot" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput08" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput08" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.SpatnaVazba_ZonaPracovisko" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput09" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput09" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.ManipulUchopovac_Zatvoreny_MS1" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput10" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput10" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.ManipulUchopovac_Otvoreny_MS2" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput11" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput11" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.OdkladaciUchopovac_Zatvoreny_MS3" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput12" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput12" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.OdkladaciUchopovac_Otvoreny_MS4" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput13" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput13" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput14" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput14" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput15" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput15" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST2.DigitalInput16" Type="BOOL">
+<Prod Device="IF6.ST2" DPName="DigitalInput16" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST2.BusModuleId" Type="UINT">
+<Prod Device="IF6.ST2" DPName="BusModuleId" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST2.ModeOfOperation" Type="USINT">
+<Prod Device="IF6.ST2" DPName="ModeOfOperation" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.ModeOfOperationChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST2" DPName="ModeOfOperationChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.NrOfResets" Type="DINT">
+<Prod Device="IF6.ST2" DPName="NrOfResets" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.NrOfResetsChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST2" DPName="NrOfResetsChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.NrOfInits" Type="DINT">
+<Prod Device="IF6.ST2" DPName="NrOfInits" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.NrOfInitsChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST2" DPName="NrOfInitsChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.NrOfFwUpdates" Type="DINT">
+<Prod Device="IF6.ST2" DPName="NrOfFwUpdates" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.NrOfFwUpdatesChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST2" DPName="NrOfFwUpdatesChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.ModuleNoComm" Type="DINT">
+<Prod Device="IF6.ST2" DPName="ModuleNoComm" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.ModuleNoCommChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST2" DPName="ModuleNoCommChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.ModuleCommError" Type="DINT">
+<Prod Device="IF6.ST2" DPName="ModuleCommError" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST2.ModuleCommErrorChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST2" DPName="ModuleCommErrorChangeTime" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.ModuleOk" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="ModuleOk" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="StavHardware.KartaAB6_16DI_OK" Kind="pv"/>
+</LN>
+<LN ID="%ID.IF6.ST3.SerialNumber" Type="UDINT">
+<Prod Device="IF6.ST3" DPName="SerialNumber" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST3.ModuleID" Type="UINT">
+<Prod Device="IF6.ST3" DPName="ModuleID" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST3.HardwareVariant" Type="UINT">
+<Prod Device="IF6.ST3" DPName="HardwareVariant" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST3.FirmwareVersion" Type="UINT">
+<Prod Device="IF6.ST3" DPName="FirmwareVersion" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput01" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput01" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Pracovisko.IN.Paletka_PritomnostKusu_OS1" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput02" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput02" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Pracovisko.IN.VystupDoprav_PritomnostKusu_OS2" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput03" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput03" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.ReferencnySnimac_IS1" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput04" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput04" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Pracovisko.IN.Otacac_PritomnostKusu_IS2" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput05" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput05" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_OtacanieVPRED" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput06" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput06" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_OtacanieVZAD" Kind="pv"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput07" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput07" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput08" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput08" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput09" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput09" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput10" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput10" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput11" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput11" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput12" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput12" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput13" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput13" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput14" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput14" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput15" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput15" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST3.DigitalInput16" Type="BOOL">
+<Prod Device="IF6.ST3" DPName="DigitalInput16" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST3.BusModuleId" Type="UINT">
+<Prod Device="IF6.ST3" DPName="BusModuleId" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST3.ModeOfOperation" Type="USINT">
+<Prod Device="IF6.ST3" DPName="ModeOfOperation" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.ModeOfOperationChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST3" DPName="ModeOfOperationChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.NrOfResets" Type="DINT">
+<Prod Device="IF6.ST3" DPName="NrOfResets" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.NrOfResetsChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST3" DPName="NrOfResetsChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.NrOfInits" Type="DINT">
+<Prod Device="IF6.ST3" DPName="NrOfInits" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.NrOfInitsChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST3" DPName="NrOfInitsChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.NrOfFwUpdates" Type="DINT">
+<Prod Device="IF6.ST3" DPName="NrOfFwUpdates" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.NrOfFwUpdatesChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST3" DPName="NrOfFwUpdatesChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.ModuleNoComm" Type="DINT">
+<Prod Device="IF6.ST3" DPName="ModuleNoComm" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.ModuleNoCommChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST3" DPName="ModuleNoCommChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.ModuleCommError" Type="DINT">
+<Prod Device="IF6.ST3" DPName="ModuleCommError" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST3.ModuleCommErrorChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST3" DPName="ModuleCommErrorChangeTime" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.ModuleOk" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="ModuleOk" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="StavHardware.KartaAB7_16DO_OK" Kind="pv"/>
+</LN>
+<LN ID="%ID.IF6.ST4.SerialNumber" Type="UDINT">
+<Prod Device="IF6.ST4" DPName="SerialNumber" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST4.ModuleID" Type="UINT">
+<Prod Device="IF6.ST4" DPName="ModuleID" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST4.HardwareVariant" Type="UINT">
+<Prod Device="IF6.ST4" DPName="HardwareVariant" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST4.FirmwareVersion" Type="UINT">
+<Prod Device="IF6.ST4" DPName="FirmwareVersion" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput01" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.CisloAktualnejPozicie_Bit0" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput01" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput02" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.CisloAktualnejPozicie_Bit1" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput02" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput03" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.CisloAktualnejPozicie_Bit2" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput03" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput04" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.CisloAktualnejPozicie_Bit3" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput04" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput05" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.ZatvorManipulacnyUchopovac" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput05" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput06" Type="BOOL">
+<Cons Device="IF6.ST4" DPName="DigitalOutput06" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput07" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.ZatvorOdkladaciUchopovac" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput07" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput08" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.VystupnyDopravnikNalozeny" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput08" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput09" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Pracovisko.OUT.Majak_ZeleneSvetlo" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput09" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput10" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Pracovisko.OUT.Majak_ZlteSvetlo" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput10" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput11" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Pracovisko.OUT.Majak_CerveneSvetlo" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput11" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput12" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Pracovisko.OUT.Majak_Hukacka" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput12" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput13" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVPRED" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput13" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput14" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVZAD" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput14" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput15" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Bruska.OUT.Stav_PoruchaMotoraUpinacejHlavy" Kind="pv"/>
+<Cons Device="IF6.ST4" DPName="DigitalOutput15" Kind="io"/>
+</LN>
+<LN ID="%QX.IF6.ST4.DigitalOutput16" Type="BOOL">
+<Cons Device="IF6.ST4" DPName="DigitalOutput16" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput01" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput01" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput02" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput02" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput03" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput03" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput04" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput04" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput05" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput05" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput06" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput06" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput07" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput07" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput08" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput08" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput09" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput09" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput10" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput10" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput11" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput11" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput12" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput12" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput13" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput13" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput14" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput14" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput15" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput15" Kind="io"/>
+</LN>
+<LN ID="%IX.IF6.ST4.StatusDigitalOutput16" Type="BOOL">
+<Prod Device="IF6.ST4" DPName="StatusDigitalOutput16" Kind="io"/>
+</LN>
+<LN ID="%IW.IF6.ST4.BusModuleId" Type="UINT">
+<Prod Device="IF6.ST4" DPName="BusModuleId" Kind="io"/>
+</LN>
+<LN ID="%IB.IF6.ST4.ModeOfOperation" Type="USINT">
+<Prod Device="IF6.ST4" DPName="ModeOfOperation" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.ModeOfOperationChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST4" DPName="ModeOfOperationChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.NrOfResets" Type="DINT">
+<Prod Device="IF6.ST4" DPName="NrOfResets" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.NrOfResetsChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST4" DPName="NrOfResetsChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.NrOfInits" Type="DINT">
+<Prod Device="IF6.ST4" DPName="NrOfInits" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.NrOfInitsChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST4" DPName="NrOfInitsChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.NrOfFwUpdates" Type="DINT">
+<Prod Device="IF6.ST4" DPName="NrOfFwUpdates" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.NrOfFwUpdatesChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST4" DPName="NrOfFwUpdatesChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.ModuleNoComm" Type="DINT">
+<Prod Device="IF6.ST4" DPName="ModuleNoComm" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.ModuleNoCommChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST4" DPName="ModuleNoCommChangeTime" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.ModuleCommError" Type="DINT">
+<Prod Device="IF6.ST4" DPName="ModuleCommError" Kind="io"/>
+</LN>
+<LN ID="%ID.IF6.ST4.ModuleCommErrorChangeTime" Type="DATE_AND_TIME">
+<Prod Device="IF6.ST4" DPName="ModuleCommErrorChangeTime" Kind="io"/>
+</LN>
+<LN ID="%IX.SS1.ModuleOk" Type="BOOL">
+<Prod Device="SS1" DPName="ModuleOk" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="StavHardware.KartaAB1_ProfinetMaster_OK" Kind="pv"/>
+</LN>
+<LN ID="%ID.SS1.SerialNumber" Type="UDINT">
+<Prod Device="SS1" DPName="SerialNumber" Kind="io"/>
+</LN>
+<LN ID="%IW.SS1.ModuleID" Type="UINT">
+<Prod Device="SS1" DPName="ModuleID" Kind="io"/>
+</LN>
+<LN ID="%IW.SS1.HardwareVariant" Type="UINT">
+<Prod Device="SS1" DPName="HardwareVariant" Kind="io"/>
+</LN>
+<LN ID="%IW.SS1.FirmwareVersion" Type="UINT">
+<Prod Device="SS1" DPName="FirmwareVersion" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Communication_Change_of_State" Type="UDINT">
+<Prod Device="SS1" DPName="Communication_Change_of_State" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Communication_State" Type="UDINT">
+<Prod Device="SS1" DPName="Communication_State" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Communication_Error" Type="UDINT">
+<Prod Device="SS1" DPName="Communication_Error" Kind="io"/>
+</LN>
+<LN ID="%IW.SS1.Version" Type="UINT">
+<Prod Device="SS1" DPName="Version" Kind="io"/>
+</LN>
+<LN ID="%IW.SS1.Watchdog_Timeout" Type="UINT">
+<Prod Device="SS1" DPName="Watchdog_Timeout" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Host_Watchdog" Type="UDINT">
+<Prod Device="SS1" DPName="Host_Watchdog" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Error_Count" Type="UDINT">
+<Prod Device="SS1" DPName="Error_Count" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Error_Log_Indicator" Type="UDINT">
+<Prod Device="SS1" DPName="Error_Log_Indicator" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Slave_State" Type="UDINT">
+<Prod Device="SS1" DPName="Slave_State" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Slave_Error_Log_Indicator" Type="UDINT">
+<Prod Device="SS1" DPName="Slave_Error_Log_Indicator" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Configured_Slaves" Type="UDINT">
+<Prod Device="SS1" DPName="Configured_Slaves" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Active_Slaves" Type="UDINT">
+<Prod Device="SS1" DPName="Active_Slaves" Kind="io"/>
+</LN>
+<LN ID="%ID.SS1.Faulted_Slaves" Type="UDINT">
+<Prod Device="SS1" DPName="Faulted_Slaves" Kind="io"/>
+</LN>
+<LN ID="%IX.SS1.SlaveConfig_robotabb" Type="BOOL">
+<Prod Device="SS1" DPName="SlaveConfig_robotabb" Kind="io"/>
+</LN>
+<LN ID="%IX.SS1.SlaveState_robotabb" Type="BOOL">
+<Prod Device="SS1" DPName="SlaveState_robotabb" Kind="io"/>
+</LN>
+<LN ID="%IX.SS1.SlaveDiag_robotabb" Type="BOOL">
+<Prod Device="SS1" DPName="SlaveDiag_robotabb" Kind="io"/>
+</LN>
+<LN ID="%IX.SS1.IF1.ST1.ModuleOk" Type="BOOL">
+<Prod Device="SS1.IF1.ST1" DPName="ModuleOk" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="StavHardware.Komunikacia_Robot_OK" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_0" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_0" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[0]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_1" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_1" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[1]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_2" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_2" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[2]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_3" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_3" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[3]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_4" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_4" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[4]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_5" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_5" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[5]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_6" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_6" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[6]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_7" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_7" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[7]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_8" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_8" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[8]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_9" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_9" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[9]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_10" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_10" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[10]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_11" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_11" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[11]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_12" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_12" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[12]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_13" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_13" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[13]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_14" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_14" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[14]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_15" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_15" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[15]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_16" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_16" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[16]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_17" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_17" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[17]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_18" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_18" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[18]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_19" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_19" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[19]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_20" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_20" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[20]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_21" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_21" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[21]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_22" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_22" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[22]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_23" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_23" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[23]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_24" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_24" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[24]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_25" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_25" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[25]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_26" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_26" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[26]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_27" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_27" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[27]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_28" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_28" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[28]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_29" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_29" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[29]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_30" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_30" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[30]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_31" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_31" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[31]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_32" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_32" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[32]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_33" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_33" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[33]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_34" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_34" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[34]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_35" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_35" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[35]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_36" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_36" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[36]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_37" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_37" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[37]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_38" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_38" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[38]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_39" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_39" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[39]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_40" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_40" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[40]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_41" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_41" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[41]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_42" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_42" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[42]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_43" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_43" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[43]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_44" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_44" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[44]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_45" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_45" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[45]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_46" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_46" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[46]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_47" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_47" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[47]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_48" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_48" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[48]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_49" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_49" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[49]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_50" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_50" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[50]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_51" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_51" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[51]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_52" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_52" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[52]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_53" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_53" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[53]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_54" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_54" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[54]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_55" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_55" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[55]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_56" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_56" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[56]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_57" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_57" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[57]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_58" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_58" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[58]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_59" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_59" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[59]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_60" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_60" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[60]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_61" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_61" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[61]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_62" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_62" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[62]" Kind="pv"/>
+</LN>
+<LN ID="%IB.SS1.IF1.ST1.Module001_Input_63" Type="USINT">
+<Prod Device="SS1.IF1.ST1" DPName="Module001_Input_63" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.KOM_IN.Profinet_PLC_INPUTS[63]" Kind="pv"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_0" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[0]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_0" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_1" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[1]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_1" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_2" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_2" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_3" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_3" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_4" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[4]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_4" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_5" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[5]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_5" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_6" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[6]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_6" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_7" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[7]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_7" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_8" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[8]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_8" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_9" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[9]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_9" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_10" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[10]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_10" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_11" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[11]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_11" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_12" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[12]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_12" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_13" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[13]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_13" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_14" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[14]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_14" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_15" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[15]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_15" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_16" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[16]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_16" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_17" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[17]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_17" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_18" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[18]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_18" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_19" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[19]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_19" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_20" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[20]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_20" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_21" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[21]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_21" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_22" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[22]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_22" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_23" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[23]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_23" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_24" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[24]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_24" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_25" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[25]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_25" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_26" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[26]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_26" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_27" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[27]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_27" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_28" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[28]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_28" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_29" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[29]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_29" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_30" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[30]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_30" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_31" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[31]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_31" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_32" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[32]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_32" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_33" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[33]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_33" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_34" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[34]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_34" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_35" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[35]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_35" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_36" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[36]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_36" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_37" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[37]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_37" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_38" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[38]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_38" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_39" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[39]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_39" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_40" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[40]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_40" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_41" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[41]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_41" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_42" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[42]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_42" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_43" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[43]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_43" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_44" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[44]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_44" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_45" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[45]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_45" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_46" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[46]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_46" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_47" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[47]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_47" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_48" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[48]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_48" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_49" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[49]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_49" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_50" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[50]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_50" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_51" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[51]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_51" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_52" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[52]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_52" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_53" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[53]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_53" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_54" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[54]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_54" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_55" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[55]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_55" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_56" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[56]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_56" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_57" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[57]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_57" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_58" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[58]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_58" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_59" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[59]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_59" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_60" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[60]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_60" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_61" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[61]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_61" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_62" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[62]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_62" Kind="io"/>
+</LN>
+<LN ID="%QB.SS1.IF1.ST1.Module002_Output_63" Type="USINT">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.KOM_OUT.Profinet_PLC_OUTPUTS[63]" Kind="pv"/>
+<Cons Device="SS1.IF1.ST1" DPName="Module002_Output_63" Kind="io"/>
+</LN>
+<LN ID="%IX.PS1.ModuleOk" Type="BOOL">
+<Prod Device="PS1" DPName="ModuleOk" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="StavHardware.KartaAB3_NapajanieCPU_OK" Kind="pv"/>
+</LN>
+<LN ID="%ID.PS1.SerialNumber" Type="UDINT">
+<Prod Device="PS1" DPName="SerialNumber" Kind="io"/>
+</LN>
+<LN ID="%IW.PS1.ModuleID" Type="UINT">
+<Prod Device="PS1" DPName="ModuleID" Kind="io"/>
+</LN>
+<LN ID="%IW.PS1.HardwareVariant" Type="UINT">
+<Prod Device="PS1" DPName="HardwareVariant" Kind="io"/>
+</LN>
+<LN ID="%IW.PS1.FirmwareVersion" Type="UINT">
+<Prod Device="PS1" DPName="FirmwareVersion" Kind="io"/>
+</LN>
+<LN ID="%IX.PS1.StatusInput01" Type="BOOL">
+<Prod Device="PS1" DPName="StatusInput01" Kind="io"/>
+</LN>
+<LN ID="%IX.PS1.StatusInput02" Type="BOOL">
+<Prod Device="PS1" DPName="StatusInput02" Kind="io"/>
+</LN>
+</Links></IO>

@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="TextGroupBase">
+    <Folder Name="passGroup" TargetIndex="Source[global].TextGroup[passGroup]">
+      <Object Name="passGroup" ClsId="0x304" Version="1" TargetIndex="2147483651" Type="TG" RefString="Source[global].TextGroup[passGroup]">
+        <UInt32 Name="NumberOfTags">3</UInt32>
+        <UInt32 Name="NumberOfTexts">3</UInt32>
+        <Table Name="TextMap" Cols="2">
+          <TableHeader>
+            <Column Name="UserIndex" />
+            <Column Name="TextIndex" />
+          </TableHeader>
+          <TableRow>
+            <UInt32 Name="UserIndex">0</UInt32>
+            <UInt32 Name="TextIndex">95428</UInt32>
+          </TableRow>
+          <TableRow>
+            <UInt32 Name="UserIndex">1</UInt32>
+            <UInt32 Name="TextIndex">95547</UInt32>
+          </TableRow>
+          <TableRow>
+            <UInt32 Name="UserIndex">2</UInt32>
+            <UInt32 Name="TextIndex">95548</UInt32>
+          </TableRow>
+        </Table>
+      </Object>
+    </Folder>
+  </Folder>
+  <Folder Name="TextGroupBase">
+    <Folder Name="passGroup">
+      <Folder Name="TextSnippets">
+        <Object Name="Admin" ClsId="0x2002" Version="1" Type="SNP" RefString="Source[global].TextGroup[passGroup].Snippet[Admin]">
+          <Reference Name="Datapoint" Type="DP">Source[global].Variable[DataSource.Hesla[1]]</Reference>
+          <Reference Name="StyleClass" Type="SC">None</Reference>
+          <UInt16 Name="StyleTableSize">27</UInt16>
+          <UInt16 Name="Reserved">0</UInt16>
+          <Group Name="MinChars">
+            <UInt16 Name="Offset">0</UInt16>
+            <UInt16 Name="Size">2</UInt16>
+            <UInt16 Name="Data">0</UInt16>
+          </Group>
+          <Group Name="MaxChars">
+            <UInt16 Name="Offset">2</UInt16>
+            <UInt16 Name="Size">2</UInt16>
+            <UInt16 Name="Data">65535</UInt16>
+          </Group>
+          <Group Name="FillCharacter">
+            <UInt16 Name="Offset">4</UInt16>
+            <UInt16 Name="Size">2</UInt16>
+            <UInt16 Name="Data">0</UInt16>
+          </Group>
+          <Group Name="Alignment">
+            <UInt16 Name="Offset">6</UInt16>
+            <UInt16 Name="Size">1</UInt16>
+            <Byte Name="Data">0</Byte>
+          </Group>
+          <Group Name="End Marker">
+            <UInt16 Name="Offset">65535</UInt16>
+            <UInt16 Name="Size">0</UInt16>
+          </Group>
+        </Object>
+      </Folder>
+    </Folder>
+  </Folder>
+  <Folder Name="TextGroupBase">
+    <Folder Name="passGroup">
+      <Folder Name="TextSnippets">
+        <Object Name="Supervisor" ClsId="0x2002" Version="1" Type="SNP" RefString="Source[global].TextGroup[passGroup].Snippet[Supervisor]">
+          <Reference Name="Datapoint" Type="DP">Source[global].Variable[DataSource.Hesla[2]]</Reference>
+          <Reference Name="StyleClass" Type="SC">None</Reference>
+          <UInt16 Name="StyleTableSize">27</UInt16>
+          <UInt16 Name="Reserved">0</UInt16>
+          <Group Name="MinChars">
+            <UInt16 Name="Offset">0</UInt16>
+            <UInt16 Name="Size">2</UInt16>
+            <UInt16 Name="Data">0</UInt16>
+          </Group>
+          <Group Name="MaxChars">
+            <UInt16 Name="Offset">2</UInt16>
+            <UInt16 Name="Size">2</UInt16>
+            <UInt16 Name="Data">65535</UInt16>
+          </Group>
+          <Group Name="FillCharacter">
+            <UInt16 Name="Offset">4</UInt16>
+            <UInt16 Name="Size">2</UInt16>
+            <UInt16 Name="Data">0</UInt16>
+          </Group>
+          <Group Name="Alignment">
+            <UInt16 Name="Offset">6</UInt16>
+            <UInt16 Name="Size">1</UInt16>
+            <Byte Name="Data">0</Byte>
+          </Group>
+          <Group Name="End Marker">
+            <UInt16 Name="Offset">65535</UInt16>
+            <UInt16 Name="Size">0</UInt16>
+          </Group>
+        </Object>
+      </Folder>
+    </Folder>
+  </Folder>
+  <Folder Name="TextGroupBase">
+    <Folder Name="passGroup">
+      <Folder Name="TextSnippets">
+        <Object Name="Operator" ClsId="0x2002" Version="1" Type="SNP" RefString="Source[global].TextGroup[passGroup].Snippet[Operator]">
+          <Reference Name="Datapoint" Type="DP">Source[global].Variable[DataSource.Hesla[0]]</Reference>
+          <Reference Name="StyleClass" Type="SC">None</Reference>
+          <UInt16 Name="StyleTableSize">27</UInt16>
+          <UInt16 Name="Reserved">0</UInt16>
+          <Group Name="MinChars">
+            <UInt16 Name="Offset">0</UInt16>
+            <UInt16 Name="Size">2</UInt16>
+            <UInt16 Name="Data">0</UInt16>
+          </Group>
+          <Group Name="MaxChars">
+            <UInt16 Name="Offset">2</UInt16>
+            <UInt16 Name="Size">2</UInt16>
+            <UInt16 Name="Data">65535</UInt16>
+          </Group>
+          <Group Name="FillCharacter">
+            <UInt16 Name="Offset">4</UInt16>
+            <UInt16 Name="Size">2</UInt16>
+            <UInt16 Name="Data">0</UInt16>
+          </Group>
+          <Group Name="Alignment">
+            <UInt16 Name="Offset">6</UInt16>
+            <UInt16 Name="Size">1</UInt16>
+            <Byte Name="Data">0</Byte>
+          </Group>
+          <Group Name="End Marker">
+            <UInt16 Name="Offset">65535</UInt16>
+            <UInt16 Name="Size">0</UInt16>
+          </Group>
+        </Object>
+      </Folder>
+    </Folder>
+  </Folder>
+  <Folder Name="Language">
+    <Folder Name="en" TargetIndex="0">
+      <Folder Name="TextGroups">
+        <Folder Name="POBJ">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[passGroup]" Type="TG" RefString="Source[global].TextGroup[passGroup].Language[en]">
+            <UInt32 Name="NumberOfTexts">3</UInt32>
+            <Table Name="TextOffsets" Cols="5">
+              <TableHeader>
+                <Column Name="TextIndex" />
+                <Column Name="TextOffset" />
+                <Column Name="SnippetCount" />
+                <Column Name="Reserved" />
+                <Column Name="Reserved" />
+              </TableHeader>
+              <TableRow>
+                <UInt32 Name="TextIndex">95428</UInt32>
+                <UInt32 Name="TextOffset">40</UInt32>
+                <Byte Name="SnippetCount">1</Byte>
+                <Byte Name="Reserved">0</Byte>
+                <UInt16 Name="Reserved">0</UInt16>
+              </TableRow>
+              <TableRow>
+                <UInt32 Name="TextIndex">95547</UInt32>
+                <UInt32 Name="TextOffset">62</UInt32>
+                <Byte Name="SnippetCount">1</Byte>
+                <Byte Name="Reserved">0</Byte>
+                <UInt16 Name="Reserved">0</UInt16>
+              </TableRow>
+              <TableRow>
+                <UInt32 Name="TextIndex">95548</UInt32>
+                <UInt32 Name="TextOffset">78</UInt32>
+                <Byte Name="SnippetCount">1</Byte>
+                <Byte Name="Reserved">0</Byte>
+                <UInt16 Name="Reserved">0</UInt16>
+              </TableRow>
+            </Table>
+            <Group Name="Texts">
+              <String Name="Text" Encoding="Unicode">"&#x1;Operator&#x2;"</String>
+              <String Name="Text" Encoding="Unicode">"&#x1;Admin&#x2;"</String>
+              <String Name="Text" Encoding="Unicode">"&#x1;Supervisor&#x2;"</String>
+            </Group>
+          </Object>
+        </Folder>
+      </Folder>
+    </Folder>
+  </Folder>
+  <Folder Name="Language">
+    <Folder Name="de" TargetIndex="1">
+      <Folder Name="TextGroups">
+        <Folder Name="POBJ">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[passGroup]" Type="TG" RefString="Source[global].TextGroup[passGroup].Language[de]">
+            <UInt32 Name="NumberOfTexts">3</UInt32>
+            <Table Name="TextOffsets" Cols="5">
+              <TableHeader>
+                <Column Name="TextIndex" />
+                <Column Name="TextOffset" />
+                <Column Name="SnippetCount" />
+                <Column Name="Reserved" />
+                <Column Name="Reserved" />
+              </TableHeader>
+              <TableRow>
+                <UInt32 Name="TextIndex">95428</UInt32>
+                <UInt32 Name="TextOffset">40</UInt32>
+                <Byte Name="SnippetCount">0</Byte>
+                <Byte Name="Reserved">0</Byte>
+                <UInt16 Name="Reserved">0</UInt16>
+              </TableRow>
+              <TableRow>
+                <UInt32 Name="TextIndex">95547</UInt32>
+                <UInt32 Name="TextOffset">42</UInt32>
+                <Byte Name="SnippetCount">0</Byte>
+                <Byte Name="Reserved">0</Byte>
+                <UInt16 Name="Reserved">0</UInt16>
+              </TableRow>
+              <TableRow>
+                <UInt32 Name="TextIndex">95548</UInt32>
+                <UInt32 Name="TextOffset">44</UInt32>
+                <Byte Name="SnippetCount">0</Byte>
+                <Byte Name="Reserved">0</Byte>
+                <UInt16 Name="Reserved">0</UInt16>
+              </TableRow>
+            </Table>
+            <Group Name="Texts">
+              <String Name="Text" Encoding="Unicode">""</String>
+              <String Name="Text" Encoding="Unicode">""</String>
+              <String Name="Text" Encoding="Unicode">""</String>
+            </Group>
+          </Object>
+        </Folder>
+      </Folder>
+    </Folder>
+  </Folder>
+</Intermediate>

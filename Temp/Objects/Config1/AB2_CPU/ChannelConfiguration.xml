@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<?AutomationRuntimeIOSystem Version = 2.5.0.7?>
+<ChannelConfiguration xmlns="http://www.br-automation.com/AR/IO">
+  <Module ID="$root" Hardware="X20BB62" HardwareModuleName="AB2_CPU" ModuleID="13">
+    <Channel ID="SerialNumber_CPU" Description="Serial number of CPU board" Ext="/HW" Address="0" Direction="IN" Type="UDINT" ChannelType="GenericFuncCall" Function="HwGetSerialNumber" Sig_St_Udint="1" />
+    <Channel ID="ModuleID_CPU" Description="Module ID of CPU board" Ext="/HW" Address="1" Direction="IN" Type="UINT" ChannelType="ModuleIDCpu" Sig_St_Uint="1" />
+    <Channel ID="HardwareVariant" Description="Hardware variant" Ext="/HW" Address="2" Direction="IN" Type="UINT" ChannelType="HardwareVariant" Sig_St_Uint="1" />
+    <Channel ID="FirmwareVersion" Description="Firmware version" Ext="/HW" Address="3" Direction="IN" Type="UINT" ChannelType="FirmwareVersion" Sig_St_Uint="1" />
+    <Channel ID="TemperatureCPU" Description="Temperature CPU [1/10C]" Ext="/HW" Address="4" Direction="IN" Type="INT" Sig_Temp_CpuTemp="1" ChannelType="Temp" Ordinal="2" />
+    <Channel ID="TemperatureENV" Description="Temperature cooling plate [1/10C]" Ext="/HW" Address="5" Direction="IN" Type="INT" Sig_Temp_CpuTemp="1" ChannelType="Temp" Ordinal="1" />
+    <Channel ID="SystemTime" Description="System time at the start of the current task cycle [µs]" Ext="/HW" Address="6" Direction="IN" Type="DINT" Sig_St_Dint="1" ChannelType="SystemTime" />
+    <Channel ID="IF3.LinkOk" Description="Link state" Ext="/INFO" Address="0x8000001A" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="IF3.OutputDMAMargin" Description="Margin to output cycle deadline in microseconds" Ext="/INFO" Address="0x8000000C" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF3.NodeNumber" Description="Node number currently in use" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="USINT" Sig_St_Usint="1" />
+    <Channel ID="IF3.CycleOk" Description="Indication for proper cyclic operation (1 = operational)" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="IF3.SyncOk" Description="Indication for a synchronized POWERLINK-system (1 = synchronized)" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="IF3.TimeSeconds" Description="Absolute time extracted from current SoC-Frame (NetTime in POWERLINK V2) - Seconds" FromVersion="M2.90" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.TimeNanoseconds" Description="Absolute time extracted from current SoC-Frame (NetTime in POWERLINK V2) - Nanoseconds" FromVersion="M2.90" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.NettimeSoC" Description="Network time extracted from current SoC-Frame [µs] (RelativeTime in POWERLINK V2)" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF3.NettimeOffset" Description="Network time offset to local system time [µs]" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF3.CycleCount" Description="Overall number of bus cycles" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.FailedCycleCount" Description="Number of failed bus cycles" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.CycleTimeViolationCount" Description="Number of cycle time violations" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.CycleIdleTime" Description="Unoccupied time during one POWERLINK cycle [µs]" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="IF3.CycleCongestionCount" Description="allways 0, available for legacy projects" FromVersion="B2.87" Ext="/INFO" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+  </Module>
+  <Module ID="IF2.ST1" Hardware="6PPT50.0702-16A" HardwareModuleName="OP1_7inch" ModuleID="35">
+    <Channel ID="OPCUAconnectionOK" Description="Module status (1 = module present)" FromVersion="A4.51" Ext="/OK" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+  </Module>
+  <Module ID="IF3.ST1" Hardware="8EI013HWS10.xxxx-1" HardwareModuleName="8EI013HWS10.xxxx-1" ModuleID="1">
+    <Channel ID="CyclicParameterRequest_AX_1" Description="" Ext="/DYNAMIC" Address="0x00012020" Direction="OUT" Type="OCTET[12]" ArConfig="copy" />
+    <Channel ID="CyclicDataToDrive_AX_1" Description="" Ext="/DYNAMIC" Address="0x00022020" Direction="OUT" Type="OCTET[20]" ArConfig="copy" />
+    <Channel ID="CyclicParameterResponse_AX_1" Description="" Ext="/DYNAMIC" Address="0x00012030" Direction="IN" Type="OCTET[12]" ArConfig="copy" />
+    <Channel ID="CyclicStatusBitsResponse_AX_1" Description="" Ext="/DYNAMIC" Address="0x00022030" Direction="IN" Type="OCTET[4]" ArConfig="copy" />
+    <Channel ID="CyclicMonitorData_AX_1" Description="" Ext="/DYNAMIC" Address="0x00032030" Direction="IN" Type="OCTET[16]" ArConfig="copy" />
+    <Channel ID="CycUserFromDrive_AX_1" Description="" Ext="/DYNAMIC" Address="0x00042030" Direction="IN" Type="OCTET[20]" ArConfig="copy" />
+    <Channel ID="MA1CYCSEND_AX_1" Description="" Ext="/DYNAMIC" Address="0x00052030" Direction="IN" Type="OCTET[8]" ArConfig="copy" />
+    <Channel ID="MA2CYCSEND_AX_1" Description="" Ext="/DYNAMIC" Address="0x00062030" Direction="IN" Type="OCTET[8]" ArConfig="copy" />
+    <Channel ID="MA3CYCSEND_AX_1" Description="" Ext="/DYNAMIC" Address="0x00072030" Direction="IN" Type="OCTET[8]" ArConfig="copy" />
+  </Module>
+  <Module ID="$root" Hardware="X20BB62" HardwareModuleName="X20BB62" ModuleID="41">
+    <Channel ID="ModuleID_BB" Description="Module ID bus base" Ext="/HW" Address="10" Direction="IN" Type="UINT" Sig_St_Uint="1" ChannelType="ModuleID" />
+    <Channel ID="IF6.CycleCount" Description="Number of bus cycles" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.BreakCount" Description="Number of bus cycles with set break signal" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.Nettime" Description="Timestamp when the current input frame was started  [µs]" FromVersion="I2.90" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncErrorCount" Description="Number of failed synchronous frames" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncSramErrorCount" Description="Number of memory access errors within synchronous frame (overflow/underrun)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncBusyErrorCount" Description="Number of not sent synchronous frames (sender not ready)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncNoRxErrorCount" Description="Number of not received synchronous frames (timeout)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncFormatErrorCount" Description="Number of faulty synchronous frames" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncPendingErrorCount" Description="Number of synchronous frames which could not be sent because of receiving a frame" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncErrorCount" Description="Number of failed asynchronous frames" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncSramErrorCount" Description="Number of memory access errors within asynchronous frame (overflow/underrun)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncBusyErrorCount" Description="Number of not sent asynchronous frames (sender not ready)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncNoRxErrorCount" Description="Number of not received asynchronous frames (timeout)" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncFormatErrorCount" Description="Number of faulty asynchronous frames" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncPendingErrorCount" Description="Number of asynchronous frames which could not be sent because of receiving a frame" FromVersion="I2.85" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.DMALateOutputErrorCount" Description="Number of cycles when DMA for cyclic outputs was too late" FromVersion="G2.93" Ext="/INFO" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.NrOfStationsMax" Description="Number of max. stations" FromVersion="A3.08" Ext="/INFO" Address="0x80000113" Direction="IN" Type="USINT" Sig_St_Usint="1" />
+    <Channel ID="IF6.NrOfStationsConfigured" Description="Number of configured stations" FromVersion="A3.08" Ext="/INFO" Address="0x80000114" Direction="IN" Type="USINT" Sig_St_Usint="1" />
+    <Channel ID="IF6.StationAtBusEnd" Description="Station at end of bus" FromVersion="A3.08" Ext="/INFO" Address="0x80000115" Direction="IN" Type="USINT" Sig_St_Usint="1" />
+    <Channel ID="IF6.StationAtBusEndChangeTime" Description="Time of last change at station on end of bus" FromVersion="A3.08" Ext="/INFO" Address="0xC0000115" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" />
+    <Channel ID="IF6.StationPastOutFrameError" Description="First station which recognizes output frame error" FromVersion="A3.08" Ext="/INFO" Address="0x80000116" Direction="IN" Type="USINT" Sig_St_Usint="1" />
+    <Channel ID="IF6.StationPastOutFrameErrorChangeTime" Description="Time of last change of channel StationPastOutFrameError" FromVersion="A3.08" Ext="/INFO" Address="0xC0000116" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" />
+    <Channel ID="IF6.StationPastInFrameError" Description="First station which recognizes input frame error" FromVersion="A3.08" Ext="/INFO" Address="0x80000117" Direction="IN" Type="USINT" Sig_St_Usint="1" />
+    <Channel ID="IF6.StationPastInFrameErrorChangeTime" Description="Time of last change of channel StationPastInFrameError" FromVersion="A3.08" Ext="/INFO" Address="0xC0000117" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" />
+    <Channel ID="IF6.SyncInFrameSize" Description="Size of synchronous input frame [Bytes]" FromVersion="A3.08" Ext="/INFO" Address="0x80000118" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.SyncOutFrameSize" Description="Size of synchronous output frame [Bytes]" FromVersion="A3.08" Ext="/INFO" Address="0x80000119" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncFrameSize" Description="Size of asynchronous frame [Bytes]" FromVersion="A3.08" Ext="/INFO" Address="0x8000011A" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.AsyncFrameSpareSize" Description="Size reserve within asynchronous frame [Bytes]" FromVersion="A3.08" Ext="/INFO" Address="0x8000011B" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+    <Channel ID="IF6.BusLengthConfigured" Description="Configured bus length [m]" FromVersion="A3.08" Ext="/INFO" Address="0x8000011C" Direction="IN" Type="DINT" Sig_St_Dint="1" />
+  </Module>
+  <Module ID="IF6.ST1" Hardware="X20SLX842" HardwareModuleName="AB4_SafetyMaster" ModuleID="22">
+    <Channel ID="ModuleOk" Description="Module status (1 = module present)" Ext="/OK" Address="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="SerialNumber" Description="Serial number" Ext="/INFO" Address="4" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="ModuleID" Description="Module ID" Ext="/INFO" Address="10" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="HardwareVariant" Description="Hardware variant" Ext="/INFO" Address="12" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="FirmwareVersion" Description="Firmware version" Ext="/INFO" Address="14" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="SLXioCycle" Description="" FromVersion="H4.06" Ext="/MULTIPLEXED /INFOCHANNEL=TransferDuration" Address="0" Direction="IN" Type="UDINT" />
+    <Channel ID="SafeDigitalInput01" Description="24 VDC, sink" Safe="true" Ext="/SUB=MFWslxIN" Address="0" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeDigitalInput02" Description="24 VDC, sink" Safe="true" Ext="/SUB=MFWslxIN" Address="0" BitOffset="1" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeDigitalInput03" Description="24 VDC, sink" Safe="true" Ext="/SUB=MFWslxIN" Address="0" BitOffset="2" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeDigitalInput04" Description="24 VDC, sink" Safe="true" Ext="/SUB=MFWslxIN" Address="0" BitOffset="3" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeDigitalInput05" Description="24 VDC, sink" Safe="true" Ext="/SUB=MFWslxIN" Address="0" BitOffset="4" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeDigitalInput06" Description="24 VDC, sink" Safe="true" Ext="/SUB=MFWslxIN" Address="0" BitOffset="5" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeDigitalInput07" Description="24 VDC, sink" Safe="true" Ext="/SUB=MFWslxIN" Address="0" BitOffset="6" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeDigitalInput08" Description="24 VDC, sink" Safe="true" Ext="/SUB=MFWslxIN" Address="0" BitOffset="7" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeTwoChannelInput0102" Description="2-channel evaluation channel 1/2" Safe="true" Ext="/SUB=MFWslxIN" Address="1" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeTwoChannelInput0304" Description="2-channel evaluation channel 3/4" Safe="true" Ext="/SUB=MFWslxIN" Address="1" BitOffset="1" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeTwoChannelInput0506" Description="2-channel evaluation channel 5/6" Safe="true" Ext="/SUB=MFWslxIN" Address="1" BitOffset="2" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeTwoChannelInput0708" Description="2-channel evaluation channel 7/8" Safe="true" Ext="/SUB=MFWslxIN" Address="1" BitOffset="3" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeTwoChannelOk0102" Description="Status 2-channel evaluation (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="1" BitOffset="4" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeTwoChannelOk0304" Description="Status 2-channel evaluation (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="1" BitOffset="5" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeTwoChannelOk0506" Description="Status 2-channel evaluation (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="1" BitOffset="6" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeTwoChannelOk0708" Description="Status 2-channel evaluation (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="1" BitOffset="7" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeInputOK01" Description="Status digital input (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="2" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeInputOK02" Description="Status digital input (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="2" BitOffset="1" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeInputOK03" Description="Status digital input (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="2" BitOffset="2" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeInputOK04" Description="Status digital input (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="2" BitOffset="3" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeInputOK05" Description="Status digital input (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="2" BitOffset="4" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeInputOK06" Description="Status digital input (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="2" BitOffset="5" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeInputOK07" Description="Status digital input (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="2" BitOffset="6" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeInputOK08" Description="Status digital input (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="2" BitOffset="7" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeOutputOK01" Description="Status digital output (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="3" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeOutputOK02" Description="Status digital output (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="3" BitOffset="1" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeOutputOK03" Description="Status digital output (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="3" BitOffset="2" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeOutputOK04" Description="Status digital output (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="3" BitOffset="3" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeOutputOK05" Description="Status digital output (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="3" BitOffset="4" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="SafeOutputOK06" Description="Status digital output (1=OK)" Safe="true" Ext="/SUB=MFWslxIN" Address="3" BitOffset="5" Direction="IN" Type="BOOL" Sig_St_Bool="1" SafetyOption="3" />
+    <Channel ID="PhysicalStateChannel01" Description="Read back value of channel" Ext="/SUB=MFWslxIN" Address="4" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" Group="General" SafetyOption="3" />
+    <Channel ID="PhysicalStateChannel02" Description="Read back value of channel" Ext="/SUB=MFWslxIN" Address="4" BitOffset="1" Direction="IN" Type="BOOL" Sig_St_Bool="1" Group="General" SafetyOption="3" />
+    <Channel ID="PhysicalStateChannel03" Description="Read back value of channel" Ext="/SUB=MFWslxIN" Address="4" BitOffset="2" Direction="IN" Type="BOOL" Sig_St_Bool="1" Group="General" SafetyOption="3" />
+    <Channel ID="PhysicalStateChannel04" Description="Read back value of channel" Ext="/SUB=MFWslxIN" Address="4" BitOffset="3" Direction="IN" Type="BOOL" Sig_St_Bool="1" Group="General" SafetyOption="3" />
+    <Channel ID="PhysicalStateChannel05" Description="Read back value of channel" Ext="/SUB=MFWslxIN" Address="4" BitOffset="4" Direction="IN" Type="BOOL" Sig_St_Bool="1" Group="General" SafetyOption="3" />
+    <Channel ID="PhysicalStateChannel06" Description="Read back value of channel" Ext="/SUB=MFWslxIN" Address="4" BitOffset="5" Direction="IN" Type="BOOL" Sig_St_Bool="1" Group="General" SafetyOption="3" />
+    <Channel ID="BOOL101" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL102" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL103" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL104" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL105" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL106" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL107" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL108" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL109" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL110" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL111" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL112" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL113" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL114" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL115" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL116" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="OUT" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL001" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL002" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL003" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL004" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL005" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL006" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL007" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL008" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL009" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL010" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL011" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL012" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL013" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL014" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL015" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+    <Channel ID="BOOL016" Description="" CrossLink="true" Ext="/DYNAMIC /MULTIPLEXED" Direction="IN" Type="BOOL" Sig_St_Bool="1" Inverted="true" Group="CPU_SafeLOGIC" />
+  </Module>
+  <Module ID="IF6.ST2" Hardware="X20DIF371" HardwareModuleName="AB5_16DI" ModuleID="26" Simulatable="true">
+    <Channel ID="ModuleOk" Description="Module status (1 = module present)" Ext="/OK" Address="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="SerialNumber" Description="Serial number" Ext="/INFO" Address="4" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="ModuleID" Description="Module ID" Ext="/INFO" Address="10" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="HardwareVariant" Description="Hardware variant" Ext="/INFO" Address="12" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="FirmwareVersion" Description="Firmware version" Ext="/INFO" Address="14" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="DigitalInput01" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="0" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput02" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="1" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput03" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="2" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput04" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="3" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput05" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="4" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput06" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="5" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput07" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="6" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput08" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="7" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput09" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="0" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput10" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="1" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput11" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="2" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput12" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="3" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput13" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="4" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput14" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="5" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput15" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="6" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput16" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="7" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="BusModuleId" Description="Module ID of bus module" FromVersion="A3.08" Ext="/INFO" Address="0x80000180" Direction="IN" Type="UINT" Sig_St_Uint="1" Diagnose="/DIAG" />
+    <Channel ID="ModeOfOperation" Description="Status of module" FromVersion="A3.08" Ext="/INFO" Address="0x80000181" Direction="IN" Type="USINT" Sig_St_Usint="1" Diagnose="/DIAG" />
+    <Channel ID="ModeOfOperationChangeTime" Description="Time of last change of channel ModeOfOperation" FromVersion="A3.08" Ext="/INFO" Address="0xC0000181" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfResets" Description="Number of resets of the station" FromVersion="A3.08" Ext="/INFO" Address="0x80000182" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfResetsChangeTime" Description="Time of last change of channel NrOfResets" FromVersion="A3.08" Ext="/INFO" Address="0xC0000182" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfInits" Description="Number of inits of the station" FromVersion="A3.08" Ext="/INFO" Address="0x80000183" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfInitsChangeTime" Description="Time of last change of channel NrOfInits" FromVersion="A3.08" Ext="/INFO" Address="0xC0000183" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfFwUpdates" Description="Number of FW updates of the station" FromVersion="A3.08" Ext="/INFO" Address="0x80000184" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfFwUpdatesChangeTime" Description="Time of last change of channel NrOfFwUpdates" FromVersion="A3.08" Ext="/INFO" Address="0xC0000184" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleNoComm" Description="Number of missing answers from IO processor on IO module" FromVersion="A3.08" Ext="/INFO" Address="0x80000185" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleNoCommChangeTime" Description="Time of last change of channel ModuleNoComm" FromVersion="A3.08" Ext="/INFO" Address="0xC0000185" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleCommError" Description="Number of communication errors to IO processor on IO module" FromVersion="A3.08" Ext="/INFO" Address="0x80000186" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleCommErrorChangeTime" Description="Time of last change of channel ModuleCommError" FromVersion="A3.08" Ext="/INFO" Address="0xC0000186" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+  </Module>
+  <Module ID="IF6.ST3" Hardware="X20DIF371" HardwareModuleName="AB6_16DI" ModuleID="29" Simulatable="true">
+    <Channel ID="ModuleOk" Description="Module status (1 = module present)" Ext="/OK" Address="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="SerialNumber" Description="Serial number" Ext="/INFO" Address="4" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="ModuleID" Description="Module ID" Ext="/INFO" Address="10" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="HardwareVariant" Description="Hardware variant" Ext="/INFO" Address="12" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="FirmwareVersion" Description="Firmware version" Ext="/INFO" Address="14" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="DigitalInput01" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="0" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput02" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="1" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput03" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="2" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput04" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="3" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput05" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="4" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput06" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="5" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput07" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="6" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput08" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="1" BitOffset="7" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput09" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="0" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput10" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="1" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput11" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="2" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput12" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="3" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput13" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="4" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput14" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="5" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput15" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="6" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="DigitalInput16" Description="24 VDC, 0.1 to 25 ms switching delay, sink" Ext="/FIXED" Address="2" BitOffset="7" Direction="IN" Type="BOOL" Sig_Dig_24VDC="1" />
+    <Channel ID="BusModuleId" Description="Module ID of bus module" FromVersion="A3.08" Ext="/INFO" Address="0x80000180" Direction="IN" Type="UINT" Sig_St_Uint="1" Diagnose="/DIAG" />
+    <Channel ID="ModeOfOperation" Description="Status of module" FromVersion="A3.08" Ext="/INFO" Address="0x80000181" Direction="IN" Type="USINT" Sig_St_Usint="1" Diagnose="/DIAG" />
+    <Channel ID="ModeOfOperationChangeTime" Description="Time of last change of channel ModeOfOperation" FromVersion="A3.08" Ext="/INFO" Address="0xC0000181" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfResets" Description="Number of resets of the station" FromVersion="A3.08" Ext="/INFO" Address="0x80000182" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfResetsChangeTime" Description="Time of last change of channel NrOfResets" FromVersion="A3.08" Ext="/INFO" Address="0xC0000182" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfInits" Description="Number of inits of the station" FromVersion="A3.08" Ext="/INFO" Address="0x80000183" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfInitsChangeTime" Description="Time of last change of channel NrOfInits" FromVersion="A3.08" Ext="/INFO" Address="0xC0000183" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfFwUpdates" Description="Number of FW updates of the station" FromVersion="A3.08" Ext="/INFO" Address="0x80000184" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfFwUpdatesChangeTime" Description="Time of last change of channel NrOfFwUpdates" FromVersion="A3.08" Ext="/INFO" Address="0xC0000184" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleNoComm" Description="Number of missing answers from IO processor on IO module" FromVersion="A3.08" Ext="/INFO" Address="0x80000185" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleNoCommChangeTime" Description="Time of last change of channel ModuleNoComm" FromVersion="A3.08" Ext="/INFO" Address="0xC0000185" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleCommError" Description="Number of communication errors to IO processor on IO module" FromVersion="A3.08" Ext="/INFO" Address="0x80000186" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleCommErrorChangeTime" Description="Time of last change of channel ModuleCommError" FromVersion="A3.08" Ext="/INFO" Address="0xC0000186" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+  </Module>
+  <Module ID="IF6.ST4" Hardware="X20DOF322" HardwareModuleName="AB7_16DO" ModuleID="32" Simulatable="true">
+    <Channel ID="ModuleOk" Description="Module status (1 = module present)" Ext="/OK" Address="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="SerialNumber" Description="Serial number" Ext="/INFO" Address="4" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="ModuleID" Description="Module ID" Ext="/INFO" Address="10" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="HardwareVariant" Description="Hardware variant" Ext="/INFO" Address="12" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="FirmwareVersion" Description="Firmware version" Ext="/INFO" Address="14" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="DigitalOutput01" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="0" BitOffset="0" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput02" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="0" BitOffset="1" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput03" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="0" BitOffset="2" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput04" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="0" BitOffset="3" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput05" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="0" BitOffset="4" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput06" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="0" BitOffset="5" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput07" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="0" BitOffset="6" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput08" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="0" BitOffset="7" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput09" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="1" BitOffset="0" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput10" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="1" BitOffset="1" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput11" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="1" BitOffset="2" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput12" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="1" BitOffset="3" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput13" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="1" BitOffset="4" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput14" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="1" BitOffset="5" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput15" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="1" BitOffset="6" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="DigitalOutput16" Description="24 VDC / 0.5 A, source" Ext="/FIXED" Address="1" BitOffset="7" Direction="OUT" Type="BOOL" Sig_Dig_05A_24VDC="1" />
+    <Channel ID="StatusDigitalOutput01" Description="Status digital output 01 (0 = OK)" Ext="/FIXED" Address="1" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput02" Description="Status digital output 02 (0 = OK)" Ext="/FIXED" Address="1" BitOffset="1" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput03" Description="Status digital output 03 (0 = OK)" Ext="/FIXED" Address="1" BitOffset="2" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput04" Description="Status digital output 04 (0 = OK)" Ext="/FIXED" Address="1" BitOffset="3" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput05" Description="Status digital output 05 (0 = OK)" Ext="/FIXED" Address="1" BitOffset="4" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput06" Description="Status digital output 06 (0 = OK)" Ext="/FIXED" Address="1" BitOffset="5" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput07" Description="Status digital output 07 (0 = OK)" Ext="/FIXED" Address="1" BitOffset="6" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput08" Description="Status digital output 08 (0 = OK)" Ext="/FIXED" Address="1" BitOffset="7" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput09" Description="Status digital output 09 (0 = OK)" Ext="/FIXED" Address="2" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput10" Description="Status digital output 10 (0 = OK)" Ext="/FIXED" Address="2" BitOffset="1" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput11" Description="Status digital output 11 (0 = OK)" Ext="/FIXED" Address="2" BitOffset="2" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput12" Description="Status digital output 12 (0 = OK)" Ext="/FIXED" Address="2" BitOffset="3" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput13" Description="Status digital output 13 (0 = OK)" Ext="/FIXED" Address="2" BitOffset="4" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput14" Description="Status digital output 14 (0 = OK)" Ext="/FIXED" Address="2" BitOffset="5" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput15" Description="Status digital output 15 (0 = OK)" Ext="/FIXED" Address="2" BitOffset="6" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusDigitalOutput16" Description="Status digital output 16 (0 = OK)" Ext="/FIXED" Address="2" BitOffset="7" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="BusModuleId" Description="Module ID of bus module" FromVersion="A3.08" Ext="/INFO" Address="0x80000180" Direction="IN" Type="UINT" Sig_St_Uint="1" Diagnose="/DIAG" />
+    <Channel ID="ModeOfOperation" Description="Status of module" FromVersion="A3.08" Ext="/INFO" Address="0x80000181" Direction="IN" Type="USINT" Sig_St_Usint="1" Diagnose="/DIAG" />
+    <Channel ID="ModeOfOperationChangeTime" Description="Time of last change of channel ModeOfOperation" FromVersion="A3.08" Ext="/INFO" Address="0xC0000181" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfResets" Description="Number of resets of the station" FromVersion="A3.08" Ext="/INFO" Address="0x80000182" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfResetsChangeTime" Description="Time of last change of channel NrOfResets" FromVersion="A3.08" Ext="/INFO" Address="0xC0000182" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfInits" Description="Number of inits of the station" FromVersion="A3.08" Ext="/INFO" Address="0x80000183" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfInitsChangeTime" Description="Time of last change of channel NrOfInits" FromVersion="A3.08" Ext="/INFO" Address="0xC0000183" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfFwUpdates" Description="Number of FW updates of the station" FromVersion="A3.08" Ext="/INFO" Address="0x80000184" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="NrOfFwUpdatesChangeTime" Description="Time of last change of channel NrOfFwUpdates" FromVersion="A3.08" Ext="/INFO" Address="0xC0000184" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleNoComm" Description="Number of missing answers from IO processor on IO module" FromVersion="A3.08" Ext="/INFO" Address="0x80000185" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleNoCommChangeTime" Description="Time of last change of channel ModuleNoComm" FromVersion="A3.08" Ext="/INFO" Address="0xC0000185" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleCommError" Description="Number of communication errors to IO processor on IO module" FromVersion="A3.08" Ext="/INFO" Address="0x80000186" Direction="IN" Type="DINT" Sig_St_Dint="1" Diagnose="/DIAG" />
+    <Channel ID="ModuleCommErrorChangeTime" Description="Time of last change of channel ModuleCommError" FromVersion="A3.08" Ext="/INFO" Address="0xC0000186" Direction="IN" Type="DATE_AND_TIME" Sig_St_Dt="1" Diagnose="/DIAG" />
+  </Module>
+  <Module ID="SS1" Hardware="X20IF10E1-1" HardwareModuleName="AB1_ProfinetMaster" ModuleID="10">
+    <Channel ID="ModuleOk" Description="Module status (1 = module present)" FromVersion="C4.25" Ext="/OK" Address="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="SerialNumber" Description="Serial number" Ext="/HW" Address="0" Direction="IN" Type="UDINT" Sig_St_Udint="1" ChannelType="HWTree" AliasName="Serial_Number" />
+    <Channel ID="ModuleID" Description="Module ID" Ext="/HW" Address="1" Direction="IN" Type="UINT" Sig_St_Uint="1" ChannelType="HWTree" AliasName="Modno" />
+    <Channel ID="HardwareVariant" Description="Hardware variant" Ext="/HW" Address="2" Direction="IN" Type="UINT" Sig_St_Uint="1" ChannelType="HWTree" />
+    <Channel ID="FirmwareVersion" Description="Firmware version" Ext="/HW" Address="3" Direction="IN" Type="UINT" Sig_St_Uint="1" ChannelType="HWTree" />
+    <Channel ID="Communication_Change_of_State" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="0" />
+    <Channel ID="Communication_State" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="4" />
+    <Channel ID="Communication_Error" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="8" />
+    <Channel ID="Version" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UINT" Address="12" />
+    <Channel ID="Watchdog_Timeout" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UINT" Address="14" />
+    <Channel ID="Host_Watchdog" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="20" />
+    <Channel ID="Error_Count" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="24" />
+    <Channel ID="Error_Log_Indicator" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="28" />
+    <Channel ID="Slave_State" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="40" />
+    <Channel ID="Slave_Error_Log_Indicator" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="44" />
+    <Channel ID="Configured_Slaves" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="48" />
+    <Channel ID="Active_Slaves" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="52" />
+    <Channel ID="Faulted_Slaves" Description="" Direction="IN" Ext="/HW /STATE /PSEUDOCYCLIC" Type="UDINT" Address="56" />
+    <Channel ID="SlaveConfig_robotabb" Description="" Direction="IN" Ext="/HW" Type="BOOL" BitOffset="0" Address="64" />
+    <Channel ID="SlaveState_robotabb" Description="" Direction="IN" Ext="/HW" Type="BOOL" BitOffset="0" Address="80" />
+    <Channel ID="SlaveDiag_robotabb" Description="" Direction="IN" Ext="/HW" Type="BOOL" BitOffset="0" Address="96" />
+  </Module>
+  <Module ID="SS1.IF1.ST1" Hardware="NetX_any" HardwareModuleName="Robot_ABB" ModuleID="38" Simulatable="true">
+    <Channel ID="ModuleOk" Description="Module status (1 = module present)" Description-de="Modul Status (1 = Modul gesteckt)" Description-fr="TODO" Direction="IN" Ext="/OK" Type="BOOL" BitOffset="0" Address="80" Sig_St_Bool="1" />
+    <Channel ID="Module001_Input_0" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="0" />
+    <Channel ID="Module001_Input_1" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="1" />
+    <Channel ID="Module001_Input_2" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="2" />
+    <Channel ID="Module001_Input_3" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="3" />
+    <Channel ID="Module001_Input_4" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="4" />
+    <Channel ID="Module001_Input_5" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="5" />
+    <Channel ID="Module001_Input_6" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="6" />
+    <Channel ID="Module001_Input_7" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="7" />
+    <Channel ID="Module001_Input_8" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="8" />
+    <Channel ID="Module001_Input_9" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="9" />
+    <Channel ID="Module001_Input_10" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="10" />
+    <Channel ID="Module001_Input_11" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="11" />
+    <Channel ID="Module001_Input_12" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="12" />
+    <Channel ID="Module001_Input_13" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="13" />
+    <Channel ID="Module001_Input_14" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="14" />
+    <Channel ID="Module001_Input_15" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="15" />
+    <Channel ID="Module001_Input_16" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="16" />
+    <Channel ID="Module001_Input_17" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="17" />
+    <Channel ID="Module001_Input_18" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="18" />
+    <Channel ID="Module001_Input_19" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="19" />
+    <Channel ID="Module001_Input_20" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="20" />
+    <Channel ID="Module001_Input_21" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="21" />
+    <Channel ID="Module001_Input_22" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="22" />
+    <Channel ID="Module001_Input_23" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="23" />
+    <Channel ID="Module001_Input_24" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="24" />
+    <Channel ID="Module001_Input_25" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="25" />
+    <Channel ID="Module001_Input_26" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="26" />
+    <Channel ID="Module001_Input_27" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="27" />
+    <Channel ID="Module001_Input_28" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="28" />
+    <Channel ID="Module001_Input_29" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="29" />
+    <Channel ID="Module001_Input_30" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="30" />
+    <Channel ID="Module001_Input_31" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="31" />
+    <Channel ID="Module001_Input_32" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="32" />
+    <Channel ID="Module001_Input_33" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="33" />
+    <Channel ID="Module001_Input_34" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="34" />
+    <Channel ID="Module001_Input_35" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="35" />
+    <Channel ID="Module001_Input_36" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="36" />
+    <Channel ID="Module001_Input_37" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="37" />
+    <Channel ID="Module001_Input_38" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="38" />
+    <Channel ID="Module001_Input_39" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="39" />
+    <Channel ID="Module001_Input_40" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="40" />
+    <Channel ID="Module001_Input_41" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="41" />
+    <Channel ID="Module001_Input_42" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="42" />
+    <Channel ID="Module001_Input_43" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="43" />
+    <Channel ID="Module001_Input_44" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="44" />
+    <Channel ID="Module001_Input_45" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="45" />
+    <Channel ID="Module001_Input_46" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="46" />
+    <Channel ID="Module001_Input_47" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="47" />
+    <Channel ID="Module001_Input_48" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="48" />
+    <Channel ID="Module001_Input_49" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="49" />
+    <Channel ID="Module001_Input_50" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="50" />
+    <Channel ID="Module001_Input_51" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="51" />
+    <Channel ID="Module001_Input_52" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="52" />
+    <Channel ID="Module001_Input_53" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="53" />
+    <Channel ID="Module001_Input_54" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="54" />
+    <Channel ID="Module001_Input_55" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="55" />
+    <Channel ID="Module001_Input_56" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="56" />
+    <Channel ID="Module001_Input_57" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="57" />
+    <Channel ID="Module001_Input_58" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="58" />
+    <Channel ID="Module001_Input_59" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="59" />
+    <Channel ID="Module001_Input_60" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="60" />
+    <Channel ID="Module001_Input_61" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="61" />
+    <Channel ID="Module001_Input_62" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="62" />
+    <Channel ID="Module001_Input_63" Description="DI 64 bytes &lt;Slot 1&gt;" Description-de="DI 64 bytes &lt;Slot 1&gt;" Description-fr="DI 64 bytes &lt;Slot 1&gt;" Direction="IN" Ext="/HW" Type="USINT" Address="63" />
+    <Channel ID="Module002_Output_0" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="0" />
+    <Channel ID="Module002_Output_1" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="1" />
+    <Channel ID="Module002_Output_2" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="2" />
+    <Channel ID="Module002_Output_3" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="3" />
+    <Channel ID="Module002_Output_4" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="4" />
+    <Channel ID="Module002_Output_5" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="5" />
+    <Channel ID="Module002_Output_6" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="6" />
+    <Channel ID="Module002_Output_7" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="7" />
+    <Channel ID="Module002_Output_8" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="8" />
+    <Channel ID="Module002_Output_9" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="9" />
+    <Channel ID="Module002_Output_10" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="10" />
+    <Channel ID="Module002_Output_11" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="11" />
+    <Channel ID="Module002_Output_12" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="12" />
+    <Channel ID="Module002_Output_13" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="13" />
+    <Channel ID="Module002_Output_14" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="14" />
+    <Channel ID="Module002_Output_15" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="15" />
+    <Channel ID="Module002_Output_16" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="16" />
+    <Channel ID="Module002_Output_17" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="17" />
+    <Channel ID="Module002_Output_18" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="18" />
+    <Channel ID="Module002_Output_19" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="19" />
+    <Channel ID="Module002_Output_20" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="20" />
+    <Channel ID="Module002_Output_21" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="21" />
+    <Channel ID="Module002_Output_22" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="22" />
+    <Channel ID="Module002_Output_23" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="23" />
+    <Channel ID="Module002_Output_24" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="24" />
+    <Channel ID="Module002_Output_25" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="25" />
+    <Channel ID="Module002_Output_26" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="26" />
+    <Channel ID="Module002_Output_27" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="27" />
+    <Channel ID="Module002_Output_28" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="28" />
+    <Channel ID="Module002_Output_29" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="29" />
+    <Channel ID="Module002_Output_30" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="30" />
+    <Channel ID="Module002_Output_31" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="31" />
+    <Channel ID="Module002_Output_32" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="32" />
+    <Channel ID="Module002_Output_33" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="33" />
+    <Channel ID="Module002_Output_34" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="34" />
+    <Channel ID="Module002_Output_35" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="35" />
+    <Channel ID="Module002_Output_36" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="36" />
+    <Channel ID="Module002_Output_37" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="37" />
+    <Channel ID="Module002_Output_38" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="38" />
+    <Channel ID="Module002_Output_39" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="39" />
+    <Channel ID="Module002_Output_40" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="40" />
+    <Channel ID="Module002_Output_41" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="41" />
+    <Channel ID="Module002_Output_42" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="42" />
+    <Channel ID="Module002_Output_43" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="43" />
+    <Channel ID="Module002_Output_44" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="44" />
+    <Channel ID="Module002_Output_45" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="45" />
+    <Channel ID="Module002_Output_46" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="46" />
+    <Channel ID="Module002_Output_47" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="47" />
+    <Channel ID="Module002_Output_48" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="48" />
+    <Channel ID="Module002_Output_49" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="49" />
+    <Channel ID="Module002_Output_50" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="50" />
+    <Channel ID="Module002_Output_51" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="51" />
+    <Channel ID="Module002_Output_52" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="52" />
+    <Channel ID="Module002_Output_53" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="53" />
+    <Channel ID="Module002_Output_54" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="54" />
+    <Channel ID="Module002_Output_55" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="55" />
+    <Channel ID="Module002_Output_56" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="56" />
+    <Channel ID="Module002_Output_57" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="57" />
+    <Channel ID="Module002_Output_58" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="58" />
+    <Channel ID="Module002_Output_59" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="59" />
+    <Channel ID="Module002_Output_60" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="60" />
+    <Channel ID="Module002_Output_61" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="61" />
+    <Channel ID="Module002_Output_62" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="62" />
+    <Channel ID="Module002_Output_63" Description="DO 64 bytes &lt;Slot 2&gt;" Description-de="DO 64 bytes &lt;Slot 2&gt;" Description-fr="DO 64 bytes &lt;Slot 2&gt;" Direction="OUT" Ext="/HW" Type="USINT" Address="63" />
+  </Module>
+  <Module ID="PS1" Hardware="X20PS9600" HardwareModuleName="AB3_NapajanieCPU" ModuleID="19">
+    <Channel ID="ModuleOk" Description="Module status (1 = module present)" Ext="/OK" Address="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="SerialNumber" Description="Serial number" Ext="/INFO" Address="4" Direction="IN" Type="UDINT" Sig_St_Udint="1" />
+    <Channel ID="ModuleID" Description="Module ID" Ext="/INFO" Address="10" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="HardwareVariant" Description="Hardware variant" Ext="/INFO" Address="12" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="FirmwareVersion" Description="Firmware version" Ext="/INFO" Address="14" Direction="IN" Type="UINT" Sig_St_Uint="1" />
+    <Channel ID="StatusInput01" Description="Bus power supply warning (1 = over current &gt;2.3 A or low voltage &lt;4.7 V)" Ext="/FIXED" Address="1" BitOffset="0" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+    <Channel ID="StatusInput02" Description="I/O power supply warning (0 = DC OK)" Ext="/FIXED" Address="1" BitOffset="2" Direction="IN" Type="BOOL" Sig_St_Bool="1" />
+  </Module>
+</ChannelConfiguration>

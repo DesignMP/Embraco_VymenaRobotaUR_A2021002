@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.7.5.60 SP"?>
+<ConfigInfo xmlns="http://br-automation.co.at/AS/BuildInfo">
+  <TaskClass
+    Name="Cyclic#1">
+    <Task
+      Name="RiadenieSe"
+      Disable="false"
+      Source="RiadenieServ.RiadenieServ"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\RiadenieSe\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\RiadenieServ\RiadenieServ\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\RiadenieServ\RiadenieServ\Variables.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#2" />
+  <TaskClass
+    Name="Cyclic#3">
+    <Task
+      Name="LimitneSni"
+      Disable="false"
+      Source="RiadenieServ.LimitneSnimace"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\LimitneSni\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\RiadenieServ\LimitneSnimace\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\RiadenieServ\LimitneSnimace\Variables.var" />
+    </Task>
+    <Task
+      Name="Blikanie10"
+      Disable="false"
+      Source="Blikace.Blikanie100ms"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Blikanie10\Blikanie100ms.st.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#4">
+    <Task
+      Name="DatumCasPL"
+      Disable="false"
+      Source="DatumCasPLC.DatumCasPLC"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\DatumCasPL\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\DatumCasPLC\DatumCasPLC\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\DatumCasPLC\DatumCasPLC\Variables.var" />
+    </Task>
+    <Task
+      Name="Blikanie20"
+      Disable="false"
+      Source="Blikace.Blikanie200ms"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Blikanie20\Blikanie200ms.st.var" />
+    </Task>
+    <Task
+      Name="Bruska"
+      Disable="false"
+      Source="Program.Bruska"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Bruska\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\Variables.var" />
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Bruska\OvlServa.st.var" />
+    </Task>
+    <Task
+      Name="Robot"
+      Disable="false"
+      Source="Program.Robot"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Robot\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Variables.var" />
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Robot\ProfinetKomunikaciaRobot.st.var" />
+    </Task>
+    <Task
+      Name="OvladanieV"
+      Disable="false"
+      Source="HMI.OvladanieVizu"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\OvladanieV\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\OvladanieVizu\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\OvladanieVizu\Variables.var" />
+    </Task>
+    <Task
+      Name="Alarmy"
+      Disable="false"
+      Source="Program.Alarmy"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Alarmy\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Alarmy\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Alarmy\Variables.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#5">
+    <Task
+      Name="Remanentne"
+      Disable="false"
+      Source="RemanentnePremenne.RemanentnePremenne"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Remanentne\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\RemanentnePremenne\RemanentnePremenne\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\RemanentnePremenne\RemanentnePremenne\Variables.var" />
+    </Task>
+    <Task
+      Name="Blikanie50"
+      Disable="false"
+      Source="Blikace.Blikanie500ms"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Blikanie50\Blikanie500ms.st.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#6">
+    <Task
+      Name="Blikanie1s"
+      Disable="false"
+      Source="Blikace.Blikanie1s"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Blikanie1s\Blikanie1s.st.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#7" />
+  <TaskClass
+    Name="Cyclic#8" />
+</ConfigInfo>

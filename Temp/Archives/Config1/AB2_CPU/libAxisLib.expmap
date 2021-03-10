@@ -1,0 +1,8 @@
+{
+  global:
+    Axis_Servo;
+    Axis_Krokac;
+    ServoLim;
+  local:
+    *;
+ };

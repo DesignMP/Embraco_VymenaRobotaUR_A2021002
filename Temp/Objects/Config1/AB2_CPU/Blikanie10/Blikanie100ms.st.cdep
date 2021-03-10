@@ -1,0 +1,5 @@
+$(AS_CPU_PATH)/blikanie10/blikanie100ms.st.o:
+$(AS_CPU_PATH)/blikanie10/blikanie100ms.st.c
+$(AS_GNU_INST_PATH)/arm-eabi/include/bur/plctypes.h
+$(AS_GNU_INST_PATH)/arm-eabi/include/bur/plc.h
+$(AS_CPU_PATH)/blikanie10/blikanie100msst.h

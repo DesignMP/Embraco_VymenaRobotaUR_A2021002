@@ -1,0 +1,10 @@
+<Language Name="de" ID="1">
+  <LogicalFont Name="DefaultFont">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="9" />
+    <Property Name="Index" Value="0" />
+    <Property Name="FontSize" Value="15" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+</Language>

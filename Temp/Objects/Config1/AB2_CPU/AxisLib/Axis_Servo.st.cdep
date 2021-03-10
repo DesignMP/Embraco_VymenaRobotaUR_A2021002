@@ -1,0 +1,5 @@
+$(AS_CPU_PATH)/axislib/axis_servo.st.o:
+$(AS_CPU_PATH)/axislib/axis_servo.st.c
+$(AS_GNU_INST_PATH)/arm-eabi/include/bur/plctypes.h
+$(AS_GNU_INST_PATH)/arm-eabi/include/bur/plc.h
+$(AS_CPU_PATH)/axislib/axis_servost.h

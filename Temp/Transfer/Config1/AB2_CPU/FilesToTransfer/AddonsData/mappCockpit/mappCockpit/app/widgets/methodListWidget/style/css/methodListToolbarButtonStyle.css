@@ -1,0 +1,43 @@
+/* definition of the method list toolbar buttons (Off, Abort, ...) */
+.methodListToolbarButton {
+    background-color: #531E00 !important; 
+    font-weight: normal;
+    font-family: var(--main-font) !important; 
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid grey !important; 
+    color: white !important;
+    cursor: pointer !important;
+}
+
+.methodListToolbarButton:hover {
+    background-color: var(--main-orange) !important;
+    color: white !important;
+}
+
+.methodListToolbarButton:active {
+    background-color: #733E20 !important;
+    color: white !important;
+}
+
+/* definition of the deactivated method list toolbar buttons (Off, Abort, ...) */
+.methodListToolbarButtonDeactivated {
+    background-color: var(--main-grey-dark2) !important; 
+    font-weight: normal;
+    font-family: var(--main-font) !important; 
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid grey !important; 
+    color: white !important;
+    cursor: default !important;
+}
+
+.methodListToolbarButtonDeactivated:hover {
+    background-color: var(--main-grey-dark2) !important;
+    color: white !important;
+}
+
+.methodListToolbarButtonDeactivated:active {
+    background-color: var(--main-grey-dark2) !important;
+    color: white !important;
+}

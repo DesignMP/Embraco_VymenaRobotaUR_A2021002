@@ -1,0 +1,6 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/astime/astime.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/AsBrStr/AsBrStr.fun
+$(AS_PROJECT_PATH)/Logical/DatumCasPLC/DatumCasPLC/Variables.var
+$(AS_PROJECT_PATH)/Logical/DatumCasPLC/DatumCasGlobal.var
+$(AS_PROJECT_PATH)/Logical/Libraries/astime/astime.typ
+$(AS_PROJECT_PATH)/Logical/DatumCasPLC/DatumCasGlobal.typ

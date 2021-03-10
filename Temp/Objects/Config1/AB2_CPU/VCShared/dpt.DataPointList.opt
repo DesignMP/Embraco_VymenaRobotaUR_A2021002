@@ -1,0 +1,20 @@
+<BuildOptions>
+  <BuildOption>
+    <SourceFile Value="D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Physical/Config1/AB2_CPU/Cpu.sw" />
+    <Query Value="/ns:SwConfiguration/ns:TaskClass/*$$Name,Source" />
+    <Xml>
+      <Task Name="RiadenieSe" Source="RiadenieServ.RiadenieServ.prg" />
+      <Task Name="LimitneSni" Source="RiadenieServ.LimitneSnimace.prg" />
+      <Task Name="Blikanie10" Source="Blikace.Blikanie100ms.prg" />
+      <Task Name="DatumCasPL" Source="DatumCasPLC.DatumCasPLC.prg" />
+      <Task Name="Blikanie20" Source="Blikace.Blikanie200ms.prg" />
+      <Task Name="Bruska" Source="Program.Bruska.prg" />
+      <Task Name="Robot" Source="Program.Robot.prg" />
+      <Task Name="OvladanieV" Source="HMI.OvladanieVizu.prg" />
+      <Task Name="Alarmy" Source="Program.Alarmy.prg" />
+      <Task Name="Remanentne" Source="RemanentnePremenne.RemanentnePremenne.prg" />
+      <Task Name="Blikanie50" Source="Blikace.Blikanie500ms.prg" />
+      <Task Name="Blikanie1s" Source="Blikace.Blikanie1s.prg" />
+    </Xml>
+  </BuildOption>
+</BuildOptions>
