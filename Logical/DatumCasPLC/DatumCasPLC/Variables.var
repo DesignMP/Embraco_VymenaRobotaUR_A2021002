@@ -1,0 +1,13 @@
+VAR
+	PLC_DatumCas : DTStructure;
+	DTGetTime_1 : DTGetTime;
+	Sekundy_String : STRING[2];
+	Minuty_String : STRING[2];
+	Hodiny_String : STRING[2];
+	Den_String : STRING[2];
+	Mesiac_String : STRING[2];
+	length : UDINT;
+	PoleUSINT : ARRAY[0..3] OF USINT;
+	i : USINT;
+	DvaZnaky : STRING[2];
+END_VAR

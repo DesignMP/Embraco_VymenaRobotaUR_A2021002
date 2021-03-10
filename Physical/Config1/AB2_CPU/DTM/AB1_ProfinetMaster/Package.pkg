@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.7.5.60 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">AB1_ProfinetMaster.dtm</Object>
+    <Object Type="Package">AB1_ProfinetMaster_IF1</Object>
+    <Object Type="Package">Robot_ABB</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,9 @@
+VAR
+	CasPowerON : TON;
+	CasZastaveniaServa : TON;
+	SC_OvlServa : SequenceControlTyp := (0);
+	ZadanaPoziciaUINT : UINT := 0;
+	AktualnaPoziciaUINT : UINT := 0;
+	AktualnyPocetOtacokINT : INT := 0;
+	AktualnyPocetOtacokLREAL : LREAL := 0.0;
+END_VAR

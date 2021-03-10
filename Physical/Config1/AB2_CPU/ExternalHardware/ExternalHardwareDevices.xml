@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExternalHardware>
+  <Modules>
+    <Module ModuleID="FBD.Hilscher.PNIOGenDevDTM2.ENERGY V1.4" Version="1.4" OrderNumber="ENERGY V1.4">
+      <SourceFile OriginalFile="GSDML-V2.33-ABB-Robotics-Robot-Device-20180814.xml" TranslationFile="0GQW3GC4.ext" />
+    </Module>
+  </Modules>
+</ExternalHardware>

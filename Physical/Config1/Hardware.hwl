@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BR.AS.HardwareTopology Version="0.0.0.1">
+  <TimeStamps>
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="03/10/2021 09:06:40" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="X20BB62" Type="X20BB62" X="75" Y="100" />
+    <Module Name="X20BM33" Type="X20BM33" X="138" Y="100" />
+    <Module Name="AB4_SafetyMaster" Type="X20SLX842" X="138" Y="100" />
+    <Module Name="X20TB52a" Type="X20TB52" X="151" Y="126" />
+    <Module Name="X20TB52" Type="X20TB52" X="138" Y="126" />
+    <Module Name="X20BM11" Type="X20BM11" X="164" Y="100" />
+    <Module Name="AB5_16DI" Type="X20DIF371" X="164" Y="100" />
+    <Module Name="X20TB1F" Type="X20TB1F" X="164" Y="127" />
+    <Module Name="X20BM11a" Type="X20BM11" X="177" Y="100" />
+    <Module Name="AB6_16DI" Type="X20DIF371" X="177" Y="100" />
+    <Module Name="X20TB1F1" Type="X20TB1F" X="177" Y="127" />
+    <Module Name="X20BM11b" Type="X20BM11" X="190" Y="100" />
+    <Module Name="AB7_16DO" Type="X20DOF322" X="190" Y="100" />
+    <Module Name="X20TB1F2" Type="X20TB1F" X="190" Y="127" />
+    <Module Name="AB1_ProfinetMaster" Type="X20IF10E1-1" X="75" Y="100" />
+    <Module Name="AB3_NapajanieCPU" Type="X20PS9600" X="125" Y="100" />
+    <Module Name="X20TB12" Type="X20TB12" X="125" Y="127" />
+    <Module Name="AB2_CPU" Type="X20CP0483" X="100" Y="100" />
+    <Module Name="OP1_7inch" Type="6PPT50.0702-16A" X="332" Y="100" />
+    <Module Name="Robot_ABB" Type="FBD.Hilscher.PNIOGenDevDTM2.ENERGY V1.4" X="358" Y="291" />
+    <Module Name="8EI013HWS10.xxxx-1" Type="8EI013HWS10.xxxx-1" X="102" Y="377" />
+    <Module Name="8LSA57.DA030S300-3a" Type="8LSA57.DA030S300-3" X="264" Y="554" />
+  </Modules>
+  <Links>
+    <Link From="8EI013HWS10.xxxx-1" To="AB2_CPU" FromPort="PLK1" ToPort="IF3" IsRoutedByUser="False">
+      <Point X="109.7" Y="387.5" />
+      <Point X="109.7" Y="387.5" />
+      <Point X="109.7" Y="376.5" />
+      <Point X="105.75" Y="376.5" />
+      <Point X="105.75" Y="201" />
+      <Point X="105.75" Y="173" />
+      <Point X="114" Y="173" />
+    </Link>
+    <Link From="8EI013HWS10.xxxx-1" To="8LSA57.DA030S300-3a" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
+      <Point X="127" Y="416.1" />
+      <Point X="127" Y="416.1" />
+      <Point X="149" Y="416.1" />
+      <Point X="285.5" Y="416.1" />
+      <Point X="285.5" Y="554" />
+      <Point X="285.5" Y="561" />
+      <Point X="285.5" Y="561" />
+    </Link>
+    <Link From="8EI013HWS10.xxxx-1" To="8LSA57.DA030S300-3a" FromPort="MT1" ToPort="MT" IsRoutedByUser="False">
+      <Point X="128.599976" Y="425.400024" />
+      <Point X="128.599976" Y="425.400024" />
+      <Point X="148.599976" Y="425.400024" />
+      <Point X="313.5" Y="425.400024" />
+      <Point X="313.5" Y="554" />
+      <Point X="313.5" Y="561" />
+      <Point X="313.5" Y="561" />
+    </Link>
+    <Link From="AB1_ProfinetMaster" To="Robot_ABB" FromPort="IF1" ToPort="PN1" IsRoutedByUser="False">
+      <Point X="377" Y="330.1" />
+      <Point X="377" Y="330.1" />
+      <Point X="357" Y="330.1" />
+      <Point X="89" Y="330.1" />
+      <Point X="89" Y="201" />
+      <Point X="89" Y="191" />
+      <Point X="89" Y="191" />
+    </Link>
+    <Link From="AB2_CPU" To="OP1_7inch" FromPort="IF2" ToPort="ETH1" IsRoutedByUser="False">
+      <Point X="395" Y="202" />
+      <Point X="395" Y="202" />
+      <Point X="395" Y="207" />
+      <Point X="395" Y="215" />
+      <Point X="114" Y="215" />
+      <Point X="114" Y="201" />
+      <Point X="114" Y="190" />
+      <Point X="114" Y="190" />
+    </Link>
+  </Links>
+  <InfoElements>
+    <InfoElementText Id="Textbox_1" X="321" Y="80" Width="179" Height="20">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">Ethernet IP: 192.168.0.2</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+    <InfoElementText Id="Textbox_2" X="332" Y="244" Width="179" Height="20">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">Ethernet IP: 192.168.0.3</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+    <InfoElementText Id="Textbox_3" X="334" Y="271" Width="179" Height="20">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">Profinet IP: 192.168.1.2</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+  </InfoElements>
+</BR.AS.HardwareTopology>

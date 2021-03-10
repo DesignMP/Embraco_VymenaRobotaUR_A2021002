@@ -1,0 +1,11 @@
+VAR
+	PLC_Cas : PLC_Cas_typ;
+	PLC_Datum : PLC_Datum_typ;
+	Sekunda_STR : STRING[2];
+	Minuta_STR : STRING[2];
+	Hodina_STR : STRING[2];
+	Den_STR : STRING[2];
+	Mesiac_STR : STRING[2];
+	Rok_STR_4_Znaky : STRING[4];
+	Rok_STR_2_Znaky : STRING[2];
+END_VAR

@@ -1,0 +1,3 @@
+VAR
+	ServoLimSnimace_0 : ServoLim;
+END_VAR

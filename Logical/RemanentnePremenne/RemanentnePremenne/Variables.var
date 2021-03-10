@@ -1,0 +1,4 @@
+VAR
+	UISetup : MpRecipeUISetupType;
+	UIConnect : MpRecipeUIConnectType := (0);
+END_VAR

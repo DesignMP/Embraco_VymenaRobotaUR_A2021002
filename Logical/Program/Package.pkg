@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.7.5.60 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC">Main</Object>
+    <Object Type="Program" Language="IEC">Bruska</Object>
+    <Object Type="Program" Language="IEC">Robot</Object>
+    <Object Type="Program" Language="IEC">Alarmy</Object>
+  </Objects>
+</Package>

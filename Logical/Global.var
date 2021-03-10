@@ -1,0 +1,50 @@
+(********************************************************************
+ * COPYRIGHT -- Microsoft
+ ********************************************************************
+ * File: Global.var
+ * Author: Martin
+ * Created: February 11, 2016
+ ********************************************************************
+ * Global variables of project Zamazat_1
+ ********************************************************************)
+(******************Blikaèe*****************************)
+VAR
+	Blikac100ms : BOOL;
+	Blikac200ms : BOOL;
+	Blikac500ms : BOOL;
+	Blikac1s : BOOL;
+END_VAR
+(**********Nastavenie èasu**************)
+VAR
+	DTSetTime_0 : DTSetTime;
+	DTGetTime_0 : DTGetTime;
+END_VAR
+(**************Remanentné premenné*********)
+VAR
+	RemPremenne : RemPremenne_typ;
+	MpRecipeXml_0 : MpRecipeXml := (0);
+	MpRecipeRegPar_0 : MpRecipeRegPar := (0);
+	MpRecipeUI_0 : MpRecipeUI;
+	UlozPremenne : BOOL;
+	NacitajPremenne : BOOL;
+END_VAR
+(*************Všeobecné premenné*************)
+VAR
+	Vizu : Vizu_typ;
+	Safety : Safety_typ;
+	Pracovisko : Pracovisko_typ := (0);
+	StavHardware : HardwareSTAV_typ := (0);
+	SC_Robot : SequenceControlTyp;
+	Robot : Robot_typ;
+	SC_Bruska : SequenceControlTyp := (0);
+	Bruska : Bruska_typ := (0);
+END_VAR
+(*****************Alarmy*****************************)
+VAR
+	Alarmy : ARRAY[0..100] OF BOOL;
+	NastalaPorucha : BOOL;
+	ZobrazSymbolAlarmu : BOOL;
+	PotvrdenieAlarmov : BOOL;
+	PoruchaBrusky : BOOL;
+	PoruchaRobota : BOOL;
+END_VAR
