@@ -105,7 +105,7 @@
     </Task>
     <Task
       Name="Alarmy"
-      Disable="false"
+      Disable="true"
       Source="Program.Alarmy"
       Language="IEC">
       <InternalFile

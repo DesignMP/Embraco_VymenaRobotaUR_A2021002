@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615384270_9_
-#define _BUR_1615384270_9_
+#ifndef _BUR_1615454422_9_
+#define _BUR_1615454422_9_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Program/Robot/Types.typ\\\" scope \\\"loca
 __asm__(".previous");
 
 
-#endif /* _BUR_1615384270_9_ */
+#endif /* _BUR_1615454422_9_ */
 

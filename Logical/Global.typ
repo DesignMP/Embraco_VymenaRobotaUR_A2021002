@@ -64,6 +64,7 @@ TYPE
 	Vizu_typ : 	STRUCT 
 		CisloAktualnejObrazovky : USINT;
 		CisloZadanejObrazovky : USINT;
+		TL_RezimAutomat : BOOL;
 	END_STRUCT;
 END_TYPE
 
@@ -79,6 +80,7 @@ TYPE
 		Manual : BOOL;
 		Reset : BOOL;
 		KoniecCyklu : BOOL;
+		Majak_HukackaON : BOOL;
 	END_STRUCT;
 	PracoviskoIN_typ : 	STRUCT 
 		PrepatovaOchrana_OK : BOOL;
@@ -99,7 +101,7 @@ TYPE
 		Automat : BOOL;
 		Manual : BOOL;
 		PoINIT : BOOL;
-		READY : BOOL;
+		READY_TO_START : BOOL;
 		UkoncenieCyklu_BUSY : BOOL;
 		Hardware_OK : BOOL;
 	END_STRUCT;

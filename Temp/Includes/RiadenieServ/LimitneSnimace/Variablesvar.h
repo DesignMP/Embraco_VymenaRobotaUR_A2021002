@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615384270_18_
-#define _BUR_1615384270_18_
+#ifndef _BUR_1615454422_16_
+#define _BUR_1615454422_16_
 
 #include <bur/plctypes.h>
 
@@ -30,5 +30,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/AxisLib/AxisLib.fun\\\" scope \\
 __asm__(".previous");
 
 
-#endif /* _BUR_1615384270_18_ */
+#endif /* _BUR_1615454422_16_ */
 

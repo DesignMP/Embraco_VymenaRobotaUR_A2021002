@@ -15,7 +15,7 @@
     <Task Name="Bruska" Source="Program.Bruska.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Robot" Source="Program.Robot.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="OvladanieV" Source="HMI.OvladanieVizu.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="Alarmy" Source="Program.Alarmy.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Alarmy" Source="Program.Alarmy.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5">
     <Task Name="Remanentne" Source="RemanentnePremenne.RemanentnePremenne.prg" Memory="UserROM" Language="IEC" Debugging="true" />
@@ -44,6 +44,25 @@
     <BinaryObject Name="udbdef" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="arflatprv" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="arcoal" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcpfgen" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcfile" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="arial" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vctcal" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcrt" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcbclass" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcgclass" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcdsint" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcnet" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcmgr" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcshared" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcpdvnc" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcpdsw" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Visu01" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcfntttf" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcalarm" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcpkat" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Visu02" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="vcdsloc" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="iomap" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="asfw" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="Settings" Source="" Memory="UserROM" Language="Binary" />
@@ -84,5 +103,6 @@
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asioacc" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asepl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="vcresman" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

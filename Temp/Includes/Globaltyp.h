@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615384270_1_
-#define _BUR_1615384270_1_
+#ifndef _BUR_1615454422_1_
+#define _BUR_1615454422_1_
 
 #include <bur/plctypes.h>
 
@@ -57,6 +57,7 @@ typedef struct Safety_typ
 typedef struct Vizu_typ
 {	unsigned char CisloAktualnejObrazovky;
 	unsigned char CisloZadanejObrazovky;
+	plcbit TL_RezimAutomat;
 } Vizu_typ;
 
 typedef struct PracoviskoIN_typ
@@ -81,7 +82,7 @@ typedef struct PracoviskoSTAV_typ
 {	plcbit Automat;
 	plcbit Manual;
 	plcbit PoINIT;
-	plcbit READY;
+	plcbit READY_TO_START;
 	plcbit UkoncenieCyklu_BUSY;
 	plcbit Hardware_OK;
 } PracoviskoSTAV_typ;
@@ -95,6 +96,7 @@ typedef struct Pracovisko_typ
 	plcbit Manual;
 	plcbit Reset;
 	plcbit KoniecCyklu;
+	plcbit Majak_HukackaON;
 } Pracovisko_typ;
 
 typedef struct RobotIN_typ
@@ -254,5 +256,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1615384270_1_ */
+#endif /* _BUR_1615454422_1_ */
 

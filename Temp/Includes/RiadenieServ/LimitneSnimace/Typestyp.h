@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615384270_17_
-#define _BUR_1615384270_17_
+#ifndef _BUR_1615454422_15_
+#define _BUR_1615454422_15_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/RiadenieServ/LimitneSnimace/Types.typ\\\" 
 __asm__(".previous");
 
 
-#endif /* _BUR_1615384270_17_ */
+#endif /* _BUR_1615454422_15_ */
 

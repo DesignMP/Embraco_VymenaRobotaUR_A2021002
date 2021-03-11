@@ -156,7 +156,7 @@ typedef struct PracoviskoSTAV_typ
 {	plcbit Automat;
 	plcbit Manual;
 	plcbit PoINIT;
-	plcbit READY;
+	plcbit READY_TO_START;
 	plcbit UkoncenieCyklu_BUSY;
 	plcbit Hardware_OK;
 } PracoviskoSTAV_typ;
@@ -173,6 +173,7 @@ typedef struct Pracovisko_typ
 	plcbit Manual;
 	plcbit Reset;
 	plcbit KoniecCyklu;
+	plcbit Majak_HukackaON;
 } Pracovisko_typ;
 #endif
 

@@ -6,7 +6,6 @@
   <Operation Delete="Blikanie1s.br"/>
   <Operation Delete="Blikanie50.br"/>
   <Operation Delete="Remanentne.br"/>
-  <Operation Delete="Alarmy.br"/>
   <Operation Delete="OvladanieV.br"/>
   <Operation Delete="Robot.br"/>
   <Operation Delete="Bruska.br"/>
@@ -16,22 +15,22 @@
   <Operation Delete="LimitneSni.br"/>
   <Operation Delete="RiadenieSe.br"/>
   <Operation Delete="Visu.br"/>
-  <Operation Delete="vctcal.br"/>
-  <Operation Delete="vcrt.br"/>
-  <Operation Delete="vcpkat.br"/>
-  <Operation Delete="vcpfgen.br"/>
-  <Operation Delete="vcpdvnc.br"/>
-  <Operation Delete="vcpdsw.br"/>
-  <Operation Delete="vcmgr.br"/>
-  <Operation Delete="vcfntttf.br"/>
-  <Operation Delete="vcfile.br"/>
-  <Operation Delete="vcdsloc.br"/>
-  <Operation Delete="vcdsint.br"/>
-  <Operation Delete="vcbclass.br"/>
-  <Operation Delete="vcalarm.br"/>
   <Operation Delete="MpAxis.br"/>
   <Operation Delete="CoTrace.br"/>
   <Operation Delete="AsSafety.br"/>
+  <Operation Delete="vcdsloc.br"/>
+  <Operation Delete="vcpkat.br"/>
+  <Operation Delete="vcalarm.br"/>
+  <Operation Delete="vcfntttf.br"/>
+  <Operation Delete="vcpdsw.br"/>
+  <Operation Delete="vcpdvnc.br"/>
+  <Operation Delete="vcmgr.br"/>
+  <Operation Delete="vcdsint.br"/>
+  <Operation Delete="vcbclass.br"/>
+  <Operation Delete="vcrt.br"/>
+  <Operation Delete="vctcal.br"/>
+  <Operation Delete="vcfile.br"/>
+  <Operation Delete="vcpfgen.br"/>
   <Operation Delete="mvLoader.br"/>
   <Operation Delete="MpRecipe.br"/>
   <Operation Delete="SC.br"/>
@@ -42,16 +41,16 @@
   <Operation Delete="Visu01.br"/>
   <Operation Delete="McStpAx.br"/>
   <Operation Delete="mcprofgen.br"/>
-  <Operation Delete="vcnet.br"/>
-  <Operation Delete="vcgclass.br"/>
   <Operation Delete="asioacc.br"/>
   <Operation Delete="asio.br"/>
   <Operation Delete="MpBase.br"/>
   <Operation Delete="sys_lib.br"/>
   <Operation Delete="asieccon.br"/>
   <Operation Delete="AsZip.br"/>
+  <Operation Delete="vcgclass.br"/>
   <Operation Delete="DataObj.br"/>
   <Operation Delete="arssl.br"/>
+  <Operation Delete="vcnet.br"/>
   <Operation Delete="McAcpAx.br"/>
   <Operation Delete="McAxis.br"/>
   <Operation Delete="McAcpDrv.br"/>
@@ -82,10 +81,13 @@
   <Operation Download="McAcpAx.br" Memory="UserROM"/>
   <Operation Download="McAcpSys.br" Memory="UserROM"/>
   <Operation Restart="warm"/>
+  <Operation Download="vcresman.br" Memory="UserROM"/>
+  <Operation Download="vcnet.br" Memory="UserROM"/>
   <Operation Download="AsXml.br" Memory="UserROM"/>
   <Operation Download="standard.br" Memory="UserROM"/>
   <Operation Download="arssl.br" Memory="UserROM"/>
   <Operation Download="DataObj.br" Memory="UserROM"/>
+  <Operation Download="vcgclass.br" Memory="UserROM"/>
   <Operation Download="AsZip.br" Memory="UserROM"/>
   <Operation Download="asieccon.br" Memory="UserROM"/>
   <Operation Download="asbrstr.br" Memory="UserROM"/>
@@ -93,9 +95,6 @@
   <Operation Download="MpBase.br" Memory="UserROM"/>
   <Operation Download="asio.br" Memory="UserROM"/>
   <Operation Download="asioacc.br" Memory="UserROM"/>
-  <Operation Download="vcresman.br" Memory="UserROM"/>
-  <Operation Download="vcgclass.br" Memory="UserROM"/>
-  <Operation Download="vcnet.br" Memory="UserROM"/>
   <Operation Download="mcprofgen.br" Memory="UserROM"/>
   <Operation Download="McStpAx.br" Memory="UserROM"/>
   <Operation Download="Visu01.br" Memory="UserROM"/>
@@ -110,6 +109,19 @@
   <Operation Download="mCoWebSc.br" Memory="UserROM"/>
   <Operation Download="TCData.br" Memory="SystemROM"/>
   <Operation Download="udbdef.br" Memory="UserROM"/>
+  <Operation Download="vcpfgen.br" Memory="UserROM"/>
+  <Operation Download="vcfile.br" Memory="UserROM"/>
+  <Operation Download="vctcal.br" Memory="UserROM"/>
+  <Operation Download="vcrt.br" Memory="UserROM"/>
+  <Operation Download="vcbclass.br" Memory="UserROM"/>
+  <Operation Download="vcdsint.br" Memory="UserROM"/>
+  <Operation Download="vcmgr.br" Memory="UserROM"/>
+  <Operation Download="vcpdvnc.br" Memory="UserROM"/>
+  <Operation Download="vcpdsw.br" Memory="UserROM"/>
+  <Operation Download="vcfntttf.br" Memory="UserROM"/>
+  <Operation Download="vcalarm.br" Memory="UserROM"/>
+  <Operation Download="vcpkat.br" Memory="UserROM"/>
+  <Operation Download="vcdsloc.br" Memory="UserROM"/>
   <Operation Download="iomap.br" Memory="UserROM"/>
   <Operation Download="Settings.br" Memory="UserROM"/>
   <Operation Download="Role.br" Memory="UserROM"/>
@@ -120,19 +132,6 @@
   <Operation Download="AsSafety.br" Memory="UserROM"/>
   <Operation Download="CoTrace.br" Memory="UserROM"/>
   <Operation Download="MpAxis.br" Memory="UserROM"/>
-  <Operation Download="vcalarm.br" Memory="UserROM"/>
-  <Operation Download="vcbclass.br" Memory="UserROM"/>
-  <Operation Download="vcdsint.br" Memory="UserROM"/>
-  <Operation Download="vcdsloc.br" Memory="UserROM"/>
-  <Operation Download="vcfile.br" Memory="UserROM"/>
-  <Operation Download="vcfntttf.br" Memory="UserROM"/>
-  <Operation Download="vcmgr.br" Memory="UserROM"/>
-  <Operation Download="vcpdsw.br" Memory="UserROM"/>
-  <Operation Download="vcpdvnc.br" Memory="UserROM"/>
-  <Operation Download="vcpfgen.br" Memory="UserROM"/>
-  <Operation Download="vcpkat.br" Memory="UserROM"/>
-  <Operation Download="vcrt.br" Memory="UserROM"/>
-  <Operation Download="vctcal.br" Memory="UserROM"/>
   <Operation Download="Visu.br" Memory="UserROM"/>
   <Operation Download="RiadenieSe.br" Memory="UserROM"/>
   <Operation Download="LimitneSni.br" Memory="UserROM"/>
@@ -142,7 +141,6 @@
   <Operation Download="Bruska.br" Memory="UserROM"/>
   <Operation Download="Robot.br" Memory="UserROM"/>
   <Operation Download="OvladanieV.br" Memory="UserROM"/>
-  <Operation Download="Alarmy.br" Memory="UserROM"/>
   <Operation Download="Remanentne.br" Memory="UserROM"/>
   <Operation Download="Blikanie50.br" Memory="UserROM"/>
   <Operation Download="Blikanie1s.br" Memory="UserROM"/>

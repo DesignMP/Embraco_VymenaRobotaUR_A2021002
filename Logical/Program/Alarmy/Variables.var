@@ -1,0 +1,7 @@
+VAR
+	a : USINT := 0;
+	CasResetovaniaServa : TON;
+	CasKontroly_KarietPLC : TON;
+	CasKontroly_Robota : TON;
+	CasPoruchyServa : TON;
+END_VAR

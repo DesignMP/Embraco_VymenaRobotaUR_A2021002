@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615384270_19_
-#define _BUR_1615384270_19_
+#ifndef _BUR_1615454422_17_
+#define _BUR_1615454422_17_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/RemanentnePremenne/RemanentnePremenne/Type
 __asm__(".previous");
 
 
-#endif /* _BUR_1615384270_19_ */
+#endif /* _BUR_1615454422_17_ */
 
