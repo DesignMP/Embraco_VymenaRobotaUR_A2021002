@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.7.5.60 SP"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="Kontrolka_Siva_Cervena_Zelena">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="10"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="2277" Value="Source[local].Bitmap[SivaLED_30x30]"/>
+    <BitmapRef ID="2278" Value="Source[local].Bitmap[cervena_led]"/>
+    <BitmapRef ID="2279" Value="Source[local].Bitmap[zelena_led_0]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="2277" Value="0"/>
+    <Index ID="2278" Value="1"/>
+    <Index ID="2279" Value="2"/>
+  </IndexMap>
+</BitmapGroup>

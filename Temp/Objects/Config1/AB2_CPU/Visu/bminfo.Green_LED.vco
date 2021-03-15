@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="Green_LED" ClsId="0x306" Version="1" TargetIndex="43" Type="GFX" RefString="Source[local].Bitmap[Green_LED]">
+        <UInt16 Name="Width">20</UInt16>
+        <UInt16 Name="Height">20</UInt16>
+        <UInt32 Name="BitsPerPixel">32</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">2</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVDhPrZPdS1NhHMcfhDxn52xKhZYXMrKLooteLnojoaZSYrjpckPXPLnNk6VQpJkUlnXjyMQchEKUpq7am226WV40w2ogXaTQC3TThf4PwtjFt/OzA1KimfMLH3jOeX7fD+c88LC/0wGW0fiN1ztntbJ9WvDb49nzjqmcpGMqNym9zV6gd7TX+JPX06xaWz0N33WS7Z2QcAT2pNrHK9E90YTe2DWFZnTHmnArYsQFX0GKZmhWra2MfU7Mrfuk9TjHCnAvbMfQ+841uR2yoi6yC9ShrqpZTu0HwVMTzFl0x1zoi7eh/x/0xW/AHXXCHspbpK6qUc6sg2XYZwTJ4t+K1mAZuibl9fNGRnvYDFtoJ8hBLmZL8Prq10LC+iQf7WMVuBuz/hcdUQtc3v0ghy3O61n1pCCbRoSUZTAPV0ZPoDl8CtcjJWhdhZZwEa6OFqIxeARNwaPKvAGXA4dBDnKxqojgNw4JKH+qReWzbbAM70CNNx8O/15cDB3ApdAhNIQOwhXYB+nlblhH8mAe2g7jgA6mwaylZ+oYhwVUKi5mDggLJq8A40h6kMMcFOaZyS8kK3wiNgNyMeMLTbJqVMRmQC5W/lxYsIyLsEbTgxzlXuWXzw5o/NaoFjWT6UGOskGNj51+xMnK56bOx7VIB3KQixke8PrSx5pE7bQW0oeNQV1ykEu5eyzD0MVL516JqJvRbQjqGty8RC71RjNWdJ/zmMPiovOzDq51QrPUKe7ielXNcgpvspyTnVxvVVhE/awO8pesNamf04FmDW7OQ11VszLH2rZIxQ8zP1ZPiCn6HflrFhp+/IbW9I72SnoyEzSr1taIcg7HW3h94R1OLunhfKV9mfNn+vkkQeuibs5PezTzx5kthbFfCKHZwj4xgKAAAAAASUVORK5CYII=</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

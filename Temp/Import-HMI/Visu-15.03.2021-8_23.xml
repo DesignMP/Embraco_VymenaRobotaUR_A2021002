@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.7.5.60 SP"?>
+<?xml-stylesheet type="text/xsl" href="SG4_Import_ToDo_Generator.xsl"?>
+<ImportLog>
+  <Header>
+    <Property Name="ImportDate" Value="15.03.2021 8:23"/>
+    <Property Name="SourceVisualization" Value="D:\Projekty BER\Panasonic_StaraLubovna_FrezovaciaBunkaA2019017\Logical\HMI\Visu"/>
+    <Property Name="TargetVisualization" Value="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\Visu"/>
+  </Header>
+  <Resources>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Aerial14]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Aerial24_Bold]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial10]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial10_Bold]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial11]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial11_Bold]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial12]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial12_Bold]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial16]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial16_Bold]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial18]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial18_Bold]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial20]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial20_Bold]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial8]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial8_Bold]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial9]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Arial9_Bold]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[DateTime]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Digitalny_22]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[Digitalny_50]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[MpButton]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[MpDefault]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[MpHeader]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[MpHtml_SDM]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[MpInfo]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[MpInput]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[MpMenuButtons]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[MpPackMLStateNames]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Fonts[MpPads]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[English]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[German]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[VCShared].Languages[English]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[VCShared].Languages[German]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[VCShared].Languages[Slovak (SLOVAKIA)]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+  </Resources>
+</ImportLog>

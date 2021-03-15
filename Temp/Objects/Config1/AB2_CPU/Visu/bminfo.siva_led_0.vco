@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="siva_led_0" ClsId="0x306" Version="1" TargetIndex="252" Type="GFX" RefString="Source[local].Bitmap[siva_led_0]">
+        <UInt16 Name="Width">20</UInt16>
+        <UInt16 Name="Height">20</UInt16>
+        <UInt32 Name="BitsPerPixel">32</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">2</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIPSURBVDhPrVTJiiJBEE38h5lr/YgXwYM7CuJuuRbuuwguICrqRcECb3pVuv5j/BH9B0E8xMTLqZ6Gaeyh2w54RVZGvJcRkYv418bjsaXT6SitVksrlUpGsVg8V6vVG8DjC+bgGw6HCmJN2mPrdrsqE0/lcvk+m81I13XabrcSGE8mEyoUCnfEINakvTfO6me9Xtc5E1oul3Q8Hh/icDgQFqtUKgQOuKbMm7FTz+Vy1/V6Tbvdjvb7/UPAD6xWK9I07QquKSPNwlmp6XSaRqMRbTabT2E6nVI+nydoQEtwrxTO7KSqqnSi3P9hsVj8xXw+l6VDI5vNKoI/WiwWu6dSKer1etTv92WmjzAYDGQc900C/7zrBA1oCS7ViEQiFA6HKR6PE4R5NeLMqdFoyOBms4mSsLuE1iQSCQInGo3Kf3DMsSGSyeSF1eXEM4AGL3QW/LlhxW/CTXCZN6T8HYCW4F5cMpkMcUOfAjS49LMIhUIGJnCWngE0WOtF+P1+jdO9YwefATSgJVwulxIMBvEYyAP6FYALDWjJq+d0OlU0tVarfQngQkNevVdzu906O644yJ8BOJzZxpR5M6vV+sPhcGxw8hHIb92HaLfb8pZwZjq4psx7s9lsqs/n+8XX745yQMbdBTDGHHwej+eEWJP2oVk4ULHb7ZrX630JBAJnxs3EmVtjwIcYxP6hvJoQvwHd5eqdEgBPFQAAAABJRU5ErkJggg==</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

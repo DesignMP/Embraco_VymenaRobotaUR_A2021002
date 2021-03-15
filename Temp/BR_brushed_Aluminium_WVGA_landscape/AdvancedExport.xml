@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.0.9.68"?>
+<Template>
+  <Property Name="Width" Value="800" />
+  <Property Name="Height" Value="480" />
+  <Property Name="AvailableForAllResolutions" Value="false" />
+  <Descriptions>
+    <Description Language="en" Value="Visualization template with a 800x480 resolution and 32-bit color configuration that includes transparent images and an extended range of features. This template must be opened once before compiling." />
+    <Description Language="de" Value="Vorlage f&#252;r eine Visualisierung mit 800x480 Pixel und 32 Bit Farbtiefe, transparenten Grafiken und erweitertem Standardumfang. Vor dem Kompilieren muss das Template ge&#246;ffnet werden." />
+  </Descriptions>
+</Template>

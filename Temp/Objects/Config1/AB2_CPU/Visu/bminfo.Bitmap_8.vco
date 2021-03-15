@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="Bitmap_8" ClsId="0x306" Version="1" TargetIndex="65" Type="GFX" RefString="Source[local].Bitmap[Bitmap_8]">
+        <UInt16 Name="Width">32</UInt16>
+        <UInt16 Name="Height">32</UInt16>
+        <UInt32 Name="BitsPerPixel">32</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">2</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACSSURBVFhH7ZVBCoAgEEWlA9W67tCd6i7tO1PHaFUz6QczbZM5FPPggUHy306jKF9ndIoxO8XQAA3QAA3QgCIBNdnZ44W7gJZs7PEZA7mS/fF1JhXA//KdLC9lRU5kLCIWgHG+w3ezkIoIA14ZB7EIP+DVcRBGIKDIOPAjFmexcYCIzVl0HCBCZBzwsNi48geM2QHDRTb2P8gaWgAAAABJRU5ErkJggg==</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

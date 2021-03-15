@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="Historia32x32" ClsId="0x306" Version="1" TargetIndex="80" Type="GFX" RefString="Source[local].Bitmap[Historia32x32]">
+        <UInt16 Name="Width">32</UInt16>
+        <UInt16 Name="Height">32</UInt16>
+        <UInt32 Name="BitsPerPixel">32</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">2</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMrSURBVFhHtZZtyI9XHIAfryF5K0VsCnldkffywbyl1oqtTEg+UIuP8pKXFBufkJEvQhEtyxpbWmlTFkrI5tPIJPJBXkMYM7uuc9y6d7v/93P+D89VV885z/Pc//+5f7/f+Z3T0AS24UM8gZtxDg7CltjstMX7eAh34x/4Al/hYzyJ3+A8HILvfVEz8F/sE2aRdjgWF+MuPI/PsVkWdRBPxWElRmoUfok7sdaiPsNkOuIT9E2bQnFRN/ARJmMIzXf3MHt3jMK3cZjGz6/NaI0fxGHd+Jy19HmYJeBb+/ZGIWMuPkOLsF6W4AM0LUmYd/NvHWRYzf3jMLAG7+J3uBA/xFqcw31xmIb5cgdU0QOX4jF8ilb8JbRZtcKMvujfPgmzBNzz5ssekIppmYZ++U/YATNWopGyhpJYgXa/fL6Sc1fCRbRhJVN8YApafIa8XuyEhn9SmCUwFIsPtMHJcRjYi54JFuFAf1HBV3gTk9vxRvSBFmFWzkg0QubVxRoxF9MPi1zBrXGYxlXcEoeNYlFZeNlifDbPGHSBHlxJjEMfGB1msbJTc+diusXhG3wRI/AWn+ICzDcZ2Y6X4zAwHj3ReodZfZhCU7khzAqcRd/UW84OHIYWyS1ch3ny2+8HtKO5TW0uVRg5v+OjMCtwD9fiMvwL/cc/X/8cjrUwp/niyxZT1oL3oDulFMM6Pw5DqKaiVy4PHxuQVTsYa1EsvuIXWTsePL5gKeZmeRz+j57odrqGvuFvOBuruqCL6RyHb5iJL7FXmJVgLo/HYSlGxUL9Ef/B27gJy/Z5GYex6vPDh3vY2GIbw4vEejRqPvM1VtEV/0Z3WSVGwTx9HGaN4/H6K34fZrVZhJ4bncKsgvZoiH2rIzgRG8OLhwuv4gIeiMM0vsAzaNHZ073B5s/yPO4Ot14tstY7IczqxH69H82fqfHLiied90O3cK3weoPyJd4JL6Or8Dqanl8w24pd0HviaiwyAt16s8LsPWDRTcej6AffQc8Kr1ve/2xEGdbT72gqq47xJmOrtXV7spljNTouzoZmXdhBB2Cz4wlpfXhquhBr5jRWte4cDQ3/AUkxvIklVVgJAAAAAElFTkSuQmCC</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

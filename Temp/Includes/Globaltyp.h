@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615454422_1_
-#define _BUR_1615454422_1_
+#ifndef _BUR_1615804928_1_
+#define _BUR_1615804928_1_
 
 #include <bur/plctypes.h>
 
@@ -58,6 +58,11 @@ typedef struct Vizu_typ
 {	unsigned char CisloAktualnejObrazovky;
 	unsigned char CisloZadanejObrazovky;
 	plcbit TL_RezimAutomat;
+	unsigned char StavPracoviskaRobota_Index;
+	unsigned char StavPracoviskaBrusky_Index;
+	unsigned char StavZariadenia_Farba;
+	unsigned char StavZariadenia_Index;
+	unsigned char TL_RezimManual_ENABLE;
 } Vizu_typ;
 
 typedef struct PracoviskoIN_typ
@@ -256,5 +261,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1615454422_1_ */
+#endif /* _BUR_1615804928_1_ */
 

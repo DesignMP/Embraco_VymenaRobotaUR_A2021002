@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="Sipka_spat" ClsId="0x306" Version="1" TargetIndex="437" Type="GFX" RefString="Source[local].Bitmap[Sipka_spat]">
+        <UInt16 Name="Width">32</UInt16>
+        <UInt16 Name="Height">32</UInt16>
+        <UInt32 Name="BitsPerPixel">32</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">2</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIbSURBVFhH7dZPiA5xHMfxB0vLbogQtdnkIJSTUopaKRd2s6Qt4uCyqzg4uDly8Ke0B7GHbZMciLixbZwckCRWSQ5s60Br/cnfbXm/55kpPZlpZnqaueynXjXza3ee78zv+/vNVKaSMx1YXD0sNg04i0ksd6DItOA+/oQKLWAbPuAljqCwAqbjBHzkV9GMzSikgKW4h5845ECYQgpowzu8xnoH/klUwKrgrM6ZhuOYwE3MR22iAvQLbzCEM9iBRuTKItyGFz3qQEzmYQvasQ/H0I/nsFe+hOfrkDobMYK34XHe2DeH8QIWcxlLkJhu/IZrfKEDdYhT2QVv6D22IjateICv2O9AHTMX12BPHXAgLrPQCxurD7kbKSanYBG7grOE7MZnPMVKB/6TNbiBAVzASTiNNmbSFF7EN6wNzhLiDz+BhexxoCbRMnTFuPye4WM4pmGcRu3+MRMP8RgzHEiKU+BUeEGnximKErcTLsN2+LZ8Bf/mEVyuUXx6NnxPcJYirnOb0wvZrCbtVrwJTpXL8S5WwJzHKHwiqbIaPuYx+CGStoAo7ivuC+Pwrer/+RT2InWacAnezSCyFGDm4Ap8sXXiFrxO5hzEd2QtIIp99QPn4LJcgMxxj/fDJE8Bfl+4cpwOb2IncsUdbnb1MHNcLZ9gAS7XUuIr3wLuBGclxLm3l/zgKS3XYUOWlujrurT44tpQPZxKaalU/gJ/33xEkP3yBwAAAABJRU5ErkJggg==</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

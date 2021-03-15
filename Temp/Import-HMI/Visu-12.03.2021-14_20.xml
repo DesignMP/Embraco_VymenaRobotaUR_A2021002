@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.7.5.60 SP"?>
+<?xml-stylesheet type="text/xsl" href="SG4_Import_ToDo_Generator.xsl"?>
+<ImportLog>
+  <Header>
+    <Property Name="ImportDate" Value="12.03.2021 14:20"/>
+    <Property Name="SourceVisualization" Value="D:\Projekty BER\Panasonic_StaraLubovna_FrezovaciaBunkaA2019017\Logical\HMI\Visu"/>
+    <Property Name="TargetVisualization" Value="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\Visu"/>
+  </Header>
+  <Resources>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[Kontrolka_Siva_Cervena_Zelena]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[SivaLED_30x30]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[cervena_led]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[zelena_led_0]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[Kontrolka_Siva_Zelena]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[SivaLED_30x30_0]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[zelena_led_0]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[MalaKontrolka_Siva_Zelena]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[siva_led_0]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[zelena_kontrolka_0]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[OsvetlenieBunky]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[SvetloOFF]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[SvetloON]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[StavBezpecnZamku]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[ZamokLock_0]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[ZamokUnlock_0]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[Stav_CS]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[CS_NG_32x32]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[CS_OK_32x32]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[SymbolAlarmu2]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[Alarm_60x60]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[SymbolAlarmu60x60]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[Alarm_60x60]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[SymbolAlarmu]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[alert]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[SymbolZamku]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[ZamkaOdomknuta_32x32_0]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[ZamkaZamknuta_32x32_0]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[Alarm_60x60]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[CS_NG_32x32]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[CS_OK_32x32]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[SivaLED_30x30]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[SivaLED_30x30_0]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[SvetloOFF]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[SvetloON]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[ZamkaOdomknuta_32x32_0]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[ZamkaZamknuta_32x32_0]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[ZamokLock_0]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[ZamokUnlock_0]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[alert]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[cervena_led]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[siva_led_0]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[zelena_kontrolka_0]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[zelena_led_0]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+  </Resources>
+</ImportLog>

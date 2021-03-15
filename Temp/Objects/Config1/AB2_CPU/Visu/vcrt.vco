@@ -5,15 +5,15 @@
     <Object Name="Visu" ClsId="0x10" Version="1" Type="RTM" RefString="Source[local].Runtime[Visu]">
       <UInt32 Name="StackSize">65535</UInt32>
       <UInt16 Name="TaskPriority">66</UInt16>
-      <Byte Name="DefaultKeyLevelNumeric">0</Byte>
-      <Byte Name="DefaultKeyLevelString">0</Byte>
+      <Byte Name="DefaultKeyLevelNumeric">255</Byte>
+      <Byte Name="DefaultKeyLevelString">255</Byte>
       <Int32 Name="KeyRepeatDelay">300</Int32>
       <Int32 Name="KeyRepeatRate">50</Int32>
-      <Reference Name="DefaultPage" Type="PAGE">Source[local].Page[PageEmpty]</Reference>
+      <Reference Name="DefaultPage" Type="PAGE">Source[local].Page[AutomatickyRezim]</Reference>
       <Reference Name="ConnectionErrorPage" Type="ConnectionErrorPage">None</Reference>
       <UInt32 Name="ServicePage">4294967295</UInt32>
       <Reference Name="DefaultLanguage" Type="LOC">Source[local].Localizer[en]</Reference>
-      <Reference Name="DefaultStyleSheet" Type="SS">Source[local].StyleSheet[Color]</Reference>
+      <Reference Name="DefaultStyleSheet" Type="SS">Source[local].StyleSheet[Default]</Reference>
       <Reference Name="KeyLevelChangeDP" Type="DP">None</Reference>
       <Reference Name="KeyLevelCurrentDP" Type="DP">None</Reference>
       <Reference Name="LanguageChangeDP" Type="DP">None</Reference>

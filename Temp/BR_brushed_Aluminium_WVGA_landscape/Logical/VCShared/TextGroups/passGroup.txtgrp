@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.7.5.60 SP"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="passGroup">
+  <Property Name="Description" Value="" />
+  <Property Name="Index" Value="3" />
+  <TextSnippets>
+    <TextSnippet ClassId="0x00002002" Name="Admin">
+      <Property Name="Alignment" Value="Left" />
+      <Property Name="Datapoint" Value="Source[global].Variable[DataSource.Hesla[1]]" />
+      <Property Name="Description" Value="" />
+      <Property Name="FillCharacter" Value="" />
+      <Property Name="MaxChars" Value="None" />
+      <Property Name="MinChars" Value="None" />
+    </TextSnippet>
+    <TextSnippet ClassId="0x00002002" Name="Supervisor">
+      <Property Name="Alignment" Value="Left" />
+      <Property Name="Datapoint" Value="Source[global].Variable[DataSource.Hesla[2]]" />
+      <Property Name="Description" Value="" />
+      <Property Name="FillCharacter" Value="" />
+      <Property Name="MaxChars" Value="None" />
+      <Property Name="MinChars" Value="None" />
+    </TextSnippet>
+    <TextSnippet ClassId="0x00002002" Name="Operator">
+      <Property Name="Alignment" Value="Left" />
+      <Property Name="Datapoint" Value="Source[global].Variable[DataSource.Hesla[0]]" />
+      <Property Name="Description" Value="" />
+      <Property Name="FillCharacter" Value="" />
+      <Property Name="MaxChars" Value="None" />
+      <Property Name="MinChars" Value="None" />
+    </TextSnippet>
+  </TextSnippets>
+  <TextLayer LanguageId="en">
+    <Text ID="95428" Value="{Operator}" />
+    <Text ID="95547" Value="{Admin}" />
+    <Text ID="95548" Value="{Supervisor}" />
+  </TextLayer>
+  <TextLayer LanguageId="de">
+    <Text ID="95428" Value="" />
+    <Text ID="95547" Value="" />
+    <Text ID="95548" Value="" />
+  </TextLayer>
+  <IndexMap>
+    <Index ID="95428" Value="0" />
+    <Index ID="95547" Value="1" />
+    <Index ID="95548" Value="2" />
+  </IndexMap>
+</TextGroup>

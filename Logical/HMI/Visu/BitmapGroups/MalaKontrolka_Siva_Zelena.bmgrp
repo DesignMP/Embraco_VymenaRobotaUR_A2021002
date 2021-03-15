@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.7.5.60 SP"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="MalaKontrolka_Siva_Zelena">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="11"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="2280" Value="Source[local].Bitmap[siva_led_0]"/>
+    <BitmapRef ID="2281" Value="Source[local].Bitmap[zelena_kontrolka_0]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="2280" Value="0"/>
+    <Index ID="2281" Value="1"/>
+  </IndexMap>
+</BitmapGroup>

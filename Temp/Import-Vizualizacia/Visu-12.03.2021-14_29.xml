@@ -1,0 +1,1250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.7.5.60 SP"?>
+<?xml-stylesheet type="text/xsl" href="SG4_Import_ToDo_Generator.xsl"?>
+<ImportLog>
+  <Header>
+    <Property Name="ImportDate" Value="12.03.2021 14:29"/>
+    <Property Name="SourceVisualization" Value="D:\Projekty BER\Vzor_Vizualizacia7inch\Logical\Vizualizacia\Visu"/>
+    <Property Name="TargetVisualization" Value="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\Visu"/>
+  </Header>
+  <Resources>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].BitmapGroups[MpAuditCheckbox]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpCheckbox_small]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpCheckbox_small_checked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].BitmapGroups[MpBorders]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_control]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_control_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_decrease]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_decrease_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_default]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_default_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_error]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_bottom]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_left]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_pres_bottom]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_press_left]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_increase]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_increase_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_off]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_on]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_radio_selected]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_radio_unselected]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_ready]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_down]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_down_multi]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_down_multi_press]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_down_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_left]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_left_multi]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_left_multi_press]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_left_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_right]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_right_multi]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_right_multi_pres]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_right_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_up]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_up_multi]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_up_multi_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_up_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpCheckbox_small]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpCheckbox_small_checked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpCheckbox_small_gray]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpFrameHeader]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpGroupControl]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpInputBorderCenterless]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpInputBorderInactiveCenterless]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpInputBorderInactive]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpInputBorder]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpLabelBorderDown]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpLabelBorderLeft]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpLabelBorder]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpOutputBorder]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpProgressBorder]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].BitmapGroups[MpPads]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_lowerPressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_lower]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_numeric2Pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_numeric2]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_numericPressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_numeric]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_upperPressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_upper]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_lowerPressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_lower]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_numeric2Pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_numeric2]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_numericPressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_numeric]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_upperPressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_upper]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_ListPadHor]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_ListPadHor_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_ListPadVer]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_ListPadVer_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_Numpad]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_Numpad_pressed]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].BitmapGroups[MpUserIcons]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpAlarm_BypassON]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_add]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_add_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_delete]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_delete_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_edit]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_edit_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Exit]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Exit_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Export]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Export_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Import]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Import_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_add]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_add_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_clock_stop]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_delete]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_delete_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_edit]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_edit_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_lock]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_lock_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_pw_change]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_pw_change_locked]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].BitmapGroups[Semafor]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[Blue_LED]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[Green_LED]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[Red_LED]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[siva_led]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].BitmapGroups[StavBezpecnZamku]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[ZamokLock]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[ZamokUnlock]"/>
+          <Property Name="Resolution" Value="Imported"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].BitmapGroups[SymbolAlarmu]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[alert]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Overwrite"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].BitmapGroups[msgBox]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[alarm]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[information]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[Vizualizacia\Visu].Bitmaps[warning]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[Blue_LED]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[Green_LED]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpAlarm_BypassON]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_control]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_control_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_decrease]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_decrease_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_default]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_default_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_error]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_bottom]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_left]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_pres_bottom]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_press_left]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_global_area_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_increase]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_increase_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_off]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_on]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_radio_selected]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_radio_unselected]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_ready]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_down]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_down_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_down_multi_press]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_down_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_left]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_left_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_left_multi_press]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_left_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_right]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_right_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_right_multi_pres]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_right_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_up]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_up_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_up_multi_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpButton_scroll_up_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpCheckbox_small]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpCheckbox_small_checked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpCheckbox_small_gray]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpFrameHeader]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpGroupControl]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpInputBorderCenterless]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpInputBorderInactiveCenterless]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpInputBorderInactive]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpInputBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_lowerPressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_lower]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_numeric2Pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_numeric2]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_numericPressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_numeric]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_upperPressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_AlphaPad_upper]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_lowerPressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_lower]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_numeric2Pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_numeric2]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_numericPressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_numeric]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_upperPressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_EditPad_upper]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_ListPadHor]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_ListPadHor_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_ListPadVer]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_ListPadVer_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_Numpad]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpKey_Numpad_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpLabelBorderDown]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpLabelBorderLeft]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpLabelBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpOutputBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpProgressBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_add]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_add_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_delete]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_delete_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_edit]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUserGroup_edit_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Exit]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Exit_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Export]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Export_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Import]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_Import_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_add]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_add_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_clock_stop]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_delete]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_delete_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_edit]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_edit_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_lock]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_lock_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_pw_change]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[MpUser_pw_change_locked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[Red_LED]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[ZamokLock]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[ZamokUnlock]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[alarm]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[alert]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[information]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[siva_led]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[Vizualizacia\Visu].Bitmaps[warning]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+  </Resources>
+</ImportLog>

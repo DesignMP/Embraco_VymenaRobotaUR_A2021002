@@ -70,7 +70,8 @@ VCUG_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/VCShared/UnitGroups/Length.vcug \
 
 ALCFG_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/VCShared/AlarmGroups/AlarmSystem.alcfg 
 
-ALGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/VCShared/AlarmGroups/SystemAlarms.algrp 
+ALGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/VCShared/AlarmGroups/SystemAlarms.algrp \
+	$(AS_PROJECT_PATH)/Logical/VCShared/AlarmGroups/UserAlarms.algrp 
 
 DSO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/VCShared/DataSources/Internal.dso \
 	$(AS_PROJECT_PATH)/Logical/VCShared/DataSources/DataSource.dso 
@@ -119,6 +120,10 @@ $(AS_CPU_PATH)/VCShared/vcug.Temperatures.vco: $(AS_PROJECT_PATH)/Logical/VCShar
 ALGRP_OBJECTS_Visu = $(addprefix $(AS_CPU_PATH)/VCShared/algrp., $(notdir $(ALGRP_SOURCES_Visu:.algrp=.vco)))
 
 $(AS_CPU_PATH)/VCShared/algrp.SystemAlarms.vco: $(AS_PROJECT_PATH)/Logical/VCShared/AlarmGroups/SystemAlarms.algrp
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(AS_CPU_PATH)/VCShared/algrp.UserAlarms.vco: $(AS_PROJECT_PATH)/Logical/VCShared/AlarmGroups/UserAlarms.algrp
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 

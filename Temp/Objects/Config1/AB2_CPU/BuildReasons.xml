@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BuildReasons>
-  <Rule ID=".mappView_Clean_Data">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID=".mappView_Clean_TransferData">
+  <Rule ID=".mappView_Clean_Media">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID=".mappView_Clean_TransferIatr">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID=".mappView_Clean_Media">
+  <Rule ID=".mappView_Clean_TransferData">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID=".mappView_Clean_Data">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID=".mappView_Clean_Build">
@@ -21,13 +21,13 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu\visu.mak">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\transformations_copy._markerfile">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\brease\iat\build\jsbuild._markerfile">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\types\area._markerfile">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\transformations_copy._markerfile">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\server\serverdiagnostics._markerfile">
@@ -75,9 +75,6 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\duplicatebindingslistsetsfinder._markerfile">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\arconfig.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
@@ -96,6 +93,9 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl\main.st.c">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
@@ -108,22 +108,13 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl\main.st.o">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10\_bur_pvdef.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.c">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\blikanie200ms.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10\_bur_pvdef.st.c">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10\_bur_pvdef.st.o">
@@ -132,7 +123,64 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl\_bur_pvdef.st.c">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl\_bur_pvdef.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10\a.out">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\a.out">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\a.out">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10\blikanie10.ox">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\blikanie200ms.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl\a.out">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\limitnesni.ox">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\riadeniese.ox">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\blikanie200ms.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl\datumcaspl.ox">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sysconf.br">
@@ -144,118 +192,7 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ashwd.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\blikanie200ms.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\a.out">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\.mappview_prerequisites._markerfile">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\a.out">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10\a.out">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl\a.out">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\area_default.scss.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\_bur_pvdef.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\limitnesni.ox">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\_bur_pvdef.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\body_default.scss.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\dialog_default.scss.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\messagebox_default.scss.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\modaldimmer_default.scss.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\page_default.scss.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\scrollbar_default.scss.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\startupprogressbar_default.scss.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\a.out">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\tooltip_default.scss.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\transformations\eventbinding\parametertypemapping.xml">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\validatebindings._markerfile">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\validateeventbindings._markerfile">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\server\__systemvariables.sessionvar">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\a.out">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\brease_core.css">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\blikanie20.ox">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\riadeniese.ox">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\duplicatebindingsfinder._markerfile">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10\blikanie10.ox">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl\datumcaspl.ox">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.c">
@@ -264,7 +201,16 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\bruska.ox">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\_bur_pvdef.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\_bur_pvdef.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\blikanie500ms.st.c">
@@ -273,19 +219,10 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\blikanie500ms.st.o">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\grunt.widgets._markerfile">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.c">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\blikanie1s.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\blikanie1s.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni.br">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.o">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.c">
@@ -300,25 +237,7 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.o">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\_bur_pvdef.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\_bur_pvdef.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\_bur_pvdef.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\_bur_pvdef.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20.br">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\a.out">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.c">
@@ -327,55 +246,55 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.o">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska.br">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\_bur_pvdef.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\_bur_pvdef.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\a.out">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\a.out">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ashwac.br">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20\blikanie20.ox">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\a.out">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\a.out">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\a.out">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\bruska.ox">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\a.out">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\blikanie1s.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\blikanie1s.st.o">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\ovladaniev.ox">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axis_servo.st.c">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axis_servo.st.o">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\a.out">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ashwac.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\a.out">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\remanentne.ox">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axis_krokac.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axis_krokac.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\blikanie50.ox">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\servolim.st.c">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\servolim.st.o">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\blikanie1s.ox">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axis_servo.st.c">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sc\sequencecontrol.st.c">
@@ -384,19 +303,64 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sc\sequencecontrol.st.o">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axis_servo.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\robot.ox">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\_bur_pvdef.st.c">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\_bur_pvdef.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50\blikanie50.ox">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axis_krokac.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axis_krokac.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sc\a.out">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\servolim.st.c">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\servolim.st.o">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\a.out">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sc\sc.ox">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mcacpsim.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mcacpsys.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sc.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s\blikanie1s.ox">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mcacpdrv.br">
@@ -411,10 +375,10 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\udbdef.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\tcdata\tcdata.imx">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne.br">
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\tcdata\tcdata.imx">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\assafety.br">
@@ -453,52 +417,19 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mpbase.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mcbase.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\a.out">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mcacpax.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mcstpax.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mprecipe.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sys_lib.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sc\a.out">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axislib.ox">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sc\sc.ox">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sc.br">
-    <BuildReason>Rebuild.</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iomap.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\role.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mcbase.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\user.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mcacpax.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\fwrules.br">
@@ -510,13 +441,82 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\config.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib\axislib.ox">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\settings.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\axislib.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mcstpax.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mprecipe.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sys_lib.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iomap.br">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\tcdata\tcdata.s18d">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\tcdata.br">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\.mappview_prerequisites._markerfile">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\area_default.scss.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\body_default.scss.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\dialog_default.scss.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\messagebox_default.scss.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\modaldimmer_default.scss.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\page_default.scss.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\scrollbar_default.scss.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\startupprogressbar_default.scss.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\types\tooltip_default.scss.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\transformations\eventbinding\parametertypemapping.xml">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\validatebindings._markerfile">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\validateeventbindings._markerfile">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\duplicatebindingsfinder._markerfile">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\server\__systemvariables.sessionvar">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\css\brease_core.css">
+    <BuildReason>Rebuild.</BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\grunt.widgets._markerfile">
     <BuildReason>Rebuild.</BuildReason>
   </Rule>
   <Rule ID=".mappView_Build">

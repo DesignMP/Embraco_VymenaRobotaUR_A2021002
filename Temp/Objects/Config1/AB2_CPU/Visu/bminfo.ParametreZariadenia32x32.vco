@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="ParametreZariadenia32x32" ClsId="0x306" Version="1" TargetIndex="96" Type="GFX" RefString="Source[local].Bitmap[ParametreZariadenia32x32]">
+        <UInt16 Name="Width">32</UInt16>
+        <UInt16 Name="Height">32</UInt16>
+        <UInt32 Name="BitsPerPixel">32</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">2</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGfSURBVFhH7de9K4VhHMbx4528K4PJoBgom0nEwEIGm39CymCzWQzKZLHJIgn/hJQMYlRWixCRxPd6zv2r23nhuXXu01Gu+pTffU79rnqecx4nQ5bwgo/I3rGFvGj5JuYiW4GK9ONLdKg3xE4vtGs4mbxURIEjbES2jaIFrnEe2SWKFvi/ByqqwBgWnXrH5lAzsKQusIY7p82xOdQOLH/nEvRh3KlxbA41CEvqAvrS0Jm0OzaHOoAldYFO6M1S5dgcqhuWZuyhK5m85BaInWp0ZP/MJrdArEugzOMWeu0CA0gGv8AQNEutY3OoEVhm8Qa/4CnyCsSIlr9C3wvil8grsAx7grU4/lMtjR5Y/OW6/mIlrpBXYBqrToNjc1q6b5Tc5YoV0PmoDnILlCo/LdfrSWIUSL1cKXWBoOWKCizAPvMhGuEneLmiHwwq8Rv3sHy3/AmTOigUPRwKPcnSsAdLoeV12IeWT+ggVlrxjF34yw8RfbmiG1iX4wT676msyxX94LR74gzHKNty5QZWQB5QtuVNeIS+/9cx5c5SJpP5BPKHJnSrjhPHAAAAAElFTkSuQmCC</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

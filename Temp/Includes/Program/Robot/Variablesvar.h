@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615454422_10_
-#define _BUR_1615454422_10_
+#ifndef _BUR_1615804928_10_
+#define _BUR_1615804928_10_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Program/Robot/Variables.var\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1615454422_10_ */
+#endif /* _BUR_1615804928_10_ */
 

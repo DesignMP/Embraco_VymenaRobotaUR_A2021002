@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="RucnyRezim32x32" ClsId="0x306" Version="1" TargetIndex="1" Type="GFX" RefString="Source[local].Bitmap[RucnyRezim32x32]">
+        <UInt16 Name="Width">32</UInt16>
+        <UInt16 Name="Height">32</UInt16>
+        <UInt32 Name="BitsPerPixel">32</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">2</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ5SURBVFhH7ZdLiI1RAMfveETyWAwLIYRsNIkZC9FQLOwksZLHSnaapkGSZmGiZBZTYgpZKLGxUDYepUYWsrHzSEgeMTINFl6/35mZunfm3vnO+cwnC7/6Nd85995z/vOd853vnFIZi/A8vsdfBWnb9mFfFWzCPnyCB3ALbh5jbdO27cO+NmLANFZcwslWFIx9XMbPuMAKb4mpUjsfj8twRiilYV/P8bQFx8Vbk8IsfISO6xfch0dxP07DGNrxmRc24vjEMBPX4Ul8i2vxKtrGa/yEPRjDLuz1wh87SbKwM+eK39fbKDb0Df3PN6CfzcMskgNcxzvoxLmP5QFCQ7Acbe8DfsQ2rEVygId4auAy/B0twEU8Pni9AqtRaIDFWDd4vQOrUWiA8HyD135ejf8B/u0A43AVrsYJVkCtADvRR07GJIDr9C20Xh+gS295gCPoC0V8F7gAyXz0JeP3JVeAPfgV1+BKfImGeIxDAWLJFeAguq47DLIU36Hf+ysBGvA7Hg6lARrRW3silOLJFUBa8CeW1y9B34Yp5A4gF9C3n3ckL38UYBLew6dYb0UiPr62vTWURpIZQGajE/ImTrQiAe+cbTeF0kiiAogN9OOZUIrHCfsGhxay4UQHEG+jk7IjlLJxRXQtaQ2l6iQFkL1oiG6cYkUN3Lq5btzF0YatIkDspnQbuh68QNeJZvTxdHu+Ha/gD7yBWdv13RgCOE6HvIhkLnbh8COcHbsjNqS7oSyOoct76SzmOZiIYRxv78B0KyKZiq+w08JCdMHx7ZYnRCrOn2voK3yOFeJB0RBFH04dahc2DzDrsQIPqeewyOO5880hd98ApdJvMWMd+i0TBOQAAAAASUVORK5CYII=</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

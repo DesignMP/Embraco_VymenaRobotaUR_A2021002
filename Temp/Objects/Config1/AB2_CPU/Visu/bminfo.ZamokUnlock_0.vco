@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="ZamokUnlock_0" ClsId="0x306" Version="1" TargetIndex="190" Type="GFX" RefString="Source[local].Bitmap[ZamokUnlock_0]">
+        <UInt16 Name="Width">32</UInt16>
+        <UInt16 Name="Height">32</UInt16>
+        <UInt32 Name="BitsPerPixel">32</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">2</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">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</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

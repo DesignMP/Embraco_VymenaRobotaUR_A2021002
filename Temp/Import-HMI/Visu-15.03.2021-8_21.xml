@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.7.5.60 SP"?>
+<?xml-stylesheet type="text/xsl" href="SG4_Import_ToDo_Generator.xsl"?>
+<ImportLog>
+  <Header>
+    <Property Name="ImportDate" Value="15.03.2021 8:21"/>
+    <Property Name="SourceVisualization" Value="D:\Projekty BER\Panasonic_StaraLubovna_FrezovaciaBunkaA2019017\Logical\HMI\Visu"/>
+    <Property Name="TargetVisualization" Value="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\Visu"/>
+  </Header>
+  <Resources>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[Automat48x48]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Modification" Value="&quot;Resource '0': index already exists in ressource.
+&quot;"/>
+      <Property Name="NewName" Value="AutomatickyRezim32x32"/>
+      <Property Name="Operation" Value="Rename &amp; Modify"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[AutomatickyRezim32x32]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+  </Resources>
+</ImportLog>

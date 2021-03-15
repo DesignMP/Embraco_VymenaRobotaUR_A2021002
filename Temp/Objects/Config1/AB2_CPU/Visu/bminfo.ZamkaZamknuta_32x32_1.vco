@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="ZamkaZamknuta_32x32_1" ClsId="0x306" Version="1" TargetIndex="256" Type="GFX" RefString="Source[local].Bitmap[ZamkaZamknuta_32x32_1]">
+        <UInt16 Name="Width">32</UInt16>
+        <UInt16 Name="Height">32</UInt16>
+        <UInt32 Name="BitsPerPixel">32</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">2</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF3SURBVFhH7de/K0VhHMfxUwqj3ChRUq6EYjXIaJcMd2ARBkIm/4CR2aRkk/+ATDZSDIqBwY7Br8GP9+d5DAae89zO97jF/dSr83xP3XO+t/uc5z4n+WupRyvqXPVL0c2WcYo3vH8eTzCPWuSWLpzjERsYwzDGsYlnqLEOmKcFNzhGu058k06c4RoFnbDMLq7Q6Kqf0wQ1uu0qoxSh33nUVemZwCvaXGWQOdyjxlXp0UR9wJSrDLKGQz+MjubCqh9mzzoO/DA6eiz1OZP8zwa0zA5CC80OdEGNY11Cn9NY1ylruW6Gnnkts1Yu0ICoTOMJPdCql1U/XlBCVBZw64dm0fUm/TA91QZiGxjAIvpcFY55A7q5JpZmuI7dCMW8AX3zr4/ZLEIxb6AX2gHp5toh6S87FPMGFK2OakDHtOTawJGrwsmlgRVo47HkqnByaaCcVBuoeAN3iG5gBNqGb0G7mqz0jqCnZQjR0XvePrQVy2oPM6h0kuQDUn+XnS566+gAAAAASUVORK5CYII=</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

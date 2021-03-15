@@ -1,5 +1,301 @@
 <Language Name="de" ID="1">
-  <LogicalFont Name="DefaultFont">
+  <LogicalFont Name="MpDefault">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="1001" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="MpPackMLStateNames">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="1109" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="MpPads">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="1108" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="MpMenuButtons">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="1107" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="MpInput">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="1106" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="MpInfo">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="1105" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="MpHtml_SDM">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="1104" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="MpHeader">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="1103" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Input_0">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="301" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="MpButton">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="1101" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Digitalny_50">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="297" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Digitalny_22">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="296" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="DateTime">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="294" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial9_Bold">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="292" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial9">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="291" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial8_Bold">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="290" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial8">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="289" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial20_Bold">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="288" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial20">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="287" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial18_Bold">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="286" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial18">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="285" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial16_Bold">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="284" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial16">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="283" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial12_Bold">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="282" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial12">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="281" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial11_Bold">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="280" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial11">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="279" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial10_Bold">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="278" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Arial10">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="277" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Aerial24_Bold">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="276" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Aerial14">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="275" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Info">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="10" />
+    <Property Name="Index" Value="6" />
+    <Property Name="FontSize" Value="16" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Status">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="5" />
+    <Property Name="FontSize" Value="18" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Html_SDM">
+    <Property Name="PhysicalFont" Value="arial" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="8" />
+    <Property Name="Index" Value="4" />
+    <Property Name="FontSize" Value="14" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Input">
+    <Property Name="PhysicalFont" Value="arialbd" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="10" />
+    <Property Name="Index" Value="3" />
+    <Property Name="FontSize" Value="16" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Button">
+    <Property Name="PhysicalFont" Value="arialbd" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="9" />
+    <Property Name="Index" Value="2" />
+    <Property Name="FontSize" Value="15" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Header">
+    <Property Name="PhysicalFont" Value="arialbd" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="10" />
+    <Property Name="Index" Value="1" />
+    <Property Name="FontSize" Value="16" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
+  <LogicalFont Name="Default">
     <Property Name="PhysicalFont" Value="arial" />
     <Property Name="Width" Value="0" />
     <Property Name="Height" Value="9" />

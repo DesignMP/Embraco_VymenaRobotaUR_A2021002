@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615454422_13_
-#define _BUR_1615454422_13_
+#ifndef _BUR_1615804928_13_
+#define _BUR_1615804928_13_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/RiadenieServ/RiadenieServ/Types.typ\\\" sc
 __asm__(".previous");
 
 
-#endif /* _BUR_1615454422_13_ */
+#endif /* _BUR_1615804928_13_ */
 

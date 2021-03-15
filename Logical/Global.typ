@@ -65,6 +65,11 @@ TYPE
 		CisloAktualnejObrazovky : USINT;
 		CisloZadanejObrazovky : USINT;
 		TL_RezimAutomat : BOOL;
+		StavPracoviskaRobota_Index : USINT;
+		StavPracoviskaBrusky_Index : USINT;
+		StavZariadenia_Farba : USINT;
+		StavZariadenia_Index : USINT;
+		TL_RezimManual_ENABLE : USINT; (*0 - odomknuté, 1 - zamknuté*)
 	END_STRUCT;
 END_TYPE
 
