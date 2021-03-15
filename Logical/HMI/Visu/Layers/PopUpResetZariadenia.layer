@@ -31,11 +31,10 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="ForeColor" Value="0"/>
-      <Property Name="GroupID" Value="7"/>
       <Property Name="Height" Value="238"/>
       <Property Name="Left" Value="191"/>
       <Property Name="LineWidth" Value="2"/>
-      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]"/>
+      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
       <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
       <Property Name="Top" Value="93"/>
       <Property Name="Width" Value="438"/>
@@ -50,7 +49,6 @@
       <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_73]"/>
       <Property Name="Font" Value="Source[local].Font[Arial16_Bold]"/>
       <Property Name="ForeColor" Value="10"/>
-      <Property Name="GroupID" Value="7"/>
       <Property Name="Height" Value="54"/>
       <Property Name="KeyMatrixOffset" Value="None"/>
       <Property Name="Left" Value="225"/>
@@ -59,7 +57,7 @@
       <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
       <Property Name="PressedForeColor" Value="0"/>
       <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
-      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]"/>
+      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
       <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
       <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
       <Property Name="TextIndex" Value="3"/>
@@ -80,7 +78,6 @@
       <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_121]"/>
       <Property Name="Font" Value="Source[local].Font[Arial16_Bold]"/>
       <Property Name="ForeColor" Value="10"/>
-      <Property Name="GroupID" Value="7"/>
       <Property Name="Height" Value="54"/>
       <Property Name="KeyMatrixOffset" Value="None"/>
       <Property Name="Left" Value="451"/>
@@ -89,7 +86,7 @@
       <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
       <Property Name="PressedForeColor" Value="0"/>
       <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
-      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]"/>
+      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
       <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
       <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
       <Property Name="TextIndex" Value="5"/>
@@ -106,13 +103,12 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="Font" Value="Source[local].Font[Arial20_Bold]"/>
-      <Property Name="GroupID" Value="7"/>
       <Property Name="Height" Value="94"/>
       <Property Name="Left" Value="235"/>
       <Property Name="Multiline" Value="Automatic"/>
       <Property Name="SimulationIndex" Value="0"/>
       <Property Name="SimulationValue" Value=""/>
-      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]"/>
+      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
       <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
       <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
       <Property Name="TextIndexOffset" Value="7"/>
@@ -128,12 +124,11 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="FillStyle" Value="Transparent"/>
-      <Property Name="GroupID" Value="7"/>
       <Property Name="Height" Value="60"/>
       <Property Name="IndexDatapoint" Value="None"/>
       <Property Name="Left" Value="568"/>
       <Property Name="SimulationValue" Value="0"/>
-      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]"/>
+      <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
       <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
       <Property Name="Top" Value="94"/>
       <Property Name="Width" Value="60"/>
@@ -151,7 +146,7 @@
           <Property Name="Locking" Value="Never"/>
           <Property Name="Name" Value="Action_0"/>
           <Property Name="SetValue" Value="1"/>
-          <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]"/>
+          <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
         </KeyAction>
       </KeyActions>
     </VirtualKey>

@@ -10,7 +10,7 @@
         <Byte Name="BackColor">10</Byte>
         <UInt16 Name="Index">1</UInt16>
         <Byte Name="ForeColor">0</Byte>
-        <Byte Name="BackColor">39</Byte>
+        <Byte Name="BackColor">51</Byte>
       </Object>
     </Folder>
   </Folder>

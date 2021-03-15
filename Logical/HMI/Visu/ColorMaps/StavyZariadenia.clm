@@ -9,7 +9,7 @@
     <Property Name="Index" Value="0"/>
   </ColorMapItem>
   <ColorMapItem>
-    <Property Name="BackColor" Value="39"/>
+    <Property Name="BackColor" Value="51"/>
     <Property Name="Description" Value=""/>
     <Property Name="ForeColor" Value="0"/>
     <Property Name="Index" Value="1"/>

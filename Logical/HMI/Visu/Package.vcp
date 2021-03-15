@@ -309,6 +309,8 @@
     <Source File="Bitmaps\AutomatickyRezim32x32.bminfo"/>
     <Source File="Bitmaps\PozadieDesignMP_800x480.bminfo"/>
     <Source File="Bitmaps\PracoviskoVymenaRobota.bminfo"/>
+    <Source File="Bitmaps\Alarm_32x32.bminfo"/>
+    <Source File="Bitmaps\Alarm_40x40.bminfo"/>
     <Source File="BitmapGroups\AlarmAcknowledgeState.bmgrp"/>
     <Source File="BitmapGroups\AlarmBypassState.bmgrp"/>
     <Source File="BitmapGroups\AlarmEvent.bmgrp"/>
@@ -412,6 +414,7 @@
     <Source File="ColorMaps\cervena_zelena.clm"/>
     <Source File="ColorMaps\StavyZariadenia.clm"/>
     <Source File="ColorMaps\StavyPracoviska.clm"/>
+    <Source File="ColorMaps\TlacitkoAlarm.clm"/>
     <Source File="VirtualKeys.vcvk"/>
     <Source File="Palette.vcr"/>
   </SourceFiles>

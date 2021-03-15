@@ -15,7 +15,7 @@
     <Property Name="Index" Value="1"/>
   </ColorMapItem>
   <ColorMapItem>
-    <Property Name="BackColor" Value="221"/>
+    <Property Name="BackColor" Value="10"/>
     <Property Name="Description" Value=""/>
     <Property Name="ForeColor" Value="0"/>
     <Property Name="Index" Value="2"/>

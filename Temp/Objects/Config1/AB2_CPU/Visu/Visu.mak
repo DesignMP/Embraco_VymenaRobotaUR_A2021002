@@ -339,7 +339,9 @@ BMINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/Key_NumPad_press
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/Automat48x48.bminfo \
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/AutomatickyRezim32x32.bminfo \
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/PozadieDesignMP_800x480.bminfo \
-	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/PracoviskoVymenaRobota.bminfo 
+	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/PracoviskoVymenaRobota.bminfo \
+	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/Alarm_32x32.bminfo \
+	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/Alarm_40x40.bminfo 
 
 BMGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/HMI/Visu/BitmapGroups/AlarmAcknowledgeState.bmgrp \
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/BitmapGroups/AlarmBypassState.bmgrp \
@@ -452,7 +454,8 @@ CLM_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/HMI/Visu/ColorMaps/SchemaBezpecnosti
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/ColorMaps/SchemaTlacitkaStart.clm \
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/ColorMaps/cervena_zelena.clm \
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/ColorMaps/StavyZariadenia.clm \
-	$(AS_PROJECT_PATH)/Logical/HMI/Visu/ColorMaps/StavyPracoviska.clm 
+	$(AS_PROJECT_PATH)/Logical/HMI/Visu/ColorMaps/StavyPracoviska.clm \
+	$(AS_PROJECT_PATH)/Logical/HMI/Visu/ColorMaps/TlacitkoAlarm.clm 
 
 VCVK_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/HMI/Visu/VirtualKeys.vcvk 
 
@@ -1655,6 +1658,14 @@ $(TEMP_PATH_Visu)/bminfo.PracoviskoVymenaRobota.vco: $(AS_PROJECT_PATH)/Logical/
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
+$(TEMP_PATH_Visu)/bminfo.Alarm_32x32.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/Alarm_32x32.bminfo $(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/Alarm_32x32.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_40x40.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/Alarm_40x40.bminfo $(AS_PROJECT_PATH)/Logical/HMI/Visu/Bitmaps/Alarm_40x40.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
 #Bitmaps END
 
 
@@ -1720,6 +1731,10 @@ $(TEMP_PATH_Visu)/clm.StavyZariadenia.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/C
 
 
 $(TEMP_PATH_Visu)/clm.StavyPracoviska.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/ColorMaps/StavyPracoviska.clm
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/clm.TlacitkoAlarm.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/ColorMaps/TlacitkoAlarm.clm
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
@@ -1833,3 +1848,11 @@ $(TEMP_PATH_Visu)/Visu03.ccf: $(LIB_SHARED) $(SHARED_CCF) $(BMGRP_OBJECTS_Visu) 
 	$(LINK) '$@.lfl' -o '$@' -p Visu -lib '$(LIB_BMP_RES_Visu)' -P '$(AS_PROJECT_PATH)' -m 'bitmap resources' -profile 'False' -warningLevel2 -vcr 4722 -sfas
 # 03 Module END
 
+# Post Build Steps
+
+.PHONY : vcPostBuild_Visu
+
+vcPostBuild_Visu :
+	$(VCC) -pb -vcm '$(TEMP_PATH_Visu)/MODULEFILES.vcm' -fw '$(VCFIRMWAREPATH)' $(VCCFLAGS_Visu) -p Visu -vcr 4722 -sfas
+
+# Post Build Steps END

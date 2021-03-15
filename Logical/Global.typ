@@ -69,40 +69,46 @@ TYPE
 		StavPracoviskaBrusky_Index : USINT;
 		StavZariadenia_Farba : USINT;
 		StavZariadenia_Index : USINT;
-		TL_RezimManual_ENABLE : USINT; (*0 - odomknuté, 1 - zamknuté*)
+		TL_RezimManual_DISABLE : BOOL; (*0 - odomknuté, 1 - zamknuté*)
+		TL_StartAutomat_DISABLE : BOOL;
+		TL_UkoncenieCyklu_DISABLE : BOOL;
+		Slider : USINT;
+		FarbaTlacitkaAlarm_Index : BOOL;
+		ZobrazSymbolAlarmu : BOOL;
+		ZobrazHlasenie_ResetZariadenia : USINT;
 	END_STRUCT;
 END_TYPE
 
 (**************************Pracovisko************************************************)
 
 TYPE
-	Pracovisko_typ : 	STRUCT 
-		IN : PracoviskoIN_typ;
-		OUT : PracoviskoOUT_typ;
-		PAR : PracoviskoPAR_typ;
-		STAV : PracoviskoSTAV_typ;
+	Zariadenie_typ : 	STRUCT 
+		IN : ZariadenieIN_typ;
+		OUT : ZariadenieOUT_typ;
+		PAR : ZariadeniePAR_typ;
+		STAV : ZariadenieSTAV_typ;
 		Automat : BOOL;
 		Manual : BOOL;
 		Reset : BOOL;
 		KoniecCyklu : BOOL;
 		Majak_HukackaON : BOOL;
 	END_STRUCT;
-	PracoviskoIN_typ : 	STRUCT 
+	ZariadenieIN_typ : 	STRUCT 
 		PrepatovaOchrana_OK : BOOL;
 		Paletka_PritomnostKusu_OS1 : BOOL;
 		VystupDoprav_PritomnostKusu_OS2 : BOOL;
 		Otacac_PritomnostKusu_IS2 : BOOL;
 	END_STRUCT;
-	PracoviskoOUT_typ : 	STRUCT 
+	ZariadenieOUT_typ : 	STRUCT 
 		Majak_ZeleneSvetlo : BOOL;
 		Majak_ZlteSvetlo : BOOL;
 		Majak_CerveneSvetlo : BOOL;
 		Majak_Hukacka : BOOL;
 	END_STRUCT;
-	PracoviskoPAR_typ : 	STRUCT 
+	ZariadeniePAR_typ : 	STRUCT 
 		New_Member : USINT;
 	END_STRUCT;
-	PracoviskoSTAV_typ : 	STRUCT 
+	ZariadenieSTAV_typ : 	STRUCT 
 		Automat : BOOL;
 		Manual : BOOL;
 		PoINIT : BOOL;

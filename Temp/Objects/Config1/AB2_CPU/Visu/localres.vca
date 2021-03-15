@@ -53,94 +53,92 @@
   <Symbol Name="\DPV\POBJ" Index="5" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.StavPracoviskaBrusky_Index]" />
   <Symbol Name="\DPV\POBJ" Index="6" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_RezimAutomat]" />
   <Symbol Name="\DPV\POBJ" Index="7" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_RezimManual_ENABLE]" />
-  <Symbol Name="\DPV\POBJ" Index="8" Type="DP" RefString="Source[global].Variable[DataSource.Safety.RESET_ZonyCS]" />
-  <Symbol Name="\DPV\POBJ" Index="9" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_RobotNieje_v_Automate]" />
-  <Symbol Name="\DPV\POBJ" Index="10" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_UpozorneniePrazdZasobFrez]" />
-  <Symbol Name="\DPV\POBJ" Index="11" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlaseniePlnaDebnicka]" />
-  <Symbol Name="\DPV\POBJ" Index="12" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]" />
-  <Symbol Name="\DPV\POBJ" Index="13" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.LED_TlacitkaResetCS]" />
-  <Symbol Name="\DPV\POBJ" Index="14" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_VymenGriperRobota]" />
-  <Symbol Name="\DPV\POBJ" Index="15" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_RobotNiejeVzoneBezpNavrat]" />
-  <Symbol Name="\DPV\POBJ" Index="16" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlasenieOdoberDPS]" />
-  <Symbol Name="\DPV\POBJ" Index="17" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlaseniePrazdnyZasobFrez]" />
-  <Symbol Name="\DPV\POBJ" Index="18" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlasenieVlozDebnickuOdpad]" />
-  <Symbol Name="\DPV\POBJ" Index="19" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoRezimAutomat]" />
-  <Symbol Name="\DPV\POBJ" Index="20" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoRezimManual]" />
-  <Symbol Name="\DPV\POBJ" Index="21" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.TP_ZamkniTlacitkoHOME]" />
-  <Symbol Name="\DPV\POBJ" Index="22" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Slider]" />
-  <Symbol Name="\DPV\POBJ" Index="23" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoSTART]" />
-  <Symbol Name="\DPV\POBJ" Index="24" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoSTOP]" />
-  <Symbol Name="\DPV\POBJ" Index="25" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoOdparkovanieRobota]" />
-  <Symbol Name="\DPV\POBJ" Index="26" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Tlacitko_VymenFrezu]" />
-  <Symbol Name="\DPV\POBJ" Index="27" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitko_SpustenieFrezy]" />
-  <Symbol Name="\DPV\POBJ" Index="28" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoStartVysavaca]" />
-  <Symbol Name="\DPV\POBJ" Index="29" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Reset]" />
-  <Symbol Name="\DPV\POBJ" Index="30" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.OsvetlenieBunky]" />
-  <Symbol Name="\DPV\POBJ" Index="31" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Automat]" />
-  <Symbol Name="\DPV\POBJ" Index="32" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.KoniecCyklu]" />
-  <Symbol Name="\DPV\POBJ" Index="33" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.PriechodnyRezim]" />
-  <Symbol Name="\DPV\POBJ" Index="34" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.Frezu_ZAPNI]" />
-  <Symbol Name="\DPV\POBJ" Index="35" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_ZASUN]" />
-  <Symbol Name="\DPV\POBJ" Index="36" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_VYSUN]" />
-  <Symbol Name="\DPV\POBJ" Index="37" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.OtvorVretenoFrezy]" />
-  <Symbol Name="\DPV\POBJ" Index="38" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacDPS_ZATVOR]" />
-  <Symbol Name="\DPV\POBJ" Index="39" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacDPS_OTVOR]" />
-  <Symbol Name="\DPV\POBJ" Index="40" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacOdpadu_ZATVOR]" />
-  <Symbol Name="\DPV\POBJ" Index="41" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacOdpadu_OTVOR]" />
-  <Symbol Name="\DPV\POBJ" Index="42" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacFrezy_ZATVOR]" />
-  <Symbol Name="\DPV\POBJ" Index="43" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacFrezy_OTVOR]" />
-  <Symbol Name="\DPV\POBJ" Index="44" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.Vyhadzovac_ZASUN]" />
-  <Symbol Name="\DPV\POBJ" Index="45" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.Vyhadzovac_VYSUN]" />
+  <Symbol Name="\DPV\POBJ" Index="8" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.Slider]" />
+  <Symbol Name="\DPV\POBJ" Index="9" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.FarbaTlacitkaAlarm_Index]" />
+  <Symbol Name="\DPV\POBJ" Index="10" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.ZobrazSymbolAlarmu]" />
+  <Symbol Name="\DPV\POBJ" Index="11" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_RezimManual_DISABLE]" />
+  <Symbol Name="\DPV\POBJ" Index="12" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_StartAutomat_DISABLE]" />
+  <Symbol Name="\DPV\POBJ" Index="13" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_UkoncenieCyklu_DISABLE]" />
+  <Symbol Name="\DPV\POBJ" Index="14" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]" />
+  <Symbol Name="\DPV\POBJ" Index="15" Type="DP" RefString="Source[global].Variable[DataSource.Safety.RESET_ZonyCS]" />
+  <Symbol Name="\DPV\POBJ" Index="16" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_RobotNieje_v_Automate]" />
+  <Symbol Name="\DPV\POBJ" Index="17" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_UpozorneniePrazdZasobFrez]" />
+  <Symbol Name="\DPV\POBJ" Index="18" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlaseniePlnaDebnicka]" />
+  <Symbol Name="\DPV\POBJ" Index="19" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.LED_TlacitkaResetCS]" />
+  <Symbol Name="\DPV\POBJ" Index="20" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_VymenGriperRobota]" />
+  <Symbol Name="\DPV\POBJ" Index="21" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_RobotNiejeVzoneBezpNavrat]" />
+  <Symbol Name="\DPV\POBJ" Index="22" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlasenieOdoberDPS]" />
+  <Symbol Name="\DPV\POBJ" Index="23" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlaseniePrazdnyZasobFrez]" />
+  <Symbol Name="\DPV\POBJ" Index="24" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlasenieVlozDebnickuOdpad]" />
+  <Symbol Name="\DPV\POBJ" Index="25" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoRezimAutomat]" />
+  <Symbol Name="\DPV\POBJ" Index="26" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoRezimManual]" />
+  <Symbol Name="\DPV\POBJ" Index="27" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.TP_ZamkniTlacitkoHOME]" />
+  <Symbol Name="\DPV\POBJ" Index="28" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoOdparkovanieRobota]" />
+  <Symbol Name="\DPV\POBJ" Index="29" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitko_SpustenieFrezy]" />
+  <Symbol Name="\DPV\POBJ" Index="30" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoStartVysavaca]" />
+  <Symbol Name="\DPV\POBJ" Index="31" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Reset]" />
+  <Symbol Name="\DPV\POBJ" Index="32" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.OsvetlenieBunky]" />
+  <Symbol Name="\DPV\POBJ" Index="33" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Automat]" />
+  <Symbol Name="\DPV\POBJ" Index="34" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Manual]" />
+  <Symbol Name="\DPV\POBJ" Index="35" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.KoniecCyklu]" />
+  <Symbol Name="\DPV\POBJ" Index="36" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.Frezu_ZAPNI]" />
+  <Symbol Name="\DPV\POBJ" Index="37" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_ZASUN]" />
+  <Symbol Name="\DPV\POBJ" Index="38" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_VYSUN]" />
+  <Symbol Name="\DPV\POBJ" Index="39" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.OtvorVretenoFrezy]" />
+  <Symbol Name="\DPV\POBJ" Index="40" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacDPS_ZATVOR]" />
+  <Symbol Name="\DPV\POBJ" Index="41" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacDPS_OTVOR]" />
+  <Symbol Name="\DPV\POBJ" Index="42" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacOdpadu_ZATVOR]" />
+  <Symbol Name="\DPV\POBJ" Index="43" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacOdpadu_OTVOR]" />
+  <Symbol Name="\DPV\POBJ" Index="44" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacFrezy_ZATVOR]" />
+  <Symbol Name="\DPV\POBJ" Index="45" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacFrezy_OTVOR]" />
   <Symbol Name="\DPV\POBJ" Index="46" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OdparkujRobota]" />
-  <Symbol Name="\DPV\POBJ" Index="47" Type="DP" RefString="Source[global].Variable[DataSource.Robot.ServisnaPoloha]" />
-  <Symbol Name="\DPV\POBJ" Index="48" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.OtackyFrezyDosiahnute]" />
-  <Symbol Name="\DPV\POBJ" Index="49" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.FrezaBezi]" />
-  <Symbol Name="\DPV\POBJ" Index="50" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Vysavac_PodtlakDosiahnuty]" />
-  <Symbol Name="\DPV\POBJ" Index="51" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.SnimacePritomnFrezy_SpodnaPoloha]" />
-  <Symbol Name="\DPV\POBJ" Index="52" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.SnimacePritomnFrezy_HornaPoloha]" />
-  <Symbol Name="\DPV\POBJ" Index="53" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.VretenoFrezy_PritomnostNastroja]" />
-  <Symbol Name="\DPV\POBJ" Index="54" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.ZasobnikFrez_PritomnostNastroja]" />
-  <Symbol Name="\DPV\POBJ" Index="55" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Griper_UchopFrezy_ZATVORENY]" />
-  <Symbol Name="\DPV\POBJ" Index="56" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Griper_UchopFrezy_OTVORENY]" />
-  <Symbol Name="\DPV\POBJ" Index="57" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.Ionizer_StartIonizovania]" />
-  <Symbol Name="\DPV\POBJ" Index="58" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.ZapniVysavac]" />
-  <Symbol Name="\DPV\POBJ" Index="59" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.Ionizer_ZapniVzduch]" />
-  <Symbol Name="\DPV\POBJ" Index="60" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacDPS_ZATVORENY]" />
-  <Symbol Name="\DPV\POBJ" Index="61" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacDPS_OTVORENY]" />
-  <Symbol Name="\DPV\POBJ" Index="62" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacOdpadu_ZATVORENY]" />
-  <Symbol Name="\DPV\POBJ" Index="63" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacOdpadu_OTVORENY]" />
-  <Symbol Name="\DPV\POBJ" Index="64" Type="DP" RefString="Source[global].Variable[DataSource.Pracovisko.Manual]" />
-  <Symbol Name="\DPV\POBJ" Index="65" Type="DP" RefString="Source[global].Variable[DataSource.Hesla]" />
-  <Symbol Name="\DPV\POBJ" Index="66" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[1]]" />
-  <Symbol Name="\DPV\POBJ" Index="67" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[0]]" />
-  <Symbol Name="\DPV\POBJ" Index="68" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[2]]" />
-  <Symbol Name="\DPV\POBJ" Index="69" Type="DP" RefString="Source[global].Variable[DataSource.Alarmy]" />
-  <Symbol Name="\DPV\POBJ" Index="70" Type="DP" RefString="Source[global].Variable[DataSource.PotvrdenieAlarmov]" />
-  <Symbol Name="\DPV\POBJ" Index="71" Type="DP" RefString="Source[global].Variable[DataSource.ZobrazSymbolAlarmu]" />
-  <Symbol Name="\DPV\POBJ" Index="72" Type="DP" RefString="Source[global].Variable[DataSource.Blikac500ms]" />
-  <Symbol Name="\DPV\POBJ" Index="73" Type="DP" RefString="Source[global].Variable[DataSource.TP_ZobrazPopUpPrihlasenie]" />
-  <Symbol Name="\DPV\POBJ" Index="74" Type="DP" RefString="Source[global].Variable[DataSource.ZadaneMenoUzivatela]" />
-  <Symbol Name="\DPV\POBJ" Index="75" Type="DP" RefString="Source[global].Variable[DataSource.PrihlasUzivatela]" />
-  <Symbol Name="\DPV\POBJ" Index="76" Type="DP" RefString="Source[global].Variable[DataSource.ZadaneHesloUzivatela]" />
-  <Symbol Name="\DPV\POBJ" Index="77" Type="DP" RefString="Source[global].Variable[DataSource.OdhlasUzivatela]" />
-  <Symbol Name="\DPV\POBJ" Index="78" Type="DP" RefString="Source[global].Variable[DataSource.ZvolenaUroven]" />
-  <Symbol Name="\DPV\POBJ" Index="79" Type="DP" RefString="Source[global].Variable[Internal.Display.Brightness]" />
-  <Symbol Name="\DPV\POBJ" Index="80" Type="DP" RefString="Source[global].Variable[Internal.Display.Contrast]" />
-  <Symbol Name="\DPV\POBJ" Index="81" Type="DP" RefString="Source[global].Variable[Internal.Display.BackLight]" />
-  <Symbol Name="\DPV\POBJ" Index="82" Type="DP" RefString="Source[global].Variable[Internal.Connection.IPAddress]" />
-  <Symbol Name="\DPV\POBJ" Index="83" Type="DP" RefString="Source[global].Variable[Internal.Connection.NodeNumber]" />
-  <Symbol Name="\DPV\POBJ" Index="84" Type="DP" RefString="Source[global].Variable[Internal.Temperature.CPU]" />
-  <Symbol Name="\DPV\POBJ" Index="85" Type="DP" RefString="Source[global].Variable[Internal.Temperature.Room]" />
-  <Symbol Name="\DPV\POBJ" Index="86" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Day]" />
-  <Symbol Name="\DPV\POBJ" Index="87" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Hour]" />
-  <Symbol Name="\DPV\POBJ" Index="88" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Minute]" />
-  <Symbol Name="\DPV\POBJ" Index="89" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Month]" />
-  <Symbol Name="\DPV\POBJ" Index="90" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Second]" />
-  <Symbol Name="\DPV\POBJ" Index="91" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Year]" />
-  <Symbol Name="\DPV\POBJ" Index="92" Type="DP" RefString="Source[global].Variable[Internal.DateTime.DayOfWeek]" />
-  <Symbol Name="\DPV\POBJ" Index="93" Type="DP" RefString="Source[global].Variable[Internal.Memory.LargestFreeBlock]" />
-  <Symbol Name="\DPV\POBJ" Index="94" Type="DP" RefString="Source[global].Variable[Internal.Memory.TotalFree]" />
-  <Symbol Name="\DPV\POBJ" Index="95" Type="DP" RefString="Source[global].Variable[Internal.Memory.TotalInstalled]" />
+  <Symbol Name="\DPV\POBJ" Index="47" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.OtackyFrezyDosiahnute]" />
+  <Symbol Name="\DPV\POBJ" Index="48" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.FrezaBezi]" />
+  <Symbol Name="\DPV\POBJ" Index="49" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Vysavac_PodtlakDosiahnuty]" />
+  <Symbol Name="\DPV\POBJ" Index="50" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.SnimacePritomnFrezy_SpodnaPoloha]" />
+  <Symbol Name="\DPV\POBJ" Index="51" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.SnimacePritomnFrezy_HornaPoloha]" />
+  <Symbol Name="\DPV\POBJ" Index="52" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.VretenoFrezy_PritomnostNastroja]" />
+  <Symbol Name="\DPV\POBJ" Index="53" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.ZasobnikFrez_PritomnostNastroja]" />
+  <Symbol Name="\DPV\POBJ" Index="54" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Griper_UchopFrezy_ZATVORENY]" />
+  <Symbol Name="\DPV\POBJ" Index="55" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Griper_UchopFrezy_OTVORENY]" />
+  <Symbol Name="\DPV\POBJ" Index="56" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.Ionizer_StartIonizovania]" />
+  <Symbol Name="\DPV\POBJ" Index="57" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.ZapniVysavac]" />
+  <Symbol Name="\DPV\POBJ" Index="58" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.Ionizer_ZapniVzduch]" />
+  <Symbol Name="\DPV\POBJ" Index="59" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacDPS_ZATVORENY]" />
+  <Symbol Name="\DPV\POBJ" Index="60" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacDPS_OTVORENY]" />
+  <Symbol Name="\DPV\POBJ" Index="61" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacOdpadu_ZATVORENY]" />
+  <Symbol Name="\DPV\POBJ" Index="62" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacOdpadu_OTVORENY]" />
+  <Symbol Name="\DPV\POBJ" Index="63" Type="DP" RefString="Source[global].Variable[DataSource.Hesla]" />
+  <Symbol Name="\DPV\POBJ" Index="64" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[1]]" />
+  <Symbol Name="\DPV\POBJ" Index="65" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[0]]" />
+  <Symbol Name="\DPV\POBJ" Index="66" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[2]]" />
+  <Symbol Name="\DPV\POBJ" Index="67" Type="DP" RefString="Source[global].Variable[DataSource.Alarmy]" />
+  <Symbol Name="\DPV\POBJ" Index="68" Type="DP" RefString="Source[global].Variable[DataSource.PotvrdenieAlarmov]" />
+  <Symbol Name="\DPV\POBJ" Index="69" Type="DP" RefString="Source[global].Variable[DataSource.ZobrazSymbolAlarmu]" />
+  <Symbol Name="\DPV\POBJ" Index="70" Type="DP" RefString="Source[global].Variable[DataSource.Blikac500ms]" />
+  <Symbol Name="\DPV\POBJ" Index="71" Type="DP" RefString="Source[global].Variable[DataSource.TP_ZobrazPopUpPrihlasenie]" />
+  <Symbol Name="\DPV\POBJ" Index="72" Type="DP" RefString="Source[global].Variable[DataSource.ZadaneMenoUzivatela]" />
+  <Symbol Name="\DPV\POBJ" Index="73" Type="DP" RefString="Source[global].Variable[DataSource.PrihlasUzivatela]" />
+  <Symbol Name="\DPV\POBJ" Index="74" Type="DP" RefString="Source[global].Variable[DataSource.ZadaneHesloUzivatela]" />
+  <Symbol Name="\DPV\POBJ" Index="75" Type="DP" RefString="Source[global].Variable[DataSource.OdhlasUzivatela]" />
+  <Symbol Name="\DPV\POBJ" Index="76" Type="DP" RefString="Source[global].Variable[DataSource.ZvolenaUroven]" />
+  <Symbol Name="\DPV\POBJ" Index="77" Type="DP" RefString="Source[global].Variable[Internal.Display.Brightness]" />
+  <Symbol Name="\DPV\POBJ" Index="78" Type="DP" RefString="Source[global].Variable[Internal.Display.Contrast]" />
+  <Symbol Name="\DPV\POBJ" Index="79" Type="DP" RefString="Source[global].Variable[Internal.Display.BackLight]" />
+  <Symbol Name="\DPV\POBJ" Index="80" Type="DP" RefString="Source[global].Variable[Internal.Connection.IPAddress]" />
+  <Symbol Name="\DPV\POBJ" Index="81" Type="DP" RefString="Source[global].Variable[Internal.Connection.NodeNumber]" />
+  <Symbol Name="\DPV\POBJ" Index="82" Type="DP" RefString="Source[global].Variable[Internal.Temperature.CPU]" />
+  <Symbol Name="\DPV\POBJ" Index="83" Type="DP" RefString="Source[global].Variable[Internal.Temperature.Room]" />
+  <Symbol Name="\DPV\POBJ" Index="84" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Day]" />
+  <Symbol Name="\DPV\POBJ" Index="85" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Hour]" />
+  <Symbol Name="\DPV\POBJ" Index="86" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Minute]" />
+  <Symbol Name="\DPV\POBJ" Index="87" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Month]" />
+  <Symbol Name="\DPV\POBJ" Index="88" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Second]" />
+  <Symbol Name="\DPV\POBJ" Index="89" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Year]" />
+  <Symbol Name="\DPV\POBJ" Index="90" Type="DP" RefString="Source[global].Variable[Internal.DateTime.DayOfWeek]" />
+  <Symbol Name="\DPV\POBJ" Index="91" Type="DP" RefString="Source[global].Variable[Internal.Memory.LargestFreeBlock]" />
+  <Symbol Name="\DPV\POBJ" Index="92" Type="DP" RefString="Source[global].Variable[Internal.Memory.TotalFree]" />
+  <Symbol Name="\DPV\POBJ" Index="93" Type="DP" RefString="Source[global].Variable[Internal.Memory.TotalInstalled]" />
   <Symbol Name="Source[global].UnitGroup[Length]" Index="3221225472" Type="UG" RefString="Source[global].UnitGroup[Length]" />
   <Symbol Name="Source[global].UnitGroup[Length].Unit[$OneToOne]" Index="3221225480" Type="UNIT" RefString="Source[global].UnitGroup[Length].Unit[$OneToOne]" />
   <Symbol Name="Source[global].UnitGroup[Mass]" Index="3221225473" Type="UG" RefString="Source[global].UnitGroup[Mass]" />
@@ -502,6 +500,8 @@
   <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="2" Type="GFX" RefString="Source[local].Bitmap[AutomatickyRezim32x32]" />
   <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="4" Type="GFX" RefString="Source[local].Bitmap[PozadieDesignMP_800x480]" />
   <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="6" Type="GFX" RefString="Source[local].Bitmap[PracoviskoVymenaRobota]" />
+  <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="9" Type="GFX" RefString="Source[local].Bitmap[Alarm_32x32]" />
+  <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="10" Type="GFX" RefString="Source[local].Bitmap[Alarm_40x40]" />
   <Symbol Name="\Projects\Visu\BorderManager\POBJ\BorderObjects" Index="0" Type="BRD" RefString="Source[local].Border[Button]" />
   <Symbol Name="\Projects\Visu\BorderManager\POBJ\BorderObjects" Index="1" Type="BRD" RefString="Source[local].Border[Button_Decrease]" />
   <Symbol Name="\Projects\Visu\BorderManager\POBJ\BorderObjects" Index="2" Type="BRD" RefString="Source[local].Border[Button_Decrease_pressed]" />
@@ -593,4 +593,5 @@
   <Symbol Name="Source[local].ColorMap[cervena_zelena]" Index="1073741826" Type="CLM" RefString="Source[local].ColorMap[cervena_zelena]" />
   <Symbol Name="Source[local].ColorMap[StavyZariadenia]" Index="1073741827" Type="CLM" RefString="Source[local].ColorMap[StavyZariadenia]" />
   <Symbol Name="Source[local].ColorMap[StavyPracoviska]" Index="1073741828" Type="CLM" RefString="Source[local].ColorMap[StavyPracoviska]" />
+  <Symbol Name="Source[local].ColorMap[TlacitkoAlarm]" Index="1073741829" Type="CLM" RefString="Source[local].ColorMap[TlacitkoAlarm]" />
 </SymbolTable>

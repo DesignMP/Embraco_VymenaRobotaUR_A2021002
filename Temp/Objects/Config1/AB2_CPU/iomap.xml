@@ -447,7 +447,7 @@
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput01" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput01" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Pracovisko.IN.PrepatovaOchrana_OK" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Zariadenie.IN.PrepatovaOchrana_OK" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput02" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput02" Kind="io"/>
@@ -562,11 +562,11 @@
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput01" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput01" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Pracovisko.IN.Paletka_PritomnostKusu_OS1" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Zariadenie.IN.Paletka_PritomnostKusu_OS1" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput02" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput02" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Pracovisko.IN.VystupDoprav_PritomnostKusu_OS2" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Zariadenie.IN.VystupDoprav_PritomnostKusu_OS2" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput03" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput03" Kind="io"/>
@@ -574,7 +574,7 @@
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput04" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput04" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Pracovisko.IN.Otacac_PritomnostKusu_IS2" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Zariadenie.IN.Otacac_PritomnostKusu_IS2" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput05" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput05" Kind="io"/>
@@ -701,19 +701,19 @@
 <Cons Device="IF6.ST4" DPName="DigitalOutput08" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput09" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="Pracovisko.OUT.Majak_ZeleneSvetlo" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="Zariadenie.OUT.Majak_ZeleneSvetlo" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput09" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput10" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="Pracovisko.OUT.Majak_ZlteSvetlo" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="Zariadenie.OUT.Majak_ZlteSvetlo" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput10" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput11" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="Pracovisko.OUT.Majak_CerveneSvetlo" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="Zariadenie.OUT.Majak_CerveneSvetlo" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput11" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput12" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="Pracovisko.OUT.Majak_Hukacka" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="Zariadenie.OUT.Majak_Hukacka" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput12" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput13" Type="BOOL">

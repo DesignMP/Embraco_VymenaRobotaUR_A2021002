@@ -23,6 +23,7 @@ export AS_VERSION := 4.7.5.60\ SP
 
 default: \
 	$(AS_CPU_PATH)/Visu.br \
+	vcPostBuild_Visu \
 
 
 

@@ -186,7 +186,7 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND Pracovisko.IN.Paletka_PritomnostKusu_OS1 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 0 AND Zariadenie.IN.Paletka_PritomnostKusu_OS1 THEN
                 Robot.KOM_OUT.Paletka_OdoberCap:= TRUE;
             END_IF
         
@@ -241,7 +241,7 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND NOT Pracovisko.IN.Otacac_PritomnostKusu_IS2 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 0 AND NOT Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
                 Robot.KOM_OUT.Otacac_PolozCap:= TRUE;
             END_IF
         
@@ -269,7 +269,7 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND Pracovisko.IN.Otacac_PritomnostKusu_IS2 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 0 AND Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
                 Robot.KOM_OUT.Otacac_OdoberCap:= TRUE;
             END_IF
         
@@ -322,7 +322,7 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND Pracovisko.IN.Otacac_PritomnostKusu_IS2 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 0 AND Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
                 Robot.KOM_OUT.Bruska_OdoberCap:= TRUE;
             END_IF
         
@@ -348,7 +348,7 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND Pracovisko.IN.Otacac_PritomnostKusu_IS2 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 0 AND Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
                 Robot.KOM_OUT.Bruska_VlozCap:= TRUE;
             END_IF
         

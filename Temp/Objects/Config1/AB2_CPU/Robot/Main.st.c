@@ -191,7 +191,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Pracovisko.IN.Paletka_PritomnostKusu_OS1)){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Zariadenie.IN.Paletka_PritomnostKusu_OS1)){
 (Robot.KOM_OUT.Paletka_OdoberCap=1);
 }
 
@@ -246,7 +246,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&(Pracovisko.IN.Otacac_PritomnostKusu_IS2^1))){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&(Zariadenie.IN.Otacac_PritomnostKusu_IS2^1))){
 (Robot.KOM_OUT.Otacac_PolozCap=1);
 }
 
@@ -274,7 +274,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Pracovisko.IN.Otacac_PritomnostKusu_IS2)){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Zariadenie.IN.Otacac_PritomnostKusu_IS2)){
 (Robot.KOM_OUT.Otacac_OdoberCap=1);
 }
 
@@ -327,7 +327,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Pracovisko.IN.Otacac_PritomnostKusu_IS2)){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Zariadenie.IN.Otacac_PritomnostKusu_IS2)){
 (Robot.KOM_OUT.Bruska_OdoberCap=1);
 }
 
@@ -353,7 +353,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Pracovisko.IN.Otacac_PritomnostKusu_IS2)){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Zariadenie.IN.Otacac_PritomnostKusu_IS2)){
 (Robot.KOM_OUT.Bruska_VlozCap=1);
 }
 

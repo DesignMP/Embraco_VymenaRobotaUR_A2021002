@@ -32,7 +32,7 @@
             <Group Name="StatusDatapoint">
               <UInt16 Name="Offset">16</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]</Reference>
+              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]</Reference>
             </Group>
             <Group Name="End Marker">
               <UInt16 Name="Offset">65535</UInt16>
@@ -116,7 +116,7 @@
             <Group Name="StatusDatapoint">
               <UInt16 Name="Offset">80</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]</Reference>
+              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]</Reference>
             </Group>
             <Group Name="TextSource">
               <UInt16 Name="Offset">97</UInt16>
@@ -225,7 +225,7 @@
             <Group Name="StatusDatapoint">
               <UInt16 Name="Offset">80</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]</Reference>
+              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]</Reference>
             </Group>
             <Group Name="TextSource">
               <UInt16 Name="Offset">97</UInt16>
@@ -270,7 +270,7 @@
             <Group Name="StatusDatapoint">
               <UInt16 Name="Offset">4</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]</Reference>
+              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]</Reference>
             </Group>
             <Group Name="AlignmentHorizontal">
               <UInt16 Name="Offset">21</UInt16>
@@ -340,7 +340,7 @@
             <Group Name="StatusDatapoint">
               <UInt16 Name="Offset">20</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]</Reference>
+              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]</Reference>
             </Group>
             <Group Name="BitmapSource">
               <UInt16 Name="Offset">24</UInt16>
@@ -380,7 +380,7 @@
               <Double Name="SetValue">1</Double>
               <Double Name="ResetValue">0</Double>
               <Double Name="CompletionValue">0</Double>
-              <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]</Reference>
+              <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]</Reference>
               <UInt32 Name="CompletionDatapoint">4294967295</UInt32>
               <Byte Name="Mode">0</Byte>
               <Byte Name="Reserved">0</Byte>

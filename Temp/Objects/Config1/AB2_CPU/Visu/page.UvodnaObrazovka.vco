@@ -10,7 +10,7 @@
             <UInt32 Name="Top">383</UInt32>
             <UInt32 Name="Right">772</UInt32>
             <UInt32 Name="Bottom">419</UInt32>
-            <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Vizualizacia.Slider]</Reference>
+            <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Vizu.Slider]</Reference>
             <UInt32 Name="Reserved">4294967295</UInt32>
             <Double Name="StartValue">0</Double>
             <Double Name="EndValue">30</Double>

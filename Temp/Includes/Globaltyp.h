@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615804928_1_
-#define _BUR_1615804928_1_
+#ifndef _BUR_1615818427_1_
+#define _BUR_1615818427_1_
 
 #include <bur/plctypes.h>
 
@@ -62,47 +62,53 @@ typedef struct Vizu_typ
 	unsigned char StavPracoviskaBrusky_Index;
 	unsigned char StavZariadenia_Farba;
 	unsigned char StavZariadenia_Index;
-	unsigned char TL_RezimManual_ENABLE;
+	plcbit TL_RezimManual_DISABLE;
+	plcbit TL_StartAutomat_DISABLE;
+	plcbit TL_UkoncenieCyklu_DISABLE;
+	unsigned char Slider;
+	plcbit FarbaTlacitkaAlarm_Index;
+	plcbit ZobrazSymbolAlarmu;
+	unsigned char ZobrazHlasenie_ResetZariadenia;
 } Vizu_typ;
 
-typedef struct PracoviskoIN_typ
+typedef struct ZariadenieIN_typ
 {	plcbit PrepatovaOchrana_OK;
 	plcbit Paletka_PritomnostKusu_OS1;
 	plcbit VystupDoprav_PritomnostKusu_OS2;
 	plcbit Otacac_PritomnostKusu_IS2;
-} PracoviskoIN_typ;
+} ZariadenieIN_typ;
 
-typedef struct PracoviskoOUT_typ
+typedef struct ZariadenieOUT_typ
 {	plcbit Majak_ZeleneSvetlo;
 	plcbit Majak_ZlteSvetlo;
 	plcbit Majak_CerveneSvetlo;
 	plcbit Majak_Hukacka;
-} PracoviskoOUT_typ;
+} ZariadenieOUT_typ;
 
-typedef struct PracoviskoPAR_typ
+typedef struct ZariadeniePAR_typ
 {	unsigned char New_Member;
-} PracoviskoPAR_typ;
+} ZariadeniePAR_typ;
 
-typedef struct PracoviskoSTAV_typ
+typedef struct ZariadenieSTAV_typ
 {	plcbit Automat;
 	plcbit Manual;
 	plcbit PoINIT;
 	plcbit READY_TO_START;
 	plcbit UkoncenieCyklu_BUSY;
 	plcbit Hardware_OK;
-} PracoviskoSTAV_typ;
+} ZariadenieSTAV_typ;
 
-typedef struct Pracovisko_typ
-{	struct PracoviskoIN_typ IN;
-	struct PracoviskoOUT_typ OUT;
-	struct PracoviskoPAR_typ PAR;
-	struct PracoviskoSTAV_typ STAV;
+typedef struct Zariadenie_typ
+{	struct ZariadenieIN_typ IN;
+	struct ZariadenieOUT_typ OUT;
+	struct ZariadeniePAR_typ PAR;
+	struct ZariadenieSTAV_typ STAV;
 	plcbit Automat;
 	plcbit Manual;
 	plcbit Reset;
 	plcbit KoniecCyklu;
 	plcbit Majak_HukackaON;
-} Pracovisko_typ;
+} Zariadenie_typ;
 
 typedef struct RobotIN_typ
 {	plcbit ManipulUchopovac_Otvoreny_MS2;
@@ -261,5 +267,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1615804928_1_ */
+#endif /* _BUR_1615818427_1_ */
 

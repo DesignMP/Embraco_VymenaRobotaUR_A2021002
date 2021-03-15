@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615804928_2_
-#define _BUR_1615804928_2_
+#ifndef _BUR_1615817892_2_
+#define _BUR_1615817892_2_
 
 #include <bur/plctypes.h>
 
@@ -16,7 +16,6 @@
 _GLOBAL plcbit PoruchaRobota;
 _GLOBAL plcbit PoruchaBrusky;
 _GLOBAL plcbit PotvrdenieAlarmov;
-_GLOBAL plcbit ZobrazSymbolAlarmu;
 _GLOBAL plcbit NastalaPorucha;
 _GLOBAL plcbit Alarmy[101];
 _GLOBAL struct Bruska_typ Bruska;
@@ -24,7 +23,7 @@ _GLOBAL struct SequenceControlTyp SC_Bruska;
 _GLOBAL struct Robot_typ Robot;
 _GLOBAL struct SequenceControlTyp SC_Robot;
 _GLOBAL struct HardwareSTAV_typ StavHardware;
-_GLOBAL struct Pracovisko_typ Pracovisko;
+_GLOBAL struct Zariadenie_typ Zariadenie;
 _GLOBAL struct Safety_typ Safety;
 _GLOBAL struct Vizu_typ Vizu;
 _GLOBAL plcbit NacitajPremenne;
@@ -56,5 +55,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.fun\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1615804928_2_ */
+#endif /* _BUR_1615817892_2_ */
 

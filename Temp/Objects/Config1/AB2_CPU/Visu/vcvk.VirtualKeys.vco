@@ -3004,7 +3004,7 @@
           <Double Name="SetValue">1</Double>
           <Double Name="ResetValue">0</Double>
           <Double Name="CompletionValue">0</Double>
-          <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]</Reference>
+          <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]</Reference>
           <UInt32 Name="CompletionDatapoint">4294967295</UInt32>
           <Byte Name="Mode">0</Byte>
           <Byte Name="Reserved">0</Byte>
@@ -3030,7 +3030,7 @@
           <Double Name="SetValue">1</Double>
           <Double Name="ResetValue">0</Double>
           <Double Name="CompletionValue">0</Double>
-          <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Pracovisko.Manual]</Reference>
+          <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Zariadenie.Manual]</Reference>
           <UInt32 Name="CompletionDatapoint">4294967295</UInt32>
           <Byte Name="Mode">0</Byte>
           <Byte Name="Reserved">0</Byte>

@@ -13,7 +13,7 @@
         <Byte Name="BackColor">11</Byte>
         <UInt16 Name="Index">2</UInt16>
         <Byte Name="ForeColor">0</Byte>
-        <Byte Name="BackColor">221</Byte>
+        <Byte Name="BackColor">10</Byte>
         <UInt16 Name="Index">3</UInt16>
         <Byte Name="ForeColor">0</Byte>
         <Byte Name="BackColor">51</Byte>

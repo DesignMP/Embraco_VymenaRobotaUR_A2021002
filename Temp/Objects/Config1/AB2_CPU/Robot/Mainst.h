@@ -123,58 +123,58 @@ typedef struct Safety_typ
 } Safety_typ;
 #endif
 
-#ifndef __AS__TYPE_PracoviskoIN_typ
-#define __AS__TYPE_PracoviskoIN_typ
-typedef struct PracoviskoIN_typ
+#ifndef __AS__TYPE_ZariadenieIN_typ
+#define __AS__TYPE_ZariadenieIN_typ
+typedef struct ZariadenieIN_typ
 {	plcbit PrepatovaOchrana_OK;
 	plcbit Paletka_PritomnostKusu_OS1;
 	plcbit VystupDoprav_PritomnostKusu_OS2;
 	plcbit Otacac_PritomnostKusu_IS2;
-} PracoviskoIN_typ;
+} ZariadenieIN_typ;
 #endif
 
-#ifndef __AS__TYPE_PracoviskoOUT_typ
-#define __AS__TYPE_PracoviskoOUT_typ
-typedef struct PracoviskoOUT_typ
+#ifndef __AS__TYPE_ZariadenieOUT_typ
+#define __AS__TYPE_ZariadenieOUT_typ
+typedef struct ZariadenieOUT_typ
 {	plcbit Majak_ZeleneSvetlo;
 	plcbit Majak_ZlteSvetlo;
 	plcbit Majak_CerveneSvetlo;
 	plcbit Majak_Hukacka;
-} PracoviskoOUT_typ;
+} ZariadenieOUT_typ;
 #endif
 
-#ifndef __AS__TYPE_PracoviskoPAR_typ
-#define __AS__TYPE_PracoviskoPAR_typ
-typedef struct PracoviskoPAR_typ
+#ifndef __AS__TYPE_ZariadeniePAR_typ
+#define __AS__TYPE_ZariadeniePAR_typ
+typedef struct ZariadeniePAR_typ
 {	unsigned char New_Member;
-} PracoviskoPAR_typ;
+} ZariadeniePAR_typ;
 #endif
 
-#ifndef __AS__TYPE_PracoviskoSTAV_typ
-#define __AS__TYPE_PracoviskoSTAV_typ
-typedef struct PracoviskoSTAV_typ
+#ifndef __AS__TYPE_ZariadenieSTAV_typ
+#define __AS__TYPE_ZariadenieSTAV_typ
+typedef struct ZariadenieSTAV_typ
 {	plcbit Automat;
 	plcbit Manual;
 	plcbit PoINIT;
 	plcbit READY_TO_START;
 	plcbit UkoncenieCyklu_BUSY;
 	plcbit Hardware_OK;
-} PracoviskoSTAV_typ;
+} ZariadenieSTAV_typ;
 #endif
 
-#ifndef __AS__TYPE_Pracovisko_typ
-#define __AS__TYPE_Pracovisko_typ
-typedef struct Pracovisko_typ
-{	PracoviskoIN_typ IN;
-	PracoviskoOUT_typ OUT;
-	PracoviskoPAR_typ PAR;
-	PracoviskoSTAV_typ STAV;
+#ifndef __AS__TYPE_Zariadenie_typ
+#define __AS__TYPE_Zariadenie_typ
+typedef struct Zariadenie_typ
+{	ZariadenieIN_typ IN;
+	ZariadenieOUT_typ OUT;
+	ZariadeniePAR_typ PAR;
+	ZariadenieSTAV_typ STAV;
 	plcbit Automat;
 	plcbit Manual;
 	plcbit Reset;
 	plcbit KoniecCyklu;
 	plcbit Majak_HukackaON;
-} Pracovisko_typ;
+} Zariadenie_typ;
 #endif
 
 #ifndef __AS__TYPE_RobotIN_typ
@@ -306,7 +306,7 @@ typedef struct SequenceControlTyp
 
 _BUR_PUBLIC plcbit SequenceControl(struct SequenceControlTyp(* SC));
 _GLOBAL Safety_typ Safety;
-_GLOBAL Pracovisko_typ Pracovisko;
+_GLOBAL Zariadenie_typ Zariadenie;
 _GLOBAL SequenceControlTyp SC_Robot;
 _GLOBAL Robot_typ Robot;
 _GLOBAL plcbit PoruchaRobota;

@@ -5,21 +5,61 @@
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
 void __BUR__ENTRY_INIT_FUNCT__(void){{
 
+(Vizu.ZobrazHlasenie_ResetZariadenia=1);
 
 }}
-#line 5 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
-#line 7 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
+#line 6 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 8 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
 void _CYCLIC __BUR__ENTRY_CYCLIC_FUNCT__(void){{
 
 
-}}
-#line 10 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
-#line 12 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
+if((Safety.STAV.SafetyPLC_Nabehlo^1)){
+(Vizu.CisloZadanejObrazovky=0);
+if(((((unsigned long)(unsigned char)Blikac500ms==(unsigned long)(unsigned char)1))&~Edge0000100000&1?((Edge0000100000=(((unsigned long)(unsigned char)Blikac500ms==(unsigned long)(unsigned char)1))&1),1):((Edge0000100000=(((unsigned long)(unsigned char)Blikac500ms==(unsigned long)(unsigned char)1))&1),0))){
+if((((unsigned long)(unsigned char)Vizu.Slider<(unsigned long)(unsigned char)30))){
+(Vizu.Slider=(Vizu.Slider+1));
+}else{
+(Vizu.Slider=0);
+}
+}
+}
+
+
+if(((((unsigned long)(unsigned char)Safety.STAV.SafetyPLC_Nabehlo==(unsigned long)(unsigned char)1))&~Edge0000100001&1?((Edge0000100001=(((unsigned long)(unsigned char)Safety.STAV.SafetyPLC_Nabehlo==(unsigned long)(unsigned char)1))&1),1):((Edge0000100001=(((unsigned long)(unsigned char)Safety.STAV.SafetyPLC_Nabehlo==(unsigned long)(unsigned char)1))&1),0))){
+(Vizu.CisloZadanejObrazovky=2);
+}
+
+
+
+
+if(Zariadenie.STAV.Automat){
+(Vizu.TL_RezimManual_DISABLE=1);
+}else{
+(Vizu.TL_RezimManual_DISABLE=1);
+}
+
+
+
+(Vizu.TL_StartAutomat_DISABLE=0);
+
+
+if(Zariadenie.STAV.PoINIT){
+(Vizu.TL_UkoncenieCyklu_DISABLE=0);
+}else{
+(Vizu.TL_UkoncenieCyklu_DISABLE=1);
+}
+
+
+
+
+}imp1_end5_0:;}
+#line 50 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 52 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 15 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 55 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
@@ -101,4 +141,5 @@ __asm__(".ascii \"iecfile \\\"Logical/HMI/OvladanieVizu/Types.typ\\\" scope \\\"
 __asm__(".ascii \"iecfile \\\"Logical/HMI/OvladanieVizu/Variables.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/OvladanieV/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"plcreplace \\\"D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/OvladanieV/Main.st.c\\\" \\\"D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Temp/Objects/Config1/AB2_CPU/OvladanieV/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".previous");

@@ -1852,7 +1852,7 @@
         <Property Name="Locking" Value="Never"/>
         <Property Name="Name" Value="Action_1"/>
         <Property Name="SetValue" Value="1"/>
-        <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]"/>
+        <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
       </KeyAction>
     </KeyActions>
   </VirtualKey>
@@ -1867,7 +1867,7 @@
         <Property Name="Locking" Value="Never"/>
         <Property Name="Name" Value="Action_0"/>
         <Property Name="SetValue" Value="1"/>
-        <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Pracovisko.Manual]"/>
+        <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Zariadenie.Manual]"/>
       </KeyAction>
       <KeyAction ClassId="0x00000160">
         <Property Name="Description" Value=""/>

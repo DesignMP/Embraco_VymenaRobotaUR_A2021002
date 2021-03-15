@@ -94,7 +94,7 @@
       <Property Name="TextIndexDatapoint" Value="None"/>
       <Property Name="TextSimulationValue" Value="0"/>
       <Property Name="TextSource" Value="SingleText"/>
-      <Property Name="Top" Value="9"/>
+      <Property Name="Top" Value="8"/>
       <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_69]"/>
       <Property Name="Width" Value="125"/>
     </Control>
@@ -163,18 +163,21 @@
       <Property Name="Width" Value="221"/>
     </Control>
     <Control ClassId="0x00001002" Name="Button_6">
-      <Property Name="BackColor" Value="8"/>
+      <Property Name="BackColor" Value="7"/>
       <Property Name="Bitmap" Value="Source[local].Bitmap[zvoncek_biely32x32]"/>
       <Property Name="BitmapAlignmentHorizontal" Value="Left of Text"/>
       <Property Name="BitmapIndexDatapoint" Value="None"/>
       <Property Name="BitmapSource" Value="SingleBitmap"/>
-      <Property Name="Border" Value="Source[local].Border[FrameInvisible]"/>
+      <Property Name="Border" Value="Source[local].Border[Flat_grey]"/>
+      <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.Vizu.FarbaTlacitkaAlarm_Index]"/>
+      <Property Name="ColorMap" Value="Source[local].ColorMap[TlacitkoAlarm]"/>
+      <Property Name="ColorMapIndexOffset" Value="0"/>
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_75]"/>
       <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
       <Property Name="ForeColor" Value="0"/>
-      <Property Name="Height" Value="50"/>
+      <Property Name="Height" Value="42"/>
       <Property Name="KeyMatrixOffset" Value="None"/>
       <Property Name="Left" Value="402"/>
       <Property Name="PressedBackColor" Value="0"/>
@@ -188,7 +191,7 @@
       <Property Name="TextIndexDatapoint" Value="None"/>
       <Property Name="TextSimulationValue" Value="0"/>
       <Property Name="TextSource" Value="SingleText"/>
-      <Property Name="Top" Value="429"/>
+      <Property Name="Top" Value="433"/>
       <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_75]"/>
       <Property Name="Width" Value="130"/>
     </Control>
@@ -299,7 +302,7 @@
       <Property Name="KeyMatrixOffset" Value="None"/>
       <Property Name="Left" Value="134"/>
       <Property Name="Locking" Value="Datapoint &gt;= Level"/>
-      <Property Name="LockingDatapoint" Value="Source[global].Variable[DataSource.Vizu.TL_RezimManual_ENABLE]"/>
+      <Property Name="LockingDatapoint" Value="Source[global].Variable[DataSource.Vizu.TL_RezimManual_DISABLE]"/>
       <Property Name="LockingLevel" Value="1"/>
       <Property Name="Multiline" Value="Automatic"/>
       <Property Name="PressedBackColor" Value="0"/>
@@ -347,21 +350,23 @@
       <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_91]"/>
       <Property Name="Width" Value="130"/>
     </Control>
+    <Control ClassId="0x00001005" Name="Bitmap_1">
+      <Property Name="BitmapGroup" Value="Source[local].BitmapGroup[SymbolAlarmu]"/>
+      <Property Name="BitmapIndex" Value="0"/>
+      <Property Name="BitmapSource" Value="MultipleBitmaps"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="FillStyle" Value="Transparent"/>
+      <Property Name="Height" Value="48"/>
+      <Property Name="IndexDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazSymbolAlarmu]"/>
+      <Property Name="Left" Value="505"/>
+      <Property Name="SimulationValue" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="Top" Value="7"/>
+      <Property Name="Width" Value="48"/>
+    </Control>
   </Controls>
   <KeyMapping>
-    <VirtualKey Name="%embVirtualKey_75">
-      <Property Name="Description" Value=""/>
-      <Property Name="VirtualKey_LED" Value="False"/>
-      <KeyActions>
-        <KeyAction ClassId="0x00000160">
-          <Property Name="Description" Value=""/>
-          <Property Name="Locking" Value="Never"/>
-          <Property Name="Name" Value="Action_0"/>
-          <Property Name="Page" Value="Source[local].Page[ObrazovkaAlarmov]"/>
-          <Property Name="Target" Value="Page"/>
-        </KeyAction>
-      </KeyActions>
-    </VirtualKey>
     <VirtualKey Name="%embVirtualKey_69">
       <Property Name="Description" Value=""/>
       <Property Name="VirtualKey_LED" Value="False"/>
@@ -406,7 +411,7 @@
         </KeyAction>
       </KeyActions>
     </VirtualKey>
-    <VirtualKey Name="%embVirtualKey_89">
+    <VirtualKey Name="%embVirtualKey_75">
       <Property Name="Description" Value=""/>
       <Property Name="VirtualKey_LED" Value="False"/>
       <KeyActions>
@@ -414,7 +419,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="Locking" Value="Never"/>
           <Property Name="Name" Value="Action_0"/>
-          <Property Name="Page" Value="None"/>
+          <Property Name="Page" Value="Source[local].Page[ObrazovkaAlarmov]"/>
           <Property Name="Target" Value="Page"/>
         </KeyAction>
       </KeyActions>
@@ -428,6 +433,19 @@
           <Property Name="Locking" Value="Never"/>
           <Property Name="Name" Value="Action_0"/>
           <Property Name="Page" Value="Source[local].Page[ObrazovkaInfo]"/>
+          <Property Name="Target" Value="Page"/>
+        </KeyAction>
+      </KeyActions>
+    </VirtualKey>
+    <VirtualKey Name="%embVirtualKey_89">
+      <Property Name="Description" Value=""/>
+      <Property Name="VirtualKey_LED" Value="False"/>
+      <KeyActions>
+        <KeyAction ClassId="0x00000160">
+          <Property Name="Description" Value=""/>
+          <Property Name="Locking" Value="Never"/>
+          <Property Name="Name" Value="Action_0"/>
+          <Property Name="Page" Value="None"/>
           <Property Name="Target" Value="Page"/>
         </KeyAction>
       </KeyActions>

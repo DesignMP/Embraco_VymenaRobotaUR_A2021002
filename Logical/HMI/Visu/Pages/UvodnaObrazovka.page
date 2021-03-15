@@ -58,7 +58,7 @@
           <Property Name="StartValue" Value="0"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="Top" Value="383"/>
-          <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.Slider]"/>
+          <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Vizu.Slider]"/>
           <Property Name="Width" Value="752"/>
         </Control>
       </Controls>

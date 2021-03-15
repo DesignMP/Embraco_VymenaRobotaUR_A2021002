@@ -52,9 +52,9 @@
           </Object>
           <Object Name="Button_2" ClsId="0x1002" Version="1" Type="CTRL" RefString="Source[local].Layer[Background].Control[Button_2]">
             <UInt32 Name="Left">8</UInt32>
-            <UInt32 Name="Top">9</UInt32>
+            <UInt32 Name="Top">8</UInt32>
             <UInt32 Name="Right">132</UInt32>
-            <UInt32 Name="Bottom">51</UInt32>
+            <UInt32 Name="Bottom">50</UInt32>
             <UInt16 Name="KeyMatrixOffset">65535</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
             <Reference Name="VirtualKey" Type="VKEY">Source[local].VirtualKey[%embVirtualKey_69]</Reference>
@@ -343,9 +343,9 @@
           </Object>
           <Object Name="Button_6" ClsId="0x1002" Version="1" Type="CTRL" RefString="Source[local].Layer[Background].Control[Button_6]">
             <UInt32 Name="Left">402</UInt32>
-            <UInt32 Name="Top">429</UInt32>
+            <UInt32 Name="Top">433</UInt32>
             <UInt32 Name="Right">531</UInt32>
-            <UInt32 Name="Bottom">478</UInt32>
+            <UInt32 Name="Bottom">474</UInt32>
             <UInt16 Name="KeyMatrixOffset">65535</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
             <Reference Name="VirtualKey" Type="VKEY">Source[local].VirtualKey[%embVirtualKey_75]</Reference>
@@ -353,7 +353,7 @@
             <UInt32 Name="Script1">4294967295</UInt32>
             <UInt32 Name="Script2">4294967295</UInt32>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001002].StyleClass[Default]</Reference>
-            <UInt16 Name="StyleTableSize">145</UInt16>
+            <UInt16 Name="StyleTableSize">169</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
             <Group Name="PressedBorder">
               <UInt16 Name="Offset">0</UInt16>
@@ -363,7 +363,7 @@
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[FrameInvisible]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Flat_grey]</Reference>
             </Group>
             <Group Name="BitmapAlignmentHorizontal">
               <UInt16 Name="Offset">10</UInt16>
@@ -378,7 +378,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">28</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">8</UInt32>
+              <UInt32 Name="Data">7</UInt32>
             </Group>
             <Group Name="PressedForeColor">
               <UInt16 Name="Offset">32</UInt16>
@@ -430,6 +430,11 @@
               <UInt16 Name="Size">4</UInt16>
               <Reference Name="Data" Type="GFX">Source[local].Bitmap[zvoncek_biely32x32]</Reference>
             </Group>
+            <Group Name="ColorDatapoint">
+              <UInt16 Name="Offset">84</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.FarbaTlacitkaAlarm_Index]</Reference>
+            </Group>
             <Group Name="TextSource">
               <UInt16 Name="Offset">97</UInt16>
               <UInt16 Name="Size">1</UInt16>
@@ -454,6 +459,16 @@
               <UInt16 Name="Offset">104</UInt16>
               <UInt16 Name="Size">4</UInt16>
               <UInt32 Name="Data">4294967295</UInt32>
+            </Group>
+            <Group Name="ColorMap">
+              <UInt16 Name="Offset">112</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="CLM">Source[local].ColorMap[TlacitkoAlarm]</Reference>
+            </Group>
+            <Group Name="ColorMapIndexOffset">
+              <UInt16 Name="Offset">116</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="End Marker">
               <UInt16 Name="Offset">65535</UInt16>
@@ -864,7 +879,7 @@
             <Group Name="LockingDatapoint">
               <UInt16 Name="Offset">16</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.TL_RezimManual_ENABLE]</Reference>
+              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.TL_RezimManual_DISABLE]</Reference>
             </Group>
             <Group Name="LockingLevel">
               <UInt16 Name="Offset">20</UInt16>
@@ -1080,31 +1095,45 @@
               <UInt16 Name="Size">0</UInt16>
             </Group>
           </Object>
+          <Object Name="Bitmap_1" ClsId="0x1005" Version="1" Type="CTRL" RefString="Source[local].Layer[Background].Control[Bitmap_1]">
+            <UInt32 Name="Left">505</UInt32>
+            <UInt32 Name="Top">7</UInt32>
+            <UInt32 Name="Right">552</UInt32>
+            <UInt32 Name="Bottom">54</UInt32>
+            <Reference Name="IndexDatapoint" Type="DP">Source[global].Variable[DataSource.Vizu.ZobrazSymbolAlarmu]</Reference>
+            <UInt32 Name="ControlID">0</UInt32>
+            <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001005].StyleClass[Default]</Reference>
+            <UInt16 Name="StyleTableSize">30</UInt16>
+            <UInt16 Name="Reserved">0</UInt16>
+            <Group Name="FillStyle">
+              <UInt16 Name="Offset">4</UInt16>
+              <UInt16 Name="Size">1</UInt16>
+              <Byte Name="Data">1</Byte>
+            </Group>
+            <Group Name="BitmapSource">
+              <UInt16 Name="Offset">24</UInt16>
+              <UInt16 Name="Size">1</UInt16>
+              <Byte Name="Data">1</Byte>
+            </Group>
+            <Group Name="BitmapIndex">
+              <UInt16 Name="Offset">28</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Int32 Name="Data">0</Int32>
+            </Group>
+            <Group Name="BitmapGroup">
+              <UInt16 Name="Offset">32</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="BMPG">Source[local].BitmapGroup[SymbolAlarmu]</Reference>
+            </Group>
+            <Group Name="End Marker">
+              <UInt16 Name="Offset">65535</UInt16>
+              <UInt16 Name="Size">0</UInt16>
+            </Group>
+          </Object>
         </Folder>
       </Folder>
       <Folder Name="VKeys">
         <Folder Name="Common" TargetIndex="4294967294">
-          <Object Name="%embVirtualKey_75" ClsId="0x0" Version="1" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_75]">
-            <Group Name="LedMapping">
-              <UInt32 Name="Datapoint">4294967295</UInt32>
-              <Byte Name="Mode">0</Byte>
-              <Byte Name="Active">0</Byte>
-              <UInt16 Name="Reserved">0</UInt16>
-            </Group>
-            <Group Name="KeyMapping">
-              <UInt32 Name="KeyActionCount">1</UInt32>
-              <UInt32 Name="ActionID">352</UInt32>
-              <UInt32 Name="ActionDataSize">8</UInt32>
-              <Byte Name="Locking">0</Byte>
-              <Byte Name="Reserved">0</Byte>
-              <UInt16 Name="Reserved">0</UInt16>
-              <UInt32 Name="LockingDatapoint">4294967295</UInt32>
-              <UInt32 Name="LockingLevel">0</UInt32>
-              <Reference Name="Page" Type="PAGE">Source[local].Page[ObrazovkaAlarmov]</Reference>
-              <UInt16 Name="Target">2</UInt16>
-              <UInt16 Name="Reserved">0</UInt16>
-            </Group>
-          </Object>
           <Object Name="%embVirtualKey_69" ClsId="0x0" Version="1" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_69]">
             <Group Name="LedMapping">
               <UInt32 Name="Datapoint">4294967295</UInt32>
@@ -1178,7 +1207,7 @@
               <UInt16 Name="Reserved">0</UInt16>
             </Group>
           </Object>
-          <Object Name="%embVirtualKey_89" ClsId="0x0" Version="1" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_89]">
+          <Object Name="%embVirtualKey_75" ClsId="0x0" Version="1" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_75]">
             <Group Name="LedMapping">
               <UInt32 Name="Datapoint">4294967295</UInt32>
               <Byte Name="Mode">0</Byte>
@@ -1194,7 +1223,7 @@
               <UInt16 Name="Reserved">0</UInt16>
               <UInt32 Name="LockingDatapoint">4294967295</UInt32>
               <UInt32 Name="LockingLevel">0</UInt32>
-              <UInt32 Name="Page">4294967295</UInt32>
+              <Reference Name="Page" Type="PAGE">Source[local].Page[ObrazovkaAlarmov]</Reference>
               <UInt16 Name="Target">2</UInt16>
               <UInt16 Name="Reserved">0</UInt16>
             </Group>
@@ -1216,6 +1245,27 @@
               <UInt32 Name="LockingDatapoint">4294967295</UInt32>
               <UInt32 Name="LockingLevel">0</UInt32>
               <Reference Name="Page" Type="PAGE">Source[local].Page[ObrazovkaInfo]</Reference>
+              <UInt16 Name="Target">2</UInt16>
+              <UInt16 Name="Reserved">0</UInt16>
+            </Group>
+          </Object>
+          <Object Name="%embVirtualKey_89" ClsId="0x0" Version="1" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_89]">
+            <Group Name="LedMapping">
+              <UInt32 Name="Datapoint">4294967295</UInt32>
+              <Byte Name="Mode">0</Byte>
+              <Byte Name="Active">0</Byte>
+              <UInt16 Name="Reserved">0</UInt16>
+            </Group>
+            <Group Name="KeyMapping">
+              <UInt32 Name="KeyActionCount">1</UInt32>
+              <UInt32 Name="ActionID">352</UInt32>
+              <UInt32 Name="ActionDataSize">8</UInt32>
+              <Byte Name="Locking">0</Byte>
+              <Byte Name="Reserved">0</Byte>
+              <UInt16 Name="Reserved">0</UInt16>
+              <UInt32 Name="LockingDatapoint">4294967295</UInt32>
+              <UInt32 Name="LockingLevel">0</UInt32>
+              <UInt32 Name="Page">4294967295</UInt32>
               <UInt16 Name="Target">2</UInt16>
               <UInt16 Name="Reserved">0</UInt16>
             </Group>
@@ -1246,7 +1296,7 @@
       <Folder Name="POBJ">
         <Object Name="Background" ClsId="0x401" Version="1" Type="LAY" RefString="Source[local].Layer[Background]">
           <Reference Name="StatusDP" Type="DP">None</Reference>
-          <UInt32 Name="CtrlCount">12</UInt32>
+          <UInt32 Name="CtrlCount">13</UInt32>
           <Reference Name="Text_2" Type="CTRL">Source[local].Layer[Background].Control[Text_2]</Reference>
           <Reference Name="Button_2" Type="CTRL">Source[local].Layer[Background].Control[Button_2]</Reference>
           <Reference Name="Text_3" Type="CTRL">Source[local].Layer[Background].Control[Text_3]</Reference>
@@ -1259,6 +1309,7 @@
           <Reference Name="Button_9" Type="CTRL">Source[local].Layer[Background].Control[Button_9]</Reference>
           <Reference Name="Button_11" Type="CTRL">Source[local].Layer[Background].Control[Button_11]</Reference>
           <Reference Name="Button_5" Type="CTRL">Source[local].Layer[Background].Control[Button_5]</Reference>
+          <Reference Name="Bitmap_1" Type="CTRL">Source[local].Layer[Background].Control[Bitmap_1]</Reference>
         </Object>
       </Folder>
     </Folder>

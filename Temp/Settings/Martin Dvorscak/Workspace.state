@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.7.5.60 SP?>
 <State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
-  <TreeView ID="AB6_16DI-Config1-AB2_CPU" EditColumn="0" TopRow="0" HorizontalScrollOffset="0" SortedColumn="0">
+  <TreeView ID="AB7_16DO-Config1-AB2_CPU" EditColumn="0" TopRow="0" HorizontalScrollOffset="0" SortedColumn="0">
     <Columns>
       <Column Index="0" Width="0" Position="0" />
       <Column Index="1" Width="0" Position="1" />
@@ -27,30 +27,10 @@
     </SelectedNodes>
     <ZoomIndices />
   </TreeView>
-  <TextEdit ID="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\Main.st" CaretLine="33" CaretColumn="2" FirstVisibleLine="22">
+  <TextEdit ID="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Main\Main.st" CaretLine="152" CaretColumn="19" FirstVisibleLine="120">
     <Bookmarks />
   </TextEdit>
-  <TextEdit ID="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Main\Main.st" CaretLine="1" CaretColumn="1" FirstVisibleLine="58">
+  <TextEdit ID="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\OvladanieVizu\Main.st" CaretLine="4" CaretColumn="45" FirstVisibleLine="1">
     <Bookmarks />
   </TextEdit>
-  <TreeView ID="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.var" EditColumn="1" TopRow="2" HorizontalScrollOffset="0" SortedColumn="0">
-    <Columns>
-      <Column Index="0" Width="200" Position="0" />
-      <Column Index="1" Width="205" Position="1" />
-      <Column Index="2" Width="0" Position="2" />
-      <Column Index="3" Width="98" Position="3" />
-      <Column Index="4" Width="72" Position="4" />
-      <Column Index="5" Width="112" Position="5" />
-      <Column Index="6" Width="100" Position="6" />
-      <Column Index="7" Width="200" Position="7" />
-      <Column Index="8" Width="0" Position="8" />
-      <Column Index="9" Width="0" Position="9" />
-      <Column Index="10" Width="0" Position="10" />
-    </Columns>
-    <ExpandedNodes />
-    <SelectedNodes>
-      <SelectedNode Row="19" />
-    </SelectedNodes>
-    <ZoomIndices />
-  </TreeView>
 </State>

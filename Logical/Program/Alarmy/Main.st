@@ -30,11 +30,17 @@ PROGRAM _CYCLIC
     //********************************Zobrazenie symbolu alarmu*****************************************************//
 	
     IF NastalaPorucha THEN
-        ZobrazSymbolAlarmu:= Blikac500ms;
+        Vizu.ZobrazSymbolAlarmu:= Blikac500ms;
     ELSE
-        ZobrazSymbolAlarmu:= FALSE;
+        Vizu.ZobrazSymbolAlarmu:= FALSE;
     END_IF	
-    
+   
+    //*****************************Blikanie tlaèítka alarmy*************************************************//
+    IF NastalaPorucha THEN
+        Vizu.FarbaTlacitkaAlarm_Index:= Blikac500ms;
+    ELSE
+        Vizu.FarbaTlacitkaAlarm_Index:= FALSE;
+    END_IF
     
     //*************************************Potvrdenie alarmov*********************************************************//
     IF PotvrdenieAlarmov THEN
@@ -42,7 +48,7 @@ PROGRAM _CYCLIC
         NastalaPorucha:= FALSE;
         PoruchaBrusky:= FALSE;
         PoruchaRobota:= FALSE;
-        Pracovisko.Majak_HukackaON:= FALSE;
+        Zariadenie.Majak_HukackaON:= FALSE;
         IF Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ERROR AND Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ReadyToPower_ON THEN
             Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ErrorRESET:= TRUE;
         END_IF    
@@ -70,7 +76,7 @@ PROGRAM _CYCLIC
     CasResetovaniaServa();
     
     //*******************************Porucha prepatovej ochrany*********************************************************//
-    IF Safety.STAV.SafetyPLC_Nabehlo AND NOT Pracovisko.IN.PrepatovaOchrana_OK THEN
+    IF Safety.STAV.SafetyPLC_Nabehlo AND NOT Zariadenie.IN.PrepatovaOchrana_OK THEN
         Alarmy[0]:= TRUE;
     END_IF 
     
@@ -120,7 +126,7 @@ PROGRAM _CYCLIC
      END_IF    
     
     
-    IF Safety.STAV.ZonaCS_AKTIVNA AND NOT Pracovisko.STAV.Hardware_OK THEN
+    IF Safety.STAV.ZonaCS_AKTIVNA AND NOT Zariadenie.STAV.Hardware_OK THEN
         CasKontroly_KarietPLC.IN:= TRUE;
     ELSE
         CasKontroly_KarietPLC.IN:= FALSE;

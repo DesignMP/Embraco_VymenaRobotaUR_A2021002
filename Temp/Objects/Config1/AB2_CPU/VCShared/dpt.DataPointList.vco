@@ -11,99 +11,97 @@
       <Object Name="DataSource.Vizu.StavPracoviskaBrusky_Index" ClsId="0x0" Version="0" TargetIndex="5" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.StavPracoviskaBrusky_Index]" />
       <Object Name="DataSource.Vizu.TL_RezimAutomat" ClsId="0x0" Version="0" TargetIndex="6" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_RezimAutomat]" />
       <Object Name="DataSource.Vizu.TL_RezimManual_ENABLE" ClsId="0x0" Version="0" TargetIndex="7" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_RezimManual_ENABLE]" />
-      <Object Name="DataSource.Safety.RESET_ZonyCS" ClsId="0x0" Version="0" TargetIndex="8" Type="DP" RefString="Source[global].Variable[DataSource.Safety.RESET_ZonyCS]" />
-      <Object Name="DataSource.Vizualizacia.Zobraz_RobotNieje_v_Automate" ClsId="0x0" Version="0" TargetIndex="9" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_RobotNieje_v_Automate]" />
-      <Object Name="DataSource.Vizualizacia.Zobraz_UpozorneniePrazdZasobFrez" ClsId="0x0" Version="0" TargetIndex="10" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_UpozorneniePrazdZasobFrez]" />
-      <Object Name="DataSource.Vizualizacia.Zobraz_HlaseniePlnaDebnicka" ClsId="0x0" Version="0" TargetIndex="11" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlaseniePlnaDebnicka]" />
-      <Object Name="DataSource.Vizualizacia.Zobraz_ResetZariadenia" ClsId="0x0" Version="0" TargetIndex="12" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_ResetZariadenia]" />
-      <Object Name="DataSource.Vizualizacia.LED_TlacitkaResetCS" ClsId="0x0" Version="0" TargetIndex="13" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.LED_TlacitkaResetCS]" />
-      <Object Name="DataSource.Vizualizacia.Zobraz_VymenGriperRobota" ClsId="0x0" Version="0" TargetIndex="14" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_VymenGriperRobota]" />
-      <Object Name="DataSource.Vizualizacia.Zobraz_RobotNiejeVzoneBezpNavrat" ClsId="0x0" Version="0" TargetIndex="15" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_RobotNiejeVzoneBezpNavrat]" />
-      <Object Name="DataSource.Vizualizacia.Zobraz_HlasenieOdoberDPS" ClsId="0x0" Version="0" TargetIndex="16" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlasenieOdoberDPS]" />
-      <Object Name="DataSource.Vizualizacia.Zobraz_HlaseniePrazdnyZasobFrez" ClsId="0x0" Version="0" TargetIndex="17" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlaseniePrazdnyZasobFrez]" />
-      <Object Name="DataSource.Vizualizacia.Zobraz_HlasenieVlozDebnickuOdpad" ClsId="0x0" Version="0" TargetIndex="18" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlasenieVlozDebnickuOdpad]" />
-      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoRezimAutomat" ClsId="0x0" Version="0" TargetIndex="19" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoRezimAutomat]" />
-      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoRezimManual" ClsId="0x0" Version="0" TargetIndex="20" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoRezimManual]" />
-      <Object Name="DataSource.Vizualizacia.TP_ZamkniTlacitkoHOME" ClsId="0x0" Version="0" TargetIndex="21" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.TP_ZamkniTlacitkoHOME]" />
-      <Object Name="DataSource.Vizualizacia.Slider" ClsId="0x0" Version="0" TargetIndex="22" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Slider]" />
-      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoSTART" ClsId="0x0" Version="0" TargetIndex="23" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoSTART]" />
-      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoSTOP" ClsId="0x0" Version="0" TargetIndex="24" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoSTOP]" />
-      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoOdparkovanieRobota" ClsId="0x0" Version="0" TargetIndex="25" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoOdparkovanieRobota]" />
-      <Object Name="DataSource.Vizualizacia.Tlacitko_VymenFrezu" ClsId="0x0" Version="0" TargetIndex="26" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Tlacitko_VymenFrezu]" />
-      <Object Name="DataSource.Vizualizacia.ZamkniTlacitko_SpustenieFrezy" ClsId="0x0" Version="0" TargetIndex="27" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitko_SpustenieFrezy]" />
-      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoStartVysavaca" ClsId="0x0" Version="0" TargetIndex="28" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoStartVysavaca]" />
-      <Object Name="DataSource.Zariadenie.Reset" ClsId="0x0" Version="0" TargetIndex="29" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Reset]" />
-      <Object Name="DataSource.Zariadenie.OsvetlenieBunky" ClsId="0x0" Version="0" TargetIndex="30" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.OsvetlenieBunky]" />
-      <Object Name="DataSource.Zariadenie.Automat" ClsId="0x0" Version="0" TargetIndex="31" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Automat]" />
-      <Object Name="DataSource.Zariadenie.KoniecCyklu" ClsId="0x0" Version="0" TargetIndex="32" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.KoniecCyklu]" />
-      <Object Name="DataSource.Zariadenie.PriechodnyRezim" ClsId="0x0" Version="0" TargetIndex="33" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.PriechodnyRezim]" />
-      <Object Name="DataSource.Program.Robot.Frezu_ZAPNI" ClsId="0x0" Version="0" TargetIndex="34" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.Frezu_ZAPNI]" />
-      <Object Name="DataSource.Program.Robot.ZdvihSnimacov_ZASUN" ClsId="0x0" Version="0" TargetIndex="35" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_ZASUN]" />
-      <Object Name="DataSource.Program.Robot.ZdvihSnimacov_VYSUN" ClsId="0x0" Version="0" TargetIndex="36" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_VYSUN]" />
-      <Object Name="DataSource.Program.Robot.OtvorVretenoFrezy" ClsId="0x0" Version="0" TargetIndex="37" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.OtvorVretenoFrezy]" />
-      <Object Name="DataSource.Program.Robot.UchopovacDPS_ZATVOR" ClsId="0x0" Version="0" TargetIndex="38" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacDPS_ZATVOR]" />
-      <Object Name="DataSource.Program.Robot.UchopovacDPS_OTVOR" ClsId="0x0" Version="0" TargetIndex="39" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacDPS_OTVOR]" />
-      <Object Name="DataSource.Program.Robot.UchopovacOdpadu_ZATVOR" ClsId="0x0" Version="0" TargetIndex="40" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacOdpadu_ZATVOR]" />
-      <Object Name="DataSource.Program.Robot.UchopovacOdpadu_OTVOR" ClsId="0x0" Version="0" TargetIndex="41" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacOdpadu_OTVOR]" />
-      <Object Name="DataSource.Program.Robot.UchopovacFrezy_ZATVOR" ClsId="0x0" Version="0" TargetIndex="42" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacFrezy_ZATVOR]" />
-      <Object Name="DataSource.Program.Robot.UchopovacFrezy_OTVOR" ClsId="0x0" Version="0" TargetIndex="43" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacFrezy_OTVOR]" />
-      <Object Name="DataSource.Program.Robot.Vyhadzovac_ZASUN" ClsId="0x0" Version="0" TargetIndex="44" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.Vyhadzovac_ZASUN]" />
-      <Object Name="DataSource.Program.Robot.Vyhadzovac_VYSUN" ClsId="0x0" Version="0" TargetIndex="45" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.Vyhadzovac_VYSUN]" />
+      <Object Name="DataSource.Vizu.Slider" ClsId="0x0" Version="0" TargetIndex="8" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.Slider]" />
+      <Object Name="DataSource.Vizu.FarbaTlacitkaAlarm_Index" ClsId="0x0" Version="0" TargetIndex="9" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.FarbaTlacitkaAlarm_Index]" />
+      <Object Name="DataSource.Vizu.ZobrazSymbolAlarmu" ClsId="0x0" Version="0" TargetIndex="10" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.ZobrazSymbolAlarmu]" />
+      <Object Name="DataSource.Vizu.TL_RezimManual_DISABLE" ClsId="0x0" Version="0" TargetIndex="11" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_RezimManual_DISABLE]" />
+      <Object Name="DataSource.Vizu.TL_StartAutomat_DISABLE" ClsId="0x0" Version="0" TargetIndex="12" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_StartAutomat_DISABLE]" />
+      <Object Name="DataSource.Vizu.TL_UkoncenieCyklu_DISABLE" ClsId="0x0" Version="0" TargetIndex="13" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.TL_UkoncenieCyklu_DISABLE]" />
+      <Object Name="DataSource.Vizu.ZobrazHlasenie_ResetZariadenia" ClsId="0x0" Version="0" TargetIndex="14" Type="DP" RefString="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]" />
+      <Object Name="DataSource.Safety.RESET_ZonyCS" ClsId="0x0" Version="0" TargetIndex="15" Type="DP" RefString="Source[global].Variable[DataSource.Safety.RESET_ZonyCS]" />
+      <Object Name="DataSource.Vizualizacia.Zobraz_RobotNieje_v_Automate" ClsId="0x0" Version="0" TargetIndex="16" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_RobotNieje_v_Automate]" />
+      <Object Name="DataSource.Vizualizacia.Zobraz_UpozorneniePrazdZasobFrez" ClsId="0x0" Version="0" TargetIndex="17" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_UpozorneniePrazdZasobFrez]" />
+      <Object Name="DataSource.Vizualizacia.Zobraz_HlaseniePlnaDebnicka" ClsId="0x0" Version="0" TargetIndex="18" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlaseniePlnaDebnicka]" />
+      <Object Name="DataSource.Vizualizacia.LED_TlacitkaResetCS" ClsId="0x0" Version="0" TargetIndex="19" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.LED_TlacitkaResetCS]" />
+      <Object Name="DataSource.Vizualizacia.Zobraz_VymenGriperRobota" ClsId="0x0" Version="0" TargetIndex="20" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_VymenGriperRobota]" />
+      <Object Name="DataSource.Vizualizacia.Zobraz_RobotNiejeVzoneBezpNavrat" ClsId="0x0" Version="0" TargetIndex="21" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_RobotNiejeVzoneBezpNavrat]" />
+      <Object Name="DataSource.Vizualizacia.Zobraz_HlasenieOdoberDPS" ClsId="0x0" Version="0" TargetIndex="22" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlasenieOdoberDPS]" />
+      <Object Name="DataSource.Vizualizacia.Zobraz_HlaseniePrazdnyZasobFrez" ClsId="0x0" Version="0" TargetIndex="23" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlaseniePrazdnyZasobFrez]" />
+      <Object Name="DataSource.Vizualizacia.Zobraz_HlasenieVlozDebnickuOdpad" ClsId="0x0" Version="0" TargetIndex="24" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.Zobraz_HlasenieVlozDebnickuOdpad]" />
+      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoRezimAutomat" ClsId="0x0" Version="0" TargetIndex="25" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoRezimAutomat]" />
+      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoRezimManual" ClsId="0x0" Version="0" TargetIndex="26" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoRezimManual]" />
+      <Object Name="DataSource.Vizualizacia.TP_ZamkniTlacitkoHOME" ClsId="0x0" Version="0" TargetIndex="27" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.TP_ZamkniTlacitkoHOME]" />
+      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoOdparkovanieRobota" ClsId="0x0" Version="0" TargetIndex="28" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoOdparkovanieRobota]" />
+      <Object Name="DataSource.Vizualizacia.ZamkniTlacitko_SpustenieFrezy" ClsId="0x0" Version="0" TargetIndex="29" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitko_SpustenieFrezy]" />
+      <Object Name="DataSource.Vizualizacia.ZamkniTlacitkoStartVysavaca" ClsId="0x0" Version="0" TargetIndex="30" Type="DP" RefString="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoStartVysavaca]" />
+      <Object Name="DataSource.Zariadenie.Reset" ClsId="0x0" Version="0" TargetIndex="31" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Reset]" />
+      <Object Name="DataSource.Zariadenie.OsvetlenieBunky" ClsId="0x0" Version="0" TargetIndex="32" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.OsvetlenieBunky]" />
+      <Object Name="DataSource.Zariadenie.Automat" ClsId="0x0" Version="0" TargetIndex="33" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Automat]" />
+      <Object Name="DataSource.Zariadenie.Manual" ClsId="0x0" Version="0" TargetIndex="34" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.Manual]" />
+      <Object Name="DataSource.Zariadenie.KoniecCyklu" ClsId="0x0" Version="0" TargetIndex="35" Type="DP" RefString="Source[global].Variable[DataSource.Zariadenie.KoniecCyklu]" />
+      <Object Name="DataSource.Program.Robot.Frezu_ZAPNI" ClsId="0x0" Version="0" TargetIndex="36" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.Frezu_ZAPNI]" />
+      <Object Name="DataSource.Program.Robot.ZdvihSnimacov_ZASUN" ClsId="0x0" Version="0" TargetIndex="37" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_ZASUN]" />
+      <Object Name="DataSource.Program.Robot.ZdvihSnimacov_VYSUN" ClsId="0x0" Version="0" TargetIndex="38" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_VYSUN]" />
+      <Object Name="DataSource.Program.Robot.OtvorVretenoFrezy" ClsId="0x0" Version="0" TargetIndex="39" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.OtvorVretenoFrezy]" />
+      <Object Name="DataSource.Program.Robot.UchopovacDPS_ZATVOR" ClsId="0x0" Version="0" TargetIndex="40" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacDPS_ZATVOR]" />
+      <Object Name="DataSource.Program.Robot.UchopovacDPS_OTVOR" ClsId="0x0" Version="0" TargetIndex="41" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacDPS_OTVOR]" />
+      <Object Name="DataSource.Program.Robot.UchopovacOdpadu_ZATVOR" ClsId="0x0" Version="0" TargetIndex="42" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacOdpadu_ZATVOR]" />
+      <Object Name="DataSource.Program.Robot.UchopovacOdpadu_OTVOR" ClsId="0x0" Version="0" TargetIndex="43" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacOdpadu_OTVOR]" />
+      <Object Name="DataSource.Program.Robot.UchopovacFrezy_ZATVOR" ClsId="0x0" Version="0" TargetIndex="44" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacFrezy_ZATVOR]" />
+      <Object Name="DataSource.Program.Robot.UchopovacFrezy_OTVOR" ClsId="0x0" Version="0" TargetIndex="45" Type="DP" RefString="Source[global].Variable[DataSource.Program.Robot.UchopovacFrezy_OTVOR]" />
       <Object Name="DataSource.Robot.OdparkujRobota" ClsId="0x0" Version="0" TargetIndex="46" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OdparkujRobota]" />
-      <Object Name="DataSource.Robot.ServisnaPoloha" ClsId="0x0" Version="0" TargetIndex="47" Type="DP" RefString="Source[global].Variable[DataSource.Robot.ServisnaPoloha]" />
-      <Object Name="DataSource.Robot.IN.OtackyFrezyDosiahnute" ClsId="0x0" Version="0" TargetIndex="48" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.OtackyFrezyDosiahnute]" />
-      <Object Name="DataSource.Robot.IN.FrezaBezi" ClsId="0x0" Version="0" TargetIndex="49" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.FrezaBezi]" />
-      <Object Name="DataSource.Robot.IN.Vysavac_PodtlakDosiahnuty" ClsId="0x0" Version="0" TargetIndex="50" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Vysavac_PodtlakDosiahnuty]" />
-      <Object Name="DataSource.Robot.IN.SnimacePritomnFrezy_SpodnaPoloha" ClsId="0x0" Version="0" TargetIndex="51" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.SnimacePritomnFrezy_SpodnaPoloha]" />
-      <Object Name="DataSource.Robot.IN.SnimacePritomnFrezy_HornaPoloha" ClsId="0x0" Version="0" TargetIndex="52" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.SnimacePritomnFrezy_HornaPoloha]" />
-      <Object Name="DataSource.Robot.IN.VretenoFrezy_PritomnostNastroja" ClsId="0x0" Version="0" TargetIndex="53" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.VretenoFrezy_PritomnostNastroja]" />
-      <Object Name="DataSource.Robot.IN.ZasobnikFrez_PritomnostNastroja" ClsId="0x0" Version="0" TargetIndex="54" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.ZasobnikFrez_PritomnostNastroja]" />
-      <Object Name="DataSource.Robot.IN.Griper_UchopFrezy_ZATVORENY" ClsId="0x0" Version="0" TargetIndex="55" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Griper_UchopFrezy_ZATVORENY]" />
-      <Object Name="DataSource.Robot.IN.Griper_UchopFrezy_OTVORENY" ClsId="0x0" Version="0" TargetIndex="56" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Griper_UchopFrezy_OTVORENY]" />
-      <Object Name="DataSource.Robot.OUT.Ionizer_StartIonizovania" ClsId="0x0" Version="0" TargetIndex="57" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.Ionizer_StartIonizovania]" />
-      <Object Name="DataSource.Robot.OUT.ZapniVysavac" ClsId="0x0" Version="0" TargetIndex="58" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.ZapniVysavac]" />
-      <Object Name="DataSource.Robot.OUT.Ionizer_ZapniVzduch" ClsId="0x0" Version="0" TargetIndex="59" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.Ionizer_ZapniVzduch]" />
-      <Object Name="DataSource.Robot.STAV.UchopovacDPS_ZATVORENY" ClsId="0x0" Version="0" TargetIndex="60" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacDPS_ZATVORENY]" />
-      <Object Name="DataSource.Robot.STAV.UchopovacDPS_OTVORENY" ClsId="0x0" Version="0" TargetIndex="61" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacDPS_OTVORENY]" />
-      <Object Name="DataSource.Robot.STAV.UchopovacOdpadu_ZATVORENY" ClsId="0x0" Version="0" TargetIndex="62" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacOdpadu_ZATVORENY]" />
-      <Object Name="DataSource.Robot.STAV.UchopovacOdpadu_OTVORENY" ClsId="0x0" Version="0" TargetIndex="63" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacOdpadu_OTVORENY]" />
-      <Object Name="DataSource.Pracovisko.Manual" ClsId="0x0" Version="0" TargetIndex="64" Type="DP" RefString="Source[global].Variable[DataSource.Pracovisko.Manual]" />
-      <Object Name="DataSource.Hesla" ClsId="0x0" Version="0" TargetIndex="65" Type="DP" RefString="Source[global].Variable[DataSource.Hesla]" />
-      <Object Name="DataSource.Hesla[1]" ClsId="0x0" Version="0" TargetIndex="66" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[1]]" />
-      <Object Name="DataSource.Hesla[0]" ClsId="0x0" Version="0" TargetIndex="67" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[0]]" />
-      <Object Name="DataSource.Hesla[2]" ClsId="0x0" Version="0" TargetIndex="68" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[2]]" />
-      <Object Name="DataSource.Alarmy" ClsId="0x0" Version="0" TargetIndex="69" Type="DP" RefString="Source[global].Variable[DataSource.Alarmy]" />
-      <Object Name="DataSource.PotvrdenieAlarmov" ClsId="0x0" Version="0" TargetIndex="70" Type="DP" RefString="Source[global].Variable[DataSource.PotvrdenieAlarmov]" />
-      <Object Name="DataSource.ZobrazSymbolAlarmu" ClsId="0x0" Version="0" TargetIndex="71" Type="DP" RefString="Source[global].Variable[DataSource.ZobrazSymbolAlarmu]" />
-      <Object Name="DataSource.Blikac500ms" ClsId="0x0" Version="0" TargetIndex="72" Type="DP" RefString="Source[global].Variable[DataSource.Blikac500ms]" />
-      <Object Name="DataSource.TP_ZobrazPopUpPrihlasenie" ClsId="0x0" Version="0" TargetIndex="73" Type="DP" RefString="Source[global].Variable[DataSource.TP_ZobrazPopUpPrihlasenie]" />
-      <Object Name="DataSource.ZadaneMenoUzivatela" ClsId="0x0" Version="0" TargetIndex="74" Type="DP" RefString="Source[global].Variable[DataSource.ZadaneMenoUzivatela]" />
-      <Object Name="DataSource.PrihlasUzivatela" ClsId="0x0" Version="0" TargetIndex="75" Type="DP" RefString="Source[global].Variable[DataSource.PrihlasUzivatela]" />
-      <Object Name="DataSource.ZadaneHesloUzivatela" ClsId="0x0" Version="0" TargetIndex="76" Type="DP" RefString="Source[global].Variable[DataSource.ZadaneHesloUzivatela]" />
-      <Object Name="DataSource.OdhlasUzivatela" ClsId="0x0" Version="0" TargetIndex="77" Type="DP" RefString="Source[global].Variable[DataSource.OdhlasUzivatela]" />
-      <Object Name="DataSource.ZvolenaUroven" ClsId="0x0" Version="0" TargetIndex="78" Type="DP" RefString="Source[global].Variable[DataSource.ZvolenaUroven]" />
-      <Object Name="Internal.Display.Brightness" ClsId="0x0" Version="0" TargetIndex="79" Type="DP" RefString="Source[global].Variable[Internal.Display.Brightness]" />
-      <Object Name="Internal.Display.Contrast" ClsId="0x0" Version="0" TargetIndex="80" Type="DP" RefString="Source[global].Variable[Internal.Display.Contrast]" />
-      <Object Name="Internal.Display.BackLight" ClsId="0x0" Version="0" TargetIndex="81" Type="DP" RefString="Source[global].Variable[Internal.Display.BackLight]" />
-      <Object Name="Internal.Connection.IPAddress" ClsId="0x0" Version="0" TargetIndex="82" Type="DP" RefString="Source[global].Variable[Internal.Connection.IPAddress]" />
-      <Object Name="Internal.Connection.NodeNumber" ClsId="0x0" Version="0" TargetIndex="83" Type="DP" RefString="Source[global].Variable[Internal.Connection.NodeNumber]" />
-      <Object Name="Internal.Temperature.CPU" ClsId="0x0" Version="0" TargetIndex="84" Type="DP" RefString="Source[global].Variable[Internal.Temperature.CPU]" />
-      <Object Name="Internal.Temperature.Room" ClsId="0x0" Version="0" TargetIndex="85" Type="DP" RefString="Source[global].Variable[Internal.Temperature.Room]" />
-      <Object Name="Internal.DateTime.Day" ClsId="0x0" Version="0" TargetIndex="86" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Day]" />
-      <Object Name="Internal.DateTime.Hour" ClsId="0x0" Version="0" TargetIndex="87" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Hour]" />
-      <Object Name="Internal.DateTime.Minute" ClsId="0x0" Version="0" TargetIndex="88" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Minute]" />
-      <Object Name="Internal.DateTime.Month" ClsId="0x0" Version="0" TargetIndex="89" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Month]" />
-      <Object Name="Internal.DateTime.Second" ClsId="0x0" Version="0" TargetIndex="90" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Second]" />
-      <Object Name="Internal.DateTime.Year" ClsId="0x0" Version="0" TargetIndex="91" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Year]" />
-      <Object Name="Internal.DateTime.DayOfWeek" ClsId="0x0" Version="0" TargetIndex="92" Type="DP" RefString="Source[global].Variable[Internal.DateTime.DayOfWeek]" />
-      <Object Name="Internal.Memory.LargestFreeBlock" ClsId="0x0" Version="0" TargetIndex="93" Type="DP" RefString="Source[global].Variable[Internal.Memory.LargestFreeBlock]" />
-      <Object Name="Internal.Memory.TotalFree" ClsId="0x0" Version="0" TargetIndex="94" Type="DP" RefString="Source[global].Variable[Internal.Memory.TotalFree]" />
-      <Object Name="Internal.Memory.TotalInstalled" ClsId="0x0" Version="0" TargetIndex="95" Type="DP" RefString="Source[global].Variable[Internal.Memory.TotalInstalled]" />
+      <Object Name="DataSource.Robot.IN.OtackyFrezyDosiahnute" ClsId="0x0" Version="0" TargetIndex="47" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.OtackyFrezyDosiahnute]" />
+      <Object Name="DataSource.Robot.IN.FrezaBezi" ClsId="0x0" Version="0" TargetIndex="48" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.FrezaBezi]" />
+      <Object Name="DataSource.Robot.IN.Vysavac_PodtlakDosiahnuty" ClsId="0x0" Version="0" TargetIndex="49" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Vysavac_PodtlakDosiahnuty]" />
+      <Object Name="DataSource.Robot.IN.SnimacePritomnFrezy_SpodnaPoloha" ClsId="0x0" Version="0" TargetIndex="50" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.SnimacePritomnFrezy_SpodnaPoloha]" />
+      <Object Name="DataSource.Robot.IN.SnimacePritomnFrezy_HornaPoloha" ClsId="0x0" Version="0" TargetIndex="51" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.SnimacePritomnFrezy_HornaPoloha]" />
+      <Object Name="DataSource.Robot.IN.VretenoFrezy_PritomnostNastroja" ClsId="0x0" Version="0" TargetIndex="52" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.VretenoFrezy_PritomnostNastroja]" />
+      <Object Name="DataSource.Robot.IN.ZasobnikFrez_PritomnostNastroja" ClsId="0x0" Version="0" TargetIndex="53" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.ZasobnikFrez_PritomnostNastroja]" />
+      <Object Name="DataSource.Robot.IN.Griper_UchopFrezy_ZATVORENY" ClsId="0x0" Version="0" TargetIndex="54" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Griper_UchopFrezy_ZATVORENY]" />
+      <Object Name="DataSource.Robot.IN.Griper_UchopFrezy_OTVORENY" ClsId="0x0" Version="0" TargetIndex="55" Type="DP" RefString="Source[global].Variable[DataSource.Robot.IN.Griper_UchopFrezy_OTVORENY]" />
+      <Object Name="DataSource.Robot.OUT.Ionizer_StartIonizovania" ClsId="0x0" Version="0" TargetIndex="56" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.Ionizer_StartIonizovania]" />
+      <Object Name="DataSource.Robot.OUT.ZapniVysavac" ClsId="0x0" Version="0" TargetIndex="57" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.ZapniVysavac]" />
+      <Object Name="DataSource.Robot.OUT.Ionizer_ZapniVzduch" ClsId="0x0" Version="0" TargetIndex="58" Type="DP" RefString="Source[global].Variable[DataSource.Robot.OUT.Ionizer_ZapniVzduch]" />
+      <Object Name="DataSource.Robot.STAV.UchopovacDPS_ZATVORENY" ClsId="0x0" Version="0" TargetIndex="59" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacDPS_ZATVORENY]" />
+      <Object Name="DataSource.Robot.STAV.UchopovacDPS_OTVORENY" ClsId="0x0" Version="0" TargetIndex="60" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacDPS_OTVORENY]" />
+      <Object Name="DataSource.Robot.STAV.UchopovacOdpadu_ZATVORENY" ClsId="0x0" Version="0" TargetIndex="61" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacOdpadu_ZATVORENY]" />
+      <Object Name="DataSource.Robot.STAV.UchopovacOdpadu_OTVORENY" ClsId="0x0" Version="0" TargetIndex="62" Type="DP" RefString="Source[global].Variable[DataSource.Robot.STAV.UchopovacOdpadu_OTVORENY]" />
+      <Object Name="DataSource.Hesla" ClsId="0x0" Version="0" TargetIndex="63" Type="DP" RefString="Source[global].Variable[DataSource.Hesla]" />
+      <Object Name="DataSource.Hesla[1]" ClsId="0x0" Version="0" TargetIndex="64" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[1]]" />
+      <Object Name="DataSource.Hesla[0]" ClsId="0x0" Version="0" TargetIndex="65" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[0]]" />
+      <Object Name="DataSource.Hesla[2]" ClsId="0x0" Version="0" TargetIndex="66" Type="DP" RefString="Source[global].Variable[DataSource.Hesla[2]]" />
+      <Object Name="DataSource.Alarmy" ClsId="0x0" Version="0" TargetIndex="67" Type="DP" RefString="Source[global].Variable[DataSource.Alarmy]" />
+      <Object Name="DataSource.PotvrdenieAlarmov" ClsId="0x0" Version="0" TargetIndex="68" Type="DP" RefString="Source[global].Variable[DataSource.PotvrdenieAlarmov]" />
+      <Object Name="DataSource.ZobrazSymbolAlarmu" ClsId="0x0" Version="0" TargetIndex="69" Type="DP" RefString="Source[global].Variable[DataSource.ZobrazSymbolAlarmu]" />
+      <Object Name="DataSource.Blikac500ms" ClsId="0x0" Version="0" TargetIndex="70" Type="DP" RefString="Source[global].Variable[DataSource.Blikac500ms]" />
+      <Object Name="DataSource.TP_ZobrazPopUpPrihlasenie" ClsId="0x0" Version="0" TargetIndex="71" Type="DP" RefString="Source[global].Variable[DataSource.TP_ZobrazPopUpPrihlasenie]" />
+      <Object Name="DataSource.ZadaneMenoUzivatela" ClsId="0x0" Version="0" TargetIndex="72" Type="DP" RefString="Source[global].Variable[DataSource.ZadaneMenoUzivatela]" />
+      <Object Name="DataSource.PrihlasUzivatela" ClsId="0x0" Version="0" TargetIndex="73" Type="DP" RefString="Source[global].Variable[DataSource.PrihlasUzivatela]" />
+      <Object Name="DataSource.ZadaneHesloUzivatela" ClsId="0x0" Version="0" TargetIndex="74" Type="DP" RefString="Source[global].Variable[DataSource.ZadaneHesloUzivatela]" />
+      <Object Name="DataSource.OdhlasUzivatela" ClsId="0x0" Version="0" TargetIndex="75" Type="DP" RefString="Source[global].Variable[DataSource.OdhlasUzivatela]" />
+      <Object Name="DataSource.ZvolenaUroven" ClsId="0x0" Version="0" TargetIndex="76" Type="DP" RefString="Source[global].Variable[DataSource.ZvolenaUroven]" />
+      <Object Name="Internal.Display.Brightness" ClsId="0x0" Version="0" TargetIndex="77" Type="DP" RefString="Source[global].Variable[Internal.Display.Brightness]" />
+      <Object Name="Internal.Display.Contrast" ClsId="0x0" Version="0" TargetIndex="78" Type="DP" RefString="Source[global].Variable[Internal.Display.Contrast]" />
+      <Object Name="Internal.Display.BackLight" ClsId="0x0" Version="0" TargetIndex="79" Type="DP" RefString="Source[global].Variable[Internal.Display.BackLight]" />
+      <Object Name="Internal.Connection.IPAddress" ClsId="0x0" Version="0" TargetIndex="80" Type="DP" RefString="Source[global].Variable[Internal.Connection.IPAddress]" />
+      <Object Name="Internal.Connection.NodeNumber" ClsId="0x0" Version="0" TargetIndex="81" Type="DP" RefString="Source[global].Variable[Internal.Connection.NodeNumber]" />
+      <Object Name="Internal.Temperature.CPU" ClsId="0x0" Version="0" TargetIndex="82" Type="DP" RefString="Source[global].Variable[Internal.Temperature.CPU]" />
+      <Object Name="Internal.Temperature.Room" ClsId="0x0" Version="0" TargetIndex="83" Type="DP" RefString="Source[global].Variable[Internal.Temperature.Room]" />
+      <Object Name="Internal.DateTime.Day" ClsId="0x0" Version="0" TargetIndex="84" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Day]" />
+      <Object Name="Internal.DateTime.Hour" ClsId="0x0" Version="0" TargetIndex="85" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Hour]" />
+      <Object Name="Internal.DateTime.Minute" ClsId="0x0" Version="0" TargetIndex="86" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Minute]" />
+      <Object Name="Internal.DateTime.Month" ClsId="0x0" Version="0" TargetIndex="87" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Month]" />
+      <Object Name="Internal.DateTime.Second" ClsId="0x0" Version="0" TargetIndex="88" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Second]" />
+      <Object Name="Internal.DateTime.Year" ClsId="0x0" Version="0" TargetIndex="89" Type="DP" RefString="Source[global].Variable[Internal.DateTime.Year]" />
+      <Object Name="Internal.DateTime.DayOfWeek" ClsId="0x0" Version="0" TargetIndex="90" Type="DP" RefString="Source[global].Variable[Internal.DateTime.DayOfWeek]" />
+      <Object Name="Internal.Memory.LargestFreeBlock" ClsId="0x0" Version="0" TargetIndex="91" Type="DP" RefString="Source[global].Variable[Internal.Memory.LargestFreeBlock]" />
+      <Object Name="Internal.Memory.TotalFree" ClsId="0x0" Version="0" TargetIndex="92" Type="DP" RefString="Source[global].Variable[Internal.Memory.TotalFree]" />
+      <Object Name="Internal.Memory.TotalInstalled" ClsId="0x0" Version="0" TargetIndex="93" Type="DP" RefString="Source[global].Variable[Internal.Memory.TotalInstalled]" />
       <Object Name="DPV" ClsId="0x100" Version="1" Type="DPM" RefString="Source[global].DPV[]">
         <Byte Name="TaskPrior">200</Byte>
         <Byte Name="Reserved">0</Byte>
         <UInt16 Name="Reserved">0</UInt16>
-        <UInt32 Name="DPCount">96</UInt32>
+        <UInt32 Name="DPCount">94</UInt32>
         <Group Name="Vizu.CisloAktualnejObrazovky">
           <UInt32 Name="DPID">0</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
@@ -192,7 +190,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Safety.RESET_ZonyCS">
+        <Group Name="Vizu.Slider">
           <UInt32 Name="DPID">8</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -203,7 +201,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Zobraz_RobotNieje_v_Automate">
+        <Group Name="Vizu.FarbaTlacitkaAlarm_Index">
           <UInt32 Name="DPID">9</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -214,7 +212,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Zobraz_UpozorneniePrazdZasobFrez">
+        <Group Name="Vizu.ZobrazSymbolAlarmu">
           <UInt32 Name="DPID">10</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -225,7 +223,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Zobraz_HlaseniePlnaDebnicka">
+        <Group Name="Vizu.TL_RezimManual_DISABLE">
           <UInt32 Name="DPID">11</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -236,7 +234,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Zobraz_ResetZariadenia">
+        <Group Name="Vizu.TL_StartAutomat_DISABLE">
           <UInt32 Name="DPID">12</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -247,7 +245,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.LED_TlacitkaResetCS">
+        <Group Name="Vizu.TL_UkoncenieCyklu_DISABLE">
           <UInt32 Name="DPID">13</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -258,7 +256,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Zobraz_VymenGriperRobota">
+        <Group Name="Vizu.ZobrazHlasenie_ResetZariadenia">
           <UInt32 Name="DPID">14</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -269,7 +267,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Zobraz_RobotNiejeVzoneBezpNavrat">
+        <Group Name="Safety.RESET_ZonyCS">
           <UInt32 Name="DPID">15</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -280,7 +278,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Zobraz_HlasenieOdoberDPS">
+        <Group Name="Vizualizacia.Zobraz_RobotNieje_v_Automate">
           <UInt32 Name="DPID">16</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -291,7 +289,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Zobraz_HlaseniePrazdnyZasobFrez">
+        <Group Name="Vizualizacia.Zobraz_UpozorneniePrazdZasobFrez">
           <UInt32 Name="DPID">17</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -302,7 +300,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Zobraz_HlasenieVlozDebnickuOdpad">
+        <Group Name="Vizualizacia.Zobraz_HlaseniePlnaDebnicka">
           <UInt32 Name="DPID">18</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -313,7 +311,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.ZamkniTlacitkoRezimAutomat">
+        <Group Name="Vizualizacia.LED_TlacitkaResetCS">
           <UInt32 Name="DPID">19</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -324,7 +322,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.ZamkniTlacitkoRezimManual">
+        <Group Name="Vizualizacia.Zobraz_VymenGriperRobota">
           <UInt32 Name="DPID">20</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -335,7 +333,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.TP_ZamkniTlacitkoHOME">
+        <Group Name="Vizualizacia.Zobraz_RobotNiejeVzoneBezpNavrat">
           <UInt32 Name="DPID">21</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -346,7 +344,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Slider">
+        <Group Name="Vizualizacia.Zobraz_HlasenieOdoberDPS">
           <UInt32 Name="DPID">22</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -357,7 +355,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.ZamkniTlacitkoSTART">
+        <Group Name="Vizualizacia.Zobraz_HlaseniePrazdnyZasobFrez">
           <UInt32 Name="DPID">23</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -368,7 +366,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.ZamkniTlacitkoSTOP">
+        <Group Name="Vizualizacia.Zobraz_HlasenieVlozDebnickuOdpad">
           <UInt32 Name="DPID">24</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -379,7 +377,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.ZamkniTlacitkoOdparkovanieRobota">
+        <Group Name="Vizualizacia.ZamkniTlacitkoRezimAutomat">
           <UInt32 Name="DPID">25</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -390,7 +388,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.Tlacitko_VymenFrezu">
+        <Group Name="Vizualizacia.ZamkniTlacitkoRezimManual">
           <UInt32 Name="DPID">26</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -401,7 +399,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.ZamkniTlacitko_SpustenieFrezy">
+        <Group Name="Vizualizacia.TP_ZamkniTlacitkoHOME">
           <UInt32 Name="DPID">27</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -412,7 +410,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Vizualizacia.ZamkniTlacitkoStartVysavaca">
+        <Group Name="Vizualizacia.ZamkniTlacitkoOdparkovanieRobota">
           <UInt32 Name="DPID">28</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -423,7 +421,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Zariadenie.Reset">
+        <Group Name="Vizualizacia.ZamkniTlacitko_SpustenieFrezy">
           <UInt32 Name="DPID">29</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -434,7 +432,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Zariadenie.OsvetlenieBunky">
+        <Group Name="Vizualizacia.ZamkniTlacitkoStartVysavaca">
           <UInt32 Name="DPID">30</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -445,7 +443,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Zariadenie.Automat">
+        <Group Name="Zariadenie.Reset">
           <UInt32 Name="DPID">31</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -456,7 +454,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Zariadenie.KoniecCyklu">
+        <Group Name="Zariadenie.OsvetlenieBunky">
           <UInt32 Name="DPID">32</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -467,7 +465,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Zariadenie.PriechodnyRezim">
+        <Group Name="Zariadenie.Automat">
           <UInt32 Name="DPID">33</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -478,7 +476,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.Frezu_ZAPNI">
+        <Group Name="Zariadenie.Manual">
           <UInt32 Name="DPID">34</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -489,7 +487,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.ZdvihSnimacov_ZASUN">
+        <Group Name="Zariadenie.KoniecCyklu">
           <UInt32 Name="DPID">35</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -500,7 +498,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.ZdvihSnimacov_VYSUN">
+        <Group Name="Program.Robot.Frezu_ZAPNI">
           <UInt32 Name="DPID">36</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -511,7 +509,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.OtvorVretenoFrezy">
+        <Group Name="Program.Robot.ZdvihSnimacov_ZASUN">
           <UInt32 Name="DPID">37</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -522,7 +520,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.UchopovacDPS_ZATVOR">
+        <Group Name="Program.Robot.ZdvihSnimacov_VYSUN">
           <UInt32 Name="DPID">38</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -533,7 +531,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.UchopovacDPS_OTVOR">
+        <Group Name="Program.Robot.OtvorVretenoFrezy">
           <UInt32 Name="DPID">39</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -544,7 +542,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.UchopovacOdpadu_ZATVOR">
+        <Group Name="Program.Robot.UchopovacDPS_ZATVOR">
           <UInt32 Name="DPID">40</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -555,7 +553,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.UchopovacOdpadu_OTVOR">
+        <Group Name="Program.Robot.UchopovacDPS_OTVOR">
           <UInt32 Name="DPID">41</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -566,7 +564,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.UchopovacFrezy_ZATVOR">
+        <Group Name="Program.Robot.UchopovacOdpadu_ZATVOR">
           <UInt32 Name="DPID">42</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -577,7 +575,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.UchopovacFrezy_OTVOR">
+        <Group Name="Program.Robot.UchopovacOdpadu_OTVOR">
           <UInt32 Name="DPID">43</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -588,7 +586,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.Vyhadzovac_ZASUN">
+        <Group Name="Program.Robot.UchopovacFrezy_ZATVOR">
           <UInt32 Name="DPID">44</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -599,7 +597,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Program.Robot.Vyhadzovac_VYSUN">
+        <Group Name="Program.Robot.UchopovacFrezy_OTVOR">
           <UInt32 Name="DPID">45</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -621,7 +619,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.ServisnaPoloha">
+        <Group Name="Robot.IN.OtackyFrezyDosiahnute">
           <UInt32 Name="DPID">47</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -632,7 +630,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.IN.OtackyFrezyDosiahnute">
+        <Group Name="Robot.IN.FrezaBezi">
           <UInt32 Name="DPID">48</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -643,7 +641,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.IN.FrezaBezi">
+        <Group Name="Robot.IN.Vysavac_PodtlakDosiahnuty">
           <UInt32 Name="DPID">49</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -654,7 +652,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.IN.Vysavac_PodtlakDosiahnuty">
+        <Group Name="Robot.IN.SnimacePritomnFrezy_SpodnaPoloha">
           <UInt32 Name="DPID">50</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -665,7 +663,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.IN.SnimacePritomnFrezy_SpodnaPoloha">
+        <Group Name="Robot.IN.SnimacePritomnFrezy_HornaPoloha">
           <UInt32 Name="DPID">51</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -676,7 +674,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.IN.SnimacePritomnFrezy_HornaPoloha">
+        <Group Name="Robot.IN.VretenoFrezy_PritomnostNastroja">
           <UInt32 Name="DPID">52</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -687,7 +685,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.IN.VretenoFrezy_PritomnostNastroja">
+        <Group Name="Robot.IN.ZasobnikFrez_PritomnostNastroja">
           <UInt32 Name="DPID">53</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -698,7 +696,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.IN.ZasobnikFrez_PritomnostNastroja">
+        <Group Name="Robot.IN.Griper_UchopFrezy_ZATVORENY">
           <UInt32 Name="DPID">54</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -709,7 +707,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.IN.Griper_UchopFrezy_ZATVORENY">
+        <Group Name="Robot.IN.Griper_UchopFrezy_OTVORENY">
           <UInt32 Name="DPID">55</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -720,7 +718,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.IN.Griper_UchopFrezy_OTVORENY">
+        <Group Name="Robot.OUT.Ionizer_StartIonizovania">
           <UInt32 Name="DPID">56</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -731,7 +729,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.OUT.Ionizer_StartIonizovania">
+        <Group Name="Robot.OUT.ZapniVysavac">
           <UInt32 Name="DPID">57</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -742,7 +740,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.OUT.ZapniVysavac">
+        <Group Name="Robot.OUT.Ionizer_ZapniVzduch">
           <UInt32 Name="DPID">58</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -753,7 +751,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.OUT.Ionizer_ZapniVzduch">
+        <Group Name="Robot.STAV.UchopovacDPS_ZATVORENY">
           <UInt32 Name="DPID">59</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -764,7 +762,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.STAV.UchopovacDPS_ZATVORENY">
+        <Group Name="Robot.STAV.UchopovacDPS_OTVORENY">
           <UInt32 Name="DPID">60</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -775,7 +773,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.STAV.UchopovacDPS_OTVORENY">
+        <Group Name="Robot.STAV.UchopovacOdpadu_ZATVORENY">
           <UInt32 Name="DPID">61</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -786,7 +784,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.STAV.UchopovacOdpadu_ZATVORENY">
+        <Group Name="Robot.STAV.UchopovacOdpadu_OTVORENY">
           <UInt32 Name="DPID">62</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -797,7 +795,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Robot.STAV.UchopovacOdpadu_OTVORENY">
+        <Group Name="Hesla">
           <UInt32 Name="DPID">63</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -808,7 +806,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Pracovisko.Manual">
+        <Group Name="Hesla[1]">
           <UInt32 Name="DPID">64</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -819,7 +817,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Hesla">
+        <Group Name="Hesla[0]">
           <UInt32 Name="DPID">65</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -830,7 +828,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Hesla[1]">
+        <Group Name="Hesla[2]">
           <UInt32 Name="DPID">66</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -841,7 +839,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Hesla[0]">
+        <Group Name="Alarmy">
           <UInt32 Name="DPID">67</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -850,9 +848,9 @@
           <Reference Name="UGPLC" Type="UNIT">none</Reference>
           <UInt32 Name="Limit">4294967295</UInt32>
           <UInt16 Name="UserID">65535</UInt16>
-          <UInt16 Name="ConnectionCount">1</UInt16>
+          <UInt16 Name="ConnectionCount">0</UInt16>
         </Group>
-        <Group Name="Hesla[2]">
+        <Group Name="PotvrdenieAlarmov">
           <UInt32 Name="DPID">68</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -863,7 +861,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Alarmy">
+        <Group Name="ZobrazSymbolAlarmu">
           <UInt32 Name="DPID">69</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -872,9 +870,9 @@
           <Reference Name="UGPLC" Type="UNIT">none</Reference>
           <UInt32 Name="Limit">4294967295</UInt32>
           <UInt16 Name="UserID">65535</UInt16>
-          <UInt16 Name="ConnectionCount">0</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="PotvrdenieAlarmov">
+        <Group Name="Blikac500ms">
           <UInt32 Name="DPID">70</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -885,7 +883,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="ZobrazSymbolAlarmu">
+        <Group Name="TP_ZobrazPopUpPrihlasenie">
           <UInt32 Name="DPID">71</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -896,7 +894,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="Blikac500ms">
+        <Group Name="ZadaneMenoUzivatela">
           <UInt32 Name="DPID">72</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -907,7 +905,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="TP_ZobrazPopUpPrihlasenie">
+        <Group Name="PrihlasUzivatela">
           <UInt32 Name="DPID">73</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -918,7 +916,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="ZadaneMenoUzivatela">
+        <Group Name="ZadaneHesloUzivatela">
           <UInt32 Name="DPID">74</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -929,7 +927,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="PrihlasUzivatela">
+        <Group Name="OdhlasUzivatela">
           <UInt32 Name="DPID">75</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -940,7 +938,7 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="ZadaneHesloUzivatela">
+        <Group Name="ZvolenaUroven">
           <UInt32 Name="DPID">76</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
@@ -951,30 +949,8 @@
           <UInt16 Name="UserID">65535</UInt16>
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
-        <Group Name="OdhlasUzivatela">
-          <UInt32 Name="DPID">77</UInt32>
-          <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
-          <UInt16 Name="UpdtTime">200</UInt16>
-          <UInt16 Name="PVID">77</UInt16>
-          <Reference Name="UG" Type="UG">none</Reference>
-          <Reference Name="UGPLC" Type="UNIT">none</Reference>
-          <UInt32 Name="Limit">4294967295</UInt32>
-          <UInt16 Name="UserID">65535</UInt16>
-          <UInt16 Name="ConnectionCount">1</UInt16>
-        </Group>
-        <Group Name="ZvolenaUroven">
-          <UInt32 Name="DPID">78</UInt32>
-          <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
-          <UInt16 Name="UpdtTime">200</UInt16>
-          <UInt16 Name="PVID">78</UInt16>
-          <Reference Name="UG" Type="UG">none</Reference>
-          <Reference Name="UGPLC" Type="UNIT">none</Reference>
-          <UInt32 Name="Limit">4294967295</UInt32>
-          <UInt16 Name="UserID">65535</UInt16>
-          <UInt16 Name="ConnectionCount">1</UInt16>
-        </Group>
         <Group Name="Display.Brightness">
-          <UInt32 Name="DPID">79</UInt32>
+          <UInt32 Name="DPID">77</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">0</UInt16>
@@ -985,7 +961,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="Display.Contrast">
-          <UInt32 Name="DPID">80</UInt32>
+          <UInt32 Name="DPID">78</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">1</UInt16>
@@ -996,7 +972,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="Display.BackLight">
-          <UInt32 Name="DPID">81</UInt32>
+          <UInt32 Name="DPID">79</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">2</UInt16>
@@ -1007,7 +983,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="Connection.IPAddress">
-          <UInt32 Name="DPID">82</UInt32>
+          <UInt32 Name="DPID">80</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">3</UInt16>
@@ -1018,7 +994,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="Connection.NodeNumber">
-          <UInt32 Name="DPID">83</UInt32>
+          <UInt32 Name="DPID">81</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">4</UInt16>
@@ -1029,7 +1005,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="Temperature.CPU">
-          <UInt32 Name="DPID">84</UInt32>
+          <UInt32 Name="DPID">82</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">5</UInt16>
@@ -1040,7 +1016,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="Temperature.Room">
-          <UInt32 Name="DPID">85</UInt32>
+          <UInt32 Name="DPID">83</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">6</UInt16>
@@ -1051,7 +1027,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="DateTime.Day">
-          <UInt32 Name="DPID">86</UInt32>
+          <UInt32 Name="DPID">84</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">7</UInt16>
@@ -1062,7 +1038,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="DateTime.Hour">
-          <UInt32 Name="DPID">87</UInt32>
+          <UInt32 Name="DPID">85</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">8</UInt16>
@@ -1073,7 +1049,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="DateTime.Minute">
-          <UInt32 Name="DPID">88</UInt32>
+          <UInt32 Name="DPID">86</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">9</UInt16>
@@ -1084,7 +1060,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="DateTime.Month">
-          <UInt32 Name="DPID">89</UInt32>
+          <UInt32 Name="DPID">87</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">10</UInt16>
@@ -1095,7 +1071,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="DateTime.Second">
-          <UInt32 Name="DPID">90</UInt32>
+          <UInt32 Name="DPID">88</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">11</UInt16>
@@ -1106,7 +1082,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="DateTime.Year">
-          <UInt32 Name="DPID">91</UInt32>
+          <UInt32 Name="DPID">89</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">12</UInt16>
@@ -1117,7 +1093,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="DateTime.DayOfWeek">
-          <UInt32 Name="DPID">92</UInt32>
+          <UInt32 Name="DPID">90</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">13</UInt16>
@@ -1128,7 +1104,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="Memory.LargestFreeBlock">
-          <UInt32 Name="DPID">93</UInt32>
+          <UInt32 Name="DPID">91</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">14</UInt16>
@@ -1139,7 +1115,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="Memory.TotalFree">
-          <UInt32 Name="DPID">94</UInt32>
+          <UInt32 Name="DPID">92</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">15</UInt16>
@@ -1150,7 +1126,7 @@
           <UInt16 Name="ConnectionCount">1</UInt16>
         </Group>
         <Group Name="Memory.TotalInstalled">
-          <UInt32 Name="DPID">95</UInt32>
+          <UInt32 Name="DPID">93</UInt32>
           <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
           <UInt16 Name="UpdtTime">200</UInt16>
           <UInt16 Name="PVID">16</UInt16>

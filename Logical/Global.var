@@ -32,7 +32,7 @@ END_VAR
 VAR
 	Vizu : Vizu_typ;
 	Safety : Safety_typ;
-	Pracovisko : Pracovisko_typ := (0);
+	Zariadenie : Zariadenie_typ := (0);
 	StavHardware : HardwareSTAV_typ := (0);
 	SC_Robot : SequenceControlTyp;
 	Robot : Robot_typ;
@@ -43,7 +43,6 @@ END_VAR
 VAR
 	Alarmy : ARRAY[0..100] OF BOOL;
 	NastalaPorucha : BOOL;
-	ZobrazSymbolAlarmu : BOOL;
 	PotvrdenieAlarmov : BOOL;
 	PoruchaBrusky : BOOL;
 	PoruchaRobota : BOOL;
