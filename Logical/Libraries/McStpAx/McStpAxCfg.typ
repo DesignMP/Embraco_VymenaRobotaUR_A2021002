@@ -552,7 +552,8 @@ TYPE
 	McSAJFEnum :
 		( (*Jerk filter selector setting*)
 		mcSAJF_NOT_USE := 0, (*Not used - No jerk filter is applied*)
-		mcSAJF_USE := 1 (*Used - Jerk filter is applied*)
+		mcSAJF_USE := 1, (*Used - Jerk filter is applied*)
+		mcSAJF_JERK_LIM := 2 (*Jerk limited - Jerk is considered in the profile generator*)
 		);
 	McSAJFUseType : STRUCT (*Type mcSAJF_USE settings*)
 		JerkTime : REAL; (*Jerk filter time [s]*)
@@ -756,7 +757,8 @@ TYPE
 		);
 	McSEIRefPSrcEnum :
 		( (*Input source for the reference pulse*)
-		mcSEIRPS_R_IN_ABR_ENC := 0 (*R input ABR encoder - R input of the ABR encoder*)
+		mcSEIRPS_R_IN_ABR_ENC := 0, (*R input ABR encoder - R input of the ABR encoder*)
+		mcSEIRPS_DIG_IN_3 := 1 (*Digital input 3 - 24V digital input 3*)
 		);
 	McSEIRefPEdgEnum :
 		( (*Detection of the reference pulse*)
