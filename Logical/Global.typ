@@ -55,6 +55,7 @@ TYPE
 		ZonaRobot_AKTIVNA : BOOL;
 		CS_Pracovisko_Odblokovany : BOOL;
 		CS_Robot_Odblokovany : BOOL;
+		VyblokovanieSafety_AKTIVNE : BOOL;
 	END_STRUCT;
 END_TYPE
 

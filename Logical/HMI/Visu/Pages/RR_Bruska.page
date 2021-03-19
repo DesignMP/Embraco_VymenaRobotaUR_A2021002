@@ -33,7 +33,7 @@
           <Text ID="234470" Value="Zapni ionizátor"/>
           <Text ID="234471" Value="Zapni frézu"/>
           <Text ID="234472" Value="Otáčky\ndosiahnuté"/>
-          <Text ID="234473" Value="Fréza"/>
+          <Text ID="234473" Value="Ovládanie upínacej hlavy"/>
           <Text ID="234474" Value="Ionizátor"/>
           <Text ID="234475" Value="Vysávač"/>
           <Text ID="234476" Value="Vypni ionizátor"/>
@@ -100,7 +100,7 @@
       </TextGroup>
       <Controls>
         <Control ClassId="0x00001001" Name="Shape_3">
-          <Property Name="BackColor" Value="249"/>
+          <Property Name="BackColor" Value="248"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="152"/>
@@ -110,7 +110,7 @@
           <Property Name="Width" Value="370"/>
         </Control>
         <Control ClassId="0x00001001" Name="Shape_2">
-          <Property Name="BackColor" Value="249"/>
+          <Property Name="BackColor" Value="248"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="152"/>
@@ -120,7 +120,7 @@
           <Property Name="Width" Value="370"/>
         </Control>
         <Control ClassId="0x00001001" Name="Shape_1">
-          <Property Name="BackColor" Value="249"/>
+          <Property Name="BackColor" Value="248"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="318"/>
@@ -132,7 +132,7 @@
         <Control ClassId="0x00001004" Name="Text_2">
           <Property Name="AlignmentHorizontal" Value="Center"/>
           <Property Name="AlignmentVertical" Value="Center"/>
-          <Property Name="BackColor" Value="251"/>
+          <Property Name="BackColor" Value="253"/>
           <Property Name="Border" Value="Source[local].Border[Mp_SunkenNG]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
@@ -160,7 +160,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_3]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="10"/>
+          <Property Name="ForeColor" Value="15"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="424"/>
@@ -191,7 +191,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_5]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="10"/>
+          <Property Name="ForeColor" Value="15"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="18"/>
@@ -218,7 +218,7 @@
         </Control>
         <Control ClassId="0x00001004" Name="Text_8">
           <Property Name="AlignmentVertical" Value="Center"/>
-          <Property Name="Border" Value="Source[local].Border[Flat_black]"/>
+          <Property Name="Border" Value="Source[local].Border[Flat_grey]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
@@ -313,7 +313,7 @@
         </Control>
         <Control ClassId="0x00001004" Name="Text_9">
           <Property Name="AlignmentVertical" Value="Center"/>
-          <Property Name="Border" Value="Source[local].Border[Flat_black]"/>
+          <Property Name="Border" Value="Source[local].Border[Flat_grey]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
@@ -356,7 +356,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_4]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="10"/>
+          <Property Name="ForeColor" Value="15"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="424"/>
@@ -390,7 +390,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_9]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="10"/>
+          <Property Name="ForeColor" Value="15"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="610"/>
@@ -414,7 +414,7 @@
         </Control>
         <Control ClassId="0x00001004" Name="Text_12">
           <Property Name="AlignmentVertical" Value="Center"/>
-          <Property Name="Border" Value="Source[local].Border[Flat_black]"/>
+          <Property Name="Border" Value="Source[local].Border[Flat_grey]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
@@ -457,7 +457,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_18]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="10"/>
+          <Property Name="ForeColor" Value="15"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="18"/>
@@ -487,7 +487,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_21]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="10"/>
+          <Property Name="ForeColor" Value="15"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="204"/>
@@ -543,7 +543,7 @@
         </Control>
         <Control ClassId="0x00001004" Name="Text_13">
           <Property Name="AlignmentVertical" Value="Center"/>
-          <Property Name="Border" Value="Source[local].Border[Flat_black]"/>
+          <Property Name="Border" Value="Source[local].Border[Flat_grey]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
@@ -578,7 +578,7 @@
         </Control>
         <Control ClassId="0x00001004" Name="Text_14">
           <Property Name="AlignmentVertical" Value="Center"/>
-          <Property Name="Border" Value="Source[local].Border[Flat_black]"/>
+          <Property Name="Border" Value="Source[local].Border[Flat_grey]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
@@ -621,7 +621,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_6]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="10"/>
+          <Property Name="ForeColor" Value="15"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="204"/>

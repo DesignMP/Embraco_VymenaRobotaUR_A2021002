@@ -1,0 +1,9 @@
+(*
+QWS: 00006
+*)
+00001	00010	POE\Main\Variables.vbb
+00002	00000	POE\Main\Main.gb
+00003	00000	POE\Main\ZonaCS.gb
+00004	00000	POE\Main\VyblokovanieSafety.gb
+00005	00000	POE\Main\ZonaRobot.gb
+00006	00000	POE\Main\ZonaPracovisko.gb

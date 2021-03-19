@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<osdd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ethernet-powerlink.org/osdd osdd.xsd" xmlns:xlink="http://www.w3.org/1999/xlink" Version="1.6" xmlns="http://www.ethernet-powerlink.org/osdd">
+  <Topology SafetyDomain="1">
+    <GeneratorDescription Name="AutomationStudio" Version="4.7.5.60" LanguageID="1">
+      <Info Name="ARVersion" Value="47303" />
+      <Info Name="SafetyRelease" Value="1.10" />
+      <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=0 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.122.2 /REPO=11159 /ANSL=1 /PT=11169 /PORT=50000" />
+    </GeneratorDescription>
+    <SafetyConfigurationManager TransportSAddr="1">
+      <DeviceDescription Module="X20SLXxxx_110.SCM" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS47\AS\Hardware\Modules\X20SLX842\1.10.12.1\OSDD\X20SLXxxx_SCM_1_10_12_0.xosdd]]></DeviceDescription>
+      <NodeDescription />
+    </SafetyConfigurationManager>
+    <SafetyNode SAddr="1">
+      <DeviceDescription Module="X20SLX842_110.MainSN" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS47\AS\Hardware\Modules\X20SLX842\1.10.12.1\OSDD\\X20SLX842_1_10_12_0.xosdd]]></DeviceDescription>
+      <DesignConfiguration>
+        <ModuleSettings>
+          <SettingsGroup id="DataFromAs">
+            <Setting id="SafeDesigner" Value="4.4.0.0" />
+          </SettingsGroup>
+        </ModuleSettings>
+      </DesignConfiguration>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="Output" />
+        <Classification Type="PLC" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Classification Type="VendorSpecific">Combined</Classification>
+        <Info Name="Interface" Value="IF6.ST1" />
+        <Info Name="HWC_Revision" Value="1.10.12.1" />
+        <Info Name="HWC_LastEdit" Value="10.11.2020 15:44:54" />
+        <Info Name="AS_Name" Value="AB4_SafetyMaster" />
+        <Info Name="FirstPublishedSafetyRelease" Value="1.10" />
+        <Info Name="ProjectSL" Value="1" />
+        <Info Name="Description-de" Value="X20 SafeLOGIC Compact, 8xE 24V, 4xA 24V 3.0A, 2xA 24V 0.05A" />
+        <Info Name="Description-en" Value="X20 SafeLOGIC Compact, 8xI 24V, 4xO 24V 3.0A, 2xO 24V 0.05A" />
+        <Info Name="AsVariable" Value="SafeDigitalInput06,Cyclic#1.Safety.IN.Pracovisko_CS_CH2" />
+        <Info Name="AsVariable" Value="BOOL005,Cyclic#1.Safety.STAV.CS_Robot_Odblokovany" />
+        <Info Name="AsVariable" Value="PhysicalStateChannel03,Cyclic#1.Safety.OUT.Zona_Pracovisko_CH1" />
+        <Info Name="AsVariable" Value="BOOL004,Cyclic#1.Safety.STAV.CS_Pracovisko_Odblokovany" />
+        <Info Name="AsVariable" Value="BOOL104,Cyclic#1.Safety.SpatnaVazba_ZonaRobot" />
+        <Info Name="AsVariable" Value="SafeDigitalInput01,Cyclic#1.Safety.IN.Robot_CS_CH1" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.StavHardware.KartaAB4_SafetyMaster_OK" />
+        <Info Name="AsVariable" Value="PhysicalStateChannel02,Cyclic#1.Safety.OUT.Zona_Robot" />
+        <Info Name="AsVariable" Value="BOOL002,Cyclic#1.Safety.STAV.ZonaCS_AKTIVNA" />
+        <Info Name="AsVariable" Value="BOOL101,Cyclic#1.Safety.RESET_ZonyCS" />
+        <Info Name="AsVariable" Value="SafeDigitalInput08,Cyclic#1.Safety.IN.SpatnaVazbaPracovisko_CH2" />
+        <Info Name="AsVariable" Value="SafeDigitalInput04,Cyclic#1.Safety.IN.VyblokovanieSafety_CH2" />
+        <Info Name="AsVariable" Value="BOOL001,Cyclic#1.Safety.STAV.SafetyPLC_Nabehlo" />
+        <Info Name="AsVariable" Value="PhysicalStateChannel01,Cyclic#1.Safety.OUT.Zona_CS" />
+        <Info Name="AsVariable" Value="BOOL103,Cyclic#1.Safety.SpatnaVazba_ZonaCS" />
+        <Info Name="AsVariable" Value="SafeDigitalInput05,Cyclic#1.Safety.IN.Pracovisko_CS_CH1" />
+        <Info Name="AsVariable" Value="SafeDigitalInput03,Cyclic#1.Safety.IN.VyblokovanieSafety_CH1" />
+        <Info Name="AsVariable" Value="SafeDigitalInput07,Cyclic#1.Safety.IN.SpatnaVazbaPracovisko_CH1" />
+        <Info Name="AsVariable" Value="PhysicalStateChannel04,Cyclic#1.Safety.OUT.Zona_Pracovisko_CH2" />
+        <Info Name="AsVariable" Value="BOOL102,Cyclic#1.Safety.RESET_ZonyRobot" />
+        <Info Name="AsVariable" Value="BOOL006,Cyclic#1.Safety.STAV.VyblokovanieSafety_AKTIVNE" />
+        <Info Name="AsVariable" Value="BOOL003,Cyclic#1.Safety.STAV.ZonaRobot_AKTIVNA" />
+        <Info Name="AsVariable" Value="SafeDigitalInput02,Cyclic#1.Safety.IN.Robot_CS_CH2" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="DataExFromCpu" Direction="Input" OctetSize="20" IsSafe="false" />
+          <GenericTransport Name="DataExToCpu" Direction="Output" OctetSize="20" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="ToCPU_BOOL">
+          <Channel id="BOOL0">
+            <DataValue Type="Boolean">
+              <Transport Name="DataExToCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <Repetition RangeMax="16" NrOfDigits="2" />
+          </Channel>
+        </ChannelGroup>
+        <ChannelGroup id="FromCPU_OCTET">
+          <Channel id="MFWslxIN">
+            <DataValue Type="UInt8">
+              <Transport Name="DataExFromCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <VendorInfo>NrElements="14"</VendorInfo>
+            <VendorInfo>GeneratedBySafeFirmware="true"</VendorInfo>
+            <VendorInfo>IncludeInChannelCRC="1"</VendorInfo>
+            <VendorInfo>NotVisible="true"</VendorInfo>
+            <VendorInfo>Mappable="false"</VendorInfo>
+          </Channel>
+        </ChannelGroup>
+        <ChannelGroup id="FromCPU_BOOL">
+          <Channel id="BOOL1">
+            <DataValue Type="Boolean">
+              <Transport Name="DataExFromCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <Repetition RangeMax="16" NrOfDigits="2" />
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+  </Topology>
+</osdd>

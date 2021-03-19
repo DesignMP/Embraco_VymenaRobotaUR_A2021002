@@ -1,0 +1,76 @@
+﻿{GroupDefinition(0,'SafetyVstupy')}
+{GroupDefinition(9,'SafetyVystupy')}
+{GroupDefinition(18,'Vstupy_z_PLC_do_Safety')}
+{GroupDefinition(23,'Vystupy_zo_Safety_do_PLC')}
+{GroupDefinition(30,'Statusy')}
+
+VAR_GLOBAL {Group(0)}
+    {LINE(1)}
+    SI_CS_Robot_CH1 AT %IX16.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalInput01')};
+    {LINE(2)}
+    SI_CS_Robot_CH2 AT %IX16.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalInput02')};
+    {LINE(3)}
+    SI_VyblokovanieSafety_CH1 AT %IX16.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalInput03')};
+    {LINE(4)}
+    SI_VyblokovanieSafety_CH2 AT %IX16.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalInput04')};
+    {LINE(5)}
+    SI_CS_Pracovisko_CH1 AT %IX16.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalInput05')};
+    {LINE(6)}
+    SI_CS_Pracovisko_CH2 AT %IX16.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalInput06')};
+    {LINE(7)}
+    SI_Pracovisko_SpatnaVazba_CH1 AT %IX16.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalInput07')};
+    {LINE(8)}
+    SI_Pracovisko_SpatnaVazba_CH2 AT %IX16.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalInput08')};
+END_VAR
+
+VAR_GLOBAL {Group(9)}
+    {LINE(10)}
+    SO_ZonaCS AT %QX12.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalOutput01')};
+    {LINE(11)}
+    SO_ZonaRobot AT %QX12.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalOutput02')};
+    {LINE(12)}
+    SO_ZonaPracovisko_CH1 AT %QX12.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalOutput03')};
+    {LINE(13)}
+    SO_ZonaPracovisko_CH2 AT %QX12.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeDigitalOutput04')};
+    {LINE(14)}
+    Release_ZonaCS AT %QX2.0 : BOOL {Custom('SL1.SM1.ReleaseOutput01')};
+    {LINE(15)}
+    Release_ZonaRobot AT %QX2.1 : BOOL {Custom('SL1.SM1.ReleaseOutput02')};
+    {LINE(16)}
+    Release_ZonaPracovisko_CH1 AT %QX2.2 : BOOL {Custom('SL1.SM1.ReleaseOutput03')};
+    {LINE(17)}
+    Release_ZonaPracovisko_CH2 AT %QX2.3 : BOOL {Custom('SL1.SM1.ReleaseOutput04')};
+END_VAR
+
+VAR_GLOBAL {Group(18)}
+    {LINE(19)}
+    ResetZony_CS AT %IX0.0 : BOOL {Custom('SL1.SM1.BOOL101')};
+    {LINE(20)}
+    ResetZony_Robot AT %IX0.1 : BOOL {Custom('SL1.SM1.BOOL102')};
+    {LINE(21)}
+    SpatnaVezba_ZonaCS AT %IX0.2 : BOOL {Custom('SL1.SM1.BOOL103')};
+    {LINE(22)}
+    SpatnaVezba_ZonaRobot AT %IX0.3 : BOOL {Custom('SL1.SM1.BOOL104')};
+END_VAR
+
+VAR_GLOBAL {Group(23)}
+    {LINE(24)}
+    SafetyPLC_Nabehlo AT %QX0.0 : BOOL {Custom('SL1.SM1.BOOL001')};
+    {LINE(25)}
+    ZonaCS_AKTIVNA AT %QX0.1 : BOOL {Custom('SL1.SM1.BOOL002')};
+    {LINE(26)}
+    ZonaRobot_AKTIVNA AT %QX0.2 : BOOL {Custom('SL1.SM1.BOOL003')};
+    {LINE(27)}
+    CS_Pracoviska_AKTIVNE AT %QX0.3 : BOOL {Custom('SL1.SM1.BOOL004')};
+    {LINE(28)}
+    CS_Robota_AKTIVNE AT %QX0.4 : BOOL {Custom('SL1.SM1.BOOL005')};
+    {LINE(29)}
+    VyblokovanieSafety_AKTIVNE AT %QX0.5 : BOOL {Custom('SL1.SM1.BOOL006')};
+END_VAR
+
+VAR_GLOBAL {Group(30)}
+    {LINE(31)}
+    Status_ZonaCS_AKTIVNA : SAFEBOOL;
+    {LINE(32)}
+    Status_ZamkyVyblokovane : SAFEBOOL;
+END_VAR

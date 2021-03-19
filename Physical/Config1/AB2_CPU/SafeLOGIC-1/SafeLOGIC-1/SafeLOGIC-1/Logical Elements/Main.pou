@@ -1,0 +1,1876 @@
+﻿PROGRAM Main
+{ VariableWorksheet := 'Variables' }
+﻿{GroupDefinition(0,'NewGroup')}
+
+VAR_INPUT {Group(0)}
+END_VAR
+
+VAR_OUTPUT {Group(0)}
+END_VAR
+
+VAR {Group(0)}
+    {LINE(1)}
+    CS_Robot : SF_Equivalent_V1_00;
+    {LINE(2)}
+    CS_Pracovisko : SF_Equivalent_V1_00;
+    {LINE(3)}
+    Zona_CS : SF_EmergencyStop_V1_00;
+    {LINE(4)}
+    CasRelease_ZonaCS : TON;
+    {LINE(5)}
+    PrepinacVyblokovaniaSafety : SF_Equivalent_V1_00;
+    {LINE(6)}
+    Zona_Robot : SF_EmergencyStop_V1_00;
+    {LINE(7)}
+    Zona_Pracovisko : SF_EmergencyStop_V1_00;
+    {LINE(8)}
+    CasRelease_ZonaRobot : TON;
+    {LINE(9)}
+    CasRelease_Pracoviska_CH1 : TON;
+    {LINE(10)}
+    CasRelease_Pracoviska_CH2 : TON;
+END_VAR
+
+{ CodeWorksheet := 'Main', Type := '.fbd' }
+﻿<?xml version="1.0" encoding="utf-16" standalone="yes"?><FBD>
+  <addData>
+    <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+      <line localId="3" beginX="25" beginY="16" endX="109" endY="16" />
+    </data>
+  </addData>
+  <comment localId="0" height="8" width="66">
+    <position x="86" y="12" />
+    <content>
+      <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+          <title />
+        </head>
+        <body>
+          <p style="color:#000000;font-family:Arial;font-weight:normal;font-style:normal;font-size:23pt;">Príznak Safety PLC nabehlo</p>
+        </body>
+      </html>
+    </content>
+  </comment>
+  <contact localId="1" height="8" width="42" negated="false">
+    <position x="8" y="28" />
+    <connectionPointIn>
+      <relPosition x="0" y="4" />
+      <connection refLocalId="4" />
+    </connectionPointIn>
+    <connectionPointOut>
+      <relPosition x="42" y="4" />
+    </connectionPointOut>
+    <variable>TRUE</variable>
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <contactData contactWidth="9" />
+      </data>
+    </addData>
+  </contact>
+  <coil localId="2" height="8" width="42" negated="false">
+    <position x="218" y="28" />
+    <connectionPointIn>
+      <relPosition x="0" y="4" />
+      <connection refLocalId="1">
+        <position x="218" y="32" />
+        <position x="50" y="32" />
+      </connection>
+    </connectionPointIn>
+    <connectionPointOut>
+      <relPosition x="42" y="4" />
+    </connectionPointOut>
+    <variable>SafetyPLC_Nabehlo</variable>
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <contactData contactWidth="9" />
+      </data>
+    </addData>
+  </coil>
+  <leftPowerRail localId="4" height="0" width="4">
+    <position x="4" y="32" />
+    <connectionPointOut>
+      <relPosition x="4" y="0" />
+    </connectionPointOut>
+  </leftPowerRail>
+  <rightPowerRail localId="5" height="0" width="4">
+    <position x="260" y="32" />
+    <connectionPointIn>
+      <relPosition x="0" y="0" />
+      <connection refLocalId="2" />
+    </connectionPointIn>
+  </rightPowerRail>
+</FBD>
+{ CodeWorksheet := 'ZonaCS', Type := '.fbd' }
+﻿<?xml version="1.0" encoding="utf-16" standalone="yes"?><FBD>
+  <addData>
+    <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+      <line localId="38" beginX="190" beginY="22" endX="190" endY="21" />
+      <line localId="39" beginX="190" beginY="21" endX="192" endY="21" />
+      <line localId="40" beginX="190" beginY="72" endX="190" endY="25" />
+      <line localId="41" beginX="190" beginY="25" endX="192" endY="25" />
+      <line localId="42" beginX="85" beginY="22" endX="95" endY="22" />
+      <line localId="43" beginX="95" beginY="22" endX="190" endY="22" />
+      <line localId="44" beginX="95" beginY="39" endX="105" endY="39" />
+      <line localId="45" beginX="95" beginY="22" endX="95" endY="39" />
+      <line localId="46" beginX="87" beginY="72" endX="97" endY="72" />
+      <line localId="47" beginX="97" beginY="72" endX="190" endY="72" />
+      <line localId="48" beginX="97" beginY="87" endX="107" endY="87" />
+      <line localId="49" beginX="97" beginY="72" endX="97" endY="87" />
+      <line localId="64" beginX="204" beginY="21" endX="251" endY="21" />
+      <line localId="65" beginX="251" beginY="21" endX="251" endY="20" />
+      <line localId="66" beginX="251" beginY="20" endX="253" endY="20" />
+      <line localId="73" beginX="246" beginY="46" endX="251" endY="46" />
+      <line localId="74" beginX="251" beginY="46" endX="251" endY="32" />
+      <line localId="75" beginX="251" beginY="32" endX="253" endY="32" />
+      <line localId="80" beginX="283" beginY="20" endX="297" endY="20" />
+      <line localId="81" beginX="297" beginY="20" endX="321" endY="20" />
+      <line localId="82" beginX="297" beginY="31" endX="322" endY="31" />
+      <line localId="83" beginX="297" beginY="20" endX="297" endY="31" />
+      <line localId="87" beginX="297" beginY="45" endX="301" endY="45" />
+      <line localId="88" beginX="297" beginY="31" endX="297" endY="45" />
+      <line localId="95" beginX="326" beginY="45" endX="341" endY="45" />
+    </data>
+  </addData>
+  <block localId="8" height="40" width="70" typeName="SF_Equivalent_V1_00" instanceName="CS_Robot">
+    <position x="96" y="28" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="Activate">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="20" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="0" inState="128" outState="0" width="10" height="2" positionX="92" positionY="36" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_ChannelA">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="24" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="1" inState="128" outState="0" width="13" height="2" positionX="92" positionY="44" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_ChannelB">
+        <connectionPointIn>
+          <relPosition x="0" y="24" />
+          <connection refLocalId="25" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="2" inState="128" outState="0" width="13" height="2" positionX="92" positionY="52" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="DiscrepancyTime">
+        <connectionPointIn>
+          <relPosition x="0" y="32" />
+          <connection refLocalId="22" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="3" inState="128" outState="0" width="18" height="2" positionX="92" positionY="60" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Ready">
+        <connectionPointOut>
+          <relPosition x="70" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="4" inState="0" outState="128" width="7" height="2" positionX="170" positionY="36" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_EquivalentOut">
+        <connectionPointOut>
+          <relPosition x="70" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="5" inState="0" outState="128" width="17" height="2" positionX="170" positionY="44" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="Error">
+        <connectionPointOut>
+          <relPosition x="70" y="24" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="6" inState="0" outState="128" width="6" height="2" positionX="170" positionY="52" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="DiagCode">
+        <connectionPointOut>
+          <relPosition x="70" y="32" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="7" inState="0" outState="128" width="10" height="2" positionX="170" positionY="60" flagType="" dataType="WORD" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <block localId="18" height="40" width="70" typeName="SF_Equivalent_V1_00" instanceName="CS_Pracovisko">
+    <position x="100" y="128" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="Activate">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="21" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="10" inState="128" outState="0" width="10" height="2" positionX="96" positionY="136" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_ChannelA">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="26" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="11" inState="128" outState="0" width="13" height="2" positionX="96" positionY="144" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_ChannelB">
+        <connectionPointIn>
+          <relPosition x="0" y="24" />
+          <connection refLocalId="27" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="12" inState="128" outState="0" width="13" height="2" positionX="96" positionY="152" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="DiscrepancyTime">
+        <connectionPointIn>
+          <relPosition x="0" y="32" />
+          <connection refLocalId="23" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="13" inState="128" outState="0" width="18" height="2" positionX="96" positionY="160" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Ready">
+        <connectionPointOut>
+          <relPosition x="70" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="14" inState="0" outState="128" width="7" height="2" positionX="174" positionY="136" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_EquivalentOut">
+        <connectionPointOut>
+          <relPosition x="70" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="15" inState="0" outState="128" width="17" height="2" positionX="174" positionY="144" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="Error">
+        <connectionPointOut>
+          <relPosition x="70" y="24" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="16" inState="0" outState="128" width="6" height="2" positionX="174" positionY="152" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="DiagCode">
+        <connectionPointOut>
+          <relPosition x="70" y="32" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="17" inState="0" outState="128" width="10" height="2" positionX="174" positionY="160" flagType="" dataType="WORD" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <inVariable localId="20" height="4" width="14">
+    <position x="78" y="34" />
+    <expression>TRUE</expression>
+    <connectionPointOut>
+      <relPosition x="14" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="21" height="4" width="14">
+    <position x="82" y="134" />
+    <expression>TRUE</expression>
+    <connectionPointOut>
+      <relPosition x="14" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="22" height="4" width="28">
+    <position x="64" y="58" />
+    <expression>TIME#20ms</expression>
+    <connectionPointOut>
+      <relPosition x="28" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="23" height="4" width="28">
+    <position x="68" y="158" />
+    <expression>TIME#20ms</expression>
+    <connectionPointOut>
+      <relPosition x="28" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="24" height="4" width="38">
+    <position x="54" y="42" />
+    <expression>SI_CS_Robot_CH1</expression>
+    <connectionPointOut>
+      <relPosition x="38" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="25" height="4" width="38">
+    <position x="54" y="50" />
+    <expression>SI_CS_Robot_CH2</expression>
+    <connectionPointOut>
+      <relPosition x="38" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="26" height="4" width="48">
+    <position x="48" y="142" />
+    <expression>SI_CS_Pracovisko_CH1</expression>
+    <connectionPointOut>
+      <relPosition x="48" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="27" height="4" width="48">
+    <position x="48" y="150" />
+    <expression>SI_CS_Pracovisko_CH2</expression>
+    <connectionPointOut>
+      <relPosition x="48" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <block localId="30" height="16" width="42" typeName="SAFEBOOL_TO_BOOL">
+    <position x="214" y="70" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="1" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="8" formalParameter="S_EquivalentOut">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="5" />
+              </data>
+            </addData>
+            <position x="210" y="78" />
+            <position x="190" y="78" />
+            <position x="190" y="44" />
+            <position x="170" y="44" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="28" inState="640" outState="0" width="2" height="2" positionX="210" positionY="78" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="SAFEBOOL_TO_BOOL" hidden="true">
+        <connectionPointOut>
+          <relPosition x="42" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="29" inState="0" outState="640" width="1" height="2" positionX="260" positionY="78" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <block localId="33" height="16" width="42" typeName="SAFEBOOL_TO_BOOL">
+    <position x="218" y="166" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="1" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="18" formalParameter="S_EquivalentOut">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="15" />
+              </data>
+            </addData>
+            <position x="214" y="174" />
+            <position x="194" y="174" />
+            <position x="194" y="144" />
+            <position x="174" y="144" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="31" inState="640" outState="0" width="2" height="2" positionX="214" positionY="174" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="SAFEBOOL_TO_BOOL" hidden="true">
+        <connectionPointOut>
+          <relPosition x="42" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="32" inState="0" outState="640" width="1" height="2" positionX="264" positionY="174" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <block localId="37" height="24" width="16" typeName="AND_S">
+    <position x="388" y="34" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="1" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN1" negated="false" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="8" formalParameter="S_EquivalentOut">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="5" />
+              </data>
+            </addData>
+            <position x="384" y="42" />
+            <position x="380" y="42" />
+            <position x="380" y="44" />
+            <position x="190" y="44" />
+            <position x="170" y="44" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="34" inState="1665" outState="0" width="2" height="2" positionX="384" positionY="42" flagType="" dataType="ANY_SAFEBIT" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="IN2" negated="false" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="18" formalParameter="S_EquivalentOut">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="15" />
+              </data>
+            </addData>
+            <position x="384" y="50" />
+            <position x="380" y="50" />
+            <position x="380" y="144" />
+            <position x="194" y="144" />
+            <position x="174" y="144" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="35" inState="1665" outState="0" width="2" height="2" positionX="384" positionY="50" flagType="" dataType="ANY_SAFEBIT" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="AND_S" negated="false" hidden="true">
+        <connectionPointOut>
+          <relPosition x="16" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="36" inState="0" outState="641" width="1" height="2" positionX="408" positionY="42" flagType="" dataType="ANY_SAFEBIT" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <outVariable localId="50" height="4" width="44">
+    <position x="260" y="76" />
+    <expression>CS_Robota_AKTIVNE</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="30" formalParameter="SAFEBOOL_TO_BOOL">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="29" />
+          </data>
+        </addData>
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <outVariable localId="51" height="4" width="50">
+    <position x="264" y="172" />
+    <expression>CS_Pracoviska_AKTIVNE</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="33" formalParameter="SAFEBOOL_TO_BOOL">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="32" />
+          </data>
+        </addData>
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <block localId="61" height="48" width="52" typeName="SF_EmergencyStop_V1_00" instanceName="Zona_CS">
+    <position x="510" y="24" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="Activate">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="63" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="52" inState="128" outState="0" width="10" height="2" positionX="506" positionY="32" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_EStopIn">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="37" formalParameter="AND_S">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="36" />
+              </data>
+            </addData>
+            <position x="506" y="40" />
+            <position x="502" y="40" />
+            <position x="502" y="42" />
+            <position x="408" y="42" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="53" inState="128" outState="0" width="12" height="2" positionX="506" positionY="40" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_StartReset">
+        <connectionPointIn>
+          <relPosition x="0" y="24" />
+          <connection refLocalId="67" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="54" inState="128" outState="0" width="14" height="2" positionX="506" positionY="48" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_AutoReset">
+        <connectionPointIn>
+          <relPosition x="0" y="32" />
+          <connection refLocalId="68" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="55" inState="128" outState="0" width="14" height="2" positionX="506" positionY="56" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="Reset">
+        <connectionPointIn>
+          <relPosition x="0" y="40" />
+          <connection refLocalId="72" formalParameter="AND">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="71" />
+              </data>
+            </addData>
+            <position x="506" y="64" />
+            <position x="502" y="64" />
+            <position x="502" y="92" />
+            <position x="492" y="92" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="56" inState="128" outState="0" width="8" height="2" positionX="506" positionY="64" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Ready">
+        <connectionPointOut>
+          <relPosition x="52" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="57" inState="0" outState="128" width="7" height="2" positionX="566" positionY="32" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_EStopOut">
+        <connectionPointOut>
+          <relPosition x="52" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="58" inState="0" outState="128" width="12" height="2" positionX="566" positionY="40" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="Error">
+        <connectionPointOut>
+          <relPosition x="52" y="24" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="59" inState="0" outState="128" width="6" height="2" positionX="566" positionY="48" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="DiagCode">
+        <connectionPointOut>
+          <relPosition x="52" y="32" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="60" inState="0" outState="128" width="10" height="2" positionX="566" positionY="56" flagType="" dataType="WORD" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <inVariable localId="63" height="4" width="14">
+    <position x="492" y="30" />
+    <expression>TRUE</expression>
+    <connectionPointOut>
+      <relPosition x="14" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="67" height="4" width="24">
+    <position x="482" y="46" />
+    <expression>SAFEFALSE</expression>
+    <connectionPointOut>
+      <relPosition x="24" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="68" height="4" width="24">
+    <position x="482" y="54" />
+    <expression>SAFEFALSE</expression>
+    <connectionPointOut>
+      <relPosition x="24" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <block localId="72" height="24" width="16" typeName="AND">
+    <position x="472" y="84" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="1" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN1" negated="false" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="76" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="69" inState="1665" outState="0" width="2" height="2" positionX="468" positionY="92" flagType="" dataType="ANY_BIT" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="IN2" negated="false" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="77" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="70" inState="1665" outState="0" width="2" height="2" positionX="468" positionY="100" flagType="" dataType="ANY_BIT" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="AND" negated="false" hidden="true">
+        <connectionPointOut>
+          <relPosition x="16" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="71" inState="0" outState="641" width="1" height="2" positionX="492" positionY="92" flagType="" dataType="ANY_BIT" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <inVariable localId="76" height="4" width="30">
+    <position x="438" y="90" />
+    <expression>ResetZony_CS</expression>
+    <connectionPointOut>
+      <relPosition x="30" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="77" height="4" width="44">
+    <position x="424" y="98" />
+    <expression>SpatnaVezba_ZonaCS</expression>
+    <connectionPointOut>
+      <relPosition x="44" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <outVariable localId="78" height="4" width="26">
+    <position x="642" y="38" />
+    <expression>SO_ZonaCS</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="61" formalParameter="S_EStopOut">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="58" />
+          </data>
+        </addData>
+        <position x="642" y="40" />
+        <position x="594" y="40" />
+        <position x="566" y="40" />
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <outVariable localId="79" height="4" width="52">
+    <position x="644" y="60" />
+    <expression>Status_ZonaCS_AKTIVNA</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="61" formalParameter="S_EStopOut">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="58" />
+          </data>
+        </addData>
+        <position x="644" y="62" />
+        <position x="594" y="62" />
+        <position x="594" y="40" />
+        <position x="566" y="40" />
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <block localId="86" height="16" width="42" typeName="SAFEBOOL_TO_BOOL">
+    <position x="606" y="82" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="1" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="61" formalParameter="S_EStopOut">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="58" />
+              </data>
+            </addData>
+            <position x="602" y="90" />
+            <position x="594" y="90" />
+            <position x="594" y="62" />
+            <position x="594" y="40" />
+            <position x="566" y="40" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="84" inState="640" outState="0" width="2" height="2" positionX="602" positionY="90" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="SAFEBOOL_TO_BOOL" hidden="true">
+        <connectionPointOut>
+          <relPosition x="42" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="85" inState="0" outState="640" width="1" height="2" positionX="652" positionY="90" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <block localId="93" height="24" width="18" typeName="TON" instanceName="CasRelease_ZonaCS">
+    <position x="686" y="82" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" negated="false">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="86" formalParameter="SAFEBOOL_TO_BOOL">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="85" />
+              </data>
+            </addData>
+            <position x="682" y="90" />
+            <position x="652" y="90" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="89" inState="129" outState="0" width="5" height="2" positionX="682" positionY="90" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="PT">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="96" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="90" inState="128" outState="0" width="5" height="2" positionX="682" positionY="98" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Q" negated="false">
+        <connectionPointOut>
+          <relPosition x="18" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="91" inState="0" outState="129" width="3" height="2" positionX="708" positionY="90" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="ET">
+        <connectionPointOut>
+          <relPosition x="18" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="92" inState="0" outState="128" width="4" height="2" positionX="708" positionY="98" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <inVariable localId="96" height="4" width="30">
+    <position x="652" y="96" />
+    <expression>TIME#500ms</expression>
+    <connectionPointOut>
+      <relPosition x="30" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <outVariable localId="97" height="4" width="36">
+    <position x="708" y="88" />
+    <expression>Release_ZonaCS</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="93" formalParameter="Q">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="91" />
+          </data>
+        </addData>
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+</FBD>
+{ CodeWorksheet := 'VyblokovanieSafety', Type := '.fbd' }
+﻿<?xml version="1.0" encoding="utf-16" standalone="yes"?><FBD>
+  <addData>
+    <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+      <line localId="18" beginX="82" beginY="28" endX="92" endY="28" />
+      <line localId="19" beginX="92" beginY="28" endX="122" endY="28" />
+      <line localId="20" beginX="92" beginY="36" endX="103" endY="36" />
+      <line localId="21" beginX="92" beginY="28" endX="92" endY="36" />
+    </data>
+  </addData>
+  <block localId="8" height="40" width="70" typeName="SF_Equivalent_V1_00" instanceName="PrepinacVyblokovaniaSafety">
+    <position x="90" y="40" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="Activate">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="10" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="0" inState="128" outState="0" width="10" height="2" positionX="86" positionY="48" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_ChannelA">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="12" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="1" inState="128" outState="0" width="13" height="2" positionX="86" positionY="56" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_ChannelB">
+        <connectionPointIn>
+          <relPosition x="0" y="24" />
+          <connection refLocalId="13" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="2" inState="128" outState="0" width="13" height="2" positionX="86" positionY="64" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="DiscrepancyTime">
+        <connectionPointIn>
+          <relPosition x="0" y="32" />
+          <connection refLocalId="11" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="3" inState="128" outState="0" width="18" height="2" positionX="86" positionY="72" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Ready">
+        <connectionPointOut>
+          <relPosition x="70" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="4" inState="0" outState="128" width="7" height="2" positionX="164" positionY="48" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_EquivalentOut">
+        <connectionPointOut>
+          <relPosition x="70" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="5" inState="0" outState="128" width="17" height="2" positionX="164" positionY="56" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="Error">
+        <connectionPointOut>
+          <relPosition x="70" y="24" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="6" inState="0" outState="128" width="6" height="2" positionX="164" positionY="64" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="DiagCode">
+        <connectionPointOut>
+          <relPosition x="70" y="32" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="7" inState="0" outState="128" width="10" height="2" positionX="164" positionY="72" flagType="" dataType="WORD" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <inVariable localId="10" height="4" width="14">
+    <position x="72" y="46" />
+    <expression>TRUE</expression>
+    <connectionPointOut>
+      <relPosition x="14" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="11" height="4" width="28">
+    <position x="58" y="70" />
+    <expression>TIME#20ms</expression>
+    <connectionPointOut>
+      <relPosition x="28" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="12" height="4" width="56">
+    <position x="30" y="54" />
+    <expression>SI_VyblokovanieSafety_CH1</expression>
+    <connectionPointOut>
+      <relPosition x="56" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="13" height="4" width="56">
+    <position x="30" y="62" />
+    <expression>SI_VyblokovanieSafety_CH2</expression>
+    <connectionPointOut>
+      <relPosition x="56" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <block localId="16" height="16" width="42" typeName="SAFEBOOL_TO_BOOL">
+    <position x="210" y="64" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="1" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="8" formalParameter="S_EquivalentOut">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="5" />
+              </data>
+            </addData>
+            <position x="206" y="72" />
+            <position x="184" y="72" />
+            <position x="184" y="56" />
+            <position x="164" y="56" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="14" inState="640" outState="0" width="2" height="2" positionX="206" positionY="72" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="SAFEBOOL_TO_BOOL" hidden="true">
+        <connectionPointOut>
+          <relPosition x="42" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="15" inState="0" outState="640" width="1" height="2" positionX="256" positionY="72" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <outVariable localId="17" height="4" width="54">
+    <position x="244" y="54" />
+    <expression>Status_ZamkyVyblokovane</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="8" formalParameter="S_EquivalentOut">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="5" />
+          </data>
+        </addData>
+        <position x="244" y="56" />
+        <position x="184" y="56" />
+        <position x="164" y="56" />
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <outVariable localId="22" height="4" width="60">
+    <position x="256" y="70" />
+    <expression>VyblokovanieSafety_AKTIVNE</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="16" formalParameter="SAFEBOOL_TO_BOOL">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="15" />
+          </data>
+        </addData>
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+</FBD>
+{ CodeWorksheet := 'ZonaRobot', Type := '.fbd' }
+﻿<?xml version="1.0" encoding="utf-16" standalone="yes"?><FBD>
+  <addData>
+    <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+      <line localId="15" beginX="36" beginY="22" endX="81" endY="22" />
+      <line localId="20" beginX="111" beginY="22" endX="121" endY="22" />
+      <line localId="21" beginX="121" beginY="22" endX="153" endY="22" />
+      <line localId="22" beginX="121" beginY="43" endX="152" endY="43" />
+      <line localId="23" beginX="121" beginY="22" endX="121" endY="43" />
+      <line localId="33" beginX="177" beginY="43" endX="179" endY="43" />
+      <line localId="34" beginX="179" beginY="43" endX="196" endY="43" />
+      <line localId="35" beginX="179" beginY="62" endX="192" endY="62" />
+      <line localId="36" beginX="179" beginY="43" endX="179" endY="62" />
+    </data>
+  </addData>
+  <block localId="9" height="48" width="52" typeName="SF_EmergencyStop_V1_00" instanceName="Zona_Robot">
+    <position x="166" y="28" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="Activate">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="11" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="0" inState="128" outState="0" width="10" height="2" positionX="162" positionY="36" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_EStopIn">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="14">
+            <position x="162" y="44" />
+            <position x="72" y="44" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="1" inState="128" outState="0" width="12" height="2" positionX="162" positionY="44" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_StartReset">
+        <connectionPointIn>
+          <relPosition x="0" y="24" />
+          <connection refLocalId="12" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="2" inState="128" outState="0" width="14" height="2" positionX="162" positionY="52" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_AutoReset">
+        <connectionPointIn>
+          <relPosition x="0" y="32" />
+          <connection refLocalId="13" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="3" inState="128" outState="0" width="14" height="2" positionX="162" positionY="60" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="Reset">
+        <connectionPointIn>
+          <relPosition x="0" y="40" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="4" inState="128" outState="0" width="8" height="2" positionX="162" positionY="68" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Ready">
+        <connectionPointOut>
+          <relPosition x="52" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="5" inState="0" outState="128" width="7" height="2" positionX="222" positionY="36" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_EStopOut">
+        <connectionPointOut>
+          <relPosition x="52" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="6" inState="0" outState="128" width="12" height="2" positionX="222" positionY="44" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="Error">
+        <connectionPointOut>
+          <relPosition x="52" y="24" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="7" inState="0" outState="128" width="6" height="2" positionX="222" positionY="52" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="DiagCode">
+        <connectionPointOut>
+          <relPosition x="52" y="32" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="8" inState="0" outState="128" width="10" height="2" positionX="222" positionY="60" flagType="" dataType="WORD" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <inVariable localId="11" height="4" width="14">
+    <position x="148" y="34" />
+    <expression>TRUE</expression>
+    <connectionPointOut>
+      <relPosition x="14" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="12" height="4" width="24">
+    <position x="138" y="50" />
+    <expression>SAFETRUE</expression>
+    <connectionPointOut>
+      <relPosition x="24" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="13" height="4" width="24">
+    <position x="138" y="58" />
+    <expression>SAFETRUE</expression>
+    <connectionPointOut>
+      <relPosition x="24" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="14" height="4" width="54">
+    <position x="18" y="42" />
+    <expression>Status_ZamkyVyblokovane</expression>
+    <connectionPointOut>
+      <relPosition x="54" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <outVariable localId="16" height="4" width="32">
+    <position x="306" y="42" />
+    <expression>SO_ZonaRobot</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="9" formalParameter="S_EStopOut">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="6" />
+          </data>
+        </addData>
+        <position x="306" y="44" />
+        <position x="242" y="44" />
+        <position x="222" y="44" />
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <block localId="19" height="16" width="42" typeName="SAFEBOOL_TO_BOOL">
+    <position x="308" y="78" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="1" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="9" formalParameter="S_EStopOut">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="6" />
+              </data>
+            </addData>
+            <position x="304" y="86" />
+            <position x="242" y="86" />
+            <position x="242" y="44" />
+            <position x="222" y="44" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="17" inState="640" outState="0" width="2" height="2" positionX="304" positionY="86" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="SAFEBOOL_TO_BOOL" hidden="true">
+        <connectionPointOut>
+          <relPosition x="42" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="18" inState="0" outState="640" width="1" height="2" positionX="354" positionY="86" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <block localId="28" height="24" width="18" typeName="TON" instanceName="CasRelease_ZonaRobot">
+    <position x="396" y="78" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" negated="false">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="19" formalParameter="SAFEBOOL_TO_BOOL">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="18" />
+              </data>
+            </addData>
+            <position x="392" y="86" />
+            <position x="358" y="86" />
+            <position x="354" y="86" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="24" inState="129" outState="0" width="5" height="2" positionX="392" positionY="86" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="PT">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="30" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="25" inState="128" outState="0" width="5" height="2" positionX="392" positionY="94" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Q" negated="false">
+        <connectionPointOut>
+          <relPosition x="18" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="26" inState="0" outState="129" width="3" height="2" positionX="418" positionY="86" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="ET">
+        <connectionPointOut>
+          <relPosition x="18" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="27" inState="0" outState="128" width="4" height="2" positionX="418" positionY="94" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <inVariable localId="30" height="4" width="30">
+    <position x="362" y="92" />
+    <expression>TIME#500ms</expression>
+    <connectionPointOut>
+      <relPosition x="30" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <outVariable localId="31" height="4" width="42">
+    <position x="418" y="84" />
+    <expression>Release_ZonaRobot</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="28" formalParameter="Q">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="26" />
+          </data>
+        </addData>
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <outVariable localId="32" height="4" width="44">
+    <position x="384" y="122" />
+    <expression>ZonaRobot_AKTIVNA</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="19" formalParameter="SAFEBOOL_TO_BOOL">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="18" />
+          </data>
+        </addData>
+        <position x="384" y="124" />
+        <position x="358" y="124" />
+        <position x="358" y="86" />
+        <position x="354" y="86" />
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+</FBD>
+{ CodeWorksheet := 'ZonaPracovisko', Type := '.fbd' }
+﻿<?xml version="1.0" encoding="utf-16" standalone="yes"?><FBD>
+  <addData>
+    <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+      <line localId="15" beginX="41" beginY="23" endX="89" endY="23" />
+      <line localId="18" beginX="119" beginY="23" endX="127" endY="23" />
+      <line localId="19" beginX="127" beginY="23" endX="155" endY="23" />
+      <line localId="20" beginX="127" beginY="23" endX="127" endY="31" />
+      <line localId="21" beginX="127" beginY="31" endX="154" endY="31" />
+      <line localId="25" beginX="127" beginY="46" endX="144" endY="46" />
+      <line localId="26" beginX="127" beginY="31" endX="127" endY="46" />
+      <line localId="39" beginX="169" beginY="46" endX="174" endY="46" />
+      <line localId="40" beginX="174" beginY="46" endX="192" endY="46" />
+      <line localId="41" beginX="174" beginY="65" endX="192" endY="65" />
+      <line localId="42" beginX="174" beginY="46" endX="174" endY="65" />
+    </data>
+  </addData>
+  <block localId="9" height="48" width="52" typeName="SF_EmergencyStop_V1_00" instanceName="Zona_Pracovisko">
+    <position x="182" y="30" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="Activate">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="11" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="0" inState="128" outState="0" width="10" height="2" positionX="178" positionY="38" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_EStopIn">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="14">
+            <position x="178" y="46" />
+            <position x="82" y="46" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="1" inState="128" outState="0" width="12" height="2" positionX="178" positionY="46" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_StartReset">
+        <connectionPointIn>
+          <relPosition x="0" y="24" />
+          <connection refLocalId="12" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="2" inState="128" outState="0" width="14" height="2" positionX="178" positionY="54" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_AutoReset">
+        <connectionPointIn>
+          <relPosition x="0" y="32" />
+          <connection refLocalId="13" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="3" inState="128" outState="0" width="14" height="2" positionX="178" positionY="62" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="Reset">
+        <connectionPointIn>
+          <relPosition x="0" y="40" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="4" inState="128" outState="0" width="8" height="2" positionX="178" positionY="70" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Ready">
+        <connectionPointOut>
+          <relPosition x="52" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="5" inState="0" outState="128" width="7" height="2" positionX="238" positionY="38" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="S_EStopOut">
+        <connectionPointOut>
+          <relPosition x="52" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="6" inState="0" outState="128" width="12" height="2" positionX="238" positionY="46" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="Error">
+        <connectionPointOut>
+          <relPosition x="52" y="24" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="7" inState="0" outState="128" width="6" height="2" positionX="238" positionY="54" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="DiagCode">
+        <connectionPointOut>
+          <relPosition x="52" y="32" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="8" inState="0" outState="128" width="10" height="2" positionX="238" positionY="62" flagType="" dataType="WORD" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <inVariable localId="11" height="4" width="14">
+    <position x="164" y="36" />
+    <expression>TRUE</expression>
+    <connectionPointOut>
+      <relPosition x="14" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="12" height="4" width="24">
+    <position x="154" y="52" />
+    <expression>SAFETRUE</expression>
+    <connectionPointOut>
+      <relPosition x="24" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="13" height="4" width="24">
+    <position x="154" y="60" />
+    <expression>SAFETRUE</expression>
+    <connectionPointOut>
+      <relPosition x="24" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="14" height="4" width="54">
+    <position x="28" y="44" />
+    <expression>Status_ZamkyVyblokovane</expression>
+    <connectionPointOut>
+      <relPosition x="54" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <outVariable localId="16" height="4" width="50">
+    <position x="310" y="44" />
+    <expression>SO_ZonaPracovisko_CH1</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="9" formalParameter="S_EStopOut">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="6" />
+          </data>
+        </addData>
+        <position x="310" y="46" />
+        <position x="254" y="46" />
+        <position x="238" y="46" />
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <outVariable localId="17" height="4" width="50">
+    <position x="308" y="60" />
+    <expression>SO_ZonaPracovisko_CH2</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="9" formalParameter="S_EStopOut">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="6" />
+          </data>
+        </addData>
+        <position x="308" y="62" />
+        <position x="254" y="62" />
+        <position x="254" y="46" />
+        <position x="238" y="46" />
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <block localId="24" height="16" width="42" typeName="SAFEBOOL_TO_BOOL">
+    <position x="292" y="84" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="1" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" hidden="true">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="9" formalParameter="S_EStopOut">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="6" />
+              </data>
+            </addData>
+            <position x="288" y="92" />
+            <position x="254" y="92" />
+            <position x="254" y="62" />
+            <position x="254" y="46" />
+            <position x="238" y="46" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="22" inState="640" outState="0" width="2" height="2" positionX="288" positionY="92" flagType="" dataType="SAFEBOOL" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="SAFEBOOL_TO_BOOL" hidden="true">
+        <connectionPointOut>
+          <relPosition x="42" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="23" inState="0" outState="640" width="1" height="2" positionX="338" positionY="92" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <block localId="31" height="24" width="18" typeName="TON" instanceName="CasRelease_Pracoviska_CH1">
+    <position x="388" y="84" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" negated="false">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="24" formalParameter="SAFEBOOL_TO_BOOL">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="23" />
+              </data>
+            </addData>
+            <position x="384" y="92" />
+            <position x="348" y="92" />
+            <position x="338" y="92" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="27" inState="129" outState="0" width="5" height="2" positionX="384" positionY="92" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="PT">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="43" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="28" inState="128" outState="0" width="5" height="2" positionX="384" positionY="100" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Q" negated="false">
+        <connectionPointOut>
+          <relPosition x="18" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="29" inState="0" outState="129" width="3" height="2" positionX="410" positionY="92" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="ET">
+        <connectionPointOut>
+          <relPosition x="18" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="30" inState="0" outState="128" width="4" height="2" positionX="410" positionY="100" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <block localId="37" height="24" width="18" typeName="TON" instanceName="CasRelease_Pracoviska_CH2">
+    <position x="388" y="122" />
+    <addData>
+      <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+        <fbData fbFuType="0" />
+      </data>
+    </addData>
+    <inputVariables>
+      <variable formalParameter="IN" negated="false">
+        <connectionPointIn>
+          <relPosition x="0" y="8" />
+          <connection refLocalId="24" formalParameter="SAFEBOOL_TO_BOOL">
+            <addData>
+              <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+                <connectedFormalparameter refLocalId="23" />
+              </data>
+            </addData>
+            <position x="384" y="130" />
+            <position x="348" y="130" />
+            <position x="348" y="92" />
+            <position x="338" y="92" />
+          </connection>
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="33" inState="129" outState="0" width="5" height="2" positionX="384" positionY="130" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="PT">
+        <connectionPointIn>
+          <relPosition x="0" y="16" />
+          <connection refLocalId="44" />
+        </connectionPointIn>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="34" inState="128" outState="0" width="5" height="2" positionX="384" positionY="138" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </inputVariables>
+    <inOutVariables />
+    <outputVariables>
+      <variable formalParameter="Q" negated="false">
+        <connectionPointOut>
+          <relPosition x="18" y="8" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="35" inState="0" outState="129" width="3" height="2" positionX="410" positionY="130" flagType="" dataType="BOOL" />
+          </data>
+        </addData>
+      </variable>
+      <variable formalParameter="ET">
+        <connectionPointOut>
+          <relPosition x="18" y="16" />
+        </connectionPointOut>
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <fp localId="36" inState="0" outState="128" width="4" height="2" positionX="410" positionY="138" flagType="" dataType="TIME" />
+          </data>
+        </addData>
+      </variable>
+    </outputVariables>
+  </block>
+  <inVariable localId="43" height="4" width="30">
+    <position x="354" y="98" />
+    <expression>TIME#500ms</expression>
+    <connectionPointOut>
+      <relPosition x="30" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <inVariable localId="44" height="4" width="30">
+    <position x="354" y="136" />
+    <expression>TIME#500ms</expression>
+    <connectionPointOut>
+      <relPosition x="30" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <outVariable localId="45" height="4" width="60">
+    <position x="410" y="90" />
+    <expression>Release_ZonaPracovisko_CH1</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="31" formalParameter="Q">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="29" />
+          </data>
+        </addData>
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <outVariable localId="46" height="4" width="60">
+    <position x="410" y="128" />
+    <expression>Release_ZonaPracovisko_CH2</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="37" formalParameter="Q">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="35" />
+          </data>
+        </addData>
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+</FBD>
+END_PROGRAM

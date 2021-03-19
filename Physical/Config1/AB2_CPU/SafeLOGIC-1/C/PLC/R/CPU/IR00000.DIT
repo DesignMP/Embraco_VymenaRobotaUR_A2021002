@@ -1,0 +1,178 @@
+(*
+T: RESOURCE CPU
+FW: NO
+CI#: 0
+QSL: 28
+QVE: 28
+QVPC: 28
+QPar: 0
+QFBI: 0
+*)
+@V 1 2 0
+SI_CS_Robot_CH1	1	VAR_GLOBAL	@TYP:43
+%SIX 16.0		     
+
+;
+
+@V 1 3 0
+SI_CS_Robot_CH2	2	VAR_GLOBAL	@TYP:43
+%SIX 16.1		     
+
+;
+
+@V 1 4 0
+SI_VyblokovanieSafety_CH1	3	VAR_GLOBAL	@TYP:43
+%SIX 16.2		     
+
+;
+
+@V 1 5 0
+SI_VyblokovanieSafety_CH2	4	VAR_GLOBAL	@TYP:43
+%SIX 16.3		     
+
+;
+
+@V 1 6 0
+SI_CS_Pracovisko_CH1	5	VAR_GLOBAL	@TYP:43
+%SIX 16.4		     
+
+;
+
+@V 1 7 0
+SI_CS_Pracovisko_CH2	6	VAR_GLOBAL	@TYP:43
+%SIX 16.5		     
+
+;
+
+@V 1 8 0
+SI_Pracovisko_SpatnaVazba_CH1	7	VAR_GLOBAL	@TYP:43
+%SIX 16.6		     
+
+;
+
+@V 1 9 0
+SI_Pracovisko_SpatnaVazba_CH2	8	VAR_GLOBAL	@TYP:43
+%SIX 16.7		     
+
+;
+
+@V 1 11 0
+SO_ZonaCS	9	VAR_GLOBAL	@TYP:43
+%SQX 12.0		     
+
+;
+
+@V 1 12 0
+SO_ZonaRobot	10	VAR_GLOBAL	@TYP:43
+%SQX 12.1		     
+
+;
+
+@V 1 13 0
+SO_ZonaPracovisko_CH1	11	VAR_GLOBAL	@TYP:43
+%SQX 12.2		     
+
+;
+
+@V 1 14 0
+SO_ZonaPracovisko_CH2	12	VAR_GLOBAL	@TYP:43
+%SQX 12.3		     
+
+;
+
+@V 1 15 0
+Release_ZonaCS	13	VAR_GLOBAL	@TYP:1
+%NSQX 2.0		     
+
+;
+
+@V 1 16 0
+Release_ZonaRobot	14	VAR_GLOBAL	@TYP:1
+%NSQX 2.1		     
+
+;
+
+@V 1 17 0
+Release_ZonaPracovisko_CH1	15	VAR_GLOBAL	@TYP:1
+%NSQX 2.2		     
+
+;
+
+@V 1 18 0
+Release_ZonaPracovisko_CH2	16	VAR_GLOBAL	@TYP:1
+%NSQX 2.3		     
+
+;
+
+@V 1 20 0
+ResetZony_CS	17	VAR_GLOBAL	@TYP:1
+%NSIX 0.0		     
+
+;
+
+@V 1 21 0
+ResetZony_Robot	18	VAR_GLOBAL	@TYP:1
+%NSIX 0.1		     
+
+;
+
+@V 1 22 0
+SpatnaVezba_ZonaCS	19	VAR_GLOBAL	@TYP:1
+%NSIX 0.2		     
+
+;
+
+@V 1 23 0
+SpatnaVezba_ZonaRobot	20	VAR_GLOBAL	@TYP:1
+%NSIX 0.3		     
+
+;
+
+@V 1 25 0
+SafetyPLC_Nabehlo	21	VAR_GLOBAL	@TYP:1
+%NSQX 0.0		     
+
+;
+
+@V 1 26 0
+ZonaCS_AKTIVNA	22	VAR_GLOBAL	@TYP:1
+%NSQX 0.1		     
+
+;
+
+@V 1 27 0
+ZonaRobot_AKTIVNA	23	VAR_GLOBAL	@TYP:1
+%NSQX 0.2		     
+
+;
+
+@V 1 28 0
+CS_Pracoviska_AKTIVNE	24	VAR_GLOBAL	@TYP:1
+%NSQX 0.3		     
+
+;
+
+@V 1 29 0
+CS_Robota_AKTIVNE	25	VAR_GLOBAL	@TYP:1
+%NSQX 0.4		     
+
+;
+
+@V 1 30 0
+VyblokovanieSafety_AKTIVNE	26	VAR_GLOBAL	@TYP:1
+%NSQX 0.5		     
+
+;
+
+@V 1 32 0
+Status_ZonaCS_AKTIVNA	27	VAR_GLOBAL	@TYP:43
+		     
+
+;
+
+@V 1 33 0
+Status_ZamkyVyblokovane	28	VAR_GLOBAL	@TYP:43
+		     
+
+;
+

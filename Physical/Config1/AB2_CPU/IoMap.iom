@@ -187,4 +187,5 @@ VAR_CONFIG
 	Cyclic#1.Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVPRED AT %QX."AB7_16DO".DigitalOutput13;
 	Cyclic#1.Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVZAD AT %QX."AB7_16DO".DigitalOutput14;
 	Cyclic#1.Bruska.OUT.Stav_PoruchaMotoraUpinacejHlavy AT %QX."AB7_16DO".DigitalOutput15;
+	Cyclic#1.Safety.STAV.VyblokovanieSafety_AKTIVNE AT %IX."AB4_SafetyMaster".BOOL006;
 END_VAR

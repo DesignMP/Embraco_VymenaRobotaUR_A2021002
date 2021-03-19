@@ -18,6 +18,7 @@
     <Object Type="Package">DTM</Object>
     <Object Type="Package">ExternalHardware</Object>
     <Object Type="Package">VC</Object>
+    <Object Type="File">SafeLOGIC-1.swt</Object>
   </Objects>
   <Configuration ModuleId="X20CP0483">
     <AutomationRuntime Version="C4.73" />
