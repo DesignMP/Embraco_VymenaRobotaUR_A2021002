@@ -163,10 +163,10 @@ VAR_CONFIG
 	Cyclic#1.Safety.SpatnaVazba_ZonaCS AT %IX."AB5_16DI".DigitalInput06;
 	Cyclic#1.Safety.SpatnaVazba_ZonaRobot AT %IX."AB5_16DI".DigitalInput07;
 	Cyclic#1.Safety.SpatnaVazba_ZonaPracovisko AT %IX."AB5_16DI".DigitalInput08;
-	Cyclic#1.Robot.IN.ManipulUchopovac_Zatvoreny_MS1 AT %IX."AB5_16DI".DigitalInput09;
-	Cyclic#1.Robot.IN.ManipulUchopovac_Otvoreny_MS2 AT %IX."AB5_16DI".DigitalInput10;
-	Cyclic#1.Robot.IN.OdkladaciUchopovac_Zatvoreny_MS3 AT %IX."AB5_16DI".DigitalInput11;
-	Cyclic#1.Robot.IN.OdkladaciUchopovac_Otvoreny_MS4 AT %IX."AB5_16DI".DigitalInput12;
+	Cyclic#1.Robot.IN.DlhyUchopovac_Zatvoreny_MS1 AT %IX."AB5_16DI".DigitalInput09;
+	Cyclic#1.Robot.IN.DlhyUchopovac_Otvoreny_MS2 AT %IX."AB5_16DI".DigitalInput10;
+	Cyclic#1.Robot.IN.KratkyUchopovac_Zatvoreny_MS3 AT %IX."AB5_16DI".DigitalInput11;
+	Cyclic#1.Robot.IN.KratkyUchopovac_Otvoreny_MS4 AT %IX."AB5_16DI".DigitalInput12;
 	Cyclic#1.Zariadenie.IN.Paletka_PritomnostKusu_OS1 AT %IX."AB6_16DI".DigitalInput01;
 	Cyclic#1.Zariadenie.IN.VystupDoprav_PritomnostKusu_OS2 AT %IX."AB6_16DI".DigitalInput02;
 	Cyclic#1.Bruska.IN.ReferencnySnimac_IS1 AT %IX."AB6_16DI".DigitalInput03;
@@ -175,8 +175,8 @@ VAR_CONFIG
 	Cyclic#1.Robot.OUT.CisloAktualnejPozicie_Bit1 AT %QX."AB7_16DO".DigitalOutput02;
 	Cyclic#1.Robot.OUT.CisloAktualnejPozicie_Bit2 AT %QX."AB7_16DO".DigitalOutput03;
 	Cyclic#1.Robot.OUT.CisloAktualnejPozicie_Bit3 AT %QX."AB7_16DO".DigitalOutput04;
-	Cyclic#1.Robot.OUT.ZatvorManipulacnyUchopovac AT %QX."AB7_16DO".DigitalOutput05;
-	Cyclic#1.Robot.OUT.ZatvorOdkladaciUchopovac AT %QX."AB7_16DO".DigitalOutput07;
+	Cyclic#1.Robot.OUT.ZatvorDlhyUchopovac_YV1 AT %QX."AB7_16DO".DigitalOutput05;
+	Cyclic#1.Robot.OUT.ZatvorKratkyUchopovac_YV2 AT %QX."AB7_16DO".DigitalOutput07;
 	Cyclic#1.Robot.OUT.VystupnyDopravnikNalozeny AT %QX."AB7_16DO".DigitalOutput08;
 	Cyclic#1.Zariadenie.OUT.Majak_ZeleneSvetlo AT %QX."AB7_16DO".DigitalOutput09;
 	Cyclic#1.Zariadenie.OUT.Majak_ZlteSvetlo AT %QX."AB7_16DO".DigitalOutput10;

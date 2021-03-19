@@ -32,6 +32,7 @@ SequenceControl(&SC_Robot);
 
 
 __AS__Action__ProfinetKomunikaciaRobot();
+__AS__Action__OvladanieGripra();
 
 
 
@@ -53,6 +54,7 @@ case 0:{
 (Robot.Manual=0);
 (Robot.Reset=0);
 (Robot.STAV.PoINIT=0);
+(SC_OvlGripra.Step=0);
 (Robot.KOM_OUT.Bruska_OdoberCap=0);
 (Robot.KOM_OUT.Bruska_VlozCap=0);
 (Robot.KOM_OUT.Dopravnik_PolozCap=0);
@@ -445,14 +447,14 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 }break;}
 
 
-}imp2_case1_26:imp2_endcase1_0:;}
-#line 443 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
-#line 445 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
+}imp3_case1_26:imp3_endcase1_0:;}
+#line 445 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 447 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 448 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 450 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/ProfinetKomunikaciaRobot.st"
 static void __AS__Action__ProfinetKomunikaciaRobot(void){
 {
@@ -467,6 +469,10 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 (Robot.KOM_IN.Stav_RobotCinnostUkoncena=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit1);
 (Robot.KOM_IN.Stav_Dopravnik_Plny=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit2);
 (Robot.KOM_IN.Stav_RobotDrziCap=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit3);
+(Robot.KOM_IN.Gripper_DlhyUchopov_OTVORENY=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit4);
+(Robot.KOM_IN.Gripper_DlhyUchopov_ZATVORENY=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit5);
+(Robot.KOM_IN.Gripper_KratkyUchopov_OTVORENY=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit6);
+(Robot.KOM_IN.Gripper_KratkyUchopov_ZATVORENY=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit7);
 
 
 
@@ -491,6 +497,11 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit1=Robot.KOM_OUT.Otacac_PresunDoCakacejPozicie);
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit2=Robot.KOM_OUT.Bruska_PresunDoCakacejPozicie);
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit3=Robot.KOM_OUT.Dopravnik_PresunDoCakacejPozicie);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit4=Robot.KOM_OUT.Gripper_OtvorDlhyUchopovac);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit5=Robot.KOM_OUT.Gripper_ZatvorDlhyUchopovac);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit6=Robot.KOM_OUT.Gripper_OtvorKratkyUchopovac);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit7=Robot.KOM_OUT.Gripper_ZatvorKratkyUchopovac);
+
 
 (Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3]=Robot.KOM_OUT.PocetNalozenychCapov);
 
@@ -498,7 +509,152 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 
 
 }}
-#line 450 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 452 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/OvladanieGripra.st"
+static void __AS__Action__OvladanieGripra(void){
+{
+
+SequenceControl(&SC_OvlGripra);
+
+
+switch(SC_OvlGripra.Step){
+
+case 0:{
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"0 - Nulovanie"; for(zzIndex=0; zzIndex<13l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+(Robot.RR_OtvorDlhyUchopovac=0);
+(Robot.RR_ZatvorDlhyUchopovac=0);
+(Robot.RR_OtvorKratkyUchopovac=0);
+(Robot.RR_ZatvorKratkyUchopovac=0);
+
+if((((unsigned long)(unsigned short)SC_Robot.Step!=(unsigned long)(unsigned short)0))){
+(SC_OvlGripra.ResetStep=1);
+(SC_OvlGripra.Step=1);
+}
+
+
+}break;case 1:{
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"1 - Rozhodnutie o cinnosti"; for(zzIndex=0; zzIndex<26l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+if(Robot.RR_OtvorDlhyUchopovac){
+(SC_OvlGripra.Step=10);
+}else if(Robot.RR_ZatvorDlhyUchopovac){
+(SC_OvlGripra.Step=20);
+}else if(Robot.RR_OtvorKratkyUchopovac){
+(SC_OvlGripra.Step=30);
+}else if(Robot.RR_ZatvorKratkyUchopovac){
+(SC_OvlGripra.Step=40);
+}else if((Robot.Robot_OtvorDlhyUchopovac&~Edge1638500000&1?((Edge1638500000=Robot.Robot_OtvorDlhyUchopovac&1),1):((Edge1638500000=Robot.Robot_OtvorDlhyUchopovac&1),0))){
+(SC_OvlGripra.Step=10);
+}else if((Robot.Robot_ZatvorDlhyUchopovac&~Edge1638500001&1?((Edge1638500001=Robot.Robot_ZatvorDlhyUchopovac&1),1):((Edge1638500001=Robot.Robot_ZatvorDlhyUchopovac&1),0))){
+(SC_OvlGripra.Step=20);
+}else if((Robot.Robot_OtvorKratkyUchopovac&~Edge1638500002&1?((Edge1638500002=Robot.Robot_OtvorKratkyUchopovac&1),1):((Edge1638500002=Robot.Robot_OtvorKratkyUchopovac&1),0))){
+(SC_OvlGripra.Step=30);
+}else if((Robot.Robot_ZatvorKratkyUchopovac&~Edge1638500003&1?((Edge1638500003=Robot.Robot_ZatvorKratkyUchopovac&1),1):((Edge1638500003=Robot.Robot_ZatvorKratkyUchopovac&1),0))){
+(SC_OvlGripra.Step=40);
+}
+
+
+}break;case 10:{
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"10 - Otvorenie dlheho uchopovaca na gripri robota"; for(zzIndex=0; zzIndex<49l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+(SC_OvlGripra.IdleTime.PT=3000);
+(SC_OvlGripra.AlarmTime.PT=3000);
+
+if(Robot.Automat){
+(SC_OvlGripra.AlarmTime.IN=1);
+}else{
+(SC_OvlGripra.IdleTime.IN=1);
+}
+
+if((SC_OvlGripra.Switch1^1)){
+(Robot.OUT.ZatvorDlhyUchopovac_YV1=0);
+(SC_OvlGripra.Switch1=1);
+}
+
+if((Robot.IN.DlhyUchopovac_Otvoreny_MS2|SC_OvlGripra.IdleTime.Q)){
+(SC_OvlGripra.ResetStep=1);
+(SC_OvlGripra.Step=0);
+}else if(SC_OvlGripra.AlarmTime.Q){
+(Alarmy[9]=1);
+(PoruchaRobota=1);
+}
+
+
+}break;case 20:{
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"20 - Zatvorenie dlheho uchopovaca na gripri robota"; for(zzIndex=0; zzIndex<50l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+(SC_OvlGripra.IdleTime.PT=3000);
+(SC_OvlGripra.AlarmTime.PT=3000);
+
+(SC_OvlGripra.IdleTime.IN=(Robot.IN.DlhyUchopovac_Otvoreny_MS2^1));
+(SC_OvlGripra.AlarmTime.IN=Robot.IN.DlhyUchopovac_Otvoreny_MS2);
+
+if((SC_OvlGripra.Switch1^1)){
+(Robot.OUT.ZatvorDlhyUchopovac_YV1=1);
+(SC_OvlGripra.Switch1=1);
+}
+
+if((Robot.IN.DlhyUchopovac_Zatvoreny_MS1|SC_OvlGripra.IdleTime.Q)){
+(SC_OvlGripra.ResetStep=1);
+(SC_OvlGripra.Step=0);
+}else if(SC_OvlGripra.AlarmTime.Q){
+(Alarmy[10]=1);
+(PoruchaRobota=1);
+}
+
+}break;case 30:{
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"30 - Otvorenie kratkeho uchopovaca na gripri robota"; for(zzIndex=0; zzIndex<51l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+(SC_OvlGripra.IdleTime.PT=3000);
+(SC_OvlGripra.AlarmTime.PT=3000);
+
+if(Robot.Automat){
+(SC_OvlGripra.AlarmTime.IN=1);
+}else{
+(SC_OvlGripra.IdleTime.IN=1);
+}
+
+if((SC_OvlGripra.Switch1^1)){
+(Robot.OUT.ZatvorKratkyUchopovac_YV2=0);
+(SC_OvlGripra.Switch1=1);
+}
+
+if((Robot.IN.KratkyUchopovac_Otvoreny_MS4|SC_OvlGripra.IdleTime.Q)){
+(SC_OvlGripra.ResetStep=1);
+(SC_OvlGripra.Step=0);
+}else if(SC_OvlGripra.AlarmTime.Q){
+(Alarmy[11]=1);
+(PoruchaRobota=1);
+}
+
+
+}break;case 40:{
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"40 - Zatvorenie kratkeho uchopovaca na gripri robota"; for(zzIndex=0; zzIndex<52l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+(SC_OvlGripra.IdleTime.PT=3000);
+(SC_OvlGripra.AlarmTime.PT=3000);
+
+(SC_OvlGripra.IdleTime.IN=(Robot.IN.KratkyUchopovac_Otvoreny_MS4^1));
+(SC_OvlGripra.AlarmTime.IN=Robot.IN.KratkyUchopovac_Otvoreny_MS4);
+
+if((SC_OvlGripra.Switch1^1)){
+(Robot.OUT.ZatvorKratkyUchopovac_YV2=1);
+(SC_OvlGripra.Switch1=1);
+}
+
+if((Robot.IN.KratkyUchopovac_Zatvoreny_MS3|SC_OvlGripra.IdleTime.Q)){
+(SC_OvlGripra.ResetStep=1);
+(SC_OvlGripra.Step=0);
+}else if(SC_OvlGripra.AlarmTime.Q){
+(Alarmy[12]=1);
+(PoruchaRobota=1);
+}
+
+
+}break;}
+
+
+
+
+
+
+}imp16385_case0_5:imp16385_endcase0_0:;}
+#line 452 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
@@ -514,24 +670,24 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/sys_lib/sys_lib.typ\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsSafety/AsSafety.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsXml/AsXml.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsZip/AsZip.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AxisLib/Types.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/SC/Types.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxisError.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxisCfg.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBase.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBaseCfg.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAcpAx/McAcpAx.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAcpAx/McAcpAxCfg.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAxCfg.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxisCfg.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxisError.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipe.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipeAlarm.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipeError.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/Runtime/runtime.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/Operator/operator.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsIecCon/AsIecCon.fun\\\" scope \\\"global\\\"\\n\"");
@@ -543,17 +699,17 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/sys_lib/sys_lib.fun\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsSafety/AsSafety.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsXml/AsXml.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsZip/AsZip.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AxisLib/AxisLib.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/SC/SC.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBase.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAcpAx/McAcpAx.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipe.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/DatumCasPLC/DatumCasGlobal.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Temp/Includes/AS_TempDecl/Config1/GlobalComponents/McElements.var\\\" scope \\\"global\\\"\\n\"");
@@ -567,17 +723,18 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/sys_lib/sys_lib.var\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsSafety/AsSafety.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsXml/AsXml.var\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsZip/AsZip.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AxisLib/Constants.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/SC/Constants.var\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.var\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBase.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAcpAx/McAcpAx.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Program/Robot/Types.typ\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Program/Robot/Variables.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/Robot/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"plcreplace \\\"D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/Robot/Main.st.c\\\" \\\"D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Temp/Objects/Config1/AB2_CPU/Robot/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".previous");

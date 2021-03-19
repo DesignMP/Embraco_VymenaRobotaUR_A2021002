@@ -20,13 +20,13 @@
               <w1:Argument name="verticalPos" type="VPos" index="0" required="false" defaultValue="middle">
                 <w1:Description>Vertical position in reference to the HMI application.</w1:Description>
               </w1:Argument>
-              <w1:Argument name="headerText" type="string" index="0" required="false" localizable="true" defaultValue="">
+              <w1:Argument name="headerText" type="String" index="0" required="false" localizable="true" defaultValue="">
                 <w1:Description>Definition of a customized title as a string or text ID.</w1:Description>
               </w1:Argument>
               <w1:Argument name="autoClose" type="Boolean" index="0" required="false" defaultValue="false">
                 <w1:Description>Closes the dialog box by clicking outside of it.</w1:Description>
               </w1:Argument>
-              <w1:Argument name="target" type="string" index="0" required="false" deprecated="true" defaultValue="">
+              <w1:Argument name="target" type="String" index="0" required="false" deprecated="true" defaultValue="">
                 <w1:Description>This argument is actually wrong and not supported by OpenDialog. For compatibility reasons it is not removed but marked as deprecated.</w1:Description>
               </w1:Argument>
               <w1:Argument name="autoRaise" type="brease.enum.AutoRaise" index="0" required="false" defaultValue="enabled">
@@ -50,10 +50,10 @@
               <w1:Argument name="type" type="brease.enum.MessageBoxType" index="0" required="true">
                 <w1:Description>Defines which buttons are shown in the button area of the message box.</w1:Description>
               </w1:Argument>
-              <w1:Argument name="message" type="string" index="0" required="true" localizable="true">
+              <w1:Argument name="message" type="String" index="0" required="true" localizable="true">
                 <w1:Description>Text to be shown in the main area of the message box.</w1:Description>
               </w1:Argument>
-              <w1:Argument name="header" type="string" index="0" required="true" localizable="true">
+              <w1:Argument name="header" type="String" index="0" required="true" localizable="true">
                 <w1:Description>Text to be shown in the header of the message box.</w1:Description>
               </w1:Argument>
               <w1:Argument name="icon" type="brease.enum.MessageBoxIcon" index="0" required="false" defaultValue="None">
@@ -118,10 +118,10 @@
           <w1:Method name="Login" read="false">
             <w1:Description>This action is used to log in a certain user.</w1:Description>
             <w1:Arguments>
-              <w1:Argument name="userName" type="string" index="0" required="true">
+              <w1:Argument name="userName" type="String" index="0" required="true">
                 <w1:Description>Username</w1:Description>
               </w1:Argument>
-              <w1:Argument name="password" type="string" index="0" required="true">
+              <w1:Argument name="password" type="String" index="0" required="true">
                 <w1:Description>Password</w1:Description>
               </w1:Argument>
             </w1:Arguments>
@@ -130,10 +130,18 @@
           <w1:Method name="Logout" read="false">
             <w1:Description>This action logs out to the default user.</w1:Description>
           </w1:Method>
+          <w1:Method name="OpenChangePasswordDialog" read="false">
+            <w1:Description>This action opens a dialog to allow the user to change password.</w1:Description>
+            <w1:Arguments>
+              <w1:Argument name="userName" type="String" index="0" required="false" defaultValue="">
+                <w1:Description>User name. If not set, the user has to type in the userName.</w1:Description>
+              </w1:Argument>
+            </w1:Arguments>
+          </w1:Method>
           <AdvancedMethod name="SetLanguage" read="false">
             <w1:Description>This action switches the language.</w1:Description>
             <w1:Arguments>
-              <w1:Argument name="value" type="string" index="0" required="true">
+              <w1:Argument name="value" type="String" index="0" required="true">
                 <w1:Description>Language code of the language that should be set.</w1:Description>
               </w1:Argument>
             </w1:Arguments>
@@ -179,10 +187,10 @@
               <w1:Argument name="verticalPos" type="brease.enum.VerticalPosition" index="0" required="false" defaultValue="top">
                 <w1:Description>Vertical position in reference to the HMI application.</w1:Description>
               </w1:Argument>
-              <w1:Argument name="target" type="string" index="0" required="true">
+              <w1:Argument name="target" type="CombinedContentWidgetId" index="0" required="true">
                 <w1:Description>ID of the widget to be referenced.</w1:Description>
               </w1:Argument>
-              <w1:Argument name="headerText" type="string" index="0" required="false" localizable="true" defaultValue="">
+              <w1:Argument name="headerText" type="String" index="0" required="false" localizable="true" defaultValue="">
                 <w1:Description>Definition of a customized title as a string or text ID.</w1:Description>
               </w1:Argument>
               <w1:Argument name="autoClose" type="Boolean" index="0" required="false" defaultValue="false">
@@ -207,6 +215,21 @@
                 <w1:Description>Enable/disable tooltip mode.</w1:Description>
               </w1:Argument>
             </w1:Arguments>
+          </w1:Method>
+          <w1:Method name="ChangePassword" read="false">
+            <w1:Description>This action changes to password of the defined user.</w1:Description>
+            <w1:Arguments>
+              <w1:Argument name="userName" type="String" index="0" required="false" defaultValue="">
+                <w1:Description>User name. If not set, the currently logged in user is used.</w1:Description>
+              </w1:Argument>
+              <w1:Argument name="oldPassword" type="String" index="0" required="true">
+                <w1:Description>Old password.</w1:Description>
+              </w1:Argument>
+              <w1:Argument name="newPassword" type="String" index="0" required="true">
+                <w1:Description>New password.</w1:Description>
+              </w1:Argument>
+            </w1:Arguments>
+            <w1:Result type="Integer" />
           </w1:Method>
         </Methods>
       </MethodGroup>
@@ -327,6 +350,38 @@
         <w1:Description>Triggered when the tooltip mode is deactivated.</w1:Description>
         <w1:Arguments />
       </w1:Event>
+      <w1:Event name="LoggedOut">
+        <w1:Description>Triggered when the user was logged out by the system.</w1:Description>
+        <w1:Arguments>
+          <w1:Argument name="userName" type="String" index="0" required="true">
+            <w1:Description>Logged out user.</w1:Description>
+          </w1:Argument>
+		  <w1:Argument name="reason" type="String" index="0" required="true">
+            <w1:Description>Reason of logout.</w1:Description>
+          </w1:Argument>
+        </w1:Arguments>
+      </w1:Event>
+      <w1:Event name="PasswordChangeRequired">
+        <w1:Description>Triggered when a login failed due to an expired password.</w1:Description>
+        <w1:Arguments>
+          <w1:Argument name="userName" type="String" index="0" required="true">
+            <w1:Description>User which requires a password change.</w1:Description>
+          </w1:Argument>
+        </w1:Arguments>
+      </w1:Event>
+    <w1:Event name="ChangePasswordDialogClosed">
+      <w1:Description>Triggered when a password change via the ChangePasswordDialog is finished.</w1:Description>
+      <w1:Arguments>
+        <w1:Argument name="userName" type="String" index="0" required="true">
+          <w1:Description>User for which the password change happened.</w1:Description>
+        </w1:Argument>
+        <w1:Argument name="result" type="Integer" index="0" required="true">
+          <w1:Description>Status with which the dialog was closed.</w1:Description>
+        </w1:Argument>
+      </w1:Arguments>
+    </w1:Event>
     </w1:Events>
+
+    
   </EventsActionsDefinition>
 </EventsActionsDefinitions>

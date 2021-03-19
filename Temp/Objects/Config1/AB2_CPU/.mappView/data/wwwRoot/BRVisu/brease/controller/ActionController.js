@@ -12,13 +12,13 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
     'use strict';
 
     /**
-    * @class brease.controller.ActionController
-    * @extends core.javascript.Object
-    * Main controller to handle actions
-    * It provides methods handle actions
-    * 
-    * @singleton
-    */
+                * @class brease.controller.ActionController
+                * @extends core.javascript.Object
+                * Main controller to handle actions
+                * It provides methods handle actions
+                * 
+                * @singleton
+                */
     var ActionController = function ActionController() {
             this.serverActionHandler = _serverActionHandler.bind(this);
         },
@@ -42,7 +42,7 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
 
         var action = e.detail,
             type = _getActionType(action);
-        //console.log('[' +action.actionId + ']' +action.action + ':' +JSON.stringify(action.actionArgs));
+            //console.log('[' +action.actionId + ']' +action.action + ':' +JSON.stringify(action.actionArgs));
         try {
             switch (type) {
                 case 'widget':
@@ -169,6 +169,10 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
                 break;
             case ('clientSystem.Action.ShowTooltips'):
                 _runShowTooltipsAction(action);
+                break;
+
+            case ('clientSystem.Action.OpenChangePasswordDialog'):
+                _runOpenChangePasswordDialog(action);
                 break;
 
             default:
@@ -329,30 +333,31 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
 
     function _parseValue(value, argName, WidgetClass, actionName) {
 
-        // non string: value is returned as is
+        // if value is no string: value is returned unmodified  
         if (!Utils.isString(value)) {
             return value;
         }
 
-        // if we find no meta information: value is returned as is
+        // if we find no meta information: value is returned unmodified 
         if (WidgetClass.meta === undefined || WidgetClass.meta.actions === undefined || WidgetClass.meta.actions[actionName] === undefined) {
             return value;
         }
 
         var param = WidgetClass.meta.actions[actionName].parameter[argName];
 
-        // if the type is no object type: value is returned as is
+        // if the type is no object type: value is returned unmodified 
         if (!param || Types.objectTypes.indexOf(param.type) === -1) {
             return value;
         }
 
         // try to convert the string to an object
-        try {
-            value = JSON.parse(value.replace(/'/g, '"'));
-        } catch (e) {
-            console.iatWarn('illegal data in attribute ' + argName + ' for action ' + actionName);
+        var obj = Utils.parsePseudoJSON(value, 'illegal data in attribute ' + argName + ' for action ' + actionName);
+        if (obj) {
+            // if the string can be converted to an object: object is returned
+            return obj;
         }
 
+        // if the string cannot be converted to an object: value is returned unmodified 
         return value;
     }
 
@@ -510,6 +515,14 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
         });
     }
 
+    function _runOpenChangePasswordDialog(action) {
+
+        $.when(brease.overlayController.openChangePasswordDialog(action.actionArgs.userName)).then(function (result) {
+            _processActionResponse(result, action.actionId, true);
+        });
+
+    }
+
     function _runChangeThemeAction(action) {
         var args = action.actionArgs;
         $.when(brease.pageController.setTheme(args.theme)).then(function () {
@@ -572,12 +585,12 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
     }
 
     /**
-     * @method _processActionResponse
-     * Sends the action response to the server.  
-     * @param {ANY} result Return value of the action. If no return value is available, this is the same value as 'success'. If an action is rejected, result=null.
-     * @param {Integer} id  Id of the action
-     * @param {Boolean} success  Indicator if action was successful
-     */
+                 * @method _processActionResponse
+                 * Sends the action response to the server.  
+                 * @param {ANY} result Return value of the action. If no return value is available, this is the same value as 'success'. If an action is rejected, result=null.
+                 * @param {Integer} id  Id of the action
+                 * @param {Boolean} success  Indicator if action was successful
+                 */
     function _processActionResponse(result, id, success) {
         var res = {
             actionId: id,
@@ -586,7 +599,7 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
                 success: success
             }
         };
-        //console.log('[' + id + ']success=' + success + ', result=' + result);
+            //console.log('[' + id + ']success=' + success + ', result=' + result);
         _runtimeService.actionResponse(res);
     }
 
@@ -599,9 +612,9 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
 
     function _invalidPositionArguments(args) {
         return (_isInvalidPosition(args.horizontalPos, 'HorizontalPosition') ||
-                    _isInvalidPosition(args.verticalPos, 'VerticalPosition') ||
-                    _isInvalidPosition(args.horizontalDialogAlignment, 'HorizontalPosition') ||
-                    _isInvalidPosition(args.verticalDialogAlignment, 'VerticalPosition'));
+                _isInvalidPosition(args.verticalPos, 'VerticalPosition') ||
+                _isInvalidPosition(args.horizontalDialogAlignment, 'HorizontalPosition') ||
+                _isInvalidPosition(args.verticalDialogAlignment, 'VerticalPosition'));
     }
 
     function _isInvalidPosition(arg, enumType) {

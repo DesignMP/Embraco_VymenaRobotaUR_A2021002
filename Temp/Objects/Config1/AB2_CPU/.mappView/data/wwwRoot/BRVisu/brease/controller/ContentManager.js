@@ -4,10 +4,10 @@ define(['brease/events/BreaseEvent', 'brease/events/SocketEvent', 'brease/core/U
         'use strict';
 
         /**
-    * @class brease.controller.ContentManager
-    * @extends Object
-    * @singleton
-    */
+        * @class brease.controller.ContentManager
+        * @extends Object
+        * @singleton
+        */
 
         var controller = {
 
@@ -133,7 +133,13 @@ define(['brease/events/BreaseEvent', 'brease/events/SocketEvent', 'brease/core/U
 
                 isPending: function (contentId) {
                     var content = _getContentById(contentId);
-                    return (content !== undefined && (content.state === ContentStatus.activatePending || content.state === ContentStatus.deactivatePending)); 
+                    return (content !== undefined && (content.state === ContentStatus.activatePending || content.state === ContentStatus.deactivatePending || content.state === ContentStatus.inQueue)); 
+                },
+                setArea: function (contentId, areaId) {
+                    var content = _getContentById(contentId);
+                    if (content) {
+                        content.areaId = areaId;
+                    }
                 }
             }, _runtimeService;
 

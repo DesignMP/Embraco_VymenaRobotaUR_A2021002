@@ -110,7 +110,9 @@ function (BreaseEvent, Enum, CoreUtils, Utils, Deferred, VisuModel, LoaderPool, 
             */
             loadPage: function loadPage(pageId, container, config) {
                 var response;
-                if (!container) {
+                if (brease.config.preLoadingState === true) {
+                    response = { success: false, code: LogCode.PRELOADING_ACTIVE };
+                } else if (!container) {
                     response = { success: false, code: LogCode.CONTAINER_NOT_FOUND };
                     this.logger.log(response.code, { pageId: pageId, isStartPage: (_visuModel.startPageId === pageId) });
                 } else {
@@ -477,10 +479,6 @@ function (BreaseEvent, Enum, CoreUtils, Utils, Deferred, VisuModel, LoaderPool, 
                 _initializeContent(loaderId, contentChange, areaObj, assignment);
             },
 
-            isContentPending: function (contentId) {
-                return this.contentManager.isPending(contentId);
-            },
-
             isContentToBeRemoved: function (contentId) {
                 return _pageCycle.inProgress && _contentsToRemove.indexOf(contentId) !== -1;
             },
@@ -503,6 +501,8 @@ function (BreaseEvent, Enum, CoreUtils, Utils, Deferred, VisuModel, LoaderPool, 
             },
 
             loadContent: function (area, assignment) {
+                // add latest areaId in which the content was loaded
+                contentManager.setArea(assignment.contentId, area.id);
                 var deferred = new Deferred(Deferred.TYPE_SINGLE, [area, assignment]),
                     content = _visuModel.getContentById(assignment.contentId);
 

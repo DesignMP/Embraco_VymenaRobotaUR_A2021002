@@ -182,6 +182,23 @@ function (_widgetFactory, _widgetParser, Enum, Utils) {
     });
 
     /**
+    * @method setWidgetPropertyIndependentOfState
+    * Method to set a widget property independent of the state of the widget.  
+    * If the widget is not yet initialized, the property is set as an initial value and considered at widget creation.  
+    * If no setterName is defined, the usual setterName is taken (e.g. 'value' -> 'setValue')
+    * @param {String} widgetId
+    * @param {String} propertyName
+    * @param {ANY} value
+    * @param {String} [setterName]
+    */
+    _defineMethod(p, 'setWidgetPropertyIndependentOfState', function (widgetId, propertyName, value, setterName) {
+        setterName = setterName || Utils.setter(propertyName);
+        if (brease.uiController.getWidgetState(widgetId) < Enum.WidgetState.INITIALIZED || brease.uiController.callWidget(widgetId, setterName, value) === null) {
+            brease.uiController.addWidgetOption(widgetId, propertyName, value);
+        }
+    });
+
+    /**
     * @method wake
     * @deprecated use wakeInContent instead
     */

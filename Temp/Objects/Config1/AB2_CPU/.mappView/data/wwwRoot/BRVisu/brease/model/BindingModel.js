@@ -235,7 +235,7 @@ define(['brease/objects/Subscription'], function (Subscription) {
 
     _init();
 
-    if (brease.config.mocked) {
+    if (brease.config && brease.config.mocked) {
         window.bindingModel = {
             subscriptions: _subscriptions,
             bindings: _bindings,

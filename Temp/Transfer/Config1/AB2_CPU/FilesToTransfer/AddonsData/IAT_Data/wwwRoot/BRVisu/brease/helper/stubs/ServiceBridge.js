@@ -327,6 +327,12 @@ function (ServerStub, WebSocketStub, VisuStatus, ServerCode, SocketEvent) {
             }, callbackInfo);
         },
 
+        getAutoLogOut: function (callback, callbackInfo) {
+            callback({
+                enabled: false
+            }, callbackInfo);
+        },
+
         loadVisuData: function (visuId, callback, callbackInfo) {
 
             if (brease.config.mockType === 'project') {

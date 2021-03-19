@@ -3,8 +3,9 @@ define(['brease/events/BreaseEvent',
     'brease/enum/Enum',
     'brease/core/Types',
     'brease/controller/FileManager',
-    'brease/controller/libs/ContentHelper'],
-function (BreaseEvent, Utils, Enum, Types, fileManager, contentHelper) {
+    'brease/controller/libs/ContentHelper',
+    'system/widgets/ChangePasswordDialog/ChangePasswordDialog'],
+function (BreaseEvent, Utils, Enum, Types, fileManager, contentHelper, ChangePasswordDialog) {
 
     'use strict';
 
@@ -41,6 +42,7 @@ function (BreaseEvent, Utils, Enum, Types, fileManager, contentHelper) {
             init: function () {
 
                 this.ready = $.Deferred();
+                this.ChangePasswordDialogClass = ChangePasswordDialog;
 
                 var systemWidgets = ['widgets/brease/DialogWindow/DialogWindow', 'widgets/brease/MessageBox/MessageBox', 'widgets/brease/DateTimePicker/DateTimePicker', 'system/widgets/ContentLoader/ContentLoader'];
                 fileManager.loadOverlays(systemWidgets).done(function (DialogWindowClass, MessageBoxClass) {
@@ -299,6 +301,17 @@ function (BreaseEvent, Utils, Enum, Types, fileManager, contentHelper) {
                     _dialogs[dialogId] = undefined;
                     dWindow.used = false;
                 }
+            },
+
+            openChangePasswordDialog: function (userName) {
+                var def = $.Deferred(),
+                    widget = new this.ChangePasswordDialogClass();
+
+                $.when(widget.isParsed()).then(function () {
+                    widget.show(userName || '');
+                    def.resolve(true);
+                });
+                return def.promise();
             }
         },
         _messageBoxPool = [],

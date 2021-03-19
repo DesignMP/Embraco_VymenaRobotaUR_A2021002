@@ -12,22 +12,19 @@ define(['brease/enum/Enum', 'brease/controller/objects/PageType', 'brease/core/U
             this.id = id;
             this.init(areaInfo);
         },
-        stylePattern = new RegExp('.*_style_.*'),
-        scrollboxUse = true;
+        stylePattern = new RegExp('.*_style_.*');
 
     Area.prototype.init = function (areaInfo) {
         this.div = _createAreaDiv(this.id, areaInfo);
-        if (scrollboxUse) {
-            this.innerBox = _createInnerBox(this.id, areaInfo);
-            this.div.appendChild(this.innerBox);
-            this.$innerBox = $(this.innerBox);
-        }
+        this.innerBox = _createInnerBox(this.id, areaInfo);
+        this.div.appendChild(this.innerBox);
+        this.$innerBox = $(this.innerBox);
         this.$div = $(this.div);
         this.info = areaInfo;
     };
 
-    Object.defineProperty(Area.prototype, 'contentContainer', { get: function () { return (scrollboxUse) ? this.innerBox : this.div; } });
-    Object.defineProperty(Area.prototype, '$contentContainer', { get: function () { return (scrollboxUse) ? this.$innerBox : this.$div; } });
+    Object.defineProperty(Area.prototype, 'contentContainer', { get: function () { return this.innerBox; } });
+    Object.defineProperty(Area.prototype, '$contentContainer', { get: function () { return this.$innerBox; } });
 
     Area.prototype.setStyle = function (style) {
         var styleClass = 'system_brease_Area_style_' + style;
@@ -56,10 +53,8 @@ define(['brease/enum/Enum', 'brease/controller/objects/PageType', 'brease/core/U
         AreaController.scrollManager.remove(this.id);
         this.div = null;
         this.$div = null;
-        if (scrollboxUse) {
-            this.innerBox = null;
-            this.$innerBox = null;
-        }
+        this.innerBox = null;
+        this.$innerBox = null;
         this.info = null;
     };
 
@@ -68,9 +63,7 @@ define(['brease/enum/Enum', 'brease/controller/objects/PageType', 'brease/core/U
         var scrollX = contentSize && contentSize.width * zoomFactor > this.info.width && !this.info.hasPercentageWidth(),
             scrollY = contentSize && contentSize.height * zoomFactor > this.info.height && !this.info.hasPercentageHeight();
 
-        if (scrollboxUse) {
-            this.$innerBox.css({ width: contentSize.width * zoomFactor, height: contentSize.height * zoomFactor });
-        }
+        this.$innerBox.css({ width: contentSize.width * zoomFactor, height: contentSize.height * zoomFactor });
 
         if ((scrollX || scrollY) && AreaController.scrollManager.hasScroller(this.div) === false) {
             AreaController.scrollManager.add(this.div);
@@ -144,7 +137,7 @@ define(['brease/enum/Enum', 'brease/controller/objects/PageType', 'brease/core/U
     }
 
     function _boxId(id) {
-        return id + ((scrollboxUse) ? '_box' : '');
+        return id + '_box';
     }
 
     var AreaController = {

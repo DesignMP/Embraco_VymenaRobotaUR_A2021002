@@ -6,7 +6,8 @@ define(function () {
     * @class brease.core.Utils
     * @extends core.javascript.Object
     */
-    var Utils = {};
+    var jRegex = /'/g,
+        Utils = {};
 
     Utils.defineProperty = function (obj, propName, propValue, enumerable, configurable, writable) {
         var config = {
@@ -52,18 +53,45 @@ define(function () {
     * @method extendOptionsToNew
     * @static
     * Extends obj1 with properties of obj2  
-    * If a property exists on both objects, it's overwritten with the value of obj2  
+    * If a property exists on both objects, it's overwritten with the value of obj2 
+    * If a property is an object, it's extended  
     * Array properties are handled like primitive datatypes, means they are overwritten  
     * e.g.  
     * obj1   = {a: [1,2,3]}  
     * obj2   = {a: [5,4]}  
     * extend = {a: [5,4]}  
+    * e.g.  
+    * obj1   = {a: {b:0}}  
+    * obj2   = {a: {c:1}}  
+    * extend = {a: {b:0, c:1}}  
     * @param {Object} obj1
     * @param {Object} obj2
     * @return {Object} 
     */
     Utils.extendOptionsToNew = function (obj1, obj2) {
         return _deepOptionsExtend(_deepCopy(obj1), obj2);
+    };
+
+    /**
+    * @method extendOptions
+    * @static
+    * Extends obj1 with properties of obj2  
+    * If a property exists on both objects, it's overwritten with the value of obj2  
+    * Properties of type array and object are handled like primitive datatypes, means they are overwritten  
+    * e.g.  
+    * obj1   = {a: [1,2,3]}  
+    * obj2   = {a: [5,4]}  
+    * extend = {a: [5,4]}  
+    * e.g.  
+    * obj1   = {a: {b:0}}  
+    * obj2   = {a: {c:1}}  
+    * extend = {a: {c:1}}  
+    * @param {Object} obj1
+    * @param {Object} obj2
+    * @return {Object} 
+    */
+    Utils.extendOptions = function (obj1, obj2) {
+        return _optionsExtend(_deepCopy(obj1), obj2);
     };
 
     Utils.toArray = function (obj, startIndex) {
@@ -138,22 +166,49 @@ define(function () {
     *
     * @param {HTMLElement} elem
     * @param {String} dataKey Is added to "data-", to build attribute name. E.g. "brease-options" gives "data-brease-options".
-    * @return {core.javascript.Object} JavaScript object
+    * @return {core.javascript.Object}
     */
     Utils.parseElementData = function (elem, dataKey) {
 
         var attrName = 'data-' + dataKey,
             attrValue = elem.getAttribute(attrName),
-            obj;
+            obj = Utils.parsePseudoJSON(attrValue, 'Illegal data in attribute ' + attrName + ' for widget ' + elem.id + ', widget will have default values!');
+        
+        return obj || {};
 
+    };
+
+    /**
+    * @method parsePseudoJSON
+    * @static
+    * Method to parse JSON strings with reversed quotes.  
+    * E.g. parsePseudoJSON("{'a':0,'b':'string'}")  
+    * Returns undefined, if parsing fails  
+    * @param {String} str
+    * @param {String} message warn message if parsing fails; if this argument is undefined, the JS parse error is used as message
+    * @return {core.javascript.Object}
+    */
+    Utils.parsePseudoJSON = function (str, message) {
+
+        var obj;
+        if (!Utils.isString(str)) {
+            if (message) {
+                console.iatWarn(message); 
+            } else {
+                console.iatWarn('SyntaxError: input (' + str + ') is not a string'); 
+            }
+            return obj;
+        }
         try {
-            obj = (attrValue !== null && attrValue !== '') ? JSON.parse(attrValue.replace(/'/g, '"')) : {};
-        } catch (e) {
-            console.iatWarn('Illegal data in attribute ' + attrName + ' for widget ' + elem.id + ', widget will have default values!');
-            obj = {};
+            return JSON.parse(str.replace(jRegex, '"'));
+        } catch (error) {
+            if (message) {
+                console.iatWarn(message); 
+            } else {
+                console.iatWarn(error.toString()); 
+            }
         }
         return obj;
-
     };
 
     Utils.getActDate = function () {
@@ -220,6 +275,10 @@ define(function () {
 
     Utils.isString = function (item) {
         return (typeof item === 'string' || item instanceof String);
+    };
+
+    Utils.isBoolean = function (value) {
+        return value === true || value === false;
     };
 
     Utils.isBlank = function (item) {
@@ -352,8 +411,9 @@ define(function () {
     /**
     * @method closestWidgetElem
     * @static
-    * Returns the closest HTMLElement which is a widget
-    * Returns the root node, if no parent widget exists (document.body or documentFragment)
+    * Returns the closest HTMLElement which is a widget.  
+    * Returns the HTMLElement itself, if it is a widget.  
+    * Returns the root node, if no parent widget exists (document.body or documentFragment)  
     * @param {HTMLElement} elem
     * @return {core.html.Node} 
     */
@@ -378,6 +438,31 @@ define(function () {
 
             return cur;
         }
+    };
+    /**
+    * @method parentWidgetElem
+    * @static
+    * Returns the closest parent node which is a widget.  
+    * Returns undefined, if no parent widget exists.
+    * @param {HTMLElement} elem
+    * @return {core.html.Node} 
+    */
+    Utils.parentWidgetElem = function (elem) {
+
+        var cur = elem, 
+            parent, result;
+
+        while (cur !== document.body && cur !== null) {
+            parent = cur.parentNode;
+            if (Utils.hasClass(parent, 'breaseWidget')) {
+                result = parent;
+                break;
+            } else {
+                cur = parent;
+            }
+        }
+
+        return result;
     };
 
     /**
@@ -422,7 +507,7 @@ define(function () {
     * @static
     * Method to convert an object to an suitable text for the event logger
     * @param {Object} obj
-    * @return {String} text
+    * @return {String}
     */
     Utils.objToLogText = function (obj) {
         var text = '';
@@ -735,12 +820,36 @@ define(function () {
         }
     };
 
+    /**
+    * @method roundTo
+    * Returns the value of a number rounded to decimalPlaces.    
+    * e.g. roundTo(5.092, 1) = 5.1  
+    * e.g. roundTo(-5.092, 1) = -5.1  
+    * roundTo behaves like Math.round: when the fractional portion is exactly 0.5, the argument is rounded to the next integer in the direction of +∞.  
+    * (see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" target="_blank" style="text-decoration:underline;">Math.round</a>)  
+    * e.g. roundTo(+2.15,1) = 2.2  
+    * and  roundTo(-2.15,1) = 2.1  
+    * @param {Number} value
+    * @param {Integer} decimalPlaces positive integer >= 0
+    * @return {Number}
+     */
     Utils.roundTo = function (value, power) {
-        var factor = Math.pow(10, power);
-        if (isNaN(factor)) {
+        if (isNaN(value) || isNaN(power)) {
             return NaN;
+        }
+        if (value === 0) {
+            return value;
+        }
+        power = Math.max(0, parseInt(power, 10));
+        
+        // we use Math.round(value+'e'+power) if possible instead of Math.round(value*Math.pow(10, power)), as it is more exact
+        var round = Math.round(value + 'e' + power),
+            factor = Math.pow(10, power);
+
+        if (isNaN(round)) {
+            return Math.round(value * factor) / factor; 
         } else {
-            return Math.round(value * factor) / factor;
+            return round / factor; 
         }
     };
 
@@ -787,6 +896,36 @@ define(function () {
             return undefined;
         }
         return css.match(/url\([^)]+\)/gi)[0].split(/[()'"]+/)[1];
+    };
+
+    /**
+    * @method getBRPanelType
+    * @static
+    * Get the B&R panel type out of the userAgent string.  
+    * Typical return values: 'PPT30', 'PPT50', 'PPC50', etc.  
+    * @param {String} userAgent userAgent string from navigator.userAgent
+    * @return {String}
+    */
+    Utils.getBRPanelType = function (userAgent) {
+        userAgent = '' + userAgent;
+        var BR = userAgent.indexOf('BRPanel'),
+            type;
+
+        if (BR !== -1) {
+            type = userAgent.substring(userAgent.indexOf('BRPanel'));
+            type = type.substring(type.indexOf('(') + 1, type.indexOf(';'));
+        }
+        return type;
+    };
+
+    /**
+    * @method isT30
+    * @static
+    * @param {String} userAgent userAgent string from navigator.userAgent
+    * @return {Boolean}
+    */
+    Utils.isT30 = function (userAgent) {
+        return Utils.getBRPanelType(userAgent) === 'PPT30';
     };
 
     function _methodName(prefix, attribute) {
@@ -893,6 +1032,25 @@ define(function () {
                 return o2;
             } else {
                 return o1;
+            }
+        }
+    }
+
+    function _optionsExtend(obj1, obj2) {
+
+        if (obj1 !== undefined && obj1 !== null) {
+            for (var key2 in obj2) {
+                var prop2 = obj2[key2];
+                if (prop2 !== undefined) {
+                    obj1[key2] = _deepCopy(prop2);
+                }
+            }
+            return obj1;
+        } else {
+            if (obj2 !== undefined) {
+                return _deepCopy(obj2);
+            } else {
+                return obj1;
             }
         }
     }

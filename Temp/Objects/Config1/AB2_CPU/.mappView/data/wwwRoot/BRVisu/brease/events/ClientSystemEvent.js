@@ -66,6 +66,11 @@ define(['brease/core/Utils'], function (Utils) {
     * @readonly
     * @static
     */
+    /**
+    * @property {string} CHANGEPASSWORDDIALOG_CLOSED='ChangePasswordDialogClosed'
+    * @readonly
+    * @static
+    */
     var ClientSystemEvent = {};
 
     Utils.defineProperty(ClientSystemEvent, 'CONTENT_LOADED', 'ContentLoaded');
@@ -80,6 +85,7 @@ define(['brease/core/Utils'], function (Utils) {
     Utils.defineProperty(ClientSystemEvent, 'SYSTEM_SWIPE', 'SystemSwipe');
     Utils.defineProperty(ClientSystemEvent, 'TOOLTIPMODE_ACTIVATED', 'TooltipModeActivated');
     Utils.defineProperty(ClientSystemEvent, 'TOOLTIPMODE_DEACTIVATED', 'TooltipModeDeactivated');
+    Utils.defineProperty(ClientSystemEvent, 'CHANGEPASSWORDDIALOG_CLOSED', 'ChangePasswordDialogClosed');
     return ClientSystemEvent;
 
 });

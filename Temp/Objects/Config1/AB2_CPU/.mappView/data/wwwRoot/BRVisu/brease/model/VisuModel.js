@@ -300,7 +300,7 @@ define(['brease/events/BreaseEvent', 'brease/events/SocketEvent', 'brease/core/U
                 _visuModel.startThemeId = rootVisuData.startTheme;
                 _visuModel.configurations = rootVisuData.configurations;
             }
-            if (brease.config.mocked) {
+            if (brease.config && brease.config.mocked) {
                 window.visuModel = _visuModel; 
             }
         }

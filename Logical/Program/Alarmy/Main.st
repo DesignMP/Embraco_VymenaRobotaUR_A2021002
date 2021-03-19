@@ -16,6 +16,10 @@ PROGRAM _CYCLIC
     //A6 - Porucha PLC karty AB6 - Digitalne vstupy !!!
     //A7 - Porucha PLC karty AB7 - Digitalne vystupy !!!
     //A8 - Porucha serva otacania upinacej hlavy brusky !!!
+    //A9 - Porucha otvorenia dlheho uchopovaca na gripri robota !!!
+    //A10 - Porucha zatvorenia dlheho uchopovaca na gripri robota !!!
+    //A11 - Porucha otvorenie kratkeho uchopovaca na gripri robota !!!
+    //A12 - Porucha zatvorenie kratkeho uchopovaca na gripri robota !!!
     
 	 
      //***********************************Hladanie poruchy*****************************************//

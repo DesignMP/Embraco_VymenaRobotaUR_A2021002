@@ -1,4 +1,3 @@
-
 define([
     'brease/core/Class',
     'libs/d3/d3',
@@ -180,7 +179,7 @@ define([
                         .scale(currentXCursorData.yValues);
 
                 marker.attr('cx', x)
-                    .attr('cy', (y) || renderer.dataAdapter.getChartArea().height)
+                    .attr('cy', (y !== undefined && y !== null) ? y : renderer.dataAdapter.getChartArea().height)
                     .classed('disabled', !currentXCursorData.markerEnable)
                     .classed('active', currentXCursorData.markerActive)
                     .classed('remove', !currentXCursorData.markerVisible);
@@ -1000,7 +999,7 @@ define([
                     .classed('disabled', !currentXCursorData.markerEnable)
                     .classed('remove', !currentXCursorData.markerVisible)
                     .attr('cx', renderer.dataAdapter.xAxisAreas[xCursorWidget.axisWidget.elem.id].scale(currentXCursorData.xValue))
-                    .attr('cy', (y) || chartArea.height)
+                    .attr('cy', (y !== undefined && y !== null) ? y : chartArea.height)
                     .attr('r', currentXCursorData.markerSize / 2);
 
                 //add click Event to intersectionPoint

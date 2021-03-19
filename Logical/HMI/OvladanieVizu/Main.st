@@ -44,9 +44,14 @@ PROGRAM _CYCLIC
         Vizu.TL_UkoncenieCyklu_DISABLE:= TRUE;
     END_IF    
     
-    
-    
-	 
+    //Tlaèítko ovládanie serva v ruènom režime//
+    IF Bruska.STAV.Servo_HomingOK THEN
+        Vizu.TL_RR_OvladanieServa_DISABLE:= FALSE;
+    ELSE
+        Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
+    END_IF    
+        
+        
 END_PROGRAM
 
 PROGRAM _EXIT

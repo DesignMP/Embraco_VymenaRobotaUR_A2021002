@@ -294,7 +294,6 @@ function (Decorator, Utils, BreaseEvent, Enum, PopUpManager, ZoomManager) {
             widgetRectTop = widgetElemClientRect.top - parentContainer.top,
             widgetRect = {
                 w: this.el.outerWidth() || widgetElemClientRect.width / elemZoom,
-                h: this.el.outerHeight() || widgetElemClientRect.height / elemZoom,
                 left: widgetRectLeft / elemZoom,
                 top: widgetRectTop / elemZoom
             };

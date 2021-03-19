@@ -465,6 +465,25 @@
     }
 }
 
+@mixin active-background-color-important($color) {
+    $alphaVal: alpha($color);
+
+    @if ($alphaVal != 0) {
+        background-color: $color !important;
+    }
+}
+
+@mixin active-color($color:null) {
+    @if(($color != null) and ($color != 'transparent')) {
+
+        $alphaVal: alpha($color);
+    
+        @if ($alphaVal != 0) {
+            color: $color !important;
+        }
+    }
+}
+
 @mixin static($value) {
 }
 
@@ -954,4 +973,20 @@
     @else {
         height: $value;
     }
+}
+
+@mixin borderColorLeft($value) {
+    border-left-color: $value;
+}
+
+@mixin borderColorRight($value) {
+    border-right-color: $value;
+}
+
+@mixin borderColorTop($value) {
+    border-top-color: $value;
+}
+
+@mixin borderColorBottom($value) {
+    border-bottom-color: $value;
 }

@@ -111,6 +111,9 @@
       <xsl:attribute name="readonly">
         <xsl:value-of select="'readonly'"/>
       </xsl:attribute>
+      <xsl:attribute name="autocomplete">
+        <xsl:value-of select="'off'"/>
+      </xsl:attribute>
       <xsl:attribute name="class">
         <xsl:value-of select="'ValueOutput'"/>
       </xsl:attribute>

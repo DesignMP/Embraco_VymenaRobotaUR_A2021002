@@ -138,7 +138,7 @@
       <Property Name="Description" Value=""/>
       <Property Name="FillStyle" Value="Opaque"/>
       <Property Name="Font" Value="Source[local].Font[Arial12_Bold]"/>
-      <Property Name="ForeColor" Value="46"/>
+      <Property Name="ForeColor" Value="48"/>
       <Property Name="Height" Value="30"/>
       <Property Name="Left" Value="561"/>
       <Property Name="SimulationValue" Value=""/>
@@ -156,9 +156,9 @@
       <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_61]"/>
       <Property Name="Height" Value="22"/>
       <Property Name="KeyMatrixOffset" Value="None"/>
-      <Property Name="Left" Value="566"/>
+      <Property Name="Left" Value="564"/>
       <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-      <Property Name="Top" Value="20"/>
+      <Property Name="Top" Value="19"/>
       <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_61]"/>
       <Property Name="Width" Value="221"/>
     </Control>

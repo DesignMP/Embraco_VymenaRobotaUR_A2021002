@@ -116,7 +116,8 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
             this.internalData = {};
             this.initialized = false;
             if (options !== undefined && options !== null) {
-                this.settings = Utils.extendOptionsToNew(this.defaultSettings, options);
+                this.settings = Utils.extendOptions(this.defaultSettings, options);
+                
             } else {
                 this.settings = Utils.deepCopy(this.defaultSettings);
             }

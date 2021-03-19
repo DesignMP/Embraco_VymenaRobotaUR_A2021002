@@ -12,8 +12,8 @@ extern "C"
 	#include <standard.h>
 	#include <AsBrStr.h>
 	#include <AsXml.h>
-	#include <MpBase.h>
 	#include <McBase.h>
+	#include <MpBase.h>
 	#include <astime.h>
 	#include <FileIO.h>
 	#include <sys_lib.h>
@@ -22,11 +22,11 @@ extern "C"
 	#include <McAxis.h>
 	#include <AsIecCon.h>
 	#include <AsSafety.h>
-	#include <CoTrace.h>
-	#include <MpAxis.h>
 	#include <McAcpAx.h>
 	#include <McStpAx.h>
+	#include <MpAxis.h>
 	#include <MpRecipe.h>
+	#include <CoTrace.h>
 	#include <AxisLib.h>
 	#include <SC.h>
 #ifdef __cplusplus

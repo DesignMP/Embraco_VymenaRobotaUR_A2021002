@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* McStpAx 5.12.2 */
+/* McStpAx 5.13.2 */
 
 #ifndef _MCSTPAX_
 #define _MCSTPAX_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _McStpAx_VERSION
-#define _McStpAx_VERSION 5.12.2
+#define _McStpAx_VERSION 5.13.2
 #endif
 
 #include <bur/plctypes.h>
@@ -267,7 +267,8 @@ typedef enum McSAMELStallguardCfgUseReacEnum
 
 typedef enum McSAJFEnum
 {	mcSAJF_NOT_USE = 0,
-	mcSAJF_USE = 1
+	mcSAJF_USE = 1,
+	mcSAJF_JERK_LIM = 2
 } McSAJFEnum;
 
 typedef enum McSADIAllSrcEnum
@@ -339,7 +340,8 @@ typedef enum McSEEncIfTypEnum
 } McSEEncIfTypEnum;
 
 typedef enum McSEIRefPSrcEnum
-{	mcSEIRPS_R_IN_ABR_ENC = 0
+{	mcSEIRPS_R_IN_ABR_ENC = 0,
+	mcSEIRPS_DIG_IN_3 = 1
 } McSEIRefPSrcEnum;
 
 typedef enum McSEIRefPEdgEnum

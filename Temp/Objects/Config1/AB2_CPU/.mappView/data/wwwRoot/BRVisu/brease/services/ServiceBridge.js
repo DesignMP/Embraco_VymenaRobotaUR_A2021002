@@ -55,6 +55,12 @@ define(['brease/helper/XHRPool'], function (XHRPool) {
             request.send(null, callback);
         },
 
+        getAutoLogOut: function (callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('GET', _clientService + 'autoLogOut');
+            request.send(null, callback);
+        },
+
         loadVisuData: function (visuId, callback, callbackInfo) {
             $.getJSON('/' + visuId + '.json', function (data) {
                 callback({
@@ -104,7 +110,8 @@ define(['brease/helper/XHRPool'], function (XHRPool) {
                     'refId': widgetId,
                     'attribute': widgetAttribute,
                     'property': nodeAttribute
-                }] }), callback);
+                }]
+            }), callback);
         },
 
         /*#######################
@@ -295,6 +302,17 @@ define(['brease/helper/XHRPool'], function (XHRPool) {
             }), callback);
         },
 
+        changePassword: function (userName, oldPassword, newPassword, callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('POST', _baseUrl + 'users/' + userName + '/changePassword');
+            request.send(JSON.stringify({
+                Data: {
+                    'old': oldPassword,
+                    'new': newPassword
+                }
+            }), callback);
+        },
+
         /*####################
         ### TextFormatter ###
         #####################*/
@@ -319,10 +337,10 @@ define(['brease/helper/XHRPool'], function (XHRPool) {
         * @method setClientInformation
         * @param {String} data stringified info object
         */
-        setClientInformation: function (data) {
+        setClientInformation: function (data, callback) {
             var request = XHRPool.getXHR();
             request.open('POST', _clientService + 'setClientInformation');
-            request.send('{"Data":' + data + '}');
+            request.send('{"Data":' + data + '}', callback);
         },
 
         registerClient: function (visuId, callback) {

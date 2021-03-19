@@ -54,8 +54,40 @@ define(['brease/controller/libs/Utils'], function (Utils) {
 
         getAppZoom: function () {
             return _appZoom.scale;
-        }
+        },
 
+        /**
+        * @method
+        * Method to calculate the zoom factor of an element inside a container element, considering a given zoomFactor,
+        * where the child element is not allowed to exceed the container dimensions
+        * @param {Number} zoomFactor
+        * @param {Object} elem
+        * @param {Number} elem.width
+        * @param {Number} elem.height
+        * @param {Object} container
+        * @param {Number} container.width
+        * @param {Number} container.height
+        * @return {Number}
+        */
+        zoomFitContainerSize: function (zoomFactor, elem, container) {
+        // calculate elem dimensions with zoomFactor
+            var scaledWidth = zoomFactor * elem.width,
+                scaledHeight = zoomFactor * elem.height;
+
+            // then check if zoomed element exceeds container dimensions
+            var scaleXFactor = Number.MAX_SAFE_INTEGER, 
+                scaleYFactor = Number.MAX_SAFE_INTEGER;
+
+            if (scaledWidth > container.width) {
+                scaleXFactor = container.width / elem.width;
+            } // else: otherwise the value remains large and has no influence on factor = Math.min
+
+            if (scaledHeight > container.height) {
+                scaleYFactor = container.height / elem.height;
+            } // else: otherwise the value remains large and has no influence on factor = Math.min
+
+            return Math.min(scaleXFactor, scaleYFactor, zoomFactor);
+        }
     };
 
     function _visuConfigIsTrue(name) {

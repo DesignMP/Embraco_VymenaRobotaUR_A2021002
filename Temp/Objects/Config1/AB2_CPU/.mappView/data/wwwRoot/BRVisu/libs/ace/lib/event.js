@@ -76,10 +76,12 @@ exports.stopPropagation = function(e) {
 };
 
 exports.preventDefault = function (e) {
-    if (e.preventDefault && e.cancelable)
-        e.preventDefault();
-    else
-        e.returnValue = false;
+    if (e.cancelable) {
+        if (e.preventDefault)
+            e.preventDefault();
+        else
+            e.returnValue = false;
+    }
 };
 
 /*

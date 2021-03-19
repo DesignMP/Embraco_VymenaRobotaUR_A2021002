@@ -251,6 +251,7 @@ typedef struct McAddInfoType
 	unsigned long StartupCount;
 	McCommunicationStateEnum CommunicationState;
 	McAxisPLCopenStateEnum PLCopenState;
+	plcbit InMotion;
 } McAddInfoType;
 #endif
 

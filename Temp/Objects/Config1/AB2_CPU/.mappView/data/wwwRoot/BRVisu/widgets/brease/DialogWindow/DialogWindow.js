@@ -86,6 +86,7 @@ define([
 
         p = WidgetClass.prototype,
         _counter = 0;
+    WidgetClass.ErrorClass = 'dialogWindowError';
 
     function _loadHTML(widget) {
         require(['text!' + widget.settings.html], function _loadHTMLSuccess(html) {
@@ -109,74 +110,165 @@ define([
 
     p._setDimensions = function () {
 
-        if (this.contentBox.children().length > 0) {
-            var size = _getLayoutSize(this.contentBox);
-            this.contentBox.css({ 'height': size.height, 'width': size.width });
-            this.settings.width = undefined;
-            this.settings.height = undefined;
+        if (this.internalData.perform) {
+            if (this.contentBox.children().length > 0) {
+                var size = _getLayoutSize(this.contentBox);
+                this.contentBox.css({ 'height': size.height, 'width': size.width });
+                this.settings.width = undefined;
+                this.settings.height = undefined;
 
-        } else {
-            this.settings.height = this.defaultSettings.height;
-            this.settings.width = this.defaultSettings.width;
-        }
-        var dialog = brease.pageController.getDialogById(this.settings.id);
-        if (dialog) {
-            var layout = brease.pageController.getLayoutById(dialog.layout),
-                borderWidth = parseInt(this.header.css('border-right-width'), 10) + parseInt(this.header.css('border-left-width'), 10);
-            this.innerHeader.css('max-width', (layout.width - Math.max(0, borderWidth - 2) - ((this.closeButton.css('display') === 'none') ? 0 : this.closeButton.outerWidth())) + 'px');
-        }
-        SuperClass.prototype._setDimensions.call(this);
-        if (this.header.height() === 0) {
-            this.contentBox.css({ 'borderTopRightRadius': this.el.css('borderTopRightRadius'), 'borderTopLeftRadius': this.el.css('borderTopLeftRadius') });
-        } else {
-            this.contentBox.css({ 'borderTopRightRadius': '0px', 'borderTopLeftRadius': '0px' });
+            } else {
+                this.settings.height = this.defaultSettings.height;
+                this.settings.width = this.defaultSettings.width;
+            }
+            var dialog = brease.pageController.getDialogById(this.settings.id);
+            if (dialog) {
+                var layout = brease.pageController.getLayoutById(dialog.layout),
+                    borderWidth = parseInt(this.header.css('border-right-width'), 10) + parseInt(this.header.css('border-left-width'), 10);
+                this.innerHeader.css('max-width', (layout.width - Math.max(0, borderWidth - 2) - ((this.closeButton.css('display') === 'none') ? 0 : this.closeButton.outerWidth())) + 'px');
+            }
+            SuperClass.prototype._setDimensions.call(this);
+            if (this.header.height() === 0) {
+                this.contentBox.css({ 'borderTopRightRadius': this.el.css('borderTopRightRadius'), 'borderTopLeftRadius': this.el.css('borderTopLeftRadius') });
+            } else {
+                this.contentBox.css({ 'borderTopRightRadius': '0px', 'borderTopLeftRadius': '0px' });
+            }
         }
     };
+
+    function _getLayoutSize(container) {
+        var size = {
+                width: 0,
+                height: 0
+            },
+            areas = container.find('> div');
+
+        if (areas.length > 0) {
+            var pos, area;
+            for (var i = 0; i < areas.length; i += 1) {
+                area = $(areas[i]);
+                pos = area.position();
+                size.width = Math.max(size.width, pos.left + area.width());
+                size.height = Math.max(size.height, pos.top + area.height());
+            }
+        }
+        return size;
+    }
 
     /**
     * @method show
     * Opens the DialogWindow
     * @param {brease.objects.DialogWindowOptions} options
     * @param {HTMLElement} refElement Either HTML element of opener widget or any HTML element for relative positioning.
-    * @return {Boolean} success Returns true, if dialog exists.
+    * @return {Boolean} success Returns true, if dialog is loaded.
     */
     p.show = function (options, refElement) {
+        options = options || {};
+        var dialog = brease.pageController.getDialogById(options.id),
+            result = { success: true };
 
-        var dialog = brease.pageController.loadDialog(options.id, this.contentBox[0]);
+        options.header = _setHeader(options, dialog);
+        options.style = _setStyle(options.style, dialog);
+        options.zoomFactor = _setZoom(this.el, dialog);
+
+        if (options.id) {
+            this.el.attr('data-brease-dialogId', options.id);
+        } else {
+            this.el.removeAttr('data-brease-dialogId');
+        }
+
+        // avoid calculations of dimension and position in SuperClass call
+        this.internalData.perform = false;
+        SuperClass.prototype.show.call(this, options, refElement);
+
+        if (dialog === undefined) {
+            result.success = false;
+            result.errorCode = 'NOT_FOUND';
+        } else {
+            var response = brease.pageController.loadDialog(options.id, this.contentBox[0]);
+            if (!response) {
+                result.success = false;
+                result.errorCode = 'NOT_LOADED';
+            }
+        }
+        if (!result.success) {
+            _showError.call(this, options.id, result.errorCode);
+        }
+
+        // perform calculations of dimension and position after loadDialog
+        this.internalData.perform = true;
+        this._setDimensions();
+        this._setPosition();
+
+        document.body.addEventListener(BreaseEvent.THEME_CHANGED, this._bind('_themeChangeHandler'));
+        return result.success;
+    };
+
+    p._setPosition = function () {
+        if (this.internalData.perform) {
+            SuperClass.prototype._setPosition.call(this);
+        }
+    };
+
+    function _setHeader(options, dialog) {
 
         if (options.headerText !== undefined) {
-            options.header = { text: options.headerText };
-        }
-
-        if (options.headerText === undefined && dialog !== undefined && dialog.displayName !== undefined) {
-            options.header = { text: dialog.displayName };
-        }
-        if (dialog && dialog.style) { options.style = dialog.style; }
-
-        var zoomFactor = 1;
-        if (dialog === undefined) {
-            options.forceInteraction = false;
-            options.modal = false;
-            options.style = 'dialogWindowError';
-            this.el.find('.contentBox').css('width', 'auto');
-
-            var message = brease.language.getSystemTextByKey('BR/IAT/brease.error.DIALOG_NOT_FOUND');
-
-            brease.textFormatter.format(message, [options.id]).then(this._bind(_showError));
+            options.header = {
+                text: options.headerText
+            };
         } else {
-
-            // A&P 466795: Dialog has to be zoomed like the visu it belongs to
-            zoomFactor = _setZoom(this.el, dialog.visuId);
+            if (dialog !== undefined && dialog.displayName !== undefined) {
+                options.header = {
+                    text: dialog.displayName
+                };
+            }
         }
-        options.zoomFactor = zoomFactor;
+        return options.header;
+    }
 
-        this.el.attr('data-brease-dialogId', options.id);
+    function _setStyle(style, dialog) {
+        if (dialog && dialog.style) { style = dialog.style; }
+        return style;
+    }
 
-        SuperClass.prototype.show.call(this, options, refElement);
-        this._setDimensions();
-        document.body.addEventListener(BreaseEvent.THEME_CHANGED, this._bind('_themeChangeHandler'));
-        return (dialog !== undefined);
-    };
+    function _setZoom($el, dialog) {
+        var factor = 1;
+
+        // A&P 466795: dialog has to be zoomed like the visu it belongs to
+        if (dialog !== undefined) {
+            var visu = brease.pageController.getVisuById(dialog.visuId);
+
+            // it's possible to load a dialog from an embedded Visu which is not loaded so far -> containerID is undefined
+            if (visu && visu.containerId) {
+
+                var currentPage = brease.pageController.getPageById(brease.pageController.getCurrentPage(visu.containerId));
+                if (currentPage) {
+                    var layoutDiv = document.querySelector('[data-brease-layoutid="' + currentPage.layout + '"][data-brease-pageId="' + currentPage.id + '"]');
+
+                    factor = Utils.getScaleFactor(layoutDiv);
+                }
+            }
+        }
+        $el.css({ 'transform': 'scale(' + factor + ',' + factor + ')', 'transform-origin': '0 0' });
+
+        return factor;
+    }
+
+    function _showError(dialogId, errorCode) {
+
+        var widget = this,
+            //textKey = (errorCode === 'NOT_FOUND') ? 'BR/IAT/brease.error.DIALOG_NOT_FOUND' : 'BR/IAT/brease.error.DIALOG_NOT_LOADED',
+            textKey = 'BR/IAT/brease.error.DIALOG_NOT_FOUND',
+            message = brease.language.getSystemTextByKey(textKey);
+
+        this.setStyle(WidgetClass.ErrorClass);
+        this.setModal(false);
+        this.setForceInteraction(false);
+        this.el.find('.contentBox').css('width', 'auto');
+        brease.textFormatter.format(message, [dialogId]).then(function (text) {
+            widget.contentBox.append('<div class="errorText" >' + text + '</div>');
+        });
+    }
 
     p._themeChangeHandler = function () {
         this._setImage();
@@ -204,31 +296,6 @@ define([
         this._setImage();
     };
 
-    function _showError(text) {
-        this.contentBox.append($('<div class="errorText" >' + text + '</div>'));
-    }
-
-    function _setZoom($el, visuId) {
-
-        var visu = brease.pageController.getVisuById(visuId),
-            factor = 1;
-
-        // it's possible to load a dialog from an embedded Visu which is not loaded so far -> containerID is undefined
-        if (visu && visu.containerId) {
-
-            var currentPage = brease.pageController.getPageById(brease.pageController.getCurrentPage(visu.containerId));
-            if (currentPage) {
-                var layoutDiv = document.querySelector('[data-brease-layoutid="' + currentPage.layout + '"][data-brease-pageId="' + currentPage.id + '"]');
-
-                factor = Utils.getScaleFactor(layoutDiv);
-            }
-        }
-
-        $el.css({ 'transform': 'scale(' + factor + ',' + factor + ')', 'transform-origin': '0 0' });
-
-        return factor;
-    }
-
     /**
     * @method onBeforeHide
     * @inheritdoc  
@@ -249,6 +316,7 @@ define([
     */
     p.hide = function () {
         brease.pageController.emptyContainer(this.contentBox[0], true);
+        this.el.removeAttr('data-brease-dialogId');
         document.body.removeEventListener(BreaseEvent.THEME_CHANGED, this._bind('_themeChangeHandler'));
         SuperClass.prototype.hide.call(this);
     };
@@ -257,25 +325,6 @@ define([
         document.body.removeEventListener(BreaseEvent.THEME_CHANGED, this._bind('_themeChangeHandler'));
         SuperClass.prototype.dispose.apply(this, arguments);
     };
-
-    function _getLayoutSize(container) {
-        var size = {
-                width: 0,
-                height: 0
-            },
-            areas = container.find('> div');
-
-        if (areas.length > 0) {
-            var pos, area;
-            for (var i = 0; i < areas.length; i += 1) {
-                area = $(areas[i]);
-                pos = area.position();
-                size.width = Math.max(size.width, pos.left + area.width());
-                size.height = Math.max(size.height, pos.top + area.height());
-            }
-        }
-        return size;
-    }
 
     return WidgetClass;
 

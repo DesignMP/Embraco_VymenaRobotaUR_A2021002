@@ -90,6 +90,8 @@
         Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Variables.var" />
       <InternalFile
         Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Robot\ProfinetKomunikaciaRobot.st.var" />
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Robot\OvladanieGripra.st.var" />
     </Task>
     <Task
       Name="OvladanieV"

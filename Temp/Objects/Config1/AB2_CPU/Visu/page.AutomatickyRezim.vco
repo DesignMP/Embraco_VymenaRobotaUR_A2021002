@@ -23,7 +23,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">7</UInt32>
+              <UInt32 Name="Data">249</UInt32>
             </Group>
             <Group Name="ColorDatapoint">
               <UInt16 Name="Offset">16</UInt16>

@@ -1,4 +1,4 @@
-define(function () {
+define(['brease/core/Utils'], function (Utils) {
 
     'use strict';
 
@@ -32,6 +32,16 @@ define(function () {
     /* PUBLIC
     */
 
+    /**
+    * @method parseFloat
+    * Method parses a string and returns a floating point number.  
+    * Difference to native parseFloat is, that input can be formatted with different separators for different cultures.    
+    * e.g. parseFloat('12.34', {dsp: '.'}) = 12.34  
+    * e.g. parseFloat('12,34', {dsp: ','}) = 12.34  
+    * @param {String} strValue
+    * @param {Object} separators
+    * @return {Number}
+     */
     p.parseFloat = function (strValue, separators) {
         separators = separators || { dsp: '.' };
         strValue = strValue.replace(floatPattern(separators), '');
@@ -42,12 +52,16 @@ define(function () {
     /**
     * @method formatNumber
     * Format a numeric value.  
+    * Value is rounded to decimalPlaces of format.  
+    * Negative input returns the same result as positive input but with leading '-' for every input.  
+    * (see {@link brease.core.Utils#method-roundTo Utils.roundTo} for comparison)
     * @param {Number} value
     * @param {brease.config.NumberFormat} format
     * @param {Boolean} useDigitGrouping
     * @param {Object} separators
     * @param {String} separators.dsp decimal separator (The decimal separator (or decimal mark) is a symbol used to separate the integer part from the fractional part of a number written in decimal form.)
     * @param {String} separators.gsp grouping separator for digit grouping of the integer part of a number written in decimal form
+    * @return {String}
     */
     p.formatNumber = function (value, format, useDigitGrouping, separators) {
 
@@ -66,6 +80,16 @@ define(function () {
         }
     };
 
+    /**
+    * @method roundToSignificant
+    * Returns the value of a number rounded to significant digits.  
+    * e.g. roundToSignificant(0.00002345012, 4) = 0.00002345  
+    * Negative input returns the same result as positive input but with leading '-' for every input.  
+    * (which is different from {@link brease.core.Utils#method-roundTo Utils.roundTo})  
+    * @param {Number} value
+    * @param {Integer} precision positive integer >= 1
+    * @return {Number}
+     */
     p.roundToSignificant = function (value, precision) {
         if (isNaN(value)) {
             throw new SyntaxError('value has to be a number');
@@ -80,11 +104,22 @@ define(function () {
         var abs = Math.abs(value),
             sign = value / abs,
             log = Math.floor(Math.log10(abs)) + 1,
-            factor = Math.max(1, Math.round(Math.pow(10, precision) / Math.pow(10, log)));
+            power = Math.max(0, precision - log);
 
-        return sign * Math.round(factor * abs) / factor;
+        return sign * Utils.roundTo(abs, power);
     };
 
+    /**
+    * @method roundToFormat
+    * Returns the value of a number rounded to decimalPlaces.    
+    * e.g. roundToFormat(2.15, 1) = 2.2  
+    * e.g. roundToFormat(-2.15, 1) = -2.2  
+    * Negative input returns the same result as positive input but with leading '-' for every input.  
+    * (which is different from {@link brease.core.Utils#method-roundTo Utils.roundTo})  
+    * @param {Number} value
+    * @param {Integer} decimalPlaces positive integer >= 0
+    * @return {Number}
+     */
     p.roundToFormat = function (value, decimalPlaces) {
         if (isNaN(value)) {
             throw new SyntaxError('value has to be a number');
@@ -101,10 +136,25 @@ define(function () {
             factor = Math.max(1, Math.pow(10, decimalPlaces));
 
         if (abs > 0 && abs * factor < Number.MAX_VALUE) { //otherwise its not calculable
-            return sign * Math.round(abs * factor) / factor;
+            return sign * Utils.roundTo(abs, decimalPlaces);
         } else {
             return value;
         }
+    };
+
+    /**
+    * @method toFixed
+    * Method formats a number using fixed-point notation.  
+    * Difference to native toFixed: correct for all values  
+    * e.g. toFixed(2.35, 1) = '2.4'  
+    * e.g. toFixed(2.55, 1) = '2.6'  
+    * see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed" target="_blank" style="text-decoration:underline;">Number.toFixed</a>
+    * @param {Number} value
+    * @param {Integer} decimalPlaces positive integer >= 0
+    * @return {String}
+     */
+    p.toFixed = function (value, decimalPlaces) {
+        return Utils.roundTo(value, decimalPlaces).toFixed(decimalPlaces);
     };
 
     /*
@@ -158,7 +208,7 @@ define(function () {
             maximumIntegerDigits = minimumIntegerDigits;
         }
 
-        var parts = absValue.toFixed(decimalPlaces).split('.');
+        var parts = p.toFixed(absValue, decimalPlaces).split('.');
 
         if (decimalPlaces > 0) {
             fractionDigits = parts[1];

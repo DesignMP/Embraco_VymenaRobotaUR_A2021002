@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32px"
+   height="32px"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg8634"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="power rest.svg">
+  <defs
+     id="defs8628" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.2"
+     inkscape:cx="10.069809"
+     inkscape:cy="31.695287"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata8631">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="matrix(3.5 0 0 3.5 -23.0978698,-28.6612284)">
+    <path
+       id="path3768"
+       style="color:#000000;text-indent:0;text-transform:none;fill:#FFFFFF; stroke-width:0.8"
+       inkscape:connector-curvature="0"
+       d="M 8.0007742,9.0999374 9.1956338,10.012987 C 9.8240322,9.5061756 10.631038,9.1983202 11.507574,9.1983202 c 1.981045,0 3.609066,1.5659128 3.609066,3.4711018 0,1.905316 -1.628152,3.435713 -3.609066,3.435713 -1.5529914,0 -2.8875682,-0.938816 -3.3922243,-2.262979 l 1.2930678,-0.303032 c 0.3460446,0.784833 1.1479555,1.326254 2.0991565,1.326254 1.273308,0 2.283394,-0.97141 2.283394,-2.196107 0,-1.224633 -1.010021,-2.231495 -2.283394,-2.231495 -0.472432,0 -0.906522,0.140685 -1.268515,0.377814 l 1.182577,0.905179 -3.4209012,0.610018 V 9.0997232 Z" background-color="#ffa500"/>
+  </g>
+</svg>

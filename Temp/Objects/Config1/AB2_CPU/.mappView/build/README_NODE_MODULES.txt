@@ -6,8 +6,8 @@ Requirements for creation of node_modules.zip:
 2) Install all other modules with command "npm install"
 
 3) Check if all files for local execution of grunt are in node_modules/.bin
-	- node_x64.exe (version 4.4.5)
-	- node_x86.exe (version 4.4.5)
+	- node_x64.exe (version 7.10.1)
+	- node_x86.exe (version 7.10.1)
 	- grunt.cmd
 	
 4) Check if environment variables for node exist in grunt.cmd

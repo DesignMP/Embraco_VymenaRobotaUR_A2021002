@@ -1,0 +1,3 @@
+VAR
+	SC_OvlGripra : SequenceControlTyp := (0);
+END_VAR

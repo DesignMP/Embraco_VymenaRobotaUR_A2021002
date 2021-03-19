@@ -27,6 +27,7 @@ PROGRAM _CYCLIC
 	
     //Volanie podprogramov//
     ProfinetKomunikaciaRobot;
+    OvladanieGripra;
     
     
     //Reset sekcie //
@@ -48,6 +49,7 @@ PROGRAM _CYCLIC
             Robot.Manual:= FALSE;
             Robot.Reset:= FALSE;
             Robot.STAV.PoINIT:= FALSE;
+            SC_OvlGripra.Step:= 0;
             Robot.KOM_OUT.Bruska_OdoberCap:= FALSE;
             Robot.KOM_OUT.Bruska_VlozCap:= FALSE;
             Robot.KOM_OUT.Dopravnik_PolozCap:= FALSE;

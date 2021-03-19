@@ -496,6 +496,20 @@ function (BreaseEvent,
                 this.fn = undefined;
                 this.args = undefined;
             }
+        },
+
+        /**
+        * @method
+        * Find all css class names of an HTMLElement which contain a specified string.  
+        * @param {HTMLElement} elem
+        * @param {String} str
+        * @return {String[]}
+        */
+        findStyleClasses: function (elem, str) {
+            var stylePattern = new RegExp('.*' + str + '.*');
+            return Array.from(elem.classList).filter(function (cl) {
+                return stylePattern.test(cl);
+            });
         }
 
     };

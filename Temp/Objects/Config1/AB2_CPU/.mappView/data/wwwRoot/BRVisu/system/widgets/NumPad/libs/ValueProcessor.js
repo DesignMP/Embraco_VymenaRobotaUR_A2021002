@@ -21,6 +21,7 @@ define(['brease/events/EventDispatcher'], function (EventDispatcher) {
     };
     
     Value.prototype.initialSetValue = function (value) {
+        this.value = undefined;
         this.setValue(value);
         this.outputIsInitialized = false;
     };

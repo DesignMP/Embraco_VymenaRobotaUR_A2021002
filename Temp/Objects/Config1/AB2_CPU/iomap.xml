@@ -398,6 +398,7 @@
 </LN>
 <LN ID="%IX.IF6.ST1.BOOL006" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="BOOL006" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.STAV.VyblokovanieSafety_AKTIVNE" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.BOOL007" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="BOOL007" Kind="io"/>
@@ -479,19 +480,19 @@
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput09" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput09" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.ManipulUchopovac_Zatvoreny_MS1" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.DlhyUchopovac_Zatvoreny_MS1" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput10" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput10" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.ManipulUchopovac_Otvoreny_MS2" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.DlhyUchopovac_Otvoreny_MS2" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput11" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput11" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.OdkladaciUchopovac_Zatvoreny_MS3" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.KratkyUchopovac_Zatvoreny_MS3" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput12" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput12" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.OdkladaciUchopovac_Otvoreny_MS4" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.KratkyUchopovac_Otvoreny_MS4" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput13" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput13" Kind="io"/>
@@ -686,14 +687,14 @@
 <Cons Device="IF6.ST4" DPName="DigitalOutput04" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput05" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.ZatvorManipulacnyUchopovac" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.ZatvorDlhyUchopovac_YV1" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput05" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput06" Type="BOOL">
 <Cons Device="IF6.ST4" DPName="DigitalOutput06" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput07" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.ZatvorOdkladaciUchopovac" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.ZatvorKratkyUchopovac_YV2" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput07" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput08" Type="BOOL">

@@ -54,7 +54,7 @@
         <Control ClassId="0x00001004" Name="Text_1">
           <Property Name="AlignmentHorizontal" Value="Center"/>
           <Property Name="AlignmentVertical" Value="Center"/>
-          <Property Name="BackColor" Value="7"/>
+          <Property Name="BackColor" Value="249"/>
           <Property Name="Border" Value="Source[local].Border[SunkenNG]"/>
           <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.Vizu.StavZariadenia_Farba]"/>
           <Property Name="ColorMap" Value="Source[local].ColorMap[StavyZariadenia]"/>

@@ -212,7 +212,9 @@
             attrName = ' name="' + prop.name + '"';
             attrType = ' type="types:' + prop.type + '"';
             if (DataTypes.isArrayType(prop.type)) {
-                arrayProps.push(prop);
+                if (prop.projectable !== false) { // projectable is false or undefined
+                    arrayProps.push(prop);
+                }
             } else {
                 // not projectable properties have attribute use="prohibited"
                 // such properties must not have a default value

@@ -12,6 +12,7 @@ define([
         dispatcher.registerStore(this);
         var defaultState = _getDefaultState();
         this.state = _mergeInitWithDefaultState(initState, defaultState);
+        this.pending = [];
         this.subscribedViews = [];
         this.sourceOrder = [];
     };
@@ -25,7 +26,7 @@ define([
             case ImageActionTypes.INIT_IMAGE:
                 _addPrefixToImageList(store);
                 _setActualSelectedImage(store);
-                store.state.promise = store._processImage(store);
+                store.processImage();
                 break;
 
             case ImageActionTypes.INIT_IMAGE_AFTER_PRELOAD:
@@ -40,7 +41,7 @@ define([
                 }
                 _addPrefixToImageList(store);
                 _setActualSelectedImage(store);
-                store.state.promise = store._processImage(store);
+                store.processImage();
                 break;
 
             case ImageActionTypes.SET_IMAGE_FROM_INDEX:
@@ -49,13 +50,13 @@ define([
                 store.state.imageList[action.data.index] = imageToSet;
                 _addPrefixToImageList(store);
                 _setActualSelectedImage(store);
-                store.state.promise = store._processImage(store);
+                store.processImage();
                 break;
 
             case ImageActionTypes.SET_IMAGE_INDEX:
                 store.state.imageIndex = Utils.isNumeric(action.data) ? action.data : undefined;
                 _setActualSelectedImage(store);
-                store.state.promise = store._processImage(store);
+                store.processImage();
                 break;
 
             case ImageActionTypes.SET_PATH_PREFIX:
@@ -63,7 +64,7 @@ define([
                 store.state.pathPrefix = pathPrefix;
                 _addPrefixToImageList(store);
                 _setActualSelectedImage(store);
-                store.state.promise = store._processImage(store);
+                store.processImage();
                 break;
 
             case ImageActionTypes.SET_SIZE_MODE:
@@ -88,18 +89,25 @@ define([
 
             case ImageActionTypes.SET_USE_SVG_STYLING:
                 store.state.useSVGStyling = action.data;
-                store.state.promise = store._processImage(store);
+                store.processImage();
                 break;
 
         }
-
         store.state.promise.then(function (imageType) {
             store.state.type = imageType;
             store.dispatchAction();
-        }, function (error) {
-            // TEST 
-            console.log('Error caught in promise: ' + error);
+            store.pending = [];
+        }, function () {
+            store.pending = [];
         });
+    };
+    ImageStore.prototype.processImage = function processImage() {
+        var store = this;
+        if (store.pending) {
+            store.pending.forEach(function (rejectPendingImage) { rejectPendingImage(); });
+            store.pending = [];
+        }
+        store.state.promise = store._processImage(store);
     };
 
     ImageStore.prototype.dispatchAction = function dispatchAction() {
@@ -155,6 +163,7 @@ define([
 
     ImageStore.prototype._processImage = function (store) {
         var processImagePromise = new Promise(function (resolve, reject) {
+            store.pending.push(reject);
             if (store.state.actualImage === undefined || store.state.actualImage === '') {
                 resolve(ImageTypes.INVALID);
             } else if (UtilsImage.isStylable(store.state.actualImage) && store.state.useSVGStyling) {

@@ -59,7 +59,7 @@ define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketE
         *           function() {
         *               //Error Callback
         *           }
-        *       });
+        *       );
         *
         * @param {String} username
         * @param {String} password
@@ -83,7 +83,7 @@ define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketE
         *           function() {
         *               //Error Callback
         *           }
-        *       });
+        *       );
         *
         * @param {Object} user User Object 
         * @return {Promise}
@@ -106,7 +106,7 @@ define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketE
         *           function() {
         *               //Error Callback
         *           }
-        *       });
+        *       );
         *
         * @return {Promise}
         */
@@ -141,7 +141,7 @@ define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketE
         *           function() {
         *               //Error Callback
         *           }
-        *       });
+        *       );
         *
         * @return {Promise}
         */
@@ -235,6 +235,31 @@ define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketE
             _deferAction = $.Deferred();
             _runtimeService.authenticateUser(username, password, _loginActionAuthResponseHandler);
             return _deferAction.promise();
+        },
+
+        /**
+        * @method changePassword
+        * @async
+        * Async function to change the password
+        *
+        *       brease.user.changePassword(userName, oldPassword, newPassword).then(        
+        *           function() {
+        *               //success callback
+        *           },
+        *           function() {
+        *               //error callback
+        *           }
+        *       );
+        *
+        * @param {String} userName
+        * @param {String} oldPassword
+        * @param {String} newPassword
+        * @return {Promise}
+        */
+        changePassword: function (userName, oldPassword, newPassword) {
+            _deferChange = $.Deferred();
+            _runtimeService.changePassword(userName, oldPassword, newPassword, _changePasswordResponseHandler, { userName: userName });
+            return _deferChange.promise();
         }
     };
 
@@ -268,6 +293,7 @@ define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketE
         _deferAuth,
         _deferUser,
         _deferAction,
+        _deferChange,
         _currentUser,
         _roles = [],
         _runtimeService;
@@ -277,6 +303,16 @@ define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketE
             _roles = responseData.roles.sort();
         }
         _resolve(callbackInfo.deferred, callbackInfo.callback, responseData.roles);
+    }
+
+    function _changePasswordResponseHandler(responseData, callbackInfo) {
+        if (responseData.success === true) {
+            _deferChange.resolve(responseData.status, callbackInfo.userName);
+            //brease.loggerService.log(Enum.EventLoggerId.CLIENT_USER_CHANGEPASSWORD_OK, Enum.EventLoggerCustomer.BUR, Enum.EventLoggerVerboseLevel.OFF, Enum.EventLoggerSeverity.SUCCESS, [callbackInfo.userName]);
+        } else {
+            _deferChange.reject(responseData.status, callbackInfo.userName);
+            //brease.loggerService.log(Enum.EventLoggerId.CLIENT_USER_CHANGEPASSWORD_FAIL, Enum.EventLoggerCustomer.BUR, Enum.EventLoggerVerboseLevel.OFF, Enum.EventLoggerSeverity.ERROR, [callbackInfo.userName]);
+        }
     }
 
     function _resolve(deferred, callback, result) {

@@ -160,6 +160,7 @@
   <Operation Download="vccshape.br" Memory="UserROM"/>
   <Operation Download="vccstr.br" Memory="UserROM"/>
   <Operation Download="vcctext.br" Memory="UserROM"/>
+  <Operation Download="assl1.br" Memory="UserROM"/>
   <Operation Download="Visu.br" Memory="UserROM"/>
   <Operation Download="RiadenieSe.br" Memory="UserROM"/>
   <Operation Download="LimitneSni.br" Memory="UserROM"/>

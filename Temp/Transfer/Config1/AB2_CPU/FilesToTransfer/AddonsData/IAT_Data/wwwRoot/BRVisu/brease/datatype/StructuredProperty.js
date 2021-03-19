@@ -17,7 +17,7 @@ define(['brease/core/Class', 'brease/core/Utils'], function (SuperClass, Utils) 
     * @param {String} propName name of the structured property, defined in the widget, e.g. "yAxis"
     */
 
-    var StructuredProperty = SuperClass.extend(function (id, options, defaultSettings, widgetId, propName) {
+    var StructuredProperty = SuperClass.extend(function (id, options, widgetId, propName) {
             SuperClass.call(this);
 
             this.id = id; // fully qualified name, like Content1_OnlineChartHDA1_yAxis_yAxis2
@@ -25,9 +25,9 @@ define(['brease/core/Class', 'brease/core/Utils'], function (SuperClass, Utils) 
             this.name = id.substring(this.prefix.length); // short name as projected: yAxis2
 
             if (options !== undefined && options !== null) {
-                this.settings = Utils.extendOptionsToNew(defaultSettings, options);
+                this.settings = Utils.extendOptionsToNew(this.defaultSettings, options);
             } else {
-                this.settings = Utils.deepCopy(defaultSettings);
+                this.settings = Utils.deepCopy(this.defaultSettings);
             }
         },
         null),

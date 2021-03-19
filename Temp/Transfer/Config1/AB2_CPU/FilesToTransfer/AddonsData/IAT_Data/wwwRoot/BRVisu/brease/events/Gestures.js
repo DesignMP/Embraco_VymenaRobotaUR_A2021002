@@ -13,28 +13,32 @@ define(['brease/core/Utils', 'brease/config', 'hammer'], function (Utils, config
             settings: { mngOptions: {} },
             /**
             * @method add
-            * add gesture recognizers to a certain element
+            * add gesture recognizers to a certain element  
+            * returns the added gestures in an array  
             * @param {HTMLElement} elem
             * @param {Array} arrRecoClass
             * @param {Array} arrOptions
+            * @return {Object[]} 
             */
             add: function (elem, arrRecoClass, arrOptions) {
                 if (!Array.isArray(arrRecoClass) || !Array.isArray(arrOptions)) {
                     return;
                 }
-                var hammerMng;
+                var hammerMng,
+                    gestures = [];
                 if (_gestures.has(elem)) {
                     hammerMng = _gestures.get(elem);
                     arrRecoClass.forEach(function (actRecoClass, idx) {
-                        _addRecoToMng(_getRecoByClass(actRecoClass, arrOptions[idx]), hammerMng);
+                        gestures.push(_addRecoToMng(_getRecoByClass(actRecoClass, arrOptions[idx]), hammerMng));
                     });
                 } else {
                     hammerMng = new Hammer.Manager(elem, Gestures.settings.mngOptions);
                     arrRecoClass.forEach(function (actRecoClass, idx) {
-                        _addRecoToMng(_getRecoByClass(actRecoClass, arrOptions[idx]), hammerMng);
+                        gestures.push(_addRecoToMng(_getRecoByClass(actRecoClass, arrOptions[idx]), hammerMng));
                     });
                     _gestures.set(elem, hammerMng);
                 }
+                return gestures;
             },
             /**
             * @method remove
@@ -118,7 +122,7 @@ define(['brease/core/Utils', 'brease/config', 'hammer'], function (Utils, config
             * @param {Number} id
             * @param {Function} fn
             * Executes the applied function before the browser starts
-            * painting in order to perfrom smooth animations
+            * painting in order to perform smooth animations
             * @return {Number} requestId
             */
             getAnimationFrame: function (id, fn) {
@@ -152,7 +156,7 @@ define(['brease/core/Utils', 'brease/config', 'hammer'], function (Utils, config
             if (!reco || !mng) {
                 return;
             }
-            mng.add(reco);
+            return mng.add(reco);
         },
         _getRecoByClass = function (className, options) {
             var recoClass = _arrRecos.find(function (actClass) { return actClass.name === className; }),

@@ -1,11 +1,11 @@
-/*global brease*/
 define([
     'brease/core/Class',
+    'brease/core/Utils',
     'brease/events/BreaseEvent',
     'libs/d3/d3',
     'globalize',
     'widgets/brease/common/libs/ChartUtils'
-], function (SuperClass, BreaseEvent, d3, _globalize, ChartUtils) {
+], function (SuperClass, Utils, BreaseEvent, d3, _globalize, ChartUtils) {
 
     'use strict';
 
@@ -25,7 +25,10 @@ define([
             SuperClass.call(this);
             this.widget = widget;
             if (!configuration.mainContainer) {
-                this.parentWidget = brease.callWidget(widget.el.parents(':eq(1)')[0].id, 'widget');
+                var parentWidgetElem = Utils.parentWidgetElem(widget.elem);
+                if (parentWidgetElem) {
+                    this.parentWidget = brease.callWidget(parentWidgetElem.id, 'widget'); 
+                }
                 this.areas = (this.parentWidget) ? this.parentWidget.editorGrid.areas : null;
             }
             this.children = {};

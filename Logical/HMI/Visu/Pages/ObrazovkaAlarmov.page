@@ -258,7 +258,7 @@
         <Control ClassId="0x00001004" Name="Text_2">
           <Property Name="AlignmentHorizontal" Value="Center"/>
           <Property Name="AlignmentVertical" Value="Center"/>
-          <Property Name="BackColor" Value="253"/>
+          <Property Name="BackColor" Value="249"/>
           <Property Name="Border" Value="Source[local].Border[Mp_SunkenNG]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>

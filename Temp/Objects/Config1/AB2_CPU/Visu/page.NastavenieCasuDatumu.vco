@@ -17,7 +17,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">8</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">249</UInt32>
+              <UInt32 Name="Data">248</UInt32>
             </Group>
             <Group Name="End Marker">
               <UInt16 Name="Offset">65535</UInt16>
@@ -36,7 +36,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">8</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">249</UInt32>
+              <UInt32 Name="Data">248</UInt32>
             </Group>
             <Group Name="End Marker">
               <UInt16 Name="Offset">65535</UInt16>
@@ -61,7 +61,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">251</UInt32>
+              <UInt32 Name="Data">249</UInt32>
             </Group>
             <Group Name="FillStyle">
               <UInt16 Name="Offset">20</UInt16>
@@ -641,9 +641,9 @@
           </Object>
           <Object Name="Text_10" ClsId="0x1004" Version="1" Type="CTRL" RefString="Source[local].Page[NastavenieCasuDatumu].Layer[FrameLayer].Control[Text_10]">
             <UInt32 Name="Left">268</UInt32>
-            <UInt32 Name="Top">306</UInt32>
+            <UInt32 Name="Top">305</UInt32>
             <UInt32 Name="Right">337</UInt32>
-            <UInt32 Name="Bottom">351</UInt32>
+            <UInt32 Name="Bottom">350</UInt32>
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001004].StyleClass[Default]</Reference>
@@ -692,22 +692,17 @@
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001004].StyleClass[Default]</Reference>
-            <UInt16 Name="StyleTableSize">67</UInt16>
+            <UInt16 Name="StyleTableSize">59</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
             <Group Name="Border">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
               <Reference Name="Data" Type="BRD">Source[local].Border[Flat_black]</Reference>
             </Group>
-            <Group Name="ForeColor">
-              <UInt16 Name="Offset">8</UInt16>
-              <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">15</UInt32>
-            </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">253</UInt32>
+              <UInt32 Name="Data">48</UInt32>
             </Group>
             <Group Name="FillStyle">
               <UInt16 Name="Offset">20</UInt16>
@@ -752,22 +747,17 @@
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001004].StyleClass[Default]</Reference>
-            <UInt16 Name="StyleTableSize">67</UInt16>
+            <UInt16 Name="StyleTableSize">59</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
             <Group Name="Border">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
               <Reference Name="Data" Type="BRD">Source[local].Border[Flat_black]</Reference>
             </Group>
-            <Group Name="ForeColor">
-              <UInt16 Name="Offset">8</UInt16>
-              <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">15</UInt32>
-            </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">253</UInt32>
+              <UInt32 Name="Data">48</UInt32>
             </Group>
             <Group Name="FillStyle">
               <UInt16 Name="Offset">20</UInt16>
@@ -816,7 +806,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">8</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">249</UInt32>
+              <UInt32 Name="Data">248</UInt32>
             </Group>
             <Group Name="End Marker">
               <UInt16 Name="Offset">65535</UInt16>
@@ -831,22 +821,17 @@
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001004].StyleClass[Default]</Reference>
-            <UInt16 Name="StyleTableSize">67</UInt16>
+            <UInt16 Name="StyleTableSize">59</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
             <Group Name="Border">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
               <Reference Name="Data" Type="BRD">Source[local].Border[Flat_black]</Reference>
             </Group>
-            <Group Name="ForeColor">
-              <UInt16 Name="Offset">8</UInt16>
-              <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">15</UInt32>
-            </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">253</UInt32>
+              <UInt32 Name="Data">48</UInt32>
             </Group>
             <Group Name="FillStyle">
               <UInt16 Name="Offset">20</UInt16>
@@ -1206,7 +1191,7 @@
             <Group Name="ForeColor">
               <UInt16 Name="Offset">24</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">10</UInt32>
+              <UInt32 Name="Data">15</UInt32>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">28</UInt16>
@@ -1507,7 +1492,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">4</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">251</UInt32>
+              <UInt32 Name="Data">8</UInt32>
             </Group>
             <Group Name="Range[0].Color">
               <UInt16 Name="Offset">16</UInt16>

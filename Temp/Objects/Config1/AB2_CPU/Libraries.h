@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _LIBRARIES_20210315152707_
-#define _LIBRARIES_20210315152707_
+#ifndef _LIBRARIES_20210319142100_
+#define _LIBRARIES_20210319142100_
 
 __asm__(".section \".plc\"");
 
@@ -36,9 +36,6 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.var\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsXml/AsXml.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsXml/AsXml.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsXml/AsXml.var\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsZip/AsZip.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsZip/AsZip.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsZip/AsZip.var\\\" scope \\\"global\\\"\\n\"");
@@ -48,16 +45,6 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/AxisLib/AxisLib.fun\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/SC/Types.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/SC/Constants.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/SC/SC.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxisError.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.var\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxisCfg.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.var\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBase.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBase.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBase.var\\\" scope \\\"global\\\"\\n\"");
@@ -70,10 +57,23 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.typ\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAxCfg.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxisCfg.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxisError.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipe.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipeAlarm.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipeError.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipe.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.var\\\" scope \\\"global\\\"\\n\"");
 
 /* Exported library functions and function blocks */
 #ifdef _RUNTIME_EXPORT
@@ -703,17 +703,6 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipe.fun\\\" scope 
 	__asm__(".ascii \"plcexport \\\"xmlWriteCDataEx\\\" FUB\\n\"");
 	__asm__(".ascii \"plcexport \\\"xmlWritePI\\\" FUB\\n\"");
 #endif
-#ifdef _COTRACE_EXPORT
-	__asm__(".ascii \"plcexport \\\"CoTraceConfigCreate\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"CoTraceConfigLoad\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"CoTraceConfigSetTiming\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"CoTraceConfigOptionalParameter\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"CoTraceConfigAddDataPoint\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"CoTraceConfigAddStartTrigger\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"CoTraceRecorder\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"CoTraceDataReadRecords\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"CoTraceDataSaveCsv\\\" FUB\\n\"");
-#endif
 #ifdef _ASZIP_EXPORT
 	__asm__(".ascii \"plcexport \\\"zipArchive\\\" FUB\\n\"");
 	__asm__(".ascii \"plcexport \\\"zipExtract\\\" FUB\\n\"");
@@ -726,9 +715,42 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipe.fun\\\" scope 
 #ifdef _SC_EXPORT
 	__asm__(".ascii \"plcexport \\\"SequenceControl\\\" FUN\\n\"");
 #endif
-#ifdef _MPAXIS_EXPORT
-	__asm__(".ascii \"plcexport \\\"MpAxisBasic\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MpAxisCoupling\\\" FUB\\n\"");
+#ifdef _MCBASE_EXPORT
+	__asm__(".ascii \"plcexport \\\"MC_BR_ProcessConfig\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_ProcessParam\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_GetCoordSystemIdent\\\" FUB\\n\"");
+#endif
+#ifdef _MCACPAX_EXPORT
+	__asm__(".ascii \"plcexport \\\"MC_BR_InitHome_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_ProcessParID_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_CyclicProcessParID_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_MoveAbsoluteTrgStop_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_MoveAdditiveTrgStop_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_MoveVelocityTrgStop_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_LimitLoad_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_BrakeSetPar_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_BrakeTest_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_LoadSimulationSetPar_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_LoadSimulationGetPar_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_GetDriveInfo_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_AutoTuneSpeedCtrl_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_AutoTuneLoopFilters_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_AutoTunePositionCtrl_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_AutoTuneTest_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_CamAutomatSetPar_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_CamAutomatGetPar_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_PhasingVelocity_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_OffsetVelocity_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_WrLoadSimTorque_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_RdLoadSimTorque_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_WrLoadSimPosition_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_WrLoadSimTwoEncPos_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_RdLoadSimInputData_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_ApsmPowerOn_AcpAx\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_ApsmPowerOff_AcpAx\\\" FUB\\n\"");
+#endif
+#ifdef _MCSTPAX_EXPORT
+	__asm__(".ascii \"plcexport \\\"MC_BR_InitHome_StpAx\\\" FUB\\n\"");
 #endif
 #ifdef _MCAXIS_EXPORT
 	__asm__(".ascii \"plcexport \\\"MC_BR_GetAxisLibraryInfo\\\" FUB\\n\"");
@@ -786,48 +808,17 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipe.fun\\\" scope 
 	__asm__(".ascii \"plcexport \\\"MC_AbortTrigger\\\" FUB\\n\"");
 	__asm__(".ascii \"plcexport \\\"MC_TouchProbe\\\" FUB\\n\"");
 	__asm__(".ascii \"plcexport \\\"MC_BR_TouchProbe\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_CyclicTorqueFeedForward\\\" FUB\\n\"");
 	__asm__(".ascii \"plcexport \\\"MC_BR_CamAutomatPrepareRestart\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MC_BR_CheckRestorePositionData\\\" FUB\\n\"");
+#endif
+#ifdef _MPAXIS_EXPORT
+	__asm__(".ascii \"plcexport \\\"MpAxisBasic\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpAxisCoupling\\\" FUB\\n\"");
 #endif
 #ifdef _MPBASE_EXPORT
 	__asm__(".ascii \"plcexport \\\"MpComHandle\\\" FUN\\n\"");
 	__asm__(".ascii \"plcexport \\\"MpComVersion\\\" FUN\\n\"");
-#endif
-#ifdef _MCBASE_EXPORT
-	__asm__(".ascii \"plcexport \\\"MC_BR_ProcessConfig\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_ProcessParam\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_GetCoordSystemIdent\\\" FUB\\n\"");
-#endif
-#ifdef _MCACPAX_EXPORT
-	__asm__(".ascii \"plcexport \\\"MC_BR_InitHome_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_ProcessParID_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_CyclicProcessParID_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_MoveAbsoluteTrgStop_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_MoveAdditiveTrgStop_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_MoveVelocityTrgStop_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_LimitLoad_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_BrakeSetPar_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_BrakeTest_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_LoadSimulationSetPar_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_LoadSimulationGetPar_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_GetDriveInfo_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_AutoTuneSpeedCtrl_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_AutoTuneLoopFilters_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_AutoTunePositionCtrl_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_AutoTuneTest_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_CamAutomatSetPar_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_CamAutomatGetPar_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_PhasingVelocity_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_OffsetVelocity_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_WrLoadSimTorque_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_RdLoadSimTorque_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_WrLoadSimPosition_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_WrLoadSimTwoEncPos_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_RdLoadSimInputData_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_ApsmPowerOn_AcpAx\\\" FUB\\n\"");
-	__asm__(".ascii \"plcexport \\\"MC_BR_ApsmPowerOff_AcpAx\\\" FUB\\n\"");
-#endif
-#ifdef _MCSTPAX_EXPORT
-	__asm__(".ascii \"plcexport \\\"MC_BR_InitHome_StpAx\\\" FUB\\n\"");
 #endif
 #ifdef _MPRECIPE_EXPORT
 	__asm__(".ascii \"plcexport \\\"MpRecipeRegParSync\\\" FUB\\n\"");
@@ -836,9 +827,20 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipe.fun\\\" scope 
 	__asm__(".ascii \"plcexport \\\"MpRecipeUI\\\" FUB\\n\"");
 	__asm__(".ascii \"plcexport \\\"MpRecipeCsv\\\" FUB\\n\"");
 #endif
+#ifdef _COTRACE_EXPORT
+	__asm__(".ascii \"plcexport \\\"CoTraceConfigCreate\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CoTraceConfigLoad\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CoTraceConfigSetTiming\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CoTraceConfigOptionalParameter\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CoTraceConfigAddDataPoint\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CoTraceConfigAddStartTrigger\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CoTraceRecorder\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CoTraceDataReadRecords\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"CoTraceDataSaveCsv\\\" FUB\\n\"");
+#endif
 
 __asm__(".previous");
 
 
-#endif /* _LIBRARIES_20210315152707_ */
+#endif /* _LIBRARIES_20210319142100_ */
 

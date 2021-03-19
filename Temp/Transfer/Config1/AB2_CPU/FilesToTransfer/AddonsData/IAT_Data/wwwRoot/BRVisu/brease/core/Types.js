@@ -178,6 +178,12 @@ define(function () {
 */
 
 /**
+* @class core.javascript.Event
+* @embeddedClass
+* Core JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank" style="text-decoration:underline;">Event</a>
+*/
+
+/**
 * @class core.html.HTMLElement
 * @alternateClassName HTMLElement
 * @embeddedClass

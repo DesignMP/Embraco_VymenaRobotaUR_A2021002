@@ -434,12 +434,14 @@ function (bindingModel, bindingLoader, BreaseEvent, SocketEvent, ServerCode, Enu
 
     function _parseValue(value, WidgetClass, methodName, attrName, widgetId) {
 
+        // if value is no string: value is returned unmodified 
         if (!Utils.isString(value)) {
             return value;
         }
 
         var actionName = methodName.substring(0, 1).toUpperCase() + methodName.substring(1);
 
+        // if we find no meta information: value is returned unmodified 
         if (WidgetClass.meta === undefined || WidgetClass.meta.actions === undefined || (WidgetClass.meta.actions[actionName] === undefined && WidgetClass.meta.actions[methodName] === undefined)) {
             return value;
         }
@@ -448,16 +450,19 @@ function (bindingModel, bindingLoader, BreaseEvent, SocketEvent, ServerCode, Enu
         var parameter = action.parameter,
             param = parameter[Object.keys(parameter)[0]];
 
+        // if the type is no object type: value is returned unmodified 
         if (!param || Types.objectTypes.indexOf(param.type) === -1) {
             return value;
         }
-
-        try {
-            value = JSON.parse(value.replace(/'/g, '"'));
-        } catch (e) {
-            console.iatWarn('illegal data in binding: attribute: ' + attrName + ', widgetId:' + widgetId);
+        
+        // try to convert the string to an object
+        var obj = Utils.parsePseudoJSON(value, 'illegal data in binding: attribute: ' + attrName + ', widgetId:' + widgetId);
+        if (obj) {
+            // if the string can be converted to an object: object is returned
+            return obj;
         }
 
+        // if the string cannot be converted to an object: value is returned unmodified 
         return value;
     }
 

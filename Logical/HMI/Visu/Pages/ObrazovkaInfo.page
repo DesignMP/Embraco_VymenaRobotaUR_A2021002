@@ -179,13 +179,12 @@
         <Control ClassId="0x00001004" Name="Text_9">
           <Property Name="AlignmentHorizontal" Value="Center"/>
           <Property Name="AlignmentVertical" Value="Center"/>
-          <Property Name="BackColor" Value="248"/>
+          <Property Name="BackColor" Value="249"/>
           <Property Name="Border" Value="Source[local].Border[Flat_black]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="FillStyle" Value="Opaque"/>
           <Property Name="Font" Value="Source[local].Font[Arial12_Bold]"/>
-          <Property Name="ForeColor" Value="15"/>
           <Property Name="Height" Value="24"/>
           <Property Name="Left" Value="14"/>
           <Property Name="SimulationIndex" Value="0"/>

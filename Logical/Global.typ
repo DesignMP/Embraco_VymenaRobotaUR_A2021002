@@ -73,6 +73,7 @@ TYPE
 		TL_RezimManual_DISABLE : BOOL; (*0 - odomknuté, 1 - zamknuté*)
 		TL_StartAutomat_DISABLE : BOOL;
 		TL_UkoncenieCyklu_DISABLE : BOOL;
+		TL_RR_OvladanieServa_DISABLE : BOOL;
 		Slider : USINT;
 		FarbaTlacitkaAlarm_Index : BOOL;
 		ZobrazSymbolAlarmu : BOOL;
@@ -133,12 +134,20 @@ TYPE
 		Manual : BOOL;
 		Reset : BOOL;
 		KoniecCyklu : BOOL;
+		RR_OtvorKratkyUchopovac : BOOL;
+		RR_ZatvorKratkyUchopovac : BOOL;
+		RR_OtvorDlhyUchopovac : BOOL;
+		RR_ZatvorDlhyUchopovac : BOOL;
+		Robot_OtvorKratkyUchopovac : BOOL;
+		Robot_ZatvorKratkyUchopovac : BOOL;
+		Robot_OtvorDlhyUchopovac : BOOL;
+		Robot_ZatvorDlhyUchopovac : BOOL;
 	END_STRUCT;
 	RobotIN_typ : 	STRUCT 
-		ManipulUchopovac_Otvoreny_MS2 : BOOL;
-		ManipulUchopovac_Zatvoreny_MS1 : BOOL;
-		OdkladaciUchopovac_Otvoreny_MS4 : BOOL;
-		OdkladaciUchopovac_Zatvoreny_MS3 : BOOL;
+		DlhyUchopovac_Otvoreny_MS2 : BOOL;
+		DlhyUchopovac_Zatvoreny_MS1 : BOOL;
+		KratkyUchopovac_Otvoreny_MS4 : BOOL;
+		KratkyUchopovac_Zatvoreny_MS3 : BOOL;
 		CisloZadanejPozicie_Bit0 : BOOL;
 		CisloZadanejPozicie_Bit1 : BOOL;
 		CisloZadanejPozicie_Bit2 : BOOL;
@@ -149,8 +158,8 @@ TYPE
 		CisloAktualnejPozicie_Bit1 : BOOL;
 		CisloAktualnejPozicie_Bit2 : BOOL;
 		CisloAktualnejPozicie_Bit3 : BOOL;
-		ZatvorManipulacnyUchopovac : BOOL;
-		ZatvorOdkladaciUchopovac : BOOL;
+		ZatvorDlhyUchopovac_YV1 : BOOL;
+		ZatvorKratkyUchopovac_YV2 : BOOL;
 		VystupnyDopravnikNalozeny : BOOL;
 	END_STRUCT;
 	RobotPAR_typ : 	STRUCT 
@@ -172,6 +181,10 @@ TYPE
 		Stav_RezimAUTOMAT : BOOL;
 		Stav_RobotCS : BOOL;
 		Stav_VystupyZresetovane : BOOL;
+		Gripper_DlhyUchopov_OTVORENY : BOOL;
+		Gripper_DlhyUchopov_ZATVORENY : BOOL;
+		Gripper_KratkyUchopov_OTVORENY : BOOL;
+		Gripper_KratkyUchopov_ZATVORENY : BOOL;
 		Profinet_PLC_INPUTS : ARRAY[0..63]OF USINT;
 	END_STRUCT;
 	RobotKOM_OUT_typ : 	STRUCT 
@@ -194,6 +207,10 @@ TYPE
 		Bruska_VlozCap : BOOL;
 		Dopravnik_PresunDoCakacejPozicie : BOOL;
 		Dopravnik_PolozCap : BOOL;
+		Gripper_ZatvorDlhyUchopovac : BOOL;
+		Gripper_OtvorDlhyUchopovac : BOOL;
+		Gripper_ZatvorKratkyUchopovac : BOOL;
+		Gripper_OtvorKratkyUchopovac : BOOL;
 		Profinet_PLC_OUTPUTS : ARRAY[0..63]OF USINT;
 	END_STRUCT;
 END_TYPE

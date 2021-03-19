@@ -22,7 +22,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.typ"
     LogicalPath="Global.typ"
     Type="File"
-    LastWriteTime="132602917314736165"
+    LastWriteTime="132606323656409992"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.var"
@@ -34,7 +34,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\Package.pkg"
     LogicalPath="Libraries"
     Type="Package"
-    LastWriteTime="132598584529241124" />
+    LastWriteTime="132604627446871493" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\Runtime\Binary.lby"
     LogicalPath="Libraries.Runtime"
@@ -265,29 +265,6 @@
     LastWriteTime="132598584528712564"
     Private="false" />
   <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\CoTrace\binary.lby"
-    LogicalPath="Libraries.CoTrace"
-    Type="Library"
-    LastWriteTime="132598584528772396" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\CoTrace\CoTrace.fun"
-    LogicalPath="Libraries.CoTrace.CoTrace.fun"
-    Type="File"
-    LastWriteTime="132598584528772396"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\CoTrace\CoTrace.typ"
-    LogicalPath="Libraries.CoTrace.CoTrace.typ"
-    Type="File"
-    LastWriteTime="132598584528772396"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\CoTrace\CoTrace.var"
-    LogicalPath="Libraries.CoTrace.CoTrace.var"
-    Type="File"
-    LastWriteTime="132598584528782345"
-    Private="false" />
-  <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\AsZip\binary.lby"
     LogicalPath="Libraries.AsZip"
     Type="Library"
@@ -381,201 +358,224 @@
     LastWriteTime="132598584529261067"
     Private="false" />
   <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpAxis\binary.lby"
-    LogicalPath="Libraries.MpAxis"
-    Type="Library"
-    LastWriteTime="132598584528951893" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpAxis\MpAxis.fun"
-    LogicalPath="Libraries.MpAxis.MpAxis.fun"
-    Type="File"
-    LastWriteTime="132598584528951893"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpAxis\MpAxis.typ"
-    LogicalPath="Libraries.MpAxis.MpAxis.typ"
-    Type="File"
-    LastWriteTime="132598584528951893"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpAxis\MpAxisError.typ"
-    LogicalPath="Libraries.MpAxis.MpAxisError.typ"
-    Type="File"
-    LastWriteTime="132598584528961865"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\binary.lby"
-    LogicalPath="Libraries.McAxis"
-    Type="Library"
-    LastWriteTime="132598584528852167" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\McAxis.typ"
-    LogicalPath="Libraries.McAxis.McAxis.typ"
-    Type="File"
-    LastWriteTime="132598584528862138"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\McAxis.fun"
-    LogicalPath="Libraries.McAxis.McAxis.fun"
-    Type="File"
-    LastWriteTime="132598584528862138"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\McAxis.var"
-    LogicalPath="Libraries.McAxis.McAxis.var"
-    Type="File"
-    LastWriteTime="132598584528852167"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\McAxisCfg.typ"
-    LogicalPath="Libraries.McAxis.McAxisCfg.typ"
-    Type="File"
-    LastWriteTime="132598584528862138"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\Binary.lby"
-    LogicalPath="Libraries.MpBase"
-    Type="Library"
-    LastWriteTime="132598584529031684" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\MpBase.typ"
-    LogicalPath="Libraries.MpBase.MpBase.typ"
-    Type="File"
-    LastWriteTime="132598584529051639"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\MpBase.var"
-    LogicalPath="Libraries.MpBase.MpBase.var"
-    Type="File"
-    LastWriteTime="132598584529051639"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\MpBase.fun"
-    LogicalPath="Libraries.MpBase.MpBase.fun"
-    Type="File"
-    LastWriteTime="132598584529041675"
-    Private="false" />
-  <Object
-    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\Common_EventLog.tmx"
-    LogicalPath="Libraries.MpBase.Common_EventLog.tmx"
-    Type="File"
-    LastWriteTime="132598584529041675"
-    Private="false" />
-  <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McBase\binary.lby"
     LogicalPath="Libraries.McBase"
     Type="Library"
-    LastWriteTime="132598584528882085" />
+    LastWriteTime="132604627386545621" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McBase\McBase.typ"
     LogicalPath="Libraries.McBase.McBase.typ"
     Type="File"
-    LastWriteTime="132598584528892063"
+    LastWriteTime="132604627386505730"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McBase\McBase.fun"
     LogicalPath="Libraries.McBase.McBase.fun"
     Type="File"
-    LastWriteTime="132598584528892063"
+    LastWriteTime="132604627386525752"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McBase\McBase.var"
     LogicalPath="Libraries.McBase.McBase.var"
     Type="File"
-    LastWriteTime="132598584528882085"
+    LastWriteTime="132604627386535649"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McBase\McBaseCfg.typ"
     LogicalPath="Libraries.McBase.McBaseCfg.typ"
     Type="File"
-    LastWriteTime="132598584528892063"
+    LastWriteTime="132604627386535649"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAcpAx\binary.lby"
     LogicalPath="Libraries.McAcpAx"
     Type="Library"
-    LastWriteTime="132598584528832217" />
+    LastWriteTime="132604627388630062" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAcpAx\McAcpAx.typ"
     LogicalPath="Libraries.McAcpAx.McAcpAx.typ"
     Type="File"
-    LastWriteTime="132598584528832217"
+    LastWriteTime="132604627387134195"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAcpAx\McAcpAx.fun"
     LogicalPath="Libraries.McAcpAx.McAcpAx.fun"
     Type="File"
-    LastWriteTime="132598584528832217"
+    LastWriteTime="132604627387144300"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAcpAx\McAcpAx.var"
     LogicalPath="Libraries.McAcpAx.McAcpAx.var"
     Type="File"
-    LastWriteTime="132598584528822242"
+    LastWriteTime="132604627388610351"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAcpAx\McAcpAxCfg.typ"
     LogicalPath="Libraries.McAcpAx.McAcpAxCfg.typ"
     Type="File"
-    LastWriteTime="132598584528842191"
+    LastWriteTime="132604627388630062"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McStpAx\binary.lby"
     LogicalPath="Libraries.McStpAx"
     Type="Library"
-    LastWriteTime="132598584528912002" />
+    LastWriteTime="132604627389338208" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McStpAx\McStpAx.typ"
     LogicalPath="Libraries.McStpAx.McStpAx.typ"
     Type="File"
-    LastWriteTime="132598584528921985"
+    LastWriteTime="132604627389308314"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McStpAx\McStpAx.fun"
     LogicalPath="Libraries.McStpAx.McStpAx.fun"
     Type="File"
-    LastWriteTime="132598584528921985"
+    LastWriteTime="132604627389318237"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McStpAx\McStpAx.var"
     LogicalPath="Libraries.McStpAx.McStpAx.var"
     Type="File"
-    LastWriteTime="132598584528921985"
+    LastWriteTime="132604627389328216"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McStpAx\McStpAxCfg.typ"
     LogicalPath="Libraries.McStpAx.McStpAxCfg.typ"
     Type="File"
-    LastWriteTime="132598584528941923"
+    LastWriteTime="132604627389338208"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\binary.lby"
+    LogicalPath="Libraries.McAxis"
+    Type="Library"
+    LastWriteTime="132604627389567566" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\McAxis.typ"
+    LogicalPath="Libraries.McAxis.McAxis.typ"
+    Type="File"
+    LastWriteTime="132604627389527680"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\McAxis.fun"
+    LogicalPath="Libraries.McAxis.McAxis.fun"
+    Type="File"
+    LastWriteTime="132604627389537818"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\McAxis.var"
+    LogicalPath="Libraries.McAxis.McAxis.var"
+    Type="File"
+    LastWriteTime="132604627389547635"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\McAxis\McAxisCfg.typ"
+    LogicalPath="Libraries.McAxis.McAxisCfg.typ"
+    Type="File"
+    LastWriteTime="132604627389557600"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpAxis\binary.lby"
+    LogicalPath="Libraries.MpAxis"
+    Type="Library"
+    LastWriteTime="132604627389807055" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpAxis\MpAxis.fun"
+    LogicalPath="Libraries.MpAxis.MpAxis.fun"
+    Type="File"
+    LastWriteTime="132604627389786957"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpAxis\MpAxis.typ"
+    LogicalPath="Libraries.MpAxis.MpAxis.typ"
+    Type="File"
+    LastWriteTime="132604627389796932"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpAxis\MpAxisError.typ"
+    LogicalPath="Libraries.MpAxis.MpAxisError.typ"
+    Type="File"
+    LastWriteTime="132604627389807055"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\Binary.lby"
+    LogicalPath="Libraries.MpBase"
+    Type="Library"
+    LastWriteTime="132604627389996527" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\MpBase.typ"
+    LogicalPath="Libraries.MpBase.MpBase.typ"
+    Type="File"
+    LastWriteTime="132604627389956609"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\MpBase.var"
+    LogicalPath="Libraries.MpBase.MpBase.var"
+    Type="File"
+    LastWriteTime="132604627389966509"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\MpBase.fun"
+    LogicalPath="Libraries.MpBase.MpBase.fun"
+    Type="File"
+    LastWriteTime="132604627389976493"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpBase\Common_EventLog.tmx"
+    LogicalPath="Libraries.MpBase.Common_EventLog.tmx"
+    Type="File"
+    LastWriteTime="132604627389986457"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpRecipe\Binary.lby"
     LogicalPath="Libraries.MpRecipe"
     Type="Library"
-    LastWriteTime="132598584529181279" />
+    LastWriteTime="132604627390245759" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpRecipe\MpRecipe.typ"
     LogicalPath="Libraries.MpRecipe.MpRecipe.typ"
     Type="File"
-    LastWriteTime="132598584529191251"
+    LastWriteTime="132604627390205863"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpRecipe\MpRecipeAlarm.typ"
     LogicalPath="Libraries.MpRecipe.MpRecipeAlarm.typ"
     Type="File"
-    LastWriteTime="132598584529191251"
+    LastWriteTime="132604627390215963"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpRecipe\MpRecipeError.typ"
     LogicalPath="Libraries.MpRecipe.MpRecipeError.typ"
     Type="File"
-    LastWriteTime="132598584529201235"
+    LastWriteTime="132604627390235781"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\MpRecipe\MpRecipe.fun"
     LogicalPath="Libraries.MpRecipe.MpRecipe.fun"
     Type="File"
-    LastWriteTime="132598584529191251"
+    LastWriteTime="132604627390245759"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\CoTrace\binary.lby"
+    LogicalPath="Libraries.CoTrace"
+    Type="Library"
+    LastWriteTime="132604627446801661" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\CoTrace\CoTrace.fun"
+    LogicalPath="Libraries.CoTrace.CoTrace.fun"
+    Type="File"
+    LastWriteTime="132604627446772011"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\CoTrace\CoTrace.typ"
+    LogicalPath="Libraries.CoTrace.CoTrace.typ"
+    Type="File"
+    LastWriteTime="132604627446781984"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Libraries\CoTrace\CoTrace.var"
+    LogicalPath="Libraries.CoTrace.CoTrace.var"
+    Type="File"
+    LastWriteTime="132604627446791686"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Package.pkg"
@@ -638,12 +638,12 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\IEC.prg"
     LogicalPath="Program.Robot"
     Type="Program"
-    LastWriteTime="132598584529340862" />
+    LastWriteTime="132606293478079488" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Main.st"
     LogicalPath="Program.Robot.Main.st"
     Type="File"
-    LastWriteTime="132602909520810649"
+    LastWriteTime="132606294837367766"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Types.typ"
@@ -655,13 +655,19 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Variables.var"
     LogicalPath="Program.Robot.Variables.var"
     Type="File"
-    LastWriteTime="132598584529340862"
+    LastWriteTime="132606293874037992"
     Private="true" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\ProfinetKomunikaciaRobot.st"
     LogicalPath="Program.Robot.ProfinetKomunikaciaRobot.st"
     Type="File"
-    LastWriteTime="132598584529350844"
+    LastWriteTime="132606319578729343"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\OvladanieGripra.st"
+    LogicalPath="Program.Robot.OvladanieGripra.st"
+    Type="File"
+    LastWriteTime="132606330225533853"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Alarmy\IEC.prg"
@@ -672,7 +678,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Alarmy\Main.st"
     LogicalPath="Program.Alarmy.Main.st"
     Type="File"
-    LastWriteTime="132602909798235761"
+    LastWriteTime="132606305660680112"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Alarmy\Types.typ"
@@ -700,7 +706,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\OvladanieVizu\Main.st"
     LogicalPath="HMI.OvladanieVizu.Main.st"
     Type="File"
-    LastWriteTime="132602918157880874"
+    LastWriteTime="132606325200563232"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\OvladanieVizu\Types.typ"
@@ -914,13 +920,13 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.hwl"
     LogicalPath="Config1.Hardware.hwl"
     Type="File"
-    LastWriteTime="132602748800172755"
+    LastWriteTime="132606314251657859"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\Cpu.pkg"
     LogicalPath="Config1.AB2_CPU"
     Type="Cpu"
-    LastWriteTime="132598584529510396" />
+    LastWriteTime="132605292798940452" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\Cpu.sw"
     LogicalPath="Config1.AB2_CPU.Cpu.sw"
@@ -937,7 +943,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\IoMap.iom"
     LogicalPath="Config1.AB2_CPU.IoMap.iom"
     Type="File"
-    LastWriteTime="132602908448424530"
+    LastWriteTime="132606310990779733"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\PvMap.vvm"
@@ -1183,9 +1189,15 @@
     LastWriteTime="132598584529600171"
     Private="false" />
   <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\SafeLOGIC-1.swt"
+    LogicalPath="Config1.AB2_CPU.SafeLOGIC-1.swt"
+    Type="File"
+    LastWriteTime="132605391179810000"
+    Private="false" />
+  <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.jpg"
     LogicalPath="Config1.Hardware.jpg"
     Type="File"
-    LastWriteTime="132602748800242282"
+    LastWriteTime="132606314251737834"
     Private="false" />
 </Objects>

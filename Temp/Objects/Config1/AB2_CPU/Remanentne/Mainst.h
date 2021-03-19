@@ -105,6 +105,7 @@ typedef struct SafetySTAV_typ
 	plcbit ZonaRobot_AKTIVNA;
 	plcbit CS_Pracovisko_Odblokovany;
 	plcbit CS_Robot_Odblokovany;
+	plcbit VyblokovanieSafety_AKTIVNE;
 } SafetySTAV_typ;
 #endif
 

@@ -21,7 +21,7 @@ define(['brease/objects/WidgetObject', 'brease/core/Utils', 'brease/enum/Enum'],
                 self.items.set(widgetId, value);
             });
         }
-        if (brease.config.mocked) {
+        if (brease.config && brease.config.mocked) {
             window.widgetModel = { 
                 items: this.items, 
                 contents: this.contents 

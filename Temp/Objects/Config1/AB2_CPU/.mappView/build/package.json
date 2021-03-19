@@ -1,7 +1,7 @@
 {
   "name": "as-build",
-  "version": "5.6.0",
-  "description": "Brease and derived widget build for AS",
+  "version": "5.13.0",
+  "description": "Brease and custom widget build for AS",
   "license": "BundR",
   "private": true,
   "devDependencies": {

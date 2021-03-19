@@ -20,9 +20,9 @@ define([
 
         this.imageElem = new Image();
         this.imageElem.draggable = false;
-        $(this.imageElem).hide();
-        this.svgEl = $('<svg></svg>').hide();
-        this.spanHelper = $('<span class="ImageView helper"></span>').hide();
+        $(this.imageElem).css('display', 'none');
+        this.svgEl = $('<svg></svg>').css('display', 'none');
+        this.spanHelper = $('<span class="ImageView helper"></span>').css('display', 'none');
 
         this.el.append(this.spanHelper)
             .append(this.imageElem)
@@ -39,15 +39,15 @@ define([
         $(view.imageElem).css({ 'position': 'relative', 'bottom': 'auto', 'top': 'auto', 'left': 'auto', 'right': 'auto' });
         switch (view.store.getImageType()) {
             case ImageTypes.INVALID:
-                $(view.imageElem).show();
-                view.svgEl.hide();
-                view.spanHelper.hide();
+                $(view.imageElem).css('display', '');
+                view.svgEl.css('display', 'none');
+                view.spanHelper.css('display', 'none');
                 view.imageElem.src = '';
                 break;
             case ImageTypes.SVG:
-                view.svgEl.show();
-                $(view.imageElem).hide();
-                view.spanHelper.hide();
+                view.svgEl.css('display', '');
+                $(view.imageElem).css('display', 'none');
+                view.spanHelper.css('display', 'none');
                 view.svgEl.replaceWith(view.store.getSvgInline());
                 view.svgEl = view.store.getSvgInline();
                 switch (view.store.getImageSizeMode()) {
@@ -81,9 +81,9 @@ define([
                 }
                 break;
             case ImageTypes.OTHER:
-                $(view.imageElem).show();
-                view.svgEl.hide();
-                view.spanHelper.hide();
+                $(view.imageElem).css('display', '');
+                view.svgEl.css('display', 'none');
+                view.spanHelper.css('display', 'none');
                 if ($(view.imageElem).attr('src') === view.store.getImagePath()) {
                     view._readjustImageSize();
                 } else {
@@ -98,7 +98,7 @@ define([
         var view = this;
         switch (view.store.getImageSizeMode()) {
             case Enum.SizeMode.CONTAIN:
-                view.spanHelper.show();
+                view.spanHelper.css('display', '');
                 var verticalAlign = view.store.getBackgroundAlignment()[1];
                 verticalAlign = verticalAlign === 'center' ? 'middle' : verticalAlign;
                 view.el.css('text-align', view.store.getBackgroundAlignment()[0]);

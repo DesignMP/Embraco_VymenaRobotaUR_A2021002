@@ -7,12 +7,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32"
-   height="32"
-   version="1.1"
-   id="svg14"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    sodipodi:docname="add.svg"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+   id="svg14"
+   version="1.1"
+   height="32"
+   width="32">
   <metadata
      id="metadata20">
     <rdf:RDF>
@@ -21,86 +21,87 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs18" />
   <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="2560"
-     inkscape:window-height="1377"
-     id="namedview16"
-     showgrid="false"
-     inkscape:zoom="8"
-     inkscape:cx="27.602821"
-     inkscape:cy="-1.0257312"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="svg14"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg14" />
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:cy="-1.0257312"
+     inkscape:cx="27.602821"
+     inkscape:zoom="8"
+     showgrid="false"
+     id="namedview16"
+     inkscape:window-height="1001"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
   <g
      id="g6">
     <title
        id="title2">background</title>
     <rect
-       fill="none"
-       id="canvas_background"
-       height="32"
-       width="32"
+       x="0"
        y="0"
-       x="0" />
+       width="32"
+       height="32"
+       id="canvas_background"
+       fill="none" />
     <g
-       display="none"
-       id="canvasGrid" />
+       id="canvasGrid"
+       display="none" />
   </g>
   <g
-     id="g12"
+     transform="translate(-2.375,-1.5)"
      style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
-     transform="translate(-2.375,-1.5)">
+     id="g12">
     <title
        id="title8">Plus</title>
     <line
-       stroke-linejoin="undefined"
-       id="svg_2"
-       y2="18"
-       x2="8"
-       y1="18"
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-opacity:1"
        x1="24"
-       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-opacity:1" />
+       y1="18"
+       x2="8"
+       y2="18"
+       id="svg_2"
+       stroke-linejoin="undefined" />
     <line
-       stroke-linejoin="undefined"
-       id="svg_3"
-       y2="10"
-       x2="16"
-       y1="26"
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-opacity:1"
        x1="16"
-       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-opacity:1" />
+       y1="26"
+       x2="16"
+       y2="10"
+       id="svg_3"
+       stroke-linejoin="undefined" />
   </g>
   <path
-     sodipodi:type="star"
-     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:12.99999905;stroke-opacity:1;paint-order:stroke markers fill"
-     id="path822"
-     sodipodi:sides="3"
-     sodipodi:cx="24"
-     sodipodi:cy="25.627119"
-     sodipodi:r1="4.2797308"
-     sodipodi:r2="1.9390305"
-     sodipodi:arg1="-2.6177124"
-     sodipodi:arg2="-1.5705149"
-     inkscape:flatsided="true"
-     inkscape:rounded="0"
-     inkscape:randomized="0"
+     transform="matrix(1.2515461,0,0,0.74329717,-2.6141855,9.5807662)"
+     inkscape:transform-center-y="0.57541855"
+     inkscape:transform-center-x="-0.27342758"
      d="m 20.294247,23.48621 7.412711,0.0021 -3.708163,6.418553 z"
-     inkscape:transform-center-x="-0.31891073"
-     inkscape:transform-center-y="0.67113971"
-     transform="matrix(1.4597417,0,0,0.86694523,-9.5245429,4.4895276)" />
+     inkscape:randomized="0"
+     inkscape:rounded="0"
+     inkscape:flatsided="true"
+     sodipodi:arg2="-1.5705149"
+     sodipodi:arg1="-2.6177124"
+     sodipodi:r2="1.9390305"
+     sodipodi:r1="4.2797308"
+     sodipodi:cy="25.627119"
+     sodipodi:cx="24"
+     sodipodi:sides="3"
+     id="path822"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:13;stroke-opacity:1;paint-order:stroke markers fill"
+     sodipodi:type="star" />
 </svg>

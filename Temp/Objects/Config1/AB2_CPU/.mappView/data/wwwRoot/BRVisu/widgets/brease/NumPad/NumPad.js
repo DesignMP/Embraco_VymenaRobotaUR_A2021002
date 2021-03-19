@@ -197,7 +197,12 @@ define(['system/widgets/NumPad/NumPad', 'brease/enum/Enum', 'brease/core/Utils']
             }
 
             // recalculate position, so that widget is never shown outside of the page
-            widget.settings.width = widget.el.outerWidth();
+            var w = widget.elem.getBoundingClientRect().width,
+                rw = Math.round(w);
+            widget.settings.width = rw;
+            if (rw < w) { // A&P 689815: if w is rounded down, we increase by one to have enough space for the buttons
+                widget.settings.width += 1;
+            }
             widget._setDimensions();
             widget._setPosition();
 

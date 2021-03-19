@@ -41,7 +41,7 @@ module.exports = function (grunt) {
             elemValidator = _moduleRequire('iat/libs/keyboard_elementsValidator');
         targetFolder = (targetFolder && targetFolder !== 'null') ? targetFolder : _modulePath.resolve(grunt.config('wwwRoot'), '/BRVisu/widgets');
         corePath = (corePath && corePath !== 'null') ? corePath : _modulePath.resolve(grunt.config('basePath'), '../BRVisu');
-        var coreWidgets = (corePath.indexOf('wwwRoot/BRVisu') !== -1) ? _modulePath.resolve(corePath, 'widgets') : _modulePath.resolve(corePath, '../../Widgets');
+        var coreWidgets = (corePath.indexOf(_modulePath.join('wwwRoot', 'BRVisu')) !== -1) ? _modulePath.join(corePath, 'widgets') : _modulePath.resolve(corePath, '../../Widgets');
 
         if (debug) {
             grunt.log.writeln('srcFile:' + srcFile);
@@ -241,7 +241,7 @@ module.exports = function (grunt) {
                 }, {
                     name: 'createBase',
                     value: true
-                }]);
+                    }]);
 
                 grunt.config.set('sass.options.includePaths', [_modulePath.resolve(corePath, 'css/libs'), coreWidgets]);
 

@@ -120,6 +120,9 @@ define(function () {
     _defineProperty(breaseEvent, 'USER_LOADED', 'user_loaded');
     _defineProperty(breaseEvent, 'ROLES_CHANGED', 'roles_changed');
 
+    // BreaseEvent.CHANGEPASSWORDDIALOG_CLOSED needs a different value to ClientSystemEvent.CHANGEPASSWORDDIALOG_CLOSED
+    _defineProperty(breaseEvent, 'CHANGEPASSWORDDIALOG_CLOSED', 'change_password_dialog_closed');
+
     //Scroller.js
     _defineProperty(breaseEvent, 'SCROLL_START', 'scrollStart');
     _defineProperty(breaseEvent, 'SCROLL_END', 'scrollEnd');

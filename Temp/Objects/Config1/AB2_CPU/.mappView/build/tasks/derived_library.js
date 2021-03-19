@@ -19,9 +19,9 @@ module.exports = function (grunt) {
         // iat modules
         var xsltTrans = _moduleRequire('iat/XSLTTransformation'),
             widgetLibraryPrepare = _moduleRequire('iat/widgetLibraryPrepare'),
-            utils = _moduleRequire('iat/utils')
+            utils = _moduleRequire('iat/utils');
 
-        var libDirectory = _modulePath.resolve(target + '/' + libName);
+        var libDirectory = _modulePath.join(target, libName);
         //grunt.log.writeln('target:' + target);
         //grunt.log.writeln('libName:' + libName);
         //grunt.log.writeln('libDirectory:' + libDirectory);

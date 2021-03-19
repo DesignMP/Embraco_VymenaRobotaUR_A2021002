@@ -63,6 +63,7 @@ function (EventHandler, ClientSystemEvent, BreaseEvent, SystemGestures, Utils, C
         _initContentEvents(remove);
         _initDialogEvents(remove);
         _initTooltipEvents(remove);
+        _initPasswordEvents(remove);
     }
 
     function _initKeyEvents(remove) {
@@ -141,12 +142,24 @@ function (EventHandler, ClientSystemEvent, BreaseEvent, SystemGestures, Utils, C
         }
     }
 
+    function _initPasswordEvents(remove) {
+        if (remove) {
+            document.body.removeEventListener(BreaseEvent.CHANGEPASSWORDDIALOG_CLOSED, _passwordChangeHandler);
+        } else {
+            document.body.addEventListener(BreaseEvent.CHANGEPASSWORDDIALOG_CLOSED, _passwordChangeHandler);
+        }
+    }
+
     function _tooltipModeActiveHandler() {
         _dispatchEvent(ClientSystemEvent.TOOLTIPMODE_ACTIVATED, {});
     }
 
     function _tooltipModeInactiveHandler() {
         _dispatchEvent(ClientSystemEvent.TOOLTIPMODE_DEACTIVATED, {});
+    }
+
+    function _passwordChangeHandler(e) {
+        _dispatchEvent(ClientSystemEvent.CHANGEPASSWORDDIALOG_CLOSED, { userName: e.detail.userName, result: e.detail.result });
     }
 
     function _startHandler(e) {

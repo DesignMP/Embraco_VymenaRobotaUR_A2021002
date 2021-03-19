@@ -17,6 +17,7 @@ define([
         if (props.html[0] === '<') {
             this.el.html(props.html);
         } else {
+            this.el.addClass('TextView');
             this.span = $('<span></span>');
             _addCssClasses(this.el, props.textSettings, props.selected);
             this.span.text(props.html);

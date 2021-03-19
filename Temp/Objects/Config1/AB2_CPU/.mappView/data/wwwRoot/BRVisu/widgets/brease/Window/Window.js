@@ -98,10 +98,13 @@ define([
         //console.log(((this.elem) ? this.elem.id : 'undefined') + '.show:refElement:' + ((refElement) ? refElement.id : '') + '/options:' + JSON.stringify(options));
         var self = this;
         this.closeDeferred = $.Deferred();
-        //this.setStyle(this.settings.style);
         popupManager.addWindow(self.elem.id, self.settings.windowType);
         this.refElement = (refElement) ? ((refElement.jquery) ? refElement : $(refElement)) : undefined;
+        // A&P 704805:widgets should have only one css style class: therefore the old class is removed here, 
+        // as this.setStyle does not remove it, if new style is already set in this.settings:
+        this.el.removeClass(this.settings.stylePrefix + '_style_' + this.settings.style); 
         this.settings = $.extend(true, {}, this.instanceSettings, options);
+        
         if (this.settings.header !== undefined && brease.language.isKey(this.settings.header.text)) {
             this.settings.header.textkey = brease.language.parseKey(this.settings.header.text);
         }
@@ -157,6 +160,20 @@ define([
             this.opener.removeEventListener(BreaseEvent.FRAGMENT_HIDE, this._bind('closeOnLostContentListener'));
             this.opener = undefined;
         }
+    };
+
+    p.setModal = function (value) {
+        this.settings.modal = value;
+        if (value === false) {
+            this._removeModal(); 
+        } else if (!this.dimmer) {
+            var maxIndex = popupManager.getHighestZindex();
+            this._setModal(maxIndex); 
+        }
+    };
+
+    p.setForceInteraction = function (value) {
+        this.settings.forceInteraction = value;
     };
 
     /**

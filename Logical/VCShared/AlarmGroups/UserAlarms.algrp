@@ -1376,10 +1376,10 @@
       <Text ID="31" Value="6 - Porucha PLC karty AB6 - Digitalne vstupy !!!"/>
       <Text ID="32" Value="7 - Porucha PLC karty AB7 - Digitalne vystupy !!!"/>
       <Text ID="33" Value="8 - Porucha serva otacania upinacej hlavy brusky !!!"/>
-      <Text ID="34" Value=""/>
-      <Text ID="35" Value=""/>
-      <Text ID="36" Value=""/>
-      <Text ID="37" Value=""/>
+      <Text ID="34" Value="9 - Porucha otvorenia dlheho uchopovaca na gripri robota !!!"/>
+      <Text ID="35" Value="10 - Porucha zatvorenia dlheho uchopovaca na gripri robota !!!"/>
+      <Text ID="36" Value="11 - Porucha otvorenie kratkeho uchopovaca na gripri robota !!!"/>
+      <Text ID="37" Value="12 - Porucha zatvorenie kratkeho uchopovaca na gripri robota !!!"/>
       <Text ID="38" Value=""/>
       <Text ID="39" Value=""/>
       <Text ID="40" Value=""/>

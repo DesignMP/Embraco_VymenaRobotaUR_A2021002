@@ -20,6 +20,8 @@ function (Client, Utils, BreaseEvent, SocketEvent, SystemGestures, VirtualEvents
     var _runtimeService,
         _services = {},
         _controller = {},
+        // populated with server information for client during startup 
+        _serverInfo = {},
 
         /**
             * @class brease.brease
@@ -363,10 +365,22 @@ function (Client, Utils, BreaseEvent, SocketEvent, SystemGestures, VirtualEvents
     function _loadConfigurations(visuConfig) {
         /* START-ORDER NR 5 */
         //console.log('%c5.) _loadConfigurations(visuId=' + brease.config.visuId + ')', 'color:#cc00cc;');
-        _services.configuration.loadConfigurations(visuConfig).then(_startConfigDependent, function () {
+        $.when(
+            _services.configuration.loadConfigurations(visuConfig),
+            _getServerInfo()
+        ).then(_startConfigDependent, function () { 
             brease.messenger.announce('CONFIGURATION_LOAD_ERROR');
             _startConfigDependent();
         });
+    }
+
+    function _getServerInfo() {
+        var deferred = $.Deferred();
+        _runtimeService.getAutoLogOut(function (response) {
+            _serverInfo.autoLogOut = response.enabled;
+            deferred.resolve();
+        });
+        return deferred.promise();
     }
 
     function _startConfigDependent() {
@@ -466,7 +480,8 @@ function (Client, Utils, BreaseEvent, SocketEvent, SystemGestures, VirtualEvents
     }
 
     function _finishBreaseStart() {
-        _controller.infoController.start(config.visu.activityCount); // send client info after optional start content is ready
+        // send client info after optional start content is ready
+        _controller.infoController.start(_serverInfo.autoLogOut || config.visu.activityCount);
         if (config.visuId !== undefined) {
             brease.pageController.start(config.visuId, brease.appElem, config.ContentCaching);
         }

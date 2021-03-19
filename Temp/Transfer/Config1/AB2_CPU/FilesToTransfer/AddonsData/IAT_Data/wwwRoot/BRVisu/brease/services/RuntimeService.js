@@ -45,11 +45,11 @@ define(['brease/services/libs/SocketResponse'], function (SocketResponse) {
     p.addEventListener = function () {
         this.socket.addEventListener.apply(this.socket, arguments);
     };
-    
+
     p.removeEventListener = function () {
         this.socket.removeEventListener.apply(this.socket, arguments);
     };
-    
+
     /*#######################
      ### LANGUAGE related ###
      #######################*/
@@ -168,6 +168,10 @@ define(['brease/services/libs/SocketResponse'], function (SocketResponse) {
         this.services.loadUserRoles.apply(this.services, arguments);
     };
 
+    p.changePassword = function () {
+        this.services.changePassword.apply(this.services, arguments);
+    };
+
     /*####################
      ### TextFormatter ###
      #####################*/
@@ -248,7 +252,7 @@ define(['brease/services/libs/SocketResponse'], function (SocketResponse) {
         this.deactivateResponse.add(contentId, { callback: callback, callbackInfo: callbackInfo });
         var Parameter = {
             contentId: contentId,
-            visuId: visuId 
+            visuId: visuId
         };
         if (force === true) {
             Parameter.force = true;
@@ -379,6 +383,10 @@ define(['brease/services/libs/SocketResponse'], function (SocketResponse) {
 
     p.loadConfiguration = function () {
         this.services.loadConfiguration.apply(this.services, arguments);
+    };
+
+    p.getAutoLogOut = function () {
+        this.services.getAutoLogOut.apply(this.services, arguments);
     };
 
     /*#######################
