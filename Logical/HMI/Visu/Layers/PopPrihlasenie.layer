@@ -40,7 +40,6 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="ForeColor" Value="0"/>
-      <Property Name="GroupID" Value="6"/>
       <Property Name="Height" Value="202"/>
       <Property Name="Left" Value="230"/>
       <Property Name="LineWidth" Value="2"/>
@@ -56,7 +55,6 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="ForeColor" Value="15"/>
-      <Property Name="GroupID" Value="6"/>
       <Property Name="Height" Value="35"/>
       <Property Name="Left" Value="232"/>
       <Property Name="SimulationIndex" Value="0"/>
@@ -74,7 +72,6 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="Font" Value="Source[local].Font[Arial16_Bold]"/>
-      <Property Name="GroupID" Value="6"/>
       <Property Name="Height" Value="46"/>
       <Property Name="Left" Value="244"/>
       <Property Name="Multiline" Value="Automatic"/>
@@ -95,7 +92,6 @@
       <Property Name="Description" Value=""/>
       <Property Name="Font" Value="Source[local].Font[Arial16_Bold]"/>
       <Property Name="ForeColor" Value="15"/>
-      <Property Name="GroupID" Value="6"/>
       <Property Name="Height" Value="24"/>
       <Property Name="Left" Value="298"/>
       <Property Name="SimulationIndex" Value="0"/>
@@ -114,7 +110,6 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="FillStyle" Value="Transparent"/>
-      <Property Name="GroupID" Value="6"/>
       <Property Name="Height" Value="32"/>
       <Property Name="IndexDatapoint" Value="None"/>
       <Property Name="Left" Value="538"/>
@@ -129,7 +124,6 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="Font" Value="Source[local].Font[Arial16_Bold]"/>
-      <Property Name="GroupID" Value="6"/>
       <Property Name="Height" Value="46"/>
       <Property Name="Left" Value="244"/>
       <Property Name="Multiline" Value="Automatic"/>
@@ -149,7 +143,6 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="Font" Value="Source[local].Font[Arial12_Bold]"/>
-      <Property Name="GroupID" Value="6"/>
       <Property Name="Height" Value="38"/>
       <Property Name="InputTouchpad" Value="Source[local].TouchPad[MpAlphaPad]"/>
       <Property Name="Left" Value="346"/>
@@ -169,7 +162,6 @@
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="Font" Value="Source[local].Font[Arial12_Bold]"/>
-      <Property Name="GroupID" Value="6"/>
       <Property Name="Height" Value="38"/>
       <Property Name="InputMode" Value="Password"/>
       <Property Name="InputPasswordChar" Value="*"/>
@@ -188,19 +180,18 @@
       <Property Name="BitmapAlignmentHorizontal" Value="Left of Text"/>
       <Property Name="BitmapIndexDatapoint" Value="None"/>
       <Property Name="BitmapSource" Value="None"/>
-      <Property Name="Border" Value="Source[local].Border[Mp_Button_Control]"/>
+      <Property Name="Border" Value="Source[local].Border[Button_Global_Area]"/>
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="EmbVirtualKey" Value="None"/>
       <Property Name="Font" Value="Source[local].Font[Arial12_Bold]"/>
-      <Property Name="ForeColor" Value="10"/>
-      <Property Name="GroupID" Value="6"/>
+      <Property Name="ForeColor" Value="0"/>
       <Property Name="Height" Value="50"/>
       <Property Name="KeyMatrixOffset" Value="None"/>
       <Property Name="Left" Value="424"/>
       <Property Name="PressedBackColor" Value="0"/>
       <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-      <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+      <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
       <Property Name="PressedForeColor" Value="0"/>
       <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
       <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.TP_ZobrazPopUpPrihlasenie]"/>
@@ -219,19 +210,18 @@
       <Property Name="BitmapAlignmentHorizontal" Value="Left of Text"/>
       <Property Name="BitmapIndexDatapoint" Value="None"/>
       <Property Name="BitmapSource" Value="None"/>
-      <Property Name="Border" Value="Source[local].Border[Mp_Button_Control]"/>
+      <Property Name="Border" Value="Source[local].Border[Button_Global_Area]"/>
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_7]"/>
       <Property Name="Font" Value="Source[local].Font[Arial12_Bold]"/>
-      <Property Name="ForeColor" Value="10"/>
-      <Property Name="GroupID" Value="6"/>
+      <Property Name="ForeColor" Value="0"/>
       <Property Name="Height" Value="50"/>
       <Property Name="KeyMatrixOffset" Value="None"/>
       <Property Name="Left" Value="246"/>
       <Property Name="PressedBackColor" Value="0"/>
       <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-      <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+      <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
       <Property Name="PressedForeColor" Value="0"/>
       <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
       <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.TP_ZobrazPopUpPrihlasenie]"/>

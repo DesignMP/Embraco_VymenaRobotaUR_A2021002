@@ -99,12 +99,12 @@
           <Property Name="BackColor" Value="0"/>
           <Property Name="BitmapIndexDatapoint" Value="None"/>
           <Property Name="BitmapSource" Value="None"/>
-          <Property Name="Border" Value="Source[local].Border[Mp_Button_Control]"/>
+          <Property Name="Border" Value="Source[local].Border[Button_Global_Area]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_5]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="15"/>
+          <Property Name="ForeColor" Value="0"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="18"/>
@@ -114,7 +114,7 @@
           <Property Name="Multiline" Value="Automatic"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextGroup" Value="Source[embedded].TextGroup"/>
           <Property Name="PressedTextIndex" Value="4"/>
@@ -153,12 +153,12 @@
           <Property Name="BackColor" Value="0"/>
           <Property Name="BitmapIndexDatapoint" Value="None"/>
           <Property Name="BitmapSource" Value="None"/>
-          <Property Name="Border" Value="Source[local].Border[Mp_Button_Control]"/>
+          <Property Name="Border" Value="Source[local].Border[Button_Global_Area]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_18]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="15"/>
+          <Property Name="ForeColor" Value="0"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="19"/>
@@ -168,7 +168,7 @@
           <Property Name="Multiline" Value="Automatic"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
@@ -186,12 +186,12 @@
           <Property Name="BackColor" Value="0"/>
           <Property Name="BitmapIndexDatapoint" Value="None"/>
           <Property Name="BitmapSource" Value="None"/>
-          <Property Name="Border" Value="Source[local].Border[Mp_Button_Control]"/>
+          <Property Name="Border" Value="Source[local].Border[Button_Global_Area]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_21]"/>
           <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="15"/>
+          <Property Name="ForeColor" Value="0"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="204"/>
@@ -201,7 +201,7 @@
           <Property Name="Multiline" Value="Automatic"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>

@@ -125,7 +125,7 @@
           <Property Name="Left" Value="731"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Button_Decrease_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[ScrollUp]"/>
@@ -152,7 +152,7 @@
           <Property Name="Left" Value="731"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Button_Decrease_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[ScrollDown]"/>
@@ -179,7 +179,7 @@
           <Property Name="Left" Value="731"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Button_Decrease_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[ScrollUpMulti]"/>
@@ -206,7 +206,7 @@
           <Property Name="Left" Value="731"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Button_Decrease_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[ScrollDownMulti]"/>

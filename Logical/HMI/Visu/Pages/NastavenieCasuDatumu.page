@@ -442,12 +442,12 @@
           <Property Name="BackColor" Value="0"/>
           <Property Name="BitmapIndexDatapoint" Value="None"/>
           <Property Name="BitmapSource" Value="None"/>
-          <Property Name="Border" Value="Source[local].Border[Mp_Button_Control]"/>
+          <Property Name="Border" Value="Source[local].Border[Button_Global_Area]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="None"/>
           <Property Name="Font" Value="Source[local].Font[Header]"/>
-          <Property Name="ForeColor" Value="15"/>
+          <Property Name="ForeColor" Value="0"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="530"/>
@@ -480,7 +480,7 @@
           <Property Name="ForeColor" Value="0"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
-          <Property Name="Left" Value="676"/>
+          <Property Name="Left" Value="672"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
           <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
@@ -527,7 +527,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="EndValue" Value="100"/>
           <Property Name="Height" Value="24"/>
-          <Property Name="Left" Value="458"/>
+          <Property Name="Left" Value="457"/>
           <Property Name="Range[0].Color" Value="253"/>
           <Property Name="Range[0].Start" Value="0"/>
           <Property Name="SimulationValue" Value="20"/>

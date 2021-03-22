@@ -43,18 +43,18 @@
       <Property Name="BackColor" Value="0"/>
       <Property Name="BitmapIndexDatapoint" Value="None"/>
       <Property Name="BitmapSource" Value="None"/>
-      <Property Name="Border" Value="Source[local].Border[Mp_Button_Control]"/>
+      <Property Name="Border" Value="Source[local].Border[Button_Global_Area]"/>
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_73]"/>
       <Property Name="Font" Value="Source[local].Font[Arial16_Bold]"/>
-      <Property Name="ForeColor" Value="10"/>
+      <Property Name="ForeColor" Value="0"/>
       <Property Name="Height" Value="54"/>
       <Property Name="KeyMatrixOffset" Value="None"/>
       <Property Name="Left" Value="225"/>
       <Property Name="PressedBackColor" Value="0"/>
       <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-      <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+      <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
       <Property Name="PressedForeColor" Value="0"/>
       <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
       <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
@@ -72,18 +72,18 @@
       <Property Name="BackColor" Value="0"/>
       <Property Name="BitmapIndexDatapoint" Value="None"/>
       <Property Name="BitmapSource" Value="None"/>
-      <Property Name="Border" Value="Source[local].Border[Mp_Button_Control]"/>
+      <Property Name="Border" Value="Source[local].Border[Button_Global_Area]"/>
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_121]"/>
       <Property Name="Font" Value="Source[local].Font[Arial16_Bold]"/>
-      <Property Name="ForeColor" Value="10"/>
+      <Property Name="ForeColor" Value="0"/>
       <Property Name="Height" Value="54"/>
       <Property Name="KeyMatrixOffset" Value="None"/>
       <Property Name="Left" Value="451"/>
       <Property Name="PressedBackColor" Value="0"/>
       <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-      <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+      <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
       <Property Name="PressedForeColor" Value="0"/>
       <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
       <Property Name="StatusDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
