@@ -218,10 +218,10 @@ typedef struct RobotKOM_IN_typ
 	plcbit Stav_RezimAUTOMAT;
 	plcbit Stav_RobotCS;
 	plcbit Stav_VystupyZresetovane;
-	plcbit Gripper_DlhyUchopov_OTVORENY;
-	plcbit Gripper_DlhyUchopov_ZATVORENY;
-	plcbit Gripper_KratkyUchopov_OTVORENY;
-	plcbit Gripper_KratkyUchopov_ZATVORENY;
+	plcbit Gripper_ZatvorDlhyUchopovac;
+	plcbit Gripper_OtvorDlhyUchopovac;
+	plcbit Gripper_ZatvorKratkyUchopovac;
+	plcbit Gripper_OtvorKratkyUchopovac;
 	unsigned char Profinet_PLC_INPUTS[64];
 } RobotKOM_IN_typ;
 #endif
@@ -248,10 +248,10 @@ typedef struct RobotKOM_OUT_typ
 	plcbit Bruska_VlozCap;
 	plcbit Dopravnik_PresunDoCakacejPozicie;
 	plcbit Dopravnik_PolozCap;
-	plcbit Gripper_ZatvorDlhyUchopovac;
-	plcbit Gripper_OtvorDlhyUchopovac;
-	plcbit Gripper_ZatvorKratkyUchopovac;
-	plcbit Gripper_OtvorKratkyUchopovac;
+	plcbit Gripper_DlhyUchopov_OTVORENY;
+	plcbit Gripper_DlhyUchopov_ZATVORENY;
+	plcbit Gripper_KratkyUchopov_OTVORENY;
+	plcbit Gripper_KratkyUchopov_ZATVORENY;
 	unsigned char Profinet_PLC_OUTPUTS[64];
 } RobotKOM_OUT_typ;
 #endif

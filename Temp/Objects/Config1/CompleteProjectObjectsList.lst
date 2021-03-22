@@ -22,7 +22,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.typ"
     LogicalPath="Global.typ"
     Type="File"
-    LastWriteTime="132606323656409992"
+    LastWriteTime="132608755561508113"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.var"
@@ -661,7 +661,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\ProfinetKomunikaciaRobot.st"
     LogicalPath="Program.Robot.ProfinetKomunikaciaRobot.st"
     Type="File"
-    LastWriteTime="132606319578729343"
+    LastWriteTime="132608759400409151"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\OvladanieGripra.st"

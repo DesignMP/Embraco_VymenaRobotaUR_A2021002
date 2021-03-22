@@ -1181,7 +1181,7 @@
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_Button_Control]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area]</Reference>
             </Group>
             <Group Name="Multiline">
               <UInt16 Name="Offset">13</UInt16>
@@ -1191,7 +1191,7 @@
             <Group Name="ForeColor">
               <UInt16 Name="Offset">24</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">15</UInt32>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">28</UInt16>
@@ -1269,9 +1269,9 @@
             </Group>
           </Object>
           <Object Name="cmdBrightnessUp" ClsId="0x1002" Version="1" Type="CTRL" RefString="Source[local].Page[NastavenieCasuDatumu].Layer[Default].Control[cmdBrightnessUp]">
-            <UInt32 Name="Left">676</UInt32>
+            <UInt32 Name="Left">672</UInt32>
             <UInt32 Name="Top">198</UInt32>
-            <UInt32 Name="Right">737</UInt32>
+            <UInt32 Name="Right">733</UInt32>
             <UInt32 Name="Bottom">247</UInt32>
             <UInt16 Name="KeyMatrixOffset">65535</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
@@ -1472,9 +1472,9 @@
             </Group>
           </Object>
           <Object Name="barBrightness" ClsId="0x1006" Version="1" Type="CTRL" RefString="Source[local].Page[NastavenieCasuDatumu].Layer[Default].Control[barBrightness]">
-            <UInt32 Name="Left">458</UInt32>
+            <UInt32 Name="Left">457</UInt32>
             <UInt32 Name="Top">166</UInt32>
-            <UInt32 Name="Right">734</UInt32>
+            <UInt32 Name="Right">733</UInt32>
             <UInt32 Name="Bottom">189</UInt32>
             <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[Internal.Display.Brightness]</Reference>
             <UInt32 Name="Reserved">4294967295</UInt32>

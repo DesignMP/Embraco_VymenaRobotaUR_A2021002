@@ -181,14 +181,15 @@ TYPE
 		Stav_RezimAUTOMAT : BOOL;
 		Stav_RobotCS : BOOL;
 		Stav_VystupyZresetovane : BOOL;
-		Gripper_DlhyUchopov_OTVORENY : BOOL;
-		Gripper_DlhyUchopov_ZATVORENY : BOOL;
-		Gripper_KratkyUchopov_OTVORENY : BOOL;
-		Gripper_KratkyUchopov_ZATVORENY : BOOL;
+		Stav_ZonaNavratuRobota_OK : BOOL;
+		Stav_ZonaNavratuRobota_NG : BOOL;
+		Gripper_ZatvorDlhyUchopovac : BOOL;
+		Gripper_OtvorDlhyUchopovac : BOOL;
+		Gripper_ZatvorKratkyUchopovac : BOOL;
+		Gripper_OtvorKratkyUchopovac : BOOL;
 		Profinet_PLC_INPUTS : ARRAY[0..63]OF USINT;
 	END_STRUCT;
 	RobotKOM_OUT_typ : 	STRUCT 
-		PocetNalozenychCapov : USINT;
 		ZapniMotory : BOOL;
 		VypniMotory : BOOL;
 		PP_na_Main : BOOL;
@@ -207,10 +208,11 @@ TYPE
 		Bruska_VlozCap : BOOL;
 		Dopravnik_PresunDoCakacejPozicie : BOOL;
 		Dopravnik_PolozCap : BOOL;
-		Gripper_ZatvorDlhyUchopovac : BOOL;
-		Gripper_OtvorDlhyUchopovac : BOOL;
-		Gripper_ZatvorKratkyUchopovac : BOOL;
-		Gripper_OtvorKratkyUchopovac : BOOL;
+		UkoncenieCykluRobota : BOOL;
+		Gripper_DlhyUchopov_OTVORENY : BOOL;
+		Gripper_DlhyUchopov_ZATVORENY : BOOL;
+		Gripper_KratkyUchopov_OTVORENY : BOOL;
+		Gripper_KratkyUchopov_ZATVORENY : BOOL;
 		Profinet_PLC_OUTPUTS : ARRAY[0..63]OF USINT;
 	END_STRUCT;
 END_TYPE

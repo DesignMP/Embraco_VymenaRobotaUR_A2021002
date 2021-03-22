@@ -281,7 +281,7 @@
             <Group Name="PressedBorder">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Decrease_pressed]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area_pressed]</Reference>
             </Group>
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
@@ -375,7 +375,7 @@
             <Group Name="PressedBorder">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Decrease_pressed]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area_pressed]</Reference>
             </Group>
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
@@ -469,7 +469,7 @@
             <Group Name="PressedBorder">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Decrease_pressed]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area_pressed]</Reference>
             </Group>
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
@@ -563,7 +563,7 @@
             <Group Name="PressedBorder">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Decrease_pressed]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area_pressed]</Reference>
             </Group>
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>

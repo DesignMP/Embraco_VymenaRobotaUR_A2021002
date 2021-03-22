@@ -469,10 +469,10 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 (Robot.KOM_IN.Stav_RobotCinnostUkoncena=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit1);
 (Robot.KOM_IN.Stav_Dopravnik_Plny=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit2);
 (Robot.KOM_IN.Stav_RobotDrziCap=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit3);
-(Robot.KOM_IN.Gripper_DlhyUchopov_OTVORENY=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit4);
-(Robot.KOM_IN.Gripper_DlhyUchopov_ZATVORENY=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit5);
-(Robot.KOM_IN.Gripper_KratkyUchopov_OTVORENY=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit6);
-(Robot.KOM_IN.Gripper_KratkyUchopov_ZATVORENY=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit7);
+(Robot.KOM_IN.Gripper_OtvorDlhyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit4);
+(Robot.KOM_IN.Gripper_ZatvorDlhyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit5);
+(Robot.KOM_IN.Gripper_OtvorKratkyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit6);
+(Robot.KOM_IN.Gripper_ZatvorKratkyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit7);
 
 
 
@@ -497,10 +497,11 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit1=Robot.KOM_OUT.Otacac_PresunDoCakacejPozicie);
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit2=Robot.KOM_OUT.Bruska_PresunDoCakacejPozicie);
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit3=Robot.KOM_OUT.Dopravnik_PresunDoCakacejPozicie);
-(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit4=Robot.KOM_OUT.Gripper_OtvorDlhyUchopovac);
-(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit5=Robot.KOM_OUT.Gripper_ZatvorDlhyUchopovac);
-(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit6=Robot.KOM_OUT.Gripper_OtvorKratkyUchopovac);
-(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit7=Robot.KOM_OUT.Gripper_ZatvorKratkyUchopovac);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit4=Robot.KOM_OUT.Gripper_DlhyUchopov_OTVORENY);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit5=Robot.KOM_OUT.Gripper_DlhyUchopov_ZATVORENY);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit6=Robot.KOM_OUT.Gripper_KratkyUchopov_OTVORENY);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit7=Robot.KOM_OUT.Gripper_KratkyUchopov_ZATVORENY);
+
 
 
 (Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3]=Robot.KOM_OUT.PocetNalozenychCapov);

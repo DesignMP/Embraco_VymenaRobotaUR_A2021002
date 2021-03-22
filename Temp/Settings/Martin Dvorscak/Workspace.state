@@ -1,3 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.7.5.60 SP?>
-<State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State" />
+<State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
+  <TextEdit ID="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\ProfinetKomunikaciaRobot.st" CaretLine="53" CaretColumn="5" FirstVisibleLine="20">
+    <Bookmarks />
+  </TextEdit>
+</State>

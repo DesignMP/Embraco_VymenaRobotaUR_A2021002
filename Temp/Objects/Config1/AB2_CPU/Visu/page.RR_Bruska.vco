@@ -106,12 +106,12 @@
             <Group Name="PressedBorder">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_Button_pressed]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area_pressed]</Reference>
             </Group>
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_Button_Control]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area]</Reference>
             </Group>
             <Group Name="AlignmentHorizontal">
               <UInt16 Name="Offset">8</UInt16>
@@ -141,7 +141,7 @@
             <Group Name="ForeColor">
               <UInt16 Name="Offset">24</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">15</UInt32>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">28</UInt16>
@@ -290,12 +290,12 @@
             <Group Name="PressedBorder">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_Button_pressed]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area_pressed]</Reference>
             </Group>
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_Button_Control]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area]</Reference>
             </Group>
             <Group Name="AlignmentHorizontal">
               <UInt16 Name="Offset">8</UInt16>
@@ -325,7 +325,7 @@
             <Group Name="ForeColor">
               <UInt16 Name="Offset">24</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">15</UInt32>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">28</UInt16>
@@ -419,12 +419,12 @@
             <Group Name="PressedBorder">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_Button_pressed]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area_pressed]</Reference>
             </Group>
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_Button_Control]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area]</Reference>
             </Group>
             <Group Name="AlignmentHorizontal">
               <UInt16 Name="Offset">8</UInt16>
@@ -454,7 +454,7 @@
             <Group Name="ForeColor">
               <UInt16 Name="Offset">24</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">15</UInt32>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">28</UInt16>
