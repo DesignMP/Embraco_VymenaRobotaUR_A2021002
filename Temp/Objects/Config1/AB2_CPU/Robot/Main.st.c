@@ -28,6 +28,37 @@ void _CYCLIC __BUR__ENTRY_CYCLIC_FUNCT__(void){{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 SequenceControl(&SC_Robot);
 
 
@@ -72,8 +103,9 @@ case 0:{
 (Robot.KOM_OUT.StartProgramuMain=0);
 (Robot.KOM_OUT.VypniMotory=0);
 (Robot.KOM_OUT.ZapniMotory=0);
+(Robot.KOM_OUT.UkoncenieCykluRobota=0);
 (Robot.PAR.CisloAktualnejPozicie=0);
-(Robot.KOM_OUT.PocetNalozenychCapov=0);
+
 
 if((Robot.KOM_IN.Stav_RezimAUTOMAT&Robot.KOM_IN.Stav_ProgramRUN)){
 (Robot.KOM_OUT.StopProgramu=1);
@@ -448,13 +480,13 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 
 
 }imp3_case1_26:imp3_endcase1_0:;}
-#line 445 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
-#line 447 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
+#line 477 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 479 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 450 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 482 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/ProfinetKomunikaciaRobot.st"
 static void __AS__Action__ProfinetKomunikaciaRobot(void){
 {
@@ -474,6 +506,9 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 (Robot.KOM_IN.Gripper_OtvorKratkyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit6);
 (Robot.KOM_IN.Gripper_ZatvorKratkyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit7);
 
+(Robot.KOM_IN.Stav_VystupyZresetovane=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[2]))->bit0);
+(Robot.KOM_IN.Stav_ZonaNavratuRobota_NG=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[2]))->bit1);
+(Robot.KOM_IN.Stav_ZonaNavratuRobota_OK=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[2]))->bit2);
 
 
 
@@ -502,15 +537,11 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit6=Robot.KOM_OUT.Gripper_KratkyUchopov_OTVORENY);
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit7=Robot.KOM_OUT.Gripper_KratkyUchopov_ZATVORENY);
 
-
-
-(Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3]=Robot.KOM_OUT.PocetNalozenychCapov);
-
-
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3]))->bit0=Robot.KOM_OUT.UkoncenieCykluRobota);
 
 
 }}
-#line 452 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 484 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/OvladanieGripra.st"
 static void __AS__Action__OvladanieGripra(void){
 {
@@ -655,7 +686,7 @@ if((Robot.IN.KratkyUchopovac_Zatvoreny_MS3|SC_OvlGripra.IdleTime.Q)){
 
 
 }imp16385_case0_5:imp16385_endcase0_0:;}
-#line 452 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 484 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 

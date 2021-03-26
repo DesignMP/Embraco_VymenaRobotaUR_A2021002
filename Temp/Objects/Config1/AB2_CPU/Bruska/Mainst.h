@@ -172,6 +172,8 @@ typedef struct RobotKOM_IN_typ
 	plcbit Stav_RezimAUTOMAT;
 	plcbit Stav_RobotCS;
 	plcbit Stav_VystupyZresetovane;
+	plcbit Stav_ZonaNavratuRobota_OK;
+	plcbit Stav_ZonaNavratuRobota_NG;
 	plcbit Gripper_ZatvorDlhyUchopovac;
 	plcbit Gripper_OtvorDlhyUchopovac;
 	plcbit Gripper_ZatvorKratkyUchopovac;
@@ -183,8 +185,7 @@ typedef struct RobotKOM_IN_typ
 #ifndef __AS__TYPE_RobotKOM_OUT_typ
 #define __AS__TYPE_RobotKOM_OUT_typ
 typedef struct RobotKOM_OUT_typ
-{	unsigned char PocetNalozenychCapov;
-	plcbit ZapniMotory;
+{	plcbit ZapniMotory;
 	plcbit VypniMotory;
 	plcbit PP_na_Main;
 	plcbit Reset_CS;
@@ -202,6 +203,7 @@ typedef struct RobotKOM_OUT_typ
 	plcbit Bruska_VlozCap;
 	plcbit Dopravnik_PresunDoCakacejPozicie;
 	plcbit Dopravnik_PolozCap;
+	plcbit UkoncenieCykluRobota;
 	plcbit Gripper_DlhyUchopov_OTVORENY;
 	plcbit Gripper_DlhyUchopov_ZATVORENY;
 	plcbit Gripper_KratkyUchopov_OTVORENY;

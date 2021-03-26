@@ -6,21 +6,8 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job._markerfile">
     <BuildReason>Target "iat_media.job._markerfile" does not exist</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\global.typ" differs.
-</BuildReason>
-  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\program\robot\profinetkomunikaciarobot.st" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\global.typ" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\global.typ" differs.
-</BuildReason>
+    <BuildReason>Target "main.st.c" does not exist</BuildReason>
   </Rule>
   <Rule ID=".mappView_Build">
     <BuildReason>Rule contains a phony target. </BuildReason>
@@ -28,144 +15,24 @@
   <Rule ID=".mappView_IntegrationBuild">
     <BuildReason>Rule contains a phony target. </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\global.typ" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\global.typ" differs.
-</BuildReason>
-  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o">
     <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.c" differs.
 </BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.c">
     <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.c" differs.
-</BuildReason>
-  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.o">
     <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.c" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\a.out">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\a.out">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\a.out">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\a.out">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" differs.
 </BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\a.out">
     <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\a.out">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\limitnesni.ox">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\a.out" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\riadeniese.ox">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\a.out" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\riadeniese.ox" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\bruska.ox">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\a.out" differs.
-</BuildReason>
-  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\robot.ox">
     <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\a.out" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\ovladaniev.ox">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\a.out" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\remanentne.ox">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\a.out" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\limitnesni.ox" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\bruska.ox" differs.
 </BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot.br">
@@ -175,23 +42,11 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu.br">
     <BuildReason>Rule is forced.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\ovladaniev.ox" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\remanentne.ox" differs.
-</BuildReason>
-  </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iomap.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\global.typ" differs.
-</BuildReason>
-  </Rule>
   <Rule ID="#cpu_tp.mak">
     <BuildReason>Rule is forced.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\binaries\config1\ab2_cpu\transfer.lst">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese.br" differs.
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot.br" differs.
 </BuildReason>
   </Rule>
 </BuildReasons>

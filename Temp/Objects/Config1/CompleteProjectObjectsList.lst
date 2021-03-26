@@ -22,7 +22,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.typ"
     LogicalPath="Global.typ"
     Type="File"
-    LastWriteTime="132608755561508113"
+    LastWriteTime="132608975511183342"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.var"
@@ -614,7 +614,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\Main.st"
     LogicalPath="Program.Bruska.Main.st"
     Type="File"
-    LastWriteTime="132600277489824075"
+    LastWriteTime="132612340329496582"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\Types.typ"
@@ -643,7 +643,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Main.st"
     LogicalPath="Program.Robot.Main.st"
     Type="File"
-    LastWriteTime="132606294837367766"
+    LastWriteTime="132612341847770848"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Types.typ"
@@ -661,7 +661,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\ProfinetKomunikaciaRobot.st"
     LogicalPath="Program.Robot.ProfinetKomunikaciaRobot.st"
     Type="File"
-    LastWriteTime="132608759400409151"
+    LastWriteTime="132612341841138816"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\OvladanieGripra.st"
@@ -920,7 +920,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.hwl"
     LogicalPath="Config1.Hardware.hwl"
     Type="File"
-    LastWriteTime="132606314251657859"
+    LastWriteTime="132611578079899505"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\Cpu.pkg"
@@ -1063,7 +1063,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\mappMotion\Config_1.axis"
     LogicalPath="Config1.AB2_CPU.mappMotion.Config_1.axis"
     Type="File"
-    LastWriteTime="132598584529580232"
+    LastWriteTime="132612340172709958"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\mappServices\Package.pkg"
@@ -1198,6 +1198,6 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.jpg"
     LogicalPath="Config1.Hardware.jpg"
     Type="File"
-    LastWriteTime="132606314251737834"
+    LastWriteTime="132611578079979016"
     Private="false" />
 </Objects>

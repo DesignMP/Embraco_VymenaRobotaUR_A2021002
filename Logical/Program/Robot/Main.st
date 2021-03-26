@@ -22,6 +22,37 @@ PROGRAM _CYCLIC
     
     
     
+    
+    //********************************Popis èísla aktuálnej pozície robota*****************************//
+    //1 - robot je pripravený
+    //2 - robot èaká na odobratie èapu z paletky
+    //3 - robot odobral èap z paletky
+    //4 - robot položil èap do otáèaèa
+    //5 - robot odobral èap z otáèaèa
+    //6 - robot odobral èap z brúsky
+    //7 - robot vložil èap do brúsky
+    //8 - robot je presunuty pred bruskou
+    //9 - robot položil èap na dopravník
+    //14 - robot je odparkovany
+    
+    
+    
+    
+    
+    //********************************Popis èísla zadanej pozície robota*****************************//
+    //2 - robot presun do pozície èakania na odobratie èapu z paletky
+    //3 - robot odober èap z paletky
+    //4 - robot polož èap do otáèaèa
+    //5 - robot odober èap z otáèaèa
+    //6 - robot odober èap z brúsky
+    //7 - robot vlož èap do brúsky
+    //8 - robot presun do pozície pred brúskou
+    //9 - robot polož èap na dopravník
+    //14 - odparkuj robota
+    
+    
+    
+    
     //Volanie funkcie SequenceControl//
     SequenceControl(SC:= SC_Robot);
 	
@@ -67,8 +98,9 @@ PROGRAM _CYCLIC
             Robot.KOM_OUT.StartProgramuMain:= FALSE;
             Robot.KOM_OUT.VypniMotory:= FALSE;
             Robot.KOM_OUT.ZapniMotory:= FALSE;
+            Robot.KOM_OUT.UkoncenieCykluRobota:= FALSE;
             Robot.PAR.CisloAktualnejPozicie:= 0;
-            Robot.KOM_OUT.PocetNalozenychCapov:= 0;
+            
             
             IF Robot.KOM_IN.Stav_RezimAUTOMAT AND Robot.KOM_IN.Stav_ProgramRUN THEN
                 Robot.KOM_OUT.StopProgramu:= TRUE;
