@@ -349,34 +349,9 @@
       <Property Name="VisibilityMode" Value="Normal"/>
       <Property Name="Z-Order" Value="1"/>
     </LayerRef>
-    <LayerRef Source="Source[local].Layer[PopPrihlasenie]">
-      <Property Name="Description" Value=""/>
-      <Property Name="EditingMode" Value="Frozen"/>
-      <Property Name="Left" Value="0"/>
-      <Property Name="Name" Value="PopPrihlasenie"/>
-      <Property Name="OutlineColor" Value="0"/>
-      <Property Name="OutlineDisplayControl" Value="False"/>
-      <Property Name="OutlineDisplayName" Value="True"/>
-      <Property Name="OutlineHatched" Value="False"/>
-      <Property Name="Top" Value="0"/>
-      <Property Name="VisibilityMode" Value="Hidden"/>
-      <Property Name="Z-Order" Value="2"/>
-    </LayerRef>
   </Layers>
   <MovementOrder>
     <MovementEntry Control="Source[embedded].Layer[Default].Control[AlarmCurrent]">
-      <Property Name="Down" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-      <Property Name="Left" Value="Source[embedded].Layer[Default].Control[AlarmCurrent]"/>
-      <Property Name="Right" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-      <Property Name="Up" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-    </MovementEntry>
-    <MovementEntry Control="Source[local].Layer[PopPrihlasenie].Control[String_1]">
-      <Property Name="Down" Value="Source[embedded].Layer[Default].Control[AlarmCurrent]"/>
-      <Property Name="Left" Value="Source[embedded].Layer[Default].Control[AlarmCurrent]"/>
-      <Property Name="Right" Value="Source[embedded].Layer[Default].Control[AlarmCurrent]"/>
-      <Property Name="Up" Value="Source[embedded].Layer[Default].Control[AlarmCurrent]"/>
-    </MovementEntry>
-    <MovementEntry Control="Source[local].Layer[PopPrihlasenie].Control[String_2]">
       <Property Name="Down" Value="Source[embedded].Layer[Default].Control[AlarmCurrent]"/>
       <Property Name="Left" Value="Source[embedded].Layer[Default].Control[AlarmCurrent]"/>
       <Property Name="Right" Value="Source[embedded].Layer[Default].Control[AlarmCurrent]"/>
@@ -385,7 +360,5 @@
   </MovementOrder>
   <TabSequence>
     <TabSeqItem Index="0" Value="Source[embedded].Layer[Default].Control[AlarmCurrent]"/>
-    <TabSeqItem Index="1" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-    <TabSeqItem Index="2" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
   </TabSequence>
 </Page>

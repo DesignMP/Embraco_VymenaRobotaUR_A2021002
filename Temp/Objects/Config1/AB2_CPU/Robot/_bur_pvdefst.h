@@ -24,3 +24,5 @@ typedef struct SequenceControlTyp
 #endif
 
 _BUR_LOCAL SequenceControlTyp SC_OvlGripra;
+_BUR_LOCAL struct TON CasZatvorenia_DlhyUchopovac;
+_BUR_LOCAL struct TON CasZatvorenia_KratkyUchopovac;

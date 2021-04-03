@@ -373,8 +373,8 @@ PAGE_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/NastavenieCasuDatumu
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/AutomatickyRezim.page \
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/ObrazovkaAlarmov.page \
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/RR_Bruska.page \
-	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/RR_Robot.page \
-	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/RR_HlavnaObrazovka.page 
+	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/RR_HlavnaObrazovka.page \
+	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/ParametrePracoviska.page 
 
 LAYER_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/HMI/Visu/Layers/Upozornenia_2.layer \
 	$(AS_PROJECT_PATH)/Logical/HMI/Visu/Layers/Background.layer \
@@ -505,11 +505,11 @@ $(TEMP_PATH_Visu)/page.RR_Bruska.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4724 -sfas
 
 
-$(TEMP_PATH_Visu)/page.RR_Robot.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/RR_Robot.page $(VC_LANGUAGES_Visu)
+$(TEMP_PATH_Visu)/page.RR_HlavnaObrazovka.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/RR_HlavnaObrazovka.page $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4724 -sfas
 
 
-$(TEMP_PATH_Visu)/page.RR_HlavnaObrazovka.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/RR_HlavnaObrazovka.page $(VC_LANGUAGES_Visu)
+$(TEMP_PATH_Visu)/page.ParametrePracoviska.vco: $(AS_PROJECT_PATH)/Logical/HMI/Visu/Pages/ParametrePracoviska.page $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4724 -sfas
 
 

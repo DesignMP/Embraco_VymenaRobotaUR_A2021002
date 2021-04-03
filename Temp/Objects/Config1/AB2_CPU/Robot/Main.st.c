@@ -20,10 +20,10 @@ void _CYCLIC __BUR__ENTRY_CYCLIC_FUNCT__(void){{
 
 
 
-(((_1byte_bit_field_*)(&Robot.PAR.CisloZadanejPozicie))->bit0=Robot.IN.CisloZadanejPozicie_Bit0);
-(((_1byte_bit_field_*)(&Robot.PAR.CisloZadanejPozicie))->bit1=Robot.IN.CisloZadanejPozicie_Bit1);
-(((_1byte_bit_field_*)(&Robot.PAR.CisloZadanejPozicie))->bit2=Robot.IN.CisloZadanejPozicie_Bit2);
-(((_1byte_bit_field_*)(&Robot.PAR.CisloZadanejPozicie))->bit3=Robot.IN.CisloZadanejPozicie_Bit3);
+
+
+
+
 
 
 
@@ -67,6 +67,8 @@ __AS__Action__OvladanieGripra();
 
 
 
+
+
 if((Safety.STAV.ZonaCS_AKTIVNA^1)){
 (SC_Robot.Step=0);
 }else if(PoruchaRobota){
@@ -104,14 +106,15 @@ case 0:{
 (Robot.KOM_OUT.VypniMotory=0);
 (Robot.KOM_OUT.ZapniMotory=0);
 (Robot.KOM_OUT.UkoncenieCykluRobota=0);
+(Robot.KOM_OUT.Dopravnik_UkladaciaPozicia=1);
+(Robot.RR_OdparkujRobota=0);
 (Robot.PAR.CisloAktualnejPozicie=0);
-
-
 if((Robot.KOM_IN.Stav_RezimAUTOMAT&Robot.KOM_IN.Stav_ProgramRUN)){
 (Robot.KOM_OUT.StopProgramu=1);
 }else{
 (Robot.KOM_OUT.StopProgramu=0);
 }
+
 if((Safety.STAV.ZonaCS_AKTIVNA&Safety.STAV.ZonaRobot_AKTIVNA&(PoruchaRobota^1)&(Robot.KOM_IN.Stav_ProgramRUN^1))){
 (Robot.KOM_OUT.StopProgramu=0);
 (SC_Robot.ResetStep=1);
@@ -183,11 +186,15 @@ if((SC_Robot.Switch1^1)){
 (SC_Robot.Switch1=1);
 }
 
-if((Robot.KOM_IN.Stav_ProgramRUN&Robot.KOM_IN.Stav_VystupyZresetovane&Robot.KOM_IN.Stav_RobotOdparkovany&(Robot.KOM_IN.Stav_RobotCinnostUkoncena^1))){
+if((Robot.KOM_IN.Stav_ProgramRUN&Robot.KOM_IN.Stav_VystupyZresetovane&Robot.KOM_IN.Stav_RobotOdparkovany&(Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)&Robot.KOM_IN.Stav_ZonaNavratuRobota_OK)){
 (Robot.KOM_OUT.StartProgramuMain=0);
 (Robot.STAV.PoINIT=1);
+(Robot.PAR.CisloAktualnejPozicie=1);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=100);
+}else if((Robot.KOM_IN.Stav_VystupyZresetovane&Robot.KOM_IN.Stav_ZonaNavratuRobota_NG)){
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=0);
 }
 
 
@@ -199,15 +206,24 @@ if((Robot.KOM_IN.Stav_ProgramRUN&Robot.KOM_IN.Stav_VystupyZresetovane&Robot.KOM_
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if((SC_Robot.Switch1^1)){
+if((Robot.KoniecCyklu&(Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie^1))){
+(Robot.KOM_OUT.OdparkujRobota=1);
+}else if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)2))&(Robot.KoniecCyklu^1))){
 (Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie=1);
-(SC_Robot.Switch1=1);
 }
 
+
 if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
+if(Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie){
 (Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie=0);
+(Robot.PAR.CisloAktualnejPozicie=2);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=103);
+}else if(Robot.KOM_OUT.OdparkujRobota){
+(Robot.KOM_OUT.OdparkujRobota=0);
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=103);
+}
 }
 
 }break;case 103:{
@@ -216,8 +232,13 @@ if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (SC_Robot.AlarmTime.PT=5000);
 
 if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
+if(Robot.KOM_IN.Stav_RobotOdparkovany){
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=0);
+}else{
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=105);
+}
 }
 
 }break;case 105:{
@@ -225,15 +246,23 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Zariadenie.IN.Paletka_PritomnostKusu_OS1)){
+if((Robot.KoniecCyklu&(Robot.KOM_OUT.Paletka_OdoberCap^1))){
+(Robot.KOM_OUT.OdparkujRobota=1);
+}else if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)3))&Zariadenie.IN.Paletka_PritomnostKusu_OS1&(Robot.KoniecCyklu^1))){
 (Robot.KOM_OUT.Paletka_OdoberCap=1);
 }
 
 if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
+if(Robot.KOM_OUT.Paletka_OdoberCap){
 (Robot.KOM_OUT.Paletka_OdoberCap=0);
-(Robot.PAR.CisloAktualnejPozicie=0);
+(Robot.PAR.CisloAktualnejPozicie=3);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=108);
+}else if(Robot.KOM_OUT.OdparkujRobota){
+(Robot.KOM_OUT.OdparkujRobota=0);
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=108);
+}
 }
 
 
@@ -243,8 +272,13 @@ if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (SC_Robot.AlarmTime.PT=5000);
 
 if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
+if(Robot.KOM_IN.Stav_RobotOdparkovany){
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=0);
+}else{
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=110);
+}
 }
 
 }break;case 110:{
@@ -280,13 +314,13 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&(Zariadenie.IN.Otacac_PritomnostKusu_IS2^1))){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)4))&(Zariadenie.IN.Otacac_PritomnostKusu_IS2^1))){
 (Robot.KOM_OUT.Otacac_PolozCap=1);
 }
 
 if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (Robot.KOM_OUT.Otacac_PolozCap=0);
-(Robot.PAR.CisloAktualnejPozicie=0);
+(Robot.PAR.CisloAktualnejPozicie=4);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=118);
 }
@@ -308,13 +342,13 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Zariadenie.IN.Otacac_PritomnostKusu_IS2)){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)5))&Zariadenie.IN.Otacac_PritomnostKusu_IS2)){
 (Robot.KOM_OUT.Otacac_OdoberCap=1);
 }
 
 if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (Robot.KOM_OUT.Otacac_OdoberCap=0);
-(Robot.PAR.CisloAktualnejPozicie=0);
+(Robot.PAR.CisloAktualnejPozicie=5);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=123);
 }
@@ -361,13 +395,13 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Zariadenie.IN.Otacac_PritomnostKusu_IS2)){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)6))&Bruska.IN.OchrannyKrytBrusky_Otvoreny)){
 (Robot.KOM_OUT.Bruska_OdoberCap=1);
 }
 
 if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (Robot.KOM_OUT.Bruska_OdoberCap=0);
-(Robot.PAR.CisloAktualnejPozicie=0);
+(Robot.PAR.CisloAktualnejPozicie=6);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=133);
 }
@@ -387,13 +421,13 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))&Zariadenie.IN.Otacac_PritomnostKusu_IS2)){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)7))&Bruska.IN.OchrannyKrytBrusky_Otvoreny)){
 (Robot.KOM_OUT.Bruska_VlozCap=1);
 }
 
 if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (Robot.KOM_OUT.Bruska_VlozCap=0);
-(Robot.PAR.CisloAktualnejPozicie=0);
+(Robot.PAR.CisloAktualnejPozicie=7);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=138);
 }
@@ -413,13 +447,13 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if((SC_Robot.Switch1^1)){
+if((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)8))){
 (Robot.KOM_OUT.Dopravnik_PresunDoCakacejPozicie=1);
-(SC_Robot.Switch1=1);
 }
 
 if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (Robot.KOM_OUT.Dopravnik_PresunDoCakacejPozicie=0);
+(Robot.PAR.CisloAktualnejPozicie=8);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=143);
 }
@@ -440,13 +474,13 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)0))){
+if((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)9))){
 (Robot.KOM_OUT.Dopravnik_PolozCap=1);
 }
 
 if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (Robot.KOM_OUT.Dopravnik_PolozCap=0);
-(Robot.PAR.CisloAktualnejPozicie=0);
+(Robot.PAR.CisloAktualnejPozicie=9);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=148);
 }
@@ -480,13 +514,13 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 
 
 }imp3_case1_26:imp3_endcase1_0:;}
-#line 477 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
-#line 479 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
+#line 511 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 513 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 482 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 516 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/ProfinetKomunikaciaRobot.st"
 static void __AS__Action__ProfinetKomunikaciaRobot(void){
 {
@@ -502,9 +536,8 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 (Robot.KOM_IN.Stav_Dopravnik_Plny=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit2);
 (Robot.KOM_IN.Stav_RobotDrziCap=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit3);
 (Robot.KOM_IN.Gripper_OtvorDlhyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit4);
-(Robot.KOM_IN.Gripper_ZatvorDlhyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit5);
-(Robot.KOM_IN.Gripper_OtvorKratkyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit6);
-(Robot.KOM_IN.Gripper_ZatvorKratkyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit7);
+(Robot.KOM_IN.Gripper_OtvorKratkyUchopovac=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[1]))->bit5);
+
 
 (Robot.KOM_IN.Stav_VystupyZresetovane=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[2]))->bit0);
 (Robot.KOM_IN.Stav_ZonaNavratuRobota_NG=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[2]))->bit1);
@@ -538,155 +571,51 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2]))->bit7=Robot.KOM_OUT.Gripper_KratkyUchopov_ZATVORENY);
 
 (((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3]))->bit0=Robot.KOM_OUT.UkoncenieCykluRobota);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3]))->bit1=Robot.KOM_OUT.Gripper_DlhyUchopov_PRAZDNY);
+(((_1byte_bit_field_*)(&Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3]))->bit2=Robot.KOM_OUT.Gripper_KratkyUchopov_PRAZDNY);
 
+
+(Robot.KOM_OUT.Profinet_PLC_OUTPUTS[4]=Robot.KOM_OUT.Dopravnik_UkladaciaPozicia);
 
 }}
-#line 484 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 518 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/OvladanieGripra.st"
 static void __AS__Action__OvladanieGripra(void){
 {
 
-SequenceControl(&SC_OvlGripra);
 
 
-switch(SC_OvlGripra.Step){
-
-case 0:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"0 - Nulovanie"; for(zzIndex=0; zzIndex<13l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
-(Robot.RR_OtvorDlhyUchopovac=0);
-(Robot.RR_ZatvorDlhyUchopovac=0);
-(Robot.RR_OtvorKratkyUchopovac=0);
-(Robot.RR_ZatvorKratkyUchopovac=0);
-
-if((((unsigned long)(unsigned short)SC_Robot.Step!=(unsigned long)(unsigned short)0))){
-(SC_OvlGripra.ResetStep=1);
-(SC_OvlGripra.Step=1);
-}
+(Robot.KOM_OUT.Gripper_DlhyUchopov_OTVORENY=Robot.IN.DlhyUchopovac_Otvoreny_MS2);
+(Robot.KOM_OUT.Gripper_DlhyUchopov_ZATVORENY=Robot.IN.DlhyUchopovac_Zatvoreny_MS1);
+(Robot.KOM_OUT.Gripper_DlhyUchopov_PRAZDNY=CasZatvorenia_DlhyUchopovac.Q);
+(Robot.KOM_OUT.Gripper_KratkyUchopov_OTVORENY=Robot.IN.KratkyUchopovac_Otvoreny_MS4);
+(Robot.KOM_OUT.Gripper_KratkyUchopov_ZATVORENY=Robot.IN.KratkyUchopovac_Zatvoreny_MS3);
+(Robot.KOM_OUT.Gripper_KratkyUchopov_PRAZDNY=CasZatvorenia_KratkyUchopovac.Q);
 
 
-}break;case 1:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"1 - Rozhodnutie o cinnosti"; for(zzIndex=0; zzIndex<26l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
-if(Robot.RR_OtvorDlhyUchopovac){
-(SC_OvlGripra.Step=10);
-}else if(Robot.RR_ZatvorDlhyUchopovac){
-(SC_OvlGripra.Step=20);
-}else if(Robot.RR_OtvorKratkyUchopovac){
-(SC_OvlGripra.Step=30);
-}else if(Robot.RR_ZatvorKratkyUchopovac){
-(SC_OvlGripra.Step=40);
-}else if((Robot.Robot_OtvorDlhyUchopovac&~Edge1638500000&1?((Edge1638500000=Robot.Robot_OtvorDlhyUchopovac&1),1):((Edge1638500000=Robot.Robot_OtvorDlhyUchopovac&1),0))){
-(SC_OvlGripra.Step=10);
-}else if((Robot.Robot_ZatvorDlhyUchopovac&~Edge1638500001&1?((Edge1638500001=Robot.Robot_ZatvorDlhyUchopovac&1),1):((Edge1638500001=Robot.Robot_ZatvorDlhyUchopovac&1),0))){
-(SC_OvlGripra.Step=20);
-}else if((Robot.Robot_OtvorKratkyUchopovac&~Edge1638500002&1?((Edge1638500002=Robot.Robot_OtvorKratkyUchopovac&1),1):((Edge1638500002=Robot.Robot_OtvorKratkyUchopovac&1),0))){
-(SC_OvlGripra.Step=30);
-}else if((Robot.Robot_ZatvorKratkyUchopovac&~Edge1638500003&1?((Edge1638500003=Robot.Robot_ZatvorKratkyUchopovac&1),1):((Edge1638500003=Robot.Robot_ZatvorKratkyUchopovac&1),0))){
-(SC_OvlGripra.Step=40);
-}
+
+(CasZatvorenia_DlhyUchopovac.IN=((Robot.OUT.OtvorDlhyUchopovac_YV1^1)&(Robot.IN.DlhyUchopovac_Otvoreny_MS2^1)&(Robot.IN.DlhyUchopovac_Zatvoreny_MS1^1)));
+(CasZatvorenia_DlhyUchopovac.PT=2000);
+TON(&CasZatvorenia_DlhyUchopovac);
+
+(CasZatvorenia_KratkyUchopovac.IN=((Robot.OUT.OtvorKratkyUchopovac_YV2^1)&(Robot.IN.KratkyUchopovac_Otvoreny_MS4^1)&(Robot.IN.KratkyUchopovac_Zatvoreny_MS3^1)));
+(CasZatvorenia_KratkyUchopovac.PT=2000);
+TON(&CasZatvorenia_KratkyUchopovac);
 
 
-}break;case 10:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"10 - Otvorenie dlheho uchopovaca na gripri robota"; for(zzIndex=0; zzIndex<49l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
-(SC_OvlGripra.IdleTime.PT=3000);
-(SC_OvlGripra.AlarmTime.PT=3000);
-
-if(Robot.Automat){
-(SC_OvlGripra.AlarmTime.IN=1);
-}else{
-(SC_OvlGripra.IdleTime.IN=1);
-}
-
-if((SC_OvlGripra.Switch1^1)){
-(Robot.OUT.ZatvorDlhyUchopovac_YV1=0);
-(SC_OvlGripra.Switch1=1);
-}
-
-if((Robot.IN.DlhyUchopovac_Otvoreny_MS2|SC_OvlGripra.IdleTime.Q)){
-(SC_OvlGripra.ResetStep=1);
-(SC_OvlGripra.Step=0);
-}else if(SC_OvlGripra.AlarmTime.Q){
-(Alarmy[9]=1);
-(PoruchaRobota=1);
-}
 
 
-}break;case 20:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"20 - Zatvorenie dlheho uchopovaca na gripri robota"; for(zzIndex=0; zzIndex<50l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
-(SC_OvlGripra.IdleTime.PT=3000);
-(SC_OvlGripra.AlarmTime.PT=3000);
 
-(SC_OvlGripra.IdleTime.IN=(Robot.IN.DlhyUchopovac_Otvoreny_MS2^1));
-(SC_OvlGripra.AlarmTime.IN=Robot.IN.DlhyUchopovac_Otvoreny_MS2);
-
-if((SC_OvlGripra.Switch1^1)){
-(Robot.OUT.ZatvorDlhyUchopovac_YV1=1);
-(SC_OvlGripra.Switch1=1);
-}
-
-if((Robot.IN.DlhyUchopovac_Zatvoreny_MS1|SC_OvlGripra.IdleTime.Q)){
-(SC_OvlGripra.ResetStep=1);
-(SC_OvlGripra.Step=0);
-}else if(SC_OvlGripra.AlarmTime.Q){
-(Alarmy[10]=1);
-(PoruchaRobota=1);
-}
-
-}break;case 30:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"30 - Otvorenie kratkeho uchopovaca na gripri robota"; for(zzIndex=0; zzIndex<51l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
-(SC_OvlGripra.IdleTime.PT=3000);
-(SC_OvlGripra.AlarmTime.PT=3000);
-
-if(Robot.Automat){
-(SC_OvlGripra.AlarmTime.IN=1);
-}else{
-(SC_OvlGripra.IdleTime.IN=1);
-}
-
-if((SC_OvlGripra.Switch1^1)){
-(Robot.OUT.ZatvorKratkyUchopovac_YV2=0);
-(SC_OvlGripra.Switch1=1);
-}
-
-if((Robot.IN.KratkyUchopovac_Otvoreny_MS4|SC_OvlGripra.IdleTime.Q)){
-(SC_OvlGripra.ResetStep=1);
-(SC_OvlGripra.Step=0);
-}else if(SC_OvlGripra.AlarmTime.Q){
-(Alarmy[11]=1);
-(PoruchaRobota=1);
-}
-
-
-}break;case 40:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_OvlGripra.StepName; plcstring* zzRValue=(plcstring*)"40 - Zatvorenie kratkeho uchopovaca na gripri robota"; for(zzIndex=0; zzIndex<52l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
-(SC_OvlGripra.IdleTime.PT=3000);
-(SC_OvlGripra.AlarmTime.PT=3000);
-
-(SC_OvlGripra.IdleTime.IN=(Robot.IN.KratkyUchopovac_Otvoreny_MS4^1));
-(SC_OvlGripra.AlarmTime.IN=Robot.IN.KratkyUchopovac_Otvoreny_MS4);
-
-if((SC_OvlGripra.Switch1^1)){
-(Robot.OUT.ZatvorKratkyUchopovac_YV2=1);
-(SC_OvlGripra.Switch1=1);
-}
-
-if((Robot.IN.KratkyUchopovac_Zatvoreny_MS3|SC_OvlGripra.IdleTime.Q)){
-(SC_OvlGripra.ResetStep=1);
-(SC_OvlGripra.Step=0);
-}else if(SC_OvlGripra.AlarmTime.Q){
-(Alarmy[12]=1);
-(PoruchaRobota=1);
-}
-
-
-}break;}
+(Robot.OUT.OtvorDlhyUchopovac_YV1=Robot.KOM_IN.Gripper_OtvorDlhyUchopovac);
+(Robot.OUT.OtvorKratkyUchopovac_YV2=Robot.KOM_IN.Gripper_OtvorKratkyUchopovac);
 
 
 
 
 
 
-}imp16385_case0_5:imp16385_endcase0_0:;}
-#line 484 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+}}
+#line 518 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
@@ -768,5 +697,4 @@ __asm__(".ascii \"iecfile \\\"Logical/Program/Robot/Types.typ\\\" scope \\\"loca
 __asm__(".ascii \"iecfile \\\"Logical/Program/Robot/Variables.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/Robot/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"plcreplace \\\"D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/Robot/Main.st.c\\\" \\\"D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Temp/Objects/Config1/AB2_CPU/Robot/Main.st.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".previous");

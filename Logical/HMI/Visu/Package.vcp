@@ -340,8 +340,8 @@
     <Source File="Pages\AutomatickyRezim.page"/>
     <Source File="Pages\ObrazovkaAlarmov.page"/>
     <Source File="Pages\RR_Bruska.page"/>
-    <Source File="Pages\RR_Robot.page"/>
     <Source File="Pages\RR_HlavnaObrazovka.page"/>
+    <Source File="Pages\ParametrePracoviska.page"/>
     <Source File="Layers\Upozornenia_2.layer"/>
     <Source File="Layers\Background.layer"/>
     <Source File="Layers\ListaBack.layer"/>

@@ -230,11 +230,11 @@
 </LN>
 <LN ID="%IX.IF6.ST1.SafeDigitalInput07" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="SafeDigitalInput07" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.SpatnaVazbaPracovisko_CH1" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.OploteniePracoviska_CH1" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.SafeDigitalInput08" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="SafeDigitalInput08" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.SpatnaVazbaPracovisko_CH2" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.IN.OploteniePracoviska_CH2" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.SafeTwoChannelInput0102" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="SafeTwoChannelInput0102" Kind="io"/>
@@ -341,9 +341,11 @@
 <Cons Device="IF6.ST1" DPName="BOOL104" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST1.BOOL105" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Safety.RESET_ZonyPracovisko" Kind="pv"/>
 <Cons Device="IF6.ST1" DPName="BOOL105" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST1.BOOL106" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Safety.SpatnaVazba_ZonaPracovisko" Kind="pv"/>
 <Cons Device="IF6.ST1" DPName="BOOL106" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST1.BOOL107" Type="BOOL">
@@ -402,12 +404,15 @@
 </LN>
 <LN ID="%IX.IF6.ST1.BOOL007" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="BOOL007" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.STAV.ZonaRobot_Odblokovana" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.BOOL008" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="BOOL008" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.STAV.ZonaPracovisko_Odblokovana" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.BOOL009" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="BOOL009" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Safety.STAV.ZonaPracovisko_AKTIVNA" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST1.BOOL010" Type="BOOL">
 <Prod Device="IF6.ST1" DPName="BOOL010" Kind="io"/>
@@ -599,12 +604,15 @@
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput11" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput11" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.OchrannyKrytBrusky_Otvoreny" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput12" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput12" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_Palec" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput13" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput13" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Robot.IN.NepouzivatRobota" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput14" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput14" Kind="io"/>
@@ -687,14 +695,14 @@
 <Cons Device="IF6.ST4" DPName="DigitalOutput04" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput05" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.ZatvorDlhyUchopovac_YV1" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.OtvorKratkyUchopovac_YV2" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput05" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput06" Type="BOOL">
 <Cons Device="IF6.ST4" DPName="DigitalOutput06" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput07" Type="BOOL">
-<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.ZatvorKratkyUchopovac_YV2" Kind="pv"/>
+<Prod Device="TC#1-CPYDEV" DPName="Robot.OUT.OtvorDlhyUchopovac_YV1" Kind="pv"/>
 <Cons Device="IF6.ST4" DPName="DigitalOutput07" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST4.DigitalOutput08" Type="BOOL">

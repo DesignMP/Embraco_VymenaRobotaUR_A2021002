@@ -20,6 +20,8 @@ PROGRAM _CYCLIC
     //A10 - Porucha zatvorenia dlheho uchopovaca na gripri robota !!!
     //A11 - Porucha otvorenie kratkeho uchopovaca na gripri robota !!!
     //A12 - Porucha zatvorenie kratkeho uchopovaca na gripri robota !!!
+    //A13 - Bolo stlacene tlacitko CS robota !!!
+    //A14 - Bolo stlacene tlacitko CS pracoviska !!!
     
 	 
      //***********************************Hladanie poruchy*****************************************//
@@ -39,12 +41,7 @@ PROGRAM _CYCLIC
         Vizu.ZobrazSymbolAlarmu:= FALSE;
     END_IF	
    
-    //*****************************Blikanie tlaèítka alarmy*************************************************//
-    IF NastalaPorucha THEN
-        Vizu.FarbaTlacitkaAlarm_Index:= Blikac500ms;
-    ELSE
-        Vizu.FarbaTlacitkaAlarm_Index:= FALSE;
-    END_IF
+    
     
     //*************************************Potvrdenie alarmov*********************************************************//
     IF PotvrdenieAlarmov THEN
@@ -151,12 +148,26 @@ PROGRAM _CYCLIC
     ELSE    
         CasPoruchyServa.IN:= FALSE;
     END_IF    
-        
-    	
-    
+      
     
     CasPoruchyServa.PT:= T#2s;
     CasPoruchyServa();
+    
+    
+    //**********************************Porucha bolo stlacene tlaèítko CS robota***************************************//
+    IF EDGENEG(Safety.STAV.CS_Robot_Odblokovany = TRUE) THEN
+        Alarmy[13]:= TRUE;
+        PoruchaBrusky;
+        PoruchaRobota;
+    END_IF    
+    
+    
+    //**********************************Porucha bolo stlacene tlaèítko CS pracoviska***************************************//
+    IF EDGENEG(Safety.STAV.CS_Pracovisko_Odblokovany = TRUE) THEN
+        Alarmy[14]:= TRUE;
+        PoruchaBrusky;
+        PoruchaRobota;
+    END_IF  
     
     
     

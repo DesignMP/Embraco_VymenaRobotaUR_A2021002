@@ -2,7 +2,7 @@
 QWS: 00005
 *)
 00001	00002	POE\Main\Main.gb
-00002	00080	POE\Main\ZonaCS.gb
-00003	00020	POE\Main\VyblokovanieSafety.gb
-00004	00030	POE\Main\ZonaRobot.gb
-00005	00038	POE\Main\ZonaPracovisko.gb
+00002	00020	POE\Main\VyblokovanieSafety.gb
+00003	00082	POE\Main\ZonaCS.gb
+00004	00069	POE\Main\ZonaRobot.gb
+00005	00079	POE\Main\ZonaPracovisko.gb

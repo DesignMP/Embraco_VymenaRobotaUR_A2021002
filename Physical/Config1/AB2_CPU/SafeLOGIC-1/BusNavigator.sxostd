@@ -4,7 +4,7 @@
     <GeneratorDescription Name="AutomationStudio" Version="4.7.5.60" LanguageID="1">
       <Info Name="ARVersion" Value="47303" />
       <Info Name="SafetyRelease" Value="1.10" />
-      <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=0 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.122.2 /REPO=11159 /ANSL=1 /PT=11169 /PORT=50000" />
+      <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=1 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.0.1 /REPO=11159 /ANSL=1 /PT=11169 /PORT=50000" />
     </GeneratorDescription>
     <SafetyConfigurationManager TransportSAddr="1">
       <DeviceDescription Module="X20SLXxxx_110.SCM" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS47\AS\Hardware\Modules\X20SLX842\1.10.12.1\OSDD\X20SLXxxx_SCM_1_10_12_0.xosdd]]></DeviceDescription>
@@ -35,29 +35,34 @@
         <Info Name="ProjectSL" Value="1" />
         <Info Name="Description-de" Value="X20 SafeLOGIC Compact, 8xE 24V, 4xA 24V 3.0A, 2xA 24V 0.05A" />
         <Info Name="Description-en" Value="X20 SafeLOGIC Compact, 8xI 24V, 4xO 24V 3.0A, 2xO 24V 0.05A" />
-        <Info Name="AsVariable" Value="SafeDigitalInput06,Cyclic#1.Safety.IN.Pracovisko_CS_CH2" />
-        <Info Name="AsVariable" Value="BOOL005,Cyclic#1.Safety.STAV.CS_Robot_Odblokovany" />
-        <Info Name="AsVariable" Value="PhysicalStateChannel03,Cyclic#1.Safety.OUT.Zona_Pracovisko_CH1" />
-        <Info Name="AsVariable" Value="BOOL004,Cyclic#1.Safety.STAV.CS_Pracovisko_Odblokovany" />
-        <Info Name="AsVariable" Value="BOOL104,Cyclic#1.Safety.SpatnaVazba_ZonaRobot" />
-        <Info Name="AsVariable" Value="SafeDigitalInput01,Cyclic#1.Safety.IN.Robot_CS_CH1" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.StavHardware.KartaAB4_SafetyMaster_OK" />
-        <Info Name="AsVariable" Value="PhysicalStateChannel02,Cyclic#1.Safety.OUT.Zona_Robot" />
-        <Info Name="AsVariable" Value="BOOL002,Cyclic#1.Safety.STAV.ZonaCS_AKTIVNA" />
-        <Info Name="AsVariable" Value="BOOL101,Cyclic#1.Safety.RESET_ZonyCS" />
-        <Info Name="AsVariable" Value="SafeDigitalInput08,Cyclic#1.Safety.IN.SpatnaVazbaPracovisko_CH2" />
-        <Info Name="AsVariable" Value="SafeDigitalInput04,Cyclic#1.Safety.IN.VyblokovanieSafety_CH2" />
-        <Info Name="AsVariable" Value="BOOL001,Cyclic#1.Safety.STAV.SafetyPLC_Nabehlo" />
-        <Info Name="AsVariable" Value="PhysicalStateChannel01,Cyclic#1.Safety.OUT.Zona_CS" />
         <Info Name="AsVariable" Value="BOOL103,Cyclic#1.Safety.SpatnaVazba_ZonaCS" />
-        <Info Name="AsVariable" Value="SafeDigitalInput05,Cyclic#1.Safety.IN.Pracovisko_CS_CH1" />
-        <Info Name="AsVariable" Value="SafeDigitalInput03,Cyclic#1.Safety.IN.VyblokovanieSafety_CH1" />
-        <Info Name="AsVariable" Value="SafeDigitalInput07,Cyclic#1.Safety.IN.SpatnaVazbaPracovisko_CH1" />
+        <Info Name="AsVariable" Value="BOOL004,Cyclic#1.Safety.STAV.CS_Pracovisko_Odblokovany" />
+        <Info Name="AsVariable" Value="BOOL009,Cyclic#1.Safety.STAV.ZonaPracovisko_AKTIVNA" />
+        <Info Name="AsVariable" Value="SafeDigitalInput01,Cyclic#1.Safety.IN.Robot_CS_CH1" />
         <Info Name="AsVariable" Value="PhysicalStateChannel04,Cyclic#1.Safety.OUT.Zona_Pracovisko_CH2" />
+        <Info Name="AsVariable" Value="SafeDigitalInput06,Cyclic#1.Safety.IN.Pracovisko_CS_CH2" />
+        <Info Name="AsVariable" Value="BOOL104,Cyclic#1.Safety.SpatnaVazba_ZonaRobot" />
+        <Info Name="AsVariable" Value="PhysicalStateChannel01,Cyclic#1.Safety.OUT.Zona_CS" />
+        <Info Name="AsVariable" Value="BOOL002,Cyclic#1.Safety.STAV.ZonaCS_AKTIVNA" />
         <Info Name="AsVariable" Value="BOOL102,Cyclic#1.Safety.RESET_ZonyRobot" />
+        <Info Name="AsVariable" Value="SafeDigitalInput03,Cyclic#1.Safety.IN.VyblokovanieSafety_CH1" />
+        <Info Name="AsVariable" Value="BOOL005,Cyclic#1.Safety.STAV.CS_Robot_Odblokovany" />
+        <Info Name="AsVariable" Value="BOOL001,Cyclic#1.Safety.STAV.SafetyPLC_Nabehlo" />
+        <Info Name="AsVariable" Value="BOOL101,Cyclic#1.Safety.RESET_ZonyCS" />
+        <Info Name="AsVariable" Value="PhysicalStateChannel03,Cyclic#1.Safety.OUT.Zona_Pracovisko_CH1" />
         <Info Name="AsVariable" Value="BOOL006,Cyclic#1.Safety.STAV.VyblokovanieSafety_AKTIVNE" />
-        <Info Name="AsVariable" Value="BOOL003,Cyclic#1.Safety.STAV.ZonaRobot_AKTIVNA" />
+        <Info Name="AsVariable" Value="BOOL008,Cyclic#1.Safety.STAV.ZonaPracovisko_Odblokovana" />
+        <Info Name="AsVariable" Value="SafeDigitalInput08,Cyclic#1.Safety.IN.OploteniePracoviska_CH2" />
+        <Info Name="AsVariable" Value="SafeDigitalInput05,Cyclic#1.Safety.IN.Pracovisko_CS_CH1" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.StavHardware.KartaAB4_SafetyMaster_OK" />
+        <Info Name="AsVariable" Value="BOOL007,Cyclic#1.Safety.STAV.ZonaRobot_Odblokovana" />
         <Info Name="AsVariable" Value="SafeDigitalInput02,Cyclic#1.Safety.IN.Robot_CS_CH2" />
+        <Info Name="AsVariable" Value="BOOL105,Cyclic#1.Safety.RESET_ZonyPracovisko" />
+        <Info Name="AsVariable" Value="BOOL003,Cyclic#1.Safety.STAV.ZonaRobot_AKTIVNA" />
+        <Info Name="AsVariable" Value="SafeDigitalInput07,Cyclic#1.Safety.IN.OploteniePracoviska_CH1" />
+        <Info Name="AsVariable" Value="PhysicalStateChannel02,Cyclic#1.Safety.OUT.Zona_Robot" />
+        <Info Name="AsVariable" Value="SafeDigitalInput04,Cyclic#1.Safety.IN.VyblokovanieSafety_CH2" />
+        <Info Name="AsVariable" Value="BOOL106,Cyclic#1.Safety.SpatnaVazba_ZonaPracovisko" />
       </NodeDescription>
       <ChannelConfiguration>
         <DataTransport>

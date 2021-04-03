@@ -601,25 +601,12 @@
       <Property Name="VisibilityMode" Value="Normal"/>
       <Property Name="Z-Order" Value="2"/>
     </LayerRef>
-    <LayerRef Source="Source[local].Layer[PopPrihlasenie]">
-      <Property Name="Description" Value=""/>
-      <Property Name="EditingMode" Value="Frozen"/>
-      <Property Name="Left" Value="0"/>
-      <Property Name="Name" Value="PopPrihlasenie"/>
-      <Property Name="OutlineColor" Value="0"/>
-      <Property Name="OutlineDisplayControl" Value="False"/>
-      <Property Name="OutlineDisplayName" Value="True"/>
-      <Property Name="OutlineHatched" Value="False"/>
-      <Property Name="Top" Value="0"/>
-      <Property Name="VisibilityMode" Value="Hidden"/>
-      <Property Name="Z-Order" Value="3"/>
-    </LayerRef>
   </Layers>
   <MovementOrder>
     <MovementEntry Control="Source[embedded].Layer[FrameLayer].Control[setSecond]">
       <Property Name="Down" Value="Source[embedded].Layer[FrameLayer].Control[setYear]"/>
       <Property Name="Left" Value="Source[embedded].Layer[FrameLayer].Control[setMinute]"/>
-      <Property Name="Right" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
+      <Property Name="Right" Value="Source[embedded].Layer[FrameLayer].Control[setHour]"/>
       <Property Name="Up" Value="Source[embedded].Layer[FrameLayer].Control[setYear]"/>
     </MovementEntry>
     <MovementEntry Control="Source[embedded].Layer[FrameLayer].Control[setMinute]">
@@ -630,14 +617,14 @@
     </MovementEntry>
     <MovementEntry Control="Source[embedded].Layer[FrameLayer].Control[setHour]">
       <Property Name="Down" Value="Source[embedded].Layer[FrameLayer].Control[setDay]"/>
-      <Property Name="Left" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
+      <Property Name="Left" Value="Source[embedded].Layer[FrameLayer].Control[setSecond]"/>
       <Property Name="Right" Value="Source[embedded].Layer[FrameLayer].Control[setMinute]"/>
       <Property Name="Up" Value="Source[embedded].Layer[FrameLayer].Control[setDay]"/>
     </MovementEntry>
     <MovementEntry Control="Source[embedded].Layer[FrameLayer].Control[setYear]">
       <Property Name="Down" Value="Source[embedded].Layer[FrameLayer].Control[setSecond]"/>
       <Property Name="Left" Value="Source[embedded].Layer[FrameLayer].Control[SetMonth]"/>
-      <Property Name="Right" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
+      <Property Name="Right" Value="Source[embedded].Layer[FrameLayer].Control[setDay]"/>
       <Property Name="Up" Value="Source[embedded].Layer[FrameLayer].Control[setSecond]"/>
     </MovementEntry>
     <MovementEntry Control="Source[embedded].Layer[FrameLayer].Control[SetMonth]">
@@ -652,18 +639,6 @@
       <Property Name="Right" Value="Source[embedded].Layer[FrameLayer].Control[SetMonth]"/>
       <Property Name="Up" Value="Source[embedded].Layer[FrameLayer].Control[setHour]"/>
     </MovementEntry>
-    <MovementEntry Control="Source[local].Layer[PopPrihlasenie].Control[String_1]">
-      <Property Name="Down" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-      <Property Name="Left" Value="Source[embedded].Layer[FrameLayer].Control[setSecond]"/>
-      <Property Name="Right" Value="Source[embedded].Layer[FrameLayer].Control[setHour]"/>
-      <Property Name="Up" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-    </MovementEntry>
-    <MovementEntry Control="Source[local].Layer[PopPrihlasenie].Control[String_2]">
-      <Property Name="Down" Value="Source[embedded].Layer[FrameLayer].Control[setYear]"/>
-      <Property Name="Left" Value="Source[embedded].Layer[FrameLayer].Control[setSecond]"/>
-      <Property Name="Right" Value="Source[embedded].Layer[FrameLayer].Control[setHour]"/>
-      <Property Name="Up" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-    </MovementEntry>
   </MovementOrder>
   <TabSequence>
     <TabSeqItem Index="0" Value="Source[embedded].Layer[FrameLayer].Control[setSecond]"/>
@@ -672,7 +647,5 @@
     <TabSeqItem Index="3" Value="Source[embedded].Layer[FrameLayer].Control[setYear]"/>
     <TabSeqItem Index="4" Value="Source[embedded].Layer[FrameLayer].Control[SetMonth]"/>
     <TabSeqItem Index="5" Value="Source[embedded].Layer[FrameLayer].Control[setDay]"/>
-    <TabSeqItem Index="6" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-    <TabSeqItem Index="7" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
   </TabSequence>
 </Page>

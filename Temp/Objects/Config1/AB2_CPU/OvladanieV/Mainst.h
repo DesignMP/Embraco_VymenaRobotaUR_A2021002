@@ -75,8 +75,8 @@ typedef struct SafetyIN_typ
 	plcbit VyblokovanieSafety_CH2;
 	plcbit Pracovisko_CS_CH1;
 	plcbit Pracovisko_CS_CH2;
-	plcbit SpatnaVazbaPracovisko_CH1;
-	plcbit SpatnaVazbaPracovisko_CH2;
+	plcbit OploteniePracoviska_CH1;
+	plcbit OploteniePracoviska_CH2;
 } SafetyIN_typ;
 #endif
 
@@ -102,7 +102,10 @@ typedef struct SafetyPAR_typ
 typedef struct SafetySTAV_typ
 {	plcbit SafetyPLC_Nabehlo;
 	plcbit ZonaCS_AKTIVNA;
+	plcbit ZonaRobot_Odblokovana;
 	plcbit ZonaRobot_AKTIVNA;
+	plcbit ZonaPracovisko_Odblokovana;
+	plcbit ZonaPracovisko_AKTIVNA;
 	plcbit CS_Pracovisko_Odblokovany;
 	plcbit CS_Robot_Odblokovany;
 	plcbit VyblokovanieSafety_AKTIVNE;
@@ -118,6 +121,7 @@ typedef struct Safety_typ
 	SafetySTAV_typ STAV;
 	plcbit RESET_ZonyRobot;
 	plcbit RESET_ZonyCS;
+	plcbit RESET_ZonyPracovisko;
 	plcbit SpatnaVazba_ZonaRobot;
 	plcbit SpatnaVazba_ZonaCS;
 	plcbit SpatnaVazba_ZonaPracovisko;
@@ -138,10 +142,13 @@ typedef struct Vizu_typ
 	plcbit TL_StartAutomat_DISABLE;
 	plcbit TL_UkoncenieCyklu_DISABLE;
 	plcbit TL_RR_OvladanieServa_DISABLE;
+	plcbit TL_RR_HomingServa_DISABLE;
+	plcbit TL_OdparkovanieRobota_DISABLE;
 	unsigned char Slider;
 	plcbit FarbaTlacitkaAlarm_Index;
 	plcbit ZobrazSymbolAlarmu;
 	unsigned char ZobrazHlasenie_ResetZariadenia;
+	unsigned char PodsvietenieTlacitka_ResetCS;
 } Vizu_typ;
 #endif
 
@@ -199,12 +206,137 @@ typedef struct Zariadenie_typ
 } Zariadenie_typ;
 #endif
 
+#ifndef __AS__TYPE_RobotIN_typ
+#define __AS__TYPE_RobotIN_typ
+typedef struct RobotIN_typ
+{	plcbit DlhyUchopovac_Otvoreny_MS2;
+	plcbit DlhyUchopovac_Zatvoreny_MS1;
+	plcbit KratkyUchopovac_Otvoreny_MS4;
+	plcbit KratkyUchopovac_Zatvoreny_MS3;
+	plcbit CisloZadanejPozicie_Bit0;
+	plcbit CisloZadanejPozicie_Bit1;
+	plcbit CisloZadanejPozicie_Bit2;
+	plcbit CisloZadanejPozicie_Bit3;
+	plcbit NepouzivatRobota;
+} RobotIN_typ;
+#endif
+
+#ifndef __AS__TYPE_RobotOUT_typ
+#define __AS__TYPE_RobotOUT_typ
+typedef struct RobotOUT_typ
+{	plcbit CisloAktualnejPozicie_Bit0;
+	plcbit CisloAktualnejPozicie_Bit1;
+	plcbit CisloAktualnejPozicie_Bit2;
+	plcbit CisloAktualnejPozicie_Bit3;
+	plcbit OtvorDlhyUchopovac_YV1;
+	plcbit OtvorKratkyUchopovac_YV2;
+	plcbit VystupnyDopravnikNalozeny;
+} RobotOUT_typ;
+#endif
+
+#ifndef __AS__TYPE_RobotKOM_IN_typ
+#define __AS__TYPE_RobotKOM_IN_typ
+typedef struct RobotKOM_IN_typ
+{	plcbit Stav_RobotOdparkovany;
+	plcbit Stav_RobotDrziCap;
+	plcbit Stav_RobotCinnostUkoncena;
+	plcbit Stav_Dopravnik_Plny;
+	plcbit Stav_MotoryON;
+	plcbit Stav_MotoryOFF;
+	plcbit Stav_ProgramRUN;
+	plcbit Stav_RezimAUTOMAT;
+	plcbit Stav_RobotCS;
+	plcbit Stav_VystupyZresetovane;
+	plcbit Stav_ZonaNavratuRobota_OK;
+	plcbit Stav_ZonaNavratuRobota_NG;
+	plcbit Gripper_OtvorDlhyUchopovac;
+	plcbit Gripper_OtvorKratkyUchopovac;
+	unsigned char Profinet_PLC_INPUTS[64];
+} RobotKOM_IN_typ;
+#endif
+
+#ifndef __AS__TYPE_RobotKOM_OUT_typ
+#define __AS__TYPE_RobotKOM_OUT_typ
+typedef struct RobotKOM_OUT_typ
+{	plcbit ZapniMotory;
+	plcbit VypniMotory;
+	plcbit PP_na_Main;
+	plcbit Reset_CS;
+	plcbit StartProgramu;
+	plcbit StartProgramuMain;
+	plcbit StopProgramu;
+	plcbit OdparkujRobota;
+	plcbit Paletka_PresunDoCakacejPozicie;
+	plcbit Paletka_OdoberCap;
+	plcbit Otacac_PresunDoCakacejPozicie;
+	plcbit Otacac_PolozCap;
+	plcbit Otacac_OdoberCap;
+	plcbit Bruska_PresunDoCakacejPozicie;
+	plcbit Bruska_OdoberCap;
+	plcbit Bruska_VlozCap;
+	plcbit Dopravnik_PresunDoCakacejPozicie;
+	plcbit Dopravnik_PolozCap;
+	plcbit UkoncenieCykluRobota;
+	plcbit Gripper_DlhyUchopov_OTVORENY;
+	plcbit Gripper_DlhyUchopov_ZATVORENY;
+	plcbit Gripper_KratkyUchopov_OTVORENY;
+	plcbit Gripper_KratkyUchopov_ZATVORENY;
+	plcbit Gripper_DlhyUchopov_PRAZDNY;
+	plcbit Gripper_KratkyUchopov_PRAZDNY;
+	unsigned char Dopravnik_UkladaciaPozicia;
+	unsigned char Profinet_PLC_OUTPUTS[64];
+} RobotKOM_OUT_typ;
+#endif
+
+#ifndef __AS__TYPE_RobotPAR_typ
+#define __AS__TYPE_RobotPAR_typ
+typedef struct RobotPAR_typ
+{	unsigned char CisloZadanejPozicie;
+	unsigned char CisloAktualnejPozicie;
+	unsigned char PocetNalozenychCapov;
+} RobotPAR_typ;
+#endif
+
+#ifndef __AS__TYPE_RobotSTAV_typ
+#define __AS__TYPE_RobotSTAV_typ
+typedef struct RobotSTAV_typ
+{	plcbit PoINIT;
+} RobotSTAV_typ;
+#endif
+
+#ifndef __AS__TYPE_Robot_typ
+#define __AS__TYPE_Robot_typ
+typedef struct Robot_typ
+{	RobotIN_typ IN;
+	RobotOUT_typ OUT;
+	RobotKOM_IN_typ KOM_IN;
+	RobotKOM_OUT_typ KOM_OUT;
+	RobotPAR_typ PAR;
+	RobotSTAV_typ STAV;
+	plcbit Automat;
+	plcbit Manual;
+	plcbit Reset;
+	plcbit KoniecCyklu;
+	plcbit RR_OtvorKratkyUchopovac;
+	plcbit RR_ZatvorKratkyUchopovac;
+	plcbit RR_OtvorDlhyUchopovac;
+	plcbit RR_ZatvorDlhyUchopovac;
+	plcbit RR_OdparkujRobota;
+	plcbit Robot_OtvorKratkyUchopovac;
+	plcbit Robot_ZatvorKratkyUchopovac;
+	plcbit Robot_OtvorDlhyUchopovac;
+	plcbit Robot_ZatvorDlhyUchopovac;
+} Robot_typ;
+#endif
+
 #ifndef __AS__TYPE_BruskaIN_typ
 #define __AS__TYPE_BruskaIN_typ
 typedef struct BruskaIN_typ
 {	plcbit ReferencnySnimac_IS1;
 	plcbit UpinaciaHlava_OtacanieVPRED;
 	plcbit UpinaciaHlava_OtacanieVZAD;
+	plcbit OchrannyKrytBrusky_Otvoreny;
+	plcbit UpinaciaHlava_Palec;
 } BruskaIN_typ;
 #endif
 
@@ -911,6 +1043,8 @@ _GLOBAL plcbit Blikac500ms;
 _GLOBAL Vizu_typ Vizu;
 _GLOBAL Safety_typ Safety;
 _GLOBAL Zariadenie_typ Zariadenie;
+_GLOBAL Robot_typ Robot;
 _GLOBAL Bruska_typ Bruska;
+_GLOBAL plcbit NastalaPorucha;
 _LOCAL plcbit Edge0000100000;
 _LOCAL plcbit Edge0000100001;

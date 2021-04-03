@@ -1,6 +1,37 @@
 ************Prevodový pomer serva*****************
 1 otáèka serva = 0.76 otáèky upínacej hlavy
 
+Rýchlost 4.5 = 1 ot/min
 
 
 Heslo pre safety - vlmardo
+
+
+
+
+ //********************************Popis èísla aktuálnej pozície robota*****************************//
+    //1 - robot je pripravený
+    //2 - robot èaká na odobratie èapu z paletky
+    //3 - robot odobral èap z paletky
+    //4 - robot položil èap do otáèaèa
+    //5 - robot odobral èap z otáèaèa
+    //6 - robot odobral èap z brúsky
+    //7 - robot vložil èap do brúsky
+    //8 - robot je presunuty pred bruskou
+    //9 - robot položil èap na dopravník
+    //14 - robot je odparkovany
+    
+    
+    
+    
+    
+    //********************************Popis èísla zadanej pozície robota*****************************//
+    //2 - robot presun do pozície èakania na odobratie èapu z paletky
+    //3 - robot odober èap z paletky
+    //4 - robot polož èap do otáèaèa
+    //5 - robot odober èap z otáèaèa
+    //6 - robot odober èap z brúsky
+    //7 - robot vlož èap do brúsky
+    //8 - robot presun do pozície pred brúskou
+    //9 - robot polož èap na dopravník
+    //14 - odparkuj robota

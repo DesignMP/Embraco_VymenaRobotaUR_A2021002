@@ -2,11 +2,11 @@
 T: PROGRAM Main
 FW: NO
 CI#: 80
-QSL: 10
-QVE: 10
-QVPC: 10
+QSL: 12
+QVE: 12
+QVPC: 12
 QPar: 0
-QFBI: 10
+QFBI: 12
 *)
 @V 1 2 0
 CS_Robot	1	VAR	@FB:81
@@ -64,6 +64,18 @@ CasRelease_Pracoviska_CH1	9	VAR	@FB:21
 
 @V 1 11 0
 CasRelease_Pracoviska_CH2	10	VAR	@FB:21
+		     
+
+;
+
+@V 1 12 0
+OploteniePracoviska	11	VAR	@FB:81
+		     
+
+;
+
+@V 1 13 0
+OploteniePracoviska_1	12	VAR	@FB:81
 		     
 
 ;

@@ -5,6 +5,12 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+    //Volanie podprogramov//
+    OvladanieSafety;
+    
+    
+    
+    
     //****************************************Príznak hardware pracoviska OK***********************************//
     
     IF StavHardware.KartaAB1_ProfinetMaster_OK AND
@@ -39,7 +45,9 @@ PROGRAM _CYCLIC
     
     //Èervené svetlo//
     IF NastalaPorucha THEN
-       Zariadenie.OUT.Majak_CerveneSvetlo:= TRUE; 
+        Zariadenie.OUT.Majak_CerveneSvetlo:= TRUE; 
+    ELSIF NOT Safety.STAV.ZonaCS_AKTIVNA THEN
+        Zariadenie.OUT.Majak_CerveneSvetlo:= TRUE;
     ELSE
         Zariadenie.OUT.Majak_CerveneSvetlo:= FALSE;
     END_IF   
@@ -67,7 +75,7 @@ PROGRAM _CYCLIC
             Bruska.KoniecCyklu:= TRUE;
         END_IF
         Zariadenie.KoniecCyklu:= FALSE;
-     END_IF   
+    END_IF   
     
     //Pri poruche//
     IF PoruchaBrusky AND NOT PoruchaRobota THEN
@@ -124,8 +132,10 @@ PROGRAM _CYCLIC
     
     //***************************************Automatický režim pracoviska**********************************************************//
     IF Zariadenie.Automat THEN
-        Bruska.Automat:= TRUE;
-        Robot.Automat:= TRUE;
+//        Bruska.Automat:= TRUE;
+//        IF NOT Robot.IN.NepouzivatRobota THEN
+//            Robot.Automat:= TRUE;
+//        END_IF
         Zariadenie.Automat:= FALSE;
     END_IF
     
@@ -138,7 +148,7 @@ PROGRAM _CYCLIC
     END_IF   
     
     //Príznak Zariadenie je po inicializácii//
-    IF Bruska.STAV.PoINIT AND Robot.STAV.PoINIT THEN
+    IF Bruska.STAV.PoINIT AND (Robot.STAV.PoINIT OR Robot.IN.NepouzivatRobota) THEN
         Zariadenie.STAV.PoINIT:= TRUE;
     ELSE    
         Zariadenie.STAV.PoINIT:= FALSE;

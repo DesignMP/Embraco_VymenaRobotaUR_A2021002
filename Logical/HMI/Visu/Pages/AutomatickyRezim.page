@@ -33,21 +33,18 @@
           <Text ID="234407" Value="STOP"/>
           <Text ID="234408" Value="STOP"/>
           <Text ID="234409" Value="RESET"/>
-          <Text ID="234415" Value="Odparkuj robota /Home position/"/>
         </TextLayer>
         <TextLayer LanguageId="de">
           <Text ID="234406" Value=""/>
           <Text ID="234407" Value=""/>
           <Text ID="234408" Value=""/>
           <Text ID="234409" Value=""/>
-          <Text ID="234415" Value=""/>
         </TextLayer>
         <IndexMap>
           <Index ID="234406" Value="6"/>
           <Index ID="234407" Value="8"/>
           <Index ID="234408" Value="9"/>
           <Index ID="234409" Value="10"/>
-          <Index ID="234415" Value="2"/>
         </IndexMap>
       </TextGroup>
       <Controls>
@@ -111,7 +108,7 @@
           <Property Name="Multiline" Value="Automatic"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextGroup" Value="Source[embedded].TextGroup"/>
           <Property Name="PressedTextIndex" Value="9"/>
@@ -124,38 +121,6 @@
           <Property Name="TextSource" Value="SingleText"/>
           <Property Name="Top" Value="171"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_39]"/>
-          <Property Name="Width" Value="150"/>
-        </Control>
-        <Control ClassId="0x00001002" Name="Button_16">
-          <Property Name="BackColor" Value="42"/>
-          <Property Name="BitmapIndexDatapoint" Value="None"/>
-          <Property Name="BitmapSource" Value="None"/>
-          <Property Name="Border" Value="Source[local].Border[Button_Global_Area]"/>
-          <Property Name="ControlID" Value="0"/>
-          <Property Name="Description" Value=""/>
-          <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_36]"/>
-          <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-          <Property Name="ForeColor" Value="0"/>
-          <Property Name="Height" Value="50"/>
-          <Property Name="KeyMatrixOffset" Value="None"/>
-          <Property Name="Left" Value="638"/>
-          <Property Name="Locking" Value="Datapoint &gt;= Level"/>
-          <Property Name="LockingDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitkoOdparkovanieRobota]"/>
-          <Property Name="LockingLevel" Value="1"/>
-          <Property Name="Multiline" Value="Automatic"/>
-          <Property Name="PressedBackColor" Value="0"/>
-          <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
-          <Property Name="PressedForeColor" Value="0"/>
-          <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
-          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
-          <Property Name="TextIndex" Value="2"/>
-          <Property Name="TextIndexDatapoint" Value="None"/>
-          <Property Name="TextSimulationValue" Value="0"/>
-          <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="365"/>
-          <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_36]"/>
           <Property Name="Width" Value="150"/>
         </Control>
         <Control ClassId="0x00001002" Name="Button_3">
@@ -174,7 +139,7 @@
           <Property Name="Multiline" Value="Automatic"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
@@ -208,7 +173,7 @@
           <Property Name="Multiline" Value="Automatic"/>
           <Property Name="PressedBackColor" Value="0"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
           <Property Name="PressedForeColor" Value="0"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
@@ -265,21 +230,6 @@
               <Property Name="Name" Value="Action_0"/>
               <Property Name="SetValue" Value="1"/>
               <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Zariadenie.Automat]"/>
-            </KeyAction>
-          </KeyActions>
-        </VirtualKey>
-        <VirtualKey Name="%embVirtualKey_36">
-          <Property Name="Description" Value=""/>
-          <Property Name="VirtualKey_LED" Value="False"/>
-          <KeyActions>
-            <KeyAction ClassId="0x00000161">
-              <Property Name="CompletionDatapoint" Value="None"/>
-              <Property Name="CompletionValue" Value="0"/>
-              <Property Name="Description" Value=""/>
-              <Property Name="Locking" Value="Never"/>
-              <Property Name="Name" Value="Action_0"/>
-              <Property Name="SetValue" Value="1"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Robot.OdparkujRobota]"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>
@@ -341,36 +291,7 @@
       <Property Name="VisibilityMode" Value="Hidden"/>
       <Property Name="Z-Order" Value="2"/>
     </LayerRef>
-    <LayerRef Source="Source[local].Layer[PopPrihlasenie]">
-      <Property Name="Description" Value=""/>
-      <Property Name="EditingMode" Value="Frozen"/>
-      <Property Name="Left" Value="0"/>
-      <Property Name="Name" Value="PopPrihlasenie"/>
-      <Property Name="OutlineColor" Value="0"/>
-      <Property Name="OutlineDisplayControl" Value="False"/>
-      <Property Name="OutlineDisplayName" Value="True"/>
-      <Property Name="OutlineHatched" Value="False"/>
-      <Property Name="Top" Value="0"/>
-      <Property Name="VisibilityMode" Value="Hidden"/>
-      <Property Name="Z-Order" Value="3"/>
-    </LayerRef>
   </Layers>
-  <MovementOrder>
-    <MovementEntry Control="Source[local].Layer[PopPrihlasenie].Control[String_1]">
-      <Property Name="Down" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-      <Property Name="Left" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-      <Property Name="Right" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-      <Property Name="Up" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-    </MovementEntry>
-    <MovementEntry Control="Source[local].Layer[PopPrihlasenie].Control[String_2]">
-      <Property Name="Down" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-      <Property Name="Left" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-      <Property Name="Right" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-      <Property Name="Up" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-    </MovementEntry>
-  </MovementOrder>
-  <TabSequence>
-    <TabSeqItem Index="0" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-    <TabSeqItem Index="1" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-  </TabSequence>
+  <MovementOrder/>
+  <TabSequence/>
 </Page>

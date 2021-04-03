@@ -50,9 +50,9 @@ ACTION OvlServa:
 	
     
 	
-	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Acceleration:= Bruska.PAR.Servo_RychlostPolohovania*10;
-	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Deceleration:= Bruska.PAR.Servo_RychlostPolohovania*10;
-	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.StopDeceleration:= Bruska.PAR.Servo_RychlostPolohovania*10;
+	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Acceleration:= Bruska.PAR.Servo_RychlostPolohovania*1;
+	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Deceleration:= Bruska.PAR.Servo_RychlostPolohovania*1;
+	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.StopDeceleration:= Bruska.PAR.Servo_RychlostPolohovania*5;
 	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Velocity:= Bruska.PAR.Servo_RychlostPolohovania; 
     Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Position:= Bruska.PAR.Servo_PoziciaNatocenia;
     

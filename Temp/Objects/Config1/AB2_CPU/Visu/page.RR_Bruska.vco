@@ -131,7 +131,7 @@
             <Group Name="LockingDatapoint">
               <UInt16 Name="Offset">16</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitko_SpustenieFrezy]</Reference>
+              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.TL_RR_HomingServa_DISABLE]</Reference>
             </Group>
             <Group Name="LockingLevel">
               <UInt16 Name="Offset">20</UInt16>
@@ -586,7 +586,7 @@
             <UInt32 Name="Top">155</UInt32>
             <UInt32 Name="Right">370</UInt32>
             <UInt32 Name="Bottom">186</UInt32>
-            <Reference Name="IndexDatapoint" Type="DP">Source[global].Variable[DataSource.Robot.IN.VretenoFrezy_PritomnostNastroja]</Reference>
+            <Reference Name="IndexDatapoint" Type="DP">Source[global].Variable[DataSource.Bruska.IN.ReferencnySnimac_IS1]</Reference>
             <UInt32 Name="ControlID">0</UInt32>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001005].StyleClass[Default]</Reference>
             <UInt16 Name="StyleTableSize">40</UInt16>
@@ -936,10 +936,10 @@
               <Double Name="SetValue">1</Double>
               <Double Name="ResetValue">0</Double>
               <Double Name="CompletionValue">0</Double>
-              <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_ZASUN]</Reference>
+              <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Bruska.Servo_JoggVZAD]</Reference>
               <UInt32 Name="CompletionDatapoint">4294967295</UInt32>
-              <Byte Name="Mode">0</Byte>
-              <Byte Name="Reserved">0</Byte>
+              <Byte Name="Mode">2</Byte>
+              <Byte Name="Status">0</Byte>
               <UInt16 Name="Reserved1">0</UInt16>
             </Group>
           </Object>
@@ -962,10 +962,10 @@
               <Double Name="SetValue">1</Double>
               <Double Name="ResetValue">0</Double>
               <Double Name="CompletionValue">0</Double>
-              <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_VYSUN]</Reference>
+              <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Bruska.Servo_JoggVPRED]</Reference>
               <UInt32 Name="CompletionDatapoint">4294967295</UInt32>
-              <Byte Name="Mode">0</Byte>
-              <Byte Name="Reserved">0</Byte>
+              <Byte Name="Mode">2</Byte>
+              <Byte Name="Status">0</Byte>
               <UInt16 Name="Reserved1">0</UInt16>
             </Group>
           </Object>
@@ -1133,14 +1133,14 @@
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">234939</UInt32>
-                <UInt32 Name="TextOffset">350</UInt32>
+                <UInt32 Name="TextOffset">352</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">234940</UInt32>
-                <UInt32 Name="TextOffset">384</UInt32>
+                <UInt32 Name="TextOffset">386</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
@@ -1154,7 +1154,7 @@ serva"</String>
               <String Name="Text" Encoding="Unicode">"Vypni frézu"</String>
               <String Name="Text" Encoding="Unicode">"Otáčanie VZAD"</String>
               <String Name="Text" Encoding="Unicode">"Otáčanie VPRED"</String>
-              <String Name="Text" Encoding="Unicode">"Nulovací snímač"</String>
+              <String Name="Text" Encoding="Unicode">" Nulovací snímač"</String>
               <String Name="Text" Encoding="Unicode">"Aktuálna pozícia"</String>
               <String Name="Text" Encoding="Unicode">"Rýchlosť pohybu"</String>
             </Group>
@@ -1274,8 +1274,8 @@ serva"</String>
     <Folder Name="POBJ">
       <Object Name="RR_Bruska" ClsId="0x400" Version="1" TargetIndex="7" Type="PAGE" RefString="Source[local].Page[RR_Bruska]">
         <UInt32 Name="FormLanguage">0</UInt32>
-        <Reference Name="StartControl" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-        <UInt32 Name="LayerCount">4</UInt32>
+        <Reference Name="StartControl" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
+        <UInt32 Name="LayerCount">3</UInt32>
         <UInt32 Name="MoveFocus">1</UInt32>
         <Group Name="Styleable Properties">
           <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00000400].StyleClass[Default]</Reference>
@@ -1309,34 +1309,15 @@ serva"</String>
         <Reference Name="FormLayer0" Type="LAY">Source[local].Page[RR_Bruska].Layer[FrameLayer]</Reference>
         <Reference Name="FormLayer1" Type="LAY">Source[local].Page[RR_Bruska].Layer[Default]</Reference>
         <Reference Name="FormLayer2" Type="LAY">Source[local].Layer[Background]</Reference>
-        <Reference Name="FormLayer3" Type="LAY">Source[local].Layer[PopPrihlasenie]</Reference>
         <Group Name="MovementOrder">
-          <UInt32 Name="Count">3</UInt32>
+          <UInt32 Name="Count">1</UInt32>
           <Group Name="Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]">
             <Reference Name="Control" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
-            <Reference Name="CtrlNext" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-            <Reference Name="CtrlPrev" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlLeft" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlRight" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlUp" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlDown" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-          </Group>
-          <Group Name="Source[local].Layer[PopPrihlasenie].Control[String_1]">
-            <Reference Name="Control" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-            <Reference Name="CtrlNext" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
+            <Reference Name="CtrlNext" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
             <Reference Name="CtrlPrev" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
             <Reference Name="CtrlLeft" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
             <Reference Name="CtrlRight" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
             <Reference Name="CtrlUp" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
-            <Reference Name="CtrlDown" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-          </Group>
-          <Group Name="Source[local].Layer[PopPrihlasenie].Control[String_2]">
-            <Reference Name="Control" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlNext" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
-            <Reference Name="CtrlPrev" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-            <Reference Name="CtrlLeft" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
-            <Reference Name="CtrlRight" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
-            <Reference Name="CtrlUp" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
             <Reference Name="CtrlDown" Type="CTRL">Source[local].Page[RR_Bruska].Layer[FrameLayer].Control[Numeric_2]</Reference>
           </Group>
         </Group>

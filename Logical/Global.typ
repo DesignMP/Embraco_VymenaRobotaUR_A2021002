@@ -26,6 +26,7 @@ TYPE
 		STAV : SafetySTAV_typ;
 		RESET_ZonyRobot : BOOL;
 		RESET_ZonyCS : BOOL;
+		RESET_ZonyPracovisko : BOOL;
 		SpatnaVazba_ZonaRobot : BOOL;
 		SpatnaVazba_ZonaCS : BOOL;
 		SpatnaVazba_ZonaPracovisko : BOOL; (*FF1*)
@@ -37,8 +38,8 @@ TYPE
 		VyblokovanieSafety_CH2 : BOOL;
 		Pracovisko_CS_CH1 : BOOL;
 		Pracovisko_CS_CH2 : BOOL;
-		SpatnaVazbaPracovisko_CH1 : BOOL; (*FF2*)
-		SpatnaVazbaPracovisko_CH2 : BOOL; (*FF2*)
+		OploteniePracoviska_CH1 : BOOL; (*FF2*)
+		OploteniePracoviska_CH2 : BOOL; (*FF2*)
 	END_STRUCT;
 	SafetyOUT_typ : 	STRUCT 
 		Zona_CS : BOOL;
@@ -52,7 +53,10 @@ TYPE
 	SafetySTAV_typ : 	STRUCT 
 		SafetyPLC_Nabehlo : BOOL;
 		ZonaCS_AKTIVNA : BOOL;
+		ZonaRobot_Odblokovana : BOOL;
 		ZonaRobot_AKTIVNA : BOOL;
+		ZonaPracovisko_Odblokovana : BOOL;
+		ZonaPracovisko_AKTIVNA : BOOL;
 		CS_Pracovisko_Odblokovany : BOOL;
 		CS_Robot_Odblokovany : BOOL;
 		VyblokovanieSafety_AKTIVNE : BOOL;
@@ -74,10 +78,13 @@ TYPE
 		TL_StartAutomat_DISABLE : BOOL;
 		TL_UkoncenieCyklu_DISABLE : BOOL;
 		TL_RR_OvladanieServa_DISABLE : BOOL;
+		TL_RR_HomingServa_DISABLE : BOOL;
+		TL_OdparkovanieRobota_DISABLE : BOOL;
 		Slider : USINT;
 		FarbaTlacitkaAlarm_Index : BOOL;
 		ZobrazSymbolAlarmu : BOOL;
 		ZobrazHlasenie_ResetZariadenia : USINT;
+		PodsvietenieTlacitka_ResetCS : USINT;
 	END_STRUCT;
 END_TYPE
 
@@ -138,6 +145,7 @@ TYPE
 		RR_ZatvorKratkyUchopovac : BOOL;
 		RR_OtvorDlhyUchopovac : BOOL;
 		RR_ZatvorDlhyUchopovac : BOOL;
+		RR_OdparkujRobota : BOOL;
 		Robot_OtvorKratkyUchopovac : BOOL;
 		Robot_ZatvorKratkyUchopovac : BOOL;
 		Robot_OtvorDlhyUchopovac : BOOL;
@@ -152,14 +160,15 @@ TYPE
 		CisloZadanejPozicie_Bit1 : BOOL;
 		CisloZadanejPozicie_Bit2 : BOOL;
 		CisloZadanejPozicie_Bit3 : BOOL;
+		NepouzivatRobota : BOOL;
 	END_STRUCT;
 	RobotOUT_typ : 	STRUCT 
 		CisloAktualnejPozicie_Bit0 : BOOL;
 		CisloAktualnejPozicie_Bit1 : BOOL;
 		CisloAktualnejPozicie_Bit2 : BOOL;
 		CisloAktualnejPozicie_Bit3 : BOOL;
-		ZatvorDlhyUchopovac_YV1 : BOOL;
-		ZatvorKratkyUchopovac_YV2 : BOOL;
+		OtvorDlhyUchopovac_YV1 : BOOL;
+		OtvorKratkyUchopovac_YV2 : BOOL;
 		VystupnyDopravnikNalozeny : BOOL;
 	END_STRUCT;
 	RobotPAR_typ : 	STRUCT 
@@ -183,9 +192,7 @@ TYPE
 		Stav_VystupyZresetovane : BOOL;
 		Stav_ZonaNavratuRobota_OK : BOOL;
 		Stav_ZonaNavratuRobota_NG : BOOL;
-		Gripper_ZatvorDlhyUchopovac : BOOL;
 		Gripper_OtvorDlhyUchopovac : BOOL;
-		Gripper_ZatvorKratkyUchopovac : BOOL;
 		Gripper_OtvorKratkyUchopovac : BOOL;
 		Profinet_PLC_INPUTS : ARRAY[0..63]OF USINT;
 	END_STRUCT;
@@ -213,6 +220,9 @@ TYPE
 		Gripper_DlhyUchopov_ZATVORENY : BOOL;
 		Gripper_KratkyUchopov_OTVORENY : BOOL;
 		Gripper_KratkyUchopov_ZATVORENY : BOOL;
+		Gripper_DlhyUchopov_PRAZDNY : BOOL;
+		Gripper_KratkyUchopov_PRAZDNY : BOOL;
+		Dopravnik_UkladaciaPozicia : USINT;
 		Profinet_PLC_OUTPUTS : ARRAY[0..63]OF USINT;
 	END_STRUCT;
 END_TYPE
@@ -242,6 +252,8 @@ TYPE
 		ReferencnySnimac_IS1 : BOOL;
 		UpinaciaHlava_OtacanieVPRED : BOOL;
 		UpinaciaHlava_OtacanieVZAD : BOOL;
+		OchrannyKrytBrusky_Otvoreny : BOOL;
+		UpinaciaHlava_Palec : BOOL;
 	END_STRUCT;
 	BruskaOUT_typ : 	STRUCT 
 		Stav_UpinaciaHlavaSaOtacaVPRED : BOOL;

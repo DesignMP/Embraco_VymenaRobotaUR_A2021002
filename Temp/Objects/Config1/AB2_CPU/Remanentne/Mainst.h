@@ -75,8 +75,8 @@ typedef struct SafetyIN_typ
 	plcbit VyblokovanieSafety_CH2;
 	plcbit Pracovisko_CS_CH1;
 	plcbit Pracovisko_CS_CH2;
-	plcbit SpatnaVazbaPracovisko_CH1;
-	plcbit SpatnaVazbaPracovisko_CH2;
+	plcbit OploteniePracoviska_CH1;
+	plcbit OploteniePracoviska_CH2;
 } SafetyIN_typ;
 #endif
 
@@ -102,7 +102,10 @@ typedef struct SafetyPAR_typ
 typedef struct SafetySTAV_typ
 {	plcbit SafetyPLC_Nabehlo;
 	plcbit ZonaCS_AKTIVNA;
+	plcbit ZonaRobot_Odblokovana;
 	plcbit ZonaRobot_AKTIVNA;
+	plcbit ZonaPracovisko_Odblokovana;
+	plcbit ZonaPracovisko_AKTIVNA;
 	plcbit CS_Pracovisko_Odblokovany;
 	plcbit CS_Robot_Odblokovany;
 	plcbit VyblokovanieSafety_AKTIVNE;
@@ -118,6 +121,7 @@ typedef struct Safety_typ
 	SafetySTAV_typ STAV;
 	plcbit RESET_ZonyRobot;
 	plcbit RESET_ZonyCS;
+	plcbit RESET_ZonyPracovisko;
 	plcbit SpatnaVazba_ZonaRobot;
 	plcbit SpatnaVazba_ZonaCS;
 	plcbit SpatnaVazba_ZonaPracovisko;

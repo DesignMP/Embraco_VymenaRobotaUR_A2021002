@@ -22,7 +22,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.typ"
     LogicalPath="Global.typ"
     Type="File"
-    LastWriteTime="132608975511183342"
+    LastWriteTime="132619158036884722"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.var"
@@ -586,12 +586,12 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Main\IEC.prg"
     LogicalPath="Program.Main"
     Type="Program"
-    LastWriteTime="132598584529330881" />
+    LastWriteTime="132615790765404492" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Main\Main.st"
     LogicalPath="Program.Main.Main.st"
     Type="File"
-    LastWriteTime="132602909235659371"
+    LastWriteTime="132617360489247670"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Main\Types.typ"
@@ -606,6 +606,12 @@
     LastWriteTime="132598584529330881"
     Private="true" />
   <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Main\OvladanieSafety.st"
+    LogicalPath="Program.Main.OvladanieSafety.st"
+    Type="File"
+    LastWriteTime="132615796219463902"
+    Private="false" />
+  <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\IEC.prg"
     LogicalPath="Program.Bruska"
     Type="Program"
@@ -614,7 +620,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\Main.st"
     LogicalPath="Program.Bruska.Main.st"
     Type="File"
-    LastWriteTime="132612340329496582"
+    LastWriteTime="132619157236274425"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\Types.typ"
@@ -626,13 +632,13 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\Variables.var"
     LogicalPath="Program.Bruska.Variables.var"
     Type="File"
-    LastWriteTime="132598584529320910"
+    LastWriteTime="132614943585501471"
     Private="true" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\OvlServa.st"
     LogicalPath="Program.Bruska.OvlServa.st"
     Type="File"
-    LastWriteTime="132598584529320910"
+    LastWriteTime="132617378394386220"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\IEC.prg"
@@ -643,7 +649,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Main.st"
     LogicalPath="Program.Robot.Main.st"
     Type="File"
-    LastWriteTime="132612341847770848"
+    LastWriteTime="132619178196107848"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Types.typ"
@@ -655,19 +661,19 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\Variables.var"
     LogicalPath="Program.Robot.Variables.var"
     Type="File"
-    LastWriteTime="132606293874037992"
+    LastWriteTime="132619149793412877"
     Private="true" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\ProfinetKomunikaciaRobot.st"
     LogicalPath="Program.Robot.ProfinetKomunikaciaRobot.st"
     Type="File"
-    LastWriteTime="132612341841138816"
+    LastWriteTime="132619148620821897"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\OvladanieGripra.st"
     LogicalPath="Program.Robot.OvladanieGripra.st"
     Type="File"
-    LastWriteTime="132606330225533853"
+    LastWriteTime="132619154658983751"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Alarmy\IEC.prg"
@@ -678,7 +684,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Alarmy\Main.st"
     LogicalPath="Program.Alarmy.Main.st"
     Type="File"
-    LastWriteTime="132606305660680112"
+    LastWriteTime="132616530240070307"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Alarmy\Types.typ"
@@ -706,7 +712,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\OvladanieVizu\Main.st"
     LogicalPath="HMI.OvladanieVizu.Main.st"
     Type="File"
-    LastWriteTime="132606325200563232"
+    LastWriteTime="132617360485110803"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\OvladanieVizu\Types.typ"
@@ -903,7 +909,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Poznamky.txt"
     LogicalPath="Poznamky.txt"
     Type="File"
-    LastWriteTime="132598584529300959"
+    LastWriteTime="132616750259219781"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Config.pkg"
@@ -914,24 +920,24 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.hw"
     LogicalPath="Config1.Hardware.hw"
     Type="File"
-    LastWriteTime="132600287245043630"
+    LastWriteTime="132616735314727414"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.hwl"
     LogicalPath="Config1.Hardware.hwl"
     Type="File"
-    LastWriteTime="132611578079899505"
+    LastWriteTime="132617348834060428"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\Cpu.pkg"
     LogicalPath="Config1.AB2_CPU"
     Type="Cpu"
-    LastWriteTime="132605292798940452" />
+    LastWriteTime="132615017120564914" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\Cpu.sw"
     LogicalPath="Config1.AB2_CPU.Cpu.sw"
     Type="File"
-    LastWriteTime="132600277309356706"
+    LastWriteTime="132615806848501497"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\Cpu.per"
@@ -943,7 +949,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\IoMap.iom"
     LogicalPath="Config1.AB2_CPU.IoMap.iom"
     Type="File"
-    LastWriteTime="132606310990779733"
+    LastWriteTime="132617350332097733"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\PvMap.vvm"
@@ -1063,7 +1069,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\mappMotion\Config_1.axis"
     LogicalPath="Config1.AB2_CPU.mappMotion.Config_1.axis"
     Type="File"
-    LastWriteTime="132612340172709958"
+    LastWriteTime="132617374327447540"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\mappServices\Package.pkg"
@@ -1085,12 +1091,18 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\mappCockpit\Package.pkg"
     LogicalPath="Config1.AB2_CPU.mappCockpit"
     Type="Package"
-    LastWriteTime="132598584529570235" />
+    LastWriteTime="132614941963097431" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\mappCockpit\Settings.mcocfg"
     LogicalPath="Config1.AB2_CPU.mappCockpit.Settings.mcocfg"
     Type="File"
     LastWriteTime="132598584529570235"
+    Private="false" />
+  <Object
+    Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\mappCockpit\TraceConfi.tracecfg"
+    LogicalPath="Config1.AB2_CPU.mappCockpit.TraceConfi.tracecfg"
+    Type="File"
+    LastWriteTime="132614942278962134"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\DTM\Package.pkg"
@@ -1106,7 +1118,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster.dtm"
     LogicalPath="Config1.AB2_CPU.DTM.AB1_ProfinetMaster.AB1_ProfinetMaster.dtm"
     Type="File"
-    LastWriteTime="132598584529540339"
+    LastWriteTime="132615009824085276"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster_IF1\Package.pkg"
@@ -1117,7 +1129,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster_IF1\AB1_ProfinetMaster_IF1.dtmdre"
     LogicalPath="Config1.AB2_CPU.DTM.AB1_ProfinetMaster.AB1_ProfinetMaster_IF1.AB1_ProfinetMaster_IF1.dtmdre"
     Type="File"
-    LastWriteTime="132598584529530359"
+    LastWriteTime="132615009813942509"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster_IF1\AB1_ProfinetMaster_IF1.dtmdra"
@@ -1135,7 +1147,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\AB1_ProfinetMaster_IF1\AB1_ProfinetMaster_IF1.dtmdri"
     LogicalPath="Config1.AB2_CPU.DTM.AB1_ProfinetMaster.AB1_ProfinetMaster_IF1.AB1_ProfinetMaster_IF1.dtmdri"
     Type="File"
-    LastWriteTime="132598584529550299"
+    LastWriteTime="132615007924103707"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\DTM\AB1_ProfinetMaster\Robot_ABB\Package.pkg"
@@ -1192,12 +1204,12 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\SafeLOGIC-1.swt"
     LogicalPath="Config1.AB2_CPU.SafeLOGIC-1.swt"
     Type="File"
-    LastWriteTime="132605391179810000"
+    LastWriteTime="132616555452810000"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.jpg"
     LogicalPath="Config1.Hardware.jpg"
     Type="File"
-    LastWriteTime="132611578079979016"
+    LastWriteTime="132617348834170241"
     Private="false" />
 </Objects>

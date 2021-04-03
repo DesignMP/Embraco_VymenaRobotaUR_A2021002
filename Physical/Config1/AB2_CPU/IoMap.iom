@@ -140,8 +140,8 @@ VAR_CONFIG
 	Cyclic#1.Safety.IN.VyblokovanieSafety_CH2 AT %IX."AB4_SafetyMaster".SafeDigitalInput04;
 	Cyclic#1.Safety.IN.Pracovisko_CS_CH1 AT %IX."AB4_SafetyMaster".SafeDigitalInput05;
 	Cyclic#1.Safety.IN.Pracovisko_CS_CH2 AT %IX."AB4_SafetyMaster".SafeDigitalInput06;
-	Cyclic#1.Safety.IN.SpatnaVazbaPracovisko_CH1 AT %IX."AB4_SafetyMaster".SafeDigitalInput07;
-	Cyclic#1.Safety.IN.SpatnaVazbaPracovisko_CH2 AT %IX."AB4_SafetyMaster".SafeDigitalInput08;
+	Cyclic#1.Safety.IN.OploteniePracoviska_CH1 AT %IX."AB4_SafetyMaster".SafeDigitalInput07;
+	Cyclic#1.Safety.IN.OploteniePracoviska_CH2 AT %IX."AB4_SafetyMaster".SafeDigitalInput08;
 	Cyclic#1.Safety.OUT.Zona_CS AT %IX."AB4_SafetyMaster".PhysicalStateChannel01;
 	Cyclic#1.Safety.OUT.Zona_Robot AT %IX."AB4_SafetyMaster".PhysicalStateChannel02;
 	Cyclic#1.Safety.OUT.Zona_Pracovisko_CH1 AT %IX."AB4_SafetyMaster".PhysicalStateChannel03;
@@ -175,8 +175,6 @@ VAR_CONFIG
 	Cyclic#1.Robot.OUT.CisloAktualnejPozicie_Bit1 AT %QX."AB7_16DO".DigitalOutput02;
 	Cyclic#1.Robot.OUT.CisloAktualnejPozicie_Bit2 AT %QX."AB7_16DO".DigitalOutput03;
 	Cyclic#1.Robot.OUT.CisloAktualnejPozicie_Bit3 AT %QX."AB7_16DO".DigitalOutput04;
-	Cyclic#1.Robot.OUT.ZatvorDlhyUchopovac_YV1 AT %QX."AB7_16DO".DigitalOutput05;
-	Cyclic#1.Robot.OUT.ZatvorKratkyUchopovac_YV2 AT %QX."AB7_16DO".DigitalOutput07;
 	Cyclic#1.Robot.OUT.VystupnyDopravnikNalozeny AT %QX."AB7_16DO".DigitalOutput08;
 	Cyclic#1.Zariadenie.OUT.Majak_ZeleneSvetlo AT %QX."AB7_16DO".DigitalOutput09;
 	Cyclic#1.Zariadenie.OUT.Majak_ZlteSvetlo AT %QX."AB7_16DO".DigitalOutput10;
@@ -188,4 +186,14 @@ VAR_CONFIG
 	Cyclic#1.Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVZAD AT %QX."AB7_16DO".DigitalOutput14;
 	Cyclic#1.Bruska.OUT.Stav_PoruchaMotoraUpinacejHlavy AT %QX."AB7_16DO".DigitalOutput15;
 	Cyclic#1.Safety.STAV.VyblokovanieSafety_AKTIVNE AT %IX."AB4_SafetyMaster".BOOL006;
+	Cyclic#1.Safety.RESET_ZonyPracovisko AT %QX."AB4_SafetyMaster".BOOL105;
+	Cyclic#1.Safety.SpatnaVazba_ZonaPracovisko AT %QX."AB4_SafetyMaster".BOOL106;
+	Cyclic#1.Safety.STAV.ZonaRobot_Odblokovana AT %IX."AB4_SafetyMaster".BOOL007;
+	Cyclic#1.Safety.STAV.ZonaPracovisko_Odblokovana AT %IX."AB4_SafetyMaster".BOOL008;
+	Cyclic#1.Safety.STAV.ZonaPracovisko_AKTIVNA AT %IX."AB4_SafetyMaster".BOOL009;
+	Cyclic#1.Bruska.IN.OchrannyKrytBrusky_Otvoreny AT %IX."AB6_16DI".DigitalInput11;
+	Cyclic#1.Bruska.IN.UpinaciaHlava_Palec AT %IX."AB6_16DI".DigitalInput12;
+	Cyclic#1.Robot.OUT.OtvorKratkyUchopovac_YV2 AT %QX."AB7_16DO".DigitalOutput05;
+	Cyclic#1.Robot.OUT.OtvorDlhyUchopovac_YV1 AT %QX."AB7_16DO".DigitalOutput07;
+	Cyclic#1.Robot.IN.NepouzivatRobota AT %IX."AB6_16DI".DigitalInput13;
 END_VAR

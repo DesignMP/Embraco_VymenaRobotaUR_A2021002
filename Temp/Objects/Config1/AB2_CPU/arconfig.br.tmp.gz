@@ -24,7 +24,8 @@
   <Module ID="IF2.ST1" Hardware="6PPT50.0702-16A">
     <Parameter ID="HardwareModuleName" Value="OP1_7inch" />
     <Parameter ID="OS" Value="PPT" />
-    <Parameter ID="Startmode" Value="0" />
+    <Parameter ID="Startmode" Value="1" />
+    <Parameter ID="ShowBootlogoVNC" Value="0" />
     <Parameter ID="Mode" Value="Manual" />
     <Parameter ID="InternetAddress" Value="192.168.0.2" />
     <Parameter ID="Subnetmask" Value="255.255.255.0" />
@@ -43,6 +44,7 @@
     <Parameter ID="GifDelayMs" Value="0" Type="UDINT" />
     <Parameter ID="ActivateBuzzer" Value="0" />
     <Parameter ID="ActivateOpenService" Value="1" />
+    <Parameter ID="SelectedFavoriteVNC" Value="192.168.0.1" />
     <Parameter ID="PasswordVNCEncrypt" Value="0" />
     <Parameter ID="ActivateRFBext" Value="0" />
     <Parameter ID="LocalScaling" Value="0" />
@@ -60,7 +62,7 @@
     <Parameter ID="PPTImage" Value="none" />
     <Parameter ID="VncAuthentication" Value="0" />
     <Parameter ID="VncPortNumber" Value="5900" Type="UDINT" />
-    <Parameter ID="VncMaxConnections" Value="1" Type="UINT" />
+    <Parameter ID="VncMaxConnections" Value="3" Type="UINT" />
     <Parameter ID="VncRefreshRate" Value="100" Type="UDINT" />
     <Parameter ID="VncConnectionTimeout" Value="4" Type="UDINT" />
     <Parameter ID="ANSLConnectionTypeForTerminals" Value="non-secure" />
@@ -1330,4 +1332,4 @@
   <Module ID="SS1.IO" Hardware="X20IF10E1-1">
     <Parameter ID="FunctionModel" Value="Standard" />
   </Module>
-</IOCFG> 
+</IOCFG>   

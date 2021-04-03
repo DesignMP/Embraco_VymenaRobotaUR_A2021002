@@ -1,3 +1,5 @@
 VAR
 	SC_OvlGripra : SequenceControlTyp := (0);
+	CasZatvorenia_DlhyUchopovac : TON := (0);
+	CasZatvorenia_KratkyUchopovac : TON := (0);
 END_VAR

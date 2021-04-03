@@ -1,4 +1,4 @@
-LOGStart created on Thursday 2021/03/18  UTC 11:04:27:785
+LOGStart created on Wednesday 2021/03/31  UTC 09:10:56:466
 
 Reading "OSDD Data"...
 Reading Content "Start"
@@ -90,7 +90,7 @@ Content "name1" successfully read from "name2"
 
 
 
-LOGAppend on Thursday 2021/03/18  UTC 11:04:27:786
+LOGAppend on Wednesday 2021/03/31  UTC 09:10:56:468
 
 Reading "D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\SafeLOGIC-1\BusNavigator.iom"...
 Reading Content "IOOffsets"
@@ -118,9 +118,14 @@ Reading properties for channel "BOOL003". Beginning at line 22
 Reading properties for channel "BOOL004". Beginning at line 23
 Reading properties for channel "BOOL005". Beginning at line 24
 Reading properties for channel "BOOL006". Beginning at line 25
-Reading properties for channel "BOOL101". Beginning at line 26
-Reading properties for channel "BOOL102". Beginning at line 27
-Reading properties for channel "BOOL103". Beginning at line 28
-Reading properties for channel "BOOL104". Beginning at line 29
-Module "SL1.SM1.SL1.SM1" has 26 items.
+Reading properties for channel "BOOL007". Beginning at line 26
+Reading properties for channel "BOOL008". Beginning at line 27
+Reading properties for channel "BOOL009". Beginning at line 28
+Reading properties for channel "BOOL101". Beginning at line 29
+Reading properties for channel "BOOL102". Beginning at line 30
+Reading properties for channel "BOOL103". Beginning at line 31
+Reading properties for channel "BOOL104". Beginning at line 32
+Reading properties for channel "BOOL105". Beginning at line 33
+Reading properties for channel "BOOL106". Beginning at line 34
+Module "SL1.SM1.SL1.SM1" has 31 items.
 Content "IOOffsets" successfully read from "D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\SafeLOGIC-1\BusNavigator.iom"

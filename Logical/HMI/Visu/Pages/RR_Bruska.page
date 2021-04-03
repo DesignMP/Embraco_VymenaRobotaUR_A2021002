@@ -35,7 +35,7 @@
           <Text ID="234477" Value="Vypni frézu"/>
           <Text ID="234484" Value="Otáčanie VZAD"/>
           <Text ID="234485" Value="Otáčanie VPRED"/>
-          <Text ID="234486" Value="Nulovací snímač"/>
+          <Text ID="234486" Value=" Nulovací snímač"/>
           <Text ID="234939" Value="Aktuálna pozícia"/>
           <Text ID="234940" Value="Rýchlosť pohybu"/>
         </TextLayer>
@@ -109,7 +109,7 @@
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="18"/>
           <Property Name="Locking" Value="Datapoint &gt;= Level"/>
-          <Property Name="LockingDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.ZamkniTlacitko_SpustenieFrezy]"/>
+          <Property Name="LockingDatapoint" Value="Source[global].Variable[DataSource.Vizu.TL_RR_HomingServa_DISABLE]"/>
           <Property Name="LockingLevel" Value="1"/>
           <Property Name="Multiline" Value="Automatic"/>
           <Property Name="PressedBackColor" Value="0"/>
@@ -242,7 +242,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="FillStyle" Value="Transparent"/>
           <Property Name="Height" Value="32"/>
-          <Property Name="IndexDatapoint" Value="Source[global].Variable[DataSource.Robot.IN.VretenoFrezy_PritomnostNastroja]"/>
+          <Property Name="IndexDatapoint" Value="Source[global].Variable[DataSource.Bruska.IN.ReferencnySnimac_IS1]"/>
           <Property Name="Left" Value="335"/>
           <Property Name="SimulationValue" Value="0"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
@@ -362,14 +362,15 @@
           <Property Name="Description" Value=""/>
           <Property Name="VirtualKey_LED" Value="False"/>
           <KeyActions>
-            <KeyAction ClassId="0x00000161">
+            <KeyAction ClassId="0x0000016B">
               <Property Name="CompletionDatapoint" Value="None"/>
               <Property Name="CompletionValue" Value="0"/>
               <Property Name="Description" Value=""/>
               <Property Name="Locking" Value="Never"/>
               <Property Name="Name" Value="Action_0"/>
+              <Property Name="ResetValue" Value="0"/>
               <Property Name="SetValue" Value="1"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_ZASUN]"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Bruska.Servo_JoggVZAD]"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>
@@ -377,14 +378,15 @@
           <Property Name="Description" Value=""/>
           <Property Name="VirtualKey_LED" Value="False"/>
           <KeyActions>
-            <KeyAction ClassId="0x00000161">
+            <KeyAction ClassId="0x0000016B">
               <Property Name="CompletionDatapoint" Value="None"/>
               <Property Name="CompletionValue" Value="0"/>
               <Property Name="Description" Value=""/>
               <Property Name="Locking" Value="Never"/>
               <Property Name="Name" Value="Action_0"/>
+              <Property Name="ResetValue" Value="0"/>
               <Property Name="SetValue" Value="1"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Program.Robot.ZdvihSnimacov_VYSUN]"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Bruska.Servo_JoggVPRED]"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>
@@ -441,44 +443,17 @@
       <Property Name="VisibilityMode" Value="Normal"/>
       <Property Name="Z-Order" Value="2"/>
     </LayerRef>
-    <LayerRef Source="Source[local].Layer[PopPrihlasenie]">
-      <Property Name="Description" Value=""/>
-      <Property Name="EditingMode" Value="Frozen"/>
-      <Property Name="Left" Value="0"/>
-      <Property Name="Name" Value="PopPrihlasenie"/>
-      <Property Name="OutlineColor" Value="0"/>
-      <Property Name="OutlineDisplayControl" Value="False"/>
-      <Property Name="OutlineDisplayName" Value="True"/>
-      <Property Name="OutlineHatched" Value="False"/>
-      <Property Name="Top" Value="0"/>
-      <Property Name="VisibilityMode" Value="Hidden"/>
-      <Property Name="Z-Order" Value="3"/>
-    </LayerRef>
   </Layers>
   <MovementOrder>
     <MovementEntry Control="Source[embedded].Layer[FrameLayer].Control[Numeric_2]">
-      <Property Name="Down" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-      <Property Name="Left" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-      <Property Name="Right" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-      <Property Name="Up" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-    </MovementEntry>
-    <MovementEntry Control="Source[local].Layer[PopPrihlasenie].Control[String_1]">
-      <Property Name="Down" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
+      <Property Name="Down" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_2]"/>
       <Property Name="Left" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_2]"/>
       <Property Name="Right" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_2]"/>
       <Property Name="Up" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_2]"/>
     </MovementEntry>
-    <MovementEntry Control="Source[local].Layer[PopPrihlasenie].Control[String_2]">
-      <Property Name="Down" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_2]"/>
-      <Property Name="Left" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_2]"/>
-      <Property Name="Right" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_2]"/>
-      <Property Name="Up" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-    </MovementEntry>
   </MovementOrder>
   <TabSequence>
-    <TabSeqItem Index="0" Value="Source[local].Layer[PopPrihlasenie].Control[String_1]"/>
-    <TabSeqItem Index="1" Value="Source[local].Layer[PopPrihlasenie].Control[String_2]"/>
-    <TabSeqItem Index="2" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_1]"/>
-    <TabSeqItem Index="3" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_2]"/>
+    <TabSeqItem Index="0" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_1]"/>
+    <TabSeqItem Index="1" Value="Source[embedded].Layer[FrameLayer].Control[Numeric_2]"/>
   </TabSequence>
 </Page>

@@ -71,7 +71,7 @@
       <Property Name="BitmapIndexDatapoint" Value="None"/>
       <Property Name="BitmapSource" Value="SingleBitmap"/>
       <Property Name="Border" Value="Source[local].Border[OverdriveBorder]"/>
-      <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.Vizualizacia.LED_TlacitkaResetCS]"/>
+      <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.Vizu.PodsvietenieTlacitka_ResetCS]"/>
       <Property Name="ColorMap" Value="Source[local].ColorMap[SchemaBezpecnosti]"/>
       <Property Name="ColorMapIndexOffset" Value="0"/>
       <Property Name="ControlID" Value="0"/>
@@ -84,7 +84,7 @@
       <Property Name="Left" Value="8"/>
       <Property Name="Multiline" Value="Automatic"/>
       <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-      <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
+      <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
       <Property Name="PressedForeColor" Value="0"/>
       <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
       <Property Name="SpacingHorizontal" Value="16"/>
@@ -445,7 +445,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="Locking" Value="Never"/>
           <Property Name="Name" Value="Action_0"/>
-          <Property Name="Page" Value="None"/>
+          <Property Name="Page" Value="Source[local].Page[ParametrePracoviska]"/>
           <Property Name="Target" Value="Page"/>
         </KeyAction>
       </KeyActions>

@@ -15,10 +15,10 @@ PROGRAM _CYCLIC
     
     
     //********************************Robot èíslo zadanej pozície************************************//
-    Robot.PAR.CisloZadanejPozicie.0:= Robot.IN.CisloZadanejPozicie_Bit0;
-    Robot.PAR.CisloZadanejPozicie.1:= Robot.IN.CisloZadanejPozicie_Bit1;
-    Robot.PAR.CisloZadanejPozicie.2:= Robot.IN.CisloZadanejPozicie_Bit2;
-    Robot.PAR.CisloZadanejPozicie.3:= Robot.IN.CisloZadanejPozicie_Bit3;
+    //    Robot.PAR.CisloZadanejPozicie.0:= Robot.IN.CisloZadanejPozicie_Bit0;
+    //    Robot.PAR.CisloZadanejPozicie.1:= Robot.IN.CisloZadanejPozicie_Bit1;
+    //    Robot.PAR.CisloZadanejPozicie.2:= Robot.IN.CisloZadanejPozicie_Bit2;
+    //    Robot.PAR.CisloZadanejPozicie.3:= Robot.IN.CisloZadanejPozicie_Bit3;
     
     
     
@@ -61,6 +61,8 @@ PROGRAM _CYCLIC
     OvladanieGripra;
     
     
+        
+    
     //Reset sekcie //
     IF NOT Safety.STAV.ZonaCS_AKTIVNA THEN
         SC_Robot.Step:= 0;
@@ -99,14 +101,15 @@ PROGRAM _CYCLIC
             Robot.KOM_OUT.VypniMotory:= FALSE;
             Robot.KOM_OUT.ZapniMotory:= FALSE;
             Robot.KOM_OUT.UkoncenieCykluRobota:= FALSE;
+            Robot.KOM_OUT.Dopravnik_UkladaciaPozicia:= 1;
+            Robot.RR_OdparkujRobota:= FALSE;
             Robot.PAR.CisloAktualnejPozicie:= 0;
-            
-            
             IF Robot.KOM_IN.Stav_RezimAUTOMAT AND Robot.KOM_IN.Stav_ProgramRUN THEN
                 Robot.KOM_OUT.StopProgramu:= TRUE;
             ELSE	
                 Robot.KOM_OUT.StopProgramu:= FALSE;
             END_IF	
+            
             IF Safety.STAV.ZonaCS_AKTIVNA AND Safety.STAV.ZonaRobot_AKTIVNA AND NOT PoruchaRobota AND NOT Robot.KOM_IN.Stav_ProgramRUN THEN
                 Robot.KOM_OUT.StopProgramu:= FALSE;
                 SC_Robot.ResetStep:= TRUE;
@@ -178,14 +181,18 @@ PROGRAM _CYCLIC
                 SC_Robot.Switch1:= TRUE;
             END_IF
 			
-            IF Robot.KOM_IN.Stav_ProgramRUN AND Robot.KOM_IN.Stav_VystupyZresetovane AND Robot.KOM_IN.Stav_RobotOdparkovany AND NOT Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
+            IF Robot.KOM_IN.Stav_ProgramRUN AND Robot.KOM_IN.Stav_VystupyZresetovane AND Robot.KOM_IN.Stav_RobotOdparkovany AND NOT Robot.KOM_IN.Stav_RobotCinnostUkoncena AND Robot.KOM_IN.Stav_ZonaNavratuRobota_OK THEN
                 Robot.KOM_OUT.StartProgramuMain:= FALSE;
                 Robot.STAV.PoINIT:= TRUE;
+                Robot.PAR.CisloAktualnejPozicie:= 1; //Robot je pripravený
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 100;
+            ELSIF Robot.KOM_IN.Stav_VystupyZresetovane AND Robot.KOM_IN.Stav_ZonaNavratuRobota_NG THEN
+                SC_Robot.ResetStep:= TRUE;
+                SC_Robot.Step:= 0;
             END_IF	
 			
-	           
+                    
 		
             //********************************************************Automatický režim****************************************************************************//
         
@@ -194,15 +201,24 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF NOT SC_Robot.Switch1 THEN
+            IF Robot.KoniecCyklu AND NOT Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie THEN
+                Robot.KOM_OUT.OdparkujRobota:= TRUE;
+            ELSIF Robot.PAR.CisloZadanejPozicie = 2 AND NOT Robot.KoniecCyklu THEN    
                 Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie:= TRUE;
-                SC_Robot.Switch1:= TRUE;
             END_IF    
             
+            
             IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
-                Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie:= FALSE;
-                SC_Robot.ResetStep:= TRUE;
-                SC_Robot.Step:= 103;
+                IF Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie THEN 
+                    Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie:= FALSE;
+                    Robot.PAR.CisloAktualnejPozicie:= 2;
+                    SC_Robot.ResetStep:= TRUE;
+                    SC_Robot.Step:= 103;
+                ELSIF Robot.KOM_OUT.OdparkujRobota THEN
+                    Robot.KOM_OUT.OdparkujRobota:= FALSE;
+                    SC_Robot.ResetStep:= TRUE;
+                    SC_Robot.Step:= 103;
+                END_IF    
             END_IF
         
         103:
@@ -211,8 +227,13 @@ PROGRAM _CYCLIC
             SC_Robot.AlarmTime.PT:= T#5s;
                 
             IF NOT Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
-                SC_Robot.ResetStep:= TRUE;
-                SC_Robot.Step:= 105;  
+                IF Robot.KOM_IN.Stav_RobotOdparkovany THEN
+                    SC_Robot.ResetStep:= TRUE;
+                    SC_Robot.Step:= 0;
+                ELSE    
+                    SC_Robot.ResetStep:= TRUE;
+                    SC_Robot.Step:= 105;  
+                END_IF
             END_IF  
     
         105:  
@@ -220,15 +241,23 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND Zariadenie.IN.Paletka_PritomnostKusu_OS1 THEN
+            IF Robot.KoniecCyklu AND NOT Robot.KOM_OUT.Paletka_OdoberCap THEN
+                Robot.KOM_OUT.OdparkujRobota:= TRUE;
+            ELSIF Robot.PAR.CisloZadanejPozicie = 3 AND Zariadenie.IN.Paletka_PritomnostKusu_OS1 AND NOT Robot.KoniecCyklu THEN
                 Robot.KOM_OUT.Paletka_OdoberCap:= TRUE;
             END_IF
         
             IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
-                Robot.KOM_OUT.Paletka_OdoberCap:= FALSE;
-                Robot.PAR.CisloAktualnejPozicie:= 0;
-                SC_Robot.ResetStep:= TRUE;
-                SC_Robot.Step:= 108;
+                IF Robot.KOM_OUT.Paletka_OdoberCap THEN
+                    Robot.KOM_OUT.Paletka_OdoberCap:= FALSE;
+                    Robot.PAR.CisloAktualnejPozicie:= 3;
+                    SC_Robot.ResetStep:= TRUE;
+                    SC_Robot.Step:= 108;
+                ELSIF Robot.KOM_OUT.OdparkujRobota THEN
+                    Robot.KOM_OUT.OdparkujRobota:= FALSE;
+                    SC_Robot.ResetStep:= TRUE;
+                    SC_Robot.Step:= 108;
+                END_IF      
             END_IF
         
         
@@ -238,8 +267,13 @@ PROGRAM _CYCLIC
             SC_Robot.AlarmTime.PT:= T#5s;
                 
             IF NOT Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
-                SC_Robot.ResetStep:= TRUE;
-                SC_Robot.Step:= 110;  
+                IF Robot.KOM_IN.Stav_RobotOdparkovany THEN
+                    SC_Robot.ResetStep:= TRUE;
+                    SC_Robot.Step:= 0;
+                ELSE    
+                    SC_Robot.ResetStep:= TRUE;
+                    SC_Robot.Step:= 110;  
+                END_IF  
             END_IF  
         
         110:    
@@ -275,13 +309,13 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND NOT Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 4 AND NOT Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
                 Robot.KOM_OUT.Otacac_PolozCap:= TRUE;
             END_IF
         
             IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
                 Robot.KOM_OUT.Otacac_PolozCap:= FALSE;
-                Robot.PAR.CisloAktualnejPozicie:= 0;
+                Robot.PAR.CisloAktualnejPozicie:= 4;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 118;
             END_IF
@@ -303,13 +337,13 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 5 AND Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
                 Robot.KOM_OUT.Otacac_OdoberCap:= TRUE;
             END_IF
         
             IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
                 Robot.KOM_OUT.Otacac_OdoberCap:= FALSE;
-                Robot.PAR.CisloAktualnejPozicie:= 0;
+                Robot.PAR.CisloAktualnejPozicie:= 5;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 123;
             END_IF
@@ -356,13 +390,13 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 6 AND Bruska.IN.OchrannyKrytBrusky_Otvoreny THEN
                 Robot.KOM_OUT.Bruska_OdoberCap:= TRUE;
             END_IF
         
             IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
                 Robot.KOM_OUT.Bruska_OdoberCap:= FALSE;
-                Robot.PAR.CisloAktualnejPozicie:= 0;
+                Robot.PAR.CisloAktualnejPozicie:= 6;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 133;
             END_IF
@@ -382,13 +416,13 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 AND Zariadenie.IN.Otacac_PritomnostKusu_IS2 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 7 AND Bruska.IN.OchrannyKrytBrusky_Otvoreny THEN
                 Robot.KOM_OUT.Bruska_VlozCap:= TRUE;
             END_IF
         
             IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
                 Robot.KOM_OUT.Bruska_VlozCap:= FALSE;
-                Robot.PAR.CisloAktualnejPozicie:= 0;
+                Robot.PAR.CisloAktualnejPozicie:= 7;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 138;
             END_IF
@@ -408,13 +442,13 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF NOT SC_Robot.Switch1 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 8 THEN
                 Robot.KOM_OUT.Dopravnik_PresunDoCakacejPozicie:= TRUE;
-                SC_Robot.Switch1:= TRUE;
             END_IF    
             
             IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
                 Robot.KOM_OUT.Dopravnik_PresunDoCakacejPozicie:= FALSE;
+                Robot.PAR.CisloAktualnejPozicie:= 8;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 143;
             END_IF
@@ -435,13 +469,13 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 0 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 9 THEN
                 Robot.KOM_OUT.Dopravnik_PolozCap:= TRUE;
             END_IF
         
             IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
                 Robot.KOM_OUT.Dopravnik_PolozCap:= FALSE;
-                Robot.PAR.CisloAktualnejPozicie:= 0;
+                Robot.PAR.CisloAktualnejPozicie:= 9;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 148;
             END_IF
@@ -474,10 +508,10 @@ PROGRAM _CYCLIC
     END_CASE
     
     
-END_PROGRAM
+        END_PROGRAM
 
 PROGRAM _EXIT
-	(* Insert code here *)
+        (* Insert code here *)
 	 
-END_PROGRAM
+        END_PROGRAM
 

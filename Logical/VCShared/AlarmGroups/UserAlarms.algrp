@@ -1380,8 +1380,8 @@
       <Text ID="35" Value="10 - Porucha zatvorenia dlheho uchopovaca na gripri robota !!!"/>
       <Text ID="36" Value="11 - Porucha otvorenie kratkeho uchopovaca na gripri robota !!!"/>
       <Text ID="37" Value="12 - Porucha zatvorenie kratkeho uchopovaca na gripri robota !!!"/>
-      <Text ID="38" Value=""/>
-      <Text ID="39" Value=""/>
+      <Text ID="38" Value="13 - Bolo stlacene tlacitko CS robota !!!"/>
+      <Text ID="39" Value="14 - Bolo stlacene tlacitko CS pracoviska !!!"/>
       <Text ID="40" Value=""/>
       <Text ID="41" Value=""/>
       <Text ID="42" Value=""/>

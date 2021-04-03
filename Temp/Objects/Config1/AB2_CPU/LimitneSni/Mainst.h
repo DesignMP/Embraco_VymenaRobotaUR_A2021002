@@ -72,6 +72,8 @@ typedef struct BruskaIN_typ
 {	plcbit ReferencnySnimac_IS1;
 	plcbit UpinaciaHlava_OtacanieVPRED;
 	plcbit UpinaciaHlava_OtacanieVZAD;
+	plcbit OchrannyKrytBrusky_Otvoreny;
+	plcbit UpinaciaHlava_Palec;
 } BruskaIN_typ;
 #endif
 

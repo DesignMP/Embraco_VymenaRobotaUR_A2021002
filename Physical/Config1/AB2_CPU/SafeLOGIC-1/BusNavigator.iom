@@ -8,8 +8,8 @@
 			<Channel Name="SafeDigitalInput04" Mapping="SIX16.3" Variable="SI_VyblokovanieSafety_CH2" Address="Cyclic#1.Safety.IN.VyblokovanieSafety_CH2" SODIndex="0x9999" SODSubIndex="0x1" />
 			<Channel Name="SafeDigitalInput05" Mapping="SIX16.4" Variable="SI_CS_Pracovisko_CH1" Address="Cyclic#1.Safety.IN.Pracovisko_CS_CH1" SODIndex="0x9999" SODSubIndex="0x1" />
 			<Channel Name="SafeDigitalInput06" Mapping="SIX16.5" Variable="SI_CS_Pracovisko_CH2" Address="Cyclic#1.Safety.IN.Pracovisko_CS_CH2" SODIndex="0x9999" SODSubIndex="0x1" />
-			<Channel Name="SafeDigitalInput07" Mapping="SIX16.6" Variable="SI_Pracovisko_SpatnaVazba_CH1" Address="Cyclic#1.Safety.IN.SpatnaVazbaPracovisko_CH1" SODIndex="0x9999" SODSubIndex="0x1" />
-			<Channel Name="SafeDigitalInput08" Mapping="SIX16.7" Variable="SI_Pracovisko_SpatnaVazba_CH2" Address="Cyclic#1.Safety.IN.SpatnaVazbaPracovisko_CH2" SODIndex="0x9999" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput07" Mapping="SIX16.6" Variable="SI_OploteniePracoviska_CH1" Address="Cyclic#1.Safety.IN.OploteniePracoviska_CH1" SODIndex="0x9999" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput08" Mapping="SIX16.7" Variable="SI_OploteniePracoviska_CH2" Address="Cyclic#1.Safety.IN.OploteniePracoviska_CH2" SODIndex="0x9999" SODSubIndex="0x1" />
 			<Channel Name="SafeDigitalOutput01" Mapping="SQX12.0" Variable="SO_ZonaCS" SODIndex="0x9999" SODSubIndex="0x4" />
 			<Channel Name="SafeDigitalOutput02" Mapping="SQX12.1" Variable="SO_ZonaRobot" SODIndex="0x9999" SODSubIndex="0x4" />
 			<Channel Name="SafeDigitalOutput03" Mapping="SQX12.2" Variable="SO_ZonaPracovisko_CH1" SODIndex="0x9999" SODSubIndex="0x4" />
@@ -24,9 +24,14 @@
 			<Channel Name="BOOL004" Mapping="NSQX0.3" Variable="CS_Pracoviska_AKTIVNE" Address="Cyclic#1.Safety.STAV.CS_Pracovisko_Odblokovany" SODIndex="0x2580" SODSubIndex="0x1" />
 			<Channel Name="BOOL005" Mapping="NSQX0.4" Variable="CS_Robota_AKTIVNE" Address="Cyclic#1.Safety.STAV.CS_Robot_Odblokovany" SODIndex="0x2580" SODSubIndex="0x1" />
 			<Channel Name="BOOL006" Mapping="NSQX0.5" Variable="VyblokovanieSafety_AKTIVNE" Address="Cyclic#1.Safety.STAV.VyblokovanieSafety_AKTIVNE" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL007" Mapping="NSQX0.6" Variable="ZonaRobot_Odblokovana" Address="Cyclic#1.Safety.STAV.ZonaRobot_Odblokovana" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL008" Mapping="NSQX0.7" Variable="ZonaPracovisko_Odblokovana" Address="Cyclic#1.Safety.STAV.ZonaPracovisko_Odblokovana" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL009" Mapping="NSQX1.0" Variable="ZonaPracovisko_AKTIVNA" Address="Cyclic#1.Safety.STAV.ZonaPracovisko_AKTIVNA" SODIndex="0x2580" SODSubIndex="0x2" />
 			<Channel Name="BOOL101" Mapping="NSIX0.0" Variable="ResetZony_CS" Address="Cyclic#1.Safety.RESET_ZonyCS" SODIndex="0x2500" SODSubIndex="0x2" />
 			<Channel Name="BOOL102" Mapping="NSIX0.1" Variable="ResetZony_Robot" Address="Cyclic#1.Safety.RESET_ZonyRobot" SODIndex="0x2500" SODSubIndex="0x2" />
 			<Channel Name="BOOL103" Mapping="NSIX0.2" Variable="SpatnaVezba_ZonaCS" Address="Cyclic#1.Safety.SpatnaVazba_ZonaCS" SODIndex="0x2500" SODSubIndex="0x2" />
 			<Channel Name="BOOL104" Mapping="NSIX0.3" Variable="SpatnaVezba_ZonaRobot" Address="Cyclic#1.Safety.SpatnaVazba_ZonaRobot" SODIndex="0x2500" SODSubIndex="0x2" />
+			<Channel Name="BOOL105" Mapping="NSIX0.4" Variable="ResetZony_Pracoviska" Address="Cyclic#1.Safety.RESET_ZonyPracovisko" SODIndex="0x2500" SODSubIndex="0x2" />
+			<Channel Name="BOOL106" Mapping="NSIX0.5" Variable="SpatnaVezba_ZonaPracovisko" Address="Cyclic#1.Safety.SpatnaVazba_ZonaPracovisko" SODIndex="0x2500" SODSubIndex="0x2" />
 		</Module>
 </IOOffsets>

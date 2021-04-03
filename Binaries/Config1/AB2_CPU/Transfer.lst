@@ -8,6 +8,7 @@
   <Operation Delete="Remanentne.br"/>
   <Operation Delete="OvladanieV.br"/>
   <Operation Delete="Robot.br"/>
+  <Operation Delete="Main.br"/>
   <Operation Delete="Bruska.br"/>
   <Operation Delete="Blikanie20.br"/>
   <Operation Delete="DatumCasPL.br"/>
@@ -15,21 +16,21 @@
   <Operation Delete="LimitneSni.br"/>
   <Operation Delete="RiadenieSe.br"/>
   <Operation Delete="Visu.br"/>
-  <Operation Delete="vcctext.br"/>
-  <Operation Delete="vccstr.br"/>
-  <Operation Delete="vccshape.br"/>
-  <Operation Delete="vccovl.br"/>
-  <Operation Delete="vccnum.br"/>
-  <Operation Delete="vccline.br"/>
-  <Operation Delete="vcchspot.br"/>
-  <Operation Delete="vccdt.br"/>
-  <Operation Delete="vccbtn.br"/>
-  <Operation Delete="vccbmp.br"/>
-  <Operation Delete="vccbar.br"/>
-  <Operation Delete="vccalarm.br"/>
   <Operation Delete="MpAxis.br"/>
   <Operation Delete="CoTrace.br"/>
   <Operation Delete="AsSafety.br"/>
+  <Operation Delete="vccline.br"/>
+  <Operation Delete="vccovl.br"/>
+  <Operation Delete="vccbar.br"/>
+  <Operation Delete="vcctext.br"/>
+  <Operation Delete="vccstr.br"/>
+  <Operation Delete="vccshape.br"/>
+  <Operation Delete="vccbmp.br"/>
+  <Operation Delete="vcchspot.br"/>
+  <Operation Delete="vccdt.br"/>
+  <Operation Delete="vccalarm.br"/>
+  <Operation Delete="vccnum.br"/>
+  <Operation Delete="vccbtn.br"/>
   <Operation Delete="vcdsloc.br"/>
   <Operation Delete="vcpkat.br"/>
   <Operation Delete="vcalarm.br"/>
@@ -138,6 +139,18 @@
   <Operation Download="vcalarm.br" Memory="UserROM"/>
   <Operation Download="vcpkat.br" Memory="UserROM"/>
   <Operation Download="vcdsloc.br" Memory="UserROM"/>
+  <Operation Download="vccbtn.br" Memory="UserROM"/>
+  <Operation Download="vccnum.br" Memory="UserROM"/>
+  <Operation Download="vccalarm.br" Memory="UserROM"/>
+  <Operation Download="vccdt.br" Memory="UserROM"/>
+  <Operation Download="vcchspot.br" Memory="UserROM"/>
+  <Operation Download="vccbmp.br" Memory="UserROM"/>
+  <Operation Download="vccshape.br" Memory="UserROM"/>
+  <Operation Download="vccstr.br" Memory="UserROM"/>
+  <Operation Download="vcctext.br" Memory="UserROM"/>
+  <Operation Download="vccbar.br" Memory="UserROM"/>
+  <Operation Download="vccovl.br" Memory="UserROM"/>
+  <Operation Download="vccline.br" Memory="UserROM"/>
   <Operation Download="iomap.br" Memory="UserROM"/>
   <Operation Download="Settings.br" Memory="UserROM"/>
   <Operation Download="Role.br" Memory="UserROM"/>
@@ -145,21 +158,10 @@
   <Operation Download="ashwac.br" Memory="UserROM"/>
   <Operation Download="User.br" Memory="UserROM"/>
   <Operation Download="Config.br" Memory="UserROM"/>
+  <Operation Download="TraceConfi.br" Memory="UserROM"/>
   <Operation Download="AsSafety.br" Memory="UserROM"/>
   <Operation Download="CoTrace.br" Memory="UserROM"/>
   <Operation Download="MpAxis.br" Memory="UserROM"/>
-  <Operation Download="vccalarm.br" Memory="UserROM"/>
-  <Operation Download="vccbar.br" Memory="UserROM"/>
-  <Operation Download="vccbmp.br" Memory="UserROM"/>
-  <Operation Download="vccbtn.br" Memory="UserROM"/>
-  <Operation Download="vccdt.br" Memory="UserROM"/>
-  <Operation Download="vcchspot.br" Memory="UserROM"/>
-  <Operation Download="vccline.br" Memory="UserROM"/>
-  <Operation Download="vccnum.br" Memory="UserROM"/>
-  <Operation Download="vccovl.br" Memory="UserROM"/>
-  <Operation Download="vccshape.br" Memory="UserROM"/>
-  <Operation Download="vccstr.br" Memory="UserROM"/>
-  <Operation Download="vcctext.br" Memory="UserROM"/>
   <Operation Download="assl1.br" Memory="UserROM"/>
   <Operation Download="Visu.br" Memory="UserROM"/>
   <Operation Download="RiadenieSe.br" Memory="UserROM"/>
@@ -168,6 +170,7 @@
   <Operation Download="DatumCasPL.br" Memory="UserROM"/>
   <Operation Download="Blikanie20.br" Memory="UserROM"/>
   <Operation Download="Bruska.br" Memory="UserROM"/>
+  <Operation Download="Main.br" Memory="UserROM"/>
   <Operation Download="Robot.br" Memory="UserROM"/>
   <Operation Download="OvladanieV.br" Memory="UserROM"/>
   <Operation Download="Remanentne.br" Memory="UserROM"/>

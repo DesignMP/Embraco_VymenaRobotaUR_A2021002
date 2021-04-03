@@ -9,6 +9,7 @@
       <Task Name="DatumCasPL" Source="DatumCasPLC.DatumCasPLC.prg" />
       <Task Name="Blikanie20" Source="Blikace.Blikanie200ms.prg" />
       <Task Name="Bruska" Source="Program.Bruska.prg" />
+      <Task Name="Main" Source="Program.Main.prg" />
       <Task Name="Robot" Source="Program.Robot.prg" />
       <Task Name="OvladanieV" Source="HMI.OvladanieVizu.prg" />
       <Task Name="Alarmy" Source="Program.Alarmy.prg" />

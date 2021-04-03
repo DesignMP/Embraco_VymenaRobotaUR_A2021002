@@ -78,6 +78,20 @@
         Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Bruska\OvlServa.st.var" />
     </Task>
     <Task
+      Name="Main"
+      Disable="false"
+      Source="Program.Main"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Main\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Main\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Main\Variables.var" />
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\Main\OvladanieSafety.st.var" />
+    </Task>
+    <Task
       Name="Robot"
       Disable="false"
       Source="Program.Robot"

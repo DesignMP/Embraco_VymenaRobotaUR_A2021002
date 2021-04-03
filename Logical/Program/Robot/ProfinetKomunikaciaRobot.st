@@ -13,9 +13,8 @@ ACTION ProfinetKomunikaciaRobot:
     Robot.KOM_IN.Stav_Dopravnik_Plny:= Robot.KOM_IN.Profinet_PLC_INPUTS[1].2;                   //10
     Robot.KOM_IN.Stav_RobotDrziCap:= Robot.KOM_IN.Profinet_PLC_INPUTS[1].3;                     //11
     Robot.KOM_IN.Gripper_OtvorDlhyUchopovac:= Robot.KOM_IN.Profinet_PLC_INPUTS[1].4;            //12
-    Robot.KOM_IN.Gripper_ZatvorDlhyUchopovac:= Robot.KOM_IN.Profinet_PLC_INPUTS[1].5;           //13
-    Robot.KOM_IN.Gripper_OtvorKratkyUchopovac:= Robot.KOM_IN.Profinet_PLC_INPUTS[1].6;          //14
-    Robot.KOM_IN.Gripper_ZatvorKratkyUchopovac:= Robot.KOM_IN.Profinet_PLC_INPUTS[1].7;         //15
+    Robot.KOM_IN.Gripper_OtvorKratkyUchopovac:= Robot.KOM_IN.Profinet_PLC_INPUTS[1].5;           //13
+    
     
     Robot.KOM_IN.Stav_VystupyZresetovane:= Robot.KOM_IN.Profinet_PLC_INPUTS[2].0;               //16
     Robot.KOM_IN.Stav_ZonaNavratuRobota_NG:= Robot.KOM_IN.Profinet_PLC_INPUTS[2].1;             //17
@@ -49,6 +48,10 @@ ACTION ProfinetKomunikaciaRobot:
     Robot.KOM_OUT.Profinet_PLC_OUTPUTS[2].7:= Robot.KOM_OUT.Gripper_KratkyUchopov_ZATVORENY;    //23
         
     Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3].0:= Robot.KOM_OUT.UkoncenieCykluRobota;               //24
+    Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3].1:= Robot.KOM_OUT.Gripper_DlhyUchopov_PRAZDNY;        //25
+    Robot.KOM_OUT.Profinet_PLC_OUTPUTS[3].2:= Robot.KOM_OUT.Gripper_KratkyUchopov_PRAZDNY;      //26
     
+    
+    Robot.KOM_OUT.Profinet_PLC_OUTPUTS[4]:= Robot.KOM_OUT.Dopravnik_UkladaciaPozicia;           //32 - 39
     
 END_ACTION

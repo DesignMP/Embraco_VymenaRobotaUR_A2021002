@@ -707,8 +707,8 @@
     <Folder Name="POBJ">
       <Object Name="ObrazovkaInfo" ClsId="0x400" Version="1" TargetIndex="309" Type="PAGE" RefString="Source[local].Page[ObrazovkaInfo]">
         <UInt32 Name="FormLanguage">0</UInt32>
-        <Reference Name="StartControl" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-        <UInt32 Name="LayerCount">3</UInt32>
+        <Reference Name="StartControl" Type="CTRL">None</Reference>
+        <UInt32 Name="LayerCount">2</UInt32>
         <UInt32 Name="MoveFocus">1</UInt32>
         <Group Name="Styleable Properties">
           <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00000400].StyleClass[Default]</Reference>
@@ -741,27 +741,8 @@
         </Group>
         <Reference Name="FormLayer0" Type="LAY">Source[local].Page[ObrazovkaInfo].Layer[Default]</Reference>
         <Reference Name="FormLayer1" Type="LAY">Source[local].Layer[Background]</Reference>
-        <Reference Name="FormLayer2" Type="LAY">Source[local].Layer[PopPrihlasenie]</Reference>
         <Group Name="MovementOrder">
-          <UInt32 Name="Count">2</UInt32>
-          <Group Name="Source[local].Layer[PopPrihlasenie].Control[String_1]">
-            <Reference Name="Control" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-            <Reference Name="CtrlNext" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlPrev" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlLeft" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlRight" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlUp" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlDown" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-          </Group>
-          <Group Name="Source[local].Layer[PopPrihlasenie].Control[String_2]">
-            <Reference Name="Control" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_2]</Reference>
-            <Reference Name="CtrlNext" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-            <Reference Name="CtrlPrev" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-            <Reference Name="CtrlLeft" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-            <Reference Name="CtrlRight" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-            <Reference Name="CtrlUp" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-            <Reference Name="CtrlDown" Type="CTRL">Source[local].Layer[PopPrihlasenie].Control[String_1]</Reference>
-          </Group>
+          <UInt32 Name="Count">0</UInt32>
         </Group>
       </Object>
     </Folder>

@@ -83,8 +83,8 @@ typedef struct SafetyIN_typ
 	plcbit VyblokovanieSafety_CH2;
 	plcbit Pracovisko_CS_CH1;
 	plcbit Pracovisko_CS_CH2;
-	plcbit SpatnaVazbaPracovisko_CH1;
-	plcbit SpatnaVazbaPracovisko_CH2;
+	plcbit OploteniePracoviska_CH1;
+	plcbit OploteniePracoviska_CH2;
 } SafetyIN_typ;
 #endif
 
@@ -110,7 +110,10 @@ typedef struct SafetyPAR_typ
 typedef struct SafetySTAV_typ
 {	plcbit SafetyPLC_Nabehlo;
 	plcbit ZonaCS_AKTIVNA;
+	plcbit ZonaRobot_Odblokovana;
 	plcbit ZonaRobot_AKTIVNA;
+	plcbit ZonaPracovisko_Odblokovana;
+	plcbit ZonaPracovisko_AKTIVNA;
 	plcbit CS_Pracovisko_Odblokovany;
 	plcbit CS_Robot_Odblokovany;
 	plcbit VyblokovanieSafety_AKTIVNE;
@@ -126,6 +129,7 @@ typedef struct Safety_typ
 	SafetySTAV_typ STAV;
 	plcbit RESET_ZonyRobot;
 	plcbit RESET_ZonyCS;
+	plcbit RESET_ZonyPracovisko;
 	plcbit SpatnaVazba_ZonaRobot;
 	plcbit SpatnaVazba_ZonaCS;
 	plcbit SpatnaVazba_ZonaPracovisko;
@@ -143,6 +147,7 @@ typedef struct RobotIN_typ
 	plcbit CisloZadanejPozicie_Bit1;
 	plcbit CisloZadanejPozicie_Bit2;
 	plcbit CisloZadanejPozicie_Bit3;
+	plcbit NepouzivatRobota;
 } RobotIN_typ;
 #endif
 
@@ -153,8 +158,8 @@ typedef struct RobotOUT_typ
 	plcbit CisloAktualnejPozicie_Bit1;
 	plcbit CisloAktualnejPozicie_Bit2;
 	plcbit CisloAktualnejPozicie_Bit3;
-	plcbit ZatvorDlhyUchopovac_YV1;
-	plcbit ZatvorKratkyUchopovac_YV2;
+	plcbit OtvorDlhyUchopovac_YV1;
+	plcbit OtvorKratkyUchopovac_YV2;
 	plcbit VystupnyDopravnikNalozeny;
 } RobotOUT_typ;
 #endif
@@ -174,9 +179,7 @@ typedef struct RobotKOM_IN_typ
 	plcbit Stav_VystupyZresetovane;
 	plcbit Stav_ZonaNavratuRobota_OK;
 	plcbit Stav_ZonaNavratuRobota_NG;
-	plcbit Gripper_ZatvorDlhyUchopovac;
 	plcbit Gripper_OtvorDlhyUchopovac;
-	plcbit Gripper_ZatvorKratkyUchopovac;
 	plcbit Gripper_OtvorKratkyUchopovac;
 	unsigned char Profinet_PLC_INPUTS[64];
 } RobotKOM_IN_typ;
@@ -208,6 +211,9 @@ typedef struct RobotKOM_OUT_typ
 	plcbit Gripper_DlhyUchopov_ZATVORENY;
 	plcbit Gripper_KratkyUchopov_OTVORENY;
 	plcbit Gripper_KratkyUchopov_ZATVORENY;
+	plcbit Gripper_DlhyUchopov_PRAZDNY;
+	plcbit Gripper_KratkyUchopov_PRAZDNY;
+	unsigned char Dopravnik_UkladaciaPozicia;
 	unsigned char Profinet_PLC_OUTPUTS[64];
 } RobotKOM_OUT_typ;
 #endif
@@ -245,6 +251,7 @@ typedef struct Robot_typ
 	plcbit RR_ZatvorKratkyUchopovac;
 	plcbit RR_OtvorDlhyUchopovac;
 	plcbit RR_ZatvorDlhyUchopovac;
+	plcbit RR_OdparkujRobota;
 	plcbit Robot_OtvorKratkyUchopovac;
 	plcbit Robot_ZatvorKratkyUchopovac;
 	plcbit Robot_OtvorDlhyUchopovac;
@@ -258,6 +265,8 @@ typedef struct BruskaIN_typ
 {	plcbit ReferencnySnimac_IS1;
 	plcbit UpinaciaHlava_OtacanieVPRED;
 	plcbit UpinaciaHlava_OtacanieVZAD;
+	plcbit OchrannyKrytBrusky_Otvoreny;
+	plcbit UpinaciaHlava_Palec;
 } BruskaIN_typ;
 #endif
 

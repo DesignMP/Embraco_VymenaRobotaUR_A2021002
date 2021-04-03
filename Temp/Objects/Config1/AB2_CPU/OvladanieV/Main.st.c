@@ -13,6 +13,29 @@ void __BUR__ENTRY_INIT_FUNCT__(void){{
 void _CYCLIC __BUR__ENTRY_CYCLIC_FUNCT__(void){{
 
 
+
+
+
+
+
+
+if((Robot.KOM_IN.Stav_RezimAUTOMAT^1)){
+(Vizu.StavZariadenia_Index=3);
+(Vizu.StavZariadenia_Farba=2);
+}else if((Zariadenie.STAV.Automat&(Zariadenie.STAV.PoINIT^1))){
+(Vizu.StavZariadenia_Index=1);
+(Vizu.StavZariadenia_Farba=1);
+}else if((Zariadenie.STAV.Automat&Zariadenie.STAV.PoINIT)){
+(Vizu.StavZariadenia_Index=2);
+(Vizu.StavZariadenia_Farba=1);
+}else{
+(Vizu.StavZariadenia_Index=0);
+(Vizu.StavZariadenia_Farba=0);
+}
+
+
+
+
 if((Safety.STAV.SafetyPLC_Nabehlo^1)){
 (Vizu.CisloZadanejObrazovky=0);
 if(((((unsigned long)(unsigned char)Blikac500ms==(unsigned long)(unsigned char)1))&~Edge0000100000&1?((Edge0000100000=(((unsigned long)(unsigned char)Blikac500ms==(unsigned long)(unsigned char)1))&1),1):((Edge0000100000=(((unsigned long)(unsigned char)Blikac500ms==(unsigned long)(unsigned char)1))&1),0))){
@@ -25,6 +48,27 @@ if((((unsigned long)(unsigned char)Vizu.Slider<(unsigned long)(unsigned char)30)
 }
 
 
+
+
+if((Safety.STAV.CS_Pracovisko_Odblokovany&Safety.STAV.CS_Robot_Odblokovany&(Safety.STAV.ZonaCS_AKTIVNA^1))){
+(Vizu.PodsvietenieTlacitka_ResetCS=Blikac500ms);
+}else if(Safety.STAV.ZonaCS_AKTIVNA){
+(Vizu.PodsvietenieTlacitka_ResetCS=2);
+}else{
+(Vizu.PodsvietenieTlacitka_ResetCS=3);
+}
+
+
+if(NastalaPorucha){
+(Vizu.FarbaTlacitkaAlarm_Index=Blikac500ms);
+}else{
+(Vizu.FarbaTlacitkaAlarm_Index=0);
+}
+
+
+
+
+
 if(((((unsigned long)(unsigned char)Safety.STAV.SafetyPLC_Nabehlo==(unsigned long)(unsigned char)1))&~Edge0000100001&1?((Edge0000100001=(((unsigned long)(unsigned char)Safety.STAV.SafetyPLC_Nabehlo==(unsigned long)(unsigned char)1))&1),1):((Edge0000100001=(((unsigned long)(unsigned char)Safety.STAV.SafetyPLC_Nabehlo==(unsigned long)(unsigned char)1))&1),0))){
 (Vizu.CisloZadanejObrazovky=2);
 }
@@ -35,12 +79,24 @@ if(((((unsigned long)(unsigned char)Safety.STAV.SafetyPLC_Nabehlo==(unsigned lon
 if(Zariadenie.STAV.Automat){
 (Vizu.TL_RezimManual_DISABLE=1);
 }else{
-(Vizu.TL_RezimManual_DISABLE=1);
+(Vizu.TL_RezimManual_DISABLE=0);
 }
 
 
 
+if((Safety.STAV.ZonaCS_AKTIVNA^1)){
+(Vizu.TL_StartAutomat_DISABLE=1);
+}else if(NastalaPorucha){
+(Vizu.TL_StartAutomat_DISABLE=1);
+}else if((Safety.STAV.ZonaRobot_AKTIVNA^1)){
+(Vizu.TL_StartAutomat_DISABLE=1);
+}else if((Safety.STAV.ZonaPracovisko_AKTIVNA^1)){
+(Vizu.TL_StartAutomat_DISABLE=1);
+}else if(((Robot.KOM_IN.Stav_RezimAUTOMAT^1)&(Robot.IN.NepouzivatRobota^1))){
+(Vizu.TL_StartAutomat_DISABLE=1);
+}else{
 (Vizu.TL_StartAutomat_DISABLE=0);
+}
 
 
 if(Zariadenie.STAV.PoINIT){
@@ -50,21 +106,55 @@ if(Zariadenie.STAV.PoINIT){
 }
 
 
-if(Bruska.STAV.Servo_HomingOK){
-(Vizu.TL_RR_OvladanieServa_DISABLE=0);
-}else{
+if((Bruska.STAV.Servo_HomingOK^1)){
 (Vizu.TL_RR_OvladanieServa_DISABLE=1);
+}else if(NastalaPorucha){
+(Vizu.TL_RR_OvladanieServa_DISABLE=1);
+}else if((Safety.STAV.ZonaCS_AKTIVNA^1)){
+(Vizu.TL_RR_OvladanieServa_DISABLE=1);
+}else if((Safety.STAV.ZonaRobot_AKTIVNA^1)){
+(Vizu.TL_RR_OvladanieServa_DISABLE=1);
+}else if((Safety.STAV.ZonaPracovisko_AKTIVNA^1)){
+(Vizu.TL_RR_OvladanieServa_DISABLE=1);
+}else{
+(Vizu.TL_RR_OvladanieServa_DISABLE=0);
 }
 
 
-}imp1_end6_0:;}
-#line 55 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
-#line 57 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
+
+if(NastalaPorucha){
+(Vizu.TL_RR_HomingServa_DISABLE=1);
+}else if((Safety.STAV.ZonaCS_AKTIVNA^1)){
+(Vizu.TL_RR_HomingServa_DISABLE=1);
+}else if((Safety.STAV.ZonaRobot_AKTIVNA^1)){
+(Vizu.TL_RR_HomingServa_DISABLE=1);
+}else if((Safety.STAV.ZonaPracovisko_AKTIVNA^1)){
+(Vizu.TL_RR_HomingServa_DISABLE=1);
+}else{
+(Vizu.TL_RR_HomingServa_DISABLE=0);
+}
+
+
+
+
+if(Zariadenie.STAV.Automat){
+(Vizu.TL_OdparkovanieRobota_DISABLE=1);
+}else if((Safety.STAV.ZonaRobot_AKTIVNA^1)){
+(Vizu.TL_OdparkovanieRobota_DISABLE=1);
+}else if((Robot.KOM_IN.Stav_RezimAUTOMAT^1)){
+(Vizu.TL_OdparkovanieRobota_DISABLE=1);
+}else{
+(Vizu.TL_OdparkovanieRobota_DISABLE=0);
+}
+
+}imp1_end12_0:;}
+#line 145 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 147 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 60 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 150 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 

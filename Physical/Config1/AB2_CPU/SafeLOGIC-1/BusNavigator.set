@@ -29,15 +29,16 @@ POWERLINKAddress=13
 [CPUToSL]
 Timeout=1000
 Name=tcpip
-IPAddress=192.168.122.2
+IPAddress=192.168.0.1
 Host=
 IPMode=1
 UseDA=0
 Destination=
-Source=0
+Source=1
 Port=50000
 
 [ProjectInfo]
 SDInitVersion=4.4.0.0
+SL_UDID=00-60-65-15-DB-D9
 [Download]
 ProjectSource=1

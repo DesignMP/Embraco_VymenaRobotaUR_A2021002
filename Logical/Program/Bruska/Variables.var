@@ -7,3 +7,10 @@ VAR
 	AktualnyPocetOtacokINT : INT := 0;
 	AktualnyPocetOtacokLREAL : LREAL := 0.0;
 END_VAR
+(******Zápis do ParID serva*************)
+VAR
+	MC_BR_ProcessParID_AcpAx_0 : MC_BR_ProcessParID_AcpAx := (0);
+	McAcpAxProcessParIDType_0 : ARRAY[0..1] OF McAcpAxProcessParIDType;
+	NovaHodnotaMomentu_POS : REAL := 0.0;
+	NovaHodnotaMomentu_NEG : REAL := 0.0;
+END_VAR

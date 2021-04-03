@@ -67,7 +67,7 @@
             <Group Name="PressedBorder">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_Button_pressed]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Button_Global_Area_pressed]</Reference>
             </Group>
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
@@ -142,7 +142,7 @@
             <Group Name="ColorDatapoint">
               <UInt16 Name="Offset">84</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizualizacia.LED_TlacitkaResetCS]</Reference>
+              <Reference Name="Data" Type="DP">Source[global].Variable[DataSource.Vizu.PodsvietenieTlacitka_ResetCS]</Reference>
             </Group>
             <Group Name="SpacingHorizontal">
               <UInt16 Name="Offset">92</UInt16>
@@ -1265,7 +1265,7 @@
               <UInt16 Name="Reserved">0</UInt16>
               <UInt32 Name="LockingDatapoint">4294967295</UInt32>
               <UInt32 Name="LockingLevel">0</UInt32>
-              <UInt32 Name="Page">4294967295</UInt32>
+              <Reference Name="Page" Type="PAGE">Source[local].Page[ParametrePracoviska]</Reference>
               <UInt16 Name="Target">2</UInt16>
               <UInt16 Name="Reserved">0</UInt16>
             </Group>
