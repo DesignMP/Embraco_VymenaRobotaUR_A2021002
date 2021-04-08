@@ -1,8 +1,8 @@
 ﻿{GroupDefinition(0,'SafetyVstupy')}
 {GroupDefinition(9,'SafetyVystupy')}
 {GroupDefinition(18,'Vstupy_z_PLC_do_Safety')}
-{GroupDefinition(25,'Vystupy_zo_Safety_do_PLC')}
-{GroupDefinition(35,'Statusy')}
+{GroupDefinition(26,'Vystupy_zo_Safety_do_PLC')}
+{GroupDefinition(36,'Statusy')}
 
 VAR_GLOBAL {Group(0)}
     {LINE(1)}
@@ -55,32 +55,34 @@ VAR_GLOBAL {Group(18)}
     SpatnaVezba_ZonaRobot AT %IX0.3 : BOOL {Custom('SL1.SM1.BOOL104')};
     {LINE(24)}
     SpatnaVezba_ZonaPracovisko AT %IX0.5 : BOOL {Custom('SL1.SM1.BOOL106')};
+    {LINE(25)}
+    RobotVypnuty AT %IX0.6 : BOOL {Custom('SL1.SM1.BOOL107')};
 END_VAR
 
-VAR_GLOBAL {Group(25)}
-    {LINE(26)}
-    SafetyPLC_Nabehlo AT %QX0.0 : BOOL {Custom('SL1.SM1.BOOL001')};
+VAR_GLOBAL {Group(26)}
     {LINE(27)}
-    ZonaCS_AKTIVNA AT %QX0.1 : BOOL {Custom('SL1.SM1.BOOL002')};
+    SafetyPLC_Nabehlo AT %QX0.0 : BOOL {Custom('SL1.SM1.BOOL001')};
     {LINE(28)}
-    ZonaRobot_AKTIVNA AT %QX0.2 : BOOL {Custom('SL1.SM1.BOOL003')};
+    ZonaCS_AKTIVNA AT %QX0.1 : BOOL {Custom('SL1.SM1.BOOL002')};
     {LINE(29)}
-    CS_Pracoviska_AKTIVNE AT %QX0.3 : BOOL {Custom('SL1.SM1.BOOL004')};
+    ZonaRobot_AKTIVNA AT %QX0.2 : BOOL {Custom('SL1.SM1.BOOL003')};
     {LINE(30)}
-    CS_Robota_AKTIVNE AT %QX0.4 : BOOL {Custom('SL1.SM1.BOOL005')};
+    CS_Pracoviska_AKTIVNE AT %QX0.3 : BOOL {Custom('SL1.SM1.BOOL004')};
     {LINE(31)}
-    VyblokovanieSafety_AKTIVNE AT %QX0.5 : BOOL {Custom('SL1.SM1.BOOL006')};
+    CS_Robota_AKTIVNE AT %QX0.4 : BOOL {Custom('SL1.SM1.BOOL005')};
     {LINE(32)}
-    ZonaRobot_Odblokovana AT %QX0.6 : BOOL {Custom('SL1.SM1.BOOL007')};
+    VyblokovanieSafety_AKTIVNE AT %QX0.5 : BOOL {Custom('SL1.SM1.BOOL006')};
     {LINE(33)}
-    ZonaPracovisko_Odblokovana AT %QX0.7 : BOOL {Custom('SL1.SM1.BOOL008')};
+    ZonaRobot_Odblokovana AT %QX0.6 : BOOL {Custom('SL1.SM1.BOOL007')};
     {LINE(34)}
+    ZonaPracovisko_Odblokovana AT %QX0.7 : BOOL {Custom('SL1.SM1.BOOL008')};
+    {LINE(35)}
     ZonaPracovisko_AKTIVNA AT %QX1.0 : BOOL {Custom('SL1.SM1.BOOL009')};
 END_VAR
 
-VAR_GLOBAL {Group(35)}
-    {LINE(36)}
-    Status_ZonaCS_AKTIVNA : SAFEBOOL;
+VAR_GLOBAL {Group(36)}
     {LINE(37)}
+    Status_ZonaCS_AKTIVNA : SAFEBOOL;
+    {LINE(38)}
     Status_ZamkyVyblokovane : SAFEBOOL;
 END_VAR

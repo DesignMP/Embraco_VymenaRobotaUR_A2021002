@@ -16,18 +16,42 @@ PROGRAM _CYCLIC
     
     IF NOT Robot.KOM_IN.Stav_RezimAUTOMAT THEN
         Vizu.StavZariadenia_Index:= 3;
-        Vizu.StavZariadenia_Farba:= 2;
+        Vizu.StavZariadenia_Farba:= 3;
     ELSIF Zariadenie.STAV.Automat AND NOT Zariadenie.STAV.PoINIT THEN
         Vizu.StavZariadenia_Index:= 1;
         Vizu.StavZariadenia_Farba:= 1;
     ELSIF Zariadenie.STAV.Automat AND Zariadenie.STAV.PoINIT THEN
         Vizu.StavZariadenia_Index:= 2;
-        Vizu.StavZariadenia_Farba:= 1;
+        Vizu.StavZariadenia_Farba:= 2;
     ELSE    
         Vizu.StavZariadenia_Index:= 0;
         Vizu.StavZariadenia_Farba:= 0;
     END_IF    
    
+   
+    //**********************************************Zobrazenie stavov pracoviska brusky****************************************//
+    IF PoruchaBrusky THEN
+        Vizu.StavPracoviskaBrusky_Index:= 3;
+    ELSIF Bruska.Automat AND NOT Bruska.STAV.PoINIT THEN
+        Vizu.StavPracoviskaBrusky_Index:= 1;
+    ELSIF Bruska.Automat AND Bruska.STAV.PoINIT THEN
+        Vizu.StavPracoviskaBrusky_Index:= 2;
+    ELSE    
+        Vizu.StavPracoviskaBrusky_Index:= 0;
+    END_IF    
+    
+    
+    //**********************************************Zobrazenie stavov pracoviska robot****************************************//
+    IF PoruchaRobota THEN
+        Vizu.StavPracoviskaRobota_Index:= 3;
+    ELSIF Robot.Automat AND NOT Robot.STAV.PoINIT THEN
+        Vizu.StavPracoviskaRobota_Index:= 1;
+    ELSIF Robot.Automat AND Robot.STAV.PoINIT THEN
+        Vizu.StavPracoviskaRobota_Index:= 2;
+    ELSE    
+        Vizu.StavPracoviskaRobota_Index:= 0;
+    END_IF   
+    
     
     
     //*********************************************Zobrazenie úvodnej obrazovky**********************************************//
@@ -82,12 +106,6 @@ PROGRAM _CYCLIC
     IF NOT Safety.STAV.ZonaCS_AKTIVNA THEN
         Vizu.TL_StartAutomat_DISABLE:= TRUE;
     ELSIF NastalaPorucha THEN
-        Vizu.TL_StartAutomat_DISABLE:= TRUE;
-    ELSIF NOT Safety.STAV.ZonaRobot_AKTIVNA THEN
-        Vizu.TL_StartAutomat_DISABLE:= TRUE;
-    ELSIF NOT Safety.STAV.ZonaPracovisko_AKTIVNA THEN
-        Vizu.TL_StartAutomat_DISABLE:= TRUE;
-    ELSIF NOT Robot.KOM_IN.Stav_RezimAUTOMAT AND NOT Robot.IN.NepouzivatRobota THEN
         Vizu.TL_StartAutomat_DISABLE:= TRUE;
     ELSE    
         Vizu.TL_StartAutomat_DISABLE:= FALSE;

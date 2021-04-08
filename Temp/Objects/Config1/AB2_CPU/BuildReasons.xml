@@ -3,12 +3,12 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu\visu.mak">
     <BuildReason>Rule is forced.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job._markerfile">
-    <BuildReason>Target "iat_media.job._markerfile" does not exist</BuildReason>
-  </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c">
     <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\program\robot\main.st" differs.
 </BuildReason>
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job._markerfile">
+    <BuildReason>Target "iat_media.job._markerfile" does not exist</BuildReason>
   </Rule>
   <Rule ID=".mappView_Build">
     <BuildReason>Rule contains a phony target. </BuildReason>

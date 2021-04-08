@@ -137,10 +137,10 @@ if((Bruska.Manual|Robot.Manual)){
 
 
 if(Zariadenie.Automat){
-
-
-
-
+(Bruska.Automat=1);
+if((Safety.STAV.ZonaRobot_AKTIVNA&Robot.KOM_IN.Stav_RezimAUTOMAT)){
+(Robot.Automat=1);
+}
 (Zariadenie.Automat=0);
 }
 
@@ -176,7 +176,7 @@ if(((((unsigned long)(unsigned short)SC_Bruska.Step==(unsigned long)(unsigned sh
 
 
 
-}imp2_end21_0:;}
+}imp2_end22_0:;}
 #line 174 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Main/Main.nodebug"
 #line 176 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Main/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{

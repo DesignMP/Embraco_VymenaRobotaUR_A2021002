@@ -6,18 +6,24 @@
     <Property Name="BackColor" Value="10"/>
     <Property Name="Description" Value=""/>
     <Property Name="ForeColor" Value="0"/>
-    <Property Name="Index" Value="1"/>
+    <Property Name="Index" Value="2"/>
   </ColorMapItem>
   <ColorMapItem>
     <Property Name="BackColor" Value="51"/>
     <Property Name="Description" Value=""/>
     <Property Name="ForeColor" Value="0"/>
-    <Property Name="Index" Value="2"/>
+    <Property Name="Index" Value="3"/>
   </ColorMapItem>
   <ColorMapItem>
     <Property Name="BackColor" Value="249"/>
     <Property Name="Description" Value=""/>
     <Property Name="ForeColor" Value="0"/>
     <Property Name="Index" Value="0"/>
+  </ColorMapItem>
+  <ColorMapItem>
+    <Property Name="BackColor" Value="124"/>
+    <Property Name="Description" Value=""/>
+    <Property Name="ForeColor" Value="0"/>
+    <Property Name="Index" Value="1"/>
   </ColorMapItem>
 </ColorMap>

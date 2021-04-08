@@ -107,6 +107,8 @@ TYPE
 		Paletka_PritomnostKusu_OS1 : BOOL;
 		VystupDoprav_PritomnostKusu_OS2 : BOOL;
 		Otacac_PritomnostKusu_IS2 : BOOL;
+		VystupDoprav_Napolohovany : BOOL;
+		VystupDoprav_Bezi : BOOL;
 	END_STRUCT;
 	ZariadenieOUT_typ : 	STRUCT 
 		Majak_ZeleneSvetlo : BOOL;
@@ -192,6 +194,8 @@ TYPE
 		Stav_VystupyZresetovane : BOOL;
 		Stav_ZonaNavratuRobota_OK : BOOL;
 		Stav_ZonaNavratuRobota_NG : BOOL;
+		Stav_RobotDrziHotovyCap : BOOL;
+		Stav_RobotVlozilNovyCap : BOOL;
 		Gripper_OtvorDlhyUchopovac : BOOL;
 		Gripper_OtvorKratkyUchopovac : BOOL;
 		Profinet_PLC_INPUTS : ARRAY[0..63]OF USINT;
@@ -205,6 +209,8 @@ TYPE
 		StartProgramuMain : BOOL;
 		StopProgramu : BOOL;
 		OdparkujRobota : BOOL;
+		ServisnaPozicia : BOOL;
+		ZahodenieKusu : BOOL;
 		Paletka_PresunDoCakacejPozicie : BOOL;
 		Paletka_OdoberCap : BOOL;
 		Otacac_PresunDoCakacejPozicie : BOOL;
@@ -216,10 +222,11 @@ TYPE
 		Dopravnik_PresunDoCakacejPozicie : BOOL;
 		Dopravnik_PolozCap : BOOL;
 		UkoncenieCykluRobota : BOOL;
+		UpinaciaHlava_Otvorena : BOOL;
 		Gripper_DlhyUchopov_OTVORENY : BOOL;
-		Gripper_DlhyUchopov_ZATVORENY : BOOL;
+		Gripper_DlhyUchopov_DRZI_KUS : BOOL;
 		Gripper_KratkyUchopov_OTVORENY : BOOL;
-		Gripper_KratkyUchopov_ZATVORENY : BOOL;
+		Gripper_KratkyUchopov_DRZI_KUS : BOOL;
 		Gripper_DlhyUchopov_PRAZDNY : BOOL;
 		Gripper_KratkyUchopov_PRAZDNY : BOOL;
 		Dopravnik_UkladaciaPozicia : USINT;
@@ -253,7 +260,7 @@ TYPE
 		UpinaciaHlava_OtacanieVPRED : BOOL;
 		UpinaciaHlava_OtacanieVZAD : BOOL;
 		OchrannyKrytBrusky_Otvoreny : BOOL;
-		UpinaciaHlava_Palec : BOOL;
+		UpinaciaHlava_Otvorena : BOOL;
 	END_STRUCT;
 	BruskaOUT_typ : 	STRUCT 
 		Stav_UpinaciaHlavaSaOtacaVPRED : BOOL;

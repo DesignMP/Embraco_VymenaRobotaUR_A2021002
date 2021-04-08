@@ -349,6 +349,7 @@
 <Cons Device="IF6.ST1" DPName="BOOL106" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST1.BOOL107" Type="BOOL">
+<Prod Device="TC#1-CPYDEV" DPName="Robot.IN.NepouzivatRobota" Kind="pv"/>
 <Cons Device="IF6.ST1" DPName="BOOL107" Kind="io"/>
 </LN>
 <LN ID="%QX.IF6.ST1.BOOL108" Type="BOOL">
@@ -501,9 +502,11 @@
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput13" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput13" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_OtacanieVPRED" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput14" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput14" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_OtacanieVZAD" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput15" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput15" Kind="io"/>
@@ -584,11 +587,9 @@
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput05" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput05" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_OtacanieVPRED" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput06" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput06" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_OtacanieVZAD" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput07" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput07" Kind="io"/>
@@ -608,7 +609,7 @@
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput12" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput12" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_Palec" Kind="pv"/>
+<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_Otvorena" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput13" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput13" Kind="io"/>
@@ -616,9 +617,11 @@
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput14" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput14" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Zariadenie.IN.VystupDoprav_Napolohovany" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput15" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput15" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Zariadenie.IN.VystupDoprav_Bezi" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput16" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput16" Kind="io"/>

@@ -16,7 +16,7 @@
     <Task Name="Main" Source="Program.Main.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Robot" Source="Program.Robot.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="OvladanieV" Source="HMI.OvladanieVizu.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="Alarmy" Source="Program.Alarmy.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
+    <Task Name="Alarmy" Source="Program.Alarmy.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5">
     <Task Name="Remanentne" Source="RemanentnePremenne.RemanentnePremenne.prg" Memory="UserROM" Language="IEC" Debugging="true" />

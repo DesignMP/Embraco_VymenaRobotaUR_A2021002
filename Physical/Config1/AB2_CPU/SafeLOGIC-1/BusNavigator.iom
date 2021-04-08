@@ -33,5 +33,6 @@
 			<Channel Name="BOOL104" Mapping="NSIX0.3" Variable="SpatnaVezba_ZonaRobot" Address="Cyclic#1.Safety.SpatnaVazba_ZonaRobot" SODIndex="0x2500" SODSubIndex="0x2" />
 			<Channel Name="BOOL105" Mapping="NSIX0.4" Variable="ResetZony_Pracoviska" Address="Cyclic#1.Safety.RESET_ZonyPracovisko" SODIndex="0x2500" SODSubIndex="0x2" />
 			<Channel Name="BOOL106" Mapping="NSIX0.5" Variable="SpatnaVezba_ZonaPracovisko" Address="Cyclic#1.Safety.SpatnaVazba_ZonaPracovisko" SODIndex="0x2500" SODSubIndex="0x2" />
+			<Channel Name="BOOL107" Mapping="NSIX0.6" Variable="RobotVypnuty" Address="Cyclic#1.Robot.IN.NepouzivatRobota" SODIndex="0x2500" SODSubIndex="0x2" />
 		</Module>
 </IOOffsets>

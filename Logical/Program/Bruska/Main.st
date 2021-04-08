@@ -34,7 +34,12 @@ PROGRAM _CYCLIC
 	
     //Volanie podprogramov//
     OvlServa;
-	 
+	
+    
+    //Signály pre robota//
+    Robot.KOM_OUT.UpinaciaHlava_Otvorena:= Bruska.IN.UpinaciaHlava_Otvorena;
+    
+    
     //Reset sekcie //
     IF NOT Safety.STAV.ZonaCS_AKTIVNA THEN
         SC_Bruska.Step:= 0;
@@ -64,7 +69,7 @@ PROGRAM _CYCLIC
             Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.JoggLimit_ACTIVE:= FALSE;
             Bruska.STAV.Servo_PoziciaDosiahnuta:= FALSE;
             Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVPRED:= FALSE;
-            Bruska.OUT.Stav_PoruchaMotoraUpinacejHlavy:= FALSE;
+            
             			
             IF Safety.STAV.ZonaCS_AKTIVNA AND NOT PoruchaBrusky AND Bruska.STAV.ServoREADY THEN
                 SC_Bruska.ResetStep:= TRUE;
@@ -87,7 +92,7 @@ PROGRAM _CYCLIC
             SC_Bruska.IdleTime.PT:= T#500ms;
             SC_Bruska.AlarmTime.PT:= T#5s;
 			
-            SC_Bruska.IdleTime.IN:= (Robot.STAV.PoINIT OR Robot.IN.NepouzivatRobota);
+            SC_Bruska.IdleTime.IN:= Robot.STAV.PoINIT ;
 									
             IF SC_Bruska.IdleTime.Q THEN
                 SC_Bruska.ResetStep:= TRUE;

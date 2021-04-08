@@ -6,6 +6,7 @@
   <Operation Delete="Blikanie1s.br"/>
   <Operation Delete="Blikanie50.br"/>
   <Operation Delete="Remanentne.br"/>
+  <Operation Delete="Alarmy.br"/>
   <Operation Delete="OvladanieV.br"/>
   <Operation Delete="Robot.br"/>
   <Operation Delete="Main.br"/>
@@ -173,6 +174,7 @@
   <Operation Download="Main.br" Memory="UserROM"/>
   <Operation Download="Robot.br" Memory="UserROM"/>
   <Operation Download="OvladanieV.br" Memory="UserROM"/>
+  <Operation Download="Alarmy.br" Memory="UserROM"/>
   <Operation Download="Remanentne.br" Memory="UserROM"/>
   <Operation Download="Blikanie50.br" Memory="UserROM"/>
   <Operation Download="Blikanie1s.br" Memory="UserROM"/>

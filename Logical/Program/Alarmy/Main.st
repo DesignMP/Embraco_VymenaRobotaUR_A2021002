@@ -143,6 +143,8 @@ PROGRAM _CYCLIC
         PoruchaBrusky:= TRUE;
     END_IF
     
+    Bruska.OUT.Stav_PoruchaMotoraUpinacejHlavy:= NOT CasPoruchyServa.Q;
+    
     IF Safety.STAV.ZonaCS_AKTIVNA AND Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ERROR THEN
         CasPoruchyServa.IN:= TRUE;
     ELSE    

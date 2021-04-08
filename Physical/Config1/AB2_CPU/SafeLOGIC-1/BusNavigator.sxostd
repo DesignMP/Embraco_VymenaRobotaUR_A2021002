@@ -39,6 +39,7 @@
         <Info Name="AsVariable" Value="BOOL004,Cyclic#1.Safety.STAV.CS_Pracovisko_Odblokovany" />
         <Info Name="AsVariable" Value="BOOL009,Cyclic#1.Safety.STAV.ZonaPracovisko_AKTIVNA" />
         <Info Name="AsVariable" Value="SafeDigitalInput01,Cyclic#1.Safety.IN.Robot_CS_CH1" />
+        <Info Name="AsVariable" Value="BOOL107,Cyclic#1.Robot.IN.NepouzivatRobota" />
         <Info Name="AsVariable" Value="PhysicalStateChannel04,Cyclic#1.Safety.OUT.Zona_Pracovisko_CH2" />
         <Info Name="AsVariable" Value="SafeDigitalInput06,Cyclic#1.Safety.IN.Pracovisko_CS_CH2" />
         <Info Name="AsVariable" Value="BOOL104,Cyclic#1.Safety.SpatnaVazba_ZonaRobot" />

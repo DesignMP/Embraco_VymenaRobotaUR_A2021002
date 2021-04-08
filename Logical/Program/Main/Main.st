@@ -132,10 +132,10 @@ PROGRAM _CYCLIC
     
     //***************************************Automatický režim pracoviska**********************************************************//
     IF Zariadenie.Automat THEN
-//        Bruska.Automat:= TRUE;
-//        IF NOT Robot.IN.NepouzivatRobota THEN
-//            Robot.Automat:= TRUE;
-//        END_IF
+        Bruska.Automat:= TRUE;
+        IF Safety.STAV.ZonaRobot_AKTIVNA AND Robot.KOM_IN.Stav_RezimAUTOMAT THEN
+            Robot.Automat:= TRUE;
+        END_IF
         Zariadenie.Automat:= FALSE;
     END_IF
     

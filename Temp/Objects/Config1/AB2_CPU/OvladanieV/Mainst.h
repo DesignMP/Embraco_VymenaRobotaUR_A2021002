@@ -159,6 +159,8 @@ typedef struct ZariadenieIN_typ
 	plcbit Paletka_PritomnostKusu_OS1;
 	plcbit VystupDoprav_PritomnostKusu_OS2;
 	plcbit Otacac_PritomnostKusu_IS2;
+	plcbit VystupDoprav_Napolohovany;
+	plcbit VystupDoprav_Bezi;
 } ZariadenieIN_typ;
 #endif
 
@@ -249,6 +251,8 @@ typedef struct RobotKOM_IN_typ
 	plcbit Stav_VystupyZresetovane;
 	plcbit Stav_ZonaNavratuRobota_OK;
 	plcbit Stav_ZonaNavratuRobota_NG;
+	plcbit Stav_RobotDrziHotovyCap;
+	plcbit Stav_RobotVlozilNovyCap;
 	plcbit Gripper_OtvorDlhyUchopovac;
 	plcbit Gripper_OtvorKratkyUchopovac;
 	unsigned char Profinet_PLC_INPUTS[64];
@@ -266,6 +270,8 @@ typedef struct RobotKOM_OUT_typ
 	plcbit StartProgramuMain;
 	plcbit StopProgramu;
 	plcbit OdparkujRobota;
+	plcbit ServisnaPozicia;
+	plcbit ZahodenieKusu;
 	plcbit Paletka_PresunDoCakacejPozicie;
 	plcbit Paletka_OdoberCap;
 	plcbit Otacac_PresunDoCakacejPozicie;
@@ -277,10 +283,11 @@ typedef struct RobotKOM_OUT_typ
 	plcbit Dopravnik_PresunDoCakacejPozicie;
 	plcbit Dopravnik_PolozCap;
 	plcbit UkoncenieCykluRobota;
+	plcbit UpinaciaHlava_Otvorena;
 	plcbit Gripper_DlhyUchopov_OTVORENY;
-	plcbit Gripper_DlhyUchopov_ZATVORENY;
+	plcbit Gripper_DlhyUchopov_DRZI_KUS;
 	plcbit Gripper_KratkyUchopov_OTVORENY;
-	plcbit Gripper_KratkyUchopov_ZATVORENY;
+	plcbit Gripper_KratkyUchopov_DRZI_KUS;
 	plcbit Gripper_DlhyUchopov_PRAZDNY;
 	plcbit Gripper_KratkyUchopov_PRAZDNY;
 	unsigned char Dopravnik_UkladaciaPozicia;
@@ -336,7 +343,7 @@ typedef struct BruskaIN_typ
 	plcbit UpinaciaHlava_OtacanieVPRED;
 	plcbit UpinaciaHlava_OtacanieVZAD;
 	plcbit OchrannyKrytBrusky_Otvoreny;
-	plcbit UpinaciaHlava_Palec;
+	plcbit UpinaciaHlava_Otvorena;
 } BruskaIN_typ;
 #endif
 
@@ -1046,5 +1053,7 @@ _GLOBAL Zariadenie_typ Zariadenie;
 _GLOBAL Robot_typ Robot;
 _GLOBAL Bruska_typ Bruska;
 _GLOBAL plcbit NastalaPorucha;
+_GLOBAL plcbit PoruchaBrusky;
+_GLOBAL plcbit PoruchaRobota;
 _LOCAL plcbit Edge0000100000;
 _LOCAL plcbit Edge0000100001;

@@ -41,6 +41,11 @@ SequenceControl(&SC_Bruska);
 __AS__Action__OvlServa();
 
 
+
+(Robot.KOM_OUT.UpinaciaHlava_Otvorena=Bruska.IN.UpinaciaHlava_Otvorena);
+
+
+
 if((Safety.STAV.ZonaCS_AKTIVNA^1)){
 (SC_Bruska.Step=0);
 }else if(PoruchaBrusky){
@@ -69,7 +74,7 @@ case 0:{
 (Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.JoggLimit_ACTIVE=0);
 (Bruska.STAV.Servo_PoziciaDosiahnuta=0);
 (Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVPRED=0);
-(Bruska.OUT.Stav_PoruchaMotoraUpinacejHlavy=0);
+
 
 if((Safety.STAV.ZonaCS_AKTIVNA&(PoruchaBrusky^1)&Bruska.STAV.ServoREADY)){
 (SC_Bruska.ResetStep=1);
@@ -92,7 +97,7 @@ if(Bruska.Automat){
 (SC_Bruska.IdleTime.PT=500);
 (SC_Bruska.AlarmTime.PT=5000);
 
-(SC_Bruska.IdleTime.IN=(Robot.STAV.PoINIT|Robot.IN.NepouzivatRobota));
+(SC_Bruska.IdleTime.IN=Robot.STAV.PoINIT);
 
 if(SC_Bruska.IdleTime.Q){
 (SC_Bruska.ResetStep=1);
@@ -257,13 +262,13 @@ if((Bruska.STAV.Servo_HomingOK&((Bruska.STAV.Servo_AktualnaPozicia==0)))){
 }break;}
 
 }imp2_case2_10:imp2_endcase2_0:;}
-#line 254 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
-#line 256 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.st"
+#line 259 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
+#line 261 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 259 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
+#line 264 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/OvlServa.st"
 static void __AS__Action__OvlServa(void){
 {
@@ -511,7 +516,7 @@ if((Bruska.Servo_MOVE^1)){
 
 
 }imp16385_case4_7:imp16385_endcase4_0:;}
-#line 261 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
+#line 266 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 

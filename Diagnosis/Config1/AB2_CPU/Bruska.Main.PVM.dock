@@ -1,14 +1,16 @@
 WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=Bruska 
-Position X=0 Y=0 Width=0 Height=0 TabWidth Name=254 Type=0 Scope=0 Force=0 Index=1 ASCIIString=0
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=254 Type=0 Scope=0 Force=0 Index=6 ASCIIString=0
                                     name                                     type force                                                            value level type len format place expand specs
                                SC_Bruska                       SequenceControlTyp    0 "                                                               *"    0   24    1    0    0    1         
-                                    Step                                     UINT    0 "                                                             700"    1    6    1   10    0    0         
+                                    Step                                     UINT    0 "                                                             100"    1    6    1   10    0    0         
                                   Bruska                               Bruska_typ    0 "                                                               *"    0   24    1    0    0    1         
                                       IN                             BruskaIN_typ    0 "                                                               *"    1   24    1    0    0    1         
              UpinaciaHlava_OtacanieVPRED                                     BOOL    1 "                                                           FALSE"    2    1    1    2    0    0         
+                                     OUT                            BruskaOUT_typ    0 "                                                               *"    1   24    1    0    0    1         
+          Stav_UpinaciaHlavaSaOtacaVPRED                                     BOOL    3 "                                                           FALSE"    2    1    1    2    0    0         
                                     STAV                           BruskaSTAV_typ    0 "                                                               *"    1   24    1    0    0    1         
                    Servo_AktualnaPozicia                                    LREAL    0 "                                                             0.0"    2   14    1   10    0    0         
-                                 Automat                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                 Automat                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
                                    Robot                                Robot_typ    0 "                                                               *"    0   24    1    0    0    1         
                                     STAV                            RobotSTAV_typ    0 "                                                               *"    1   24    1    0    0    1         
-                                  PoINIT                                     BOOL    0 "                                                            TRUE"    2    1    1    2    0    0         
+                                  PoINIT                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         

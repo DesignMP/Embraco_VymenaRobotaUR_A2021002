@@ -5,10 +5,10 @@ ACTION OvladanieGripra:
     //Gripper vstupy//
       
     Robot.KOM_OUT.Gripper_DlhyUchopov_OTVORENY:= Robot.IN.DlhyUchopovac_Otvoreny_MS2;
-    Robot.KOM_OUT.Gripper_DlhyUchopov_ZATVORENY:= Robot.IN.DlhyUchopovac_Zatvoreny_MS1;
+    Robot.KOM_OUT.Gripper_DlhyUchopov_DRZI_KUS:= Robot.IN.DlhyUchopovac_Zatvoreny_MS1;
     Robot.KOM_OUT.Gripper_DlhyUchopov_PRAZDNY:= CasZatvorenia_DlhyUchopovac.Q;
     Robot.KOM_OUT.Gripper_KratkyUchopov_OTVORENY:= Robot.IN.KratkyUchopovac_Otvoreny_MS4;
-    Robot.KOM_OUT.Gripper_KratkyUchopov_ZATVORENY:= Robot.IN.KratkyUchopovac_Zatvoreny_MS3;
+    Robot.KOM_OUT.Gripper_KratkyUchopov_DRZI_KUS:= Robot.IN.KratkyUchopovac_Zatvoreny_MS3;
     Robot.KOM_OUT.Gripper_KratkyUchopov_PRAZDNY:= CasZatvorenia_KratkyUchopovac.Q;
     
     

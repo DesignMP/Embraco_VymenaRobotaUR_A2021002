@@ -4,16 +4,19 @@
   <Folder Name="ColorMapTable">
     <Folder Name="POBJ">
       <Object Name="StavyZariadenia" ClsId="0x1805" Version="1" Type="CLM" RefString="Source[local].ColorMap[StavyZariadenia]">
-        <Int32 Name="Count">3</Int32>
-        <UInt16 Name="Index">1</UInt16>
+        <Int32 Name="Count">4</Int32>
+        <UInt16 Name="Index">2</UInt16>
         <Byte Name="ForeColor">0</Byte>
         <Byte Name="BackColor">10</Byte>
-        <UInt16 Name="Index">2</UInt16>
+        <UInt16 Name="Index">3</UInt16>
         <Byte Name="ForeColor">0</Byte>
         <Byte Name="BackColor">51</Byte>
         <UInt16 Name="Index">0</UInt16>
         <Byte Name="ForeColor">0</Byte>
         <Byte Name="BackColor">249</Byte>
+        <UInt16 Name="Index">1</UInt16>
+        <Byte Name="ForeColor">0</Byte>
+        <Byte Name="BackColor">124</Byte>
       </Object>
     </Folder>
   </Folder>

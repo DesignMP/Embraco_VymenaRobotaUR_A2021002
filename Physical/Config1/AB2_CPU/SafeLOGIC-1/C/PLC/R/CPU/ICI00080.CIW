@@ -5,4 +5,4 @@ QWS: 00005
 00002	00020	POE\Main\VyblokovanieSafety.gb
 00003	00082	POE\Main\ZonaCS.gb
 00004	00069	POE\Main\ZonaRobot.gb
-00005	00079	POE\Main\ZonaPracovisko.gb
+00005	00085	POE\Main\ZonaPracovisko.gb

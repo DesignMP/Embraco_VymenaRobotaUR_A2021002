@@ -7,6 +7,7 @@ Release_ZonaRobot,POE\Main\ZonaRobot.GB,4,OUT,28,16,Write,,BOOL,NSQX2.1,,VAR_GLO
 ResetZony_CS,POE\Main\ZonaCS.GB,3,IN,62,19,Read,,BOOL,NSIX0.0,,VAR_GLOBAL,GLOBAL,,
 ResetZony_Pracoviska,POE\Main\ZonaPracovisko.GB,2,IN,51,55,Read,,BOOL,NSIX0.4,,VAR_GLOBAL,GLOBAL,,
 ResetZony_Robot,POE\Main\ZonaRobot.GB,3,IN,41,0,Read,,BOOL,NSIX0.1,,VAR_GLOBAL,GLOBAL,,
+RobotVypnuty,POE\Main\ZonaPracovisko.GB,5,IN,106,18,Read,,BOOL,NSIX0.6,,VAR_GLOBAL,GLOBAL,,
 SafetyPLC_Nabehlo,POE\Main\Main.GB,2,OUT,2,79,Write,,BOOL,NSQX0.0,,VAR_GLOBAL,GLOBAL,,
 SI_CS_Pracovisko_CH1,POE\Main\ZonaCS.GB,1,IN,26,24,Read,,SAFEBOOL,SIX16.4,,VAR_GLOBAL,GLOBAL,,
 SI_CS_Pracovisko_CH2,POE\Main\ZonaCS.GB,1,IN,27,24,Read,,SAFEBOOL,SIX16.5,,VAR_GLOBAL,GLOBAL,,

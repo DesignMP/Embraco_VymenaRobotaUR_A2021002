@@ -73,7 +73,7 @@ typedef struct BruskaIN_typ
 	plcbit UpinaciaHlava_OtacanieVPRED;
 	plcbit UpinaciaHlava_OtacanieVZAD;
 	plcbit OchrannyKrytBrusky_Otvoreny;
-	plcbit UpinaciaHlava_Palec;
+	plcbit UpinaciaHlava_Otvorena;
 } BruskaIN_typ;
 #endif
 

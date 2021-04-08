@@ -2,9 +2,9 @@
 T: RESOURCE CPU
 FW: NO
 CI#: 0
-QSL: 33
-QVE: 33
-QVPC: 33
+QSL: 34
+QVE: 34
+QVPC: 34
 QPar: 0
 QFBI: 0
 *)
@@ -140,68 +140,74 @@ SpatnaVezba_ZonaPracovisko	22	VAR_GLOBAL	@TYP:1
 
 ;
 
-@V 1 27 0
-SafetyPLC_Nabehlo	23	VAR_GLOBAL	@TYP:1
-%NSQX 0.0		     
+@V 1 26 0
+RobotVypnuty	23	VAR_GLOBAL	@TYP:1
+%NSIX 0.6		     
 
 ;
 
 @V 1 28 0
-ZonaCS_AKTIVNA	24	VAR_GLOBAL	@TYP:1
-%NSQX 0.1		     
+SafetyPLC_Nabehlo	24	VAR_GLOBAL	@TYP:1
+%NSQX 0.0		     
 
 ;
 
 @V 1 29 0
-ZonaRobot_AKTIVNA	25	VAR_GLOBAL	@TYP:1
-%NSQX 0.2		     
+ZonaCS_AKTIVNA	25	VAR_GLOBAL	@TYP:1
+%NSQX 0.1		     
 
 ;
 
 @V 1 30 0
-CS_Pracoviska_AKTIVNE	26	VAR_GLOBAL	@TYP:1
-%NSQX 0.3		     
+ZonaRobot_AKTIVNA	26	VAR_GLOBAL	@TYP:1
+%NSQX 0.2		     
 
 ;
 
 @V 1 31 0
-CS_Robota_AKTIVNE	27	VAR_GLOBAL	@TYP:1
-%NSQX 0.4		     
+CS_Pracoviska_AKTIVNE	27	VAR_GLOBAL	@TYP:1
+%NSQX 0.3		     
 
 ;
 
 @V 1 32 0
-VyblokovanieSafety_AKTIVNE	28	VAR_GLOBAL	@TYP:1
-%NSQX 0.5		     
+CS_Robota_AKTIVNE	28	VAR_GLOBAL	@TYP:1
+%NSQX 0.4		     
 
 ;
 
 @V 1 33 0
-ZonaRobot_Odblokovana	29	VAR_GLOBAL	@TYP:1
-%NSQX 0.6		     
+VyblokovanieSafety_AKTIVNE	29	VAR_GLOBAL	@TYP:1
+%NSQX 0.5		     
 
 ;
 
 @V 1 34 0
-ZonaPracovisko_Odblokovana	30	VAR_GLOBAL	@TYP:1
-%NSQX 0.7		     
+ZonaRobot_Odblokovana	30	VAR_GLOBAL	@TYP:1
+%NSQX 0.6		     
 
 ;
 
 @V 1 35 0
-ZonaPracovisko_AKTIVNA	31	VAR_GLOBAL	@TYP:1
+ZonaPracovisko_Odblokovana	31	VAR_GLOBAL	@TYP:1
+%NSQX 0.7		     
+
+;
+
+@V 1 36 0
+ZonaPracovisko_AKTIVNA	32	VAR_GLOBAL	@TYP:1
 %NSQX 1.0		     
 
 ;
 
-@V 1 37 0
-Status_ZonaCS_AKTIVNA	32	VAR_GLOBAL	@TYP:43
+@V 1 38 0
+Status_ZonaCS_AKTIVNA	33	VAR_GLOBAL	@TYP:43
 		     
 
 ;
 
-@V 1 38 0
-Status_ZamkyVyblokovane	33	VAR_GLOBAL	@TYP:43
+@V 1 39 0
+Status_ZamkyVyblokovane	34	VAR_GLOBAL	@TYP:43
 		     
 
 ;

@@ -180,8 +180,6 @@ VAR_CONFIG
 	Cyclic#1.Zariadenie.OUT.Majak_ZlteSvetlo AT %QX."AB7_16DO".DigitalOutput10;
 	Cyclic#1.Zariadenie.OUT.Majak_CerveneSvetlo AT %QX."AB7_16DO".DigitalOutput11;
 	Cyclic#1.Zariadenie.OUT.Majak_Hukacka AT %QX."AB7_16DO".DigitalOutput12;
-	Cyclic#1.Bruska.IN.UpinaciaHlava_OtacanieVPRED AT %IX."AB6_16DI".DigitalInput05;
-	Cyclic#1.Bruska.IN.UpinaciaHlava_OtacanieVZAD AT %IX."AB6_16DI".DigitalInput06;
 	Cyclic#1.Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVPRED AT %QX."AB7_16DO".DigitalOutput13;
 	Cyclic#1.Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVZAD AT %QX."AB7_16DO".DigitalOutput14;
 	Cyclic#1.Bruska.OUT.Stav_PoruchaMotoraUpinacejHlavy AT %QX."AB7_16DO".DigitalOutput15;
@@ -192,8 +190,13 @@ VAR_CONFIG
 	Cyclic#1.Safety.STAV.ZonaPracovisko_Odblokovana AT %IX."AB4_SafetyMaster".BOOL008;
 	Cyclic#1.Safety.STAV.ZonaPracovisko_AKTIVNA AT %IX."AB4_SafetyMaster".BOOL009;
 	Cyclic#1.Bruska.IN.OchrannyKrytBrusky_Otvoreny AT %IX."AB6_16DI".DigitalInput11;
-	Cyclic#1.Bruska.IN.UpinaciaHlava_Palec AT %IX."AB6_16DI".DigitalInput12;
+	Cyclic#1.Bruska.IN.UpinaciaHlava_Otvorena AT %IX."AB6_16DI".DigitalInput12;
 	Cyclic#1.Robot.OUT.OtvorKratkyUchopovac_YV2 AT %QX."AB7_16DO".DigitalOutput05;
 	Cyclic#1.Robot.OUT.OtvorDlhyUchopovac_YV1 AT %QX."AB7_16DO".DigitalOutput07;
 	Cyclic#1.Robot.IN.NepouzivatRobota AT %IX."AB6_16DI".DigitalInput13;
+	Cyclic#1.Bruska.IN.UpinaciaHlava_OtacanieVPRED AT %IX."AB5_16DI".DigitalInput13;
+	Cyclic#1.Bruska.IN.UpinaciaHlava_OtacanieVZAD AT %IX."AB5_16DI".DigitalInput14;
+	Cyclic#1.Robot.IN.NepouzivatRobota AT %QX."AB4_SafetyMaster".BOOL107;
+	Cyclic#1.Zariadenie.IN.VystupDoprav_Napolohovany AT %IX."AB6_16DI".DigitalInput14;
+	Cyclic#1.Zariadenie.IN.VystupDoprav_Bezi AT %IX."AB6_16DI".DigitalInput15;
 END_VAR
