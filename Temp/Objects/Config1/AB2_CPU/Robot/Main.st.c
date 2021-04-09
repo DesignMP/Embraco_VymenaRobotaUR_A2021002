@@ -67,7 +67,6 @@ __AS__Action__OvladanieGripra();
 
 
 
-(Robot.KOM_OUT.ServisnaPozicia=Robot.IN.NepouzivatRobota);
 
 
 
@@ -240,7 +239,7 @@ if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if((Robot.KOM_IN.Stav_RobotCinnostUkoncena&Bruska.STAV.PoINIT)){
+if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (Robot.KOM_OUT.ServisnaPozicia=0);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=0);
@@ -280,6 +279,10 @@ if((Robot.KoniecCyklu&(Robot.KOM_OUT.Paletka_OdoberCap^1))){
 (Robot.KOM_OUT.OdparkujRobota=1);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=116);
+}else if(Robot.IN.NepouzivatRobota){
+(Robot.KOM_OUT.ServisnaPozicia=1);
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=103);
 }else if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)3))&Zariadenie.IN.Paletka_PritomnostKusu_OS1&(Robot.KoniecCyklu^1))){
 (Robot.KOM_OUT.Paletka_OdoberCap=1);
 }
@@ -289,6 +292,9 @@ if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (Robot.PAR.CisloAktualnejPozicie=3);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=118);
+}else if(Robot.KOM_IN.Stav_PoruchaRobota){
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=0);
 }
 
 
@@ -365,6 +371,9 @@ if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
 (Robot.PAR.CisloAktualnejPozicie=5);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=133);
+}else if(Robot.KOM_IN.Stav_PoruchaRobota){
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=0);
 }
 
 }break;case 133:{
@@ -469,7 +478,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)8))){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)8))&Bruska.IN.OchrannyKrytBrusky_Otvoreny)){
 (Robot.KOM_OUT.Dopravnik_PresunDoCakacejPozicie=1);
 }
 
@@ -559,13 +568,13 @@ if((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long
 
 
 }imp3_case1_28:imp3_endcase1_0:;}
-#line 556 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
-#line 558 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
+#line 565 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 567 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 561 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 570 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/ProfinetKomunikaciaRobot.st"
 static void __AS__Action__ProfinetKomunikaciaRobot(void){
 {
@@ -588,6 +597,7 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 (Robot.KOM_IN.Stav_VystupyZresetovane=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[2]))->bit0);
 (Robot.KOM_IN.Stav_ZonaNavratuRobota_NG=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[2]))->bit1);
 (Robot.KOM_IN.Stav_ZonaNavratuRobota_OK=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[2]))->bit2);
+(Robot.KOM_IN.Stav_PoruchaRobota=((_1byte_bit_field_*)(&Robot.KOM_IN.Profinet_PLC_INPUTS[2]))->bit3);
 
 
 
@@ -635,7 +645,7 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 
 
 }}
-#line 563 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 572 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/OvladanieGripra.st"
 static void __AS__Action__OvladanieGripra(void){
 {
@@ -672,7 +682,7 @@ TON(&CasZatvorenia_KratkyUchopovac);
 
 
 }}
-#line 563 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 572 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 

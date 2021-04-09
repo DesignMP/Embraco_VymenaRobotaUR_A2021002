@@ -19,13 +19,22 @@ void _CYCLIC __BUR__ENTRY_CYCLIC_FUNCT__(void){{
 
 
 
-if((Robot.KOM_IN.Stav_RezimAUTOMAT^1)){
+if(((Robot.KOM_IN.Stav_RezimAUTOMAT^1)&(Robot.IN.NepouzivatRobota^1))){
 (Vizu.StavZariadenia_Index=3);
 (Vizu.StavZariadenia_Farba=3);
-}else if((Zariadenie.STAV.Automat&(Zariadenie.STAV.PoINIT^1))){
+}else if((Robot.Automat&(Robot.STAV.PoINIT^1))){
 (Vizu.StavZariadenia_Index=1);
 (Vizu.StavZariadenia_Farba=1);
-}else if((Zariadenie.STAV.Automat&Zariadenie.STAV.PoINIT)){
+}else if((Bruska.Automat&(Bruska.STAV.PoINIT^1))){
+(Vizu.StavZariadenia_Index=1);
+(Vizu.StavZariadenia_Farba=1);
+}else if((Robot.Automat&Robot.STAV.PoINIT&(Bruska.Automat^1))){
+(Vizu.StavZariadenia_Index=2);
+(Vizu.StavZariadenia_Farba=2);
+}else if((Bruska.Automat&Bruska.STAV.PoINIT&(Robot.Automat^1))){
+(Vizu.StavZariadenia_Index=2);
+(Vizu.StavZariadenia_Farba=2);
+}else if((Bruska.Automat&Bruska.STAV.PoINIT&Robot.Automat&Robot.STAV.PoINIT)){
 (Vizu.StavZariadenia_Index=2);
 (Vizu.StavZariadenia_Farba=2);
 }else{
@@ -117,11 +126,8 @@ if((Safety.STAV.ZonaCS_AKTIVNA^1)){
 }
 
 
-if(Zariadenie.STAV.PoINIT){
 (Vizu.TL_UkoncenieCyklu_DISABLE=0);
-}else{
-(Vizu.TL_UkoncenieCyklu_DISABLE=1);
-}
+
 
 
 if((Bruska.STAV.Servo_HomingOK^1)){
@@ -165,14 +171,14 @@ if(Zariadenie.STAV.Automat){
 (Vizu.TL_OdparkovanieRobota_DISABLE=0);
 }
 
-}imp1_end14_0:;}
-#line 163 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
-#line 165 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
+}imp1_end13_0:;}
+#line 169 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 171 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 168 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 174 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 

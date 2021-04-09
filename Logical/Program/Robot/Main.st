@@ -61,8 +61,7 @@ PROGRAM _CYCLIC
     OvladanieGripra;
     
     
-    //Signály pre robota//
-    Robot.KOM_OUT.ServisnaPozicia:= Robot.IN.NepouzivatRobota;
+   
         
     
     //Reset sekcie //
@@ -235,7 +234,7 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;         
                 
-            IF Robot.KOM_IN.Stav_RobotCinnostUkoncena AND Bruska.STAV.PoINIT THEN
+            IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
                 Robot.KOM_OUT.ServisnaPozicia:= FALSE;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 0;
@@ -275,6 +274,10 @@ PROGRAM _CYCLIC
                 Robot.KOM_OUT.OdparkujRobota:= TRUE;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 116;
+             ELSIF Robot.IN.NepouzivatRobota THEN
+                Robot.KOM_OUT.ServisnaPozicia:= TRUE;
+                SC_Robot.ResetStep:= TRUE;
+                SC_Robot.Step:= 103;   
             ELSIF Robot.PAR.CisloZadanejPozicie = 3 AND Zariadenie.IN.Paletka_PritomnostKusu_OS1 AND NOT Robot.KoniecCyklu THEN
                 Robot.KOM_OUT.Paletka_OdoberCap:= TRUE;
             END_IF
@@ -284,6 +287,9 @@ PROGRAM _CYCLIC
                 Robot.PAR.CisloAktualnejPozicie:= 3;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 118;
+            ELSIF Robot.KOM_IN.Stav_PoruchaRobota THEN
+                SC_Robot.ResetStep:= TRUE;
+                SC_Robot.Step:= 0;
             END_IF
         
             
@@ -360,6 +366,9 @@ PROGRAM _CYCLIC
                 Robot.PAR.CisloAktualnejPozicie:= 5;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 133;
+            ELSIF Robot.KOM_IN.Stav_PoruchaRobota THEN
+                SC_Robot.ResetStep:= TRUE;
+                SC_Robot.Step:= 0;    
             END_IF
         
         133:
@@ -464,7 +473,7 @@ PROGRAM _CYCLIC
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 8 THEN
+            IF Robot.PAR.CisloZadanejPozicie = 8 AND Bruska.IN.OchrannyKrytBrusky_Otvoreny THEN
                 Robot.KOM_OUT.Dopravnik_PresunDoCakacejPozicie:= TRUE;
             END_IF    
             

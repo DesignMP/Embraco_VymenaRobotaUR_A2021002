@@ -181,6 +181,7 @@ typedef struct RobotKOM_IN_typ
 	plcbit Stav_ZonaNavratuRobota_NG;
 	plcbit Stav_RobotDrziHotovyCap;
 	plcbit Stav_RobotVlozilNovyCap;
+	plcbit Stav_PoruchaRobota;
 	plcbit Gripper_OtvorDlhyUchopovac;
 	plcbit Gripper_OtvorKratkyUchopovac;
 	unsigned char Profinet_PLC_INPUTS[64];

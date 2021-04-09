@@ -97,7 +97,16 @@ if(Bruska.Automat){
 (SC_Bruska.IdleTime.PT=500);
 (SC_Bruska.AlarmTime.PT=5000);
 
-(SC_Bruska.IdleTime.IN=Robot.STAV.PoINIT);
+if(Robot.STAV.PoINIT){
+(SC_Bruska.IdleTime.IN=1);
+}else if((Safety.STAV.ZonaRobot_AKTIVNA^1)){
+(SC_Bruska.IdleTime.IN=1);
+}else if((Robot.KOM_IN.Stav_RezimAUTOMAT^1)){
+(SC_Bruska.IdleTime.IN=1);
+}else if(Robot.IN.NepouzivatRobota){
+(SC_Bruska.IdleTime.IN=1);
+}
+
 
 if(SC_Bruska.IdleTime.Q){
 (SC_Bruska.ResetStep=1);
@@ -214,7 +223,7 @@ if((Bruska.IN.UpinaciaHlava_OtacanieVPRED^1)){
 
 if(((SC_Bruska.Switch1^1)&(((unsigned long)(unsigned short)SC_OvlServa.Step==(unsigned long)(unsigned short)1)))){
 (Bruska.STAV.Servo_AktualnyPocetOtacok=(Bruska.STAV.Servo_AktualnaPozicia/360));
-(AktualnyPocetOtacokINT=(((signed long)(Bruska.STAV.Servo_AktualnyPocetOtacok))+10));
+(AktualnyPocetOtacokINT=(((signed long)(Bruska.STAV.Servo_AktualnyPocetOtacok))+6));
 (AktualnyPocetOtacokLREAL=(double)AktualnyPocetOtacokINT);
 (Bruska.PAR.Servo_PoziciaNatocenia=(AktualnyPocetOtacokLREAL*360));
 (Bruska.PAR.Servo_RychlostPolohovania=(RemPremenne.Bruska_RychlosOtacania*4.50000000000000000000E+00));
@@ -262,13 +271,13 @@ if((Bruska.STAV.Servo_HomingOK&((Bruska.STAV.Servo_AktualnaPozicia==0)))){
 }break;}
 
 }imp2_case2_10:imp2_endcase2_0:;}
-#line 259 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
-#line 261 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.st"
+#line 268 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
+#line 270 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 264 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
+#line 273 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/OvlServa.st"
 static void __AS__Action__OvlServa(void){
 {
@@ -322,8 +331,8 @@ TON(&CasPowerON);
 
 
 (Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Acceleration=(Bruska.PAR.Servo_RychlostPolohovania*1));
-(Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Deceleration=(Bruska.PAR.Servo_RychlostPolohovania*1));
-(Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.StopDeceleration=(Bruska.PAR.Servo_RychlostPolohovania*5));
+(Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Deceleration=(Bruska.PAR.Servo_RychlostPolohovania*3));
+(Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.StopDeceleration=(Bruska.PAR.Servo_RychlostPolohovania*3));
 (Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Velocity=Bruska.PAR.Servo_RychlostPolohovania);
 (Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Position=Bruska.PAR.Servo_PoziciaNatocenia);
 
@@ -516,7 +525,7 @@ if((Bruska.Servo_MOVE^1)){
 
 
 }imp16385_case4_7:imp16385_endcase4_0:;}
-#line 266 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
+#line 275 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 

@@ -20,7 +20,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\widgets\brease\numpad\meta\numpad_copied.markerfile" LastWriteTime="2021-03-19 12:40:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\widgets\brease\keyboard\meta\keyboard_copied.markerfile" LastWriteTime="2021-03-19 12:40:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\wwwroot\brvisu\widgets\brease\datetimepicker\meta\datetimepicker_copied.markerfile" LastWriteTime="2021-03-19 12:40:08" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job" LastWriteTime="2021-04-08 14:40:32" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job" LastWriteTime="2021-04-09 14:13:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job._markerfile" LastWriteTime="1601-01-01 00:00:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\validateeventbindings._markerfile" LastWriteTime="2021-03-19 12:40:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\data\server\__systemvariables.sessionvar" LastWriteTime="2021-03-19 12:40:06" />
@@ -172,7 +172,7 @@
     <CommandLine Parameter="-category CopyDirectory -i &quot;C:/BrAutomation/AS47/AS/TechnologyPackages/mappView/5.13.1/Widgets/brease/DateTimePicker&quot; -o &quot;D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/.mappView/data/wwwRoot/BRVisu/widgets/brease/DateTimePicker&quot; -markerFile &quot;D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/.mappView/data/wwwRoot/BRVisu/widgets/brease/DateTimePicker/meta/DateTimePicker_Copied.markerFile&quot; -cultureName &quot;sk-SK&quot; -uiCultureName &quot;en-US&quot;" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job._markerfile">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job" LastWriteTime="2021-04-08 14:40:32" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job" LastWriteTime="2021-04-09 14:13:02" />
     <CommandLine Parameter="-category BulkCopy -i &quot;D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/IAT_MEDIA.job&quot; -o &quot;D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/IAT_MEDIA.job._markerfile&quot; -markerFile &quot;D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Temp/Objects/Config1/AB2_CPU/IAT_MEDIA.job._markerfile&quot; -cultureName &quot;sk-SK&quot; -uiCultureName &quot;en-US&quot;" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\.mappview\validatebindings._markerfile">
@@ -827,25 +827,25 @@
     <CommandLine Parameter="'$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\SafeLOGIC-1\DLFiles\assl1.bin' -o '$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\assl1.br' -t SafetyApp" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ashwac.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-03-31 14:12:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-04-09 09:38:06" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Config1\Hardware.hw&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\ashwac.br&quot; -L &quot;AsBrStr: V*, AsIecCon: V*, AsSafety: V*, astime: V*, AsXml: V*, AsZip: V*, AxisLib: V*, CoTrace: V5.13.0, DataObj: V*, FileIO: V*, McAcpAx: V5.13.2, McAxis: V5.13.2, McBase: V5.13.2, McStpAx: V5.13.2, MpAxis: V5.13.2, MpBase: V5.13.0, MpRecipe: V5.13.1, Operator: V*, Runtime: V*, SC: V*, standard: V*, sys_lib: V*&quot; -c &quot;Config1&quot; -Z &quot;mappMotion: 5.13.2, mappCockpit: 5.13.1, mappView: 5.13.1, mapp: 5.13.1, SafetyRelease: 1.10.0, UnitSystem: n.d, Connectivity: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; -M ARM -B C4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;Config1&quot; -T SG4 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sysconf.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-03-31 14:12:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-04-09 09:38:06" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Config1\Hardware.hw&quot;  -c &quot;Config1&quot; -sysconf -S &quot;AB2_CPU&quot; -Z &quot;mappMotion: 5.13.2, mappCockpit: 5.13.1, mappView: 5.13.1, mapp: 5.13.1, SafetyRelease: 1.10.0, UnitSystem: n.d, Connectivity: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\sysconf.br&quot; -T SG4 -B C4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;Config1&quot; " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\asfw.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-03-31 14:12:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-04-09 09:38:06" />
     <Prerequisite ID="c:\brautomation\as47\upgrades\modified.txt" LastWriteTime="2020-09-13 14:57:14" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Config1\Hardware.hw&quot;  -v V1.00.0 -S &quot;AB2_CPU&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\asfw.br&quot; -T SG4 -B C4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;Config1&quot; -zip -s &quot;Config1&quot; -firmware -Z &quot;mappMotion: 5.13.2, mappCockpit: 5.13.1, mappView: 5.13.1, mapp: 5.13.1, SafetyRelease: 1.10.0, UnitSystem: n.d, Connectivity: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ashwd.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-03-31 14:12:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-04-09 09:38:06" />
     <Prerequisite ID="c:\brautomation\as47\upgrades\modified.txt" LastWriteTime="2020-09-13 14:57:14" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Config1\Hardware.hw&quot;  -v V1.00.0 -S &quot;AB2_CPU&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\ashwd.br&quot; -T SG4 -B C4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;Config1&quot; -zip -s &quot;Config1&quot; -hwd -Z &quot;mappMotion: 5.13.2, mappCockpit: 5.13.1, mappView: 5.13.1, mapp: 5.13.1, SafetyRelease: 1.10.0, UnitSystem: n.d, Connectivity: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\arconfig.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-03-31 14:12:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-04-09 09:38:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\iomap.iom" LastWriteTime="2021-04-08 11:01:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\dtm\ab1_profinetmaster\ab1_profinetmaster.dtm" LastWriteTime="2021-03-29 14:16:22" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Config1\Hardware.hw&quot; &quot;$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\IoMap.iom&quot;  -arconfig -C &quot;/COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.0.1 /REPO=11159 /ANSL=1 /PT=11169&quot; -D &quot;/IF=tcpip /LOPO=11159 /SA=1&quot; -c &quot;Config1&quot; -v V1.00.0 -S &quot;AB2_CPU&quot; -Z &quot;mappMotion: 5.13.2, mappCockpit: 5.13.1, mappView: 5.13.1, mapp: 5.13.1, SafetyRelease: 1.10.0, UnitSystem: n.d, Connectivity: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\arconfig.br&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\ChannelConfiguration.xml&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\HardwareConfiguration.xml&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\ReActionTechnologyConfiguration.xml&quot; -T SG4 -B C4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;Config1&quot; " />
@@ -877,10 +877,10 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iomap.br">
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\iomap.iom" LastWriteTime="2021-04-08 11:01:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\pvmap.vvm" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-03-31 14:12:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\hardware.hw" LastWriteTime="2021-04-09 09:38:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.sw" LastWriteTime="2021-04-06 10:27:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\channelconfiguration.xml" LastWriteTime="2021-03-15 13:53:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\IoMap.iom&quot; &quot;$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\PvMap.vvm&quot;  -m &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\ConfigInfo.cfi&quot; -g &quot;$(AS_PROJECT_PATH)\Temp\Objects\Declarations.lst&quot; -x &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\ChannelConfiguration.xml&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU&quot; -iomap -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\iomap.br&quot; -T SG4 -B C4.73 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;Config1.AB2_CPU&quot;" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\tcdata\tcdata.imx">
@@ -925,7 +925,7 @@
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\mappCockpit\TraceConfi.tracecfg&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\TraceConfi.br&quot; -zip -B C4.73 -L &quot;CoTrace: V5.13.0&quot; -z 5.13.1 -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;Config1&quot; " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\riadeniese.ox" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\riadeniese.ox" LastWriteTime="2021-04-09 07:29:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.per" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
@@ -936,7 +936,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\RiadenieSe.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\Config1\AB2_CPU\LT.ofs&quot; -T SG4 -M ARM -B C4.73 -G V6.3.0  -extConstants -d &quot;runtime: V* - V*,asieccon: V* - V*&quot; -r Cyclic1 -p 2 -s &quot;RiadenieServ.RiadenieServ&quot; -L &quot;AsBrStr: V*, AsIecCon: V*, AsSafety: V*, astime: V*, AsXml: V*, AsZip: V*, AxisLib: V*, CoTrace: V5.13.0, DataObj: V*, FileIO: V*, McAcpAx: V5.13.2, McAxis: V5.13.2, McBase: V5.13.2, McStpAx: V5.13.2, MpAxis: V5.13.2, MpBase: V5.13.0, MpRecipe: V5.13.1, Operator: V*, Runtime: V*, SC: V*, standard: V*, sys_lib: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="VolatileMemory" Value="65535" />
@@ -945,7 +945,7 @@
     <AdditionalBuildTrigger Key="RemanentMemory" Value="0" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\riadeniese.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\a.out" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\a.out" LastWriteTime="2021-04-09 07:29:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -955,13 +955,13 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\RiadenieSe.ox&quot; -T SG4 -M ARM -r Cyclic1 -G V6.3.0  -B C4.73 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -971,7 +971,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
     <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\Main.st.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\_bur_pvdef.st.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\a.out&quot; -G V6.3.0  -T SG4 -M ARM &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libSC.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libAxisLib.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\SG4\Arm\libCoTrace.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\SG4\Arm\libMpRecipe.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\SG4\Arm\libMpAxis.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\SG4\Arm\libMcStpAx.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\SG4\Arm\libMcAcpAx.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsSafety.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsIecCon.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\SG4\Arm\libMcAxis.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsZip.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libDataObj.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libsys_lib.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libFileIO.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libastime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\SG4\Arm\libMpBase.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McBase\SG4\Arm\libMcBase.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsXml.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsBrStr.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libstandard.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libOperator.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libRuntime.a&quot; -specs=ARMspecs_brelf -nostdlib -lm" />
   </Rule>
@@ -986,13 +986,13 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\RiadenieServ\RiadenieServ\Main.st&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\Main.st.c&quot; -T SG4 -M ARM -B C4.73 -G V6.3.0  -s &quot;RiadenieServ.RiadenieServ&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -pointers -extComments -extBitAccess -extConstants -D _SG4 -l &quot;$(AS_PROJECT_PATH)\Logical\RiadenieServ\RiadenieServ\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\RiadenieServ\RiadenieServ\Variables.var&quot; -g &quot;$(AS_PROJECT_PATH)\Logical\Global.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\DatumCasPLC\DatumCasGlobal.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBaseCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAxCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAxCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxisCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipe.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipeAlarm.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipeError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Operator\operator.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\AxisLib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\SC.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipe.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Global.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\DatumCasPLC\DatumCasGlobal.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\McElements.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\Constants.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\Constants.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.var&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.c" LastWriteTime="2021-04-08 09:55:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.c" LastWriteTime="2021-04-09 07:29:50" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1002,14 +1002,14 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\Main.st.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\Main.st.o&quot; -T SG4 -M ARM -B C4.73 -G V6.3.0  -s &quot;RiadenieServ.RiadenieServ&quot; -specs=ARMspecs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\RiadenieServ\RiadenieServ&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\RiadenieServ\RiadenieServ&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\RiadenieServ&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -ansi -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -ggdb -Wall -w -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Libraries.h&quot; -ansic -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as47\as\gnuinst\v6.3.0\arm-eabi\include\bur\_bur_pvdef.st" LastWriteTime="2019-10-10 08:00:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1019,14 +1019,14 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
     <CommandLine Parameter="&quot;C:\BrAutomation\AS47\AS\GnuInst\V6.3.0\arm-eabi\include\bur\_bur_pvdef.st&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\_bur_pvdef.st.c&quot; -S &quot;Main.st&quot;  -T SG4 -M ARM -B C4.73 -G V6.3.0  -s &quot;RiadenieServ.RiadenieServ&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -pointers -extComments -extBitAccess -extConstants -D _SG4 -l &quot;$(AS_PROJECT_PATH)\Logical\RiadenieServ\RiadenieServ\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\RiadenieServ\RiadenieServ\Variables.var&quot; -g &quot;$(AS_PROJECT_PATH)\Logical\Global.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\DatumCasPLC\DatumCasGlobal.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBaseCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAxCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAxCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxisCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipe.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipeAlarm.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipeError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Operator\operator.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\AxisLib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\SC.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipe.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Global.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\DatumCasPLC\DatumCasGlobal.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\McElements.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\Constants.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\Constants.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.var&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.c" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\_bur_pvdef.st.c" LastWriteTime="2021-04-09 07:29:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1036,13 +1036,13 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\_bur_pvdef.st.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\RiadenieSe\_bur_pvdef.st.o&quot; -T SG4 -M ARM -B C4.73 -G V6.3.0  -s &quot;RiadenieServ.RiadenieServ&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=ARMspecs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\RiadenieServ\RiadenieServ&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\RiadenieServ\RiadenieServ&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\RiadenieServ&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -ggdb -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Libraries.h&quot; -P &quot;$(AS_PROJECT_PATH)&quot;" />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\limitnesni.ox" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\limitnesni.ox" LastWriteTime="2021-04-09 07:29:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.per" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1052,7 +1052,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\riadenieserv\limitnesnimace\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
@@ -1063,7 +1063,7 @@
     <AdditionalBuildTrigger Key="RemanentMemory" Value="0" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\limitnesni.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\a.out" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\a.out" LastWriteTime="2021-04-09 07:29:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1072,15 +1072,15 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\riadenieserv\limitnesnimace\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\LimitneSni\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\LimitneSni\LimitneSni.ox&quot; -T SG4 -M ARM -r Cyclic3 -G V6.3.0  -B C4.73 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1089,7 +1089,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\riadenieserv\limitnesnimace\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
@@ -1105,7 +1105,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\riadenieserv\limitnesnimace\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
@@ -1113,7 +1113,7 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.c" LastWriteTime="2021-04-08 09:55:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.c" LastWriteTime="2021-04-09 07:29:50" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1122,7 +1122,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\riadenieserv\limitnesnimace\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
@@ -1131,7 +1131,7 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as47\as\gnuinst\v6.3.0\arm-eabi\include\bur\_bur_pvdef.st" LastWriteTime="2019-10-10 08:00:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1140,7 +1140,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\riadenieserv\limitnesnimace\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
@@ -1148,8 +1148,8 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.c" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\_bur_pvdef.st.c" LastWriteTime="2021-04-09 07:29:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\axislib.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1158,7 +1158,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\riadenieserv\limitnesnimace\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappmotion\config_1.axis" LastWriteTime="2021-04-01 07:57:12" />
@@ -1342,7 +1342,7 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\bruska.ox" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\bruska.ox" LastWriteTime="2021-04-09 13:43:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.per" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
@@ -1350,7 +1350,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1364,14 +1364,14 @@
     <AdditionalBuildTrigger Key="RemanentMemory" Value="0" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\bruska.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\a.out" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\a.out" LastWriteTime="2021-04-09 13:43:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\variables.var" LastWriteTime="2021-03-29 12:25:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1381,15 +1381,15 @@
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Bruska\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Bruska\Bruska.ox&quot; -T SG4 -M ARM -r Cyclic4 -G V6.3.0  -B C4.73 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" LastWriteTime="2021-04-09 13:43:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.o" LastWriteTime="2021-04-09 13:43:10" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\variables.var" LastWriteTime="2021-03-29 12:25:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1399,15 +1399,15 @@
     <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Bruska\Main.st.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Bruska\_bur_pvdef.st.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Bruska\a.out&quot; -G V6.3.0  -T SG4 -M ARM &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libSC.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libAxisLib.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\SG4\Arm\libCoTrace.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\SG4\Arm\libMpRecipe.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\SG4\Arm\libMpAxis.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\SG4\Arm\libMcStpAx.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\SG4\Arm\libMcAcpAx.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsSafety.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsIecCon.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\SG4\Arm\libMcAxis.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsZip.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libDataObj.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libsys_lib.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libFileIO.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libastime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\SG4\Arm\libMpBase.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McBase\SG4\Arm\libMcBase.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsXml.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsBrStr.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libstandard.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libOperator.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libRuntime.a&quot; -specs=ARMspecs_brelf -nostdlib -lm" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.c">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\main.st" LastWriteTime="2021-04-07 12:56:24" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\ovlserva.st" LastWriteTime="2021-04-01 08:03:58" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\main.st" LastWriteTime="2021-04-09 13:40:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\ovlserva.st" LastWriteTime="2021-04-09 09:26:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\variables.var" LastWriteTime="2021-03-29 12:25:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1418,14 +1418,14 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.c" LastWriteTime="2021-04-08 09:55:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.c" LastWriteTime="2021-04-09 13:43:10" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\variables.var" LastWriteTime="2021-03-29 12:25:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1437,14 +1437,14 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as47\as\gnuinst\v6.3.0\arm-eabi\include\bur\_bur_pvdef.st" LastWriteTime="2019-10-10 08:00:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" LastWriteTime="2021-04-09 13:43:10" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\variables.var" LastWriteTime="2021-03-29 12:25:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1455,15 +1455,15 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.c" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.c" LastWriteTime="2021-04-09 13:43:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" LastWriteTime="2021-04-09 13:43:10" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\bruska\variables.var" LastWriteTime="2021-03-29 12:25:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcacpax\mcacpax.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1474,10 +1474,10 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.ox" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.ox" LastWriteTime="2021-04-09 07:37:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.per" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
@@ -1494,9 +1494,9 @@
     <AdditionalBuildTrigger Key="RemanentMemory" Value="0" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\a.out" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\a.out" LastWriteTime="2021-04-09 07:37:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
@@ -1509,10 +1509,10 @@
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Main\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Main\Main.ox&quot; -T SG4 -M ARM -r Cyclic4 -G V6.3.0  -B C4.73 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\_bur_pvdef.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.o" LastWriteTime="2021-04-09 07:37:44" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\_bur_pvdef.st.o" LastWriteTime="2021-04-09 07:37:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
@@ -1525,10 +1525,10 @@
     <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Main\Main.st.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Main\_bur_pvdef.st.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Main\a.out&quot; -G V6.3.0  -T SG4 -M ARM &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libSC.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libAxisLib.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\SG4\Arm\libCoTrace.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\SG4\Arm\libMpRecipe.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\SG4\Arm\libMpAxis.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\SG4\Arm\libMcStpAx.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\SG4\Arm\libMcAcpAx.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsSafety.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsIecCon.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\SG4\Arm\libMcAxis.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsZip.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libDataObj.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libsys_lib.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libFileIO.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libastime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\SG4\Arm\libMpBase.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McBase\SG4\Arm\libMcBase.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsXml.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsBrStr.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libstandard.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libOperator.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libRuntime.a&quot; -specs=ARMspecs_brelf -nostdlib -lm" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.c">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\main\main.st" LastWriteTime="2021-04-07 07:27:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\main\main.st" LastWriteTime="2021-04-09 07:34:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\main\ovladaniesafety.st" LastWriteTime="2021-03-30 12:07:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
@@ -1542,9 +1542,9 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.c" LastWriteTime="2021-04-08 09:55:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.c" LastWriteTime="2021-04-09 07:37:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
@@ -1559,9 +1559,9 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as47\as\gnuinst\v6.3.0\arm-eabi\include\bur\_bur_pvdef.st" LastWriteTime="2019-10-10 08:00:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.o" LastWriteTime="2021-04-09 07:37:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
@@ -1575,10 +1575,10 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\_bur_pvdef.st.c" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\_bur_pvdef.st.c" LastWriteTime="2021-04-09 07:37:44" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main\main.st.o" LastWriteTime="2021-04-09 07:37:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
@@ -1592,13 +1592,13 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\robot.ox" LastWriteTime="2021-04-08 14:40:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\robot.ox" LastWriteTime="2021-04-09 14:13:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.per" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\variables.var" LastWriteTime="2021-04-03 09:16:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1614,12 +1614,12 @@
     <AdditionalBuildTrigger Key="RemanentMemory" Value="0" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\robot.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\a.out" LastWriteTime="2021-04-08 14:40:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\a.out" LastWriteTime="2021-04-09 14:13:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\variables.var" LastWriteTime="2021-04-03 09:16:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1631,13 +1631,13 @@
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Robot\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Robot\Robot.ox&quot; -T SG4 -M ARM -r Cyclic4 -G V6.3.0  -B C4.73 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" LastWriteTime="2021-04-08 14:40:34" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.o" LastWriteTime="2021-04-08 14:40:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" LastWriteTime="2021-04-09 14:13:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.o" LastWriteTime="2021-04-09 14:13:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\variables.var" LastWriteTime="2021-04-03 09:16:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1649,14 +1649,14 @@
     <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Robot\Main.st.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Robot\_bur_pvdef.st.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Robot\a.out&quot; -G V6.3.0  -T SG4 -M ARM &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libSC.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libAxisLib.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\SG4\Arm\libCoTrace.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\SG4\Arm\libMpRecipe.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\SG4\Arm\libMpAxis.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\SG4\Arm\libMcStpAx.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\SG4\Arm\libMcAcpAx.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsSafety.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsIecCon.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\SG4\Arm\libMcAxis.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsZip.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libDataObj.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libsys_lib.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libFileIO.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libastime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\SG4\Arm\libMpBase.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McBase\SG4\Arm\libMcBase.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsXml.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsBrStr.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libstandard.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libOperator.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libRuntime.a&quot; -specs=ARMspecs_brelf -nostdlib -lm" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\main.st" LastWriteTime="2021-04-08 14:40:26" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\profinetkomunikaciarobot.st" LastWriteTime="2021-04-08 08:50:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\main.st" LastWriteTime="2021-04-09 14:12:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\profinetkomunikaciarobot.st" LastWriteTime="2021-04-09 07:13:16" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\ovladaniegripra.st" LastWriteTime="2021-04-08 08:50:26" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\variables.var" LastWriteTime="2021-04-03 09:16:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1669,12 +1669,12 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c" LastWriteTime="2021-04-08 14:40:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c" LastWriteTime="2021-04-09 14:13:04" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\variables.var" LastWriteTime="2021-04-03 09:16:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1688,12 +1688,12 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as47\as\gnuinst\v6.3.0\arm-eabi\include\bur\_bur_pvdef.st" LastWriteTime="2019-10-10 08:00:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" LastWriteTime="2021-04-08 14:40:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" LastWriteTime="2021-04-09 14:13:04" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\variables.var" LastWriteTime="2021-04-03 09:16:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1706,13 +1706,13 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.c" LastWriteTime="2021-04-08 14:40:34" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" LastWriteTime="2021-04-08 14:40:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.c" LastWriteTime="2021-04-09 14:13:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" LastWriteTime="2021-04-09 14:13:04" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\sc\sc.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\robot\variables.var" LastWriteTime="2021-04-03 09:16:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1725,10 +1725,10 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\ovladaniev.ox" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\ovladaniev.ox" LastWriteTime="2021-04-09 07:33:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.per" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1744,9 +1744,9 @@
     <AdditionalBuildTrigger Key="RemanentMemory" Value="0" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\ovladaniev.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\a.out" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\a.out" LastWriteTime="2021-04-09 07:33:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1758,10 +1758,10 @@
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\OvladanieV\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\OvladanieV\OvladanieV.ox&quot; -T SG4 -M ARM -r Cyclic4 -G V6.3.0  -B C4.73 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o" LastWriteTime="2021-04-08 09:55:56" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.o" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o" LastWriteTime="2021-04-09 07:33:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.o" LastWriteTime="2021-04-09 07:33:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1773,9 +1773,9 @@
     <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\OvladanieV\Main.st.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\OvladanieV\_bur_pvdef.st.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\OvladanieV\a.out&quot; -G V6.3.0  -T SG4 -M ARM &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libSC.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libAxisLib.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\SG4\Arm\libCoTrace.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\SG4\Arm\libMpRecipe.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\SG4\Arm\libMpAxis.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\SG4\Arm\libMcStpAx.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\SG4\Arm\libMcAcpAx.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsSafety.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsIecCon.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\SG4\Arm\libMcAxis.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsZip.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libDataObj.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libsys_lib.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libFileIO.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libastime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\SG4\Arm\libMpBase.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McBase\SG4\Arm\libMcBase.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsXml.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsBrStr.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libstandard.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libOperator.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libRuntime.a&quot; -specs=ARMspecs_brelf -nostdlib -lm" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.c">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\hmi\ovladanievizu\main.st" LastWriteTime="2021-04-06 12:32:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\hmi\ovladanievizu\main.st" LastWriteTime="2021-04-09 07:32:50" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1788,9 +1788,9 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.c" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.c" LastWriteTime="2021-04-09 07:33:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1804,9 +1804,9 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as47\as\gnuinst\v6.3.0\arm-eabi\include\bur\_bur_pvdef.st" LastWriteTime="2019-10-10 08:00:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o" LastWriteTime="2021-04-09 07:33:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1819,10 +1819,10 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.c" LastWriteTime="2021-04-08 09:55:56" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\_bur_pvdef.st.c" LastWriteTime="2021-04-09 07:33:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev\main.st.o" LastWriteTime="2021-04-09 07:33:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcaxis\mcaxis.fun" LastWriteTime="2021-03-17 13:52:18" />
@@ -1835,12 +1835,12 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\alarmy.ox" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\alarmy.ox" LastWriteTime="2021-04-09 07:29:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.per" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\asbrstr\asbrstr.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\alarmy\variables.var" LastWriteTime="2021-03-11 08:45:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1856,11 +1856,11 @@
     <AdditionalBuildTrigger Key="RemanentMemory" Value="0" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\alarmy.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\a.out" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\a.out" LastWriteTime="2021-04-09 07:29:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\asbrstr\asbrstr.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\alarmy\variables.var" LastWriteTime="2021-03-11 08:45:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1872,12 +1872,12 @@
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Alarmy\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Alarmy\Alarmy.ox&quot; -T SG4 -M ARM -r Cyclic4 -G V6.3.0  -B C4.73 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\_bur_pvdef.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\_bur_pvdef.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\asbrstr\asbrstr.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\alarmy\variables.var" LastWriteTime="2021-03-11 08:45:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1893,7 +1893,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\asbrstr\asbrstr.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\alarmy\variables.var" LastWriteTime="2021-03-11 08:45:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1906,11 +1906,11 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\main.st.c" LastWriteTime="2021-04-08 09:55:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\main.st.c" LastWriteTime="2021-04-09 07:29:50" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\asbrstr\asbrstr.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\alarmy\variables.var" LastWriteTime="2021-03-11 08:45:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1924,11 +1924,11 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as47\as\gnuinst\v6.3.0\arm-eabi\include\bur\_bur_pvdef.st" LastWriteTime="2019-10-10 08:00:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\asbrstr\asbrstr.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\alarmy\variables.var" LastWriteTime="2021-03-11 08:45:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1941,12 +1941,12 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\_bur_pvdef.st.c" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\_bur_pvdef.st.c" LastWriteTime="2021-04-09 07:29:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\standard\standard.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\asbrstr\asbrstr.fun" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\program\alarmy\variables.var" LastWriteTime="2021-03-11 08:45:02" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\axislib\types.typ" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mcbase\mcbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1959,7 +1959,7 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\remanentne.ox" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\remanentne.ox" LastWriteTime="2021-04-09 07:29:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.per" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipe.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1968,7 +1968,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\remanentnepremenne\remanentnepremenne\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappservices\config.mprecipexml" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\Remanentne.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\Config1\AB2_CPU\LT.ofs&quot; -T SG4 -M ARM -B C4.73 -G V6.3.0  -extConstants -d &quot;runtime: V* - V*,asieccon: V* - V*&quot; -r Cyclic5 -p 2 -s &quot;RemanentnePremenne.RemanentnePremenne&quot; -L &quot;AsBrStr: V*, AsIecCon: V*, AsSafety: V*, astime: V*, AsXml: V*, AsZip: V*, AxisLib: V*, CoTrace: V5.13.0, DataObj: V*, FileIO: V*, McAcpAx: V5.13.2, McAxis: V5.13.2, McBase: V5.13.2, McStpAx: V5.13.2, MpAxis: V5.13.2, MpBase: V5.13.0, MpRecipe: V5.13.1, Operator: V*, Runtime: V*, SC: V*, standard: V*, sys_lib: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="VolatileMemory" Value="65535" />
     <AdditionalBuildTrigger Key="PermanentAnalogMemory" Value="0" />
@@ -1976,7 +1976,7 @@
     <AdditionalBuildTrigger Key="RemanentMemory" Value="0" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\remanentne.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\a.out" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\a.out" LastWriteTime="2021-04-09 07:29:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipe.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipeerror.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1984,12 +1984,12 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\remanentnepremenne\remanentnepremenne\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappservices\config.mprecipexml" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\Remanentne.ox&quot; -T SG4 -M ARM -r Cyclic5 -G V6.3.0  -B C4.73 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipe.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipeerror.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -1997,7 +1997,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\remanentnepremenne\remanentnepremenne\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappservices\config.mprecipexml" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\Main.st.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\_bur_pvdef.st.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\a.out&quot; -G V6.3.0  -T SG4 -M ARM &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libSC.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Temp\Archives\Config1\AB2_CPU\libAxisLib.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\SG4\Arm\libCoTrace.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\SG4\Arm\libMpRecipe.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\SG4\Arm\libMpAxis.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\SG4\Arm\libMcStpAx.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\SG4\Arm\libMcAcpAx.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsSafety.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsIecCon.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\SG4\Arm\libMcAxis.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsZip.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libDataObj.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libsys_lib.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libFileIO.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libastime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\SG4\Arm\libMpBase.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\McBase\SG4\Arm\libMcBase.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsXml.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libAsBrStr.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libstandard.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libOperator.a&quot; &quot;-Wl,C:\BrAutomation\AS\System\C0473\SG4\Arm\libRuntime.a&quot; -specs=ARMspecs_brelf -nostdlib -lm" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.c">
@@ -2009,12 +2009,12 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\remanentnepremenne\remanentnepremenne\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappservices\config.mprecipexml" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\RemanentnePremenne\RemanentnePremenne\Main.st&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\Main.st.c&quot; -T SG4 -M ARM -B C4.73 -G V6.3.0  -s &quot;RemanentnePremenne.RemanentnePremenne&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -pointers -extComments -extBitAccess -extConstants -D _SG4 -l &quot;$(AS_PROJECT_PATH)\Logical\RemanentnePremenne\RemanentnePremenne\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\RemanentnePremenne\RemanentnePremenne\Variables.var&quot; -g &quot;$(AS_PROJECT_PATH)\Logical\Global.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\DatumCasPLC\DatumCasGlobal.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBaseCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAxCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAxCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxisCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipe.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipeAlarm.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipeError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Operator\operator.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\AxisLib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\SC.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipe.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Global.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\DatumCasPLC\DatumCasGlobal.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\McElements.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\Constants.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\Constants.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.var&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.c" LastWriteTime="2021-04-08 09:55:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.c" LastWriteTime="2021-04-09 07:29:50" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipe.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipeerror.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -2022,13 +2022,13 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\remanentnepremenne\remanentnepremenne\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappservices\config.mprecipexml" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\Main.st.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\Main.st.o&quot; -T SG4 -M ARM -B C4.73 -G V6.3.0  -s &quot;RemanentnePremenne.RemanentnePremenne&quot; -specs=ARMspecs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\RemanentnePremenne\RemanentnePremenne&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\RemanentnePremenne\RemanentnePremenne&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\RemanentnePremenne&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -ansi -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -ggdb -Wall -w -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Libraries.h&quot; -ansic -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as47\as\gnuinst\v6.3.0\arm-eabi\include\bur\_bur_pvdef.st" LastWriteTime="2019-10-10 08:00:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipe.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipeerror.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -2036,13 +2036,13 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\remanentnepremenne\remanentnepremenne\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappservices\config.mprecipexml" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <CommandLine Parameter="&quot;C:\BrAutomation\AS47\AS\GnuInst\V6.3.0\arm-eabi\include\bur\_bur_pvdef.st&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\_bur_pvdef.st.c&quot; -S &quot;Main.st&quot;  -T SG4 -M ARM -B C4.73 -G V6.3.0  -s &quot;RemanentnePremenne.RemanentnePremenne&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -pointers -extComments -extBitAccess -extConstants -D _SG4 -l &quot;$(AS_PROJECT_PATH)\Logical\RemanentnePremenne\RemanentnePremenne\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\RemanentnePremenne\RemanentnePremenne\Variables.var&quot; -g &quot;$(AS_PROJECT_PATH)\Logical\Global.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\DatumCasPLC\DatumCasGlobal.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBaseCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAxCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAxCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxisCfg.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipe.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipeAlarm.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipeError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Operator\operator.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\AxisLib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\SC.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpRecipe\MpRecipe.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Global.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\DatumCasPLC\DatumCasGlobal.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\McElements.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Runtime\runtime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\standard\standard.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsBrStr\AsBrStr.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\FileIO\FileIO.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsSafety\AsSafety.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\DataObj\DataObj.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsXml\AsXml.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsZip\AsZip.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AxisLib\Constants.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\SC\Constants.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McBase\McBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAcpAx\McAcpAx.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McStpAx\McStpAx.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\McAxis\McAxis.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\CoTrace\CoTrace.var&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.c" LastWriteTime="2021-04-08 09:55:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o" LastWriteTime="2021-04-08 09:55:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\_bur_pvdef.st.c" LastWriteTime="2021-04-09 07:29:52" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne\main.st.o" LastWriteTime="2021-04-09 07:29:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipe.fun" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2021-03-17 13:52:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mprecipe\mprecipeerror.typ" LastWriteTime="2021-03-17 13:52:18" />
@@ -2050,7 +2050,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\remanentnepremenne\remanentnepremenne\variables.var" LastWriteTime="2021-03-10 14:00:52" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2021-03-15 14:05:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\mappservices\config.mprecipexml" LastWriteTime="2021-03-10 14:00:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-08 09:53:04" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2021-04-09 07:12:28" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\_bur_pvdef.st.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Remanentne\_bur_pvdef.st.o&quot; -T SG4 -M ARM -B C4.73 -G V6.3.0  -s &quot;RemanentnePremenne.RemanentnePremenne&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs=ARMspecs_brelf -I &quot;$(AS_PROJECT_PATH)\Logical\RemanentnePremenne\RemanentnePremenne&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\RemanentnePremenne\RemanentnePremenne&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\RemanentnePremenne&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -ggdb -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Libraries.h&quot; -P &quot;$(AS_PROJECT_PATH)&quot;" />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
@@ -2401,7 +2401,7 @@
     <CommandLine Parameter="&quot;HMI.Visu&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\Visu.br&quot; -T SG4 -B C4.73 -c &quot;Config1&quot; -S &quot;AB2_CPU&quot; -P &quot;$(AS_PROJECT_PATH)&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -H &quot;$(AS_PROJECT_PATH)\Physical\Config1\Hardware.hw&quot; -V &quot;V4.72.4&quot; -apj &quot;VymenaRobotaUR&quot; -v V1.00.0 -m &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\ConfigInfo.cfi&quot; -g &quot;$(AS_PROJECT_PATH)\Temp\Objects\Declarations.lst&quot; -w2 -sfas" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu\visu.mak" LastWriteTime="2021-04-08 14:40:36" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu\visu.mak" LastWriteTime="2021-04-09 14:13:06" />
     <CommandLine Parameter=" -r -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\AB2_CPU\#cpu_vc.mak&quot; -k" />
   </Rule>
   <Rule ID="#cpu_tp.mak">
@@ -2409,7 +2409,7 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\binaries\config1\ab2_cpu\transfer.lst">
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\assl1.br" LastWriteTime="2021-04-08 10:10:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ashwac.br" LastWriteTime="2021-03-31 14:12:26" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ashwac.br" LastWriteTime="2021-04-09 09:17:30" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sysconf.br" LastWriteTime="2021-03-29 13:14:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\asfw.br" LastWriteTime="2021-03-15 13:53:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ashwd.br" LastWriteTime="2021-03-15 13:53:14" />
@@ -2429,17 +2429,17 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\config.br" LastWriteTime="2021-03-19 12:39:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\settings.br" LastWriteTime="2021-03-19 12:39:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\traceconfi.br" LastWriteTime="2021-03-29 12:27:00" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese.br" LastWriteTime="2021-04-08 09:55:56" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni.br" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\riadeniese.br" LastWriteTime="2021-04-09 07:29:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\limitnesni.br" LastWriteTime="2021-04-09 07:29:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie10.br" LastWriteTime="2021-03-19 12:39:32" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\datumcaspl.br" LastWriteTime="2021-03-19 12:39:32" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie20.br" LastWriteTime="2021-03-19 12:39:34" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska.br" LastWriteTime="2021-04-08 09:55:56" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main.br" LastWriteTime="2021-04-08 09:55:56" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot.br" LastWriteTime="2021-04-08 14:40:36" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev.br" LastWriteTime="2021-04-08 09:55:56" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy.br" LastWriteTime="2021-04-08 09:55:56" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne.br" LastWriteTime="2021-04-08 09:55:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska.br" LastWriteTime="2021-04-09 13:43:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\main.br" LastWriteTime="2021-04-09 07:37:46" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot.br" LastWriteTime="2021-04-09 14:13:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\ovladaniev.br" LastWriteTime="2021-04-09 07:33:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\alarmy.br" LastWriteTime="2021-04-09 07:29:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\remanentne.br" LastWriteTime="2021-04-09 07:29:56" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie50.br" LastWriteTime="2021-03-19 12:39:40" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\blikanie1s.br" LastWriteTime="2021-03-19 12:39:40" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\assafety.br" LastWriteTime="2020-10-01 17:46:44" />
@@ -2462,7 +2462,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\mprecipe.br" LastWriteTime="2021-01-29 04:17:48" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\sys_lib.br" LastWriteTime="2020-10-01 17:46:50" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\asnxdb1.br" LastWriteTime="2021-03-15 13:53:10" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu.br" LastWriteTime="2021-04-06 11:38:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu.br" LastWriteTime="2021-04-09 10:16:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\ab2_cpu\cpu.sw" LastWriteTime="2021-04-06 10:27:14" />
     <CommandLine Parameter=" &quot;$(AS_PROJECT_PATH)\VymenaRobotaUR.apj&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -o &quot;$(AS_PROJECT_PATH)\Binaries&quot; -c &quot;Config1&quot; -i &quot;C:\BrAutomation\AS47&quot; -S &quot;AB2_CPU&quot; -A &quot;X20CP04xx&quot; -pil -swFiles &quot;$(AS_PROJECT_PATH)\Physical\Config1\AB2_CPU\Cpu.sw&quot; -Z &quot;mappMotion: 5.13.2, mappCockpit: 5.13.1, mappView: 5.13.1, mapp: 5.13.1, SafetyRelease: 1.10.0, UnitSystem: n.d, Connectivity: n.d, TextSystem: n.d, ProgrammingSystem: n.d, AAS: n.d&quot; -C &quot;/COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.0.1 /REPO=11159 /ANSL=1 /PT=11169&quot; -D &quot;/IF=tcpip /LOPO=11159 /SA=1&quot; -M ARM -T SG4" />
   </Rule>

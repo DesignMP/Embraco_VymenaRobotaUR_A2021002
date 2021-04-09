@@ -19,7 +19,8 @@ ACTION ProfinetKomunikaciaRobot:
     
     Robot.KOM_IN.Stav_VystupyZresetovane:= Robot.KOM_IN.Profinet_PLC_INPUTS[2].0;               //16
     Robot.KOM_IN.Stav_ZonaNavratuRobota_NG:= Robot.KOM_IN.Profinet_PLC_INPUTS[2].1;             //17
-    Robot.KOM_IN.Stav_ZonaNavratuRobota_OK:= Robot.KOM_IN.Profinet_PLC_INPUTS[2].2;             //18    
+    Robot.KOM_IN.Stav_ZonaNavratuRobota_OK:= Robot.KOM_IN.Profinet_PLC_INPUTS[2].2;             //18  
+    Robot.KOM_IN.Stav_PoruchaRobota:= Robot.KOM_IN.Profinet_PLC_INPUTS[2].3;                    //19  
     
 	
     //Vystupy z PLC do Robota//

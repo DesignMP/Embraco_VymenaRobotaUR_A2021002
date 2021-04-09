@@ -8,7 +8,7 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=241 Type=0 Scope=0 Force=0 Index
                Stav_RobotCinnostUkoncena                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
                                  KOM_OUT                         RobotKOM_OUT_typ    0 "                                                               *"    1   24    1    0    0    1         
                           OdparkujRobota                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
-                         ServisnaPozicia                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                         ServisnaPozicia                                     BOOL    0 "                                                            TRUE"    2    1    1    2    0    0         
           Paletka_PresunDoCakacejPozicie                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
                        Paletka_OdoberCap                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
                          Otacac_PolozCap                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
@@ -17,8 +17,8 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=241 Type=0 Scope=0 Force=0 Index
               Dopravnik_UkladaciaPozicia                                    USINT    0 "                                                               1"    2    5    1   10    0    0         
                                      PAR                             RobotPAR_typ    0 "                                                               *"    1   24    1    0    0    1         
                      CisloZadanejPozicie                                    USINT    0 "                                                               0"    2    5    1   10    0    0         
-                   CisloAktualnejPozicie                                    USINT    0 "                                                               0"    2    5    1   10    0    0         
-                                 Automat                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                   CisloAktualnejPozicie                                    USINT    0 "                                                               1"    2    5    1   10    0    0         
+                                 Automat                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
                              KoniecCyklu                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
                                 SC_Robot                       SequenceControlTyp    0 "                                                               *"    0   24    1    0    0    1         
-                                    Step                                     UINT    0 "                                                               1"    1    6    1   10    0    0         
+                                    Step                                     UINT    0 "                                                               6"    1    6    1   10    0    0         

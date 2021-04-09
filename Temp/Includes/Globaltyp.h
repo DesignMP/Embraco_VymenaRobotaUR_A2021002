@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1617875749_1_
-#define _BUR_1617875749_1_
+#ifndef _BUR_1617953385_1_
+#define _BUR_1617953385_1_
 
 #include <bur/plctypes.h>
 
@@ -158,6 +158,7 @@ typedef struct RobotKOM_IN_typ
 	plcbit Stav_ZonaNavratuRobota_NG;
 	plcbit Stav_RobotDrziHotovyCap;
 	plcbit Stav_RobotVlozilNovyCap;
+	plcbit Stav_PoruchaRobota;
 	plcbit Gripper_OtvorDlhyUchopovac;
 	plcbit Gripper_OtvorKratkyUchopovac;
 	unsigned char Profinet_PLC_INPUTS[64];
@@ -306,5 +307,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1617875749_1_ */
+#endif /* _BUR_1617953385_1_ */
 

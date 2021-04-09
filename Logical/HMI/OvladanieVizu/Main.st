@@ -14,13 +14,22 @@ PROGRAM _CYCLIC
     
     
     
-    IF NOT Robot.KOM_IN.Stav_RezimAUTOMAT THEN
+    IF NOT Robot.KOM_IN.Stav_RezimAUTOMAT AND NOT Robot.IN.NepouzivatRobota THEN
         Vizu.StavZariadenia_Index:= 3;
         Vizu.StavZariadenia_Farba:= 3;
-    ELSIF Zariadenie.STAV.Automat AND NOT Zariadenie.STAV.PoINIT THEN
+    ELSIF Robot.Automat AND NOT Robot.STAV.PoINIT THEN
         Vizu.StavZariadenia_Index:= 1;
         Vizu.StavZariadenia_Farba:= 1;
-    ELSIF Zariadenie.STAV.Automat AND Zariadenie.STAV.PoINIT THEN
+    ELSIF Bruska.Automat AND NOT Bruska.STAV.PoINIT THEN
+        Vizu.StavZariadenia_Index:= 1;
+        Vizu.StavZariadenia_Farba:= 1;    
+    ELSIF Robot.Automat AND Robot.STAV.PoINIT AND NOT Bruska.Automat THEN
+        Vizu.StavZariadenia_Index:= 2;
+        Vizu.StavZariadenia_Farba:= 2;
+    ELSIF Bruska.Automat AND Bruska.STAV.PoINIT AND NOT Robot.Automat THEN  
+        Vizu.StavZariadenia_Index:= 2;
+        Vizu.StavZariadenia_Farba:= 2;
+    ELSIF Bruska.Automat AND Bruska.STAV.PoINIT AND Robot.Automat AND Robot.STAV.PoINIT THEN
         Vizu.StavZariadenia_Index:= 2;
         Vizu.StavZariadenia_Farba:= 2;
     ELSE    
@@ -112,11 +121,8 @@ PROGRAM _CYCLIC
     END_IF    
     
     //Tlaèítko Ukonèenie cyklu//
-    IF Zariadenie.STAV.PoINIT THEN
-        Vizu.TL_UkoncenieCyklu_DISABLE:= FALSE;
-    ELSE  
-        Vizu.TL_UkoncenieCyklu_DISABLE:= TRUE;
-    END_IF    
+    Vizu.TL_UkoncenieCyklu_DISABLE:= FALSE;
+      
     
     //Tlaèítko ovládanie serva v ruènom režime//
     IF NOT Bruska.STAV.Servo_HomingOK THEN

@@ -92,8 +92,17 @@ PROGRAM _CYCLIC
             SC_Bruska.IdleTime.PT:= T#500ms;
             SC_Bruska.AlarmTime.PT:= T#5s;
 			
-            SC_Bruska.IdleTime.IN:= Robot.STAV.PoINIT ;
-									
+            IF Robot.STAV.PoINIT THEN
+                SC_Bruska.IdleTime.IN:= TRUE;
+            ELSIF NOT Safety.STAV.ZonaRobot_AKTIVNA THEN
+                SC_Bruska.IdleTime.IN:= TRUE;
+            ELSIF NOT Robot.KOM_IN.Stav_RezimAUTOMAT THEN
+                SC_Bruska.IdleTime.IN:= TRUE;
+            ELSIF Robot.IN.NepouzivatRobota THEN
+                SC_Bruska.IdleTime.IN:= TRUE;
+            END_IF    
+                        
+            									
             IF SC_Bruska.IdleTime.Q THEN
                 SC_Bruska.ResetStep:= TRUE;
                 SC_Bruska.Step:= 10;
@@ -209,7 +218,7 @@ PROGRAM _CYCLIC
             
             IF NOT SC_Bruska.Switch1 AND SC_OvlServa.Step = 1 THEN
                 Bruska.STAV.Servo_AktualnyPocetOtacok:= (Bruska.STAV.Servo_AktualnaPozicia /360);	
-                AktualnyPocetOtacokINT:= (TRUNC(Bruska.STAV.Servo_AktualnyPocetOtacok) + 10);
+                AktualnyPocetOtacokINT:= (TRUNC(Bruska.STAV.Servo_AktualnyPocetOtacok) + 6);
                 AktualnyPocetOtacokLREAL:= INT_TO_LREAL(AktualnyPocetOtacokINT); 
                 Bruska.PAR.Servo_PoziciaNatocenia:= (AktualnyPocetOtacokLREAL * 360);
                 Bruska.PAR.Servo_RychlostPolohovania:= (RemPremenne.Bruska_RychlosOtacania * 4.5);

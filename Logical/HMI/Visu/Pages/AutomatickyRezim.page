@@ -32,19 +32,16 @@
           <Text ID="234406" Value="ŠTART"/>
           <Text ID="234407" Value="STOP"/>
           <Text ID="234408" Value="STOP"/>
-          <Text ID="234409" Value="RESET"/>
         </TextLayer>
         <TextLayer LanguageId="de">
           <Text ID="234406" Value=""/>
           <Text ID="234407" Value=""/>
           <Text ID="234408" Value=""/>
-          <Text ID="234409" Value=""/>
         </TextLayer>
         <IndexMap>
           <Index ID="234406" Value="6"/>
           <Index ID="234407" Value="8"/>
           <Index ID="234408" Value="9"/>
-          <Index ID="234409" Value="10"/>
         </IndexMap>
       </TextGroup>
       <Controls>
@@ -121,35 +118,6 @@
           <Property Name="TextSource" Value="SingleText"/>
           <Property Name="Top" Value="171"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_39]"/>
-          <Property Name="Width" Value="150"/>
-        </Control>
-        <Control ClassId="0x00001002" Name="Button_3">
-          <Property Name="BackColor" Value="11"/>
-          <Property Name="BitmapIndexDatapoint" Value="None"/>
-          <Property Name="BitmapSource" Value="None"/>
-          <Property Name="Border" Value="Source[local].Border[RaisedInner]"/>
-          <Property Name="ControlID" Value="0"/>
-          <Property Name="Description" Value=""/>
-          <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_38]"/>
-          <Property Name="Font" Value="Source[local].Font[Arial12_Bold]"/>
-          <Property Name="ForeColor" Value="0"/>
-          <Property Name="Height" Value="50"/>
-          <Property Name="KeyMatrixOffset" Value="None"/>
-          <Property Name="Left" Value="8"/>
-          <Property Name="Multiline" Value="Automatic"/>
-          <Property Name="PressedBackColor" Value="0"/>
-          <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
-          <Property Name="PressedForeColor" Value="0"/>
-          <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
-          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
-          <Property Name="TextIndex" Value="10"/>
-          <Property Name="TextIndexDatapoint" Value="None"/>
-          <Property Name="TextSimulationValue" Value="0"/>
-          <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="365"/>
-          <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_38]"/>
           <Property Name="Width" Value="150"/>
         </Control>
         <Control ClassId="0x00001002" Name="Button_1">
@@ -233,21 +201,6 @@
             </KeyAction>
           </KeyActions>
         </VirtualKey>
-        <VirtualKey Name="%embVirtualKey_38">
-          <Property Name="Description" Value=""/>
-          <Property Name="VirtualKey_LED" Value="False"/>
-          <KeyActions>
-            <KeyAction ClassId="0x00000161">
-              <Property Name="CompletionDatapoint" Value="None"/>
-              <Property Name="CompletionValue" Value="0"/>
-              <Property Name="Description" Value=""/>
-              <Property Name="Locking" Value="Never"/>
-              <Property Name="Name" Value="Action_0"/>
-              <Property Name="SetValue" Value="0"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Vizu.ZobrazHlasenie_ResetZariadenia]"/>
-            </KeyAction>
-          </KeyActions>
-        </VirtualKey>
         <VirtualKey Name="%embVirtualKey_39">
           <Property Name="Description" Value=""/>
           <Property Name="VirtualKey_LED" Value="False"/>
@@ -259,7 +212,7 @@
               <Property Name="Locking" Value="Never"/>
               <Property Name="Name" Value="Action_0"/>
               <Property Name="SetValue" Value="1"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Zariadenie.KoniecCyklu]"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Zariadenie.Reset]"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>

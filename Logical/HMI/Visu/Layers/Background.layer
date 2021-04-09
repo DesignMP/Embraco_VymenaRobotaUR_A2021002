@@ -19,7 +19,6 @@
       <Text ID="234539" Value="Automatický režim"/>
       <Text ID="234541" Value="Nastavenia"/>
       <Text ID="234543" Value="Manuálny režim"/>
-      <Text ID="234545" Value="Bezpečnosť"/>
     </TextLayer>
     <TextLayer LanguageId="de">
       <Text ID="233411" Value=""/>
@@ -31,7 +30,6 @@
       <Text ID="234539" Value=""/>
       <Text ID="234541" Value=""/>
       <Text ID="234543" Value=""/>
-      <Text ID="234545" Value=""/>
     </TextLayer>
     <IndexMap>
       <Index ID="233411" Value="4"/>
@@ -43,7 +41,6 @@
       <Index ID="234539" Value="9"/>
       <Index ID="234541" Value="11"/>
       <Index ID="234543" Value="13"/>
-      <Index ID="234545" Value="15"/>
     </IndexMap>
   </TextGroup>
   <Controls>
@@ -320,36 +317,6 @@
       <Property Name="VirtualKey" Value="Source[local].VirtualKey[button_RucnyRezim]"/>
       <Property Name="Width" Value="130"/>
     </Control>
-    <Control ClassId="0x00001002" Name="Button_5">
-      <Property Name="BackColor" Value="8"/>
-      <Property Name="Bitmap" Value="Source[local].Bitmap[ZamkaZamknuta_32x32_1]"/>
-      <Property Name="BitmapAlignmentHorizontal" Value="Left of Text"/>
-      <Property Name="BitmapIndexDatapoint" Value="None"/>
-      <Property Name="BitmapSource" Value="SingleBitmap"/>
-      <Property Name="Border" Value="Source[local].Border[FrameInvisible]"/>
-      <Property Name="ControlID" Value="0"/>
-      <Property Name="Description" Value=""/>
-      <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_91]"/>
-      <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
-      <Property Name="ForeColor" Value="0"/>
-      <Property Name="Height" Value="50"/>
-      <Property Name="KeyMatrixOffset" Value="None"/>
-      <Property Name="Left" Value="268"/>
-      <Property Name="PressedBackColor" Value="0"/>
-      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-      <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
-      <Property Name="PressedForeColor" Value="0"/>
-      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
-      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-      <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
-      <Property Name="TextIndex" Value="15"/>
-      <Property Name="TextIndexDatapoint" Value="None"/>
-      <Property Name="TextSimulationValue" Value="0"/>
-      <Property Name="TextSource" Value="SingleText"/>
-      <Property Name="Top" Value="429"/>
-      <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_91]"/>
-      <Property Name="Width" Value="130"/>
-    </Control>
     <Control ClassId="0x00001005" Name="Bitmap_1">
       <Property Name="BitmapGroup" Value="Source[local].BitmapGroup[SymbolAlarmu]"/>
       <Property Name="BitmapIndex" Value="0"/>
@@ -446,19 +413,6 @@
           <Property Name="Locking" Value="Never"/>
           <Property Name="Name" Value="Action_0"/>
           <Property Name="Page" Value="Source[local].Page[ParametrePracoviska]"/>
-          <Property Name="Target" Value="Page"/>
-        </KeyAction>
-      </KeyActions>
-    </VirtualKey>
-    <VirtualKey Name="%embVirtualKey_91">
-      <Property Name="Description" Value=""/>
-      <Property Name="VirtualKey_LED" Value="False"/>
-      <KeyActions>
-        <KeyAction ClassId="0x00000160">
-          <Property Name="Description" Value=""/>
-          <Property Name="Locking" Value="Never"/>
-          <Property Name="Name" Value="Action_0"/>
-          <Property Name="Page" Value="None"/>
           <Property Name="Target" Value="Page"/>
         </KeyAction>
       </KeyActions>

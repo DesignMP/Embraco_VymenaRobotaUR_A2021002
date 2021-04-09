@@ -196,6 +196,7 @@ TYPE
 		Stav_ZonaNavratuRobota_NG : BOOL;
 		Stav_RobotDrziHotovyCap : BOOL;
 		Stav_RobotVlozilNovyCap : BOOL;
+		Stav_PoruchaRobota : BOOL;
 		Gripper_OtvorDlhyUchopovac : BOOL;
 		Gripper_OtvorKratkyUchopovac : BOOL;
 		Profinet_PLC_INPUTS : ARRAY[0..63]OF USINT;
