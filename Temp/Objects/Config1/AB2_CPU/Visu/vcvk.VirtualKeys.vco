@@ -3108,6 +3108,7 @@
       <Object Name="Source[local].VirtualKey[%embVirtualKey_88]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_88]" />
       <Object Name="Source[local].VirtualKey[%embVirtualKey_89]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_89]" />
       <Object Name="Source[local].VirtualKey[%embVirtualKey_90]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_90]" />
+      <Object Name="Source[local].VirtualKey[%embVirtualKey_91]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_91]" />
     </Folder>
   </Folder>
 </Intermediate>

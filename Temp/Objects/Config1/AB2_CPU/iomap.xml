@@ -506,7 +506,6 @@
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput14" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput14" Kind="io"/>
-<Cons Device="TC#1-CPYDEV" DPName="Bruska.IN.UpinaciaHlava_OtacanieVZAD" Kind="pv"/>
 </LN>
 <LN ID="%IX.IF6.ST2.DigitalInput15" Type="BOOL">
 <Prod Device="IF6.ST2" DPName="DigitalInput15" Kind="io"/>
@@ -625,6 +624,7 @@
 </LN>
 <LN ID="%IX.IF6.ST3.DigitalInput16" Type="BOOL">
 <Prod Device="IF6.ST3" DPName="DigitalInput16" Kind="io"/>
+<Cons Device="TC#1-CPYDEV" DPName="Zariadenie.IN.RucnyRezimStarehoZariadenia" Kind="pv"/>
 </LN>
 <LN ID="%IW.IF6.ST3.BusModuleId" Type="UINT">
 <Prod Device="IF6.ST3" DPName="BusModuleId" Kind="io"/>

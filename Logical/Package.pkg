@@ -9,6 +9,7 @@
     <Object Type="Package">HMI</Object>
     <Object Type="Package">RiadenieServ</Object>
     <Object Type="Package">RemanentnePremenne</Object>
+    <Object Type="Package">MeranieTaktime</Object>
     <Object Type="Package">Blikace</Object>
     <Object Type="Package">DatumCasPLC</Object>
     <Object Type="File">Poznamky.txt</Object>

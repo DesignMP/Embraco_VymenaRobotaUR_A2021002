@@ -3,8 +3,8 @@
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu\visu.mak">
     <BuildReason>Rule is forced.</BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\program\robot\main.st" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.c">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\program\bruska\main.st" differs.
 </BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\iat_media.job._markerfile">
@@ -16,28 +16,28 @@
   <Rule ID=".mappView_IntegrationBuild">
     <BuildReason>Rule contains a phony target. </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.c" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.c" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.c">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.c">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.o">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\_bur_pvdef.st.c" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.o">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\_bur_pvdef.st.c" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\a.out">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\main.st.o" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\a.out">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\main.st.o" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\robot.ox">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\a.out" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\bruska.ox">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\a.out" differs.
 </BuildReason>
   </Rule>
-  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot.br">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot\robot.ox" differs.
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska.br">
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska\bruska.ox" differs.
 </BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\visu.br">
@@ -47,7 +47,7 @@
     <BuildReason>Rule is forced.</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\binaries\config1\ab2_cpu\transfer.lst">
-    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\robot.br" differs.
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\ab2_cpu\bruska.br" differs.
 </BuildReason>
   </Rule>
 </BuildReasons>

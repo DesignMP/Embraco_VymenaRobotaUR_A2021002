@@ -137,6 +137,7 @@ typedef struct ZariadenieIN_typ
 	plcbit Otacac_PritomnostKusu_IS2;
 	plcbit VystupDoprav_Napolohovany;
 	plcbit VystupDoprav_Bezi;
+	plcbit RucnyRezimStarehoZariadenia;
 } ZariadenieIN_typ;
 #endif
 
@@ -986,10 +987,37 @@ typedef struct Bruska_typ
 } Bruska_typ;
 #endif
 
+#ifndef __AS__TYPE_Taktime_CMD_typ
+#define __AS__TYPE_Taktime_CMD_typ
+typedef struct Taktime_CMD_typ
+{	plcbit START_Merania;
+	plcbit ZAPIS_Hodnot;
+	plcbit STOP_Merania;
+} Taktime_CMD_typ;
+#endif
+
+#ifndef __AS__TYPE_Taktime_OUTPUTS_typ
+#define __AS__TYPE_Taktime_OUTPUTS_typ
+typedef struct Taktime_OUTPUTS_typ
+{	unsigned short NameraneHodiny;
+	unsigned short NameraneMinuty;
+	unsigned short NameraneSekundy;
+	unsigned short NameraneMilisekundy;
+} Taktime_OUTPUTS_typ;
+#endif
+
+#ifndef __AS__TYPE_Taktime_typ
+#define __AS__TYPE_Taktime_typ
+typedef struct Taktime_typ
+{	Taktime_CMD_typ CMD;
+	Taktime_OUTPUTS_typ OUTPUTS;
+} Taktime_typ;
+#endif
+
 #ifndef __AS__TYPE_SequenceControlTyp
 #define __AS__TYPE_SequenceControlTyp
 typedef struct SequenceControlTyp
-{	plcstring StepName[81];
+{	plcstring StepName[201];
 	unsigned short Step;
 	plcbit Switch1;
 	plcbit Switch2;
@@ -1048,5 +1076,6 @@ _GLOBAL SequenceControlTyp SC_Robot;
 _GLOBAL Robot_typ Robot;
 _GLOBAL Bruska_typ Bruska;
 _GLOBAL plcbit PoruchaRobota;
+_GLOBAL Taktime_typ Taktime_Robot;
 static void __AS__Action__ProfinetKomunikaciaRobot(void);
 static void __AS__Action__OvladanieGripra(void);

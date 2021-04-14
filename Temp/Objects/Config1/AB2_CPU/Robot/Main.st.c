@@ -115,6 +115,7 @@ case 0:{
 (Robot.RR_OdparkujRobota=0);
 (Robot.KOM_OUT.ServisnaPozicia=0);
 (Robot.PAR.CisloAktualnejPozicie=0);
+(Taktime_Robot.CMD.START_Merania=0);
 if((Robot.KOM_IN.Stav_RezimAUTOMAT&Robot.KOM_IN.Stav_ProgramRUN)){
 (Robot.KOM_OUT.StopProgramu=1);
 }else{
@@ -208,7 +209,7 @@ if((Robot.KOM_IN.Stav_ProgramRUN&Robot.KOM_IN.Stav_VystupyZresetovane&Robot.KOM_
 
 
 }break;case 100:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"100 - Automaticky Rezim - presun robota do cakacej pozície odobratia capu z paletky"; for(zzIndex=0; zzIndex<80l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"100 - Automaticky Rezim - cakam na signal presunu robota do cakacej pozície odobratia capu z paletky"; for(zzIndex=0; zzIndex<100l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
@@ -222,8 +223,12 @@ if((Robot.KoniecCyklu&(Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie^1))){
 (Robot.KOM_OUT.ServisnaPozicia=1);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=103);
-}else if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)2))&(Robot.KoniecCyklu^1))){
+}else if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)2))&(Robot.KoniecCyklu^1)&Bruska.STAV.PoINIT&(Zariadenie.IN.RucnyRezimStarehoZariadenia^1))){
 (Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie=1);
+}else if((Zariadenie.IN.RucnyRezimStarehoZariadenia&(Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie^1))){
+(Robot.KOM_OUT.OdparkujRobota=1);
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=105);
 }
 
 
@@ -270,7 +275,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 }
 
 }break;case 115:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"115 - Automaticky Rezim - cakam na odobratie capu z paletky"; for(zzIndex=0; zzIndex<59l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"115 - Automaticky Rezim - cakam na signal odober cap z paletky, snimac pritomnost kusu na paletke"; for(zzIndex=0; zzIndex<97l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
@@ -283,8 +288,20 @@ if((Robot.KoniecCyklu&(Robot.KOM_OUT.Paletka_OdoberCap^1))){
 (Robot.KOM_OUT.ServisnaPozicia=1);
 (SC_Robot.ResetStep=1);
 (SC_Robot.Step=103);
-}else if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)3))&Zariadenie.IN.Paletka_PritomnostKusu_OS1&(Robot.KoniecCyklu^1))){
+}else if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)3))&Zariadenie.IN.Paletka_PritomnostKusu_OS1&(Robot.KoniecCyklu^1)&(Zariadenie.IN.RucnyRezimStarehoZariadenia^1))){
+if((SC_Robot.Switch1^1)){
+if((Taktime_Robot.CMD.START_Merania^1)){
+(Taktime_Robot.CMD.START_Merania=1);
+}else{
+(Taktime_Robot.CMD.ZAPIS_Hodnot=1);
+}
+(SC_Robot.Switch1=1);
+}
 (Robot.KOM_OUT.Paletka_OdoberCap=1);
+}else if((Zariadenie.IN.RucnyRezimStarehoZariadenia&(Robot.KOM_OUT.Paletka_OdoberCap^1))){
+(Robot.KOM_OUT.OdparkujRobota=1);
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=105);
 }
 
 if(Robot.KOM_IN.Stav_RobotCinnostUkoncena){
@@ -330,7 +347,7 @@ if(Robot.KOM_IN.Stav_RobotOdparkovany){
 
 
 }break;case 125:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"125 - Automaticky Rezim - cakam na polozenia capu do otacaca"; for(zzIndex=0; zzIndex<60l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"125 - Automaticky Rezim - cakam na signal poloz cap do otacaca, snimac nepritomnosti kusu v otacaci"; for(zzIndex=0; zzIndex<99l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
@@ -358,7 +375,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 
 
 }break;case 130:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"130 - Automaticky Rezim - cakam na odobratie capu z otacaca"; for(zzIndex=0; zzIndex<59l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"130 - Automaticky Rezim - cakam na signal odober cap z otacaca, snimac pritomnosti kusu v otacaci"; for(zzIndex=0; zzIndex<97l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
@@ -414,12 +431,16 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 
 
 }break;case 140:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"140 - Automaticky Rezim - cakam na odobratie capu z brusky"; for(zzIndex=0; zzIndex<58l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"140 - Automaticky Rezim - cakam na signal odober cap z brusky, snimac ochranny kryt otvoreny, vystup upinacia hlava zatvorena"; for(zzIndex=0; zzIndex<125l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
-if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)6))&Bruska.IN.OchrannyKrytBrusky_Otvoreny&(Bruska.IN.UpinaciaHlava_Otvorena^1))){
+if(((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long)(unsigned char)6))&Bruska.IN.OchrannyKrytBrusky_Otvoreny&(Bruska.IN.UpinaciaHlava_Otvorena^1)&(Zariadenie.IN.RucnyRezimStarehoZariadenia^1))){
 (Robot.KOM_OUT.Bruska_OdoberCap=1);
+}else if((Zariadenie.IN.RucnyRezimStarehoZariadenia&(Robot.KOM_OUT.Bruska_OdoberCap^1))){
+(Robot.KOM_OUT.OdparkujRobota=1);
+(SC_Robot.ResetStep=1);
+(SC_Robot.Step=105);
 }
 
 if(Robot.KOM_IN.Stav_RobotDrziHotovyCap){
@@ -445,7 +466,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 }
 
 }break;case 145:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"145 - Automaticky Rezim - cakam na vlozenie capu do brusky"; for(zzIndex=0; zzIndex<58l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"145 - Automaticky Rezim - cakam na signal vloz cap do brusky, snimac ochranny kryt otvoreny, vystup upinacia hlava otvorena"; for(zzIndex=0; zzIndex<123l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
@@ -474,7 +495,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 }
 
 }break;case 150:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"150 - Automaticky Rezim - presun robota do cakacej pozície pred dopravnikom"; for(zzIndex=0; zzIndex<75l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"150 - Automaticky Rezim - cakam na signal presun robota do cakacej pozície pred dopravnikom, snimac ochranny kryt otvoreny"; for(zzIndex=0; zzIndex<122l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
@@ -501,7 +522,7 @@ if((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)){
 
 
 }break;case 155:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"155 - Automaticky Rezim - cakam na vlozenie capu na dopravnik"; for(zzIndex=0; zzIndex<61l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"155 - Automaticky Rezim - cakam na signal vloz cap na dopravnik, snimac dopravnik napolohovany, vystup dopravnik zastaveny"; for(zzIndex=0; zzIndex<122l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
@@ -539,7 +560,7 @@ if(((Robot.KOM_IN.Stav_RobotCinnostUkoncena^1)&(Robot.OUT.VystupnyDopravnikNaloz
 
 
 }break;case 160:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"160 - Automaticky Rezim - cakam na signal presun k paletke"; for(zzIndex=0; zzIndex<58l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Robot.StepName; plcstring* zzRValue=(plcstring*)"160 - Automaticky Rezim - cakam na signal presun k paletke alebo ukoncenie cyklu"; for(zzIndex=0; zzIndex<80l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Robot.IdleTime.PT=200);
 (SC_Robot.AlarmTime.PT=5000);
 
@@ -568,13 +589,13 @@ if((((unsigned long)(unsigned char)Robot.PAR.CisloZadanejPozicie==(unsigned long
 
 
 }imp3_case1_28:imp3_endcase1_0:;}
-#line 565 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
-#line 567 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
+#line 586 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 588 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 570 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 591 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/ProfinetKomunikaciaRobot.st"
 static void __AS__Action__ProfinetKomunikaciaRobot(void){
 {
@@ -645,7 +666,7 @@ static void __AS__Action__ProfinetKomunikaciaRobot(void){
 
 
 }}
-#line 572 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 593 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/OvladanieGripra.st"
 static void __AS__Action__OvladanieGripra(void){
 {
@@ -682,7 +703,7 @@ TON(&CasZatvorenia_KratkyUchopovac);
 
 
 }}
-#line 572 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
+#line 593 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Robot/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 

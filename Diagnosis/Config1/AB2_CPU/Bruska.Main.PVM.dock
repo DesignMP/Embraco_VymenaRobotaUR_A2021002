@@ -13,4 +13,4 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=254 Type=0 Scope=0 Force=0 Index
                                  Automat                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
                                    Robot                                Robot_typ    0 "                                                               *"    0   24    1    0    0    1         
                                     STAV                            RobotSTAV_typ    0 "                                                               *"    1   24    1    0    0    1         
-                                  PoINIT                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                                  PoINIT                                     BOOL    0 "                                                            TRUE"    2    1    1    2    0    0         

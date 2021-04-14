@@ -161,6 +161,7 @@ typedef struct ZariadenieIN_typ
 	plcbit Otacac_PritomnostKusu_IS2;
 	plcbit VystupDoprav_Napolohovany;
 	plcbit VystupDoprav_Bezi;
+	plcbit RucnyRezimStarehoZariadenia;
 } ZariadenieIN_typ;
 #endif
 

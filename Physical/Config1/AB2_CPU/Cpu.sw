@@ -2,6 +2,7 @@
 <?AutomationStudio Version=4.7.5.60 SP?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
+    <Task Name="TaktimeVyt" Source="MeranieTaktime.TaktimeRobot.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="RiadenieSe" Source="RiadenieServ.RiadenieServ.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />

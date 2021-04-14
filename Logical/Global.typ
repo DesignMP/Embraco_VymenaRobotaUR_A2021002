@@ -109,6 +109,7 @@ TYPE
 		Otacac_PritomnostKusu_IS2 : BOOL;
 		VystupDoprav_Napolohovany : BOOL;
 		VystupDoprav_Bezi : BOOL;
+		RucnyRezimStarehoZariadenia : BOOL;
 	END_STRUCT;
 	ZariadenieOUT_typ : 	STRUCT 
 		Majak_ZeleneSvetlo : BOOL;
@@ -299,5 +300,25 @@ TYPE
 		KartaAB6_16DI_OK : BOOL;
 		KartaAB7_16DO_OK : BOOL;
 		Komunikacia_Robot_OK : BOOL;
+	END_STRUCT;
+END_TYPE
+
+(***************Meranie taktime****************************)
+
+TYPE
+	Taktime_typ : 	STRUCT 
+		CMD : Taktime_CMD_typ;
+		OUTPUTS : Taktime_OUTPUTS_typ;
+	END_STRUCT;
+	Taktime_CMD_typ : 	STRUCT 
+		START_Merania : BOOL;
+		ZAPIS_Hodnot : BOOL;
+		STOP_Merania : BOOL;
+	END_STRUCT;
+	Taktime_OUTPUTS_typ : 	STRUCT 
+		NameraneHodiny : UINT;
+		NameraneMinuty : UINT;
+		NameraneSekundy : UINT;
+		NameraneMilisekundy : UINT;
 	END_STRUCT;
 END_TYPE

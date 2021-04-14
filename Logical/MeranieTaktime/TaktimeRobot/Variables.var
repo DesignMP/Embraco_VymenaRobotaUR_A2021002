@@ -1,0 +1,6 @@
+VAR
+	Milisekundy : UINT;
+	Sekundy : UINT;
+	Minuty : UINT;
+	Hodiny : UINT;
+END_VAR

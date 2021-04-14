@@ -181,7 +181,7 @@ PROGRAM _CYCLIC
             //********************************************************Automatický režim****************************************************************************//
 		
         100:
-            SC_Bruska.StepName:='100 - Automaticky Rezim - cakam na spustenie otacania upinacej hlavy';
+            SC_Bruska.StepName:='100 - Automaticky Rezim - cakam na signal spustenia otacania upinacej hlavy';
             SC_Bruska.IdleTime.PT:= T#200ms;
             SC_Bruska.AlarmTime.PT:= T#5s;	
             
@@ -198,12 +198,13 @@ PROGRAM _CYCLIC
             END_IF
             
         103:
-            SC_Bruska.StepName:='103 - Automaticky Rezim - cakam na zastavenie otacania upinacej hlavy';
+            SC_Bruska.StepName:='103 - Automaticky Rezim - cakam na signal pre zastavenie otacania upinacej hlavy';
             SC_Bruska.IdleTime.PT:= T#200ms;
             SC_Bruska.AlarmTime.PT:= T#5s;	
                     
             
             IF NOT Bruska.IN.UpinaciaHlava_OtacanieVPRED THEN
+                Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVPRED:= FALSE;
                 Bruska.Servo_MOVE:= FALSE;
                 SC_Bruska.ResetStep:= TRUE;
                 SC_Bruska.Step:= 105;
@@ -211,7 +212,7 @@ PROGRAM _CYCLIC
                 
         
         105:
-            SC_Bruska.StepName:='105 - Automaticky Rezim - napolohovanie na nasobok vychodzej pozicie natocenia upinacej hlavy';
+            SC_Bruska.StepName:='105 - Automaticky Rezim - natacam upinaciu hlavu do zakladnej pozicie';
             SC_Bruska.IdleTime.PT:= T#200ms;
             SC_Bruska.AlarmTime.PT:= T#5s;
                     

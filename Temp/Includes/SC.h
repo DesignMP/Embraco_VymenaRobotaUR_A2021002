@@ -16,7 +16,7 @@ extern "C"
 #endif
 /* Datatypes and datatypes of function blocks */
 typedef struct SequenceControlTyp
-{	plcstring StepName[81];
+{	plcstring StepName[201];
 	unsigned short Step;
 	plcbit Switch1;
 	plcbit Switch2;

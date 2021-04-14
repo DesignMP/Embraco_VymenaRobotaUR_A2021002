@@ -4,6 +4,18 @@
   <TaskClass
     Name="Cyclic#1">
     <Task
+      Name="TaktimeVyt"
+      Disable="false"
+      Source="MeranieTaktime.TaktimeRobot"
+      Language="IEC">
+      <InternalFile
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Temp\Objects\Config1\AB2_CPU\TaktimeVyt\Main.st.var" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\MeranieTaktime\TaktimeRobot\Types.typ" />
+      <File
+        Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\MeranieTaktime\TaktimeRobot\Variables.var" />
+    </Task>
+    <Task
       Name="RiadenieSe"
       Disable="false"
       Source="RiadenieServ.RiadenieServ"

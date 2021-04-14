@@ -195,8 +195,8 @@ VAR_CONFIG
 	Cyclic#1.Robot.OUT.OtvorDlhyUchopovac_YV1 AT %QX."AB7_16DO".DigitalOutput07;
 	Cyclic#1.Robot.IN.NepouzivatRobota AT %IX."AB6_16DI".DigitalInput13;
 	Cyclic#1.Bruska.IN.UpinaciaHlava_OtacanieVPRED AT %IX."AB5_16DI".DigitalInput13;
-	Cyclic#1.Bruska.IN.UpinaciaHlava_OtacanieVZAD AT %IX."AB5_16DI".DigitalInput14;
 	Cyclic#1.Robot.IN.NepouzivatRobota AT %QX."AB4_SafetyMaster".BOOL107;
 	Cyclic#1.Zariadenie.IN.VystupDoprav_Napolohovany AT %IX."AB6_16DI".DigitalInput14;
 	Cyclic#1.Zariadenie.IN.VystupDoprav_Bezi AT %IX."AB6_16DI".DigitalInput15;
+	Cyclic#1.Zariadenie.IN.RucnyRezimStarehoZariadenia AT %IX."AB6_16DI".DigitalInput16;
 END_VAR

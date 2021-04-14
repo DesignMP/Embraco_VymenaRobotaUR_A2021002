@@ -1,7 +1,7 @@
 
 TYPE
 	SequenceControlTyp : 	STRUCT 
-		StepName : STRING[80];
+		StepName : STRING[200];
 		Step : UINT;
 		Switch1 : BOOL;
 		Switch2 : BOOL;

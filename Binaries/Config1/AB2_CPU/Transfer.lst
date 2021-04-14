@@ -16,6 +16,7 @@
   <Operation Delete="Blikanie10.br"/>
   <Operation Delete="LimitneSni.br"/>
   <Operation Delete="RiadenieSe.br"/>
+  <Operation Delete="TaktimeVyt.br"/>
   <Operation Delete="Visu.br"/>
   <Operation Delete="MpAxis.br"/>
   <Operation Delete="CoTrace.br"/>
@@ -165,6 +166,7 @@
   <Operation Download="MpAxis.br" Memory="UserROM"/>
   <Operation Download="assl1.br" Memory="UserROM"/>
   <Operation Download="Visu.br" Memory="UserROM"/>
+  <Operation Download="TaktimeVyt.br" Memory="UserROM"/>
   <Operation Download="RiadenieSe.br" Memory="UserROM"/>
   <Operation Download="LimitneSni.br" Memory="UserROM"/>
   <Operation Download="Blikanie10.br" Memory="UserROM"/>

@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1617953385_1_
-#define _BUR_1617953385_1_
+#ifndef _BUR_1618238982_1_
+#define _BUR_1618238982_1_
 
 #include <bur/plctypes.h>
 
@@ -87,6 +87,7 @@ typedef struct ZariadenieIN_typ
 	plcbit Otacac_PritomnostKusu_IS2;
 	plcbit VystupDoprav_Napolohovany;
 	plcbit VystupDoprav_Bezi;
+	plcbit RucnyRezimStarehoZariadenia;
 } ZariadenieIN_typ;
 
 typedef struct ZariadenieOUT_typ
@@ -292,6 +293,24 @@ typedef struct HardwareSTAV_typ
 	plcbit Komunikacia_Robot_OK;
 } HardwareSTAV_typ;
 
+typedef struct Taktime_CMD_typ
+{	plcbit START_Merania;
+	plcbit ZAPIS_Hodnot;
+	plcbit STOP_Merania;
+} Taktime_CMD_typ;
+
+typedef struct Taktime_OUTPUTS_typ
+{	unsigned short NameraneHodiny;
+	unsigned short NameraneMinuty;
+	unsigned short NameraneSekundy;
+	unsigned short NameraneMilisekundy;
+} Taktime_OUTPUTS_typ;
+
+typedef struct Taktime_typ
+{	struct Taktime_CMD_typ CMD;
+	struct Taktime_OUTPUTS_typ OUTPUTS;
+} Taktime_typ;
+
 
 
 
@@ -307,5 +326,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1617953385_1_ */
+#endif /* _BUR_1618238982_1_ */
 

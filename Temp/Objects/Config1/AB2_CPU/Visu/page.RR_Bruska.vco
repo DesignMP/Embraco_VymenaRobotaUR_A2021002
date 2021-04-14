@@ -755,7 +755,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">0</UInt32>
+              <UInt32 Name="Data">254</UInt32>
             </Group>
             <Group Name="AlignmentHorizontal">
               <UInt16 Name="Offset">26</UInt16>

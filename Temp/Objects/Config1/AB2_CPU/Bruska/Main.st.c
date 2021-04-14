@@ -186,7 +186,7 @@ if((Bruska.STAV.Servo_HomingOK&((Bruska.STAV.Servo_AktualnaPozicia==0)))){
 
 
 }break;case 100:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Bruska.StepName; plcstring* zzRValue=(plcstring*)"100 - Automaticky Rezim - cakam na spustenie otacania upinacej hlavy"; for(zzIndex=0; zzIndex<68l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Bruska.StepName; plcstring* zzRValue=(plcstring*)"100 - Automaticky Rezim - cakam na signal spustenia otacania upinacej hlavy"; for(zzIndex=0; zzIndex<75l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Bruska.IdleTime.PT=200);
 (SC_Bruska.AlarmTime.PT=5000);
 
@@ -203,12 +203,13 @@ if((Bruska.IN.UpinaciaHlava_OtacanieVPRED&(((unsigned long)(unsigned short)SC_Ov
 }
 
 }break;case 103:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Bruska.StepName; plcstring* zzRValue=(plcstring*)"103 - Automaticky Rezim - cakam na zastavenie otacania upinacej hlavy"; for(zzIndex=0; zzIndex<69l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Bruska.StepName; plcstring* zzRValue=(plcstring*)"103 - Automaticky Rezim - cakam na signal pre zastavenie otacania upinacej hlavy"; for(zzIndex=0; zzIndex<80l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Bruska.IdleTime.PT=200);
 (SC_Bruska.AlarmTime.PT=5000);
 
 
 if((Bruska.IN.UpinaciaHlava_OtacanieVPRED^1)){
+(Bruska.OUT.Stav_UpinaciaHlavaSaOtacaVPRED=0);
 (Bruska.Servo_MOVE=0);
 (SC_Bruska.ResetStep=1);
 (SC_Bruska.Step=105);
@@ -216,7 +217,7 @@ if((Bruska.IN.UpinaciaHlava_OtacanieVPRED^1)){
 
 
 }break;case 105:{
-{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Bruska.StepName; plcstring* zzRValue=(plcstring*)"105 - Automaticky Rezim - napolohovanie na nasobok vychodzej pozicie natocenia upinacej hlavy"; for(zzIndex=0; zzIndex<80l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
+{int zzIndex; plcstring* zzLValue=(plcstring*)SC_Bruska.StepName; plcstring* zzRValue=(plcstring*)"105 - Automaticky Rezim - natacam upinaciu hlavu do zakladnej pozicie"; for(zzIndex=0; zzIndex<69l && zzRValue[zzIndex]!=0; zzIndex++) zzLValue[zzIndex] = zzRValue[zzIndex]; zzLValue[zzIndex] = 0;};
 (SC_Bruska.IdleTime.PT=200);
 (SC_Bruska.AlarmTime.PT=5000);
 
@@ -271,13 +272,13 @@ if((Bruska.STAV.Servo_HomingOK&((Bruska.STAV.Servo_AktualnaPozicia==0)))){
 }break;}
 
 }imp2_case2_10:imp2_endcase2_0:;}
-#line 268 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
-#line 270 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.st"
+#line 269 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
+#line 271 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 273 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
+#line 274 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
 #line 2 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/OvlServa.st"
 static void __AS__Action__OvlServa(void){
 {
@@ -525,7 +526,7 @@ if((Bruska.Servo_MOVE^1)){
 
 
 }imp16385_case4_7:imp16385_endcase4_0:;}
-#line 275 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
+#line 276 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 

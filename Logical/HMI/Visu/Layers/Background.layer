@@ -19,6 +19,7 @@
       <Text ID="234539" Value="Automatický režim"/>
       <Text ID="234541" Value="Nastavenia"/>
       <Text ID="234543" Value="Manuálny režim"/>
+      <Text ID="235691" Value="Stavy zariadenia"/>
     </TextLayer>
     <TextLayer LanguageId="de">
       <Text ID="233411" Value=""/>
@@ -30,6 +31,7 @@
       <Text ID="234539" Value=""/>
       <Text ID="234541" Value=""/>
       <Text ID="234543" Value=""/>
+      <Text ID="235691" Value=""/>
     </TextLayer>
     <IndexMap>
       <Index ID="233411" Value="4"/>
@@ -41,6 +43,7 @@
       <Index ID="234539" Value="9"/>
       <Index ID="234541" Value="11"/>
       <Index ID="234543" Value="13"/>
+      <Index ID="235691" Value="15"/>
     </IndexMap>
   </TextGroup>
   <Controls>
@@ -129,13 +132,13 @@
     </Control>
     <Control ClassId="0x0000100A" Name="DateTime_1">
       <Property Name="AlignmentHorizontal" Value="Center"/>
-      <Property Name="BackColor" Value="0"/>
+      <Property Name="BackColor" Value="254"/>
       <Property Name="Border" Value="Source[local].Border[SunkenNGgray]"/>
       <Property Name="ControlID" Value="0"/>
       <Property Name="Description" Value=""/>
       <Property Name="FillStyle" Value="Opaque"/>
       <Property Name="Font" Value="Source[local].Font[Arial12_Bold]"/>
-      <Property Name="ForeColor" Value="48"/>
+      <Property Name="ForeColor" Value="15"/>
       <Property Name="Height" Value="30"/>
       <Property Name="Left" Value="561"/>
       <Property Name="SimulationValue" Value=""/>
@@ -332,6 +335,37 @@
       <Property Name="Top" Value="7"/>
       <Property Name="Width" Value="48"/>
     </Control>
+    <Control ClassId="0x00001002" Name="Button_12">
+      <Property Name="BackColor" Value="8"/>
+      <Property Name="Bitmap" Value="Source[local].Bitmap[ParametreZariadenia32x32]"/>
+      <Property Name="BitmapAlignmentHorizontal" Value="Left of Text"/>
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="SingleBitmap"/>
+      <Property Name="Border" Value="Source[local].Border[FrameInvisible]"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_91]"/>
+      <Property Name="Font" Value="Source[local].Font[Arial11_Bold]"/>
+      <Property Name="ForeColor" Value="0"/>
+      <Property Name="Height" Value="50"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="263"/>
+      <Property Name="Multiline" Value="Automatic"/>
+      <Property Name="PressedBackColor" Value="0"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedBorder" Value="Source[local].Border[Button_Global_Area_pressed]"/>
+      <Property Name="PressedForeColor" Value="0"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+      <Property Name="TextIndex" Value="15"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="429"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_91]"/>
+      <Property Name="Width" Value="130"/>
+    </Control>
   </Controls>
   <KeyMapping>
     <VirtualKey Name="%embVirtualKey_69">
@@ -413,6 +447,19 @@
           <Property Name="Locking" Value="Never"/>
           <Property Name="Name" Value="Action_0"/>
           <Property Name="Page" Value="Source[local].Page[ParametrePracoviska]"/>
+          <Property Name="Target" Value="Page"/>
+        </KeyAction>
+      </KeyActions>
+    </VirtualKey>
+    <VirtualKey Name="%embVirtualKey_91">
+      <Property Name="Description" Value=""/>
+      <Property Name="VirtualKey_LED" Value="False"/>
+      <KeyActions>
+        <KeyAction ClassId="0x00000160">
+          <Property Name="Description" Value=""/>
+          <Property Name="Locking" Value="Never"/>
+          <Property Name="Name" Value="Action_0"/>
+          <Property Name="Page" Value="Source[local].Page[StavyPracoviskZariadenia]"/>
           <Property Name="Target" Value="Page"/>
         </KeyAction>
       </KeyActions>

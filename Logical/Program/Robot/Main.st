@@ -110,6 +110,7 @@ PROGRAM _CYCLIC
             Robot.RR_OdparkujRobota:= FALSE;
             Robot.KOM_OUT.ServisnaPozicia:= FALSE;
             Robot.PAR.CisloAktualnejPozicie:= 0;
+            Taktime_Robot.CMD.START_Merania:= FALSE;
             IF Robot.KOM_IN.Stav_RezimAUTOMAT AND Robot.KOM_IN.Stav_ProgramRUN THEN
                 Robot.KOM_OUT.StopProgramu:= TRUE;
             ELSE	
@@ -203,7 +204,7 @@ PROGRAM _CYCLIC
             //********************************************************Automatický režim****************************************************************************//
         
         100:  
-            SC_Robot.StepName:='100 - Automaticky Rezim - presun robota do cakacej pozície odobratia capu z paletky';
+            SC_Robot.StepName:='100 - Automaticky Rezim - cakam na signal presunu robota do cakacej pozície odobratia capu z paletky';
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
@@ -217,8 +218,12 @@ PROGRAM _CYCLIC
                 Robot.KOM_OUT.ServisnaPozicia:= TRUE;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 103;
-            ELSIF Robot.PAR.CisloZadanejPozicie = 2 AND NOT Robot.KoniecCyklu THEN    
+            ELSIF Robot.PAR.CisloZadanejPozicie = 2 AND NOT Robot.KoniecCyklu AND Bruska.STAV.PoINIT AND NOT Zariadenie.IN.RucnyRezimStarehoZariadenia THEN    
                 Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie:= TRUE;
+            ELSIF Zariadenie.IN.RucnyRezimStarehoZariadenia AND NOT Robot.KOM_OUT.Paletka_PresunDoCakacejPozicie THEN
+                Robot.KOM_OUT.OdparkujRobota:= TRUE;
+                SC_Robot.ResetStep:= TRUE;
+                SC_Robot.Step:= 105;
             END_IF    
             
             
@@ -265,7 +270,7 @@ PROGRAM _CYCLIC
             END_IF  
     
         115:  
-            SC_Robot.StepName:='115 - Automaticky Rezim - cakam na odobratie capu z paletky';
+            SC_Robot.StepName:='115 - Automaticky Rezim - cakam na signal odober cap z paletky, snimac pritomnost kusu na paletke';
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
@@ -274,12 +279,24 @@ PROGRAM _CYCLIC
                 Robot.KOM_OUT.OdparkujRobota:= TRUE;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 116;
-             ELSIF Robot.IN.NepouzivatRobota THEN
+            ELSIF Robot.IN.NepouzivatRobota THEN
                 Robot.KOM_OUT.ServisnaPozicia:= TRUE;
                 SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 103;   
-            ELSIF Robot.PAR.CisloZadanejPozicie = 3 AND Zariadenie.IN.Paletka_PritomnostKusu_OS1 AND NOT Robot.KoniecCyklu THEN
+            ELSIF Robot.PAR.CisloZadanejPozicie = 3 AND Zariadenie.IN.Paletka_PritomnostKusu_OS1 AND NOT Robot.KoniecCyklu AND NOT Zariadenie.IN.RucnyRezimStarehoZariadenia THEN
+                IF NOT SC_Robot.Switch1 THEN
+                    IF NOT Taktime_Robot.CMD.START_Merania THEN
+                        Taktime_Robot.CMD.START_Merania:= TRUE;
+                    ELSE
+                        Taktime_Robot.CMD.ZAPIS_Hodnot:= TRUE;
+                    END_IF  
+                    SC_Robot.Switch1:= TRUE;
+                END_IF    
                 Robot.KOM_OUT.Paletka_OdoberCap:= TRUE;
+            ELSIF Zariadenie.IN.RucnyRezimStarehoZariadenia AND NOT Robot.KOM_OUT.Paletka_OdoberCap THEN
+                Robot.KOM_OUT.OdparkujRobota:= TRUE;
+                SC_Robot.ResetStep:= TRUE;
+                SC_Robot.Step:= 105;
             END_IF
         
             IF Robot.KOM_IN.Stav_RobotCinnostUkoncena THEN
@@ -325,7 +342,7 @@ PROGRAM _CYCLIC
                 
         
         125:  
-            SC_Robot.StepName:='125 - Automaticky Rezim - cakam na polozenia capu do otacaca';
+            SC_Robot.StepName:='125 - Automaticky Rezim - cakam na signal poloz cap do otacaca, snimac nepritomnosti kusu v otacaci';
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
@@ -353,7 +370,7 @@ PROGRAM _CYCLIC
         
         
         130:  
-            SC_Robot.StepName:='130 - Automaticky Rezim - cakam na odobratie capu z otacaca';
+            SC_Robot.StepName:='130 - Automaticky Rezim - cakam na signal odober cap z otacaca, snimac pritomnosti kusu v otacaci';
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
@@ -409,12 +426,16 @@ PROGRAM _CYCLIC
         
         
         140:
-            SC_Robot.StepName:='140 - Automaticky Rezim - cakam na odobratie capu z brusky';
+            SC_Robot.StepName:='140 - Automaticky Rezim - cakam na signal odober cap z brusky, snimac ochranny kryt otvoreny, vystup upinacia hlava zatvorena';
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
-            IF Robot.PAR.CisloZadanejPozicie = 6 AND Bruska.IN.OchrannyKrytBrusky_Otvoreny AND NOT Bruska.IN.UpinaciaHlava_Otvorena THEN
+            IF Robot.PAR.CisloZadanejPozicie = 6 AND Bruska.IN.OchrannyKrytBrusky_Otvoreny AND NOT Bruska.IN.UpinaciaHlava_Otvorena AND NOT Zariadenie.IN.RucnyRezimStarehoZariadenia THEN
                 Robot.KOM_OUT.Bruska_OdoberCap:= TRUE;
+            ELSIF Zariadenie.IN.RucnyRezimStarehoZariadenia AND NOT Robot.KOM_OUT.Bruska_OdoberCap THEN
+                Robot.KOM_OUT.OdparkujRobota:= TRUE;
+                SC_Robot.ResetStep:= TRUE;
+                SC_Robot.Step:= 105;
             END_IF
             
             IF Robot.KOM_IN.Stav_RobotDrziHotovyCap THEN
@@ -440,7 +461,7 @@ PROGRAM _CYCLIC
             END_IF  
         
         145:
-            SC_Robot.StepName:='145 - Automaticky Rezim - cakam na vlozenie capu do brusky';
+            SC_Robot.StepName:='145 - Automaticky Rezim - cakam na signal vloz cap do brusky, snimac ochranny kryt otvoreny, vystup upinacia hlava otvorena';
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
@@ -469,7 +490,7 @@ PROGRAM _CYCLIC
             END_IF 
         
         150:  
-            SC_Robot.StepName:='150 - Automaticky Rezim - presun robota do cakacej pozície pred dopravnikom';
+            SC_Robot.StepName:='150 - Automaticky Rezim - cakam na signal presun robota do cakacej pozície pred dopravnikom, snimac ochranny kryt otvoreny';
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
@@ -496,7 +517,7 @@ PROGRAM _CYCLIC
         
         
         155:
-            SC_Robot.StepName:='155 - Automaticky Rezim - cakam na vlozenie capu na dopravnik';
+            SC_Robot.StepName:='155 - Automaticky Rezim - cakam na signal vloz cap na dopravnik, snimac dopravnik napolohovany, vystup dopravnik zastaveny';
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
         
@@ -534,7 +555,7 @@ PROGRAM _CYCLIC
         
           
         160:
-            SC_Robot.StepName:='160 - Automaticky Rezim - cakam na signal presun k paletke';
+            SC_Robot.StepName:='160 - Automaticky Rezim - cakam na signal presun k paletke alebo ukoncenie cyklu';
             SC_Robot.IdleTime.PT:= T#200ms;
             SC_Robot.AlarmTime.PT:= T#5s;
             

@@ -288,7 +288,7 @@
         </Control>
         <Control ClassId="0x00001007" Name="Numeric_1">
           <Property Name="AlignmentHorizontal" Value="Center"/>
-          <Property Name="BackColor" Value="0"/>
+          <Property Name="BackColor" Value="254"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Arial12_Bold]"/>

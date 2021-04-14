@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1615817892_2_
-#define _BUR_1615817892_2_
+#ifndef _BUR_1618225226_2_
+#define _BUR_1618225226_2_
 
 #include <bur/plctypes.h>
 
@@ -13,6 +13,7 @@
 
 
 /* Variables */
+_GLOBAL struct Taktime_typ Taktime_Robot;
 _GLOBAL plcbit PoruchaRobota;
 _GLOBAL plcbit PoruchaBrusky;
 _GLOBAL plcbit PotvrdenieAlarmov;
@@ -55,5 +56,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.fun\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1615817892_2_ */
+#endif /* _BUR_1618225226_2_ */
 

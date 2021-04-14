@@ -79,7 +79,7 @@ _BUR_PUBLIC void TON(struct TON* inst);
 #ifndef __AS__TYPE_SequenceControlTyp
 #define __AS__TYPE_SequenceControlTyp
 typedef struct SequenceControlTyp
-{	plcstring StepName[81];
+{	plcstring StepName[201];
 	unsigned short Step;
 	plcbit Switch1;
 	plcbit Switch2;
