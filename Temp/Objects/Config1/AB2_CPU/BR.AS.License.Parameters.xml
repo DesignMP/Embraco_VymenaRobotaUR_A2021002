@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Parameters>
   <Connection>
-    <DeviceParameters>/IF=tcpip /LOPO=11159 /SA=1</DeviceParameters>
-    <ConnectionParameters>/COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.0.1 /REPO=11159 /ANSL=1 /PT=11169</ConnectionParameters>
+    <DeviceParameters>/IF=COM1 /BD=57600 /PA=2 /IT=20 /RS=0</DeviceParameters>
+    <ConnectionParameters>/RT=1000 /AM=*</ConnectionParameters>
   </Connection>
   <AsProject>
     <ApjFullFileName>D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\VymenaRobotaUR.apj</ApjFullFileName>

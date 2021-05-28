@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version="4.7.5.60 SP"?>
+<?AutomationStudio Version="4.7.6.114 SP"?>
 <ConfigurationOptions
   Name="Config1"
   Target="SG4"
@@ -8,7 +8,7 @@
   ActivateSdm="true"
   WebServer="true"
   ARMSimulation="False"
-  ArVersion="C4.73">
+  ArVersion="D4.73">
   <ModuleMemoryData>
     <Module
       Name=""

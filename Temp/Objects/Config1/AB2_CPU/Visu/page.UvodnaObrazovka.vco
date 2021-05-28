@@ -7,9 +7,9 @@
         <Folder Name="POBJ">
           <Object Name="BarGraph_1" ClsId="0x1006" Version="1" Type="CTRL" RefString="Source[local].Page[UvodnaObrazovka].Layer[Default].Control[BarGraph_1]">
             <UInt32 Name="Left">21</UInt32>
-            <UInt32 Name="Top">383</UInt32>
+            <UInt32 Name="Top">418</UInt32>
             <UInt32 Name="Right">772</UInt32>
-            <UInt32 Name="Bottom">419</UInt32>
+            <UInt32 Name="Bottom">447</UInt32>
             <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Vizu.Slider]</Reference>
             <UInt32 Name="Reserved">4294967295</UInt32>
             <Double Name="StartValue">0</Double>
@@ -26,7 +26,7 @@
             <Group Name="Range[0].Color">
               <UInt16 Name="Offset">16</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">48</UInt32>
+              <UInt32 Name="Data">38</UInt32>
             </Group>
             <Group Name="Range[0].Start">
               <UInt16 Name="Offset">24</UInt16>

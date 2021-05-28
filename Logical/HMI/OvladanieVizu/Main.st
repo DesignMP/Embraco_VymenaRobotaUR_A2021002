@@ -134,7 +134,9 @@ PROGRAM _CYCLIC
     ELSIF NOT Safety.STAV.ZonaRobot_AKTIVNA THEN
         Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
     ELSIF NOT Safety.STAV.ZonaPracovisko_AKTIVNA THEN
-        Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
+		Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
+	ELSIF Bruska.Servo_ODBRZDI THEN
+		Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
     ELSE
         Vizu.TL_RR_OvladanieServa_DISABLE:= FALSE;
     END_IF    
@@ -148,7 +150,9 @@ PROGRAM _CYCLIC
     ELSIF NOT Safety.STAV.ZonaRobot_AKTIVNA THEN
         Vizu.TL_RR_HomingServa_DISABLE:= TRUE;
     ELSIF NOT Safety.STAV.ZonaPracovisko_AKTIVNA THEN
-        Vizu.TL_RR_HomingServa_DISABLE:= TRUE;
+		Vizu.TL_RR_HomingServa_DISABLE:= TRUE;
+	ELSIF Bruska.Servo_ODBRZDI THEN
+		Vizu.TL_RR_HomingServa_DISABLE:= TRUE;
     ELSE
         Vizu.TL_RR_HomingServa_DISABLE:= FALSE;
     END_IF    
@@ -166,6 +170,15 @@ PROGRAM _CYCLIC
         Vizu.TL_OdparkovanieRobota_DISABLE:= FALSE;
     END_IF    
     
+	//Tlaèítko odbrzdenie upínacej hlavy//
+	IF Bruska.STAV.Servo_HomingBUSY THEN
+		Vizu.TL_OdbrzdenieServa_DISABLE:= TRUE;
+	ELSE    
+		Vizu.TL_OdbrzdenieServa_DISABLE:= FALSE;
+	END_IF    
+	
+	
+	
 END_PROGRAM
 
 PROGRAM _EXIT

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <BR.AS.HardwareTopology Version="0.0.0.1">
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="04/09/2021 11:38:07" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="05/25/2021 17:28:38" />
   </TimeStamps>
   <Modules>
     <Module Name="X20BB62" Type="X20BB62" X="75" Y="100" />
@@ -38,22 +38,22 @@
       <Point X="114" Y="173" />
     </Link>
     <Link From="8EI013HWS10.xxxx-1" To="8LSA57.DA030S300-3a" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
-      <Point X="127" Y="416.1" />
-      <Point X="127" Y="416.1" />
-      <Point X="149" Y="416.1" />
-      <Point X="285.5" Y="416.1" />
-      <Point X="285.5" Y="554" />
-      <Point X="285.5" Y="561" />
-      <Point X="285.5" Y="561" />
+      <Point X="127" Y="416" />
+      <Point X="127" Y="416" />
+      <Point X="149" Y="416" />
+      <Point X="285.5" Y="416" />
+      <Point X="285.5" Y="553.1" />
+      <Point X="285.5" Y="560.1" />
+      <Point X="285.5" Y="560.1" />
     </Link>
     <Link From="8EI013HWS10.xxxx-1" To="8LSA57.DA030S300-3a" FromPort="MT1" ToPort="MT" IsRoutedByUser="False">
-      <Point X="128.599976" Y="425.400024" />
-      <Point X="128.599976" Y="425.400024" />
-      <Point X="148.599976" Y="425.400024" />
-      <Point X="313.5" Y="425.400024" />
-      <Point X="313.5" Y="554" />
-      <Point X="313.5" Y="561" />
-      <Point X="313.5" Y="561" />
+      <Point X="128.6" Y="425.3" />
+      <Point X="128.6" Y="425.3" />
+      <Point X="148.6" Y="425.3" />
+      <Point X="313.5" Y="425.3" />
+      <Point X="313.5" Y="553.1" />
+      <Point X="313.5" Y="560.1" />
+      <Point X="313.5" Y="560.1" />
     </Link>
     <Link From="AB1_ProfinetMaster" To="Robot_ABB" FromPort="IF1" ToPort="PN1" IsRoutedByUser="False">
       <Point X="377" Y="330.1" />

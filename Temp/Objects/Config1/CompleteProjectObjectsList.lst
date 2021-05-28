@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version="4.7.5.60 SP"?>
+<?AutomationStudio Version="4.7.6.114 SP"?>
 <Objects>
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Package.pkg"
@@ -22,7 +22,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.typ"
     LogicalPath="Global.typ"
     Type="File"
-    LastWriteTime="132627122894711759"
+    LastWriteTime="132666691446324729"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Global.var"
@@ -632,13 +632,13 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\Variables.var"
     LogicalPath="Program.Bruska.Variables.var"
     Type="File"
-    LastWriteTime="132614943585501471"
+    LastWriteTime="132666676360985087"
     Private="true" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Bruska\OvlServa.st"
     LogicalPath="Program.Bruska.OvlServa.st"
     Type="File"
-    LastWriteTime="132624340148693614"
+    LastWriteTime="132666677037112029"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\Program\Robot\IEC.prg"
@@ -712,7 +712,7 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\OvladanieVizu\Main.st"
     LogicalPath="HMI.OvladanieVizu.Main.st"
     Type="File"
-    LastWriteTime="132624271703537527"
+    LastWriteTime="132666724759423771"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\OvladanieVizu\Types.typ"
@@ -948,19 +948,19 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.hw"
     LogicalPath="Config1.Hardware.hw"
     Type="File"
-    LastWriteTime="132624346871866555"
+    LastWriteTime="132664301182977841"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.hwl"
     LogicalPath="Config1.Hardware.hwl"
     Type="File"
-    LastWriteTime="132627856267003634"
+    LastWriteTime="132664301315234858"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\Cpu.pkg"
     LogicalPath="Config1.AB2_CPU"
     Type="Cpu"
-    LastWriteTime="132615017120564914" />
+    LastWriteTime="132664300184128745" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\Cpu.sw"
     LogicalPath="Config1.AB2_CPU.Cpu.sw"
@@ -1232,12 +1232,12 @@
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\AB2_CPU\SafeLOGIC-1.swt"
     LogicalPath="Config1.AB2_CPU.SafeLOGIC-1.swt"
     Type="File"
-    LastWriteTime="132623531595420000"
+    LastWriteTime="132654674527240911"
     Private="false" />
   <Object
     Path="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Physical\Config1\Hardware.jpg"
     LogicalPath="Config1.Hardware.jpg"
     Type="File"
-    LastWriteTime="132627856267083397"
+    LastWriteTime="132664301315314647"
     Private="false" />
 </Objects>

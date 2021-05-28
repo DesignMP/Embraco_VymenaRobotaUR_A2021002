@@ -72,7 +72,7 @@
             <Group Name="Border">
               <UInt16 Name="Offset">4</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[OverdriveBorder]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[RaisedInner]</Reference>
             </Group>
             <Group Name="BitmapAlignmentHorizontal">
               <UInt16 Name="Offset">10</UInt16>
@@ -302,7 +302,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">254</UInt32>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="Font">
               <UInt16 Name="Offset">20</UInt16>
@@ -325,10 +325,10 @@
             </Group>
           </Object>
           <Object Name="HotSpot_1" ClsId="0x1003" Version="1" Type="CTRL" RefString="Source[local].Layer[Background].Control[HotSpot_1]">
-            <UInt32 Name="Left">564</UInt32>
-            <UInt32 Name="Top">19</UInt32>
-            <UInt32 Name="Right">784</UInt32>
-            <UInt32 Name="Bottom">40</UInt32>
+            <UInt32 Name="Left">566</UInt32>
+            <UInt32 Name="Top">20</UInt32>
+            <UInt32 Name="Right">786</UInt32>
+            <UInt32 Name="Bottom">41</UInt32>
             <UInt16 Name="KeyMatrixOffset">65535</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
             <Reference Name="VirtualKey" Type="VKEY">Source[local].VirtualKey[%embVirtualKey_61]</Reference>

@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1618293983_2_
-#define _BUR_1618293983_2_
+#ifndef _BUR_1621956551_24_
+#define _BUR_1621956551_24_
 
 #include <bur/plctypes.h>
 
@@ -32,5 +32,5 @@ __asm__(".ascii \"iecfile \\\"Logical/MeranieTaktime/TaktimeRobot/Variables.var\
 __asm__(".previous");
 
 
-#endif /* _BUR_1618293983_2_ */
+#endif /* _BUR_1621956551_24_ */
 

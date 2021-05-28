@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?AutomationStudio Version="4.7.5.60 SP"?>
+<?AutomationStudio Version="4.7.6.114 SP"?>
 <EnvironmentSettings xmlns="http://br-automation.co.at/AS/VC/Project">
   <EditorMainFrame>
     <Property Name="DockingWindowReg" Value="1"/>
@@ -13,7 +13,7 @@
       <Property Name="StyleableMode" Value="1"/>
     </PropertyEditor>
     <ImportSettings>
-      <Property Name="ImportPath" Value="D:\Projekty BER\Panasonic_StaraLubovna_FrezovaciaBunkaA2019017"/>
+      <Property Name="ImportPath" Value="D:\Projekty BER\Embraco_ZariadenieNaPreklapanieRotorov_A2021001"/>
     </ImportSettings>
   </EditorMainFrame>
   <GridSettings>

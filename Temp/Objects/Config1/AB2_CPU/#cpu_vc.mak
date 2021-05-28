@@ -18,7 +18,7 @@ export AS_TEMP_PLC := AB2_CPU
 export AS_USER_NAME := Martin\ Dvorscak
 export AS_CONFIGURATION := Config1
 export AS_COMPANY_NAME := \ 
-export AS_VERSION := 4.7.5.60\ SP
+export AS_VERSION := 4.7.6.114\ SP
 
 
 default: \

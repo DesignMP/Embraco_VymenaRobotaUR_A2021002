@@ -18,8 +18,8 @@ VCXREFEXTENDER:=@'$(AS_BIN_PATH)/BR.AS.CrossRefVCExtender.exe'
 RM=CMD /C DEL
 PALFILE_Visu=$(AS_PROJECT_PATH)/Logical/HMI/Visu/Palette.vcr
 VCCFLAGS_Visu=-server -proj Visu -vc '$(AS_PROJECT_PATH)/Logical/HMI/Visu/VCObject.vc' -prj_path '$(AS_PROJECT_PATH)' -temp_path '$(AS_TEMP_PATH)' -cfg $(AS_CONFIGURATION) -plc $(AS_PLC) -plctemp $(AS_TEMP_PLC) -cpu_path '$(AS_CPU_PATH)'
-VCFIRMWARE=4.72.4
-VCFIRMWAREPATH=$(AS_VC_PATH)/Firmware/V4.72.4/SG4
+VCFIRMWARE=4.72.0
+VCFIRMWAREPATH=$(AS_VC_PATH)/Firmware/V4.72.0/SG4
 VCOBJECT_Visu=$(AS_PROJECT_PATH)/Logical/HMI/Visu/VCObject.vc
 VCSTARTUP='vcstart.br'
 VCLOD='vclod.br'
@@ -49,7 +49,7 @@ $(AS_CPU_PATH)/VcFntDat/arial.vco:$(AS_CPU_PATH)/VcFntDat/arial.vci
 	 $(VCC) -f '$<' -o '$@' $(TTFFLAGS_Visu) $(VCCFLAGS_Visu) -sfas
 
 $(AS_CPU_PATH)/VcFntDat/arial.ccf:$(AS_CPU_PATH)/VcFntDat/arial.vco
-	 $(LINK) '$^' -o '$@' -warningLevel2 -m arial.ttf -name Visu -profile 'False' -vcr 4724 -sfas
+	 $(LINK) '$^' -o '$@' -warningLevel2 -m arial.ttf -name Visu -profile 'False' -vcr 4720 -sfas
 
 $(AS_CPU_PATH)/arial.br:$(AS_CPU_PATH)/VcFntDat/arial.ccf
 	 $(MODGEN) -so $(VC_STATIC_OPTIONS_Shared) -fw '$(VCFIRMWAREPATH)' -m $(VCLOD) -f '$<' -o '$@' -d vcgclass -v V1.00.0 -profile False -vc '$(VCOBJECT_Visu)' -b
@@ -64,7 +64,7 @@ $(AS_CPU_PATH)/VcFntDat/arialbd.vco:$(AS_CPU_PATH)/VcFntDat/arialbd.vci
 	 $(VCC) -f '$<' -o '$@' $(TTFFLAGS_Visu) $(VCCFLAGS_Visu) -sfas
 
 $(AS_CPU_PATH)/VcFntDat/arialbd.ccf:$(AS_CPU_PATH)/VcFntDat/arialbd.vco
-	 $(LINK) '$^' -o '$@' -warningLevel2 -m arialbd.ttf -name Visu -profile 'False' -vcr 4724 -sfas
+	 $(LINK) '$^' -o '$@' -warningLevel2 -m arialbd.ttf -name Visu -profile 'False' -vcr 4720 -sfas
 
 $(AS_CPU_PATH)/arialbd.br:$(AS_CPU_PATH)/VcFntDat/arialbd.ccf
 	 $(MODGEN) -so $(VC_STATIC_OPTIONS_Shared) -fw '$(VCFIRMWAREPATH)' -m $(VCLOD) -f '$<' -o '$@' -d vcgclass -v V1.00.0 -profile False -vc '$(VCOBJECT_Visu)' -b

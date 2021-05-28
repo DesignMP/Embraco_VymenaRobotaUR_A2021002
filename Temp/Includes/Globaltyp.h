@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1618238982_1_
-#define _BUR_1618238982_1_
+#ifndef _BUR_1622198882_1_
+#define _BUR_1622198882_1_
 
 #include <bur/plctypes.h>
 
@@ -73,6 +73,7 @@ typedef struct Vizu_typ
 	plcbit TL_RR_OvladanieServa_DISABLE;
 	plcbit TL_RR_HomingServa_DISABLE;
 	plcbit TL_OdparkovanieRobota_DISABLE;
+	plcbit TL_OdbrzdenieServa_DISABLE;
 	unsigned char Slider;
 	plcbit FarbaTlacitkaAlarm_Index;
 	plcbit ZobrazSymbolAlarmu;
@@ -281,6 +282,7 @@ typedef struct Bruska_typ
 	plcbit Servo_HOME_DIRECT;
 	plcbit Servo_POLOHUJ;
 	plcbit Servo_MOVE;
+	plcbit Servo_ODBRZDI;
 } Bruska_typ;
 
 typedef struct HardwareSTAV_typ
@@ -326,5 +328,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1618238982_1_ */
+#endif /* _BUR_1622198882_1_ */
 

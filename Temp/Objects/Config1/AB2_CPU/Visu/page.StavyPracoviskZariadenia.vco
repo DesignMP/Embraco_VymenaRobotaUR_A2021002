@@ -18,7 +18,7 @@
             <Group Name="Border">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_SunkenNG]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[ProgressBarBorder]</Reference>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
@@ -162,7 +162,7 @@
             <Group Name="ForeColor">
               <UInt16 Name="Offset">8</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">48</UInt32>
+              <UInt32 Name="Data">15</UInt32>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
@@ -231,7 +231,7 @@
             <Group Name="ForeColor">
               <UInt16 Name="Offset">8</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">48</UInt32>
+              <UInt32 Name="Data">15</UInt32>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>

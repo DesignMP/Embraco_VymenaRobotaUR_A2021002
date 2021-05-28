@@ -18,7 +18,7 @@
             <Group Name="Border">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_SunkenNG]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[ProgressBarBorder]</Reference>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
@@ -102,7 +102,7 @@
             <Group Name="Border">
               <UInt16 Name="Offset">0</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="BRD">Source[local].Border[Flat_black]</Reference>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_TabActive]</Reference>
             </Group>
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
@@ -218,8 +218,13 @@
             <Double Name="MinValue">5</Double>
             <Double Name="MaxValue">1000</Double>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001007].StyleClass[Default]</Reference>
-            <UInt16 Name="StyleTableSize">89</UInt16>
+            <UInt16 Name="StyleTableSize">97</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
+            <Group Name="Border">
+              <UInt16 Name="Offset">0</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_InputBorder]</Reference>
+            </Group>
             <Group Name="ForeColor">
               <UInt16 Name="Offset">8</UInt16>
               <UInt16 Name="Size">4</UInt16>
@@ -409,8 +414,13 @@
             <Double Name="MinValue">0</Double>
             <Double Name="MaxValue">350</Double>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001007].StyleClass[Default]</Reference>
-            <UInt16 Name="StyleTableSize">89</UInt16>
+            <UInt16 Name="StyleTableSize">97</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
+            <Group Name="Border">
+              <UInt16 Name="Offset">0</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="BRD">Source[local].Border[Mp_InputBorder]</Reference>
+            </Group>
             <Group Name="ForeColor">
               <UInt16 Name="Offset">8</UInt16>
               <UInt16 Name="Size">4</UInt16>

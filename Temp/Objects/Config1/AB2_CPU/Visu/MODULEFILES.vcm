@@ -10,10 +10,10 @@
   <File Name="vccalarm.br" />
   <File Name="vccline.br" />
   <File Name="vccbmp.br" />
+  <File Name="vccstr.br" />
   <File Name="vccovl.br" />
   <File Name="vccdt.br" />
   <File Name="vcchspot.br" />
-  <File Name="vccstr.br" />
   <File Name="vcrt.br" />
   <File Name="vcbclass.br" />
   <File Name="vcgclass.br" />

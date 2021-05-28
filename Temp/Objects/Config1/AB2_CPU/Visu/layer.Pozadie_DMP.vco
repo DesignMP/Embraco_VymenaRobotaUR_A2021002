@@ -23,7 +23,7 @@
             <Group Name="Bitmap">
               <UInt16 Name="Offset">36</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="GFX">Source[local].Bitmap[PozadieDesignMP_800x480]</Reference>
+              <Reference Name="Data" Type="GFX">Source[local].Bitmap[LogoDesign_800x480]</Reference>
             </Group>
             <Group Name="End Marker">
               <UInt16 Name="Offset">65535</UInt16>

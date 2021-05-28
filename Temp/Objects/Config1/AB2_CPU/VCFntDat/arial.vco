@@ -6,7 +6,7 @@
       <Object Name="arial" ClsId="0x300" Version="1" Type="FONT" RefString="Source[global].Font[arial]">
         <UInt32 Name="MaxFontCache">3840</UInt32>
         <UInt32 Name="Flags">0</UInt32>
-        <Url Name="FontData">C:\Windows\fonts\arial.TTF</Url>
+        <Url Name="FontData">C:\WINDOWS\fonts\arial.TTF</Url>
       </Object>
     </Folder>
   </Folder>

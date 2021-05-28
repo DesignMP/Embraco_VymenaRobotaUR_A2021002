@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.7.5.60?>
+<?AutomationStudio Version=4.7.6.114?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="8EI013HWS10.xxxx-1" Type="8EI013HWS10.xxxx-1" Version="2.3.1.1">
     <Connection Connector="PLK1" TargetModule="AB2_CPU" TargetConnector="IF3">

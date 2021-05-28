@@ -296,7 +296,7 @@ if(Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.Communication_READY){
 
 
 
-(CasPowerON.IN=(Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ReadyToPower_ON&Bruska.STAV.Servo_LimitneSnimaceBUSY&Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.EnableSwitch_ACTIVE&(Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ERROR^1)));
+(CasPowerON.IN=(Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ReadyToPower_ON&Bruska.STAV.Servo_LimitneSnimaceBUSY&Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.EnableSwitch_ACTIVE&(Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ERROR^1)&(Bruska.Servo_ODBRZDI^1)));
 if(CasPowerON.Q){
 (Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.POWER=1);
 }else{
@@ -307,9 +307,25 @@ if(CasPowerON.Q){
 TON(&CasPowerON);
 
 
+if(Bruska.Servo_ODBRZDI){
+(Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU=0);
+(Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.UvolniBRZDU=1);
+(Triger_1=0);
+}else{
+(Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.UvolniBRZDU=0);
+if((Triger_1^1)){
+(Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU=1);
+(Triger_1=1);
+}
+}
 
+if(CasOvladaniaBrzdy.Q){
+(Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU=0);
+}
 
-
+(CasOvladaniaBrzdy.PT=1000);
+(CasOvladaniaBrzdy.IN=Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU);
+TON(&CasOvladaniaBrzdy);
 
 
 
@@ -374,6 +390,7 @@ case 0:{
 (Bruska.Servo_JoggVZAD=0);
 (Bruska.Servo_MOVE=0);
 (Bruska.Servo_POLOHUJ=0);
+(Bruska.Servo_ODBRZDI=0);
 (Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.HOME=0);
 (Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.JoggVPRED=0);
 (Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.JoggVZAD=0);
@@ -525,7 +542,7 @@ if((Bruska.Servo_MOVE^1)){
 
 
 
-}imp16385_case4_7:imp16385_endcase4_0:;}
+}imp16385_case7_7:imp16385_endcase7_0:;}
 #line 276 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/Program/Bruska/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}

@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1618225226_2_
-#define _BUR_1618225226_2_
+#ifndef _BUR_1621956551_2_
+#define _BUR_1621956551_2_
 
 #include <bur/plctypes.h>
 
@@ -56,5 +56,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.fun\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1618225226_2_ */
+#endif /* _BUR_1621956551_2_ */
 

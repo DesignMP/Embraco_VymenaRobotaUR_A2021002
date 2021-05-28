@@ -140,6 +140,8 @@ if((Bruska.STAV.Servo_HomingOK^1)){
 (Vizu.TL_RR_OvladanieServa_DISABLE=1);
 }else if((Safety.STAV.ZonaPracovisko_AKTIVNA^1)){
 (Vizu.TL_RR_OvladanieServa_DISABLE=1);
+}else if(Bruska.Servo_ODBRZDI){
+(Vizu.TL_RR_OvladanieServa_DISABLE=1);
 }else{
 (Vizu.TL_RR_OvladanieServa_DISABLE=0);
 }
@@ -153,6 +155,8 @@ if(NastalaPorucha){
 }else if((Safety.STAV.ZonaRobot_AKTIVNA^1)){
 (Vizu.TL_RR_HomingServa_DISABLE=1);
 }else if((Safety.STAV.ZonaPracovisko_AKTIVNA^1)){
+(Vizu.TL_RR_HomingServa_DISABLE=1);
+}else if(Bruska.Servo_ODBRZDI){
 (Vizu.TL_RR_HomingServa_DISABLE=1);
 }else{
 (Vizu.TL_RR_HomingServa_DISABLE=0);
@@ -171,14 +175,23 @@ if(Zariadenie.STAV.Automat){
 (Vizu.TL_OdparkovanieRobota_DISABLE=0);
 }
 
-}imp1_end13_0:;}
-#line 169 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
-#line 171 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
+
+if(Bruska.STAV.Servo_HomingBUSY){
+(Vizu.TL_OdbrzdenieServa_DISABLE=1);
+}else{
+(Vizu.TL_OdbrzdenieServa_DISABLE=0);
+}
+
+
+
+}imp1_end14_0:;}
+#line 182 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 184 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 174 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 187 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 

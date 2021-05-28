@@ -7,15 +7,15 @@ ACTION OvlServa:
 	//Motor má klasický encodér a brzdu//
 	
     //ENABLE serva//
-    IF Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.Communication_READY THEN
-        Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ENABLE:= TRUE;
-    ELSE
-        Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ENABLE:= FALSE;
-    END_IF    
+	IF Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.Communication_READY THEN
+		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ENABLE:= TRUE;
+	ELSE
+		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ENABLE:= FALSE;
+	END_IF    
     
     
 	//POWER ON serva//
-	CasPowerON.IN:= Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ReadyToPower_ON AND Bruska.STAV.Servo_LimitneSnimaceBUSY AND Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.EnableSwitch_ACTIVE AND NOT Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ERROR;
+	CasPowerON.IN:= Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ReadyToPower_ON AND Bruska.STAV.Servo_LimitneSnimaceBUSY AND Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.EnableSwitch_ACTIVE AND NOT Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ERROR AND NOT Bruska.Servo_ODBRZDI;
 	IF CasPowerON.Q THEN
 		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.POWER:= TRUE;
 	ELSE
@@ -25,11 +25,27 @@ ACTION OvlServa:
 	CasPowerON.PT:= T#1s;
 	CasPowerON();
 	
+	//*************************************Ovládanie brzdy serva otáèania upínacej hlavy***************************************//
+	IF Bruska.Servo_ODBRZDI THEN
+		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU:= FALSE;
+		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.UvolniBRZDU:= TRUE;
+		Triger_1:= FALSE;
+	ELSE
+		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.UvolniBRZDU:= FALSE;
+		IF NOT Triger_1 THEN
+			Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU:= TRUE;
+			Triger_1:= TRUE;
+		END_IF	
+	END_IF
 	
+	IF CasOvladaniaBrzdy.Q THEN
+		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU:= FALSE;
+	END_IF	
 	
-	
-	
-	
+	CasOvladaniaBrzdy.PT:= T#1s;
+	CasOvladaniaBrzdy.IN:= Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU;
+	CasOvladaniaBrzdy();
+
 	
 	
 	
@@ -54,11 +70,11 @@ ACTION OvlServa:
 	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Deceleration:= Bruska.PAR.Servo_RychlostPolohovania*3;
 	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.StopDeceleration:= Bruska.PAR.Servo_RychlostPolohovania*3;
 	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Velocity:= Bruska.PAR.Servo_RychlostPolohovania; 
-    Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Position:= Bruska.PAR.Servo_PoziciaNatocenia;
+	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.Position:= Bruska.PAR.Servo_PoziciaNatocenia;
     
-    Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.JoggAcceleration:= Bruska.PAR.Servo_JoggRychlost*10;
-    Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.JoggDeceleration:= Bruska.PAR.Servo_JoggRychlost*10;
-    Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.JoggVelocity:= Bruska.PAR.Servo_JoggRychlost;
+	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.JoggAcceleration:= Bruska.PAR.Servo_JoggRychlost*10;
+	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.JoggDeceleration:= Bruska.PAR.Servo_JoggRychlost*10;
+	Bruska.ServoOtacaniaUpinacejHlavy_M1.PAR.JoggVelocity:= Bruska.PAR.Servo_JoggRychlost;
 		
 	
 	//Zastavenie pohybu serva//
@@ -80,25 +96,26 @@ ACTION OvlServa:
 	
 	
 	
-    //Volanie funkcie SequenceControl//
-    SequenceControl(SC:= SC_OvlServa);
+	//Volanie funkcie SequenceControl//
+	SequenceControl(SC:= SC_OvlServa);
 	
 	CASE SC_OvlServa.Step OF
 		
 		0:
 			SC_OvlServa.StepName:= '0 - Nulovanie';
-            Bruska.Servo_HOME_SWITCH:= FALSE;
-            Bruska.Servo_HOME_DIRECT:= FALSE;
-            Bruska.Servo_JoggVPRED:= FALSE;
-            Bruska.Servo_JoggVZAD:= FALSE;
-            Bruska.Servo_MOVE:= FALSE;
-            Bruska.Servo_POLOHUJ:= FALSE;
+			Bruska.Servo_HOME_SWITCH:= FALSE;
+			Bruska.Servo_HOME_DIRECT:= FALSE;
+			Bruska.Servo_JoggVPRED:= FALSE;
+			Bruska.Servo_JoggVZAD:= FALSE;
+			Bruska.Servo_MOVE:= FALSE;
+			Bruska.Servo_POLOHUJ:= FALSE;
+			Bruska.Servo_ODBRZDI:= FALSE;
 			Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.HOME:= FALSE;
 			Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.JoggVPRED:= FALSE;
 			Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.JoggVZAD:= FALSE;
-            Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.MoveAbsolute:= FALSE;
-            Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.MoveVelocity:= FALSE;
-            Bruska.STAV.Servo_HomingBUSY:= FALSE;
+			Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.MoveAbsolute:= FALSE;
+			Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.MoveVelocity:= FALSE;
+			Bruska.STAV.Servo_HomingBUSY:= FALSE;
             								
 			IF SC_Bruska.Step <> 0 AND Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.Power_ON AND NOT Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.ERROR AND NOT Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.STOP_ACTIVE THEN
 				SC_OvlServa.ResetStep:= TRUE;
@@ -113,13 +130,13 @@ ACTION OvlServa:
 			ELSIF Bruska.Servo_JoggVZAD THEN
 				SC_OvlServa.Step:= 20;
 			ELSIF Bruska.Servo_HOME_SWITCH THEN
-                SC_OvlServa.Step:= 30;
-            ELSIF Bruska.Servo_HOME_DIRECT THEN
-                SC_OvlServa.Step:= 40;    
+				SC_OvlServa.Step:= 30;
+			ELSIF Bruska.Servo_HOME_DIRECT THEN
+				SC_OvlServa.Step:= 40;    
 			ELSIF Bruska.Servo_POLOHUJ THEN
-                SC_OvlServa.Step:= 50;
-            ELSIF Bruska.Servo_MOVE THEN
-                SC_OvlServa.Step:= 60;
+				SC_OvlServa.Step:= 50;
+			ELSIF Bruska.Servo_MOVE THEN
+				SC_OvlServa.Step:= 60;
 			END_IF
 	
 	
@@ -164,8 +181,8 @@ ACTION OvlServa:
 			SC_OvlServa.IdleTime.PT:= T#500ms;
 			SC_OvlServa.AlarmTime.PT:= T#3s;
 		
-            Bruska.ServoOtacaniaUpinacejHlavy_M1.HomePAR.HomingMode:= 1; //0 - direct, 1- refrenèný snímaè, 2 - limitný snímaè, 3 - absolutny encoder, 4 - na moment//
-            Bruska.STAV.Servo_HomingBUSY:= TRUE;
+			Bruska.ServoOtacaniaUpinacejHlavy_M1.HomePAR.HomingMode:= 1; //0 - direct, 1- refrenèný snímaè, 2 - limitný snímaè, 3 - absolutny encoder, 4 - na moment//
+			Bruska.STAV.Servo_HomingBUSY:= TRUE;
             
             
 			IF NOT SC_OvlServa.Switch1 THEN
@@ -179,24 +196,24 @@ ACTION OvlServa:
 				SC_OvlServa.Step:= 0;
 			END_IF	
 		
-        40:
-            SC_OvlServa.StepName:= '30 - Homing DIRECT';
-            SC_OvlServa.IdleTime.PT:= T#500ms;
-            SC_OvlServa.AlarmTime.PT:= T#3s;    
+		40:
+			SC_OvlServa.StepName:= '30 - Homing DIRECT';
+			SC_OvlServa.IdleTime.PT:= T#500ms;
+			SC_OvlServa.AlarmTime.PT:= T#3s;    
             
-            Bruska.ServoOtacaniaUpinacejHlavy_M1.HomePAR.HomingMode:= 0; //0 - direct, 1- refrenèný snímaè, 2 - limitný snímaè, 3 - absolutny encoder, 4 - na moment//
-            Bruska.STAV.Servo_HomingBUSY:= TRUE;
+			Bruska.ServoOtacaniaUpinacejHlavy_M1.HomePAR.HomingMode:= 0; //0 - direct, 1- refrenèný snímaè, 2 - limitný snímaè, 3 - absolutny encoder, 4 - na moment//
+			Bruska.STAV.Servo_HomingBUSY:= TRUE;
             
-            IF NOT SC_OvlServa.Switch1 THEN
-                Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.HOME:= TRUE;
-                SC_OvlServa.IdleTime.IN:= TRUE;
-                SC_OvlServa.Switch1:= TRUE;
-            END_IF
+			IF NOT SC_OvlServa.Switch1 THEN
+				Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.HOME:= TRUE;
+				SC_OvlServa.IdleTime.IN:= TRUE;
+				SC_OvlServa.Switch1:= TRUE;
+			END_IF
 		
-            IF Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.Homing_OK AND SC_OvlServa.IdleTime.Q THEN
-                SC_OvlServa.ResetStep:= TRUE;
-                SC_OvlServa.Step:= 0;
-            END_IF	
+			IF Bruska.ServoOtacaniaUpinacejHlavy_M1.STATUS.Homing_OK AND SC_OvlServa.IdleTime.Q THEN
+				SC_OvlServa.ResetStep:= TRUE;
+				SC_OvlServa.Step:= 0;
+			END_IF	
             
                   
             
@@ -205,10 +222,10 @@ ACTION OvlServa:
 			SC_OvlServa.IdleTime.PT:= T#500ms;
 			SC_OvlServa.AlarmTime.PT:= T#3s;
 		
-            ZadanaPoziciaUINT:= LREAL_TO_UINT(Bruska.PAR.Servo_PoziciaNatocenia);
-            AktualnaPoziciaUINT:= LREAL_TO_UINT(Bruska.STAV.Servo_AktualnaPozicia);
+			ZadanaPoziciaUINT:= LREAL_TO_UINT(Bruska.PAR.Servo_PoziciaNatocenia);
+			AktualnaPoziciaUINT:= LREAL_TO_UINT(Bruska.STAV.Servo_AktualnaPozicia);
             					
-            IF NOT SC_OvlServa.Switch1 THEN
+			IF NOT SC_OvlServa.Switch1 THEN
 				Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.MoveAbsolute:= TRUE;
 				SC_OvlServa.Switch1:= TRUE;
 			END_IF
@@ -220,21 +237,21 @@ ACTION OvlServa:
 			END_IF	
 	
         
-        60:
-            SC_OvlServa.StepName:= '60 - Move Velocity';
-            SC_OvlServa.IdleTime.PT:= T#500ms;
-            SC_OvlServa.AlarmTime.PT:= T#3s;
+		60:
+			SC_OvlServa.StepName:= '60 - Move Velocity';
+			SC_OvlServa.IdleTime.PT:= T#500ms;
+			SC_OvlServa.AlarmTime.PT:= T#3s;
 		
                         
-            IF NOT SC_OvlServa.Switch1 THEN
-                Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.MoveVelocity:= TRUE;
-                SC_OvlServa.Switch1:= TRUE;
-            END_IF
+			IF NOT SC_OvlServa.Switch1 THEN
+				Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.MoveVelocity:= TRUE;
+				SC_OvlServa.Switch1:= TRUE;
+			END_IF
             
-            IF NOT Bruska.Servo_MOVE THEN
-                SC_OvlServa.ResetStep:= TRUE;
-                SC_OvlServa.Step:= 0;
-            END_IF
+			IF NOT Bruska.Servo_MOVE THEN
+				SC_OvlServa.ResetStep:= TRUE;
+				SC_OvlServa.Step:= 0;
+			END_IF
         
 		
 	END_CASE

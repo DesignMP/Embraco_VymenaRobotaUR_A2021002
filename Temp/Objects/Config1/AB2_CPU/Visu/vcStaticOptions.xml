@@ -227,5 +227,6 @@
     <Bitmap>Source[local].Bitmap[PracoviskoVymenaRobota]</Bitmap>
     <Bitmap>Source[local].Bitmap[Alarm_32x32]</Bitmap>
     <Bitmap>Source[local].Bitmap[Alarm_40x40]</Bitmap>
+    <Bitmap>Source[local].Bitmap[LogoDesign_800x480]</Bitmap>
   </Bitmap32bit>
 </Options>

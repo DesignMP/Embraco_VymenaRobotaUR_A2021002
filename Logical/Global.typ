@@ -80,6 +80,7 @@ TYPE
 		TL_RR_OvladanieServa_DISABLE : BOOL;
 		TL_RR_HomingServa_DISABLE : BOOL;
 		TL_OdparkovanieRobota_DISABLE : BOOL;
+		TL_OdbrzdenieServa_DISABLE : BOOL;
 		Slider : USINT;
 		FarbaTlacitkaAlarm_Index : BOOL;
 		ZobrazSymbolAlarmu : BOOL;
@@ -256,6 +257,7 @@ TYPE
 		Servo_HOME_DIRECT : BOOL;
 		Servo_POLOHUJ : BOOL;
 		Servo_MOVE : BOOL;
+		Servo_ODBRZDI : BOOL;
 	END_STRUCT;
 	BruskaIN_typ : 	STRUCT 
 		ReferencnySnimac_IS1 : BOOL;

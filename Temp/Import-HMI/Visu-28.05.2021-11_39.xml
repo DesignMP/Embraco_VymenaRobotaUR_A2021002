@@ -1,0 +1,2217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.7.6.114 SP"?>
+<?xml-stylesheet type="text/xsl" href="SG4_Import_ToDo_Generator.xsl"?>
+<ImportLog>
+  <Header>
+    <Property Name="ImportDate" Value="28.05.2021 11:39"/>
+    <Property Name="SourceVisualization" Value="D:\Projekty BER\Embraco_ZariadenieNaPreklapanieRotorov_A2021001\Logical\HMI\Visu"/>
+    <Property Name="TargetVisualization" Value="D:\Projekty BER\Embraco_VymenaRobotaUR_A2021002\Logical\HMI\Visu"/>
+  </Header>
+  <Resources>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[ProgressBorder]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_decrease]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_decrease_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_default]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_default_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_error]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_global_area]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_global_area_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_increase]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_increase_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_off]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_on]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_radio]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_radio_selected]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_ready]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_down]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_down_multi]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_down_multi_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_down_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_left]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_left_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_right]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_right_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_up]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_up_multi]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_up_multi_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[button_scroll_up_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[checkbox_small]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[checkbox_small_checked]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[checkbox_small_gray]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[frame_header]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[GlobalArea]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[global_area_gradient_upside]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_control]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_control_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_decrease]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_decrease_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_default]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_default_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_error]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_bottom]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_left]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_pres_bottom]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_press_left]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_increase]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_increase_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_off]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_on]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_radio_selected]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_radio_unselected]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_ready]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_down]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_down_multi]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_down_multi_press]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_down_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_left]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_left_multi]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_left_multi_press]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_left_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_right]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_right_multi]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_right_multi_pres]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_right_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_up]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_up_multi]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_up_multi_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_up_pressed]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpCheckbox_small]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpCheckbox_small_checked]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpCheckbox_small_gray]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpFrameHeader]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpGroupControl]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpInputBorderCenterless]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpInputBorderInactiveCenterless]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpInputBorderInactive]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpInputBorder]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpLabelBorderDown]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpLabelBorderLeft]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpLabelBorder]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpOutputBorder]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpProgressBorder]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[MpPMLStatesGraphics]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpPackML_BlueOFF]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpPackML_BlueON]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpPackML_GreenOFF]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpPackML_GreenON]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpPackML_YellowOFF]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpPackML_YellowON]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].BitmapGroups[MpStateGroup]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[state_gray16]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[state_gray24]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[state_green16]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[state_green24]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[state_red16]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[state_red24]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[FrameInvisible]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpAxis_Alarm]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpAxis_Gear_Off]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpAxis_Gear_On]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpAxis_Warning]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpBorderSlider09x09]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_control]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_control_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_decrease]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_decrease_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_default]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_default_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_device_selected_left]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_device_unselected_left]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_error]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_bottom]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_left]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_pres_bottom]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_press_left]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_global_area_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_increase]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_increase_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_off]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_on]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_radio_selected]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_radio_unselected]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_ready]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_down]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_down_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_down_multi_press]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_down_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_left]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_left_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_left_multi_press]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_left_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_right]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_right_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_right_multi_pres]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_right_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_up]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_up_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_up_multi_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpButton_scroll_up_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpCheckbox_small]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpCheckbox_small_checked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpCheckbox_small_gray]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpFrameHeader]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpFrameInvisible]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpGroupControl]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpInputBorderCenterless]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpInputBorderInactiveCenterless]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpInputBorderInactive]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpInputBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpLabelBorderDown]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpLabelBorderLeft]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpLabelBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpOutputBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpPackML_BlueOFF]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpPackML_BlueON]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpPackML_GreenOFF]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpPackML_GreenON]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpPackML_YellowOFF]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpPackML_YellowON]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[MpProgressBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[ProgressBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[Slider_09x09]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_decrease]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_decrease_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_default]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_default_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_error]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_global_area]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_global_area_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_increase]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_increase_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_off]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_on]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_radio]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_radio_selected]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_ready]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_down]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_down_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_down_multi_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_down_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_left]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_left_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_right]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_right_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_up]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_up_multi]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_up_multi_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[button_scroll_up_pressed]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[checkbox_small]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[checkbox_small_checked]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[checkbox_small_gray]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[frame_header]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[global_area_gradient_upside]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[state_gray16]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[state_gray24]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[state_green16]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[state_green24]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[state_red16]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Bitmaps[state_red24]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Backward]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Backward_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Decrease]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Decrease_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Forward]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Forward_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Global_Area]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Global_Area_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Increase]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Increase_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_KeyRingOff]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_KeyRingOn]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Multi_Scroll_Down]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Multi_Scroll_Down_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Multi_Scroll_Up]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Multi_Scroll_Up_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Radio]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Radio_selected]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Scoll_Up]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Scoll_Up_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Scroll_Down]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Scroll_Down_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Scroll_Left]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Scroll_Left_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Scroll_Right]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_Scroll_Right_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Button_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[CheckBox_checked]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Flat_black]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Flat_grey]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[FrameGlobal]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[GlobalArea]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[FrameHeader]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[FrameInvisible]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[FrameInvisible]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_AttentionOff]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpAxis_Warning]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_AttentionOn]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpAxis_Alarm]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Control]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Control_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Device_Select_Left]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_device_selected_left]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Device_Unselect_Left]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpButton_device_unselected_left]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_KeyRingOff]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_KeyRingOn]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Multi_Scroll_Down]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Multi_Scroll_Dwn_press]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Multi_Scroll_Up]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Multi_Scroll_Up_press]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scoll_Up]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scoll_Up_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Down]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Down_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Left]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Left_Multi]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Left_Multi_pres]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Left_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Right]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Right_Multi]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Right_Multi_pr]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_Scroll_Right_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Button_pressed]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_CheckBox_checked]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_Flat_grey]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_FrameInvisible]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpFrameInvisible]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_GroupControlAlarm]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_GroupControl]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_InputBorderInactive]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_InputBorder]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_LabelBorderDown]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpLabelBorderDown]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_LabelBorder]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_MoveOff]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpAxis_Gear_Off]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_MoveOn]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpAxis_Gear_On]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_OutputBorder]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_PackML_States]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpPMLStatesGraphics]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_SliderBorder09]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[MpBorderSlider09x09]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_State_gray]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpStateGroup]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_State_green]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpStateGroup]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_State_red]"/>
+      <ImportedDependencies/>
+      <LostDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpStateGroup]"/>
+          <Property Name="Resolution" Value="Removed"/>
+        </Dependency>
+      </LostDependencies>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_SunkenNG]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_SunkenNGgray]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_TabActive]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_TeachInputBorderActive]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Mp_TeachInputBorderInactive]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[MpBorders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[OverdriveBorder]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[ProgressBarBorder]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[RaisedInner]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Raised]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[SliderBorder09]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].Bitmaps[Slider_09x09]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[SunkenNG]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[SunkenNGgray]"/>
+      <ImportedDependencies>
+        <Dependency>
+          <Property Name="ReferencePath" Value="Source[HMI\Visu].BitmapGroups[Borders]"/>
+          <Property Name="Resolution" Value="Redirected"/>
+        </Dependency>
+      </ImportedDependencies>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[SunkenOuter]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[Sunken]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="0"/>
+      <Property Name="Operation" Value="Skip"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Borders[TabActive]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+    <Resource>
+      <Property Name="Forced" Value="1"/>
+      <Property Name="Operation" Value="Import"/>
+      <Property Name="Reference" Value="Source[HMI\Visu].Palette[Palette]"/>
+      <ImportedDependencies/>
+      <LostDependencies/>
+    </Resource>
+  </Resources>
+</ImportLog>

@@ -144,6 +144,7 @@ typedef struct Vizu_typ
 	plcbit TL_RR_OvladanieServa_DISABLE;
 	plcbit TL_RR_HomingServa_DISABLE;
 	plcbit TL_OdparkovanieRobota_DISABLE;
+	plcbit TL_OdbrzdenieServa_DISABLE;
 	unsigned char Slider;
 	plcbit FarbaTlacitkaAlarm_Index;
 	plcbit ZobrazSymbolAlarmu;
@@ -879,6 +880,7 @@ typedef struct Bruska_typ
 	plcbit Servo_HOME_DIRECT;
 	plcbit Servo_POLOHUJ;
 	plcbit Servo_MOVE;
+	plcbit Servo_ODBRZDI;
 } Bruska_typ;
 #endif
 
