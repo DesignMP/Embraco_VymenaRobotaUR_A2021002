@@ -3,25 +3,27 @@ define(['brease/events/BreaseEvent',
     'brease/controller/PageController', 
     'brease/controller/BindingController', 
     'brease/controller/ActionController',
-    'brease/controller/EventController',
     'brease/controller/objects/Client',
     'brease/controller/libs/Utils',
+    'brease/controller/libs/ContentHelper',
     'brease/controller/WidgetParser',
     'brease/model/BindingModel',
     'brease/services/RuntimeService',
-    'brease/helper/stubs/ServiceBridge'],
+    'brease/helper/stubs/ServiceBridge',
+    'brease/helper/jasmine/MatcherFactory'],
 function (BreaseEvent, 
     widgetController, 
     pageController, 
     bindingController, 
-    actionController, 
-    eventController,
+    actionController,
     client, 
     controllerUtils,
+    contentHelper,
     widgetParser,
     bindingModel,
     runtimeService, 
-    serviceBridge) {
+    serviceBridge,
+    matcherFactory) {
 
     'use strict';
     
@@ -44,7 +46,7 @@ function (BreaseEvent,
         return _lang.deferred.promise();
     }
 
-    function switchLangReadyHandler(deferred) {
+    function switchLangReadyHandler() {
         document.body.removeEventListener(BreaseEvent.LANGUAGE_CHANGED, switchLangReadyHandler);
         checkLangReady();
     }
@@ -122,11 +124,42 @@ function (BreaseEvent,
         });
 
         waitsFor(function () {
-            return ready.callCount > 0;
+            return TestUtils.callCount(ready) > 0;
         }, 'conditions to be set', 15000);
     }
 
     var TestUtils = {
+
+        specPath: function (widgetName, libPath, subLib) {
+            return libPath + widgetName + '.' + ((subLib !== undefined) ? subLib : widgetName);
+        },
+
+        callCount: function (spy) {
+            if (spy.calls !== undefined && typeof spy.calls.count === 'function') {
+                return spy.calls.count();
+            } else {
+                return spy.callCount;
+            }
+        },
+        allArgs: function (spy) {
+            if (spy.calls !== undefined && typeof spy.calls.allArgs === 'function') {
+                return spy.calls.allArgs();
+            } else {
+                return spy.argsForCall;
+            }
+        },
+
+        isSpy: function (fn) {
+            return fn.isSpy === true || (fn.calls !== undefined && fn.and !== undefined);
+        },
+
+        resetSpy: function (spy) {
+            if (spy.calls !== undefined && typeof spy.calls.reset === 'function') {
+                spy.calls.reset();
+            } else {
+                spy.reset();
+            }
+        },
 
         preConditions: function (title, conditions, config) {
 
@@ -166,13 +199,15 @@ function (BreaseEvent,
                 parentConfig.color = (parentConfig.color) ? parentConfig.color : '#999999';
                 parentConfig.parent = (parentConfig.parent !== undefined) ? parentConfig.parent : true;
                 return function (spec, config) {
-                    if (!config) {
-                        config = {};
-                    }
-                    if (console[parentConfig.method]) {
-                        console[parentConfig.method]('%c' + ((config.prefix) ? config.prefix : '') + ((parentConfig.parent) ? spec.suite.parentSuite.description + spec.suite.description : '') + spec.description + ((config.suffix) ? config.suffix : ''), 'color:' + parentConfig.color);
-                    } else {
-                        console.log('%c' + ((config.prefix) ? config.prefix : '') + ((parentConfig.parent) ? spec.suite.parentSuite.description + spec.suite.description : '') + spec.description + ((config.suffix) ? config.suffix : ''), 'color:' + parentConfig.color);
+                    if (spec && spec.suite) {
+                        if (!config) {
+                            config = {};
+                        }
+                        if (console[parentConfig.method]) {
+                            console[parentConfig.method]('%c' + ((config.prefix) ? config.prefix : '') + ((parentConfig.parent) ? spec.suite.parentSuite.description + spec.suite.description : '') + spec.description + ((config.suffix) ? config.suffix : ''), 'color:' + parentConfig.color);
+                        } else {
+                            console.log('%c' + ((config.prefix) ? config.prefix : '') + ((parentConfig.parent) ? spec.suite.parentSuite.description + spec.suite.description : '') + spec.description + ((config.suffix) ? config.suffix : ''), 'color:' + parentConfig.color);
+                        }
                     }
                 };
             } else {
@@ -194,16 +229,18 @@ function (BreaseEvent,
         log: function (flag, color, method) {
             if (flag) {
                 return function (spec, config) {
-                    if (!config) {
-                        config = {};
-                    }
-                    var message;
-                    if (console[method]) {
-                        message = '%c########### ' + ((config.prefix) ? config.prefix : '') + spec.description + ((config.suffix) ? config.suffix : '');
-                        console[method](message, 'color:' + (color || '#999999'));
-                    } else {
-                        message = '%c########### ' + ((config.prefix) ? config.prefix : '') + spec.description + ((config.suffix) ? config.suffix : '');
-                        console.log(message, 'color:' + (color || '#999999'));
+                    if (spec) {
+                        if (!config) {
+                            config = {};
+                        }
+                        var message;
+                        if (console[method]) {
+                            message = '%c########### ' + ((config.prefix) ? config.prefix : '') + spec.description + ((config.suffix) ? config.suffix : '');
+                            console[method](message, 'color:' + (color || '#999999'));
+                        } else {
+                            message = '%c########### ' + ((config.prefix) ? config.prefix : '') + spec.description + ((config.suffix) ? config.suffix : '');
+                            console.log(message, 'color:' + (color || '#999999'));
+                        }
                     }
                 };
             } else {
@@ -304,13 +341,24 @@ function (BreaseEvent,
             if (Array.isArray(arType)) {
                 var matcher = {};
                 arType.forEach(function (type) {
-                    if (_customMatcher[type]) {
-                        matcher[type] = _customMatcher[type];
+                    if (objMatcher[type]) {
+                        matcher[type] = objMatcher[type];
                     }
                 });
-                
-                testcase.addMatchers(matcher);
+                matcherFactory.addMatchers(testcase, matcher);
             }
+        },
+
+        resetAppContainer: function () {
+            brease.appView.css({ 
+                width: 'initial', 
+                height: '1px', 
+                position: 'absolute', 
+                transform: 'none', 
+                top: '0px', 
+                left: '0px',
+                'font-size': '12px'
+            });
         },
 
         resetFramework: function () {
@@ -326,9 +374,10 @@ function (BreaseEvent,
             pageController.init(runtimeService);
             bindingController.init(runtimeService);
             brease.uiController.bindingController = bindingController;
-            actionController.init(runtimeService);
+            actionController.init(runtimeService, contentHelper);
             client.init(runtimeService);
             client.setValid(true);
+            TestUtils.resetAppContainer();
         },
 
         /**
@@ -357,11 +406,12 @@ function (BreaseEvent,
 
             var callback, target,
                 deferred = new $.Deferred(),
+                widgetIds;
+
+            runs(function () {
                 widgetIds = widgets.map(function (item) {
                     return item.id;
                 });
-
-            runs(function () {
                 callback = jasmine.createSpy();
                 target = $('#' + targetId);
                 
@@ -387,11 +437,11 @@ function (BreaseEvent,
             });
 
             waitsFor(function () {
-                return callback.callCount >= widgets.length;
+                return TestUtils.callCount(callback) >= widgets.length;
             }, 'widget creation', 3000);
 
             runs(function () {
-                expect(callback.callCount).toEqual(widgets.length);
+                expect(TestUtils.callCount(callback)).toEqual(widgets.length);
                 deferred.resolve();
             });
             return deferred.promise();
@@ -444,7 +494,7 @@ function (BreaseEvent,
             });
 
             waitsFor(function () {
-                return loadSpy.callCount === 1;
+                return TestUtils.callCount(loadSpy) === 1;
             }, 'content html loaded', 5000);
 
             runs(function () {
@@ -463,12 +513,12 @@ function (BreaseEvent,
             });
 
             waitsFor(function () {
-                return callback.callCount >= widgetIds.length;
+                return TestUtils.callCount(callback) >= widgetIds.length;
             }, 'widgets ready', 5000);
 
             runs(function () {
                 console.log('all widgets ready');
-                expect(callback.callCount).toEqual(widgetIds.length);
+                expect(TestUtils.callCount(callback)).toEqual(widgetIds.length);
                 deferred.resolve();
             });
             return deferred.promise();
@@ -516,21 +566,54 @@ function (BreaseEvent,
     TestUtils.deferStub.call = TestUtils.deferStub._call.bind(TestUtils.deferStub);
     TestUtils.deferStub.release = TestUtils.deferStub._release.bind(TestUtils.deferStub);
 
+    // returns the index at which an element in the array of strings first occurs or -1 if it does not occur.
+    function arraysHaveSameMembers(x, y) {
+        var equal = Array.isArray(x) && Array.isArray(y) && x.length === y.length;
+        for (var i = 0; i < x.length; i += 1) {
+            equal = equal && (y.indexOf(x[i]) !== -1);
+        }
+        return equal;
+    }
+
     var _customMatcher = {
-        toEqualArray: function (array) {
-            this.message = function () {
-                return 'Expected ' + JSON.stringify(this.actual) + ' to be array ' + JSON.stringify(array) + '.';
+        toEqualArray: function (actual, expected) {
+            return {
+                pass: arraysHaveSameMembers(actual, expected),
+                message: 'Expected ' + JSON.stringify(actual) + ' to equal ' + JSON.stringify(expected) + '.'
             };
-            var arraysHaveSameMembers = function (x, y) {
-                var equal = Array.isArray(x) && Array.isArray(y) && x.length === y.length;
-                for (var i = 0; i < x.length; i += 1) {
-                    equal = equal && (y.indexOf(x[i]) !== -1);
+        },
+        toEqualDefinedProperties: function (actual, expected) {
+            var keys1 = Object.keys(actual).filter(function valueIsDefined(key) {
+                    return actual[key] !== undefined;
+                }),
+                keys2 = Object.keys(expected).filter(function valueIsDefined(key) {
+                    return expected[key] !== undefined;
+                });
+            if (!arraysHaveSameMembers(keys1, keys2)) {
+                return {
+                    pass: false,
+                    message: 'Objects do not have the same properties'
+                };
+            }
+            for (var i = 0; i < keys1.length; i += 1) {
+                if (actual[keys1[i]] !== expected[keys1[i]]) {
+                    return {
+                        pass: false,
+                        message: 'Objects have different property ' + keys1[i]
+                    };
                 }
-                return equal;
+            }
+            return {
+                pass: true
             };
-            return arraysHaveSameMembers(this.actual, array);
         }
     };
+
+    var objMatcher = {};
+
+    for (var matcherName in _customMatcher) {
+        objMatcher[matcherName] = matcherFactory.createMatcher(_customMatcher[matcherName]);
+    }
 
     return TestUtils;
 

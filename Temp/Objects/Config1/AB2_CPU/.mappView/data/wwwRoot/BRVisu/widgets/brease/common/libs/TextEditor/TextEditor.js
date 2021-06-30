@@ -122,16 +122,6 @@ define([
     };
 
     /**
-     * @method _removeEventListenersKeyboard
-     * @private
-     * Remove the event listeners for the keyboard
-     */
-    TextEditor.prototype._removeEventListenersKeyboard = function () {
-        this.editor.off('focus', this.boundOnFocus);
-        this.editor.off('blur', this.boundOnBlur);
-    };
-
-    /**
      * @method _addEventListenersDebug
      * @private
      * Sets the event listeners for the breakpoints
@@ -338,6 +328,8 @@ define([
      * @param {Boolean} omitOption fo not use the predefined options
      */
     TextEditor.prototype.disableInteraction = function (dim, omitOption) {
+        // searchBox.hide() calls editor.focus and trigger focus which will open keyboard (A&P 697590) 
+        this.editor.off('focus', this.boundOnFocus);
         if (this.editor.searchBox !== undefined) {
             this.editor.searchBox.hide();
         }
@@ -362,7 +354,7 @@ define([
                 highlightGutterLine: false
             });
         }
-        this._removeEventListenersKeyboard();
+        this.editor.off('blur', this.boundOnBlur);
     };
 
     /**

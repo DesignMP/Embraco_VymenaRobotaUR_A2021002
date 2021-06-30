@@ -192,9 +192,7 @@ define(['brease/objects/Subscription'], function (Subscription) {
         },
 
         reset: function () {
-            var clientEvents = _events.session['_client'];
             _init();
-            _events.session['_client'] = clientEvents;
         }
 
     };

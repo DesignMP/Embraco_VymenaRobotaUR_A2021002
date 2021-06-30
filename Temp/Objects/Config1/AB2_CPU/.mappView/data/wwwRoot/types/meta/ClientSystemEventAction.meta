@@ -136,6 +136,9 @@
               <w1:Argument name="userName" type="String" index="0" required="false" defaultValue="">
                 <w1:Description>User name. If not set, the user has to type in the userName.</w1:Description>
               </w1:Argument>
+              <w1:Argument name="showPolicy" type="Boolean" index="1" required="false" defaultValue="false">
+                <w1:Description>Enable/disable the display of password policies in dialog.</w1:Description>
+              </w1:Argument>
             </w1:Arguments>
           </w1:Method>
           <AdvancedMethod name="SetLanguage" read="false">

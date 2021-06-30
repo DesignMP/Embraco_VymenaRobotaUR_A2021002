@@ -1076,6 +1076,7 @@ _GLOBAL Zariadenie_typ Zariadenie;
 _GLOBAL SequenceControlTyp SC_Robot;
 _GLOBAL Robot_typ Robot;
 _GLOBAL Bruska_typ Bruska;
+_GLOBAL_RETAIN unsigned long PocetCyklov;
 _GLOBAL plcbit PoruchaRobota;
 _GLOBAL Taktime_typ Taktime_Robot;
 static void __AS__Action__ProfinetKomunikaciaRobot(void);

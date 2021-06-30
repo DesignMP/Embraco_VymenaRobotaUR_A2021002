@@ -30,7 +30,7 @@ function (contentManager, ContentStatus, PageType, visuModel, Utils, BreaseEvent
                 } else {
                     _waitForContentEvents(def, arInactiveContents, 'activate');
                 }
-                return def.promise();
+                return def;
             },
 
             deactivateFinished: function (arContent) {
@@ -47,7 +47,16 @@ function (contentManager, ContentStatus, PageType, visuModel, Utils, BreaseEvent
                     _waitForContentEvents(def, arActiveContents, 'deactivate');
                 }
 
-                return def.promise();
+                return def;
+            },
+
+            abort: function (deferred) {
+                _queue.forEach(function (data, id) {
+                    if (data.def === deferred) {
+                        window.clearTimeout(data.timeout);
+                        _resolve(data.def, true, id, data.eventType, data.listener);
+                    }
+                }, this);
             },
 
             loadFinished: function (pageId) {
@@ -194,7 +203,8 @@ function (contentManager, ContentStatus, PageType, visuModel, Utils, BreaseEvent
                 listener: listener,
                 def: def,
                 arContent: arContents,
-                timeout: timeout
+                timeout: timeout,
+                eventType: eventType
             };
 
         _queue.set(_id, data);

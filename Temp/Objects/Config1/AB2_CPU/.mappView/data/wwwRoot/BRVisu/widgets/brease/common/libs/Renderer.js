@@ -3,10 +3,10 @@ define([
     'libs/d3/d3',
     'brease/core/Utils',
     'brease/enum/Enum',
-    'globalize',
     'widgets/brease/common/libs/ChartUtils',
-    'brease/events/BreaseEvent'
-], function (SuperClass, d3, Utils, Enum, _globalize, ChartUtils, BreaseEvent) {
+    'brease/events/BreaseEvent',
+    'globalize'
+], function (SuperClass, d3, Utils, Enum, ChartUtils, BreaseEvent) {
 
     'use strict';
 
@@ -49,6 +49,7 @@ define([
             .attr('width', this.widget.el.width())
             .attr('height', this.widget.el.height());
 
+        this.forceRepaint = _.throttle(_forceRepaint.bind(this), 100, { trailing: true, leading: false });
         this.mainZoomBehavior = null;
         this.savedX = null;
         this.savedY = null;
@@ -80,7 +81,9 @@ define([
     };
 
     p.updateGraphs = function () {
-
+        // A&P 711445: chart refresh not painting correct
+        // forceRepaint will change css of svg before and after _updateGraphs
+        this.forceRepaint();
         _updateGraphs(this);
     };
 
@@ -187,8 +190,26 @@ define([
         });
     };
 
-    p.dispose = function () {
+    function _forceRepaint() {
+        var renderer = this,
+            prevStyle = renderer.svg.attr('style') || '';
 
+        renderer.svg.attr('style', 'transform:rotateZ(0deg);' + prevStyle);
+        _cancelRepaint.call(renderer);
+        renderer._timeoutRepaint = window.setTimeout(function () {
+            renderer.svg.attr('style', prevStyle);
+        }, 80);
+    }
+
+    function _cancelRepaint() {
+        if (this._timeoutRepaint) {
+            window.clearTimeout(this._timeoutRepaint);
+        }
+    }
+
+    p.dispose = function () {
+        _cancelRepaint.call(this);
+        this.forceRepaint.cancel();
     };
 
     // Private Functions
@@ -1138,7 +1159,7 @@ define([
                 }
 
             })
-            .on('dragend', function (d) {
+            .on('dragend', function () {
             });
 
         return drag;

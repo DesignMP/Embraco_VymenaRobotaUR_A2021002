@@ -81,7 +81,7 @@ define(['brease/events/BreaseEvent', 'brease/events/SocketEvent', 'brease/core/U
         * @return {String}
         */
         getText: function (textID, omitWarning) {
-            if (textID.indexOf('IAT/') === -1) {
+            if (!textID.startsWith('IAT/') && !textID.startsWith('BR/IAT/')) {
                 textID = 'IAT/' + textID;
             }
             var text = _texts[textID];

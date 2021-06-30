@@ -154,7 +154,7 @@
     <Connection Connector="SL" TargetModule="X20BM11b" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
   </Module>
-  <Module Name="OP1_7inch" Type="6PPT50.0702-16A" Version="1.3.3.0">
+  <Module Name="OP1_7inch" Type="6PPT50.0702-16A" Version="1.3.6.0">
     <Connection Connector="ETH1" TargetModule="AB2_CPU" TargetConnector="IF2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.2" />
     </Connection>

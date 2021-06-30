@@ -98,6 +98,16 @@ define([
                     }
                 });
 
+            case ListActions.SET_LIST_OFFLINE:
+                return _.assign({}, state, {
+                    offline: true
+                });
+
+            case ListActions.SET_LIST_ONLINE:
+                return _.assign({}, state, {
+                    offline: false
+                });
+
             default:
                 return state;
         }
@@ -123,7 +133,7 @@ define([
 
     function _parseSelectedIndex(selectedIndex, itemListLenght) {
         var parsedIndex = 0;
-        if (Utils.isNumeric(selectedIndex) && (selectedIndex < itemListLenght) && (selectedIndex > 0)) {
+        if ((Utils.isNumeric(selectedIndex) && (selectedIndex < itemListLenght) && (selectedIndex > 0)) || selectedIndex === null) {
             parsedIndex = selectedIndex;
         } else if (selectedIndex === true) {
             parsedIndex = 1;

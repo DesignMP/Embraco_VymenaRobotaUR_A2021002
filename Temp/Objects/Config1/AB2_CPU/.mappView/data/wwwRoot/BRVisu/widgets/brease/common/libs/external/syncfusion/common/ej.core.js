@@ -1,6 +1,6 @@
 /*!
 *  filename: ej.core.js
-*  version : 18.2.0.44
+*  version : 18.3.0.35
 *  Copyright Syncfusion Inc. 2001 - 2020. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -19,7 +19,7 @@ window.ej = window.Syncfusion = window.Syncfusion || {};
 (function ($, ej, undefined) {
     'use strict';
 
-    ej.version = "18.2.0.44";
+    ej.version = "18.3.0.35";
 
     ej.consts = {
         NamespaceJoin: '-'
@@ -1122,9 +1122,7 @@ window.ej = window.Syncfusion = window.Syncfusion || {};
                         model[this._ignoreOnPersist[i]] = this.model[this._ignoreOnPersist[i]];
 				}
 				if(this.model.ngTemplateId && this.model.ngTemplateId != model.ngTemplateId)
-				   model.ngTemplateId = this.model.ngTemplateId;
-			    if(this.model.columns && this.pluginName == 'ejGrid' && this.model.columns != model.columns)  
-				   model.columns = this.model.columns;
+				   model.ngTemplateId = this.model.ngTemplateId;			   
                 this.model = model;
             }
             else

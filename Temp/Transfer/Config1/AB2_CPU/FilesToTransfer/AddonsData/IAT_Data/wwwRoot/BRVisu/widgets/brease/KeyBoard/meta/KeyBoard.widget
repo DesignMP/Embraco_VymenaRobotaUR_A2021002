@@ -26,7 +26,7 @@
 			<Description name="short">Keyboard zur Eingabe von Text</Description>
 			<Description name="de">Keyboard zur Eingabe von Text</Description>
 			<Description name="en">Keyboard for the input of text</Description>
-			<Description name="ASHelp">The Keyboard widget can not be used in a content directly, but its possible to use styles for it.</Description>
+			<Description name="ASHelp">The Keyboard widget can not be used in a content directly, but its possible to use styles for it</Description>
 		</Descriptions>
 		<Inheritance>
 			<Class level="0">widgets.brease.KeyBoard</Class>
@@ -196,6 +196,19 @@ Example :
 				<StyleElement selector=".dropdown .dropdownlist div.selected" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
 				<StyleElement selector=".keyBoardBody button.active" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
 				<StyleElement selector=".keyBoardBody button.selected" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
+			</StyleProperty>
+			<StyleProperty name="imeBackColor" category="Appearance" type="Color" default="#333333">
+				<StyleElement selector=".pluginList" attribute="background-color"/>
+			</StyleProperty>
+			<StyleProperty name="imeBackGroundGradient" category="Appearance" type="Gradient" default="">
+				<StyleElement selector=".pluginList" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
+			</StyleProperty>
+			<StyleProperty name="imeBorderColor" category="Appearance" type="ColorCollection" default="#fff">
+				<StyleElement selector=".pluginList" attribute="border-color"/>
+				<StyleElement selector=".pluginList div" attribute="border-left-color"/>
+			</StyleProperty>
+			<StyleProperty name="imeTextColor" category="Appearance" type="Color" default="#fff">
+				<StyleElement selector=".pluginList div" attribute="color"/>
 			</StyleProperty>
 		</StyleProperties>
 		<PropertyGroups>

@@ -172,6 +172,38 @@ define(['brease/services/libs/SocketResponse'], function (SocketResponse) {
         this.services.changePassword.apply(this.services, arguments);
     };
 
+    p.loadPasswordPolicies = function () {
+        this.services.loadPasswordPolicies.apply(this.services, arguments);
+    };
+
+    p.loadUserList = function () {
+        this.services.loadUserList.apply(this.services, arguments);
+    };
+
+    p.loadUserData = function () {
+        this.services.loadUserData.apply(this.services, arguments);
+    };
+
+    p.addUserToMpUserX = function () {
+        this.services.addUserToMpUserX.apply(this.services, arguments);
+    };
+
+    p.deleteUserFromMpUserX = function () {
+        this.services.deleteUserFromMpUserX.apply(this.services, arguments);
+    };
+
+    p.modifyUserFromMpUserX = function () {
+        this.services.modifyUserFromMpUserX.apply(this.services, arguments);
+    };
+
+    p.loadAvailableRoles = function () {
+        this.services.loadAvailableRoles.apply(this.services, arguments);
+    };
+
+    p.getUserSettingsFromMpUserX = function () {
+        this.services.getUserSettingsFromMpUserX.apply(this.services, arguments);
+    };
+
     /*####################
      ### TextFormatter ###
      #####################*/

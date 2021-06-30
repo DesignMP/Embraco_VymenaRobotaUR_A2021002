@@ -40,6 +40,7 @@ define([
                 this.image = new ImageView(props.image, this.el);
             }
             if (props.text !== undefined && props.text.showText) {
+                props.text.text = props.offline ? brease.settings.noValueString : props.text.text; 
                 if (props.text.text !== '' && props.text.text !== undefined) {
                     this.text = new TextView(
                         {

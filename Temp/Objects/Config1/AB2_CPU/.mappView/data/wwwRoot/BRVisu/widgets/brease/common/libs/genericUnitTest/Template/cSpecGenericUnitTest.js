@@ -1,7 +1,6 @@
 define([
-    'widgets/brease/common/libs/genericUnitTest/TestUtils/GenericUnitTestConstants',
-    'brease/events/BreaseEvent'
-], function (GenericUnitTestConstants, BreaseEvent) {
+    'widgets/brease/common/libs/genericUnitTest/TestUtils/GenericUnitTestConstants'
+], function (GenericUnitTestConstants) {
 
     'use strict';
 
@@ -9,9 +8,9 @@ define([
         run: true
     };
 
-    cSpec.init = {// data for the init of the module under test
+    cSpec.init = { // data for the init of the module under test
         run: true,
-        args: {//arguments with wich the module will be instanziated (max args1 ... args7)
+        args: { //arguments with wich the module will be instanziated (max args1 ... args7)
             args1: undefined,
             args2: undefined,
             args3: true
@@ -20,7 +19,7 @@ define([
         functionsToSpyOn: {} // functions which will be called on instanziating the module
     };
 
-    cSpec.functions = {//data for the functions to test in the module
+    cSpec.functions = { //data for the functions to test in the module
         run: true,
         functionUnderTest: {
             functionUnderTestName: {
@@ -47,7 +46,7 @@ define([
                                         }
                                     }
                                 },
-                                callCount: 0, //callcount of the spied function
+                                callsCount: 0, //callcount of the spied function
                                 return: [//an array of the mocked return values of the spied function.
                                     undefined // first entry is the returned value when the spy is called for the first time. for ever call one entry needs to be added
                                 ] 

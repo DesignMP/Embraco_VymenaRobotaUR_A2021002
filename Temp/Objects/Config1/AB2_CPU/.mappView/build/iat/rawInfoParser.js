@@ -259,6 +259,10 @@
                 .replace(/"/gm, '&quot;')
                 .replace(/'/gm, '&apos;');
         }
+        // if a not projectable property of Array type has no default value: add empty array as default value
+        if (!info.projectable && DataTypes.isArrayType(info.type) && (cfg.default === null || cfg.default === undefined)) {
+            info['defaultValue'] = '[]';
+        }
     }
 
     function _parseDoc(doc) {
@@ -325,6 +329,18 @@
         }
     }
 
+    function cleanDescription(value) {
+        if (utils.isString(value)) {
+            if (value.lastIndexOf('.') === value.length - 1) {
+                value = value.substring(0, value.length - 1);
+            }
+            value = value.replace(/\n/g, ' '); 
+            return value.replace(/ {2,}/g, ' '); 
+        } else {
+            return value;
+        }
+    }
+
     function addMetaInfo(widgetInfo, iatMeta) {
         if (Array.isArray(iatMeta) && iatMeta.length > 0) {
             for (let i = 0; i < iatMeta.length; i += 1) {
@@ -346,7 +362,7 @@
                         }
                         break;
                     case 'description':
-                        widgetInfo['descriptions'][tag2] = value;
+                        widgetInfo['descriptions'][tag2] = cleanDescription(value);
                         break;
                     case 'studio':
                         if (['requires', 'mixins', 'parents', 'children', 'superClass', 'inheritance'].indexOf(tag2) === -1) {

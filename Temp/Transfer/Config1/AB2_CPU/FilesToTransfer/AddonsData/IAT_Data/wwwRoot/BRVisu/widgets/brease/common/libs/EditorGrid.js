@@ -29,7 +29,7 @@ define([
                 if (parentWidgetElem) {
                     this.parentWidget = brease.callWidget(parentWidgetElem.id, 'widget'); 
                 }
-                this.areas = (this.parentWidget) ? this.parentWidget.editorGrid.areas : null;
+                this.areas = (this.parentWidget && this.parentWidget.editorGrid) ? this.parentWidget.editorGrid.areas : null;
             }
             this.children = {};
             this.configuration = configuration;

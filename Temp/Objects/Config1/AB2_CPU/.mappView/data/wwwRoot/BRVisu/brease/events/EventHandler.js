@@ -64,7 +64,7 @@ function (BreaseEvent, ClientSystemEvent) {
                 },
                 eventArgs: eventArgs || {}
             };
-            this.elem = elem;
+            this.elem = (eventType !== EventHandler.DummyType) ? elem : undefined;
         },
         p = EventHandler.prototype;
 
@@ -72,6 +72,7 @@ function (BreaseEvent, ClientSystemEvent) {
         _runtimeService = runtimeService;
         _bindingController = bindingController;
     };
+    EventHandler.DummyType = 'dummy.Event';
 
     p.dispose = function () {
         this.elem = undefined;
@@ -111,7 +112,11 @@ function (BreaseEvent, ClientSystemEvent) {
     };
 
     p.isSubscribed = function () {
-        return _bindingController.eventIsSubscribed(this.data.source.type, this.data.event, this.data.source.refId);
+        if (this.data.source.type === EventHandler.DummyType) {
+            return false;
+        } else {
+            return _bindingController.eventIsSubscribed(this.data.source.type, this.data.event, this.data.source.refId); 
+        }
     };
 
     return EventHandler;

@@ -171,8 +171,12 @@ define(function () {
     Utils.parseElementData = function (elem, dataKey) {
 
         var attrName = 'data-' + dataKey,
-            attrValue = elem.getAttribute(attrName),
-            obj = Utils.parsePseudoJSON(attrValue, 'Illegal data in attribute ' + attrName + ' for widget ' + elem.id + ', widget will have default values!');
+            attrValue = elem.getAttribute(attrName);
+
+        if (!attrValue) {
+            return {};
+        }
+        var obj = Utils.parsePseudoJSON(attrValue, 'Illegal data in attribute ' + attrName + ' for widget ' + elem.id + ', widget will have default values!');
         
         return obj || {};
 
@@ -438,6 +442,37 @@ define(function () {
 
             return cur;
         }
+    };
+    /**
+    * @method getClosestDialogElem
+    * @static
+    * Returns the closest HTMLElement which is a dialog or generic dialog.  
+    * Returns the HTMLElement itself, if it is a dialog or generic dialog.
+    * Returns null if elem is not inside of a dialog or generic dialog
+    * @param {HTMLElement} elem
+    * @return {core.html.Node | null} 
+    */
+    Utils.getClosestDialogElem = function (elem) {
+        var cur = elem,
+            parent, result = null;
+        if (!(cur instanceof HTMLElement)) {
+            return result;
+        } else {
+            while (cur !== document.body) {
+                if (Utils.hasClass(cur, 'breaseDialogWindow') || Utils.hasClass(cur, 'breaseGenericDialog')) {
+                    result = cur;
+                    break;
+                } else {
+                    parent = cur.parentNode;
+                    if (parent) {
+                        cur = parent;
+                    } else {
+                        break;
+                    }
+                }
+            }
+        }
+        return result;
     };
     /**
     * @method parentWidgetElem
@@ -938,6 +973,8 @@ define(function () {
 
         if (typeof o !== 'object') {
             return o;
+        } else if (Utils.isString(o)) {
+            return o.valueOf();
         }
         if (!o) {
             return o;

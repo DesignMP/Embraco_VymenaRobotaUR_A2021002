@@ -20,7 +20,7 @@
                 return [''];
             }
         },
-        testcase: function testcase(objReport, name, passed, error) {
+        testcase: function testcase(objReport, name, passed, error, time) {
             var arName = Utils.arName(name),
                 caseName = arName.pop(),
                 suiteName = arName.join(' / ');
@@ -40,7 +40,8 @@
             var suite = objReport[suiteName];
             var testcase = {
                 classname: suiteName,
-                name: caseName
+                name: caseName,
+                time: time
             };
             if (passed !== true) {
                 testcase.error = {

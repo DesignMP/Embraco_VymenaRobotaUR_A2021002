@@ -109,8 +109,7 @@ define([
     };
 
     p._setDimensions = function () {
-
-        if (this.internalData.perform) {
+        if (this.internalData.perform) { // shift calculation after loadDialog call (see p.show)
             if (this.contentBox.children().length > 0) {
                 var size = _getLayoutSize(this.contentBox);
                 this.contentBox.css({ 'height': size.height, 'width': size.width });
@@ -164,6 +163,7 @@ define([
     */
     p.show = function (options, refElement) {
         options = options || {};
+        // we need information of dialog before SuperClass call, but have to load dialog after it (see A&P 698350)
         var dialog = brease.pageController.getDialogById(options.id),
             result = { success: true };
 
@@ -177,10 +177,10 @@ define([
             this.el.removeAttr('data-brease-dialogId');
         }
 
-        // avoid calculations of dimension and position in SuperClass call
+        // avoid calculations of dimension and position in SuperClass call, as loadDialog has an impact to it
         this.internalData.perform = false;
         SuperClass.prototype.show.call(this, options, refElement);
-
+        // A&P 698350: call of loadDialog has to be after the DialogWindow is shown
         if (dialog === undefined) {
             result.success = false;
             result.errorCode = 'NOT_FOUND';
@@ -205,7 +205,7 @@ define([
     };
 
     p._setPosition = function () {
-        if (this.internalData.perform) {
+        if (this.internalData.perform) { // shift calculation after loadDialog call (see p.show)
             SuperClass.prototype._setPosition.call(this);
         }
     };
@@ -257,8 +257,7 @@ define([
     function _showError(dialogId, errorCode) {
 
         var widget = this,
-            //textKey = (errorCode === 'NOT_FOUND') ? 'BR/IAT/brease.error.DIALOG_NOT_FOUND' : 'BR/IAT/brease.error.DIALOG_NOT_LOADED',
-            textKey = 'BR/IAT/brease.error.DIALOG_NOT_FOUND',
+            textKey = (errorCode === 'NOT_FOUND') ? 'BR/IAT/brease.error.DIALOG_NOT_FOUND' : 'BR/IAT/brease.error.DIALOG_NOT_LOADED',
             message = brease.language.getSystemTextByKey(textKey);
 
         this.setStyle(WidgetClass.ErrorClass);

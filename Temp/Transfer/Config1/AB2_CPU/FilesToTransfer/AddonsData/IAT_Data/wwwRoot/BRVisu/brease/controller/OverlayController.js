@@ -287,6 +287,7 @@ function (BreaseEvent, Utils, Enum, Types, fileManager, contentHelper, ChangePas
                         notActiveContentsInDialog = contentHelper.extractNotActive(contentsInDialog);
 
                     if (notActiveContentsInDialog.length > 0) {
+                        console.iatWarn('Dialog ' + dialogId + ' open aborted! Not active contents: ' + notActiveContentsInDialog);
                         document.body.dispatchEvent(new CustomEvent(BreaseEvent.DIALOG_OPEN_ABORTED, { detail: { arContentId: notActiveContentsInDialog } }));
                     }
                     var activeContentsInDialog = contentHelper.extractActive(contentsInDialog);
@@ -303,12 +304,12 @@ function (BreaseEvent, Utils, Enum, Types, fileManager, contentHelper, ChangePas
                 }
             },
 
-            openChangePasswordDialog: function (userName) {
+            openChangePasswordDialog: function (userName, showPolicy) {
                 var def = $.Deferred(),
                     widget = new this.ChangePasswordDialogClass();
 
                 $.when(widget.isParsed()).then(function () {
-                    widget.show(userName || '');
+                    widget.show(userName, showPolicy);
                     def.resolve(true);
                 });
                 return def.promise();

@@ -542,7 +542,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">8</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">254</UInt32>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="End Marker">
               <UInt16 Name="Offset">65535</UInt16>
@@ -578,7 +578,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">254</UInt32>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="AlignmentHorizontal">
               <UInt16 Name="Offset">26</UInt16>
@@ -674,7 +674,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">254</UInt32>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="AlignmentHorizontal">
               <UInt16 Name="Offset">26</UInt16>
@@ -770,7 +770,7 @@
             <Group Name="BackColor">
               <UInt16 Name="Offset">12</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">254</UInt32>
+              <UInt32 Name="Data">0</UInt32>
             </Group>
             <Group Name="AlignmentHorizontal">
               <UInt16 Name="Offset">26</UInt16>
@@ -786,6 +786,111 @@
               <UInt16 Name="Offset">32</UInt16>
               <UInt16 Name="Size">4</UInt16>
               <Reference Name="Data" Type="FNT">Source[local].Font[Arial11_Bold]</Reference>
+            </Group>
+            <Group Name="End Marker">
+              <UInt16 Name="Offset">65535</UInt16>
+              <UInt16 Name="Size">0</UInt16>
+            </Group>
+          </Object>
+          <Object Name="Shape_5" ClsId="0x1001" Version="1" Type="CTRL" RefString="Source[local].Page[AutomatickyRezim].Layer[Default].Control[Shape_5]">
+            <UInt32 Name="Left">624</UInt32>
+            <UInt32 Name="Top">92</UInt32>
+            <UInt32 Name="Right">789</UInt32>
+            <UInt32 Name="Bottom">153</UInt32>
+            <UInt32 Name="ControlID">0</UInt32>
+            <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001001].StyleClass[Default]</Reference>
+            <UInt16 Name="StyleTableSize">4</UInt16>
+            <UInt16 Name="Reserved">0</UInt16>
+            <Group Name="End Marker">
+              <UInt16 Name="Offset">65535</UInt16>
+              <UInt16 Name="Size">0</UInt16>
+            </Group>
+          </Object>
+          <Object Name="Text_7" ClsId="0x1004" Version="1" Type="CTRL" RefString="Source[local].Page[AutomatickyRezim].Layer[Default].Control[Text_7]">
+            <UInt32 Name="Left">650</UInt32>
+            <UInt32 Name="Top">98</UInt32>
+            <UInt32 Name="Right">759</UInt32>
+            <UInt32 Name="Bottom">115</UInt32>
+            <UInt32 Name="IndexDatapoint">4294967295</UInt32>
+            <UInt32 Name="ControlID">0</UInt32>
+            <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001004].StyleClass[Default]</Reference>
+            <UInt16 Name="StyleTableSize">43</UInt16>
+            <UInt16 Name="Reserved">0</UInt16>
+            <Group Name="AlignmentHorizontal">
+              <UInt16 Name="Offset">21</UInt16>
+              <UInt16 Name="Size">1</UInt16>
+              <Byte Name="Data">1</Byte>
+            </Group>
+            <Group Name="AlignmentVertical">
+              <UInt16 Name="Offset">22</UInt16>
+              <UInt16 Name="Size">1</UInt16>
+              <Byte Name="Data">1</Byte>
+            </Group>
+            <Group Name="Font">
+              <UInt16 Name="Offset">24</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="FNT">Source[local].Font[Arial10_Bold]</Reference>
+            </Group>
+            <Group Name="TextSource">
+              <UInt16 Name="Offset">40</UInt16>
+              <UInt16 Name="Size">1</UInt16>
+              <Byte Name="Data">2</Byte>
+            </Group>
+            <Group Name="TextIndexOffset">
+              <UInt16 Name="Offset">44</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Int32 Name="Data">2</Int32>
+            </Group>
+            <Group Name="TextGroup">
+              <UInt16 Name="Offset">48</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="TG">Source[local].Page[AutomatickyRezim].Layer[Default].TextGroup[Embedded]</Reference>
+            </Group>
+            <Group Name="End Marker">
+              <UInt16 Name="Offset">65535</UInt16>
+              <UInt16 Name="Size">0</UInt16>
+            </Group>
+          </Object>
+          <Object Name="Numeric_4" ClsId="0x1007" Version="1" Type="CTRL" RefString="Source[local].Page[AutomatickyRezim].Layer[Default].Control[Numeric_4]">
+            <UInt32 Name="Left">631</UInt32>
+            <UInt32 Name="Top">116</UInt32>
+            <UInt32 Name="Right">782</UInt32>
+            <UInt32 Name="Bottom">147</UInt32>
+            <UInt32 Name="ValueMode">0</UInt32>
+            <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.PocetCyklov]</Reference>
+            <UInt32 Name="MinDatapoint">4294967295</UInt32>
+            <UInt32 Name="MaxDatapoint">4294967295</UInt32>
+            <UInt32 Name="TeachDatapoint">4294967295</UInt32>
+            <UInt32 Name="ControlID">0</UInt32>
+            <Double Name="MinValue">-1.7976931348623157E+308</Double>
+            <Double Name="MaxValue">1.7976931348623157E+308</Double>
+            <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001007].StyleClass[Default]</Reference>
+            <UInt16 Name="StyleTableSize">41</UInt16>
+            <UInt16 Name="Reserved">0</UInt16>
+            <Group Name="Border">
+              <UInt16 Name="Offset">0</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="BRD">Source[local].Border[SunkenNG]</Reference>
+            </Group>
+            <Group Name="ForeColor">
+              <UInt16 Name="Offset">8</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <UInt32 Name="Data">15</UInt32>
+            </Group>
+            <Group Name="BackColor">
+              <UInt16 Name="Offset">12</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <UInt32 Name="Data">0</UInt32>
+            </Group>
+            <Group Name="AlignmentHorizontal">
+              <UInt16 Name="Offset">26</UInt16>
+              <UInt16 Name="Size">1</UInt16>
+              <Byte Name="Data">1</Byte>
+            </Group>
+            <Group Name="Font">
+              <UInt16 Name="Offset">32</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="FNT">Source[local].Font[Arial12_Bold]</Reference>
             </Group>
             <Group Name="End Marker">
               <UInt16 Name="Offset">65535</UInt16>
@@ -853,7 +958,7 @@
       <Folder Name="POBJ">
         <Object Name="Default" ClsId="0x401" Version="1" Type="LAY" RefString="Source[local].Page[AutomatickyRezim].Layer[Default]">
           <Reference Name="StatusDP" Type="DP">None</Reference>
-          <UInt32 Name="CtrlCount">14</UInt32>
+          <UInt32 Name="CtrlCount">17</UInt32>
           <Reference Name="Text_1" Type="CTRL">Source[local].Page[AutomatickyRezim].Layer[Default].Control[Text_1]</Reference>
           <Reference Name="Bitmap_1" Type="CTRL">Source[local].Page[AutomatickyRezim].Layer[Default].Control[Bitmap_1]</Reference>
           <Reference Name="Button_8" Type="CTRL">Source[local].Page[AutomatickyRezim].Layer[Default].Control[Button_8]</Reference>
@@ -868,6 +973,9 @@
           <Reference Name="Numeric_1" Type="CTRL">Source[local].Page[AutomatickyRezim].Layer[Default].Control[Numeric_1]</Reference>
           <Reference Name="Text_6" Type="CTRL">Source[local].Page[AutomatickyRezim].Layer[Default].Control[Text_6]</Reference>
           <Reference Name="Numeric_2" Type="CTRL">Source[local].Page[AutomatickyRezim].Layer[Default].Control[Numeric_2]</Reference>
+          <Reference Name="Shape_5" Type="CTRL">Source[local].Page[AutomatickyRezim].Layer[Default].Control[Shape_5]</Reference>
+          <Reference Name="Text_7" Type="CTRL">Source[local].Page[AutomatickyRezim].Layer[Default].Control[Text_7]</Reference>
+          <Reference Name="Numeric_4" Type="CTRL">Source[local].Page[AutomatickyRezim].Layer[Default].Control[Numeric_4]</Reference>
         </Object>
       </Folder>
     </Folder>
@@ -876,12 +984,16 @@
     <Folder Name="PAutomatickyRezim.LDefault" TargetIndex="Source[local].Page[AutomatickyRezim].Layer[Default].TextGroup[Embedded]">
       <Object Name="Embedded" ClsId="0x304" Version="1" Type="TG" RefString="Source[local].Page[AutomatickyRezim].Layer[Default].TextGroup[Embedded]">
         <UInt32 Name="NumberOfTags">0</UInt32>
-        <UInt32 Name="NumberOfTexts">6</UInt32>
+        <UInt32 Name="NumberOfTexts">7</UInt32>
         <Table Name="TextMap" Cols="2">
           <TableHeader>
             <Column Name="UserIndex" />
             <Column Name="TextIndex" />
           </TableHeader>
+          <TableRow>
+            <UInt32 Name="UserIndex">2</UInt32>
+            <UInt32 Name="TextIndex">237545</UInt32>
+          </TableRow>
           <TableRow>
             <UInt32 Name="UserIndex">4</UInt32>
             <UInt32 Name="TextIndex">236076</UInt32>
@@ -915,7 +1027,7 @@
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
           <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[local].Page[AutomatickyRezim].Layer[Default].TextGroup[Embedded]" Type="TG" RefString="Source[local].Page[AutomatickyRezim].Layer[Default].TextGroup[Embedded].Language[en]">
-            <UInt32 Name="NumberOfTexts">6</UInt32>
+            <UInt32 Name="NumberOfTexts">7</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
                 <Column Name="TextIndex" />
@@ -926,42 +1038,49 @@
               </TableHeader>
               <TableRow>
                 <UInt32 Name="TextIndex">234406</UInt32>
-                <UInt32 Name="TextOffset">76</UInt32>
-                <Byte Name="SnippetCount">0</Byte>
-                <Byte Name="Reserved">0</Byte>
-                <UInt16 Name="Reserved">0</UInt16>
-              </TableRow>
-              <TableRow>
-                <UInt32 Name="TextIndex">234407</UInt32>
                 <UInt32 Name="TextOffset">88</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
+                <UInt32 Name="TextIndex">234407</UInt32>
+                <UInt32 Name="TextOffset">100</UInt32>
+                <Byte Name="SnippetCount">0</Byte>
+                <Byte Name="Reserved">0</Byte>
+                <UInt16 Name="Reserved">0</UInt16>
+              </TableRow>
+              <TableRow>
                 <UInt32 Name="TextIndex">234408</UInt32>
-                <UInt32 Name="TextOffset">98</UInt32>
+                <UInt32 Name="TextOffset">110</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">236076</UInt32>
-                <UInt32 Name="TextOffset">108</UInt32>
+                <UInt32 Name="TextOffset">120</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">236444</UInt32>
-                <UInt32 Name="TextOffset">138</UInt32>
+                <UInt32 Name="TextOffset">150</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">236813</UInt32>
-                <UInt32 Name="TextOffset">142</UInt32>
+                <UInt32 Name="TextOffset">154</UInt32>
+                <Byte Name="SnippetCount">0</Byte>
+                <Byte Name="Reserved">0</Byte>
+                <UInt16 Name="Reserved">0</UInt16>
+              </TableRow>
+              <TableRow>
+                <UInt32 Name="TextIndex">237545</UInt32>
+                <UInt32 Name="TextOffset">158</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
@@ -974,6 +1093,7 @@
               <String Name="Text" Encoding="Unicode">"Taktime Robota"</String>
               <String Name="Text" Encoding="Unicode">":"</String>
               <String Name="Text" Encoding="Unicode">":"</String>
+              <String Name="Text" Encoding="Unicode">"Počet cyklov"</String>
             </Group>
           </Object>
         </Folder>
@@ -985,7 +1105,7 @@
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
           <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[local].Page[AutomatickyRezim].Layer[Default].TextGroup[Embedded]" Type="TG" RefString="Source[local].Page[AutomatickyRezim].Layer[Default].TextGroup[Embedded].Language[de]">
-            <UInt32 Name="NumberOfTexts">6</UInt32>
+            <UInt32 Name="NumberOfTexts">7</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
                 <Column Name="TextIndex" />
@@ -996,42 +1116,49 @@
               </TableHeader>
               <TableRow>
                 <UInt32 Name="TextIndex">234406</UInt32>
-                <UInt32 Name="TextOffset">76</UInt32>
+                <UInt32 Name="TextOffset">88</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">234407</UInt32>
-                <UInt32 Name="TextOffset">78</UInt32>
+                <UInt32 Name="TextOffset">90</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">234408</UInt32>
-                <UInt32 Name="TextOffset">80</UInt32>
+                <UInt32 Name="TextOffset">92</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">236076</UInt32>
-                <UInt32 Name="TextOffset">82</UInt32>
+                <UInt32 Name="TextOffset">94</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">236444</UInt32>
-                <UInt32 Name="TextOffset">96</UInt32>
+                <UInt32 Name="TextOffset">108</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">236813</UInt32>
-                <UInt32 Name="TextOffset">110</UInt32>
+                <UInt32 Name="TextOffset">122</UInt32>
+                <Byte Name="SnippetCount">0</Byte>
+                <Byte Name="Reserved">0</Byte>
+                <UInt16 Name="Reserved">0</UInt16>
+              </TableRow>
+              <TableRow>
+                <UInt32 Name="TextIndex">237545</UInt32>
+                <UInt32 Name="TextOffset">136</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
@@ -1044,6 +1171,7 @@
               <String Name="Text" Encoding="Unicode">"Text_4"</String>
               <String Name="Text" Encoding="Unicode">"Text_2"</String>
               <String Name="Text" Encoding="Unicode">"Text_2"</String>
+              <String Name="Text" Encoding="Unicode">"Text_4"</String>
             </Group>
           </Object>
         </Folder>

@@ -534,7 +534,8 @@ PROGRAM _CYCLIC
                 END_IF 
                 Robot.KOM_OUT.Dopravnik_PolozCap:= FALSE;
                 Robot.PAR.CisloAktualnejPozicie:= 9;
-                SC_Robot.ResetStep:= TRUE;
+                PocetCyklov:= PocetCyklov + 1;
+				SC_Robot.ResetStep:= TRUE;
                 SC_Robot.Step:= 158;
             END_IF
         

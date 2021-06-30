@@ -26,25 +26,29 @@ ACTION OvlServa:
 	CasPowerON();
 	
 	//*************************************Ovládanie brzdy serva otáèania upínacej hlavy***************************************//
-	IF Bruska.Servo_ODBRZDI THEN
-		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU:= FALSE;
+	CasUvolneniaBrzdy.PT:= T#500ms;
+	CasUvolneniaBrzdy.IN:= NOT Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.POWER AND Bruska.Servo_ODBRZDI;
+	CasUvolneniaBrzdy();
+	
+	CasVypnutiaUvolneniaBrzdy.PT:= T#500ms;
+	CasVypnutiaUvolneniaBrzdy.IN:= Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.UvolniBRZDU;
+	CasVypnutiaUvolneniaBrzdy();
+	
+	
+	
+	IF EDGEPOS(CasUvolneniaBrzdy.Q) THEN
 		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.UvolniBRZDU:= TRUE;
-		Triger_1:= FALSE;
-	ELSE
-		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.UvolniBRZDU:= FALSE;
-		IF NOT Triger_1 THEN
-			Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU:= TRUE;
-			Triger_1:= TRUE;
-		END_IF	
 	END_IF
 	
-	IF CasOvladaniaBrzdy.Q THEN
-		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU:= FALSE;
-	END_IF	
+	IF CasVypnutiaUvolneniaBrzdy.Q THEN
+		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.UvolniBRZDU:= FALSE;
+	ELSIF NOT Bruska.Servo_ODBRZDI THEN
+		Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.UvolniBRZDU:= FALSE;
+	END_IF
 	
-	CasOvladaniaBrzdy.PT:= T#1s;
-	CasOvladaniaBrzdy.IN:= Bruska.ServoOtacaniaUpinacejHlavy_M1.CMD.ZabrzdiBRZDU;
-	CasOvladaniaBrzdy();
+		
+	
+	
 
 	
 	

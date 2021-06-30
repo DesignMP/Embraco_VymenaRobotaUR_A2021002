@@ -51,7 +51,7 @@
                     if (Array.isArray(property.accumulatedMappings)) {
                         mapping += ((mapping !== '') ? ', ' : '') + ctrl.lf + ctrl.tab(3) + property.name + ': { ';
                         for (var j = 0; j < property.accumulatedMappings.length; j += 1) {
-                            mapping += ((j > 0) ? ', ' : '') + property.accumulatedMappings[j]['$'].widget + ': \'' + property.accumulatedMappings[j]['$'].property + '\'';
+                            mapping += ( j > 0 ? ', \'' : '\'') + property.accumulatedMappings[j]['$'].widget + '\': \'' + property.accumulatedMappings[j]['$'].property + '\'';
                         }
                         mapping += ' }';
                     }

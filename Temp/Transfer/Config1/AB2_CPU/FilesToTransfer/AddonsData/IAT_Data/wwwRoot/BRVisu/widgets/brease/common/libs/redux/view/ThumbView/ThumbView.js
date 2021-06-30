@@ -65,6 +65,7 @@ define([
         if (props.selected) {
             $(document.body).on(BreaseEvent.MOUSE_MOVE, props.onMouseMove);
             $(document).on(BreaseEvent.MOUSE_UP, props.onMouseUp);
+            $(window).on('blur', props.onMouseUp);
         } else {
             this.el.on(BreaseEvent.MOUSE_DOWN, props.onMouseDown);
         }
@@ -74,6 +75,7 @@ define([
         $(document.body).off(BreaseEvent.MOUSE_MOVE, this.mouseMove);
         $(document).off(BreaseEvent.MOUSE_UP, this.mouseUp);
         this.el.off(BreaseEvent.MOUSE_DOWN, this.mouseDown);
+        $(window).off('blur', this.onMouseUp);
     };
 
     return ThumbView;

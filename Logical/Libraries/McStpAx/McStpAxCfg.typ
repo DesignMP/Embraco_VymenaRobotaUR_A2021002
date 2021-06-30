@@ -210,12 +210,25 @@ TYPE
 		IOChannel : McSAELOEExtRefPIOChType; (*Type mcSAELOEERP_IO_CH settings*)
 		Variable : McSAELOEExtRefPVarType; (*Type mcSAELOEERP_VAR settings*)
 	END_STRUCT;
+	McSAELOEEPosFltrEnum :
+		( (*Position filter selector setting*)
+		mcSAELOEEPF_EXTPOL_AND_DIST := 0 (*Extrapolation and disturbance - An extrapolation and disturbance filter is used*)
+		);
+	McSAELOEEPosFltrExtpolDistType : STRUCT (*Type mcSAELOEEPF_EXTPOL_AND_DIST settings*)
+		PositionFilterTimeConstant : REAL; (*Time constant for actual position filter*)
+		ExtrapolationTime : REAL; (*Extrapolation time for actual position filter*)
+	END_STRUCT;
+	McSAELOEEPosFltrType : STRUCT (*Filter for the encoder position*)
+		Type : McSAELOEEPosFltrEnum; (*Position filter selector setting*)
+		ExtrapolationAndDisturbance : McSAELOEEPosFltrExtpolDistType; (*Type mcSAELOEEPF_EXTPOL_AND_DIST settings*)
+	END_STRUCT;
 	McSAELOEPosEncExtType : STRUCT (*Type mcSAELOEPE_EXT settings*)
 		LinesPerEncoderRevolution : UDINT; (*Absolute number of lines of an encoder revolution [Lines/Rev]*)
 		PositionType : McSAELOEExtPosTypType; (*Type of the encoder*)
 		PositionSource : McSAELOEExtPosSrcType; (*Position source*)
 		ValidityCheck : McSAELOEExtValCkType; (*Check if given position is valid*)
 		ReferencePulse : McSAELOEExtRefPType; (*Check if given position is valid*)
+		PositionFilter : McSAELOEEPosFltrType; (*Filter for the encoder position*)
 	END_STRUCT;
 	McSAELOEPosEncType : STRUCT
 		Type : McSAELOEPosEncEnum; (*Position encoder selector setting*)
@@ -552,10 +565,10 @@ TYPE
 	McSAJFEnum :
 		( (*Jerk filter selector setting*)
 		mcSAJF_NOT_USE := 0, (*Not used - No jerk filter is applied*)
-		mcSAJF_USE := 1, (*Used - Jerk filter is applied*)
-		mcSAJF_JERK_LIM := 2 (*Jerk limited - Jerk is considered in the profile generator*)
+		mcSAJF_USE := 1 (*Used - Jerk filter is applied*)
 		);
 	McSAJFUseType : STRUCT (*Type mcSAJF_USE settings*)
+		MaximumJerkTime : REAL; (*Maximum configurable jerk filter time [s]*)
 		JerkTime : REAL; (*Jerk filter time [s]*)
 	END_STRUCT;
 	McSAJFType : STRUCT (*Jerk filter*)

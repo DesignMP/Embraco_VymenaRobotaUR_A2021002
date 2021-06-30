@@ -39,6 +39,9 @@ VAR
 	SC_Bruska : SequenceControlTyp := (0);
 	Bruska : Bruska_typ := (0);
 END_VAR
+VAR RETAIN
+	PocetCyklov : UDINT := 0;
+END_VAR
 (*****************Alarmy*****************************)
 VAR
 	Alarmy : ARRAY[0..100] OF BOOL;

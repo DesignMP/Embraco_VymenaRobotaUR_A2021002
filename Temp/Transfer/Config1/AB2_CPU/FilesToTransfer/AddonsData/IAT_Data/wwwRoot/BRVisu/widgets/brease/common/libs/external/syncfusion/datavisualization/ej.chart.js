@@ -1,6 +1,6 @@
 /*!
 *  filename: ej.chart.js
-*  version : 18.2.0.44
+*  version : 18.3.0.35
 *  Copyright Syncfusion Inc. 2001 - 2020. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -9906,6 +9906,7 @@ ej.EjStripline = function (chartobj) {
                 else if (axis.range == null)
                     axis.setRange = false;
             }
+			if(!chartObj.resetZooming && !axis._initialRange)					
                 axis._initialRange = axis.range == null ? { min: null, max: null, interval: null } : { min: axis.range.min, max: axis.range.max, interval: axis.range.interval };
         }
     };
@@ -10929,6 +10930,16 @@ ej.EjStripline = function (chartobj) {
                 }
                 else if (axisIndex == 1)
                     this._drawPolarCircle(axis);
+            }
+        },
+        _drawGridRect: function (axisIndex, axis, xAxis) {
+            if (this.model.AreaType == "cartesianaxes") {
+                if (axis.orientation.toLowerCase() == "horizontal") {
+                    this._drawXAxisRect(axisIndex, axis, xAxis);
+                }
+                else {
+                    this._drawYAxisRect(axisIndex, axis);
+                }
             }
         },
         _drawAxes: function (axisIndex, axis) {
@@ -14060,6 +14071,74 @@ ej.EjStripline = function (chartobj) {
                 }
                 $(gEle).appendTo(this.gYaxisEle);
             }
+        },
+        _drawXAxisRect: function (axisIndex, xAxis, axis) {
+            if (this.model.primaryXAxis.backGround != 'transparent' && xAxis.visible && xAxis.axisLine.visible) {
+            var chartBorder = this.model.border;
+            axisTitleSize = ej.EjSvgRender.utils._measureText(axis.title.text, (axis.width), axis.title.font);
+            titlesize = axisTitleSize.height / 2;
+            opposedPosition = axis._opposed;
+            _LableMaxWidth = axis._LableMaxWidth;
+            elementSpacing = this.model.elementSpacing;
+            isScroll = (axis._isScroll || (this.model.zooming.enableScrollbar && axis.scrollbarSettings.visible && (axis.zoomFactor < 1 || axis.zoomPosition > 0)));
+            tickLinesPosition = axis.tickLinesPosition.toLowerCase();
+            labelPosition = axis.labelPosition.toLowerCase();
+            axistitleoffset = axis.title.offset;
+            scrollerSize = this.model.scrollerSize;
+            var commonEventArgs = $.extend({}, ej.EjSvgRender.commonChartEventArgs);
+            var y = elementSpacing + _LableMaxWidth.height + titlesize + axis._multiLevelLabelHeight + axis.majorTickLines.size + axis.axisLine.width;
+            var locX = (axis.x + axis.width / 2) + axistitleoffset;
+            commonEventArgs.data = { title: axis.title.text, location: { x: locX, y: y }, axes: axis };
+            this._trigger("axesTitleRendering", commonEventArgs);
+            var newY = ((opposedPosition) ? (tickLinesPosition == "inside" && labelPosition == "outside" ? axis.y - commonEventArgs.data.location.y - (isScroll ? scrollerSize : 0) - axis.majorTickLines.size
+                : (axis.y - commonEventArgs.data.location.y - (isScroll ? scrollerSize : 0)))
+                : (tickLinesPosition == "outside" && labelPosition == "inside" ? (isScroll ? scrollerSize : 0) + (commonEventArgs.data.location.y + axis.y) - axis.majorTickLines.size
+                : (isScroll ? scrollerSize : 0) + (commonEventArgs.data.location.y + axis.y))) + axisTitleSize.height / 3.5;
+            x1 = Math.floor(xAxis.x);
+            x2 = Math.floor(xAxis.x + xAxis.width);
+            y1 = Math.floor(xAxis.y);
+            y2 = Math.floor(xAxis.y);
+            var offset = xAxis.axisLine.offset > 0 ? xAxis.axisLine.offset : 0;
+            var val = this._getSharpPath(xAxis.axisLine.width);
+            var options = {
+                'id': this.svgObject.id + '_XAxisRect_' + axisIndex,
+                'x': ((x1 - xAxis.plotOffset) + val + offset) - 15,
+                'y': y1 + val,
+                'width': ((x2 + xAxis.plotOffset) - offset + val) - ((x1 - xAxis.plotOffset) + val + offset) + 30,
+                'height': newY,
+                'fill': this.model.primaryXAxis.backGround,
+                'class': "e-XAxisarea"
+            };
+                this.svgRenderer.drawRect(options, this.gXaxisEle);
+            }
+        },
+        _drawYAxisRect: function (axisIndex, yAxis) {
+            if (this.model.primaryYAxis.backGround != 'transparent' && yAxis.visible && yAxis.axisLine.visible) {
+            var chartBorder = this.model.border;
+            var y1 = Math.floor(yAxis.y + yAxis.height);
+            var y2 = Math.floor(yAxis.y);
+            var opposedPosition = yAxis._opposed;
+            if (axisIndex != 1  && (yAxis.labelPosition != 'inside' && yAxis.tickLinesPosition == 'inside') && (!(yAxis.x == (this.model.m_AreaBounds.Width + this.model.m_AreaBounds.X) || (yAxis.x == (this.model.m_AreaBounds.X))))) {
+                var x1 = (!opposedPosition) ? Math.floor(yAxis.x - yAxis.majorTickLines.size) : Math.floor(yAxis.x + yAxis.majorTickLines.size);
+                var x2 = (!opposedPosition) ? Math.floor(yAxis.x - yAxis.majorTickLines.size) : Math.floor(yAxis.x + yAxis.majorTickLines.size);
+            }
+            else {
+                var x1 = Math.floor(yAxis.x);
+                var x2 = Math.floor(yAxis.x);
+            }
+            var offset = yAxis.axisLine.offset > 0 ? yAxis.axisLine.offset : 0;
+            var val = this._getSharpPath(yAxis.axisLine.width);
+            var options = {
+                'id': this.svgObject.id + '_YAxisRect_' + axisIndex,
+                'x': 0,
+                'y': ((y2 - yAxis.plotOffset) + offset + val) - 7,
+                'width': (($(this.svgObject).width() - (2 * chartBorder.width)) + this.model.m_AreaBounds.X) - ($(this.svgObject).width() - (2 * chartBorder.width)),
+                'height': ((y1 + yAxis.plotOffset) - offset + val) - ((y2 - yAxis.plotOffset) + offset + val) + 14,
+                'fill': this.model.primaryYAxis.backGround,
+                'class': "e-YAxisarea"
+            };
+                this.svgRenderer.drawRect(options, this.gYaxisEle);
+            }
         }
     },
         ej.EjStripline.prototype = {
@@ -14164,8 +14243,7 @@ ej.EjStripline = function (chartobj) {
         },
         _calculateHorizontalStripline: function (widthValue, pointstart, axis, stripLine) {
             var borderWidth = stripLine.borderWidth,
-                width = widthValue ? widthValue :(borderWidth ? borderWidth : 0),				
-				height = this.chart.model.m_AreaBounds.Height,
+                width = widthValue ? widthValue :(borderWidth ? borderWidth : 0),
                 x = (axis.isInversed) ? (pointstart - widthValue) : pointstart,
                 y = this.chart.model.m_AreaBounds.Y,
                 textWidth = ej.EjSvgRender.utils._measureText(stripLine.text, null, stripLine.font).height;
@@ -25771,6 +25849,7 @@ ej.ejChart = {};
                 else {
                     for (var l = 0; l < this.model._axes.length; l++) {
                         chartaxis._drawGridLines(l, this.model._axes[l], params);
+                        chartaxis._drawGridRect(l, this.model._axes[l], axis);
                     }
                 }
 
@@ -29569,8 +29648,14 @@ ej.ejChart = {};
 				areaBoundsY = areaBounds.Y * trans.y,
 				areaBoundsWidth = areaBounds.Width * trans.x,
 				areaBoundsHeight = areaBounds.Height * trans.y;
-
-            if (pageX > areaBoundsX && pageX < areaBoundsX + areaBoundsWidth && pageY > areaBoundsY && pageY < areaBoundsY + areaBoundsHeight) {
+            var chartEle = document.getElementById(this.element[0].id);
+            // Martin Aumair 14.01.2021 fix for A&P 676695
+            // get position of element in window (with scroll position)
+            // should be fixed by next syncfusion version. If not fixed do not overwrite with new version!!
+			var coords = this._getElemCoords(chartEle);
+			areaBoundsX = areaBoundsX + coords.left;
+			areaBoundsY = areaBoundsY + coords.top;			
+            if (pageX > areaBoundsX  && pageX < areaBoundsX + areaBoundsWidth && pageY > areaBoundsY && pageY < areaBoundsY + areaBoundsHeight) {
                 if (!panTouch)
                     panTouch = this.previousPanTouch = { pageX: pageX, pageY: pageY };
 
@@ -29595,6 +29680,27 @@ ej.ejChart = {};
             }
 
         },
+        // Martin Aumair 14.01.2021 fix for A&P 676695
+        // get position of element in window (with scroll position)
+        // https://stackoverflow.com/a/26230989
+        // should be fixed by next syncfusion version. If not fixed do not overwrite with new version!!
+        _getElemCoords: function (elem) {
+			var box = elem.getBoundingClientRect();
+
+			var body = document.body;
+			var docEl = document.documentElement;
+
+			var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+			var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+			var clientTop = docEl.clientTop || body.clientTop || 0;
+			var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+			var top  = box.top +  scrollTop - clientTop;
+			var left = box.left + scrollLeft - clientLeft;
+
+			return { top: Math.round(top), left: Math.round(left) };
+		},
         _calculateTouchDistance: function (previous, current) {
             var result = [], j = 0, length = current.length;
 
@@ -35174,7 +35280,7 @@ ej.ejChart = {};
                     chart.svgRenderer._setAttr($(chart.svgObject).find("#" + chart.svgObject.id + "_CrosshairVertical"), { "d": d });
                     if (enableCanvas) {
                         $("#secondCanvas").remove();
-                        $("#" + chart.svgObject.id + "_CrosshairVertical").css("left", this.mousemoveX).css({ "top": top , "height": height, "display": "block" });
+                        $("#" + chart.svgObject.id + "_CrosshairVertical").css("left", this.mousemoveX).css({ "top": top, "height": height, "display": "block" });
                     }
                     $("#" + chart.svgObject.id + "_CrosshairVertical").attr("visibility", "visible").css("display", "block");
                 }
@@ -35232,7 +35338,7 @@ ej.ejChart = {};
                                 }
                             }
                             var xPointLocation = { X: (chart.mousemoveX), Y: (axis.y) };
-                            chart.displayAxisTooltip(xPointLocation, xVal, axis, axisIndex, mouseLocation, false, trans);
+                            chart.displayAxisTooltip(xPointLocation, xVal, axis, axisIndex, mouseLocation);
                             $("#" + chart.svgObject.id + '_AxisToolTipText' + '_' + axisIndex).show();
                             $("#" + chart.svgObject.id + '_AxisToolTipRect' + '_' + axisIndex).show();
                         }
@@ -35253,7 +35359,7 @@ ej.ejChart = {};
 
                             }
                             var ypointLocation = { X: axis.x, Y: (chart.mousemoveY) };
-                            chart.displayAxisTooltip(ypointLocation, yVal, axis, axisIndex, mouseLocation, false, trans);
+                            chart.displayAxisTooltip(ypointLocation, yVal, axis, axisIndex, mouseLocation);
                             $("#" + chart.svgObject.id + '_AxisToolTipText' + '_' + axisIndex).show();
                             $("#" + chart.svgObject.id + '_AxisToolTipRect' + '_' + axisIndex).show();
                         }
@@ -37018,14 +37124,12 @@ ej.ejChart = {};
             $(tooltipdiv).css("left", xLoc);
             $(tooltipdiv).css("top", yLoc);
         },
-        displayAxisTooltip: function (location, text, axis, index, mouseLoc, tracker, transValue) {
+        displayAxisTooltip: function (location, text, axis, index, mouseLoc, tracker) {
 
             if (axis._valueType.toLowerCase() == "double") {
                 var customFormat = (!(axis.labelFormat)) ? null : axis.labelFormat.match('{value}');
                 text = (!(axis.labelFormat)) ? text : (customFormat != null) ? (axis.labelFormat == "${value}") ? axis.labelFormat.replace('{value}', '$' + Number(text)) : axis.labelFormat.replace('{value}', Number(text)) : (ej.format(Number(text), axis.labelFormat, this.model.locale));
             }
-			if (!transValue)
-				transValue = { x: 1, y: 1 };
             var maxTickSize = 0,
                 orientation = axis.orientation.toLowerCase(), position,
                 hPadding = 0,
@@ -37053,7 +37157,7 @@ ej.ejChart = {};
                 var textOffset = ej.EjSvgRender.utils._measureText(trackAxisText, null, axis.crosshairLabel.font);
                 if (orientation == 'horizontal') {
                     x = x - textOffset.width / 2;
-                    if (axis.labelPosition == 'inside' || (opposedPosition ? mouseLoc.y < axis.y : mouseLoc.y > (axis.y * transValue.y))) {
+                    if (axis.labelPosition == 'inside' || (opposedPosition ? mouseLoc.y < axis.y : mouseLoc.y > axis.y)) {
                         if (opposedPosition == false) {
                             y = axis.y - textOffset.height + maxTickSize - (axis._isScroll ? this.model.scrollerSize : 0);
                             position = "top";
@@ -37081,10 +37185,10 @@ ej.ejChart = {};
 						else if(x < axis.x)
 							x = axis.x + padding;
 					}
-                }
+				}
                 if (orientation == 'vertical') {
                     y = location.Y + textOffset.height / 4;
-                    if (axis.labelPosition == 'inside' || (!opposedPosition && mouseLoc.x < (axis.x * transValue.x))) {
+                    if (axis.labelPosition == 'inside' || (!opposedPosition && mouseLoc.x < axis.x)) {
                         if (opposedPosition == true) {
                             x = axis.x - textOffset.width + padding - maxTickSize;
                             position = "left";
@@ -37121,11 +37225,11 @@ ej.ejChart = {};
 							y = y - (textOffset.height/2);						
 					}
                 }
-                var canvasPadding = (enableCanvas) ? padding / 4 : 0
+
                 var textAxisOptions = {
                     'id': this.svgObject.id + '_AxisToolTipText' + '_' + index,
-                    'x': x - (enableCanvas ? 0 : vPadding),
-                    'y': y + (enableCanvas ? - canvasPadding : hPadding),
+                    'x': x - vPadding,
+                    'y': y + hPadding,
                     'fill': axis.crosshairLabel.font.color,
                     'font-size': axis.crosshairLabel.font.size,
                     'font-family': axis.crosshairLabel.font.fontFamily,
@@ -37135,15 +37239,16 @@ ej.ejChart = {};
                     'opacity': axis.crosshairLabel.font.opacity
 
                 };
-                var fontSize = ej.EjSvgRender.utils._measureText(commonTrackTextArgs.data.currentTrackText, this.model.m_AreaBounds.Width, axis.crosshairLabel.font),
+                var canvasPadding = (enableCanvas) ? padding / 4 : 0,
+                    fontSize = ej.EjSvgRender.utils._measureText(commonTrackTextArgs.data.currentTrackText, this.model.m_AreaBounds.Width, axis.crosshairLabel.font),
                     crosshairLabel = axis.crosshairLabel,
                     x = (x - padding),
                     y = (y - (fontSize.height)),
                     width = (fontSize.width) + (2 * padding),
                     height = (2 * fontSize.height) - (2 * padding);
                 var toolAxisRectOptions = {
-                    'x': x - (enableCanvas ? 0 : vPadding),
-                    'y': y + (enableCanvas ? -canvasPadding : hPadding),
+                    'x': x - vPadding,
+                    'y': y + hPadding,
                     'width': width,
                     'height': height,
                     'rx': crosshairLabel.rx * ((enableCanvas) ? 2 : 1),
@@ -41847,6 +41952,8 @@ ej.EjSvgScrollbarRender = function (element, scrollObj) {
                             enableTrim: false,
 
                             offset: 0,
+							
+							titleRotation: 'none',
 
                             alignment: 'center',
 
@@ -41943,7 +42050,9 @@ ej.EjSvgScrollbarRender = function (element, scrollObj) {
 
                     zoomFactor: 1,
 
-                    zoomPosition: 0
+                    zoomPosition: 0,
+
+                    backGround: 'transparent'
                 },
 
 
@@ -42267,7 +42376,9 @@ ej.EjSvgScrollbarRender = function (element, scrollObj) {
 
                     zoomFactor: 1,
 
-                    zoomPosition: 0
+                    zoomPosition: 0,
+
+                    backGround: 'transparent'
                 },
             axes: [],
 
@@ -42451,6 +42562,7 @@ ej.EjSvgScrollbarRender = function (element, scrollObj) {
                             visible: true,
                             enableTrim: false,
                             offset: 0,
+							titleRotation: 'none',
                             alignment: 'center',
                             isReversed: false,
                             position: 'outside',

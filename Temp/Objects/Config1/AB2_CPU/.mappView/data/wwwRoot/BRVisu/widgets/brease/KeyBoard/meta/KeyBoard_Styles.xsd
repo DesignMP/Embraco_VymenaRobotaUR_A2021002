@@ -21,6 +21,10 @@
 				<xs:attribute name="shadow" use="optional" type="wt:Shadow"></xs:attribute>
 				<xs:attribute name="buttonBackGroundGradient" use="optional" type="wt:Gradient"></xs:attribute>
 				<xs:attribute name="buttonMouseDownBackGroundGradient" use="optional" type="wt:Gradient"></xs:attribute>
+				<xs:attribute name="imeBackColor" use="optional" type="wt:Color"></xs:attribute>
+				<xs:attribute name="imeBackGroundGradient" use="optional" type="wt:Gradient"></xs:attribute>
+				<xs:attribute name="imeBorderColor" use="optional" type="wt:ColorCollection"></xs:attribute>
+				<xs:attribute name="imeTextColor" use="optional" type="wt:Color"></xs:attribute>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>

@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1621956551_2_
-#define _BUR_1621956551_2_
+#ifndef _BUR_1624959847_1_
+#define _BUR_1624959847_1_
 
 #include <bur/plctypes.h>
 
@@ -19,6 +19,7 @@ _GLOBAL plcbit PoruchaBrusky;
 _GLOBAL plcbit PotvrdenieAlarmov;
 _GLOBAL plcbit NastalaPorucha;
 _GLOBAL plcbit Alarmy[101];
+_GLOBAL_RETAIN unsigned long PocetCyklov;
 _GLOBAL struct Bruska_typ Bruska;
 _GLOBAL struct SequenceControlTyp SC_Bruska;
 _GLOBAL struct Robot_typ Robot;
@@ -56,5 +57,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.fun\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1621956551_2_ */
+#endif /* _BUR_1624959847_1_ */
 

@@ -137,7 +137,7 @@ define(['brease/core/Utils'], function (Utils) {
                             if (Array.isArray(allowedParents)) {
                                 return allowedParents.indexOf('*') !== -1 || allowedParents.indexOf(requestedParent) !== -1;
                             } else {
-                                console.warn('Meta data of ' + parent.elem.id + ' missing!');
+                                console.warn('isAllowedIn: meta data of widget instance missing!');
                                 return false;
                             }
                         }

@@ -24,7 +24,6 @@ require.config({
             exports: 'PDFObject'
         },
         'libs/jquery/jquery.extensions': ['jquery'],
-        'libs/jquery/jquery.mobile.virtualMouse': ['jquery'],
         'libs/jquery/jquery-ui-1.10.3.custom': ['jquery'],
         'libs/jquery/jquery-ui-1.10.4.custom': ['jquery']
     }

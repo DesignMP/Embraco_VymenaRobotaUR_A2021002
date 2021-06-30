@@ -192,14 +192,19 @@ define(['brease/events/BreaseEvent', 'brease/core/Utils'],
                     * by using the Hardware Keyboard
                     * @eventComment
                     */
-                    self.eventDispatcher.dispatchEvent({
+                    var data = {
                         type: 'Collector.Change',
-                        key: e.key,
-                        which: e.which,
                         detail: {
                             'value': this.value
                         }
-                    });
+                    };
+                    if (e.key !== undefined) {
+                        data.key = e.key;
+                    }
+                    if (e.which !== undefined) {
+                        data.which = e.which;
+                    }
+                    self.eventDispatcher.dispatchEvent(data);
                 }
             };
 

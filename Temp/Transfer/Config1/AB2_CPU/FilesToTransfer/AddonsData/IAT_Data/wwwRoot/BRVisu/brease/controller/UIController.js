@@ -173,8 +173,8 @@ function (_widgetFactory, _widgetParser, Enum, Utils) {
     * @param {String} contentId
     * @param {Function} callback
     */
-    _defineMethod(p, 'disposeInContent', function dispose() {
-        _widgetController.dispose.apply(_widgetController, arguments);
+    _defineMethod(p, 'disposeInContent', function disposeInContent() {
+        _widgetController.disposeInContent.apply(_widgetController, arguments);
     });
 
     _defineMethod(p, 'isWidgetCallable', function isWidgetCallable() {

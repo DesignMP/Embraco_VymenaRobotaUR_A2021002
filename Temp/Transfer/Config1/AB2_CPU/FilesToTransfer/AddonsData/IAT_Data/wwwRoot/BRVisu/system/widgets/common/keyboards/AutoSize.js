@@ -96,15 +96,15 @@ define(['system/widgets/common/keyboards/KeyboardOptions'], function (KeyboardOp
                 return value;
             },
 
-            defaults: {
-                autoSize: false,
-                minWidth: 0,
-                maxWidth: Number.MAX_SAFE_INTEGER,
-                minHeight: 0,
-                maxHeight: Number.MAX_SAFE_INTEGER
-            }
+            defaults: new KeyboardOptions()
         },
         settings = {};
+
+    AutoSize.defaults.autoSize = false;
+    AutoSize.defaults.minWidth = 0;
+    AutoSize.defaults.maxWidth = Number.MAX_SAFE_INTEGER;
+    AutoSize.defaults.minHeight = 0;
+    AutoSize.defaults.maxHeight = Number.MAX_SAFE_INTEGER;
 
     function _parseConfig(key, config, defaults) {
         var value = defaults[key];

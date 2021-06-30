@@ -1,6 +1,5 @@
 define(['brease/core/Class',
     'brease/events/BreaseEvent',
-    'brease/config',
     'brease/core/Utils', 
     'brease/enum/Enum',
     'brease/core/Types', 
@@ -9,7 +8,7 @@ define(['brease/core/Class',
     'brease/controller/FileManager', 
     'brease/core/libs/AsyncProcess', 
     'brease/decorators/TooltipDependency'],
-function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, permissions, fileManager, AsyncProcess, tooltipDependency) {
+function (SuperClass, BreaseEvent, Utils, Enum, Types, EventHandler, permissions, fileManager, AsyncProcess, tooltipDependency) {
 
     'use strict';
 
@@ -289,60 +288,59 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method createEvent
-        * method creates an event object for a widget
-        * @param {String} event name of the event
-        * @param {Object} eventArgs Object of event arguments
-        */
-    p.createEvent = function (event, eventArgs) {
+    * @method createEvent
+    * method creates an eventHandler object for a widget
+    * @param {String} eventName name of the event
+    * @param {Object} eventArgs Object of event arguments
+    * @return {brease.events.EventHandler}
+    */
+    p.createEvent = function (eventName, eventArgs) {
         if (this.settings.className && this.elem !== null) {
-            if (this.events[event] !== undefined) {
-                this.events[event].setEventArgs(eventArgs);
-                return this.events[event];
+            if (this.events[eventName] !== undefined) {
+                this.events[eventName].setEventArgs(eventArgs);
+                return this.events[eventName];
             } else {
                 var type = fileManager.getPathByClass(this.settings.className, 'type');
-                this.events[event] = new EventHandler(type + '.Event', this.elem.id, event, eventArgs, this.elem);
-                return this.events[event];
+                this.events[eventName] = new EventHandler(type + '.Event', this.elem.id, eventName, eventArgs, this.elem);
+                return this.events[eventName];
             }
         } else {
             console.iatWarn('could not create Event');
-            return undefined;
+            return new EventHandler(EventHandler.DummyType);
         }
     };
 
     /**
     * @method createMouseEvent
-    * method creates an mouse event object for a widget with position arguments
-    * @param {String} event name of the event
+    * method creates an mouse eventHandler object for a widget with position arguments
+    * @param {String} eventName name of the event
     * @param {Object} eventArgs Object of event arguments
-    * @param {Object} e event object
+    * @param {core.javascript.Event} evObj event object
+    * @return {brease.events.EventHandler}
     */
-    p.createMouseEvent = function (event, eventArgs, e) {
+    p.createMouseEvent = function (eventName, eventArgs, evObj) {
         eventArgs = eventArgs || {};
 
         var rootZoom = brease.pageController.getRootZoom();
         if (!_.isNumber(rootZoom) || rootZoom === 0) { rootZoom = 1; }
 
-        eventArgs.horizontalPos = e.clientX ? Math.round(e.clientX / rootZoom) + 'px' : '0px';
-        eventArgs.verticalPos = e.clientY ? Math.round(e.clientY / rootZoom) + 'px' : '0px';
+        eventArgs.horizontalPos = evObj.clientX ? Math.round(evObj.clientX / rootZoom) + 'px' : '0px';
+        eventArgs.verticalPos = evObj.clientY ? Math.round(evObj.clientY / rootZoom) + 'px' : '0px';
 
-        return this.createEvent(event, eventArgs);
+        return this.createEvent(eventName, eventArgs);
     };
 
     p.dispatchServerEvent = function (eventName, eventArgs) {
-        var ev = this.createEvent(eventName, eventArgs);
-        if (ev) {
-            ev.dispatch(false);
-        }
+        this.createEvent(eventName, eventArgs).dispatch(false);
     };
 
     /**
-        * @method disable
-        * Disable widget  
-        * This method sets the state 'isDisabled' of the widget (to true) only and adds CSS class 'disabled'.  
-        * Inherited widgets have to specify what 'disabled' means for them.  
-        * In a Button in default style for example, it means that click and mousedown events are not propagated and the button appears in grayscale.  
-        */
+    * @method disable
+    * Disable widget  
+    * This method sets the state 'isDisabled' of the widget (to true) only and adds CSS class 'disabled'.  
+    * Inherited widgets have to specify what 'disabled' means for them.  
+    * In a Button in default style for example, it means that click and mousedown events are not propagated and the button appears in grayscale.  
+    */
     p.disable = function () {
         //console.log('BaseWidget[' + ((this.elem) ? this.elem.id : 'undefined') + '].disable');
 
@@ -358,11 +356,11 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method enable
-        * Enable widget  
-        * This method only sets the state 'isDisabled' of the widget (to false) and removes CSS class 'disabled'  
-        * Inherited widgets have to specify what 'disabled' means for them.  
-        */
+    * @method enable
+    * Enable widget  
+    * This method only sets the state 'isDisabled' of the widget (to false) and removes CSS class 'disabled'  
+    * Inherited widgets have to specify what 'disabled' means for them.  
+    */
     p.enable = function () {
         //console.log('BaseWidget[' + ((this.elem) ? this.elem.id : 'undefined') + '].enable');
         if (this.isDisabled === true) {
@@ -377,11 +375,11 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method setEnable
-        * @iatStudioExposed
-        * Sets the state of property «enable»
-        * @param {Boolean} value
-        */
+    * @method setEnable
+    * @iatStudioExposed
+    * Sets the state of property «enable»
+    * @param {Boolean} value
+    */
     p.setEnable = function (value) {
         var metaData = arguments[1];
         this.settings.enable = Types.parseValue(value, 'Boolean');
@@ -393,37 +391,37 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method
-        * Is called after the operability of the widget is changed.   
-        * This method is not mentioned to be called from outside, but acts as a hook for widgets.  
-        * It can be overridden in widgets to react on operability changes.    
-        * @param {Boolean} operability
-        */
+    * @method
+    * Is called after the operability of the widget is changed.   
+    * This method is not mentioned to be called from outside, but acts as a hook for widgets.  
+    * It can be overridden in widgets to react on operability changes.    
+    * @param {Boolean} operability
+    */
     p._enableHandler = function (operability) {
         //override in Widgets if needed
     };
 
     /**
-        * @method
-        * Is called after the visibility of the widget is changed.   
-        * This method is not mentioned to be called from outside, but acts as a hook for widgets.  
-        * It can be overridden in widgets to react on visibility changes.    
-        * @param {Boolean} visibility
-        */
+    * @method
+    * Is called after the visibility of the widget is changed.   
+    * This method is not mentioned to be called from outside, but acts as a hook for widgets.  
+    * It can be overridden in widgets to react on visibility changes.    
+    * @param {Boolean} visibility
+    */
     p._visibleHandler = function (visibility) {
         //override in Widgets if needed
     };
 
     /**
-        * @method setEditable
-        * Sets the state of property «editable»  
-        * Used for «editable» binding; method is called exclusevely by the framework
-        * @param {Boolean} editable
-        * @param {Object} metaData
-        * @param {String} metaData.attribute name of property = 'editable'
-        * @param {String} metaData.refAttribute name of original bound property
-        * @param {Boolean} metaData.value 
-        */
+    * @method setEditable
+    * Sets the state of property «editable»  
+    * Used for «editable» binding; method is called exclusevely by the framework
+    * @param {Boolean} editable
+    * @param {Object} metaData
+    * @param {String} metaData.attribute name of property = 'editable'
+    * @param {String} metaData.refAttribute name of original bound property
+    * @param {Boolean} metaData.value 
+    */
     p.setEditable = function (editable, metaData) {
         // support for editable binding
         // metaData contains information about the original bound property: metaData.refAttribute
@@ -439,31 +437,31 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method getEditable
-        * Returns the state of property «editable»
-        * @param {String} refAttribute name of original bound property
-        * @return {Boolean}
-        */
+    * @method getEditable
+    * Returns the state of property «editable»
+    * @param {String} refAttribute name of original bound property
+    * @return {Boolean}
+    */
     p.getEditable = function () {
         return this.settings.editable;
     };
 
     /**
-        * @method getEnable
-        * Returns the state of property «enable»
-        * @return {Boolean}
-        */
+    * @method getEnable
+    * Returns the state of property «enable»
+    * @return {Boolean}
+    */
     p.getEnable = function () {
         return this.settings.enable;
 
     };
 
     /**
-        * @method setVisible
-        * @iatStudioExposed
-        * Sets the state of property «visible»
-        * @param {Boolean} value
-        */
+    * @method setVisible
+    * @iatStudioExposed
+    * Sets the state of property «visible»
+    * @param {Boolean} value
+    */
     p.setVisible = function (value) {
         var metaData = arguments[1];
         this.settings.visible = Types.parseValue(value, 'Boolean');
@@ -475,56 +473,57 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method getVisible
-        * Returns the state of property «visible»
-        * @return {Boolean}
-        */
+    * @method getVisible
+    * Returns the state of property «visible»
+    * @return {Boolean}
+    */
     p.getVisible = function () {
         return this.settings.visible;
     };
 
     /**
-        * @method getSettings
-        * Returns the actual settings of the widget.
-        * @return {Object} settings Actual settings parsed from config options and defaultSettings
-        */
+    * @method getSettings
+    * Returns the actual settings of the widget.
+    * @return {Object} settings Actual settings parsed from config options and defaultSettings
+    */
     p.getSettings = function () {
 
         return this.settings;
     };
+
     /**
-       * @method getDefaultSettings
-       * Returns the default settings of the widget.
-       * @return {Object} defaultSettings
-       */
+    * @method getDefaultSettings
+    * Returns the default settings of the widget.
+    * @return {Object} defaultSettings
+    */
     p.getDefaultSettings = function () {
         return this.defaultSettings;
     };
 
     /**
-        * @method isEnabled
-        * Returns true if widget is enabled and false if widget is disabled
-        * @return {Boolean}
-        */
+    * @method isEnabled
+    * Returns true if widget is enabled and false if widget is disabled
+    * @return {Boolean}
+    */
     p.isEnabled = function () {
         return !this.isDisabled;
     };
 
     /**
-        * @method isVisible
-        * Returns true if widget is visible and false if widget is hidden
-        * @return {Boolean}
-        */
+    * @method isVisible
+    * Returns true if widget is visible and false if widget is hidden
+    * @return {Boolean}
+    */
     p.isVisible = function () {
         return !this.isHidden;
     };
 
     /**
-        * @method addEventListener
-        * adds eventlistener to the widget html element
-        * @param {String} type event type
-        * @param {Function} listener
-        */
+    * @method addEventListener
+    * adds eventlistener to the widget html element
+    * @param {String} type event type
+    * @param {Function} listener
+    */
     p.addEventListener = function (type, listener) {
         if (this.elem) {
             this.elem.addEventListener(type, listener);
@@ -532,23 +531,28 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method removeEventListener
-        * removes eventlistener from the widget html element
-        * @param {String} type event type
-        * @param {Function} listener
-        */
+    * @method removeEventListener
+    * removes eventlistener from the widget html element
+    * @param {String} type event type
+    * @param {Function} listener
+    */
     p.removeEventListener = function (type, listener) {
         if (this.elem) {
             this.elem.removeEventListener(type, listener);
         }
     };
 
-    p.dispatchEvent = function (event) {
+    /**
+    * @method
+    * Dispatch an event at widget element (= specified EventTarget)  
+    * @param {core.javascript.Event} evObj Event object to be dispatched.
+    */
+    p.dispatchEvent = function (evObj) {
         try {
-            this.elem.dispatchEvent(event);
-        } catch (e) {
-            console.iatWarn(e.message);
-            console.iatWarn(this.settings.className + '[' + ((this.elem) ? this.elem.id : 'undefined elem') + '].dispatchEvent(' + event.type + '):' + e.message);
+            this.elem.dispatchEvent(evObj);
+        } catch (err) {
+            console.iatWarn(err.message);
+            console.iatWarn(this.settings.className + '[' + ((this.elem) ? this.elem.id : 'undefined elem') + '].dispatchEvent(' + evObj.type + '):' + err.message);
         }
     };
 
@@ -558,9 +562,9 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method
-        * Do not call 'suspend' directly, use uiController.suspendInContent instead
-        */
+    * @method
+    * Do not call 'suspend' directly, use uiController.suspendInContent instead
+    */
     p.suspend = function () {
         //console.log('%c            ' + this.elem.id + '.suspend', 'color:#cc0000;');
 
@@ -570,9 +574,9 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method
-        * Do not call *wake* directly, use uiController.wakeInContent instead, otherwise arguments are missing  
-        */
+    * @method
+    * Do not call *wake* directly, use uiController.wakeInContent instead, otherwise arguments are missing  
+    */
     p.wake = function (events, preserveOldValues, bindings) {
         //console.log('%c            ' + this.elem.id + '.wake', 'color:#00cc00;');
 
@@ -607,38 +611,42 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     };
 
     /**
-        * @method
-        * Dispatch changes of a attribute value for data binding. 
-        * @param {Object} data  
-        * data is a key/value object, where *key* is the name of the property and *value* is the value of the property.  
-        * Example: {"selectedIndex":2}
-        */
+    * @method
+    * Dispatch changes of a attribute value for data binding. 
+    * @param {Object} data  
+    * data is a key/value object, where *key* is the name of the property and *value* is the value of the property.  
+    * Example: {"selectedIndex":2}
+    */
     p.sendValueChange = function (detail) {
         //console.debug('BaseWidget[id=' + this.elem.id + '].sendValueChange:', detail);
         this.dispatchEvent(new CustomEvent(BreaseEvent.ATTRIBUTE_CHANGE, { detail: detail, bubbles: true }));
-        brease.uiController.bindingController.attributeChangeForwarder({ target: { id: this.elem.id }, detail: detail });
+        if (this.elem) {
+            brease.uiController.bindingController.attributeChangeForwarder({ target: { id: this.elem.id }, detail: detail });
+        }
     };
 
     /**
-        * @method
-        * Dispatch changes of a Node for data binding.
-        * @param {brease.objects.NodeData} data  
-        * Example NumericInput: this.sendNodeChange({ attribute: "node", nodeAttribute: "unit", value: this.data.unitCode });
-        */
+    * @method
+    * Dispatch changes of a Node for data binding.
+    * @param {brease.objects.NodeData} data  
+    * Example NumericInput: this.sendNodeChange({ attribute: "node", nodeAttribute: "unit", value: this.data.unitCode });
+    */
     p.sendNodeChange = function (detail) {
         //console.debug('BaseWidget[id=' + this.elem.id + '].sendNodeChange:', detail);
         this.dispatchEvent(new CustomEvent(BreaseEvent.NODE_ATTRIBUTE_CHANGE, { detail: detail, bubbles: true }));
-        brease.uiController.bindingController.nodeAttributeChangeForwarder({ target: { id: this.elem.id }, detail: detail });
+        if (this.elem) {
+            brease.uiController.bindingController.nodeAttributeChangeForwarder({ target: { id: this.elem.id }, detail: detail });
+        }
     };
 
     /**
-        * @event property_changed
-        * Fired if a bound attribute is changed by a server call  
-        * @param {String} attribute Name of bound attribute
-        * @param {ANY} value Value sent by server
-        * See at {@link brease.events.BreaseEvent#static-property-PROPERTY_CHANGED BreaseEvent.PROPERTY_CHANGED} for event type  
-        * @eventComment
-        */
+    * @event property_changed
+    * Fired if a bound attribute is changed by a server call  
+    * @param {String} attribute Name of bound attribute
+    * @param {ANY} value Value sent by server
+    * See at {@link brease.events.BreaseEvent#static-property-PROPERTY_CHANGED BreaseEvent.PROPERTY_CHANGED} for event type  
+    * @eventComment
+    */
 
     p._handleEvent = function (e, forceStop) {
         //console.debug('_handleEvent:',this,e,forceStop);
@@ -667,18 +675,17 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
         if (this.el) {
             this.el.on(BreaseEvent.CLICK, this._bind('_clickHandler'));
         }
-
     };
 
     /**
-        * @event Click
-        * Fired when element is clicked on.
-        * @iatStudioExposed
-        * @param {String} origin id of widget that triggered this event
-        * @param {String} horizontalPos horizontal position of click in pixel i.e '10px'
-        * @param {String} verticalPos vertical position of click in pixel i.e '10px'
-        * @eventComment
-        */
+    * @event Click
+    * Fired when element is clicked on.
+    * @iatStudioExposed
+    * @param {String} origin id of widget that triggered this event
+    * @param {String} horizontalPos horizontal position of click in pixel i.e '10px'
+    * @param {String} verticalPos vertical position of click in pixel i.e '10px'
+    * @eventComment
+    */
     p._clickHandler = function (e, additionalArguments) {
         if (this.isDisabled) {
             this._disabledClickHandler(e, additionalArguments);
@@ -701,39 +708,40 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
     }
 
     /**
-        * @event DisabledClick
-        * Fired when disabled element is clicked on.
-        * @iatStudioExposed
-        * @param {String} origin id of widget that triggered this event
-        * @param {Boolean} hasPermission defines if the state is caused due to missing
-        * @param {String} horizontalPos horizontal position of click in pixel i.e '10px'
-        * @param {String} verticalPos vertical position of click in pixel i.e '10px'
-        * roles of the current user 
-        * @eventComment
-        */
-    p._disabledClickHandler = function (e, additionalArguments) {
+    * @event DisabledClick
+    * Fired when disabled element is clicked on.
+    * @iatStudioExposed
+    * @param {String} origin id of widget that triggered this event
+    * @param {Boolean} hasPermission defines if the state is caused due to missing
+    * @param {String} horizontalPos horizontal position of click in pixel i.e '10px'
+    * @param {String} verticalPos vertical position of click in pixel i.e '10px'
+    * roles of the current user 
+    * @eventComment
+    */
+
+    p._disabledClickHandler = function (originalEvent, additionalArguments) {
         // A&P 635010 a click on the ToggleButton of a disabled FlyOut widget does
         // not trigger a DisabledClick event on the FlyOut
         if (!this.settings.omitDisabledClick) {
             var eventArgs = _extendArgs({
                 hasPermission: (this.settings.editable && this.settings.permissions.operate)
-            }, additionalArguments, e.target);
+            }, additionalArguments, originalEvent.target);
 
-            var event = this.createMouseEvent('DisabledClick', eventArgs, e);
-            event.dispatch(false);
-
+            var eventHandler = this.createMouseEvent('DisabledClick', eventArgs, originalEvent);
+            eventHandler.dispatch(false);
+            
             document.body.dispatchEvent(new CustomEvent(BreaseEvent.DISABLED_CLICK, {
                 detail: {
                     contentId: this.getParentContentId(),
                     hasPermission: eventArgs.hasPermission,
                     origin: eventArgs.origin,
                     widgetId: this.elem.id,
-                    horizontalPos: event.data.eventArgs.horizontalPos,
-                    verticalPos: event.data.eventArgs.verticalPos
+                    horizontalPos: eventHandler.data.eventArgs.horizontalPos,
+                    verticalPos: eventHandler.data.eventArgs.verticalPos
                 },
                 bubbles: true
             }));
-            this._handleEvent(e);
+            this._handleEvent(originalEvent);
         }
     };
 
@@ -805,18 +813,15 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
         }
             
         /**
-            * @event EnableChanged
-            * Fired when operability of the widget changes.
-            * @param {Boolean} value operability
-            * @iatStudioExposed 
-            * @eventComment
-            */
+        * @event EnableChanged
+        * Fired when operability of the widget changes.
+        * @param {Boolean} value operability
+        * @iatStudioExposed 
+        * @eventComment
+        */
         if (this.isDisabled !== oldValue) {
             //console.log('%c' + this.elem.id + '.setOperability:oldValue=' + !oldValue + '/newValue=' + !this.isDisabled, 'color:#00cccc');
-            var ev = this.createEvent(BreaseEvent.ENABLE_CHANGED, { value: !this.isDisabled });
-            if (ev) {
-                ev.dispatch();
-            }
+            this.createEvent(BreaseEvent.ENABLE_CHANGED, { value: !this.isDisabled }).dispatch();
         }
     }
 
@@ -843,18 +848,15 @@ function (SuperClass, BreaseEvent, config, Utils, Enum, Types, EventHandler, per
             }
 
             /**
-                * @event VisibleChanged 
-                * Fired when the visibility of the widget changes.
-                * @param {Boolean} value visibility
-                * @iatStudioExposed 
-                * @eventComment
-                */
+            * @event VisibleChanged 
+            * Fired when the visibility of the widget changes.
+            * @param {Boolean} value visibility
+            * @iatStudioExposed 
+            * @eventComment
+            */
             if (this.isHidden !== oldValue) {
                 //console.log('%c' + this.elem.id + '.setVisibility:oldValue=' + !this.isHidden, 'color:#cc00cc');
-                var ev = this.createEvent(BreaseEvent.VISIBLE_CHANGED, { value: !this.isHidden });
-                if (ev) {
-                    ev.dispatch();
-                }
+                this.createEvent(BreaseEvent.VISIBLE_CHANGED, { value: !this.isHidden }).dispatch();
             }
         }
     }

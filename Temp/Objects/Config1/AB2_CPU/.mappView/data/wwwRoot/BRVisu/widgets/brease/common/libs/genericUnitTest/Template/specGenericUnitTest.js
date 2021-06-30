@@ -9,6 +9,6 @@ define([
     'use strict';
 
     //generic Unit Test
-    m.describe(cSpecGenericUnitTest.run, 'UnitTest for: >>Template.js<<', mSpecUnitTestGeneric.suite, [cSpecGenericUnitTest]);
+    m.describe(cSpecGenericUnitTest.run, 'UnitTest for: \u00BBTemplate.js\u00AB', mSpecUnitTestGeneric.suite, [cSpecGenericUnitTest]);
 
 });

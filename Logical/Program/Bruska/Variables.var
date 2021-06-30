@@ -13,6 +13,7 @@ VAR
 	McAcpAxProcessParIDType_0 : ARRAY[0..1] OF McAcpAxProcessParIDType;
 	NovaHodnotaMomentu_POS : REAL := 0.0;
 	NovaHodnotaMomentu_NEG : REAL := 0.0;
-	CasOvladaniaBrzdy : TON;
 	Triger_1 : BOOL := 0;
+	CasUvolneniaBrzdy : TON;
+	CasVypnutiaUvolneniaBrzdy : TON;
 END_VAR

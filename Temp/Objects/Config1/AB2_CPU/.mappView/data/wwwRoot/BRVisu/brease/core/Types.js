@@ -100,7 +100,7 @@ define(function () {
 
     function parseBoolean(value, options) {
         var retVal = value;
-        if (value !== true && value !== false && options && (options.default === true || options.default === false)) {
+        if (value !== true && value !== false && value !== 1 && value !== 0 && options && (options.default === true || options.default === false)) {
             retVal = options.default;
         }
         retVal = !!((retVal === true || retVal === 1));
@@ -190,6 +190,15 @@ define(function () {
 * @virtualNote 
 * <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement" target="_blank">HTML element</a>
 */
+
+/**
+* @class core.html.DOMRect
+* @alternateClassName DOMRect
+* @embeddedClass
+* @virtualNote 
+* <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect" target="_blank">DOMRect</a>
+*/
+
 /**
 * @class core.html.Node
 * @embeddedClass

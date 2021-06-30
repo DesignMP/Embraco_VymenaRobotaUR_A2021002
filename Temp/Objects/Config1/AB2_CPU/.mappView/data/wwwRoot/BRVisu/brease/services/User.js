@@ -1,4 +1,12 @@
-define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketEvent', 'brease/events/ClientSystemEvent', 'brease/enum/Enum'], function (Utils, BreaseEvent, SocketEvent, ClientSystemEvent, Enum) {
+define(['brease/core/Utils', 
+    'brease/events/BreaseEvent',
+    'brease/events/SocketEvent',
+    'brease/events/ClientSystemEvent',
+    'brease/enum/Enum',
+    'brease/services/libs/PasswordPolicies',
+    'brease/services/libs/UserData',
+    'brease/services/libs/UserDataList'], 
+function (Utils, BreaseEvent, SocketEvent, ClientSystemEvent, Enum, PasswordPolicies, UserData, UserDataList) {
 
     'use strict';
 
@@ -260,6 +268,191 @@ define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketE
             _deferChange = $.Deferred();
             _runtimeService.changePassword(userName, oldPassword, newPassword, _changePasswordResponseHandler, { userName: userName });
             return _deferChange.promise();
+        },
+
+        /**
+        * @method loadPasswordPolicies
+        * @async
+        * Async function to load password policies
+        *
+        *       brease.user.loadPasswordPolicies().then(
+        *           function(policy) {
+        *               //success callback
+        *           },
+        *           function(status) {
+        *               //error callback
+        *           }
+        *       );
+        *
+        * @return {Promise}
+        */
+        loadPasswordPolicies: function () {
+            var def = $.Deferred();
+            _runtimeService.loadPasswordPolicies(_loadPasswordPoliciesResponseHandler, { deferred: def });
+            return def.promise();
+        },
+
+        /**
+        * @method loadUserList
+        * @async
+        * Async function to load user list
+        *
+        *       brease.user.loadUserList(details).then(
+        *           function(userlist) {
+        *               //success callback
+        *           },
+        *           function(status) {
+        *               //error callback
+        *           }
+        *       );
+        * @param {Boolean} details
+        * @return {Promise}
+        */
+
+        loadUserList: function (details) {
+            var def = $.Deferred();
+            _runtimeService.loadUserList(details, _loadUserListResponseHandler, { deferred: def });
+            return def.promise();
+        },
+
+        /**
+        * @method loadUserData
+        * @async
+        * Async function to load user data
+        *
+        *       brease.user.loadUserData(userName).then(
+        *           function(userdata) {
+        *               //success callback
+        *           },
+        *           function(status) {
+        *               //error callback
+        *           }
+        *       );
+        * @param {String} userName
+        * @return {Promise}
+        */
+
+        loadUserData: function (userName) {
+            var def = $.Deferred();
+            _runtimeService.loadUserData(userName, _loadUserDataResponseHandler, { deferred: def });
+            return def.promise();
+        },
+
+        /**
+        * @method addUserToMpUserX
+        * @async
+        * Async function to add user data
+        *
+        *       brease.user.addUserToMpUserX(userName, password, fullName, roles).then(
+        *           function(status) {
+        *               //success callback
+        *           },
+        *           function(status) {
+        *               //error callback
+        *           }
+        *       );
+        * @param {String} userName
+        * @param {String} password
+        * @param {String} fullName
+        * @param {String[]} roles
+        * @return {Promise}
+        */
+
+        addUserToMpUserX: function (userName, password, fullName, roles) {
+            var def = $.Deferred();
+            _runtimeService.addUserToMpUserX(userName, password, fullName, roles, _addUserToMpUserXResponseHandler, { deferred: def });
+            return def.promise();
+        },
+
+        /**
+        * @method deleteUserFromMpUserX
+        * @async
+        * Async function to load user data
+        *
+        *       brease.user.deleteUserFromMpUserX(userName).then(
+        *           function(status) {
+        *               //success callback
+        *           },
+        *           function(status) {
+        *               //error callback
+        *           }
+        *       );
+        * @param {String} userName
+        * @return {Promise}
+        */
+
+        deleteUserFromMpUserX: function (userName) {
+            var def = $.Deferred();
+            _runtimeService.deleteUserFromMpUserX(userName, _deleteUserFromMpUserXResponseHandler, { deferred: def });
+            return def.promise();
+        },
+
+        /**
+        * @method modifyUserFromMpUserX
+        * @async
+        * Async function to modify user data
+        *
+        *       brease.user.modifyUserFromMpUserX(userName, modifiedUserData).then(
+        *           function(status) {
+        *               //success callback
+        *           },
+        *           function(status) {
+        *               //error callback
+        *           }
+        *       );
+        * @param {String} userName
+        * @param {Object} modifiedUserData
+        * @param {String} [modifiedUserData.fullName]
+        * @param {String[]} [modifiedUserData.roles]
+        * @param {String} [modifiedUserData.password]
+        * @param {Boolean} [modifiedUserData.isLocked]
+        * @return {Promise}
+        */
+        modifyUserFromMpUserX: function (userName, modifiedUserData) {
+            var def = $.Deferred();
+            _runtimeService.modifyUserFromMpUserX(userName, modifiedUserData, _modifyUserFromMpUserXResponseHandler, { deferred: def });
+            return def.promise();
+        },
+
+        /**
+        * @method loadAvailableRoles
+        * @async
+        * Async function to load available roles
+        *
+        *       brease.user.loadAvailableRoles().then(
+        *           function(roles) {
+        *               //success callback
+        *           },
+        *           function(status) {
+        *               //error callback
+        *           }
+        *       );
+        * @return {Promise}
+        */
+        loadAvailableRoles: function () {
+            var def = $.Deferred();
+            _runtimeService.loadAvailableRoles(_loadAvailableRolesResponseHandler, { deferred: def });
+            return def.promise();
+        },
+        /**
+        * @method getUserSettingsFromMpUserX
+        * @async
+        * Async function to get the properties EditUserWithSameLevel and UserNameMinLength
+        *
+        *       brease.user.getUserSettingsFromMpUserX().then(
+        *           function(data) {
+        *               //success callback
+        *           },
+        *           function(status) {
+        *               //error callback
+        *           }
+        *       );
+        * @return {Promise}
+        */
+        getUserSettingsFromMpUserX: function () {
+            var def = $.Deferred();
+            _runtimeService.getUserSettingsFromMpUserX(_getUserSettingsFromMpUserXResponseHandler, { deferred: def });
+            return def.promise();
         }
     };
 
@@ -303,6 +496,78 @@ define(['brease/core/Utils', 'brease/events/BreaseEvent', 'brease/events/SocketE
             _roles = responseData.roles.sort();
         }
         _resolve(callbackInfo.deferred, callbackInfo.callback, responseData.roles);
+    }
+
+    function _loadPasswordPoliciesResponseHandler(responseData, callbackInfo) {
+        var deferred = callbackInfo.deferred;
+        if (responseData.success === true) {
+            deferred.resolve(PasswordPolicies.fromServerData(responseData.policy));
+        } else {
+            deferred.reject(responseData.status);
+        }
+    }
+
+    function _loadUserListResponseHandler(responseData, callbackInfo) {
+        var deferred = callbackInfo.deferred;
+        if (responseData.success === true) {
+            deferred.resolve(responseData.status, UserDataList.fromServerData(responseData.users)); 
+        } else {
+            deferred.reject(responseData.status);  
+        }
+    }
+
+    function _loadUserDataResponseHandler(responseData, callbackInfo) {
+        var deferred = callbackInfo.deferred;
+        if (responseData.success === true) {
+            deferred.resolve(UserData.fromServerData(responseData.userinfo));
+        } else {
+            deferred.reject(responseData.status);  
+        }
+    }
+
+    function _addUserToMpUserXResponseHandler(responseData, callbackInfo) {
+        var deferred = callbackInfo.deferred;
+        if (responseData.success === true) {
+            deferred.resolve(responseData.status);
+        } else {
+            deferred.reject(responseData.status);
+        }
+    }
+
+    function _deleteUserFromMpUserXResponseHandler(responseData, callbackInfo) {
+        var deferred = callbackInfo.deferred;
+        if (responseData.success === true) {
+            deferred.resolve(responseData.status);
+        } else {
+            deferred.reject(responseData.status);
+        }
+    }
+
+    function _modifyUserFromMpUserXResponseHandler(responseData, callbackInfo) {
+        var deferred = callbackInfo.deferred;
+        if (responseData.success === true) {
+            deferred.resolve(responseData.status);
+        } else {
+            deferred.reject(responseData.status);
+        }
+    }
+
+    function _loadAvailableRolesResponseHandler(responseData, callbackInfo) {
+        var deferred = callbackInfo.deferred;
+        if (responseData.success === true) {
+            deferred.resolve(responseData.roles);
+        } else {
+            deferred.reject(responseData.status);
+        }
+    }
+
+    function _getUserSettingsFromMpUserXResponseHandler(responseData, callbackInfo) {
+        var deferred = callbackInfo.deferred;
+        if (responseData.success === true) {
+            deferred.resolve(responseData.settings);
+        } else {
+            deferred.reject(responseData.status);
+        }
     }
 
     function _changePasswordResponseHandler(responseData, callbackInfo) {

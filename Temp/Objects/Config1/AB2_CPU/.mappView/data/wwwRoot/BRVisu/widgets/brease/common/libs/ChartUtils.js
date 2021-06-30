@@ -109,43 +109,45 @@ define([
     };
 
     ChartUtils.getMultiLine = function (tickLabelSelection, axisPosition) {
+        var tickLabelMultiLine = tickLabelSelection;
 
-        var tickLabelMultiLine = tickLabelSelection,
-            arrayMultiLine = tickLabelMultiLine[0][0].innerHTML.split('\n'),
-            i, j;
+        if (tickLabelMultiLine.length > 0 && tickLabelMultiLine[0].length > 0 && tickLabelMultiLine[0][0]) {
+            var arrayMultiLine = tickLabelMultiLine[0][0].innerHTML.split('\n'),
+                i, j;
 
-        if (arrayMultiLine.length > 1) {
-            if (axisPosition === 'bottom') {
+            if (arrayMultiLine.length > 1) {
+                if (axisPosition === 'bottom') {
 
-                for (j = 0; j < tickLabelMultiLine[0].length; j = j + 1) {
-                    d3.select(tickLabelMultiLine[0][j]).append('tspan')
-                        .text($(tickLabelMultiLine[0][j])[0].firstChild.data.split('\n')[0]);
-
-                    for (i = 1; i < arrayMultiLine.length; i = i + 1) {
+                    for (j = 0; j < tickLabelMultiLine[0].length; j = j + 1) {
                         d3.select(tickLabelMultiLine[0][j]).append('tspan')
-                            .text($(tickLabelMultiLine[0][j])[0].firstChild.data.split('\n')[i])
-                            .attr('position', 'relative')
-                            .attr('x', '0')
-                            .attr('dy', 1 + 'em');
+                            .text($(tickLabelMultiLine[0][j])[0].firstChild.data.split('\n')[0]);
+
+                        for (i = 1; i < arrayMultiLine.length; i = i + 1) {
+                            d3.select(tickLabelMultiLine[0][j]).append('tspan')
+                                .text($(tickLabelMultiLine[0][j])[0].firstChild.data.split('\n')[i])
+                                .attr('position', 'relative')
+                                .attr('x', '0')
+                                .attr('dy', 1 + 'em');
+                        }
+                        $(tickLabelMultiLine[0][j])[0].firstChild.data = '';
                     }
-                    $(tickLabelMultiLine[0][j])[0].firstChild.data = '';
-                }
-            } else if (axisPosition === 'top') {
+                } else if (axisPosition === 'top') {
 
-                for (j = 0; j < tickLabelMultiLine[0].length; j = j + 1) {
-                    d3.select(tickLabelMultiLine[0][j]).append('tspan')
-                        .text($(tickLabelMultiLine[0][j])[0].firstChild.data.split('\n')[arrayMultiLine.length - 1]);
-
-                    for (i = arrayMultiLine.length - 2; i > -1; i = i - 1) {
+                    for (j = 0; j < tickLabelMultiLine[0].length; j = j + 1) {
                         d3.select(tickLabelMultiLine[0][j]).append('tspan')
-                            .text($(tickLabelMultiLine[0][j])[0].firstChild.data.split('\n')[i])
-                            .attr('position', 'relative')
-                            .attr('x', '0')
-                            .attr('dy', -1 + 'em');
+                            .text($(tickLabelMultiLine[0][j])[0].firstChild.data.split('\n')[arrayMultiLine.length - 1]);
+
+                        for (i = arrayMultiLine.length - 2; i > -1; i = i - 1) {
+                            d3.select(tickLabelMultiLine[0][j]).append('tspan')
+                                .text($(tickLabelMultiLine[0][j])[0].firstChild.data.split('\n')[i])
+                                .attr('position', 'relative')
+                                .attr('x', '0')
+                                .attr('dy', -1 + 'em');
+                        }
+                        $(tickLabelMultiLine[0][j])[0].firstChild.data = '';
                     }
-                    $(tickLabelMultiLine[0][j])[0].firstChild.data = '';
                 }
-            }
+            } 
         }
         return tickLabelMultiLine;
     };

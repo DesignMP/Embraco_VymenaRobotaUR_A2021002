@@ -8,7 +8,7 @@ define([
      * @class widgets.brease.KeyBoard.RomajiToKana
      * #Description
      * Converts romaji input to kana
-     * @extends Class
+     * @extends Object
      */
     var RomajiToKana = function () {
             this.value = '';

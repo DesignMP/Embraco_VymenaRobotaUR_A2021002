@@ -38,7 +38,7 @@
   </xsl:template>
 
   <!-- entry point for types -->
-  <xsl:template match="/wdgst:Area | wdgst:Body | wdgst:Content | wdgst:Dialog | wdgst:MessageBox | wdgst:Page | wdgst:Scrollbar | wdgst:StartupProgressBar | wdgst:Tooltip | wdgst:ModalDimmer | wdgst:ChangePasswordDialog">
+  <xsl:template match="/wdgst:Area | wdgst:Body | wdgst:Content | wdgst:Dialog | wdgst:MessageBox | wdgst:Page | wdgst:Scrollbar | wdgst:StartupProgressBar | wdgst:Tooltip | wdgst:ModalDimmer | wdgst:ChangePasswordDialog | wdgst:TableConfigurationDialog">
     <xsl:variable name="widgetName" select="concat('system_brease_', name())" />
     <xsl:call-template name="createDefaultStyle">
       <xsl:with-param name="widgetName" select="$widgetName" />

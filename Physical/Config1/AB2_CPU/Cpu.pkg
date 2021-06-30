@@ -28,7 +28,7 @@
     <Safety SafetyRelease="1.10" />
     <TaskClasses DefaultIoTaskClass="Cyclic1" />
     <Transfer AddToUserPart="False" AdditionalUserDir="" AllowInitialTransfer="False" AllowPartitioning="False" ExecuteInitExitProgram="False" ForceInitialTransfer="False" IdentificationTypeValue="" IgnoreVersion="True" KeepNonVolatileMemory="False" ModuleSystemForPip="" PreserveVariableValues="True" ProjectConsistent="True" RebootDuringTransfer="False" TargetIdentificationType="Always" TryToBootInRunMode="False" UserFilesIgnoreDifference="False" />
-    <Vc FirmwareVersion="V4.72.0" />
+    <Vc FirmwareVersion="V4.72.5" />
     <TechnologyPackages>
       <SafetyRelease Version="1.10.0" />
     </TechnologyPackages>

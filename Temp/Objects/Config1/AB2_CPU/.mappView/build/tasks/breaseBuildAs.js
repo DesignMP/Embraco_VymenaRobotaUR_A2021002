@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     grunt.registerTask('breaseBuildAs', 'necessary build step for Automation Studio', function () {
 
         grunt.file.setBase('.');
-        grunt.task.run('csso:themes', 'breaseCsso', 'breaseRelease');
+        grunt.task.run('themesCsso', 'breaseCsso', 'breaseRelease');
     });
 
 };

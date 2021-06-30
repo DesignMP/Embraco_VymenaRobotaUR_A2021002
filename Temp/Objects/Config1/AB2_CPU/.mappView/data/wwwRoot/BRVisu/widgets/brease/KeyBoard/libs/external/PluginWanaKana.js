@@ -1,12 +1,16 @@
-define(['widgets/brease/KeyBoard/libs/external/wanakana', 'brease/events/BreaseEvent', 'widgets/brease/KeyBoard/libs/composer/RomajiToKana', 'widgets/brease/KeyBoard/libs/converter/KanaToKanji'], function (wanakana, BreaseEvent, composer, converter) {
+define(['widgets/brease/KeyBoard/libs/external/wanakana', 
+    'brease/events/BreaseEvent', 
+    'widgets/brease/KeyBoard/libs/composer/RomajiToKana', 
+    'widgets/brease/KeyBoard/libs/converter/KanaToKanji'],
+function (wanakana, BreaseEvent, composer, converter) {
     'use strict';
 
-    var SuperClass = require('brease/core/Class'),
-        Plugin = SuperClass.extend(function PluginWanaKana() {
-            SuperClass.call(this);
-        }),
-
-	p = Plugin.prototype;
+    var Plugin = function PluginWanaKana() {
+            this.boundOnSelectItem = this.onSelectItem.bind(this);
+            this.boundOnSelectNext = this.onSelectNext.bind(this);
+            this.boundOnSelectPrev = this.onSelectPrev.bind(this);
+        },
+        p = Plugin.prototype;
 
     p.init = function (keyboard) {
         var that = this;
@@ -51,41 +55,9 @@ define(['widgets/brease/KeyBoard/libs/external/wanakana', 'brease/events/BreaseE
         return this.container.find('[class*="item"]');
     };
 
-    p.onInput = function () {
-        //console.log(this.keyboard.output.get(0).selectionStart, this.keyboard.output.get(0).selectionEnd, this.keyboard.output.get(0));
-        //this.len += (cursor - this.cursor);
-        //this.setCursor(cursor);
-        //this.trigger = _getTrigger(val, this.cursor, this.len);
+    p.onInput = function () {};
 
-
-        //if (wanakana.isRomaji(this.trigger)) {
-        //    this.debouncedBuildList();
-        //} else {
-        //    this.debouncedBuildList.cancel();
-        //    this.container.empty();
-        //    this.len = 0;
-        //}
-
-        //console.log('onInput:', this.trigger, this.cursor, this.len, val);
-    };
-
-    p.onDelete = function () {
-        //this.len -= (this.cursor - cursor);
-        //this.setCursor(cursor);
-        //this.trigger = _getTrigger(val, this.cursor, this.len);
-        //if (_.isString(val) && val.length === 0) {
-        //    this.container.empty();
-        //    this.debouncedBuildList.cancel();
-        //    this.len = 0;
-        //    return;
-        //}
-        //if (wanakana.isRomaji(this.trigger)) {
-        //    this.debouncedBuildList();
-        //} else {
-        //    this.debouncedBuildList.cancel();
-        //}
-        //console.log('onDelete:', this.trigger, this.cursor, this.len, val);
-    };
+    p.onDelete = function () {};
 
     p.onClear = function () {
         this.len = 0;
@@ -98,7 +70,7 @@ define(['widgets/brease/KeyBoard/libs/external/wanakana', 'brease/events/BreaseE
     };
 
     p.onSelectItem = function (e) {
-        var value = e.currentTarget.textContent.split(" ")[1];
+        var value = e.currentTarget.textContent.split(' ')[1];
 
         _insertValue.call(this, value);
     };
@@ -151,15 +123,14 @@ define(['widgets/brease/KeyBoard/libs/external/wanakana', 'brease/events/BreaseE
             this.eventsAttached = false;
         }
         var eventType = remove ? _removeEvListener : _addEvListener,
-            eventName = _getEventConfig(brease.config.virtualKeyboards),
-            widget = this;
+            eventName = _getEventConfig(brease.config.virtualKeyboards);
         if (!brease.config.editMode) {
-            widget.container = widget.keyboard.el.find(".keyBoardPlugin");
-            eventType(widget.keyboard.output, 'focus input', { self: widget, oldValue: widget.oldValue }, _onInput);
-            eventType(widget.keyboard.output, eventName, { self: widget, oldValue: widget.oldValue }, _onClick);
-            eventType(widget.container, eventName, '[class*="item"]', widget._bind('onSelectItem'));
-            eventType(widget.container, eventName, '.next', widget._bind('onSelectNext'));
-            eventType(widget.container, eventName, '.prev', widget._bind('onSelectPrev'));
+            this.container = this.keyboard.el.find('.keyBoardPlugin');
+            eventType(this.keyboard.output, 'focus input', { self: this, oldValue: this.oldValue }, _onInput);
+            eventType(this.keyboard.output, eventName, { self: this, oldValue: this.oldValue }, _onClick);
+            eventType(this.container, eventName, '[class*="item"]', this.boundOnSelectItem);
+            eventType(this.container, eventName, '.next', this.boundOnSelectNext);
+            eventType(this.container, eventName, '.prev', this.boundOnSelectPrev);
         }
     };
 
@@ -173,8 +144,8 @@ define(['widgets/brease/KeyBoard/libs/external/wanakana', 'brease/events/BreaseE
     function _onInput(e) {
         var that = e.data.self,
             inputEl = $(this),
-            arrOldValue = e.data.self.oldValue.split(""),
-            arrNewValue = inputEl.val().split(""), i;
+            arrOldValue = e.data.self.oldValue.split(''),
+            arrNewValue = inputEl.val().split(''), i;
         //console.log('_onFocus: selectionStart:', this.selectionStart, 'value:', composer.getStartIndex() + composer.getLen() + 1);
         //if (composer.getStartIndex() === -1) {
         //    composer.setValue('');
@@ -241,8 +212,8 @@ define(['widgets/brease/KeyBoard/libs/external/wanakana', 'brease/events/BreaseE
         var actValue = this.keyboard.value,
             index = composer.getStartIndex(),
             valueLen = composer.getLen(),
-			preValue = actValue.substr(0, index),
-			postValue = actValue.substr(index + valueLen);
+            preValue = actValue.substr(0, index),
+            postValue = actValue.substr(index + valueLen);
 
         var sendValue = preValue + value + postValue;
         composer.setValue('');
@@ -273,7 +244,7 @@ define(['widgets/brease/KeyBoard/libs/external/wanakana', 'brease/events/BreaseE
     }
 
     function _createHTMLContent() {
-        var html = "",
+        var html = '',
             items = this.items.slice(this.start, this.end);
 
         items.forEach(function (actItem, idx, arrItems) {

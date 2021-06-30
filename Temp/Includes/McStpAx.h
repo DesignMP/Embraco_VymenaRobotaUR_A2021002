@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* McStpAx 5.13.2 */
+/* McStpAx 5.14.2 */
 
 #ifndef _MCSTPAX_
 #define _MCSTPAX_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _McStpAx_VERSION
-#define _McStpAx_VERSION 5.13.2
+#define _McStpAx_VERSION 5.14.2
 #endif
 
 #include <bur/plctypes.h>
@@ -112,6 +112,10 @@ typedef enum McSAELOEExtRefPEnum
 	mcSAELOEERP_IO_CH = 1,
 	mcSAELOEERP_VAR = 2
 } McSAELOEExtRefPEnum;
+
+typedef enum McSAELOEEPosFltrEnum
+{	mcSAELOEEPF_EXTPOL_AND_DIST = 0
+} McSAELOEEPosFltrEnum;
 
 typedef enum McSACModEnum
 {	mcSACM_CUR_CTRL = 0,
@@ -267,8 +271,7 @@ typedef enum McSAMELStallguardCfgUseReacEnum
 
 typedef enum McSAJFEnum
 {	mcSAJF_NOT_USE = 0,
-	mcSAJF_USE = 1,
-	mcSAJF_JERK_LIM = 2
+	mcSAJF_USE = 1
 } McSAJFEnum;
 
 typedef enum McSADIAllSrcEnum
@@ -730,12 +733,23 @@ typedef struct McSAELOEExtRefPType
 	struct McSAELOEExtRefPVarType Variable;
 } McSAELOEExtRefPType;
 
+typedef struct McSAELOEEPosFltrExtpolDistType
+{	float PositionFilterTimeConstant;
+	float ExtrapolationTime;
+} McSAELOEEPosFltrExtpolDistType;
+
+typedef struct McSAELOEEPosFltrType
+{	enum McSAELOEEPosFltrEnum Type;
+	struct McSAELOEEPosFltrExtpolDistType ExtrapolationAndDisturbance;
+} McSAELOEEPosFltrType;
+
 typedef struct McSAELOEPosEncExtType
 {	unsigned long LinesPerEncoderRevolution;
 	struct McSAELOEExtPosTypType PositionType;
 	struct McSAELOEExtPosSrcType PositionSource;
 	struct McSAELOEExtValCkType ValidityCheck;
 	struct McSAELOEExtRefPType ReferencePulse;
+	struct McSAELOEEPosFltrType PositionFilter;
 } McSAELOEPosEncExtType;
 
 typedef struct McSAELOEPosEncType
@@ -951,7 +965,8 @@ typedef struct McSAMELType
 } McSAMELType;
 
 typedef struct McSAJFUseType
-{	float JerkTime;
+{	float MaximumJerkTime;
+	float JerkTime;
 } McSAJFUseType;
 
 typedef struct McSAJFType

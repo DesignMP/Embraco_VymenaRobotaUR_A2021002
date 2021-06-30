@@ -313,6 +313,60 @@ define(['brease/helper/XHRPool'], function (XHRPool) {
             }), callback);
         },
 
+        loadPasswordPolicies: function (callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('GET', _clientService + 'passwordPolicy');
+            request.send(null, callback);
+        },
+        loadUserList: function (details, callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('GET', _baseUrl + 'users?details=' + details);
+            request.send(null, callback);
+        },
+        loadUserData: function (userName, callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('GET', _baseUrl + 'users/' + userName);
+            request.send(null, callback);
+        },
+
+        loadAvailableRoles: function (callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('GET', _baseUrl + 'roles');
+            request.send(null, callback);
+        },
+        addUserToMpUserX: function (userName, password, fullName, roles, callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('POST', _baseUrl + 'users');
+            request.send(JSON.stringify({
+                Data: {
+                    'userName': userName,
+                    'fullName': fullName,
+                    'roles': roles,
+                    'password': password
+                }
+            }), callback);
+        },
+
+        deleteUserFromMpUserX: function (userName, callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('DELETE', _baseUrl + 'users/' + userName);
+            request.send(null, callback);
+        },
+
+        modifyUserFromMpUserX: function (userName, modifiedUserData, callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('PATCH', _baseUrl + 'users/' + userName);
+            request.send(JSON.stringify({
+                Data: modifiedUserData
+            }      
+            ), callback);
+        },
+        getUserSettingsFromMpUserX: function (callback, callbackInfo) {
+            var request = XHRPool.getXHR(callbackInfo);
+            request.open('GET', _clientService + 'userSettings');
+            request.send(null, callback);
+        },
+
         /*####################
         ### TextFormatter ###
         #####################*/

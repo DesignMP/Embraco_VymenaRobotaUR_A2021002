@@ -1,6 +1,6 @@
 /*!
 *  filename: ej.scroller.js
-*  version : 18.2.0.44
+*  version : 18.3.0.35
 *  Copyright Syncfusion Inc. 2001 - 2020. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -1425,8 +1425,14 @@
             if (this._vScrollbar && this._scrollYdata && this.model) {
                 if ((this._scrollYdata.scrollable - this.model.scrollOneStepBy) >= this.scrollTop()) {
                     if (!$(':hover').filter(this.element[0]).length) proxy._off(ej.getScrollableParents(proxy.wrapper), "scroll", null);
-                    window.onmousewheel = function (args) {
-                        if (proxy.model && proxy.model.preventDefault && $(':hover').filter(proxy.element[0]).length) args.preventDefault();
+                    if(ej.browserInfo().name != "chrome"){
+                        window.onmousewheel = function (args) {
+                            if (proxy.model && proxy.model.preventDefault && $(':hover').filter(proxy.element[0]).length) args.preventDefault();
+                        }
+                    } else {
+                        window.addEventListener("wheel", function (args) {
+                            if (proxy.model && proxy.model.preventDefault && $(':hover').filter(proxy.element[0]).length) args.preventDefault();
+                         },{passive: false});
                     }
                 }
             }

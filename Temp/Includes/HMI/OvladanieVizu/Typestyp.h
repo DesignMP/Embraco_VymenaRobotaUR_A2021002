@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1621956551_15_
-#define _BUR_1621956551_15_
+#ifndef _BUR_1622801201_15_
+#define _BUR_1622801201_15_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/HMI/OvladanieVizu/Types.typ\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1621956551_15_ */
+#endif /* _BUR_1622801201_15_ */
 

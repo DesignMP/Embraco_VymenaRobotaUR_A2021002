@@ -48,6 +48,20 @@ define(function () {
                 type: ListBoxActions.TOGGLE_LIST_STATUS
             };
         },
+        // Sets the list into connection dropped mode
+        SET_LIST_OFFLINE: 'SET_LIST_OFFLINE',
+        setListOffline: function setListOffline() {
+            return {
+                type: ListBoxActions.SET_LIST_OFFLINE
+            };
+        },
+        // Sets the list into connection establisehd mode
+        SET_LIST_ONLINE: 'SET_LIST_ONLINE',
+        setListOnline: function setListOnline() {
+            return {
+                type: ListBoxActions.SET_LIST_ONLINE
+            };
+        },
         //Close the líst
         CLOSE_LIST: 'CLOSE_LIST',
         closeList: function closeList() {

@@ -110,15 +110,20 @@ define(['brease/core/Utils'],
                 * Fired after the changed value of the input field has been validated
                 * @eventComment
                 */
-                self.eventDispatcher.dispatchEvent({
+                var data = {
                     type: 'Validator.Change',
-                    key: e.key,
-                    which: e.which,
                     detail: {
                         'value': validatedValue,
                         'originalValue': inputValue
                     }
-                });
+                };
+                if (e.key !== undefined) {
+                    data.key = e.key;
+                }
+                if (e.which !== undefined) {
+                    data.which = e.which;
+                }
+                self.eventDispatcher.dispatchEvent(data);
             };
 
             /**

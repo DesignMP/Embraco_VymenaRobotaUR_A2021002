@@ -16,14 +16,35 @@ define(["require", "exports", "./calculationData"], function (require, exports, 
     Object.defineProperty(exports, "__esModule", { value: true });
     var CalculationDataString = /** @class */ (function (_super) {
         __extends(CalculationDataString, _super);
-        function CalculationDataString(name, value, description, displayInfo) {
+        /**
+         * Creates an instance of CalculationDataString
+         * @param {string} id
+         * @param {string} name
+         * @param {string} value
+         * @param {string} [description=""]
+         * @param {(CalculationDataDisplayInfo|undefined)} [displayInfo=undefined]
+         * @memberof CalculationDataString
+         */
+        function CalculationDataString(id, name, value, description, displayInfo) {
             if (description === void 0) { description = ""; }
             if (displayInfo === void 0) { displayInfo = undefined; }
-            return _super.call(this, name, value, value, description, displayInfo) || this;
+            return _super.call(this, id, name, value, value, description, displayInfo) || this;
         }
+        /**
+         * Retruns the data as string
+         *
+         * @returns {string}
+         * @memberof CalculationDataString
+         */
         CalculationDataString.prototype.getData = function () {
             return _super.prototype.getData.call(this);
         };
+        /**
+         * Sets the data as string
+         *
+         * @param {string} data
+         * @memberof CalculationDataString
+         */
         CalculationDataString.prototype.setData = function (data) {
             _super.prototype.setData.call(this, data);
         };
@@ -31,4 +52,4 @@ define(["require", "exports", "./calculationData"], function (require, exports, 
     }(calculationData_1.CalculationData));
     exports.CalculationDataString = CalculationDataString;
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FsY3VsYXRpb25EYXRhU3RyaW5nLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2FwcC9tb2RlbHMvY29tbW9uL2NhbGN1bGF0b3JQcm92aWRlci9jYWxjdWxhdGlvbkRhdGFTdHJpbmcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztJQUdBO1FBQTJDLHlDQUFlO1FBRXRELCtCQUFZLElBQVksRUFBRSxLQUFhLEVBQUUsV0FBdUIsRUFBRSxXQUE2RDtZQUF0Riw0QkFBQSxFQUFBLGdCQUF1QjtZQUFFLDRCQUFBLEVBQUEsdUJBQTZEO21CQUMzSCxrQkFBTSxJQUFJLEVBQUUsS0FBSyxFQUFFLEtBQUssRUFBRSxXQUFXLEVBQUUsV0FBVyxDQUFDO1FBQ3ZELENBQUM7UUFFRCx1Q0FBTyxHQUFQO1lBQ0ksT0FBTyxpQkFBTSxPQUFPLFdBQVksQ0FBQztRQUNyQyxDQUFDO1FBRUQsdUNBQU8sR0FBUCxVQUFRLElBQVk7WUFDaEIsaUJBQU0sT0FBTyxZQUFDLElBQUksQ0FBQyxDQUFDO1FBQ3hCLENBQUM7UUFDTCw0QkFBQztJQUFELENBQUMsQUFiRCxDQUEyQyxpQ0FBZSxHQWF6RDtJQWJZLHNEQUFxQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENhbGN1bGF0aW9uRGF0YSB9IGZyb20gXCIuL2NhbGN1bGF0aW9uRGF0YVwiO1xyXG5pbXBvcnQgeyBDYWxjdWxhdGlvbkRhdGFEaXNwbGF5SW5mbyB9IGZyb20gXCIuL2NhbGN1bGF0aW9uRGF0YURpc3BsYXlJbmZvXCI7XHJcblxyXG5leHBvcnQgY2xhc3MgQ2FsY3VsYXRpb25EYXRhU3RyaW5nIGV4dGVuZHMgQ2FsY3VsYXRpb25EYXRhe1xyXG5cclxuICAgIGNvbnN0cnVjdG9yKG5hbWU6IHN0cmluZywgdmFsdWU6IHN0cmluZywgZGVzY3JpcHRpb246c3RyaW5nID0gXCJcIiwgZGlzcGxheUluZm86IENhbGN1bGF0aW9uRGF0YURpc3BsYXlJbmZvfHVuZGVmaW5lZCA9IHVuZGVmaW5lZCl7XHJcbiAgICAgICAgc3VwZXIobmFtZSwgdmFsdWUsIHZhbHVlLCBkZXNjcmlwdGlvbiwgZGlzcGxheUluZm8pO1xyXG4gICAgfVxyXG4gICAgXHJcbiAgICBnZXREYXRhKCk6IHN0cmluZyB7XHJcbiAgICAgICAgcmV0dXJuIHN1cGVyLmdldERhdGEoKSBhcyBzdHJpbmc7XHJcbiAgICB9XHJcblxyXG4gICAgc2V0RGF0YShkYXRhOiBzdHJpbmcpIHtcclxuICAgICAgICBzdXBlci5zZXREYXRhKGRhdGEpO1xyXG4gICAgfVxyXG59XHJcbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FsY3VsYXRpb25EYXRhU3RyaW5nLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2FwcC9tb2RlbHMvY29tbW9uL2NhbGN1bGF0b3JQcm92aWRlci9jYWxjdWxhdGlvbkRhdGFTdHJpbmcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztJQUdBO1FBQTJDLHlDQUFlO1FBRXREOzs7Ozs7OztXQVFHO1FBQ0gsK0JBQVksRUFBVSxFQUFFLElBQVksRUFBRSxLQUFhLEVBQUUsV0FBdUIsRUFBRSxXQUE2RDtZQUF0Riw0QkFBQSxFQUFBLGdCQUF1QjtZQUFFLDRCQUFBLEVBQUEsdUJBQTZEO21CQUN2SSxrQkFBTSxFQUFFLEVBQUUsSUFBSSxFQUFFLEtBQUssRUFBRSxLQUFLLEVBQUUsV0FBVyxFQUFFLFdBQVcsQ0FBQztRQUMzRCxDQUFDO1FBRUQ7Ozs7O1dBS0c7UUFDSCx1Q0FBTyxHQUFQO1lBQ0ksT0FBTyxpQkFBTSxPQUFPLFdBQVksQ0FBQztRQUNyQyxDQUFDO1FBRUQ7Ozs7O1dBS0c7UUFDSCx1Q0FBTyxHQUFQLFVBQVEsSUFBWTtZQUNoQixpQkFBTSxPQUFPLFlBQUMsSUFBSSxDQUFDLENBQUM7UUFDeEIsQ0FBQztRQUNMLDRCQUFDO0lBQUQsQ0FBQyxBQWxDRCxDQUEyQyxpQ0FBZSxHQWtDekQ7SUFsQ1ksc0RBQXFCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ2FsY3VsYXRpb25EYXRhIH0gZnJvbSBcIi4vY2FsY3VsYXRpb25EYXRhXCI7XHJcbmltcG9ydCB7IENhbGN1bGF0aW9uRGF0YURpc3BsYXlJbmZvIH0gZnJvbSBcIi4vY2FsY3VsYXRpb25EYXRhRGlzcGxheUluZm9cIjtcclxuXHJcbmV4cG9ydCBjbGFzcyBDYWxjdWxhdGlvbkRhdGFTdHJpbmcgZXh0ZW5kcyBDYWxjdWxhdGlvbkRhdGF7XHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBDcmVhdGVzIGFuIGluc3RhbmNlIG9mIENhbGN1bGF0aW9uRGF0YVN0cmluZ1xyXG4gICAgICogQHBhcmFtIHtzdHJpbmd9IGlkXHJcbiAgICAgKiBAcGFyYW0ge3N0cmluZ30gbmFtZVxyXG4gICAgICogQHBhcmFtIHtzdHJpbmd9IHZhbHVlXHJcbiAgICAgKiBAcGFyYW0ge3N0cmluZ30gW2Rlc2NyaXB0aW9uPVwiXCJdXHJcbiAgICAgKiBAcGFyYW0geyhDYWxjdWxhdGlvbkRhdGFEaXNwbGF5SW5mb3x1bmRlZmluZWQpfSBbZGlzcGxheUluZm89dW5kZWZpbmVkXVxyXG4gICAgICogQG1lbWJlcm9mIENhbGN1bGF0aW9uRGF0YVN0cmluZ1xyXG4gICAgICovXHJcbiAgICBjb25zdHJ1Y3RvcihpZDogc3RyaW5nLCBuYW1lOiBzdHJpbmcsIHZhbHVlOiBzdHJpbmcsIGRlc2NyaXB0aW9uOnN0cmluZyA9IFwiXCIsIGRpc3BsYXlJbmZvOiBDYWxjdWxhdGlvbkRhdGFEaXNwbGF5SW5mb3x1bmRlZmluZWQgPSB1bmRlZmluZWQpe1xyXG4gICAgICAgIHN1cGVyKGlkLCBuYW1lLCB2YWx1ZSwgdmFsdWUsIGRlc2NyaXB0aW9uLCBkaXNwbGF5SW5mbyk7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIC8qKlxyXG4gICAgICogUmV0cnVucyB0aGUgZGF0YSBhcyBzdHJpbmdcclxuICAgICAqXHJcbiAgICAgKiBAcmV0dXJucyB7c3RyaW5nfVxyXG4gICAgICogQG1lbWJlcm9mIENhbGN1bGF0aW9uRGF0YVN0cmluZ1xyXG4gICAgICovXHJcbiAgICBnZXREYXRhKCk6IHN0cmluZyB7XHJcbiAgICAgICAgcmV0dXJuIHN1cGVyLmdldERhdGEoKSBhcyBzdHJpbmc7XHJcbiAgICB9XHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBTZXRzIHRoZSBkYXRhIGFzIHN0cmluZ1xyXG4gICAgICpcclxuICAgICAqIEBwYXJhbSB7c3RyaW5nfSBkYXRhXHJcbiAgICAgKiBAbWVtYmVyb2YgQ2FsY3VsYXRpb25EYXRhU3RyaW5nXHJcbiAgICAgKi9cclxuICAgIHNldERhdGEoZGF0YTogc3RyaW5nKSB7XHJcbiAgICAgICAgc3VwZXIuc2V0RGF0YShkYXRhKTtcclxuICAgIH1cclxufVxyXG4iXX0=

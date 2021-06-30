@@ -94,7 +94,10 @@ define(['brease/core/Utils'], function (Utils) {
 
         if (arListeners !== undefined) {
             arListeners.slice(0).forEach(function (listener) {
-                event.data = self.getData(eventType, listener);
+                var data = self.getData(eventType, listener);
+                if (data) {
+                    event.data = data; 
+                }
                 listener(event);
             });
         }

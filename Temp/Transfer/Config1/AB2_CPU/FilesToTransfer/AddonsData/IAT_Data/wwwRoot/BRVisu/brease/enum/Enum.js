@@ -1572,6 +1572,46 @@ define(['brease/enum/EnumObject'], function (EnumObject) {
         new: 'new',
         old: 'old'
     });
+    
+    /** 
+     * @enum {String} brease.enum.UserListItemType 
+     * @alternateClassName UserListItemType 
+     * @iatMeta studio:visible 
+     * true 
+     */
+    /** 
+     * @property {String} userName='UserName' 
+     * @iatStudioExposed 
+     */
+    /** 
+     * @property {String} fullName='FullName' 
+     * @iatStudioExposed 
+     */
+    /** 
+     * @property {String} roles='Roles' 
+     * @iatStudioExposed 
+     */
+    /** 
+     * @property {String} isAdmin='IsAdmin' 
+     * @iatStudioExposed 
+     */
+    /** 
+     * @property {String} isLocked='IsLocked' 
+     * @iatStudioExposed 
+     */
+    /** 
+     * @property {String} lastLogin='LastLogin' 
+     * @iatStudioExposed 
+     */
+
+    _defineEnum('UserListItemType', {
+        userName: 'UserName',
+        fullName: 'FullName',
+        roles: 'Roles',
+        isAdmin: 'IsAdmin',
+        isLocked: 'IsLocked',
+        lastLogin: 'LastLogin'
+    });
 
     /** 
     * @enum {String} brease.enum.ChartZoomType 
@@ -1833,6 +1873,96 @@ define(['brease/enum/EnumObject'], function (EnumObject) {
         DISABLED: 'disabled',
         'ZH-CN': 'zh-cn',
         'ZH-HK': 'zh-hk'
+    });
+
+    /** 
+    * @enum {String} brease.enum.MappTableConfigurationType
+    * @iatMeta studio:visible
+    * false
+    */
+    /**
+    * @property {String} Filtering='filter' 
+    */
+    /**
+    * @property {String} Sorting='sort'  
+    */
+    /** 
+    * @property {String} Styling='style'  
+    */
+    /** 
+    * @property {String} AddUser='adduser' 
+    */
+    /** 
+    * @property {String} ModifyUser='modifyuser' 
+    */
+
+    _defineEnum('MappTableConfigurationType', {
+        Filtering: 'filter',
+        Sorting: 'sort',
+        Styling: 'style',
+        AddUser: 'adduser',
+        ModifyUser: 'modifyuser'
+    });
+
+    /** 
+    * @enum {Integer} brease.enum.MpUserXError
+    * @iatMeta studio:visible
+    * false
+    */
+    /**
+    * @property {Integer} BUSY=0
+    */
+    /**
+    * @property {Integer} SUCCESS=1
+    */
+    /**
+    * @property {Integer} INVALID_SESSION=104  
+    */
+    /**
+    * @property {Integer} PASSWORD_POLICIES_NOT_MET=106
+    */
+    /** 
+    * @property {Integer} USER_DOESNT_EXIST=200  
+    */
+    /** 
+    * @property {Integer} USER_ALREADY_EXISTS=201
+    */
+    /** 
+    * @property {Integer} INSUFFICIENT_RIGHTS=202 
+    */
+    /** 
+    * @property {Integer} ROLE_DOESNT_EXIST=203
+    */
+    /** 
+    * @property {Integer} TOO_MANY_ROLES=204
+    */
+    /** 
+    * @property {Integer} USERNAME_EMPTY=205
+    */
+    /** 
+    * @property {Integer} ACTION_NOT_ALLOWED=206
+    */
+    /** 
+    * @property {Integer} USER_CURRENTLY_LOGGED_IN=207 
+    */
+    /** 
+    * @property {Integer} USERNAME_TOO_SHORT=209 
+    */
+    _defineEnum('MpUserXError', {
+        BUSY: 0,
+        SUCCESS: 1,
+        INVALID_SESSION: 104,
+        PASSWORD_POLICIES_NOT_MET: 106,
+        USER_DOESNT_EXIST: 200,
+        USER_ALREADY_EXISTS: 201,
+        INSUFFICIENT_RIGHTS: 202,
+        ROLE_DOESNT_EXIST: 203,
+        TOO_MANY_ROLES: 204,
+        USERNAME_EMPTY: 205,
+        ACTION_NOT_ALLOWED: 206,
+        USER_CURRENTLY_LOGGED_IN: 207,
+        USERNAME_TOO_SHORT: 209
+
     });
 
     return Enum;

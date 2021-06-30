@@ -82,7 +82,7 @@ function (Client, Utils, BreaseEvent, SocketEvent, SystemGestures, VirtualEvents
         _defineControllers.call(this, controller);
 
         _initServices.call(this, runtimeService);
-        _initControllers.call(this, runtimeService, this.settings, systemMessage);
+        _initControllers.call(this, runtimeService, systemMessage);
 
     };
 
@@ -265,7 +265,7 @@ function (Client, Utils, BreaseEvent, SocketEvent, SystemGestures, VirtualEvents
         _definePublicMethod(this.services, 'opcua', _services);
     }
 
-    function _initControllers(runtimeService, settings, systemMessage) {
+    function _initControllers(runtimeService, systemMessage) {
 
         _controller.bindingController.init(runtimeService);
         _controller.connectionController.init(runtimeService, systemMessage);
@@ -348,7 +348,7 @@ function (Client, Utils, BreaseEvent, SocketEvent, SystemGestures, VirtualEvents
         //A&P 464480: visuData (contains watchdog configuration) has to be loaded before socket connection
         //console.log('%c4.) _loadVisuData(visuId=' + brease.config.visuId + ')', 'color:#cc00cc;');
         if (config.visuId) {
-            _controller.visuData.loadVisuData(brease.config.visuId, brease.appElem.id).then(
+            _controller.visuModel.loadVisuData(brease.config.visuId, brease.appElem.id).then(
                 function (visuConfig) {
                     _loadConfigurations(visuConfig);
                 },

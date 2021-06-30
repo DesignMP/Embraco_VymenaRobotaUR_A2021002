@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1622194046_2_
-#define _BUR_1622194046_2_
+#ifndef _BUR_1624951826_1_
+#define _BUR_1624951826_1_
 
 #include <bur/plctypes.h>
 
@@ -13,8 +13,9 @@
 
 
 /* Variables */
+_BUR_LOCAL struct TON CasVypnutiaUvolneniaBrzdy;
+_BUR_LOCAL struct TON CasUvolneniaBrzdy;
 _BUR_LOCAL plcbit Triger_1;
-_BUR_LOCAL struct TON CasOvladaniaBrzdy;
 _BUR_LOCAL float NovaHodnotaMomentu_NEG;
 _BUR_LOCAL float NovaHodnotaMomentu_POS;
 _BUR_LOCAL struct McAcpAxProcessParIDType McAcpAxProcessParIDType_0[2];
@@ -43,5 +44,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAcpAx/McAcpAx.fun\\\" scope \\
 __asm__(".previous");
 
 
-#endif /* _BUR_1622194046_2_ */
+#endif /* _BUR_1624951826_1_ */
 

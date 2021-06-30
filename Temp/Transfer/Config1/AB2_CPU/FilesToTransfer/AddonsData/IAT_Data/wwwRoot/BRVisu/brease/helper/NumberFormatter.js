@@ -72,11 +72,15 @@ define(['brease/core/Utils'], function (Utils) {
         } else {
             sign = value / absValue;
         }
+        if (absValue === Infinity) {
+            return value.toString();
+        }
 
+        var strSign = (sign === -1) ? '-' : '';
         if (absValue.toString().indexOf('e+') !== -1) {
-            return formatScience.call(this, absValue, (sign === -1) ? '-' : '', separators, format);
+            return formatScience.call(this, absValue, strSign, separators, format);
         } else {
-            return formatFloat.call(this, absValue, (sign === -1) ? '-' : '', separators, format, useDigitGrouping);
+            return formatFloat.call(this, absValue, strSign, separators, format, useDigitGrouping);
         }
     };
 

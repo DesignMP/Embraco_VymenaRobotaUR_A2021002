@@ -9,7 +9,7 @@ define([
      * @class widgets.brease.KeyBoard.KanaToKanji
      * #Description
      * Converts kana input to kanji
-     * @extends Class
+     * @extends Object
      */
     var KanaToKanji = function () {
             this.pathDict = 'widgets/brease/KeyBoard/libs/external/dictionaries/KanjiDic';

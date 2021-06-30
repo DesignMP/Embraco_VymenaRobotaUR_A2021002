@@ -28,6 +28,10 @@
 			<xs:attribute name="shadow" use="optional" type="types:Shadow" default="none" />
 			<xs:attribute name="buttonBackGroundGradient" use="optional" type="types:Gradient" default="" />
 			<xs:attribute name="buttonMouseDownBackGroundGradient" use="optional" type="types:Gradient" default="" />
+			<xs:attribute name="imeBackColor" use="optional" type="types:Color" default="#333333" />
+			<xs:attribute name="imeBackGroundGradient" use="optional" type="types:Gradient" default="" />
+			<xs:attribute name="imeBorderColor" use="optional" type="types:ColorCollection" default="#fff" />
+			<xs:attribute name="imeTextColor" use="optional" type="types:Color" default="#fff" />
 		</xs:extension>
 	</xs:complexContent>
 </xs:complexType>

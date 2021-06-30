@@ -40,12 +40,12 @@
         [BASETYPE.Number, 'WidgetState', 'brease.enum.WidgetState'],
         [BASETYPE.Number, 'MessageBoxState', 'brease.enum.MessageBoxState'],
 
+        // data types that are noted in JSON notation in xsd (therefore e.g. 'RoleCollection' or 'Array')
         [BASETYPE.Object, 'Array'],
         [BASETYPE.Object, 'ArrayNode', 'brease.datatype.ArrayNode'],
         [BASETYPE.Object, 'ContentCollection'],
         [BASETYPE.Object, 'GraphicCollection'],
         [BASETYPE.Object, 'ItemCollection'],
-        [BASETYPE.Object, 'MappTableConfigurationType', 'brease.datatype.MappTableConfigurationType'],
         [BASETYPE.Object, 'MeasurementSystemFormat', 'brease.config.MeasurementSystemFormat'],
         [BASETYPE.Object, 'MeasurementSystemUnit', 'brease.config.MeasurementSystemUnit'],
         [BASETYPE.Object, 'MpComIdentReference', 'brease.datatype.MpComIdentReference'],
@@ -55,7 +55,6 @@
         [BASETYPE.Object, 'Object'],
         [BASETYPE.Object, 'RoleCollection'],
         [BASETYPE.Object, 'StepItemStyleReferenceCollection'],
-        [BASETYPE.Object, 'TableConfigurationType', 'brease.datatype.TableConfigurationType'],
 
         [BASETYPE.String, 'String'],
         [BASETYPE.String, 'DateTime'],
@@ -101,9 +100,12 @@
         [BASETYPE.String, 'AutoSize'],
         [BASETYPE.String, 'HPos'],
         [BASETYPE.String, 'VPos'],
+        [BASETYPE.String, 'MappTableConfigurationType', 'brease.datatype.MappTableConfigurationType'],
+        [BASETYPE.String, 'TableConfigurationType', 'brease.datatype.TableConfigurationType'],
         [BASETYPE.String, 'AlarmHistoryItemType', 'brease.enum.AlarmHistoryItemType'],
         [BASETYPE.String, 'AlarmListItemType', 'brease.enum.AlarmListItemType'],
         [BASETYPE.String, 'AuditListItemType', 'brease.enum.AuditListItemType'],
+        [BASETYPE.String, 'UserListItemType', 'brease.enum.UserListItemType'],
         [BASETYPE.String, 'BackgroundPosition', 'brease.enum.BackgroundPosition'],
         [BASETYPE.String, 'CachePolicy', 'brease.enum.CachePolicy'],
         [BASETYPE.String, 'ChartInterpolationType', 'brease.enum.ChartInterpolationType'],
@@ -129,6 +131,7 @@
         [BASETYPE.String, 'MeasurementSystem', 'brease.enum.MeasurementSystem'],
         [BASETYPE.String, 'MessageBoxIcon', 'brease.enum.MessageBoxIcon'],
         [BASETYPE.String, 'MessageBoxType', 'brease.enum.MessageBoxType'],
+        [BASETYPE.String, 'MpUserXError', 'brease.enum.MpUserXError'],
         [BASETYPE.String, 'NoSelectionPolicy', 'brease.enum.NoSelectionPolicy'],
         [BASETYPE.String, 'Orientation', 'brease.enum.Orientation'],
         [BASETYPE.String, 'PointOfOrigin', 'brease.enum.PointOfOrigin'],
@@ -153,6 +156,7 @@
         [BASETYPE.String, 'MainAlign', 'brease.enum.MainAlign'],
         [BASETYPE.String, 'CrossAlign', 'brease.enum.CrossAlign'],
 
+        // data types that are noted on an element basis in xsd (therefore not 'RoleCollection' or 'Array')
         [BASETYPE.Array, 'NumberArray1D'],
         [BASETYPE.Array, 'BooleanArray1D'],
         [BASETYPE.Array, 'StringArray1D'],
@@ -182,6 +186,7 @@
             return (datatype !== undefined && datatype.baseType === BASETYPE.Boolean);
         },
 
+        // data types that are noted in JSON notation in xsd (therefore e.g. 'RoleCollection' or 'Array')
         isObject: function (type) {
             var datatype = DataTypes[type];
             return (datatype !== undefined && datatype.baseType === BASETYPE.Object);
@@ -200,6 +205,7 @@
             return ['GraphicCollection'].indexOf(type) !== -1;
         },
 
+        // data types that are noted on an element basis in xsd (therefore not 'RoleCollection' or 'Array')
         isArrayType: function (type) {
             var datatype = DataTypes[type];
             return (datatype !== undefined && datatype.baseType === BASETYPE.Array);

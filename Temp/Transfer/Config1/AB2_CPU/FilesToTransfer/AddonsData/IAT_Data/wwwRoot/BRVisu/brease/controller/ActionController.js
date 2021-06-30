@@ -6,8 +6,9 @@ define(['brease/controller/objects/Client',
     'brease/core/Types',
     'brease/enum/Enum',
     'brease/events/SocketEvent',
-    'brease/controller/libs/DialogQueue'],
-function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types, Enum, SocketEvent, DialogQueue) {
+    'brease/controller/libs/DialogQueue',
+    'brease/events/BreaseEvent'],
+function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types, Enum, SocketEvent, DialogQueue, BreaseEvent) {
 
     'use strict';
 
@@ -381,7 +382,12 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
             $.when(brease.overlayController.openDialog(args.dialogId, args.mode, args.horizontalPos, args.verticalPos, undefined, args.headerText, args.autoClose, args.autoRaise)).then(function (success) {
 
                 if (success === true) {
-                    $.when(_contentHelper.activateFinished(contentsToLoadInDialog)).then(function (activateResult) {
+                    var def = _contentHelper.activateFinished(contentsToLoadInDialog),
+                        abortedHandler = _handleDialogOpenAborted.bind(self, def);
+                    document.body.addEventListener(BreaseEvent.DIALOG_OPEN_ABORTED, abortedHandler);
+                    
+                    $.when(def).then(function (activateResult) {
+                        document.body.removeEventListener(BreaseEvent.DIALOG_OPEN_ABORTED, abortedHandler);
                         _finishDialogAction.call(self, action, activateResult, activateResult);
                     });
                 } else {
@@ -410,7 +416,12 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
                 $.when(brease.overlayController.openDialogAtTarget(args.dialogId, args.mode, args.horizontalPos, args.verticalPos, target, args.headerText, args.autoClose, args.horizontalDialogAlignment, args.verticalDialogAlignment, args.autoRaise)).then(function (success) {
 
                     if (success === true) {
-                        $.when(_contentHelper.activateFinished(contentsToLoadInDialog)).then(function (activateResult) {
+                        var def = _contentHelper.activateFinished(contentsToLoadInDialog),
+                            abortedHandler = _handleDialogOpenAborted.bind(self, def);
+                        document.body.addEventListener(BreaseEvent.DIALOG_OPEN_ABORTED, abortedHandler);
+                    
+                        $.when(def).then(function (activateResult) {
+                            document.body.removeEventListener(BreaseEvent.DIALOG_OPEN_ABORTED, abortedHandler);
                             _finishDialogAction.call(self, action, activateResult, activateResult);
                         });
                     } else {
@@ -440,6 +451,10 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
                 _finishDialogAction.call(self, action, deactivateResult, deactivateResult);
             });
         }
+    }
+
+    function _handleDialogOpenAborted(deferred) {
+        _contentHelper.abort(deferred);
     }
 
     function _finishDialogAction(action, result, success) {
@@ -517,7 +532,10 @@ function (Client, contentHelper, tooltipDependency, ScrollManager, Utils, Types,
 
     function _runOpenChangePasswordDialog(action) {
 
-        $.when(brease.overlayController.openChangePasswordDialog(action.actionArgs.userName)).then(function (result) {
+        action.actionArgs.showPolicy = Types.parseValue(action.actionArgs.showPolicy, 'Boolean', { default: false });
+        action.actionArgs.userName = Utils.isString(action.actionArgs.userName) ? action.actionArgs.userName : '';
+
+        $.when(brease.overlayController.openChangePasswordDialog(action.actionArgs.userName, action.actionArgs.showPolicy)).then(function (result) {
             _processActionResponse(result, action.actionId, true);
         });
 

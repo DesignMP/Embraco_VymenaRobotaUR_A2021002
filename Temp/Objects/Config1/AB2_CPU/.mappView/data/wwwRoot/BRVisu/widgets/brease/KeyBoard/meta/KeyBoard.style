@@ -88,5 +88,18 @@
       <StyleElement selector=".keyBoardBody button.active" attribute="@include backGroundGradient('$value')"></StyleElement>
       <StyleElement selector=".keyBoardBody button.selected" attribute="@include backGroundGradient('$value')"></StyleElement>
     </StyleProperty>
+    <StyleProperty name="imeBackColor" category="Appearance" type="Color" default="#333333" >
+      <StyleElement selector=".pluginList" attribute="background-color"></StyleElement>
+    </StyleProperty>
+    <StyleProperty name="imeBackGroundGradient" category="Appearance" type="Gradient" default="">
+      <StyleElement selector=".pluginList" attribute="@include backGroundGradient('$value')"></StyleElement>
+    </StyleProperty>
+    <StyleProperty name="imeBorderColor" category="Appearance" type="ColorCollection" default="#fff" >
+      <StyleElement selector=".pluginList" attribute="border-color"></StyleElement>
+      <StyleElement selector=".pluginList div" attribute="border-left-color"></StyleElement>
+    </StyleProperty>
+    <StyleProperty name="imeTextColor" category="Appearance" type="Color" default="#fff" >
+      <StyleElement selector=".pluginList div" attribute="color"></StyleElement>
+    </StyleProperty>
   </StyleProperties>
 </StyleInformation>

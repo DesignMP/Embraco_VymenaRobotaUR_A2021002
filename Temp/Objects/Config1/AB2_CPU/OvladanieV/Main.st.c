@@ -136,10 +136,10 @@ if((Bruska.STAV.Servo_HomingOK^1)){
 (Vizu.TL_RR_OvladanieServa_DISABLE=1);
 }else if((Safety.STAV.ZonaCS_AKTIVNA^1)){
 (Vizu.TL_RR_OvladanieServa_DISABLE=1);
-}else if((Safety.STAV.ZonaRobot_AKTIVNA^1)){
-(Vizu.TL_RR_OvladanieServa_DISABLE=1);
-}else if((Safety.STAV.ZonaPracovisko_AKTIVNA^1)){
-(Vizu.TL_RR_OvladanieServa_DISABLE=1);
+
+
+
+
 }else if(Bruska.Servo_ODBRZDI){
 (Vizu.TL_RR_OvladanieServa_DISABLE=1);
 }else{
@@ -176,7 +176,11 @@ if(Zariadenie.STAV.Automat){
 }
 
 
-if(Bruska.STAV.Servo_HomingBUSY){
+if(Bruska.Servo_HOME_SWITCH){
+(Vizu.TL_OdbrzdenieServa_DISABLE=1);
+}else if(Bruska.Servo_JoggVPRED){
+(Vizu.TL_OdbrzdenieServa_DISABLE=1);
+}else if(Bruska.Servo_JoggVZAD){
 (Vizu.TL_OdbrzdenieServa_DISABLE=1);
 }else{
 (Vizu.TL_OdbrzdenieServa_DISABLE=0);
@@ -185,13 +189,13 @@ if(Bruska.STAV.Servo_HomingBUSY){
 
 
 }imp1_end14_0:;}
-#line 182 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
-#line 184 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
+#line 186 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 188 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 187 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
+#line 191 "D:/Projekty BER/Embraco_VymenaRobotaUR_A2021002/Logical/HMI/OvladanieVizu/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
@@ -214,10 +218,10 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBase.typ\\\" scope \\\"
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBaseCfg.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAcpAx/McAcpAx.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAcpAx/McAcpAxCfg.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.typ\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAxCfg.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxisCfg.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAxCfg.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxisError.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.typ\\\" scope \\\"global\\\"\\n\"");
@@ -241,8 +245,8 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/AxisLib/AxisLib.fun\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/SC/SC.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBase.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAcpAx/McAcpAx.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpRecipe/MpRecipe.fun\\\" scope \\\"global\\\"\\n\"");
@@ -265,8 +269,8 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/AxisLib/Constants.var\\\" scope 
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/SC/Constants.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McBase/McBase.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAcpAx/McAcpAx.var\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/McAxis/McAxis.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/McStpAx/McStpAx.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpBase/MpBase.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/CoTrace/CoTrace.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/HMI/OvladanieVizu/Types.typ\\\" scope \\\"local\\\"\\n\"");

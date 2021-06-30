@@ -23,7 +23,7 @@
 			<Description name="short">NumPad zur Eingabe numerischer Werte</Description>
 			<Description name="de">NumPad zur Eingabe numerischer Werte</Description>
 			<Description name="en">NumPad for the input of numeric values</Description>
-			<Description name="ASHelp">The NumPad widget can not be used in a content directly, but its possible to use styles for it.</Description>
+			<Description name="ASHelp">The NumPad widget can not be used in a content directly, but its possible to use styles for it</Description>
 		</Descriptions>
 		<Inheritance>
 			<Class level="0">widgets.brease.NumPad</Class>

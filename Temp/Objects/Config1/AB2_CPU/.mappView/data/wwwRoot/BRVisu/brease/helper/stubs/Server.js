@@ -87,6 +87,7 @@ function (EventDispatcher, SocketEvent, ClientSystemEvent, Utils) {
                         'BR/IAT/brease.common.pageloading': 'Seite wird geladen...',
                         'BR/IAT/brease.error.STARTPAGE_NOT_FOUND': 'Startseite nicht gefunden!',
                         'BR/IAT/brease.error.DIALOG_NOT_FOUND': 'Dialog nicht gefunden!',
+                        'BR/IAT/brease.error.DIALOG_NOT_LOADED': 'Dialog konnte nicht geladen werden!',
                         'BR/IAT/brease.error.NO_PAGES_FOUND': 'Achtung: keine Pages in Visualisierung angegeben!',
                         'BR/IAT/brease.error.NO_LAYOUTS_FOUND': 'Achtung: keine Layouts in Visualisierung angegeben!',
                         'BR/IAT/brease.error.INCORRECT_VISU': 'Visualisierung (id="{1}") kann nicht dargestellt werden!',
@@ -136,7 +137,12 @@ function (EventDispatcher, SocketEvent, ClientSystemEvent, Utils) {
                         'IAT/System/Dialog/CHANGEPASSWORD_PASSWORDS_DIFFERENT': 'CHANGEPASSWORD_PASSWORDS_DIFFERENT',
                         'IAT/System/Dialog/CHANGEPASSWORD_NEWPASSWORD_EMPTY': 'CHANGEPASSWORD_NEWPASSWORD_EMPTY',
                         'IAT/System/Dialog/CHANGEPASSWORD_OLDPASSWORD_EMPTY': 'CHANGEPASSWORD_OLDPASSWORD_EMPTY',
-                        'IAT/System/Dialog/CHANGEPASSWORD_USERNAME_EMPTY': 'CHANGEPASSWORD_USERNAME_EMPTY'
+                        'IAT/System/Dialog/CHANGEPASSWORD_USERNAME_EMPTY': 'CHANGEPASSWORD_USERNAME_EMPTY',
+                        'IAT/System/Dialog/POLICY_DESC_ALPHANUMERIC': 'POLICY_DESC_ALPHANUMERIC',
+                        'IAT/System/Dialog/POLICY_DESC_MIXEDCASE': 'POLICY_DESC_MIXEDCASE',
+                        'IAT/System/Dialog/POLICY_DESC_MINLENGTH': 'POLICY_DESC_MINLENGTH',
+                        'IAT/System/Dialog/POLICY_DESC_SPECIALCHAR': 'POLICY_DESC_SPECIALCHAR',
+                        'IAT/System/Dialog/POLICY_HEADER': 'POLICY_HEADER'
                     },
                     en: {
                         'BR/IAT/brease.common.attention': 'Attention',
@@ -154,6 +160,7 @@ function (EventDispatcher, SocketEvent, ClientSystemEvent, Utils) {
                         'BR/IAT/brease.common.pageloading': 'page is loading...',
                         'BR/IAT/brease.error.STARTPAGE_NOT_FOUND': 'Startpage not found!',
                         'BR/IAT/brease.error.DIALOG_NOT_FOUND': 'Dialog not found!',
+                        'BR/IAT/brease.error.DIALOG_NOT_LOADED': 'Dialog could not be loaded!',
                         'BR/IAT/brease.error.NO_PAGES_FOUND': 'Attention: no pages declared!',
                         'BR/IAT/brease.error.NO_LAYOUTS_FOUND': 'Attention: no layouts declared',
                         'BR/IAT/brease.error.INCORRECT_VISU': 'Visualization (id="{1}") could not be displayed!',

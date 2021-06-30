@@ -1,4 +1,3 @@
-/*global m*/
 define([
     'widgets/brease/common/libs/genericUnitTest/TestUtils/GenericUnitTestUtils',
     'widgets/brease/common/libs/Test/Jasmine-moduleTest'
@@ -14,7 +13,6 @@ define([
             testCaseData = GenericUnitTestUtils.getTestCaseData(specParam.init, specParam.init);
 
             beforeEach(function () {
-                this.removeAllSpies();
                 mut = GenericUnitTestUtils.initModule(testCaseData.init);
                 GenericUnitTestUtils.testSetup(mut, testCaseData.data.setUpData);
             });
@@ -24,15 +22,15 @@ define([
                 mut = null;
             });
 
-            m.describe(testCaseData.functionSpyRun, 'check if the calls of functions inside tested function are called correct:', function () {
+            m.describe(testCaseData.functionSpyRun, 'check if the calls of functions inside tested function are called correct', function () {
 
                 for (subFunctionName in testCaseData.data.functionsToSpyOn) {
 
                     (function (subFunctionName, testCaseData) {
 
-                        m.describe(testCaseData.functionSpyRun, subFunctionName + ':', function () {
+                        m.describe(testCaseData.functionSpyRun, subFunctionName, function () {
 
-                            var expectedValue = testCaseData.data.functionsToSpyOn[subFunctionName].callCount,
+                            var expectedValue = testCaseData.data.functionsToSpyOn[subFunctionName].callsCount,
                                 testFunctionData, testFunctionSpy, moduleToSpyOn;
 
                             beforeEach(function () {
@@ -47,8 +45,8 @@ define([
                                 testFunctionSpy = null;
                             });
                                                             
-                            m.it(testCaseData.functionSpyRun, 'callcount should be: ' + expectedValue, function () {
-                                expect(testFunctionSpy.callCount).toBe(testFunctionData.callCount);
+                            m.it(testCaseData.functionSpyRun, 'callcount should be ' + expectedValue, function () {
+                                expect(testFunctionSpy.callCount).toBe(testFunctionData.callsCount);
                             });
                                 
                             for (var callEntry in testCaseData.data.functionsToSpyOn[subFunctionName].callArgs) {
@@ -63,7 +61,7 @@ define([
                                             argumentNumber = argEntry.substring(3, 4),
                                             callcountNumber = callEntry.substring(4, 5);
 
-                                        m.it(testCaseData.functionSpyRun, argumentNumber + '. argument of the ' + callcountNumber + '.call should be: ' + expectedValue, function () {
+                                        m.it(testCaseData.functionSpyRun, argumentNumber + '. argument of the ' + callcountNumber + '.call should be ' + expectedValue, function () {
                                             
                                             var matcher = GenericUnitTestUtils._getMatcher(argData.matcher),
                                                 actualValue = testFunctionSpy.calls[parseInt(callcountNumber, 0) - 1].args[parseInt(argumentNumber, 0) - 1];
@@ -79,7 +77,7 @@ define([
                 }
             });
 
-            m.describe(testCaseData.setterRun, 'check if the setter data is set correct:', function () {
+            m.describe(testCaseData.setterRun, 'check if the setter data is set correct', function () {
 
                 for (var setterEnty in testCaseData.data.setterData) {
 
@@ -87,7 +85,7 @@ define([
                         
                         var expectedValue = testCaseData.data.setterData[setterEnty];
 
-                        m.it(testCaseData.setterRun, setterEnty + ' should be: ' + expectedValue, function () {                                
+                        m.it(testCaseData.setterRun, setterEnty + ' should be ' + expectedValue, function () {                                
                             GenericUnitTestUtils.checkSetterData(mut, testCaseData.data.setterData);
                         });
 

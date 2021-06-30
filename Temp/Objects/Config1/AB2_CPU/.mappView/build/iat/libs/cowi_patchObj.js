@@ -66,9 +66,9 @@
         widgetInfo.meta.license = 'undefined';
         widgetInfo.meta.inheritance.unshift(compoundWidget.type);
         widgetInfo.categories = { 'Category': ['Compound'] };
-		if (compoundWidget.commonProps.category) {
-			widgetInfo.categories.Category.push(compoundWidget.commonProps.category);
-		}
+        if (compoundWidget.commonProps.category) {
+            widgetInfo.categories.Category.push(compoundWidget.commonProps.category);
+        }
 
         var childWidgetsList = Object.keys(childInfos);
         widgetInfo.meta.requires = childWidgetsList;

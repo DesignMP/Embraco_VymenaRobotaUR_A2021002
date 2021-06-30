@@ -91,6 +91,52 @@ define(['brease/core/Utils'], function (Utils) {
     ClassUtils.isDerivedFrom = function (widget, className) {
         return widget.settings.className === ClassUtils.className2Path(className, false, true) || (widget.constructor && widget.constructor.meta && widget.constructor.meta.inheritance && widget.constructor.meta.inheritance.indexOf(className) !== -1);
     };
+    
+    ClassUtils.parentAllowsChild = function (parentMeta, childMeta) {
+
+        var allowedChildren = parentMeta.children,
+            inheritance = childMeta.inheritance;
+            
+        if (!Array.isArray(allowedChildren)) {
+            return false;
+        }
+
+        if (allowedChildren.indexOf('*') !== -1) {
+            return true;
+        } else {
+            var allowed = false;
+            if (Array.isArray(inheritance)) {
+                for (var i = 0; i < inheritance.length; i += 1) {
+                    if (allowedChildren.indexOf(inheritance[i]) !== -1) {
+                        allowed = true;
+                        break;
+                    }
+                } 
+            }
+            return allowed;
+        }
+    };
+
+    ClassUtils.childAllowsParent = function (childMeta, parentMeta) {
+
+        var allowedParents = childMeta.parents,
+            requestedParent = parentMeta.className,
+            allParentsAllowed = false,
+            requestedParentAllowed = false,
+            requestedParentSuperClassAllowed = false;
+
+        if (Array.isArray(allowedParents)) {
+            allParentsAllowed = allowedParents.indexOf('*') !== -1;
+            requestedParentAllowed = allowedParents.indexOf(requestedParent) !== -1;
+        }
+
+        // for derived widgets we have to look at the SuperClass of the parent too
+        if (parentMeta.isDerived === true && Array.isArray(parentMeta.inheritance)) {
+            var parentSuperClass = parentMeta.inheritance[1];
+            requestedParentSuperClassAllowed = allowedParents.indexOf(parentSuperClass) !== -1;
+        }
+        return allParentsAllowed || requestedParentAllowed || requestedParentSuperClassAllowed;
+    };
 
     return ClassUtils;
 

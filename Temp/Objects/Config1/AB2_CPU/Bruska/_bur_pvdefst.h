@@ -133,5 +133,6 @@ _BUR_LOCAL struct MC_BR_ProcessParID_AcpAx MC_BR_ProcessParID_AcpAx_0;
 _BUR_LOCAL struct McAcpAxProcessParIDType McAcpAxProcessParIDType_0[2];
 _BUR_LOCAL float NovaHodnotaMomentu_POS;
 _BUR_LOCAL float NovaHodnotaMomentu_NEG;
-_BUR_LOCAL struct TON CasOvladaniaBrzdy;
 _BUR_LOCAL plcbit Triger_1;
+_BUR_LOCAL struct TON CasUvolneniaBrzdy;
+_BUR_LOCAL struct TON CasVypnutiaUvolneniaBrzdy;

@@ -131,10 +131,10 @@ PROGRAM _CYCLIC
         Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
     ELSIF NOT Safety.STAV.ZonaCS_AKTIVNA THEN
         Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
-    ELSIF NOT Safety.STAV.ZonaRobot_AKTIVNA THEN
-        Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
-    ELSIF NOT Safety.STAV.ZonaPracovisko_AKTIVNA THEN
-		Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
+//    ELSIF NOT Safety.STAV.ZonaRobot_AKTIVNA THEN
+//        Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
+//    ELSIF NOT Safety.STAV.ZonaPracovisko_AKTIVNA THEN
+//		Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
 	ELSIF Bruska.Servo_ODBRZDI THEN
 		Vizu.TL_RR_OvladanieServa_DISABLE:= TRUE;
     ELSE
@@ -171,8 +171,12 @@ PROGRAM _CYCLIC
     END_IF    
     
 	//Tlaèítko odbrzdenie upínacej hlavy//
-	IF Bruska.STAV.Servo_HomingBUSY THEN
+	IF Bruska.Servo_HOME_SWITCH THEN
 		Vizu.TL_OdbrzdenieServa_DISABLE:= TRUE;
+	ELSIF Bruska.Servo_JoggVPRED THEN
+		Vizu.TL_OdbrzdenieServa_DISABLE:= TRUE;
+	ELSIF Bruska.Servo_JoggVZAD THEN
+		Vizu.TL_OdbrzdenieServa_DISABLE:= TRUE;	
 	ELSE    
 		Vizu.TL_OdbrzdenieServa_DISABLE:= FALSE;
 	END_IF    

@@ -102,7 +102,10 @@ define([
                 he_en: 'widgets/brease/KeyBoard/assets/KeyBoardHeEn.html',
                 hr: 'widgets/brease/KeyBoard/assets/KeyBoardHr.html',
                 ca: 'widgets/brease/KeyBoard/assets/KeyBoardCa.html',
-                is: 'widgets/brease/KeyBoard/assets/KeyBoardIs.html'
+                is: 'widgets/brease/KeyBoard/assets/KeyBoardIs.html',
+                vi: 'widgets/brease/KeyBoard/assets/KeyBoardVi.html',
+                'zh-CHS': 'widgets/brease/KeyBoard/assets/KeyBoardZhCHS.html',
+                'zh-CHS_en': 'widgets/brease/KeyBoard/assets/KeyBoardZhCHS_en.html'
             },
             modal: true,
             showCloseButton: true,
@@ -123,12 +126,15 @@ define([
                 ru: { ru: { index: 0, description: 'русский' }, ru_en: { index: 1, description: 'English' } },
                 ru_en: { ru: { index: 0, description: 'русский' }, ru_en: { index: 1, description: 'English' } },
                 zh: { zh: { index: 0, description: '中文' }, zh_en: { index: 1, description: 'English' } },
-                zh_en: { zh: { index: 0, description: '中文' }, zh_en: { index: 1, description: 'English' } }
+                zh_en: { zh: { index: 0, description: '中文' }, zh_en: { index: 1, description: 'English' } },
+                'zh-CHS': { 'zh-CHS': { index: 0, description: '中文' }, 'zh-CHS_en': { index: 1, description: 'English' } },
+                'zh-CHS_en': { 'zh-CHS': { index: 0, description: '中文' }, 'zh-CHS_en': { index: 1, description: 'English' } }
             },
             plugin: {
                 zh: 'widgets/brease/KeyBoard/libs/external/PluginPinyin',
                 ko: 'widgets/brease/KeyBoard/libs/external/PluginHangul',
-                ja: 'widgets/brease/KeyBoard/libs/external/PluginWanaKana'
+                ja: 'widgets/brease/KeyBoard/libs/external/PluginWanaKana',
+                'zh-CHS': 'widgets/brease/KeyBoard/libs/external/PluginZhCHS'
             },
             stylePrefix: 'widgets_brease_KeyBoard',
             scale2fit: true // zoom widget, if it exceeds the display (=screen)
@@ -617,10 +623,10 @@ define([
             this.instanceSettings.text = self.value;
             _removeEventListeners.call(self);
             //widget.el.hide();
-            self.el.children(':not(.keyBoardHeader)').remove();
             if (this.plugin !== undefined) {
                 this.plugin.dispose();
             }
+            self.el.children(':not(.keyBoardHeader)').remove();
             require(['text!' + self.settings.html], function (html) {
                 html = self.postProcessHTML(html);
                 self.el.append($(html).children(':not(.keyBoardHeader)'));

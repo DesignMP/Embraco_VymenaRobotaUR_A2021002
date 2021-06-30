@@ -136,6 +136,21 @@ div {
 .keyBoardBody button.selected {
 	@include backGroundGradient('');
 }
+.pluginList {
+	background-color: #333333;
+}
+.pluginList {
+	@include backGroundGradient('');
+}
+.pluginList {
+	border-color: #fff;
+}
+.pluginList div {
+	border-left-color: #fff;
+}
+.pluginList div {
+	color: #fff;
+}
 
 }
 

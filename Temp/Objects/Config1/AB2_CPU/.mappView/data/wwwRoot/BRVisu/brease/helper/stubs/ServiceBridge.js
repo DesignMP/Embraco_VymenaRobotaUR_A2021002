@@ -540,6 +540,17 @@ function (ServerStub, WebSocketStub, VisuStatus, ServerCode, SocketEvent) {
             }, callbackInfo);
         },
 
+        loadPasswordPolicies: function (callback, callbackInfo) {
+            callback({ success: false }, callbackInfo);
+        },
+
+        loadUserList: function (details, callback, callbackInfo) {
+            callback({ success: false }, callbackInfo);
+        },
+        loadUserData: function (userName, callback, callbackInfo) {
+            callback({ success: false }, callbackInfo);
+        },
+
         formatText: function (text, args, callback) {
             if (text.indexOf('snippetError') !== -1) {
                 callback({

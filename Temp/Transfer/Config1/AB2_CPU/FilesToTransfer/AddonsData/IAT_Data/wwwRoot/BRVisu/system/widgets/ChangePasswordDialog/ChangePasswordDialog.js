@@ -4,11 +4,13 @@ define([
     'brease/controller/ZoomManager',
     'brease/events/BreaseEvent',
     'brease/enum/Enum',
+    'brease/core/Utils',
     'brease/helper/SimpleQueue',
     'system/widgets/ChangePasswordDialog/libs/Validator',
     'system/widgets/ChangePasswordDialog/libs/Message',
-    'system/widgets/ChangePasswordDialog/libs/Elements'
-], function (SuperClass, popUpManager, zoomManager, BreaseEvent, Enum, SimpleQueue, Validator, Message, Elements) {
+    'system/widgets/ChangePasswordDialog/libs/Elements',
+    'system/widgets/ChangePasswordDialog/libs/PolicyView'
+], function (SuperClass, popUpManager, zoomManager, BreaseEvent, Enum, Utils, SimpleQueue, Validator, Message, Elements, PolicyView) {
 
     'use strict';
 
@@ -143,7 +145,8 @@ define([
         this.settings.windowType = 'ChangePasswordDialog';
         this.internalData.changeInProgress = false;
         this.internalData.changeSuccess = false;
-        this.validator = new Validator(this);
+        this.validator = new Validator();
+        this.policyView = new PolicyView(this);
         SuperClass.prototype.init.call(this, true);
     };
 
@@ -151,8 +154,14 @@ define([
     * @method show
     * Opens the ChangePasswordDialog
     * @param {String} userName
+    * @param {Boolean} showPolicy
     */
-    p.show = function (userName) {
+    p.show = function (userName, showPolicy) {
+
+        userName = Utils.isString(userName) ? userName : '';
+        showPolicy = Utils.isBoolean(showPolicy) ? showPolicy : false;
+        this.loadPolicies();
+        
         var headerText = (userName) ? _text('IAT/System/Dialog/CHANGEPASSWORD_DIALOG_HEADER_USERNAME') : _text('IAT/System/Dialog/CHANGEPASSWORD_DIALOG_HEADER');
 
         if (userName) {
@@ -164,12 +173,40 @@ define([
             }
         };
         this.internalData.userName = userName;
+        this.internalData.showPolicy = showPolicy;
+        
         SuperClass.prototype.show.call(this, options);
 
         if (userName) {
             brease.uiController.setWidgetPropertyIndependentOfState(this.inputs.userName.elemId, 'value', userName);
             brease.uiController.setWidgetPropertyIndependentOfState(this.inputs.userName.elemId, 'visible', false);
             brease.uiController.setWidgetPropertyIndependentOfState(this.labels.userName.elemId, 'visible', false);
+        }
+        if (this.internalData.showPolicy) {
+            var grpBoxPos = $('#chpwd_GroupBox').position(),
+                btnChangePos = this.buttons.change.$el.position(),
+                oldPasswordPos = this.inputs.oldPassword.$el.position();
+            this.buttons.cancel.$el.css({ position: 'absolute', top: btnChangePos.top / this.dimensions.scale, left: 300 });
+            this.policyView.$policyBox.css({ top: (oldPasswordPos.top + grpBoxPos.top) / this.dimensions.scale });
+        }
+    };
+
+    p.loadPolicies = function () {
+        var widget = this;
+        brease.user.loadPasswordPolicies().then(
+            function (policies) {
+                widget.setPolicies(policies);
+            },
+            function (status) {
+                console.iatWarn('loadPasswordPolicies.fail,status=', status);
+            }
+        );
+    };
+
+    p.setPolicies = function (policies) {
+        this.validator.setPolicies(policies);
+        if (this.internalData.showPolicy) {
+            this.policyView.setPolicies(policies); 
         }
     };
 
@@ -182,12 +219,14 @@ define([
     }
 
     p._setDimensions = function () {
-        var $contentBox = this.el.find('.contentBox');
+        if (this.internalData.showPolicy) {
+            this.$contentBox.addClass('showPolicy');
+        }
 
-        var borderTop = _getCSS($contentBox, 'border-top'),
-            borderRight = _getCSS($contentBox, 'border-right'),
-            borderBottom = _getCSS($contentBox, 'border-bottom'),
-            borderLeft = _getCSS($contentBox, 'border-left');
+        var borderTop = _getCSS(this.$contentBox, 'border-top'),
+            borderRight = _getCSS(this.$contentBox, 'border-right'),
+            borderBottom = _getCSS(this.$contentBox, 'border-bottom'),
+            borderLeft = _getCSS(this.$contentBox, 'border-left');
 
         this.dimensions.width = this.el.outerWidth();
         this.dimensions.height = this.el.outerHeight();
@@ -197,7 +236,11 @@ define([
 
         var newWidth = this.dimensions.width + borderLeft + borderRight;
         var newHeight = this.dimensions.height + borderTop + borderBottom;
-
+        if (this.internalData.showPolicy) {
+            newWidth = 2 * this.dimensions.width + borderLeft + borderRight - 40;
+            newHeight -= 40;
+        }
+        
         this.el.width(newWidth);
         this.el.height(newHeight);
         this.dimensions.width = newWidth;
@@ -205,11 +248,15 @@ define([
 
         var headerHeight = this.el.find('header').outerHeight();
 
-        $contentBox.css({
+        this.$contentBox.css({
             width: newWidth - borderLeft - borderRight,
-            height: newHeight - headerHeight - borderBottom - borderTop
+            height: newHeight - headerHeight - borderBottom - borderTop + 1,
+            'margin-top': '-1px' // overlap header and content to avoid gap when zoom!=1
         });
 
+        if (this.internalData.showPolicy) {
+            this.policyView.init(this.elem, this.$contentBox);
+        }
         _setZoom.call(this);
     };
 
@@ -261,7 +308,11 @@ define([
 
     p.formValidation = function () {
         var form = this.getForm(),
-            result = this.validator.validate(form);
+            result = this.validator.validate(this.testInputs, form);
+        
+        if (result.policiesResult && this.testInputs.indexOf('newPassword') !== -1) {
+            this.policyView.applyValidationResult(result.policiesResult);
+        }
 
         this.showMessages(result.arError);
         this.highlightInputs(result.arInputs);
@@ -343,6 +394,8 @@ define([
         this.buttons.dispose();
         this.inputs.dispose();
         this.labels.dispose();
+        this.$contentBox = undefined;
+        this.$outputArea = undefined;
         brease.uiController.dispose(this.elem, false);
         SuperClass.prototype.dispose.apply(this, arguments);
     };
@@ -396,6 +449,7 @@ define([
             confirmPassword: { elemId: 'brease_chpwd_confirmPassword_label', textKey: '$IAT/System/Dialog/CONFIRM_PASSWORD' }
         });
 
+        this.$contentBox = this.el.find('.contentBox');
         this.parsedDeferred.resolve(this);
     }
 
@@ -464,10 +518,29 @@ define([
             this.internalData.userName = userName;
             this.buttons.change.$el.hide(100);
             this.buttons.cancel.$el.hide(100);
-            this.el.find('[data-brease-widget="widgets/brease/Label"]').hide(100);
             this.inputs.forEach(function (input) {
                 input.$el.hide(100);
             });
+            this.policyView.hide();
+            this.el.find('[data-brease-widget="widgets/brease/Label"]').hide(100);
+
+            var btnConfirmWidth = this.buttons.confirm.$el.outerWidth(),
+                contentWidth = this.$contentBox.innerWidth(),
+                outputAreaWidth = this.$outputArea.outerWidth(),
+                grpBoxLeft = $('#chpwd_GroupBox').position().left;
+
+            this.buttons.confirm.$el.css({ 
+                top: 220, 
+                left: (contentWidth - btnConfirmWidth) / 2, 
+                margin: '0px', 
+                position: 'absolute' });
+
+            this.$outputArea.css({ 
+                top: 120, 
+                left: (contentWidth - outputAreaWidth) / 2 - grpBoxLeft / this.dimensions.scale, 
+                margin: '0px', 
+                position: 'absolute' });
+
             brease.callWidget(this.buttons.confirm.elemId, 'setVisible', true);
             var successMessage = new Message(_text('IAT/System/Dialog/CHANGEPASSWORD_SUCCESS'), Message.Type.SUCCESS);
             this.showMessages([successMessage]);

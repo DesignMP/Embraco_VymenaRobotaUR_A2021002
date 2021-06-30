@@ -1,7 +1,8 @@
 define([
-    'brease/core/BaseWidget',
+    'brease/core/BaseWidget', 
+    'brease/helper/TestUtils',
     'widgets/brease/common/libs/genericUnitTest/TestUtils/GenericUnitTestConstants'
-], function (BaseWidget, GenericUnitTestConstants) {
+], function (BaseWidget, TestUtils, GenericUnitTestConstants) {
 
     'use strict';
 
@@ -122,9 +123,17 @@ define([
                 GenericUnitTestUtils.returnValues[testFunctionName] = testFunctionObj.return;
                
                 (function (testFunctionName, moduleToSpyOn) {
-                    spyOn(moduleToSpyOn, testFunctionName).andCallFake(function () {
-                        return GenericUnitTestUtils._getReturnValue(moduleToSpyOn, testFunctionName);
-                    });
+                    
+                    if (jasmine.version_ && jasmine.version_.major === 1) {
+                        spyOn(moduleToSpyOn, testFunctionName).andCallFake(function () {
+                            return GenericUnitTestUtils._getReturnValue(moduleToSpyOn, testFunctionName);
+                        });
+                    } else {
+                        spyOn(moduleToSpyOn, testFunctionName).and.callFake(function () {
+                            return GenericUnitTestUtils._getReturnValue(moduleToSpyOn, testFunctionName);
+                        });
+                    }
+                    
                 })(testFunctionName, moduleToSpyOn);
             }
         }
@@ -133,7 +142,7 @@ define([
     GenericUnitTestUtils._getReturnValue = function () {
         var mut = arguments[0],
             functionName = arguments[1],
-            index = mut[functionName].callCount - 1;
+            index = TestUtils.callCount(mut[functionName]) - 1;
             
         return GenericUnitTestUtils.returnValues[functionName][index];
     };
